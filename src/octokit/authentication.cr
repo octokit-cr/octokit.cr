@@ -43,10 +43,7 @@ module Octokit
 
     private def application_authentication
       if @client_id && @client_secret
-        {
-          "client_id"     => @client_id,
-          "client_secret" => @client_secret,
-        }
+        {"client_id" => @client_id, "client_secret" => @client_secret}
       end
     end
 

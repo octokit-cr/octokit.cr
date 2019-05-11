@@ -98,13 +98,11 @@ module Octokit
         headers content_type: "application/json"
         # headers user_agent: user_agent
         if basic_authenticated?
-          basic_auth(@login, @password)
+          basic_auth(@login.to_s, @password.to_s)
         elsif token_authenticated?
           auth("token #{@access_token}")
         elsif bearer_authenticated?
           auth("Bearer #{@bearer_token}")
-        elsif application_authenticated?
-          # params application_authentication
         end
       end
     end
@@ -127,8 +125,9 @@ module Octokit
       @agent = nil
     end
 
-    private def request(method, uri, options : Halite::Options? = nil)
-      puts method, uri, options
+    private def request(method, path, options : Halite::Options? = nil)
+      uri = File.join(endpoint, path)
+      options = options ? Default.connection_options.merge(options) : Default.connection_options
       @last_response = response = agent.request(verb: method, uri: uri, options: options)
       response.body
     end

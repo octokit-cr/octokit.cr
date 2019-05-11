@@ -1,11 +1,33 @@
+require "./octokit/default"
 require "./octokit/client"
+require "./octokit/enterprise_admin_client"
+require "./octokit/enterprise_management_console_client"
 
-# TODO: Write documentation for `Octokit`
+# Crystal toolkit for the GitHub API
 module Octokit
-  VERSION = "0.1.0"
+  include Octokit::Configurable
 
-  # TODO: Put your code here
+  @@client : Octokit::Client? = nil
+
+  # @@enterprise_admin_client : Octokit::EnterpriseAdminClient? = nil
+
+  # @@enterprise_management_console_client : Octokit::EnterpriseManagementConsoleClient? = nil
+
+  # API client based on configuration options {`Configurable`}
+  def self.client
+    return @@client unless @@client.nil? && @@client.same_options?(options)
+    @@client = Octokit::Client.new(options)
+  end
+
+  # EnterpriseAdminClient client based on configured options {`Configurable`}
+  def self.enterprise_admin_client
+  end
+
+  # EnterpriseManagementConsoleClient client based on configured options {`Configurable`}
+  def self.enterprise_management_console_client
+  end
+
+  macro method_missing(call)
+
+  end
 end
-
-c = Octokit::Client.new("watzon", "wYZ3Ud@S@jVgu2jq")
-puts c.get("https://google.com")
