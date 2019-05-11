@@ -71,24 +71,24 @@ module Octokit
     #   contains the contents of the requests so far and the second parameter
     #   contains the latest response.
     def paginate(url, options : Halite::Options? = nil, &block)
-      if @auto_paginate || @per_page
-        options["query"]["per_page"] ||= @per_page || (@auto_paginate ? 100 : nil)
-      end
+      # if @auto_paginate || @per_page
+      #   options["query"]["per_page"] ||= @per_page || (@auto_paginate ? 100 : nil)
+      # end
 
-      data = request("get", url, options.dup)
+      # data = request("get", url, options.dup)
 
-      if @auto_paginate
-        while @last_response.rels["next"] && rate_limit.remaining > 0
-          @last_response = @last_response.rels["next"].get({"headers" => options["headers"]})
-          if block_given?
-            yield(data, @last_response)
-          else
-            data.concat(@last_response.data) if @last_response.data.is_a?(Array)
-          end
-        end
-      end
+      # if @auto_paginate
+      #   while @last_response.rels["next"] && rate_limit.remaining > 0
+      #     @last_response = @last_response.rels["next"].get({"headers" => options["headers"]})
+      #     if block_given?
+      #       yield(data, @last_response)
+      #     else
+      #       data.concat(@last_response.data) if @last_response.data.is_a?(Array)
+      #     end
+      #   end
+      # end
 
-      data
+      # data
     end
 
     # Hypermedia agent for the GitHub API
@@ -130,6 +130,13 @@ module Octokit
       options = options ? Default.connection_options.merge(options) : Default.connection_options
       @last_response = response = agent.request(verb: method, uri: uri, options: options)
       response.body
+    end
+
+    private def request(method, path, options : Halite::Options? = nil, &block)
+      uri = File.join(endpoint, path)
+      options = options ? Default.connection_options.merge(options) : Default.connection_options
+      @last_response = response = agent.request(verb: method, uri: uri, options: options)
+      yield response
     end
 
     # Executes the request, checking if it was successful

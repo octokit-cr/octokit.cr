@@ -26,8 +26,4 @@ module Octokit
   # EnterpriseManagementConsoleClient client based on configured options {`Configurable`}
   def self.enterprise_management_console_client
   end
-
-  macro method_missing(call)
-
-  end
 end

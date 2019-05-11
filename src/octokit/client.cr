@@ -1,3 +1,4 @@
+require "./helpers"
 require "./connection"
 require "./warnable"
 require "./arguments"
