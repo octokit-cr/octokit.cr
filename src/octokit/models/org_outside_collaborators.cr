@@ -1,12 +1,9 @@
 module Octokit
   module Models
-    class OrgOutsideCollaborators
-      FIELDS = {
-
-      }
-
-      JSON.mapping({{FIELDS}})
-      initializer_for({{FIELDS}})
+    struct ListOutsideCollaboratorsOptions
+      rest_model({
+        filter: String
+      }.merge(ListOptions::FIELDS))
     end
   end
 end

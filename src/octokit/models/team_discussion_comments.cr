@@ -1,12 +1,7 @@
 module Octokit
   module Models
-    class TeamDiscussionComments
-      FIELDS = {
-
-      }
-
-      JSON.mapping({{FIELDS}})
-      initializer_for({{FIELDS}})
+    struct TeamDiscussionComments
+      rest_model()
     end
   end
 end

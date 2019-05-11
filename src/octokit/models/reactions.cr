@@ -1,12 +1,7 @@
 module Octokit
   module Models
-    class Reactions
-      FIELDS = {
-
-      }
-
-      JSON.mapping({{FIELDS}})
-      initializer_for({{FIELDS}})
+    struct Reactions
+      rest_model()
     end
   end
 end

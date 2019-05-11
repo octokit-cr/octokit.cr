@@ -1,12 +1,21 @@
 module Octokit
   module Models
-    class ActivityWatching
+    struct ActivityWatching
       FIELDS = {
+        subscriptions: Bool,
+        ignored:       Bool,
+        reason:        String,
+        created_at:    Timestamp,
+        url:           String,
 
+        # Only populated for repository subscriptions
+        repository_url: String?,
+
+        # Only populated for thread subscriptions
+        thread_url: String?,
       }
 
-      JSON.mapping({{FIELDS}})
-      initializer_for({{FIELDS}})
+      rest_model(FIELDS)
     end
   end
 end

@@ -1,12 +1,40 @@
 module Octokit
   module Models
-    class Activity
+    struct Activity
       FIELDS = {
-
+        timeline_url:                   String,
+        user_url:                       String,
+        current_user_public_url:        String,
+        current_user_url:               String,
+        current_user_actor_url:         String,
+        current_user_organization_url:  String,
+        current_user_organization_urls: Array(String),
       }
 
-      JSON.mapping({{FIELDS}})
-      initializer_for({{FIELDS}})
+      rest_model(FIELDS)
+
+      struct FeedLink
+        FIELDS = {
+          href: String,
+          type: String,
+        }
+
+        rest_model(FIELDS)
+      end
+
+      struct Links
+        FIELDS = {
+          timeline:                   FeedLink,
+          user:                       FeedLink,
+          current_user_public:        FeedLink,
+          current_user:               FeedLink,
+          current_user_actor:         FeedLink,
+          current_user_organization:  FeedLink,
+          current_user_organizations: FeedLink,
+        }
+
+        rest_model(FIELDS)
+      end
     end
   end
 end

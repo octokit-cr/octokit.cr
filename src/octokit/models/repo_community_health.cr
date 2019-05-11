@@ -1,12 +1,7 @@
 module Octokit
   module Models
-    class RepoCommunityHealth
-      FIELDS = {
-
-      }
-
-      JSON.mapping({{FIELDS}})
-      initializer_for({{FIELDS}})
+    struct RepoCommunityHealth
+      rest_model()
     end
   end
 end

@@ -1,12 +1,37 @@
 module Octokit
   module Models
-    class Migrations
-      FIELDS = {
+    struct Migration
+      rest_model(
+        id: Int64,
+        guid: String,
 
-      }
+        state: String,
 
-      JSON.mapping({{FIELDS}})
-      initializer_for({{FIELDS}})
+        lock_repositories: Bool,
+
+        exclude_attachments: Bool,
+        url: String,
+        created_at: String,
+        updated_at: String,
+        repositories: Array(Repository)
+      )
+    end
+
+    struct MigrationOptions
+      rest_model(
+        lock_repositories: Bool,
+        exclude_attachments: Bool
+      )
+    end
+
+    struct StartMigration
+      rest_model(
+        repositories: Array(String),
+
+        lock_repositories: Bool?,
+
+        exclude_attachments: Bool?
+      )
     end
   end
 end

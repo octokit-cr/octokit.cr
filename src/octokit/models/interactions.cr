@@ -1,12 +1,13 @@
 module Octokit
   module Models
-    class Interactions
-      FIELDS = {
+    struct InteractionsRestriction
+      rest_model(
+        limit: String,
 
-      }
+        origin: String,
 
-      JSON.mapping({{FIELDS}})
-      initializer_for({{FIELDS}})
+        expires_at: Timestamp
+      )
     end
   end
 end

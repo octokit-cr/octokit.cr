@@ -1,12 +1,7 @@
 module Octokit
   module Models
-    class UserEmails
-      FIELDS = {
-
-      }
-
-      JSON.mapping({{FIELDS}})
-      initializer_for({{FIELDS}})
+    struct UserEmails
+      rest_model()
     end
   end
 end

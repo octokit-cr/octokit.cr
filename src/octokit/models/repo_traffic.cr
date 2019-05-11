@@ -1,12 +1,7 @@
 module Octokit
   module Models
-    class RepoTraffic
-      FIELDS = {
-
-      }
-
-      JSON.mapping({{FIELDS}})
-      initializer_for({{FIELDS}})
+    struct RepoTraffic
+      rest_model()
     end
   end
 end

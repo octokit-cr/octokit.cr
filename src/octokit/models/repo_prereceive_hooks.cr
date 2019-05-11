@@ -1,12 +1,7 @@
 module Octokit
   module Models
-    class RepoPrereceiveHooks
-      FIELDS = {
-
-      }
-
-      JSON.mapping({{FIELDS}})
-      initializer_for({{FIELDS}})
+    struct RepoPrereceiveHooks
+      rest_model()
     end
   end
 end

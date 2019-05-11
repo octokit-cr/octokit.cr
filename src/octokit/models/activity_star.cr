@@ -1,12 +1,21 @@
 module Octokit
   module Models
-    class ActivityStar
+    struct ActivityStar
       FIELDS = {
-
+        starred_at: Timestamp,
+        repository: Repository,
       }
 
-      JSON.mapping({{FIELDS}})
-      initializer_for({{FIELDS}})
+      rest_model(FIELDS)
+    end
+
+    struct Stargazer
+      FIELDS = {
+        starred_at: Timestamp,
+        user:       User,
+      }
+
+      rest_model(FIELDS)
     end
   end
 end

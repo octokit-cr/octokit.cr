@@ -1,12 +1,7 @@
 module Octokit
   module Models
-    class RepoMerging
-      FIELDS = {
-
-      }
-
-      JSON.mapping({{FIELDS}})
-      initializer_for({{FIELDS}})
+    struct RepoMerging
+      rest_model()
     end
   end
 end

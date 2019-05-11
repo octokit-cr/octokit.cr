@@ -1,12 +1,7 @@
 module Octokit
   module Models
-    class RepoForks
-      FIELDS = {
-
-      }
-
-      JSON.mapping({{FIELDS}})
-      initializer_for({{FIELDS}})
+    struct RepoForks
+      rest_model()
     end
   end
 end

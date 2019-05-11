@@ -32,4 +32,13 @@ module Octokit
       {% end %}
     end
   end
+
+  macro rest_model(fields)
+    JSON.mapping({{fields}})
+    initializer_for({{fields}})
+  end
+
+  macro rest_model(**fields)
+    Octokit.rest_model({{fields}})
+  end
 end

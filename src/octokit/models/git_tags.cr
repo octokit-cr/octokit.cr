@@ -1,12 +1,26 @@
 module Octokit
   module Models
-    class GitTags
-      FIELDS = {
+    struct Tag
+      rest_model(
+        tag: String,
+        sha: String,
+        url: String,
+        message: String,
+        tagger: CommitAuthor,
+        object: GitObject,
+        verification: SignatureVerification,
+        node_id: String
+      )
+    end
 
-      }
-
-      JSON.mapping({{FIELDS}})
-      initializer_for({{FIELDS}})
+    struct CreateTagRequest
+      rest_model(
+        tag: String,
+        message: String,
+        object: String,
+        type: String,
+        tagger: CommitAuthor
+      )
     end
   end
 end

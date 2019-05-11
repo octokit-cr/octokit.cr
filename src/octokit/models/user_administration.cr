@@ -1,12 +1,7 @@
 module Octokit
   module Models
-    class UserAdministration
-      FIELDS = {
-
-      }
-
-      JSON.mapping({{FIELDS}})
-      initializer_for({{FIELDS}})
+    struct UserAdministration
+      rest_model()
     end
   end
 end

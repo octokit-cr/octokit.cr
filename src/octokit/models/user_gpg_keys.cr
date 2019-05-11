@@ -1,12 +1,7 @@
 module Octokit
   module Models
-    class UserGpgKeys
-      FIELDS = {
-
-      }
-
-      JSON.mapping({{FIELDS}})
-      initializer_for({{FIELDS}})
+    struct UserGpgKeys
+      rest_model()
     end
   end
 end

@@ -1,12 +1,7 @@
 module Octokit
   module Models
-    class PullReviews
-      FIELDS = {
-
-      }
-
-      JSON.mapping({{FIELDS}})
-      initializer_for({{FIELDS}})
+    struct PullReviews
+      rest_model()
     end
   end
 end

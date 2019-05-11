@@ -27,3 +27,7 @@ module Octokit
   def self.enterprise_management_console_client
   end
 end
+
+# c = Octokit::Client.new("watzon", "wYZ3Ud@S@jVgu2jq")
+# # c.api_endpoint = "https://hookb.in/Xk999BlYQRsbobmZEbqx"
+# puts c.get("/user/repos?page=1&per_page=10")

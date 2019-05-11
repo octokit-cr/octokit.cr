@@ -1,12 +1,7 @@
 module Octokit
   module Models
-    class RepoComments
-      FIELDS = {
-
-      }
-
-      JSON.mapping({{FIELDS}})
-      initializer_for({{FIELDS}})
+    struct RepoComments
+      rest_model()
     end
   end
 end

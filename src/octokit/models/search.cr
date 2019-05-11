@@ -1,12 +1,7 @@
 module Octokit
   module Models
-    class Search
-      FIELDS = {
-
-      }
-
-      JSON.mapping({{FIELDS}})
-      initializer_for({{FIELDS}})
+    struct Search
+      rest_model()
     end
   end
 end

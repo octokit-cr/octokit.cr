@@ -1,12 +1,15 @@
 module Octokit
   module Models
-    class IssueLabels
-      FIELDS = {
-
-      }
-
-      JSON.mapping({{FIELDS}})
-      initializer_for({{FIELDS}})
+    struct Label
+      rest_model(
+        id: Int64,
+        url: String,
+        name: String,
+        color: String,
+        description: String,
+        default: Bool,
+        node_id: String
+      )
     end
   end
 end

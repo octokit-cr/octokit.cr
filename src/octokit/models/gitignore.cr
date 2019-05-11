@@ -1,12 +1,10 @@
 module Octokit
   module Models
-    class Gitignore
-      FIELDS = {
-
-      }
-
-      JSON.mapping({{FIELDS}})
-      initializer_for({{FIELDS}})
+    struct Gitignore
+      rest_model(
+        name: String,
+        source: String
+      )
     end
   end
 end

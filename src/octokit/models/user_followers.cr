@@ -1,12 +1,7 @@
 module Octokit
   module Models
-    class UserFollowers
-      FIELDS = {
-
-      }
-
-      JSON.mapping({{FIELDS}})
-      initializer_for({{FIELDS}})
+    struct UserFollowers
+      rest_model()
     end
   end
 end

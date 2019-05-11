@@ -1,12 +1,7 @@
 module Octokit
   module Models
-    class Teams
-      FIELDS = {
-
-      }
-
-      JSON.mapping({{FIELDS}})
-      initializer_for({{FIELDS}})
+    struct Teams
+      rest_model()
     end
   end
 end
