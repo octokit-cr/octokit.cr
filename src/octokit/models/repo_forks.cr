@@ -2,7 +2,7 @@ module Octokit
   module Models
     struct RepositoryListForksOptions
       rest_model({
-        sort: String
+        sort: String,
       }.merge(ListOptions::FIELDS))
     end
 

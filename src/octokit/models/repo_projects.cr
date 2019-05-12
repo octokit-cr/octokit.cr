@@ -2,7 +2,7 @@ module Octokit
   module Models
     struct ProjctListOptions
       rest_model({
-        state: String
+        state: String,
       }.merge(ListOptions::FIELDS))
     end
   end

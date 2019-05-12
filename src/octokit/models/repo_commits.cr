@@ -29,7 +29,7 @@ module Octokit
       rest_model(
         sha: String,
         filename: String,
-        additions: Int32
+        additions: Int32,
         deletions: Int32,
         changes: Int32,
         status: String,
@@ -42,23 +42,25 @@ module Octokit
     end
 
     struct CommitsComparison
-      base_commit: RepositoryCommit,
-      merge_base_commit: RepositoryCommit,
+      rest_model(
+        base_commit: RepositoryCommit,
+        merge_base_commit: RepositoryCommit,
 
-      status: String,
-      ahead_by: Int32,
-      behind_by: Int32,
-      total_commits: Int32,
+        status: String,
+        ahead_by: Int32,
+        behind_by: Int32,
+        total_commits: Int32,
 
-      commits: Array(RepositoryCommit),
+        commits: Array(RepositoryCommit),
 
-      files: Array(CommitFile),
+        files: Array(CommitFile),
 
-      html_url: String,
-      permalink: String,
-      diff_url: String,
-      patch_url: String,
-      url: String
+        html_url: String,
+        permalink: String,
+        diff_url: String,
+        patch_url: String,
+        url: String
+      )
     end
 
     struct CommitListOptions
@@ -71,7 +73,7 @@ module Octokit
 
         since: String,
 
-        until: String
+        until: String,
       }.merge(ListOptions::FIELDS))
     end
   end

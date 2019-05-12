@@ -77,11 +77,11 @@ module Octokit
 
     struct PullRequestListOptions
       rest_model({
-        state: String,
-        head: String,
-        base: String,
-        sort: String,
-        direction: String
+        state:     String,
+        head:      String,
+        base:      String,
+        sort:      String,
+        direction: String,
       }.merge(ListOptions::FIELDS))
     end
 

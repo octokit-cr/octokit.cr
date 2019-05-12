@@ -107,14 +107,14 @@ module Octokit
 
         sort: String,
 
-        direction: String
-    }.merge(ListOptions::FIELDS))
+        direction: String,
+      }.merge(ListOptions::FIELDS))
     end
 
     struct RepositoryListByOrgOptions
       rest_model({
-        type: String
-    }.merge(ListOptions::FIELDS))
+        type: String,
+      }.merge(ListOptions::FIELDS))
     end
 
     struct RepositoryListAllOptions
@@ -170,15 +170,17 @@ module Octokit
 
     struct ListContributorsOptions
       rest_model({
-        anon: String
-    }.merge(ListOptions::FIELDS))
+        anon: String,
+      }.merge(ListOptions::FIELDS))
     end
 
     struct RepositoryTag
-      name: String,
-      commit: String,
-      zipball_url: String,
-      tarball_url: String
+      rest_model(
+        name: String,
+        commit: String,
+        zipball_url: String,
+        tarball_url: String
+      )
     end
 
     struct Branch
@@ -237,7 +239,7 @@ module Octokit
     struct PullRequestReviewsEnforcementUpdate
       rest_model(
         dismissal_restrictions_request: DismissalRestrictionsRequest,
-        
+
         dismiss_stale_reviews: Bool,
 
         require_code_owner_reviews: Bool,

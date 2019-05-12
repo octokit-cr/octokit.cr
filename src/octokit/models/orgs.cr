@@ -56,7 +56,7 @@ module Octokit
 
     struct OrganizationsListOptions
       rest_model({
-        since: Int64
+        since: Int64,
       }.merge(ListOptions))
     end
   end

@@ -63,14 +63,16 @@ module Octokit
     end
 
     struct UserContext
-      message: String,
-      octicon: String
+      rest_model(
+        message: String,
+        octicon: String
+      )
     end
 
     struct UserListOptions
       rest_model({
-        since: Int64
-      }).merge(ListOptions::FIELDS))
+        since: Int64,
+      }.merge(ListOptions::FIELDS))
     end
   end
 end

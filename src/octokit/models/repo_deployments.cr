@@ -11,7 +11,7 @@ module Octokit
         environment: String,
         description: String,
         creator: User,
-        created_at: String
+        created_at: String,
         updated_at: String,
         statuses_url: String,
         repository_url: String,
@@ -41,7 +41,7 @@ module Octokit
 
         task: String,
 
-        environment: String
+        environment: String,
       }.merge(ListOptions::FIELDS))
     end
 

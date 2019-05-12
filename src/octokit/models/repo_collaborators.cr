@@ -2,7 +2,7 @@ module Octokit
   module Models
     struct ListCollaboratorOptions
       rest_model({
-        affiliation: String
+        affiliation: String,
       }.merge(ListOptions::FIELDS))
     end
 

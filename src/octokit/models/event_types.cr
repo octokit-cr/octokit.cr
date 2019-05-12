@@ -9,13 +9,13 @@ module Octokit
     struct CheckRunEvent
       rest_model(
         check_run: CheckRun,
-        
+
         # The action performed. Possible values are: "created", "updated", "rerequested", or "requested_action".
         action: String,
 
         # The following fields are only published by Webhook events.
-        repo: { key: "repository", type: Repository? },
-        org: { key: "organization", type: Organization? },
+        repo: {key: "repository", type: Repository?},
+        org: {key: "organization", type: Organization?},
         sender: User?,
         installation: Installation?,
 
@@ -32,8 +32,8 @@ module Octokit
         action: String,
 
         # The following fields are only populated by Webhook events.
-        repo: { key: "repository", type: Repository? },
-        org: { key: "organization", type: Organization? },
+        repo: {key: "repository", type: Repository?},
+        org: {key: "organization", type: Organization?},
         sender: User?,
         installation: Installation?
       )
@@ -45,7 +45,7 @@ module Octokit
 
         # The following fields are only populated by Webhook events.
         action: String?,
-        repo: { key: "repository", type: Repository? },
+        repo: {key: "repository", type: Repository?},
         sender: User?,
         installation: Installation?
       )
@@ -63,7 +63,7 @@ module Octokit
 
         # The following fields are only populated by Webhook events.
         pusher_type: String?,
-        repo: { key: "repository", type: Repository? },
+        repo: {key: "repository", type: Repository?},
         sender: User?,
         installation: Installation?
       )
@@ -78,7 +78,7 @@ module Octokit
 
         # The following fields are only populated by Webhook events.
         pusher_type: String?,
-        repo: { key: "repository", type: Repository? },
+        repo: {key: "repository", type: Repository?},
         sender: User?,
         installation: Installation?
       )
@@ -98,7 +98,7 @@ module Octokit
       rest_model(
         deployment: Deployment,
         deployment_status: DeploymentStatus,
-        repo: { key: "repository", type: Repository },
+        repo: {key: "repository", type: Repository},
 
         # The following fields are only populated by Webhook events.
         sender: User?,
@@ -110,7 +110,7 @@ module Octokit
       rest_model(
         deployment: Deployment,
         deployment_status: DeploymentStatus,
-        repo: { key: "repository", type: Repository },
+        repo: {key: "repository", type: Repository},
 
         # The following fields are only populated by Webhook events.
         sender: User?,
@@ -124,7 +124,7 @@ module Octokit
         forkee: Repository,
 
         # The following fields are only populated by Webhook events.
-        repo: { key: "repository", type: Repository? },
+        repo: {key: "repository", type: Repository?},
         sender: User?,
         installation: Installation?
       )
@@ -156,7 +156,7 @@ module Octokit
         pages: Array(Page),
 
         # The following fields are only populated by Webhook events.
-        repo: { key: "repository", type: Repository? },
+        repo: {key: "repository", type: Repository?},
         sender: User?,
         installation: Installation?
       )
@@ -244,7 +244,7 @@ module Octokit
 
         # The following fields are only populated by Webhook events.
         changes: EditChange?,
-        repo: { key: "repository", type: Repository? },
+        repo: {key: "repository", type: Repository?},
         sender: User?,
         installation: Installation?
       )
@@ -278,8 +278,8 @@ module Octokit
 
         # The following fields are only populated by Webhook events.
         changes: EditChange?,
-        repo: { key: "repository", type: Repository? },
-        org: { key: "organization", type: Organization? },
+        repo: {key: "repository", type: Repository?},
+        org: {key: "organization", type: Organization?},
         installation: Installation?
       )
     end
@@ -306,18 +306,20 @@ module Octokit
         member: User,
 
         # The following fields are only populated by Webhook events.
-        repo: { key: "repository", type: Repository? },
+        repo: {key: "repository", type: Repository?},
         sender: User?,
         installation: Installation?
       )
     end
 
     struct MemberEvent
-      action: String,
+      rest_model(
+        action: String,
 
-      repo: { key: "repository", type: Repository? },
-      sender: User,
-      installation: Installation?
+        repo: {key: "repository", type: Repository?},
+        sender: User,
+        installation: Installation?
+      )
     end
 
     struct MembershipEvent
@@ -328,7 +330,7 @@ module Octokit
         member: String,
         team: String,
 
-        org: { key: "organization", type: Organization? },
+        org: {key: "organization", type: Organization?},
         sender: User,
         installation: Installation?
       )
@@ -350,9 +352,9 @@ module Octokit
         milestone: Milestone,
 
         changes: EditChange?,
-        repo: { key: "repository", type: Repository? },
+        repo: {key: "repository", type: Repository?},
         sender: User?,
-        org: { key: "organization", type: Organization? },
+        org: {key: "organization", type: Organization?},
         installation: Installation?
       )
     end
@@ -383,14 +385,14 @@ module Octokit
     end
 
     struct PageBuildEvent
-       rest_model(
+      rest_model(
         build: PagesBuild,
 
         id: Int64?,
-        repo: { key: "repository", type: Repository? },
+        repo: {key: "repository", type: Repository?},
         sender: User?,
         installation: Installation?
-       )
+      )
     end
 
     struct PingEvent
@@ -408,22 +410,22 @@ module Octokit
         changes: ProjectChange,
         project: Project,
 
-        repo: { key: "repository", type: Repository? },
-        org: { key: "organization", type: Organization? },
+        repo: {key: "repository", type: Repository?},
+        org: {key: "organization", type: Organization?},
         sender: User?,
         installation: Installation?
       )
     end
 
-    stuct ProjcetCardEvent
+    struct ProjectCardEvent
       rest_model(
         action: String,
         changes: ProjectCardChange,
         after_id: Int64,
         project_card: ProjectCard,
 
-        repo: { key: "repository", type: Repository? },
-        org: { key: "organization", type: Organization? },
+        repo: {key: "repository", type: Repository?},
+        org: {key: "organization", type: Organization?},
         sender: User?,
         installation: Installation?
       )
@@ -436,8 +438,8 @@ module Octokit
         after_id: Int64,
         project_column: ProjectColumn,
 
-        repo: { key: "repository", type: Repository? },
-        org: { key: "organization", type: Organization? },
+        repo: {key: "repository", type: Repository?},
+        org: {key: "organization", type: Organization?},
         sender: User?,
         installation: Installation?
       )
@@ -445,7 +447,7 @@ module Octokit
 
     struct PublicEvent
       rest_model(
-        repo: { key: "repository", type: Repository? },
+        repo: {key: "repository", type: Repository?},
         sender: User,
         installation: Installation
       )
@@ -461,7 +463,7 @@ module Octokit
         changes: EditChange?,
 
         requested_reviewer: User?,
-        repo: { key: "repository", type: Repository? },
+        repo: {key: "repository", type: Repository?},
         sender: User?,
         installation: Installation?,
         label: Label?,
@@ -476,7 +478,7 @@ module Octokit
         review: PullRequestReview,
         pull_request: PullRequest,
 
-        repo: { key: "repository", type: Repository? },
+        repo: {key: "repository", type: Repository?},
         sender: User?,
         installation: Installation?,
 
@@ -491,7 +493,7 @@ module Octokit
         comment: PullRequestComment,
 
         changes: EditChange?,
-        repo: { key: "repository", type: Repository? },
+        repo: {key: "repository", type: Repository?},
         sender: User?,
         installation: Installation?
       )
@@ -513,7 +515,7 @@ module Octokit
         forced: Bool?,
         base_ref: String?,
         compare: String?,
-        repo: { key: "repository", type: PushEventRepository? },
+        repo: {key: "repository", type: PushEventRepository?},
         head_commit: PushEventCommit?,
         pusher: User?,
         sender: User?,
@@ -590,7 +592,7 @@ module Octokit
         action: String,
         release: RepositoryRelease,
 
-        repo: { key: "repository", type: Repository? },
+        repo: {key: "repository", type: Repository?},
         sender: User?,
         installation: Installation?
       )
@@ -599,9 +601,9 @@ module Octokit
     struct RepositoryEvent
       rest_model(
         action: String,
-        repo: { key: "repository", type: Repository },
+        repo: {key: "repository", type: Repository},
 
-        org: { key: "organization", type: Organization? },
+        org: {key: "organization", type: Organization?},
         sender: User?,
         installation: Installation?
       )
@@ -652,7 +654,7 @@ module Octokit
         commit: RepositoryCommit?,
         created_at: String?,
         updated_at: String?,
-        repo: { key: "repository", type: Repository? },
+        repo: {key: "repository", type: Repository?},
         sender: User?,
         installation: Installation?
       )
@@ -663,9 +665,9 @@ module Octokit
         action: String,
         team: Team,
         changes: TeamChange,
-        repo: { key: "repository", type: Repository },
+        repo: {key: "repository", type: Repository},
 
-        org: { key: "organization", type: Organization? },
+        org: {key: "organization", type: Organization?},
         sender: User?,
         installation: Installation?
       )
@@ -674,9 +676,9 @@ module Octokit
     struct TeamAddEvent
       rest_model(
         team: Team,
-        repo: { key: "repository", type: Repository },
+        repo: {key: "repository", type: Repository},
 
-        org: { key: "organization", type: Organization? },
+        org: {key: "organization", type: Organization?},
         sender: User?,
         installation: Installation?
       )
@@ -686,7 +688,7 @@ module Octokit
       rest_model(
         action: String,
 
-        repo: { key: "repository", type: Repository? },
+        repo: {key: "repository", type: Repository?},
         sender: User?,
         installation: Installation?
       )

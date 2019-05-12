@@ -22,13 +22,13 @@ module Octokit
 
         filter: String,
 
-        role: String
+        role: String,
       }.merge(ListOptions::FIELDS))
     end
 
     struct ListOrgMembershipOptions
       rest_model({
-        state: String
+        state: String,
       }.merge(ListOptions::FIELDS))
     end
 

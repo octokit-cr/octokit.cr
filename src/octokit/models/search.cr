@@ -2,10 +2,10 @@ module Octokit
   module Models
     struct SearchOptions
       rest_model({
-        sort: String,
-        order: String,
-        text_match: Bool
-    }.merge(ListOptions::FIELDS))
+        sort:       String,
+        order:      String,
+        text_match: Bool,
+      }.merge(ListOptions::FIELDS))
     end
 
     struct SearchParameters
@@ -59,7 +59,7 @@ module Octokit
       rest_model(
         text: String,
         indices: Array(Int32)
-      )      
+      )
     end
 
     struct TextMatch
@@ -75,8 +75,8 @@ module Octokit
     struct CodeSearchResult
       rest_model(
         totalL Int32,
-        incomplete_results: Bool,
-        code_results: Array(CodeResult)
+          incomplete_results: Bool,
+          code_results: Array(CodeResult)
       )
     end
 

@@ -5,7 +5,7 @@ module Octokit
         type: String,
         public: Bool,
         # TODO: Parse the payload
-        raw_payload: { key: "payload", type: String },
+        raw_payload: {key: "payload", type: String},
         repo: Repository,
         actor: User,
         org: Orginization,

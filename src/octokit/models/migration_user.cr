@@ -27,7 +27,7 @@ module Octokit
     struct StartUserMigration
       rest_model(
         repositories: Array(String)?,
-        
+
         lock_repositories: Bool?,
 
         exclude_attachments: Bool?

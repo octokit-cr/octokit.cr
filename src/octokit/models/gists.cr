@@ -41,7 +41,7 @@ module Octokit
 
     struct GistListOptions
       rest_model({
-        since: String
+        since: String,
       }.merge(ListOptions::FIELDS))
     end
   end

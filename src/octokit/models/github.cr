@@ -18,7 +18,7 @@ module Octokit
 
     type RawType = UInt8
 
-    type RawOptions
+    struct RawOptions
       rest_model(
         type: RawType
       )

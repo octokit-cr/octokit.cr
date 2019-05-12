@@ -81,14 +81,14 @@ module Octokit
 
     struct ProjectCardListOptions
       rest_model({
-        archived_state: String
+        archived_state: String,
       }.merge(ListOptions::FIELDS))
     end
 
     struct ProjectCardOptions
       rest_model(
         note: String,
-        
+
         content_id: Int64,
 
         content_type: String,
@@ -112,7 +112,7 @@ module Octokit
 
     struct ListCollaboratorOptions
       rest_model({
-        affiliation: String
+        affiliation: String,
       }.merge(ListOptions::FIELDS))
     end
 

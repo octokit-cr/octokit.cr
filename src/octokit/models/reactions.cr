@@ -14,7 +14,7 @@ module Octokit
       rest_model(
         total_count: Int32,
         plus_one: Int32,
-        minus_one: Int32
+        minus_one: Int32,
         laugh: Int32,
         confused: Int32,
         heart: Int32,

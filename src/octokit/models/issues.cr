@@ -59,7 +59,7 @@ module Octokit
 
         direction: String,
 
-        since: String
+        since: String,
       }.merge(ListOptions))
     end
 

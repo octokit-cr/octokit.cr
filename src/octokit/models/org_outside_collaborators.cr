@@ -2,7 +2,7 @@ module Octokit
   module Models
     struct ListOutsideCollaboratorsOptions
       rest_model({
-        filter: String
+        filter: String,
       }.merge(ListOptions::FIELDS))
     end
   end

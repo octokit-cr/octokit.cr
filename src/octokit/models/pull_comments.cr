@@ -31,8 +31,8 @@ module Octokit
 
         direction: String,
 
-        since: String
-    }.merge(ListOptions::FIELDS))
+        since: String,
+      }.merge(ListOptions::FIELDS))
     end
   end
 end
