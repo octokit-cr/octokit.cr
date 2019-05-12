@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct Reaction
-      rest_model(
+      Octokit.rest_model(
         id: Int64,
         user: User,
         node_id: String,
@@ -11,7 +11,7 @@ module Octokit
     end
 
     struct Reactions
-      rest_model(
+      Octokit.rest_model(
         total_count: Int32,
         plus_one: Int32,
         minus_one: Int32,

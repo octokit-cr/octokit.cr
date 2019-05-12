@@ -29,7 +29,7 @@ module Octokit
     #
     # @see https://developer.github.com/v3/#authentication
     def user_authenticated?
-      basic_authenticated || token_authenticated
+      basic_authenticated? || token_authenticated?
     end
 
     # Indicates if the client has OAuth Application

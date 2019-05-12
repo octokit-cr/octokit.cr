@@ -184,18 +184,20 @@ module Octokit
     end
   end
 
+  class Error::ArgumentError < Error; end
+
   # Raised on errors in the 400-499 range
-  class ClientError < Error; end
+  class Error::ClientError < Error; end
 
   # Raised when GitHub returns a 400 HTTP status code
-  class BadRequest < ClientError; end
+  class Error::BadRequest < Error::ClientError; end
 
   # Raised when GitHub returns a 401 HTTP status code
-  class Unauthorized < ClientError; end
+  class Error::Unauthorized < Error::ClientError; end
 
   # Raised when GitHub returns a 401 HTTP status code
   # and headers include "X-GitHub-OTP"
-  class OneTimePasswordRequired < ClientError
+  class Error::OneTimePasswordRequired < Error::ClientError
     # @private
     OTP_DELIVERY_PATTERN = /required; (\w+)/i
 
@@ -212,94 +214,94 @@ module Octokit
     end
 
     private def delivery_method_from_header
-      if match = self.class.required_header(@response["response_headers"])
+      if match = self.class.Error::required_header(@response["response_headers"])
         match[1]
       end
     end
   end
 
   # Raised when GitHub returns a 403 HTTP status code
-  class Forbidden < ClientError; end
+  class Error::Forbidden < Error::ClientError; end
 
   # Raised when GitHub returns a 403 HTTP status code
   # and body matches 'rate limit exceeded'
-  class TooManyRequests < Forbidden; end
+  class Error::TooManyRequests < Error::Forbidden; end
 
   # Raised when GitHub returns a 403 HTTP status code
   # and body matches 'login attempts exceeded'
-  class TooManyLoginAttempts < Forbidden; end
+  class Error::TooManyLoginAttempts < Error::Forbidden; end
 
   # Raised when GitHub returns a 403 HTTP status code
   # and body matches 'returns blobs up to [0-9]+ MB'
-  class TooLargeContent < Forbidden; end
+  class Error::TooLargeContent < Error::Forbidden; end
 
   # Raised when GitHub returns a 403 HTTP status code
   # and body matches 'abuse'
-  class AbuseDetected < Forbidden; end
+  class Error::AbuseDetected < Error::Forbidden; end
 
   # Raised when GitHub returns a 403 HTTP status code
   # and body matches 'repository access blocked'
-  class RepositoryUnavailable < Forbidden; end
+  class Error::RepositoryUnavailable < Error::Forbidden; end
 
   # Raised when GitHub returns a 403 HTTP status code
   # and body matches 'email address must be verified'
-  class UnverifiedEmail < Forbidden; end
+  class Error::UnverifiedEmail < Error::Forbidden; end
 
   # Raised when GitHub returns a 403 HTTP status code
   # and body matches 'account was suspended'
-  class AccountSuspended < Forbidden; end
+  class Error::AccountSuspended < Error::Forbidden; end
 
   # Raised when GitHub returns a 403 HTTP status code
   # and body matches 'billing issue'
-  class BillingIssue < Forbidden; end
+  class Error::BillingIssue < Error::Forbidden; end
 
   # Raised when GitHub returns a 404 HTTP status code
-  class NotFound < ClientError; end
+  class Error::NotFound < Error::ClientError; end
 
   # Raised when GitHub returns a 404 HTTP status code
   # and body matches 'Branch not protected'
-  class BranchNotProtected < ClientError; end
+  class Error::BranchNotProtected < Error::ClientError; end
 
   # Raised when GitHub returns a 405 HTTP status code
-  class MethodNotAllowed < ClientError; end
+  class Error::MethodNotAllowed < Error::ClientError; end
 
   # Raised when GitHub returns a 406 HTTP status code
-  class NotAcceptable < ClientError; end
+  class Error::NotAcceptable < Error::ClientError; end
 
   # Raised when GitHub returns a 409 HTTP status code
-  class Conflict < ClientError; end
+  class Error::Conflict < Error::ClientError; end
 
   # Raised when GitHub returns a 414 HTTP status code
-  class UnsupportedMediaType < ClientError; end
+  class Error::UnsupportedMediaType < Error::ClientError; end
 
   # Raised when GitHub returns a 422 HTTP status code
-  class UnprocessableEntity < ClientError; end
+  class Error::UnprocessableEntity < Error::ClientError; end
 
   # Raised when GitHub returns a 451 HTTP status code
-  class UnavailableForLegalReasons < ClientError; end
+  class Error::UnavailableForLegalReasons < Error::ClientError; end
 
   # Raised on errors in the 500-599 range
-  class ServerError < Error; end
+  class Error::ServerError < Error; end
 
   # Raised when GitHub returns a 500 HTTP status code
-  class InternalServerError < ServerError; end
+  class Error::InternalServerError < Error::ServerError; end
 
   # Raised when GitHub returns a 501 HTTP status code
-  class NotImplemented < ServerError; end
+  class Error::NotImplemented < Error::ServerError; end
 
   # Raised when GitHub returns a 502 HTTP status code
-  class BadGateway < ServerError; end
+  class Error::BadGateway < Error::ServerError; end
 
   # Raised when GitHub returns a 503 HTTP status code
-  class ServiceUnavailable < ServerError; end
+  class Error::ServiceUnavailable < Error::ServerError; end
 
   # Raised when client fails to provide valid Content-Type
-  class MissingContentType < ArgumentError; end
+  class Error::MissingContentType < Error::ArgumentError; end
 
   # Raised when a method requires an application client_id
   # and secret but none is provided
-  class ApplicationCredentialsRequired < Exception; end
+  class Error::ApplicationCredentialsRequired < Exception; end
 
   # Raised when a repository is created with an invalid format
-  class InvalidRepository < ArgumentError; end
+  class Error::InvalidRepository < Error::ArgumentError; end
 end

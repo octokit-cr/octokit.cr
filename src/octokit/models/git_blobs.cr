@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct Blob
-      rest_model(
+      Octokit.rest_model(
         content: String,
         encoding: String,
         sha: String,

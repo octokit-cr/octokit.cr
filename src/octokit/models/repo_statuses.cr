@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct RepoStatus
-      rest_model(
+      Octokit.rest_model(
         id: Int64,
         node_id: String,
         url: String,
@@ -21,7 +21,7 @@ module Octokit
     end
 
     struct CombinedStatus
-      rest_model(
+      Octokit.rest_model(
         state: String,
 
         name: String,

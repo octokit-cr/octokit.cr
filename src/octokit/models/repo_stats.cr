@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct ContributorStats
-      rest_model(
+      Octokit.rest_model(
         author: Contributor,
         total: Int32,
         weeks: Array(WeeklyStats)
@@ -9,7 +9,7 @@ module Octokit
     end
 
     struct WeeklyStats
-      rest_model(
+      Octokit.rest_model(
         week: String,
         additions: Int32,
         deletions: Int32,
@@ -18,7 +18,7 @@ module Octokit
     end
 
     struct WeeklyCommitActivity
-      rest_model(
+      Octokit.rest_model(
         days: Array(Int32),
         total: Int32,
         week: String
@@ -26,7 +26,7 @@ module Octokit
     end
 
     struct PunchCard
-      rest_model(
+      Octokit.rest_model(
         day: Int32,
         hour: Int32,
         commits: Int32

@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct IssueEvent
-      rest_model(
+      Octokit.rest_model(
         id: Int64,
         url: String,
 
@@ -25,11 +25,18 @@ module Octokit
     end
 
     struct DismissedReview
-      rest_model(
+      Octokit.rest_model(
         state: String,
         review_id: Int64,
         dismissal_message: String,
         dismissal_commit_id: String
+      )
+    end
+
+    struct Rename
+      Octokit.rest_model(
+        from: String,
+        to: String
       )
     end
   end

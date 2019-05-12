@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct Import
-      rest_model(
+      Octokit.rest_model(
         vcs_url: String,
 
         vcs: String,
@@ -39,7 +39,7 @@ module Octokit
     end
 
     struct SourceImportAuthor
-      rest_model(
+      Octokit.rest_model(
         id: Int64,
         remote_id: String,
         remote_name: String,
@@ -51,7 +51,7 @@ module Octokit
     end
 
     struct LargeFile
-      rest_model(
+      Octokit.rest_model(
         ref_name: String,
         path: String,
         oid: String,

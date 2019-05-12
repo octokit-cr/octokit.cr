@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct Deployment
-      rest_model(
+      Octokit.rest_model(
         url: String,
         id: Int64,
         sha: String,
@@ -20,7 +20,7 @@ module Octokit
     end
 
     struct DeploymentRequest
-      rest_model(
+      Octokit.rest_model(
         ref: String,
         task: String,
         auto_merge: Bool,
@@ -34,7 +34,7 @@ module Octokit
     end
 
     struct DeploymentsListOptions
-      rest_model({
+      Octokit.rest_model({
         sha: String,
 
         ref: String,
@@ -42,11 +42,12 @@ module Octokit
         task: String,
 
         environment: String,
-      }.merge(ListOptions::FIELDS))
+      # }.merge(ListOptions::FIELDS))
+})
     end
 
     struct DeploymentStatus
-      rest_model(
+      Octokit.rest_model(
         id: String,
 
         state: String,
@@ -62,7 +63,7 @@ module Octokit
     end
 
     struct DeploymentStatusRequest
-      rest_model(
+      Octokit.rest_model(
         state: String,
         log_url: String,
         description: String,

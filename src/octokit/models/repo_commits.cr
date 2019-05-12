@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct RepositoryCommit
-      rest_model(
+      Octokit.rest_model(
         node_id: String,
         sha: String,
         commit: Commit,
@@ -18,7 +18,7 @@ module Octokit
     end
 
     struct CommitStats
-      rest_model(
+      Octokit.rest_model(
         additions: Int32,
         deletions: Int32,
         total: Int32
@@ -26,7 +26,7 @@ module Octokit
     end
 
     struct CommitFile
-      rest_model(
+      Octokit.rest_model(
         sha: String,
         filename: String,
         additions: Int32,
@@ -42,7 +42,7 @@ module Octokit
     end
 
     struct CommitsComparison
-      rest_model(
+      Octokit.rest_model(
         base_commit: RepositoryCommit,
         merge_base_commit: RepositoryCommit,
 
@@ -64,7 +64,7 @@ module Octokit
     end
 
     struct CommitListOptions
-      rest_model({
+      Octokit.rest_model({
         sha: String,
 
         path: String,
@@ -74,7 +74,8 @@ module Octokit
         since: String,
 
         until: String,
-      }.merge(ListOptions::FIELDS))
+      # }.merge(ListOptions::FIELDS))
+})
     end
   end
 end

@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct ActivityWatching
-      FIELDS = {
+      Octokit.rest_model(
         subscriptions: Bool,
         ignored:       Bool,
         reason:        String,
@@ -12,10 +12,8 @@ module Octokit
         repository_url: String?,
 
         # Only populated for thread subscriptions
-        thread_url: String?,
-      }
-
-      rest_model(FIELDS)
+        thread_url: String?
+      )
     end
   end
 end

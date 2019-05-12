@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct Project
-      rest_model(
+      Octokit.rest_model(
         id: Int64,
         url: String,
         html_url: String,
@@ -19,7 +19,7 @@ module Octokit
     end
 
     struct ProjectOptions
-      rest_model(
+      Octokit.rest_model(
         name: String,
 
         body: String,
@@ -33,7 +33,7 @@ module Octokit
     end
 
     struct ProjectColumn
-      rest_model(
+      Octokit.rest_model(
         id: Int64,
         name: String,
         url: String,
@@ -46,19 +46,19 @@ module Octokit
     end
 
     struct ProjectColumnOptions
-      rest_model(
+      Octokit.rest_model(
         name: String
       )
     end
 
     struct ProjectColumnMoveOptions
-      rest_model(
+      Octokit.rest_model(
         position: String
       )
     end
 
     struct ProjectCard
-      rest_model(
+      Octokit.rest_model(
         url: String,
         columns_url: String,
         content_url: String,
@@ -80,13 +80,14 @@ module Octokit
     end
 
     struct ProjectCardListOptions
-      rest_model({
+      Octokit.rest_model({
         archived_state: String,
-      }.merge(ListOptions::FIELDS))
+      # }.merge(ListOptions::FIELDS))
+})
     end
 
     struct ProjectCardOptions
-      rest_model(
+      Octokit.rest_model(
         note: String,
 
         content_id: Int64,
@@ -98,26 +99,27 @@ module Octokit
     end
 
     struct ProjectCardMoveOptions
-      rest_model(
+      Octokit.rest_model(
         position: String,
         column_id: Int64
       )
     end
 
     struct ProjectCollaboratorOptions
-      rest_model(
+      Octokit.rest_model(
         permission: String
       )
     end
 
     struct ListCollaboratorOptions
-      rest_model({
+      Octokit.rest_model({
         affiliation: String,
-      }.merge(ListOptions::FIELDS))
+      # }.merge(ListOptions::FIELDS))
+})
     end
 
     struct ProjectPermissionLevel
-      rest_model(
+      Octokit.rest_model(
         permission: String,
         user: User
       )

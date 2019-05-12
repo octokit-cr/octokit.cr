@@ -1,4 +1,7 @@
 require "halite"
+require "./middleware/follow_redirects"
+require "./response/raise_error"
+require "./response/feed_parser"
 require "./version"
 
 module Octokit

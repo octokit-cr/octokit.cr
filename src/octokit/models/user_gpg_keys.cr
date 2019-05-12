@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct GPGKey
-      rest_model(
+      Octokit.rest_model(
         id: Int64,
         primary_key_id: Int64,
         key_id: String,
@@ -18,7 +18,7 @@ module Octokit
     end
 
     struct GPGEmail
-      rest_model(
+      Octokit.rest_model(
         email: String,
         verified: Bool
       )

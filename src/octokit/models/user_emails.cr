@@ -1,10 +1,11 @@
 module Octokit
   module Models
-    struct UserEmaul
-      rest_model(
+    struct UserEmail
+      Octokit.rest_model(
         email: String,
         primary: Bool,
-        verified: Bool
+        verified: Bool,
+        visibility: String?
       )
     end
   end

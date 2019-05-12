@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct Tag
-      rest_model(
+      Octokit.rest_model(
         tag: String,
         sha: String,
         url: String,
@@ -14,7 +14,7 @@ module Octokit
     end
 
     struct CreateTagRequest
-      rest_model(
+      Octokit.rest_model(
         tag: String,
         message: String,
         object: String,

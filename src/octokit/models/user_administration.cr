@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct UserSuspendOptions
-      rest_model(
+      Octokit.rest_model(
         reason: String
       )
     end

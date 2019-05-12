@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct TeamLDAPMapping
-      FIELDS = {
+      Octokit.rest_model(
         id:          Int64,
         ldap_dn:     String,
         url:         String,
@@ -12,14 +12,12 @@ module Octokit
         permission:  String,
 
         members_url:      String,
-        repositories_url: String,
-      }
-
-      rest_model(FIELDS)
+        repositories_url: String
+      )
     end
 
     struct UserLDAPMapping
-      FIELDS = {
+      Octokit.rest_model(
         id:          Int64,
         ldap_dn:     String,
         login:       String,
@@ -37,10 +35,8 @@ module Octokit
         received_events_url: String,
         repos_url:           String,
         starred_url:         String,
-        subscriptions_url:   String,
-      }
-
-      rest_model(FIELDS)
+        subscriptions_url:   String
+      )
     end
   end
 end

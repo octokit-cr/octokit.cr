@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct IssueComment
-      rest_model(
+      Octokit.rest_model(
         id: Int64,
         node_id: String,
         body: String,

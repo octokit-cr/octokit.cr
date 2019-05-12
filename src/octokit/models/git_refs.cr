@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct Reference
-      rest_model(
+      Octokit.rest_model(
         ref: String,
         url: String,
         object: GitObject,
@@ -10,7 +10,7 @@ module Octokit
     end
 
     struct GitObject
-      rest_model(
+      Octokit.rest_model(
         type: String,
         sha: String,
         url: String
@@ -18,14 +18,14 @@ module Octokit
     end
 
     struct CreateRefRequest
-      rest_model(
+      Octokit.rest_model(
         ref: String,
         sha: String
       )
     end
 
     struct UpdateRefRequest
-      rest_model(
+      Octokit.rest_model(
         sha: String,
         force: Bool
       )

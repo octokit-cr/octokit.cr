@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct RepositoryInvitation
-      rest_model(
+      Octokit.rest_model(
         id: Int64,
         repo: Repository,
         invitee: User,

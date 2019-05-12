@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct RepositoryContent
-      rest_model(
+      Octokit.rest_model(
         type: String,
 
         target: String,
@@ -20,14 +20,14 @@ module Octokit
     end
 
     struct RepositoryContentResponse
-      rest_model(
+      Octokit.rest_model(
         content: RepositoryContent,
         commit: Commit
       )
     end
 
     struct RepositoryContentFileOptions
-      rest_model(
+      Octokit.rest_model(
         message: String,
         content: Array(UInt8),
         sha: String,
@@ -38,7 +38,7 @@ module Octokit
     end
 
     struct RepositoryContentGetOptions
-      rest_model(
+      Octokit.rest_model(
         ref: String
       )
     end

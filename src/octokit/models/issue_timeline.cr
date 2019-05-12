@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct Timeline
-      rest_model(
+      Octokit.rest_model(
         id: Int64,
         url: String,
         commit_url: String,
@@ -28,7 +28,7 @@ module Octokit
     end
 
     struct Source
-      rest_model(
+      Octokit.rest_model(
         id: Int64,
         url: String,
         actor: User,

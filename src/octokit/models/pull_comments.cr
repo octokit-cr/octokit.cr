@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct PullRequestComment
-      rest_model(
+      Octokit.rest_model(
         id: Int64,
         node_id: String,
         in_reply_to: Int64,
@@ -26,13 +26,14 @@ module Octokit
     end
 
     struct PullRequestListCommentOptions
-      rest_model({
+      Octokit.rest_model({
         sort: String,
 
         direction: String,
 
         since: String,
-      }.merge(ListOptions::FIELDS))
+      # }.merge(ListOptions::FIELDS))
+})
     end
   end
 end

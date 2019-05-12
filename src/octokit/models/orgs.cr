@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct Organization
-      rest_model(
+      Octokit.rest_model(
         login: String,
         id: Int64,
         node_id: String,
@@ -46,7 +46,7 @@ module Octokit
     end
 
     struct Plan
-      rest_model(
+      Octokit.rest_model(
         name: String,
         space: Int32,
         collaborators: Int32,
@@ -55,9 +55,10 @@ module Octokit
     end
 
     struct OrganizationsListOptions
-      rest_model({
+      Octokit.rest_model({
         since: Int64,
-      }.merge(ListOptions))
+      # }.merge(ListOptions::FIELDS))
+})
     end
   end
 end

@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct RepositoryRelease
-      rest_model(
+      Octokit.rest_model(
         tag_name: String,
         target_commit_hash: String,
         name: String,
@@ -25,7 +25,7 @@ module Octokit
     end
 
     struct ReleaseAsset
-      rest_model(
+      Octokit.rest_model(
         id: String,
         url: String,
         name: String,
@@ -43,7 +43,7 @@ module Octokit
     end
 
     struct RepositoryReleaseRequest
-      rest_model(
+      Octokit.rest_model(
         tag_name: String,
         target_commit_hash: String,
         name: String,

@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct Metric
-      rest_model(
+      Octokit.rest_model(
         name: String,
         key: String,
         url: String,
@@ -10,7 +10,7 @@ module Octokit
     end
 
     struct CommunityHealthFiles
-      rest_model(
+      Octokit.rest_model(
         code_of_conduct: Metric,
         contributing: Metric,
         issue_template: Metric,
@@ -21,7 +21,7 @@ module Octokit
     end
 
     struct CommunityHealthMetrics
-      rest_model(
+      Octokit.rest_model(
         health_percentage: Int32,
         files: CommunityHealthFiles,
         updated_at: String

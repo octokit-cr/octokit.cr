@@ -98,7 +98,7 @@ module Octokit
 
     def as_app(key = @client_id, secret = @client_secret, &block)
       if !key || !secret
-        raise ApplicationCredentialsRequired.new("client_id and client_secret required")
+        raise Error::ApplicationCredentialsRequired.new("client_id and client_secret required")
       end
 
       app_client = self.dup

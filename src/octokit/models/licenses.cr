@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct RepositoryLicense
-      rest_model(
+      Octokit.rest_model(
         name: String,
         path: String,
 
@@ -19,20 +19,20 @@ module Octokit
     end
 
     struct License
-      rest_model(
+      Octokit.rest_model(
         key: String,
         name: String,
-        url: String,
+        url: String?,
 
         spdx_id: String,
-        html_url: String,
-        featured: Bool,
-        description: String,
-        implementation: String,
-        permissions: Array(String),
-        conditions: Array(String),
-        limitations: Array(String),
-        body: String
+        html_url: String?,
+        featured: Bool?,
+        description: String?,
+        implementation: String?,
+        permissions: Array(String)?,
+        conditions: Array(String)?,
+        limitations: Array(String)?,
+        body: String?
       )
     end
   end

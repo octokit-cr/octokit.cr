@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct Milestone
-      rest_model(
+      Octokit.rest_model(
         url: String,
         html_url: String,
         labels_url: String,

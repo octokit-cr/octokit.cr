@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct Issue
-      rest_model(
+      Octokit.rest_model(
         id: Int64,
         number: Int32,
         state: String,
@@ -36,7 +36,7 @@ module Octokit
     end
 
     struct IssueRequest
-      rest_model(
+      Octokit.rest_model(
         title: String,
         body: String,
         labels: Array(String),
@@ -48,7 +48,7 @@ module Octokit
     end
 
     struct IssueListOptions
-      rest_model({
+      Octokit.rest_model({
         filter: String,
 
         state: String,
@@ -60,11 +60,12 @@ module Octokit
         direction: String,
 
         since: String,
-      }.merge(ListOptions))
+      # }.merge(ListOptions::FIELDS))
+})
     end
 
     struct PullRequestLinks
-      rest_model(
+      Octokit.rest_model(
         url: String,
         html_url: String,
         diff_url: String,

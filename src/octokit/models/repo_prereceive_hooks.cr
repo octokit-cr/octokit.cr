@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct PreReceiveHook
-      rest_model(
+      Octokit.rest_model(
         id: Int64,
         name: String,
         enforcement: String,

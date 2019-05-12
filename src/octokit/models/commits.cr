@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct SignatureVerification
-      rest_model(
+      Octokit.rest_model(
         verified: Bool,
         reason: String,
         signature: String,
@@ -10,7 +10,7 @@ module Octokit
     end
 
     struct Commit
-      rest_model(
+      Octokit.rest_model(
         sha: String,
         author: CommitAuthor,
         committer: CommitAuthor,
@@ -26,7 +26,7 @@ module Octokit
     end
 
     struct CommitAuthor
-      rest_model(
+      Octokit.rest_model(
         date: String,
         name: String,
         email: String,

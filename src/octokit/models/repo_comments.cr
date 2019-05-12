@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct RepositoryComment
-      rest_model(
+      Octokit.rest_model(
         html_url: String,
         url: String,
         id: Int64,

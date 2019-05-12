@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct InteractionsRestriction
-      rest_model(
+      Octokit.rest_model(
         limit: String,
 
         origin: String,

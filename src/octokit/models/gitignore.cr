@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct Gitignore
-      rest_model(
+      Octokit.rest_model(
         name: String,
         source: String
       )

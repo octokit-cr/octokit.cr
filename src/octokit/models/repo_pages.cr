@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct Pages
-      rest_model(
+      Octokit.rest_model(
         url: String,
         status: String,
         cname: String,
@@ -12,20 +12,20 @@ module Octokit
     end
 
     struct PagesSource
-      rest_model(
+      Octokit.rest_model(
         branch: String,
         path: String
       )
     end
 
     struct PagesError
-      rest_model(
+      Octokit.rest_model(
         message: String
       )
     end
 
     struct PagesBuild
-      rest_model(
+      Octokit.rest_model(
         url: String,
         status: String,
         error: PagesError,

@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct AdminStats
-      rest_model(
+      Octokit.rest_model(
         issues: IssueStats,
         hooks: HookStats,
         milestones: MilestoneStats,
@@ -16,7 +16,7 @@ module Octokit
     end
 
     struct IssueStats
-      rest_model(
+      Octokit.rest_model(
         total_issues: Int32,
         open_issues: Int32,
         closed_issues: Int32,
@@ -24,7 +24,7 @@ module Octokit
     end
 
     struct HookStats
-      rest_model(
+      Octokit.rest_model(
         total_hooks: Int32,
         active_hooks: Int32,
         inactive_hooks: Int32,
@@ -32,7 +32,7 @@ module Octokit
     end
 
     struct MilestoneStats
-      rest_model(
+      Octokit.rest_model(
         total_milestones: Int32,
         open_milestones: Int32,
         closed_milestones: Int32
@@ -40,7 +40,7 @@ module Octokit
     end
 
     struct OrgStats
-      rest_model(
+      Octokit.rest_model(
         total_orgs: Int32,
         disabled_orgs: Int32,
         total_teams: Int32,
@@ -49,7 +49,7 @@ module Octokit
     end
 
     struct CommentStats
-      rest_model(
+      Octokit.rest_model(
         total_commit_comments: Int32,
         total_gist_comments: Int32,
         total_issue_comments: Int32,
@@ -58,13 +58,13 @@ module Octokit
     end
 
     struct PageStats
-      rest_model(
+      Octokit.rest_model(
         total_pages: Int32
       )
     end
 
     struct UserStats
-      rest_model(
+      Octokit.rest_model(
         total_users: Int32,
         admin_users: Int32,
         suspended_users: Int32
@@ -72,7 +72,7 @@ module Octokit
     end
 
     struct GistStats
-      rest_model(
+      Octokit.rest_model(
         total_gists: Int32,
         private_gists: Int32,
         public_gists: Int32
@@ -80,7 +80,7 @@ module Octokit
     end
 
     struct PullStats
-      rest_model(
+      Octokit.rest_model(
         total_pulls: Int32,
         merged_pulls: Int32,
         mergable_pulls: Int32,
@@ -89,7 +89,7 @@ module Octokit
     end
 
     struct RepoStats
-      rest_model(
+      Octokit.rest_model(
         total_repos: Int32,
         root_repos: Int32,
         fork_repos: Int32,

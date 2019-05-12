@@ -13,82 +13,58 @@ module Octokit
     CONVENIENCE_HEADERS = Set{"accept", "content_type"}
 
     # Make a HTTP GET request
-    #
-    # @param url [String] The path, relative to {#api_endpoint}
-    # @param options [Hash] Query and header params for request
     def get(url, options : Halite::Options? = nil)
       request "get", url, options
     end
 
     # Make a HTTP POST request
-    #
-    # @param url [String] The path, relative to {#api_endpoint}
-    # @param options [Hash] Body and header params for request
     def post(url, options : Halite::Options? = nil)
       request "post", url, options
     end
 
     # Make a HTTP PUT request
-    #
-    # @param url [String] The path, relative to {#api_endpoint}
-    # @param options [Hash] Body and header params for request
     def put(url, options : Halite::Options? = nil)
       request "put", url, options
     end
 
     # Make a HTTP PATCH request
-    #
-    # @param url [String] The path, relative to {#api_endpoint}
-    # @param options [Hash] Body and header params for request
     def patch(url, options : Halite::Options? = nil)
       request "patch", url, options
     end
 
     # Make a HTTP DELETE request
-    #
-    # @param url [String] The path, relative to {#api_endpoint}
-    # @param options [Hash] Query and header params for request
     def delete(url, options : Halite::Options? = nil)
       request "delete", url, options
     end
 
     # Make a HTTP HEAD request
-    #
-    # @param url [String] The path, relative to {#api_endpoint}
-    # @param options [Hash] Query and header params for request
     def head(url, options : Halite::Options? = nil)
       request "head", url, options
     end
 
     # Make one or more HTTP GET requests, optionally fetching
     # the next page of results from URL in Link response header based
-    # on value in {#auto_paginate}.
-    #
-    # @param url [String] The path, relative to {#api_endpoint}
-    # @param options [Hash] Query and header params for request
-    # @param block [Block] Block to perform the data concatination of the
-    #   multiple requests. The block is called with two parameters, the first
-    #   contains the contents of the requests so far and the second parameter
-    #   contains the latest response.
-    def paginate(url, options : Halite::Options? = nil, &block)
+    # on value in `#auto_paginate`.
+    def paginate(klass, url, options : Halite::Options? = nil)
+      # opts = parse_query_and_convenience_headers(options)
       # if @auto_paginate || @per_page
-      #   options["query"]["per_page"] ||= @per_page || (@auto_paginate ? 100 : nil)
+      #   opts = opts.merge({ query: { per_page: @per_page || (@auto_paginate ? 100 : nil) } })
       # end
 
-      # data = request("get", url, options.dup)
+      # data = request(:get, url, opts)
 
       # if @auto_paginate
-      #   while @last_response.rels["next"] && rate_limit.remaining > 0
-      #     @last_response = @last_response.rels["next"].get({"headers" => options["headers"]})
-      #     if block_given?
-      #       yield(data, @last_response)
-      #     else
-      #       data.concat(@last_response.data) if @last_response.data.is_a?(Array)
-      #     end
+      #   while @last_response.links["next"] && rate_limit.remaining > 0
+      #     @last_response = @last_response.links["next"]
       #   end
       # end
+      res = get url, options
+      klass.from_json(res)
+    end
 
-      # data
+    # ditto
+    def paginate(url, options : Halite::Options? = nil, &block)
+
     end
 
     # Hypermedia agent for the GitHub API
@@ -128,7 +104,7 @@ module Octokit
     private def request(method, path, options : Halite::Options? = nil)
       uri = File.join(endpoint, path)
       options = options ? Default.connection_options.merge(options) : Default.connection_options
-      @last_response = response = agent.request(verb: method, uri: uri, options: options)
+      @last_response = response = agent.request(verb: method.to_s, uri: uri, options: options)
       response.body
     end
 
@@ -140,12 +116,10 @@ module Octokit
     end
 
     # Executes the request, checking if it was successful
-    #
-    # @return [Boolean] True on success, false otherwise
     private def boolean_from_response(method, path, options : Halite::Options? = nil)
       request(method, path, options)
-      @last_response.status == 204
-    rescue Octokit::NotFound
+      @last_response.not_nil!.status_code == 204
+    rescue Error::NotFound
       false
     end
 

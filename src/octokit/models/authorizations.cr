@@ -1,10 +1,10 @@
 module Octokit
   module Models
     struct Authorizations
-      rest_model(
+      Octokit.rest_model(
         id: Int64,
         url: String,
-        scopes: Array(Scope),
+        scopes: Array(String),
         token: String,
         token_has_eight: String,
         hashed_token: String,
@@ -17,8 +17,16 @@ module Octokit
       )
     end
 
+    struct AuthorizationApp
+      Octokit.rest_model(
+        url: String,
+        name: String,
+        client_id: String
+      )
+    end
+
     struct Grant
-      rest_model(
+      Octokit.rest_model(
         id: Int64,
         url: String,
         app: AuthorizationApp,
@@ -29,8 +37,8 @@ module Octokit
     end
 
     struct AuthorizationRequest
-      rest_model(
-        scopes: Array(Scope),
+      Octokit.rest_model(
+        scopes: Array(String),
         note: String,
         note_url: String,
         client_id: String,
@@ -40,7 +48,7 @@ module Octokit
     end
 
     struct AuthorizationUpdateRequest
-      rest_model(
+      Octokit.rest_model(
         scopes: Array(String),
         add_scopes: Array(String),
         remove_scopes: Array(String),

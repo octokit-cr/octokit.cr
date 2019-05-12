@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct ActivityNotifications
-      FIELDS = {
+      Octokit.rest_model(
         id:         String,
         repository: Repository,
         subject:    NotificationSubject,
@@ -14,31 +14,26 @@ module Octokit
         unread:       Bool,
         updated_at:   String, # TODO: Create converter for 2014-11-07T22:01:45Z
         last_read_at: String,
-        url:          String,
-      }
-
-      rest_model(FIELDS)
+        url:          String
+      )
 
       struct NotificationSubject
-        FIELDS = {
+        Octokit.rest_model(
           title:              String,
           url:                String,
           latest_comment_url: String,
-          type:               String,
-        }
-
-        rest_model(FIELDS)
+          type:               String
+        )
       end
 
       struct NotificationListOptions
-        FIELDS = {
+        Octokit.rest_model({
           all:           Bool,
           participating: Bool,
           since:         String,
           before:        String,
-        }.merge(ListOptions)
-
-        rest_model(FIELDS)
+        # }.merge(ListOptions::FIELDS))
+})
       end
     end
   end

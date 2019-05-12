@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct Label
-      rest_model(
+      Octokit.rest_model(
         id: Int64,
         url: String,
         name: String,

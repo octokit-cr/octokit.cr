@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct TeamDiscussion
-      rest_model(
+      Octokit.rest_model(
         author: User,
         body: String,
         body_html: String,
@@ -24,7 +24,7 @@ module Octokit
     end
 
     struct DiscussionListOptions
-      rest_model(
+      Octokit.rest_model(
         direction: String
       )
     end

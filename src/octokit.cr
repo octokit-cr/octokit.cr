@@ -1,4 +1,4 @@
-require "./helpers"
+require "./octokit/helpers"
 require "./octokit/default"
 require "./octokit/client"
 require "./octokit/enterprise_admin_client"
@@ -29,6 +29,6 @@ module Octokit
   end
 end
 
-# c = Octokit::Client.new("watzon", "wYZ3Ud@S@jVgu2jq")
-# # c.api_endpoint = "https://hookb.in/Xk999BlYQRsbobmZEbqx"
-# puts c.get("/user/repos?page=1&per_page=10")
+c = Octokit::Client.new("watzon", "wYZ3Ud@S@jVgu2jq")
+# c.api_endpoint = "https://hookb.in/Xk999BlYQRsbobmZEbqx"
+pp c.subscriptions

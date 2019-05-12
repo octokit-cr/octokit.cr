@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct Membership
-      rest_model(
+      Octokit.rest_model(
         url: String,
 
         state: String,
@@ -12,28 +12,30 @@ module Octokit
 
         organization: Organization,
 
-        user: user
+        user: User
       )
     end
 
     struct ListMembershipOptions
-      rest_model({
+      Octokit.rest_model({
         public_only: Bool,
 
         filter: String,
 
         role: String,
-      }.merge(ListOptions::FIELDS))
+      # }.merge(ListOptions::FIELDS))
+})
     end
 
     struct ListOrgMembershipOptions
-      rest_model({
+      Octokit.rest_model({
         state: String,
-      }.merge(ListOptions::FIELDS))
+      # }.merge(ListOptions::FIELDS))
+})
     end
 
     struct CreateOrgInvitationOptions
-      rest_model(
+      Octokit.rest_model(
         invitee_id: Int64,
 
         email: String,

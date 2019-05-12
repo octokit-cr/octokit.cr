@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct DiscussionComment
-      rest_model(
+      Octokit.rest_model(
         author: User,
         body: String,
         body_html: String,
@@ -19,7 +19,7 @@ module Octokit
     end
 
     struct DiscussionCommentListOptions
-      rest_model(
+      Octokit.rest_model(
         direction: String
       )
     end

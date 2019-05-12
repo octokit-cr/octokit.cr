@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct PullRequestReview
-      rest_model(
+      Octokit.rest_model(
         id: Int64,
         node_id: String,
         user: User,
@@ -15,7 +15,7 @@ module Octokit
     end
 
     struct DraftReviewComment
-      rest_model(
+      Octokit.rest_model(
         path: String,
         position: Int32,
         body: String
@@ -23,7 +23,7 @@ module Octokit
     end
 
     struct PullRequestReviewRequest
-      rest_model(
+      Octokit.rest_model(
         node_id: String,
         commit_id: String,
         body: String,
@@ -33,7 +33,7 @@ module Octokit
     end
 
     struct PullRequestReviewDismissalRequest
-      rest_model(
+      Octokit.rest_model(
         message: String
       )
     end

@@ -1,21 +1,17 @@
 module Octokit
   module Models
     struct ActivityStar
-      FIELDS = {
+      Octokit.rest_model(
         starred_at: String,
-        repository: Repository,
-      }
-
-      rest_model(FIELDS)
+        repository: Repository
+      )
     end
 
     struct Stargazer
-      FIELDS = {
+      Octokit.rest_model(
         starred_at: String,
-        user:       User,
-      }
-
-      rest_model(FIELDS)
+        user:       User
+      )
     end
   end
 end

@@ -1,13 +1,14 @@
 module Octokit
   module Models
     struct ListCollaboratorOptions
-      rest_model({
+      Octokit.rest_model({
         affiliation: String,
-      }.merge(ListOptions::FIELDS))
+      # }.merge(ListOptions::FIELDS))
+})
     end
 
     struct RepositoryPermissionLevel
-      rest_model(
+      Octokit.rest_model(
         permission: String,
 
         user: User
@@ -15,7 +16,7 @@ module Octokit
     end
 
     struct RepositoryAddCollaboratorOptions
-      rest_model(
+      Octokit.rest_model(
         permission: String
       )
     end

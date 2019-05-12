@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct TrafficReferrer
-      rest_model(
+      Octokit.rest_model(
         referrer: String,
         count: Int32,
         uniques: Int32
@@ -9,7 +9,7 @@ module Octokit
     end
 
     struct TrafficPath
-      rest_model(
+      Octokit.rest_model(
         path: String,
         title: String,
         count: Int32,
@@ -18,7 +18,7 @@ module Octokit
     end
 
     struct TrafficData
-      rest_model(
+      Octokit.rest_model(
         timestamp: String,
         count: Int32,
         uniques: Int32
@@ -26,7 +26,7 @@ module Octokit
     end
 
     struct TrafficViews
-      rest_model(
+      Octokit.rest_model(
         views: Array(TrafficData),
         count: Int32,
         uniques: Int32
@@ -34,7 +34,7 @@ module Octokit
     end
 
     struct TrafficClones
-      rest_model(
+      Octokit.rest_model(
         clones: Array(TrafficData),
         count: Int32,
         uniques: Int32
@@ -42,7 +42,7 @@ module Octokit
     end
 
     struct TrafficBreakdownOptions
-      rest_model(
+      Octokit.rest_model(
         per: String
       )
     end

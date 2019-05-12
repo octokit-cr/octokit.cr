@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct CheckRun
-      rest_model(
+      Octokit.rest_model(
         id: Int64,
         node_id: String,
         head_sha: String,
@@ -16,12 +16,12 @@ module Octokit
         name: String,
         check_suite: CheckSuite,
         app: App,
-        pull_requests: Array(PullRequests)
+        pull_requests: Array(PullRequest)
       )
     end
 
     struct CheckRunOutput
-      rest_model(
+      Octokit.rest_model(
         title: String,
         summary: String,
         text: String,
@@ -32,7 +32,7 @@ module Octokit
     end
 
     struct CheckRunAnnotation
-      rest_model(
+      Octokit.rest_model(
         path: String,
         blob_href: String,
         start_line: Int32,
@@ -45,7 +45,7 @@ module Octokit
     end
 
     struct CheckRunImage
-      rest_model(
+      Octokit.rest_model(
         alt: String,
         image_url: String,
         caption: String
@@ -53,7 +53,7 @@ module Octokit
     end
 
     struct CheckSuite
-      rest_model(
+      Octokit.rest_model(
         id: Int64,
         node_id: String,
         head_branch: String,

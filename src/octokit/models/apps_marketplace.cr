@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct MarketplacePlan
-      rest_model(
+      Octokit.rest_model(
         url: String,
         accounts_url: String,
         id: Int64,
@@ -24,8 +24,9 @@ module Octokit
       )
     end
 
-    struct MarketplacePurchase
-      rest_model(
+    class MarketplacePurchase
+      # Created as a class to prevent recursive struct
+      Octokit.rest_model(
         # Billing cycle can be one of "yearly", "monthly", or `nil`.
         billing_cycle: String?,
 
@@ -39,7 +40,7 @@ module Octokit
     end
 
     struct MarketplacePendingChange
-      rest_model(
+      Octokit.rest_model(
         effective_date: String,
         unit_count: Int32,
         id: Int64,
@@ -48,7 +49,7 @@ module Octokit
     end
 
     struct MarketplacePlanAccount
-      rest_model(
+      Octokit.rest_model(
         url: String,
         type: String,
         id: Int64,

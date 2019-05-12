@@ -1,22 +1,23 @@
 module Octokit
   module Models
     struct SearchOptions
-      rest_model({
+      Octokit.rest_model({
         sort:       String,
         order:      String,
         text_match: Bool,
-      }.merge(ListOptions::FIELDS))
+      # }.merge(ListOptions::FIELDS))
+})
     end
 
     struct SearchParameters
-      rest_model(
+      Octokit.rest_model(
         query: String,
         repository_id: Int64
       )
     end
 
     struct RepositoriesSearchResult
-      rest_model(
+      Octokit.rest_model(
         total: Int32,
         incomplete_results: Bool,
         repositories: Array(Repository)
@@ -24,7 +25,7 @@ module Octokit
     end
 
     struct CommitResult
-      rest_model(
+      Octokit.rest_model(
         sha: String,
         commit: Commit,
         author: User,
@@ -40,7 +41,7 @@ module Octokit
     end
 
     struct IssuesSearchResult
-      rest_model(
+      Octokit.rest_model(
         total: Int32,
         incomplete_results: Bool,
         issues: Array(Issue)
@@ -48,7 +49,7 @@ module Octokit
     end
 
     struct UserSearchResult
-      rest_model(
+      Octokit.rest_model(
         total: Int32,
         incomplete_results: Bool,
         users: Array(User)
@@ -56,14 +57,14 @@ module Octokit
     end
 
     struct Match
-      rest_model(
+      Octokit.rest_model(
         text: String,
         indices: Array(Int32)
       )
     end
 
     struct TextMatch
-      rest_model(
+      Octokit.rest_model(
         object_url: String,
         object_type: String,
         property: String,
@@ -73,15 +74,15 @@ module Octokit
     end
 
     struct CodeSearchResult
-      rest_model(
-        totalL Int32,
+      Octokit.rest_model(
+        total: Int32,
           incomplete_results: Bool,
           code_results: Array(CodeResult)
       )
     end
 
     struct CodeResult
-      rest_model(
+      Octokit.rest_model(
         name: String,
         path: String,
         sha: String,
@@ -92,7 +93,7 @@ module Octokit
     end
 
     struct LabelResult
-      rest_model(
+      Octokit.rest_model(
         id: Int64,
         url: String,
         name: String,

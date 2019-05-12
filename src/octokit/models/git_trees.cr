@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct Tree
-      rest_model(
+      Octokit.rest_model(
         sha: String,
         entries: Array(TreeEntry),
 
@@ -10,7 +10,7 @@ module Octokit
     end
 
     struct TreeEntry
-      rest_model(
+      Octokit.rest_model(
         sha: String,
         path: String,
         mode: String,

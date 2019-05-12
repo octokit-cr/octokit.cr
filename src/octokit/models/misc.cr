@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct MarkdownOptions
-      rest_model(
+      Octokit.rest_model(
         mode: String?,
 
         context: String?
@@ -9,7 +9,7 @@ module Octokit
     end
 
     struct MarkdownRequest
-      rest_model(
+      Octokit.rest_model(
         text: String?,
         mode: String?,
         context: String?
@@ -17,7 +17,7 @@ module Octokit
     end
 
     struct CodeOfConduct
-      rest_model(
+      Octokit.rest_model(
         name: String,
         key: String,
         url: String,
@@ -26,7 +26,7 @@ module Octokit
     end
 
     struct APIMeta
-      rest_model(
+      Octokit.rest_model(
         hooks: Array(String),
 
         git: Array(String),

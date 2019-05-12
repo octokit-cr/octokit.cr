@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct ReviewersRequest
-      rest_model(
+      Octokit.rest_model(
         node_id: String,
         reviewers: Array(String),
         team_reviewers: Array(String)
@@ -9,7 +9,7 @@ module Octokit
     end
 
     struct Reviewers
-      rest_model(
+      Octokit.rest_model(
         users: User,
         teams: Team
       )

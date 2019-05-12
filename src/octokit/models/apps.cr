@@ -1,7 +1,7 @@
 module Octokit
   module Models
-    struct Apps
-      rest_model(
+    struct App
+      Octokit.rest_model(
         id: Int64,
         node_id: String,
         owner: User,
@@ -15,14 +15,14 @@ module Octokit
     end
 
     struct InstallationToken
-      rest_model(
+      Octokit.rest_model(
         token: String,
         expires_at: String
       )
     end
 
     struct InstallationPermissions
-      rest_model(
+      Octokit.rest_model(
         metadata: String,
         contents: String,
         issues: String,
@@ -31,7 +31,7 @@ module Octokit
     end
 
     struct Installation
-      rest_model(
+      Octokit.rest_model(
         id: Int64,
         app_id: Int64,
         target_id: Int64,
@@ -50,7 +50,7 @@ module Octokit
     end
 
     struct Attachment
-      rest_model(
+      Octokit.rest_model(
         id: Int64,
         title: String,
         body: String

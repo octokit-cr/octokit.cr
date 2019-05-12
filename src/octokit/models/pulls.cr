@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct PullRequest
-      rest_model(
+      Octokit.rest_model(
         id: Int64,
         number: Int32,
         state: String,
@@ -52,9 +52,15 @@ module Octokit
       )
     end
 
+    struct PRLink
+      Octokit.rest_model(
+        href: String
+      )
+    end
+
     struct PRLinks
-      rest_model(
-        self: PRLink,
+      Octokit.rest_model(
+        this: { key: "self", type: PRLink },
         html: PRLink,
         issue: PRLink,
         comments: PRLink,
@@ -66,7 +72,7 @@ module Octokit
     end
 
     struct PullRequestBranch
-      rest_model(
+      Octokit.rest_model(
         label: String,
         ref: String,
         sha: String,
@@ -76,17 +82,18 @@ module Octokit
     end
 
     struct PullRequestListOptions
-      rest_model({
+      Octokit.rest_model({
         state:     String,
         head:      String,
         base:      String,
         sort:      String,
         direction: String,
-      }.merge(ListOptions::FIELDS))
+      # }.merge(ListOptions::FIELDS))
+})
     end
 
     struct NewPullRequest
-      rest_model(
+      Octokit.rest_model(
         title: String,
         head: String,
         base: String,
@@ -98,7 +105,7 @@ module Octokit
     end
 
     struct PullRequestUpdate
-      rest_model(
+      Octokit.rest_model(
         title: String,
         body: String,
         state: String,
@@ -108,7 +115,7 @@ module Octokit
     end
 
     struct PullRequestMergeResult
-      rest_model(
+      Octokit.rest_model(
         sha: String,
         merged: Bool,
         message: String
@@ -116,7 +123,7 @@ module Octokit
     end
 
     struct PullRequestOptions
-      rest_model(
+      Octokit.rest_model(
         commit_title: String,
         sha: String,
 
@@ -125,7 +132,7 @@ module Octokit
     end
 
     struct PullRequestMergeRequest
-      rest_model(
+      Octokit.rest_model(
         commit_message: String,
         commit_title: String,
         merge_method: String,

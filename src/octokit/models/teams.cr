@@ -1,7 +1,8 @@
 module Octokit
   module Models
-    struct Team
-      rest_model(
+    class Team
+      # Created as a class to prevent recursive struct
+      Octokit.rest_model(
         id: Int64,
         node_id: String,
         name: String,
@@ -25,7 +26,7 @@ module Octokit
     end
 
     struct Invitation
-      rest_model(
+      Octokit.rest_model(
         id: Int64,
         node_id: String,
         login: String,
@@ -40,7 +41,7 @@ module Octokit
     end
 
     struct NewTeam
-      rest_model(
+      Octokit.rest_model(
         name: String,
         description: String,
         maintainers: Array(String),
@@ -56,13 +57,13 @@ module Octokit
     end
 
     struct TeamAddTeamRepoOptions
-      rest_model(
+      Octokit.rest_model(
         permission: String
       )
     end
 
     struct TeamProjectOptions
-      rest_model(
+      Octokit.rest_model(
         permission: String
       )
     end

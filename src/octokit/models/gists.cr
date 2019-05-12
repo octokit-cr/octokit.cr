@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct Gists
-      rest_model(
+      Octokit.rest_model(
         id: String,
         description: String,
         public: Bool,
@@ -18,7 +18,7 @@ module Octokit
     end
 
     struct GistFile
-      rest_model(
+      Octokit.rest_model(
         size: Int32,
         filename: String,
         language: String,
@@ -29,7 +29,7 @@ module Octokit
     end
 
     struct GistFork
-      rest_model(
+      Octokit.rest_model(
         url: String,
         user: User,
         id: String,
@@ -40,9 +40,10 @@ module Octokit
     end
 
     struct GistListOptions
-      rest_model({
+      Octokit.rest_model({
         since: String,
-      }.merge(ListOptions::FIELDS))
+      # }.merge(ListOptions::FIELDS))
+})
     end
   end
 end

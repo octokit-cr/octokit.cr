@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct Key
-      rest_model(
+      Octokit.rest_model(
         id: Int64,
         key: String,
         url: String,

@@ -1,7 +1,7 @@
 module Octokit
   module Models
     struct WebHookPayload
-      rest_model(
+      Octokit.rest_model(
         after: String,
         before: String,
         commits: Array(String),
@@ -18,7 +18,7 @@ module Octokit
     end
 
     struct WebHookCommit
-      rest_model(
+      Octokit.rest_model(
         added: Array(String),
         author: WebHookAuthor,
         committer: WebHookAuthor,
@@ -32,7 +32,7 @@ module Octokit
     end
 
     struct WebHookAuthor
-      rest_model(
+      Octokit.rest_model(
         email: String,
         name: String,
         username: String
@@ -40,7 +40,7 @@ module Octokit
     end
 
     struct Hook
-      rest_model(
+      Octokit.rest_model(
         created_at: String,
         updated_at: String,
         url: String,
@@ -53,7 +53,7 @@ module Octokit
     end
 
     struct CreateHookRequest
-      rest_model(
+      Octokit.rest_model(
         name: String?,
         config: Hash(String, String)?,
         events: Array(String)?,
