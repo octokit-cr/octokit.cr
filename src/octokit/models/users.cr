@@ -1,6 +1,18 @@
 module Octokit
   module Models
     struct User
+      # Get the api path for a user
+      def self.path(user)
+        case user
+        when String
+          "users/#{user}"
+        when Int
+          "user/#{user}"
+        else
+          "user"
+        end
+      end
+
       rest_model(
         login: String,
         id: Int64,

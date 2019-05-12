@@ -62,6 +62,9 @@ module Octokit
     include Octokit::Authentication
     include Octokit::Configurable
     include Octokit::Connection
+    include Octokit::Preview
+    include Octokit::Warnable
+    include Octokit::Client::Users
 
     getter authenticated : Bool = false
 
