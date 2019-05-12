@@ -1,7 +1,15 @@
 module Octokit
   module Models
-    struct TeamMembers
-      rest_model()
+    struct TeamListTeamMembersOptions
+      rest_model({
+        role: String
+    }.merge(ListOptions::FIELDS))
+    end
+
+    struct TeamAddTeamMembershipOptions
+      rest_model(
+        role: String
+      )
     end
   end
 end

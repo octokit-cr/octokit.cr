@@ -39,8 +39,8 @@ module Octokit
         url: String,
         projects_url: String,
         cards_url: String,
-        created_at: Timestamp,
-        updated_at: Timestamp,
+        created_at: String,
+        updated_at: String,
         node_id: String
       )
     end
@@ -65,8 +65,8 @@ module Octokit
         id: Int64,
         note: String,
         creator: User,
-        created_at: Timestamp,
-        updated_at: Timestamp,
+        created_at: String,
+        updated_at: String,
         node_id: String,
         archived: Bool,
 

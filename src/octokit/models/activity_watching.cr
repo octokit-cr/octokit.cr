@@ -5,7 +5,7 @@ module Octokit
         subscriptions: Bool,
         ignored:       Bool,
         reason:        String,
-        created_at:    Timestamp,
+        created_at:    String,
         url:           String,
 
         # Only populated for repository subscriptions

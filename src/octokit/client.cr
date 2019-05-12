@@ -1,4 +1,4 @@
-require "./helpers"
+require "./models/*"
 require "./connection"
 require "./warnable"
 require "./arguments"

@@ -1,7 +1,9 @@
 module Octokit
   module Models
-    struct RepoProjects
-      rest_model()
+    struct ProjctListOptions
+      rest_model({
+        state: String
+      }.merge(ListOptions::FIELDS))
     end
   end
 end

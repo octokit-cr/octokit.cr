@@ -1,7 +1,9 @@
 module Octokit
   module Models
-    struct UserAdministration
-      rest_model()
+    struct UserSuspendOptions
+      rest_model(
+        reason: String
+      )
     end
   end
 end

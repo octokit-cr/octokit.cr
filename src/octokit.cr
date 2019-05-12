@@ -1,3 +1,4 @@
+require "./helpers"
 require "./octokit/default"
 require "./octokit/client"
 require "./octokit/enterprise_admin_client"

@@ -6,7 +6,7 @@ module Octokit
 
         origin: String,
 
-        expires_at: Timestamp
+        expires_at: String
       )
     end
   end

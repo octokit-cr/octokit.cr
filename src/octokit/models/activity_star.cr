@@ -2,7 +2,7 @@ module Octokit
   module Models
     struct ActivityStar
       FIELDS = {
-        starred_at: Timestamp,
+        starred_at: String,
         repository: Repository,
       }
 
@@ -11,7 +11,7 @@ module Octokit
 
     struct Stargazer
       FIELDS = {
-        starred_at: Timestamp,
+        starred_at: String,
         user:       User,
       }
 

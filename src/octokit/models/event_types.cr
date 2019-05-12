@@ -291,7 +291,7 @@ module Octokit
         action: String,
 
         # The following fields are only populated by Webhook events.
-        effective_date: Timestamp?,
+        effective_date: String?,
         marketplace_purchase: MarketplacePurchase?,
         previous_marketplace_purchase: MarketplacePurchase?,
         sender: User?,
@@ -532,7 +532,7 @@ module Octokit
 
         id: String?,
         tree_id: String?,
-        timestamp: Timestamp?,
+        timestamp: String?,
         committer: CommitAuthor?,
         added: Array(String)?,
         removed: Array(String)?,
@@ -550,9 +550,9 @@ module Octokit
         private: Bool,
         description: String,
         fork: Bool,
-        created_at: Timestamp,
-        pushed_at: Timestamp,
-        updated_at: Timestamp,
+        created_at: String,
+        pushed_at: String,
+        updated_at: String,
         homepage: String,
         size: Int32,
         stargazers_count: Int32,
@@ -624,7 +624,7 @@ module Octokit
           fixed_id: String,
           dismisser: User,
           dismiss_reason: String,
-          dismissed_at: Timestamp
+          dismissed_at: String
         )
       end
     end
@@ -633,7 +633,7 @@ module Octokit
       rest_model(
         action: String,
 
-        starred_at: Timestamp?
+        starred_at: String?
       )
     end
 
@@ -650,8 +650,8 @@ module Octokit
         name: String?,
         context: String?,
         commit: RepositoryCommit?,
-        created_at: Timestamp?,
-        updated_at: Timestamp?,
+        created_at: String?,
+        updated_at: String?,
         repo: { key: "repository", type: Repository? },
         sender: User?,
         installation: Installation?

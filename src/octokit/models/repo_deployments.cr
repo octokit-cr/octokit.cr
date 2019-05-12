@@ -1,7 +1,75 @@
 module Octokit
   module Models
-    struct RepoDeployments
-      rest_model()
+    struct Deployment
+      rest_model(
+        url: String,
+        id: Int64,
+        sha: String,
+        ref: String,
+        task: String,
+        payload: String,
+        environment: String,
+        description: String,
+        creator: User,
+        created_at: String
+        updated_at: String,
+        statuses_url: String,
+        repository_url: String,
+        node_id: String
+      )
+    end
+
+    struct DeploymentRequest
+      rest_model(
+        ref: String,
+        task: String,
+        auto_merge: Bool,
+        required_contexts: Array(String),
+        payload: String,
+        environment: String,
+        description: String,
+        transient_environment: Bool,
+        production_environment: Bool
+      )
+    end
+
+    struct DeploymentsListOptions
+      rest_model({
+        sha: String,
+
+        ref: String,
+
+        task: String,
+
+        environment: String
+      }.merge(ListOptions::FIELDS))
+    end
+
+    struct DeploymentStatus
+      rest_model(
+        id: String,
+
+        state: String,
+        creator: User,
+        description: String,
+        target_url: String,
+        created_at: String,
+        updated_at: String,
+        deployment_url: String,
+        repository_url: String,
+        node_id: String
+      )
+    end
+
+    struct DeploymentStatusRequest
+      rest_model(
+        state: String,
+        log_url: String,
+        description: String,
+        environment: String,
+        environment_url: String,
+        auto_inactive: Bool
+      )
     end
   end
 end

@@ -33,8 +33,8 @@ module Octokit
         url: String,
         user: User,
         id: String,
-        created_at: Timestamp,
-        updated_at: Timestamp,
+        created_at: String,
+        updated_at: String,
         node_id: String
       )
     end

@@ -11,8 +11,8 @@ module Octokit
         app: AuthorizationApp,
         note: String,
         note_url: String,
-        updated_at: Timestamp,
-        created_at: Timestamp,
+        updated_at: String,
+        created_at: String,
         fingerprint: String
       )
     end
@@ -22,8 +22,8 @@ module Octokit
         id: Int64,
         url: String,
         app: AuthorizationApp,
-        created_at: Timestamp,
-        updated_at: Timestamp,
+        created_at: String,
+        updated_at: String,
         scopes: Array(String)
       )
     end

@@ -44,8 +44,8 @@ module Octokit
         repository_selection: String,
         events: Array(String),
         permissions: InstallationPermissions,
-        created_at: Timestamp,
-        updated_at: Timestamp
+        created_at: String,
+        updated_at: String
       )
     end
 

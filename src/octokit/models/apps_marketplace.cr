@@ -29,18 +29,18 @@ module Octokit
         # Billing cycle can be one of "yearly", "monthly", or `nil`.
         billing_cycle: String?,
 
-        next_billing_date: Timestamp?,
+        next_billing_date: String?,
         unit_count: Int32,
         plan: MarketplacePlan,
         account: MarketplacePlanAccount,
         on_free_trial: Bool,
-        free_trial_ends_on: Timestamp?
+        free_trial_ends_on: String?
       )
     end
 
     struct MarketplacePendingChange
       rest_model(
-        effective_date: Timestamp,
+        effective_date: String,
         unit_count: Int32,
         id: Int64,
         plan: MarketplacePlan
