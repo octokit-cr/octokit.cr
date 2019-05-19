@@ -7,9 +7,6 @@ require "./configurable"
 require "./authentication"
 require "./gist"
 require "./rate_limit"
-require "./repository"
-require "./user"
-require "./organization"
 require "./preview"
 require "./client/apps"
 require "./client/authorizations"
@@ -58,6 +55,53 @@ require "./client/traffic"
 require "./client/users"
 
 module Octokit
+  # User client for interacting with the GitHub API.
+  #
+  # The `Client` class is your main entrypoint into the GitHub user API. If
+  # you want to access the enterprise admin or enterprise management APIs,
+  # see `EnterpriseAdminClient` and `EnterpriseManagementClient`
+  # respectively.
+  #
+  # **Configuration:**
+  # Configuration options for `Client` are stored in `Configurable` and include:
+  # - access_token        : `String`
+  # - auto_paginate       : `Bool`
+  # - bearer_token        : `String`
+  # - client_id           : `String`
+  # - client_secret       : `String`
+  # - default_media_type  : `String`
+  # - connection_options  : `Halite::Options`
+  # - middleware          : `Array(Halite::Feature)`
+  # - per_page            : `Int32`
+  # - proxy               : `String`
+  # - ssl_verify_mode     : `Int32`
+  # - user_agent          : `String`
+  #
+  # The following items are setters only:
+  # - api_endpoint        : `String`
+  # - login               : `String`
+  # - password            : `String`
+  # - web_endpoint        : `String`
+  #
+  # Defaults for these are stored in `Default`. Most can be set using
+  # environment variables.
+  #
+  # **Examples:**
+  #
+  # With standard auth:
+  # ```
+  # @client = Octokit::Client.new("watzon", "PASSWORD")
+  # ```
+  #
+  # With access token:
+  # ```
+  # @client = Octokit::Client.new("watzon", access_token: "ACCESS_TOKEN")
+  # ```
+  #
+  # With bearer token:
+  # ```
+  # @client = Octokit::Client.new("watzon", bearer_token: "BEARER_TOKEN")
+  # ```
   class Client
     include Octokit::Authentication
     include Octokit::Configurable
@@ -65,19 +109,45 @@ module Octokit
     include Octokit::Preview
     include Octokit::Warnable
     include Octokit::Client::Users
-
-    getter authenticated : Bool = false
+    include Octokit::Client::Repositories
 
     CONVENIENCE_HEADERS = Set{"accept", "content_type"}
 
+    # Create a new Client instance.
+    #
+    # **Example:**
+    # ```
+    # cli = Octokit::Client.new("watzon", "MY_PASSWORD")
+    # pp cli.user # Show information about the logged in user
+    # ```
+    def initialize(
+      @login : String,
+      @password : String? = nil,
+      @access_token : String? = nil,
+      @bearer_token : String? = nil,
+      @client_id : String? = nil,
+      @client_secret : String? = nil
+    )
+    end
+
+    # Create a new Client instance yielding a block.
+    #
+    # **Example:**
+    # ```
+    # Octokit::Client.new("watzon", "MY_PASSWORD") do |cli|
+    #   pp cli.user # Show information about the logged in user
+    # end
+    # ```
     def initialize(
       @login : String,
       @password : String,
       @access_token : String? = nil,
       @bearer_token : String? = nil,
       @client_id : String? = nil,
-      @client_secret : String? = nil
+      @client_secret : String? = nil,
+      &block
     )
+      yield self
     end
 
     # Text representation of the client, masking tokens and passwords

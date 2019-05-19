@@ -2,6 +2,40 @@ module Octokit
   module Models
     class Repository
       # Created as a class to prevent recursive struct
+
+      def slug
+        Repository.slug(full_name)
+      end
+
+      def self.slug(repo)
+        owner, name = repo.split('/')
+        "#{owner}/#{name}"
+      end
+
+      def to_s(io)
+        io << slug
+      end
+
+      def self.get_name(repo)
+        repo.is_a?(String) ? name.split('/').last : repo.name
+      end
+
+      def self.get_full_name(repo)
+        name = repo.is_a?(String) ? repo : repo.full_name
+        parts = name.split('/')
+        raise "The full name of a Repository must be in the format `user/repo`" unless parts.size > 1
+        parts.join('/')
+      end
+
+      def self.path(repo)
+        case repo
+        when Int32
+          "repositories/#{repo}"
+        when String
+          "repos/#{Repository.slug(repo)}"
+        end
+      end
+
       Octokit.rest_model(
         id: Int64,
         node_id: String,
@@ -151,23 +185,24 @@ module Octokit
 
     struct CreateRepoRequest
       Octokit.rest_model(
-        name: String,
-        description: String,
-        homepage: String,
+        name: String?,
+        description: String?,
+        homepage: String?,
 
-        private: Bool,
-        has_issues: Bool,
-        has_projects: Bool,
-        has_wiki: Bool,
+        private: Bool?,
+        has_issues: Bool?,
+        has_projects: Bool?,
+        has_wiki: Bool?,
+        default_branch: String?,
 
-        team_id: Int64,
+        team_id: Int64?,
 
-        auto_init: Bool,
-        gitignore_template: String,
-        license_template: String,
-        allow_squash_merge: Bool,
-        allow_merge_commit: Bool,
-        allow_rebase_merge: Bool
+        auto_init: Bool?,
+        gitignore_template: String?,
+        license_template: String?,
+        allow_squash_merge: Bool?,
+        allow_merge_commit: Bool?,
+        allow_rebase_merge: Bool?
       )
     end
 

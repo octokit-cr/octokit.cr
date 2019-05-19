@@ -9,62 +9,58 @@ module Octokit
 
     @agent : Halite::Client? = nil
 
+    protected getter last_response
+
     # Header keys that can be passed in options hash to {#get},{#head}
     CONVENIENCE_HEADERS = Set{"accept", "content_type"}
 
     # Make a HTTP GET request
-    def get(url, options : Halite::Options? = nil)
-      request "get", url, options
+    def get(url, options = nil)
+      request "get", url, make_options(options)
     end
 
     # Make a HTTP POST request
-    def post(url, options : Halite::Options? = nil)
-      request "post", url, options
+    def post(url, options = nil)
+      request "post", url, make_options(options)
     end
 
     # Make a HTTP PUT request
-    def put(url, options : Halite::Options? = nil)
-      request "put", url, options
+    def put(url, options = nil)
+      request "put", url, make_options(options)
     end
 
     # Make a HTTP PATCH request
-    def patch(url, options : Halite::Options? = nil)
-      request "patch", url, options
+    def patch(url, options = nil)
+      request "patch", url, make_options(options)
     end
 
     # Make a HTTP DELETE request
-    def delete(url, options : Halite::Options? = nil)
-      request "delete", url, options
+    def delete(url, options = nil)
+      request "delete", url, make_options(options)
     end
 
     # Make a HTTP HEAD request
-    def head(url, options : Halite::Options? = nil)
-      request "head", url, options
+    def head(url, options = nil)
+      request "head", url, make_options(options)
     end
 
     # Make one or more HTTP GET requests, optionally fetching
     # the next page of results from URL in Link response header based
     # on value in `#auto_paginate`.
-    def paginate(klass, url, options : Halite::Options? = nil)
-      # opts = parse_query_and_convenience_headers(options)
-      # if @auto_paginate || @per_page
-      #   opts = opts.merge({ query: { per_page: @per_page || (@auto_paginate ? 100 : nil) } })
-      # end
-
-      # data = request(:get, url, opts)
-
-      # if @auto_paginate
-      #   while @last_response.links["next"] && rate_limit.remaining > 0
-      #     @last_response = @last_response.links["next"]
-      #   end
-      # end
-      res = get url, options
-      klass.from_json(res)
+    def paginate(
+      klass : T.class,
+      url : String,
+      *,
+      start_page = 1,
+      per_page = nil,
+      auto_paginate = nil,
+      options = nil
+    ) : Paginator(T) forall T
+      Paginator(T).new(self, url, start_page, per_page, auto_paginate || false, options)
     end
 
     # ditto
     def paginate(url, options : Halite::Options? = nil, &block)
-
     end
 
     # Hypermedia agent for the GitHub API
@@ -97,18 +93,18 @@ module Octokit
       api_endpoint
     end
 
-    private def reset_agent
+    protected def reset_agent
       @agent = nil
     end
 
-    private def request(method, path, options : Halite::Options? = nil)
+    protected def request(method, path, options = nil)
       uri = File.join(endpoint, path)
       options = options ? Default.connection_options.merge(options) : Default.connection_options
       @last_response = response = agent.request(verb: method.to_s, uri: uri, options: options)
       response.body
     end
 
-    private def request(method, path, options : Halite::Options? = nil, &block)
+    protected def request(method, path, options = nil, &block)
       uri = File.join(endpoint, path)
       options = options ? Default.connection_options.merge(options) : Default.connection_options
       @last_response = response = agent.request(verb: method, uri: uri, options: options)
@@ -116,27 +112,194 @@ module Octokit
     end
 
     # Executes the request, checking if it was successful
-    private def boolean_from_response(method, path, options : Halite::Options? = nil)
+    protected def boolean_from_response(method, path, options = nil)
       request(method, path, options)
       @last_response.not_nil!.status_code == 204
     rescue Error::NotFound
       false
     end
 
-    # private def parse_query_and_convenience_headers(options)
-    #   options = options.dup
-    #   headers = options.delete("headers") { {} of String => String }
-    #   CONVENIENCE_HEADERS.each do |h|
-    #     if header = options.delete(h)
-    #       headers[h] = header
-    #     end
-    #   end
-    #   query = options.delete("query")
-    #   opts = {"query" => options}
-    #   opts["query"].merge!(query) if query && query.is_a?(Hash)
-    #   opts["headers"] = headers unless headers.empty?
+    protected def make_options(options)
+      return if options.nil?
+      options.is_a?(Halite::Options) ? options : Halite::Options.new(**options)
+    end
 
-    #   opts
-    # end
+    # Returned for all paginated responses, such as with
+    # `Client::Repositories#repositories`. Allows you
+    # to fetch the next page, the last page, or
+    # fetch all pages in a response.
+    #
+    # **Note:** All methods that return a `Paginator` accept the named parameters
+    # `:current_page`, `:per_page`, `:auto_paginate`, and `:options`. The types for
+    # these parameters are the same as in the `Paginator` constructor.
+    #
+    # **Examples:**
+    # ```
+    # pages = @client.repositories
+    # pp pages
+    # # => #<Octokit::Connection::Paginator(Octokit::Models::Repository):0x555c3d36a000>
+    # ```
+    class Paginator(T)
+      # Get all collected records. This is updated every time
+      # a `fetch_*` method is called.
+      getter records : Array(T) = [] of T
+
+      # Get the current page.
+      getter current_page : Int32
+
+      # Get the number of pages remaining.
+      #
+      # **Note:** This is only not nil after a page has been fetched.
+      getter remaining : Int32? = nil
+
+      # Get the number of total pages for this query.
+      #
+      # **Note:** This is only not nil after a page has been fetched.
+      getter total_pages : Int32? = nil
+
+      # Create a new instance of `Connection::Paginator`
+      def initialize(
+        @client : Octokit::Client,
+        @url : String,
+        @current_page : Int32 = 1,
+        @per_page : Int32? = nil,
+        @auto_paginate : Bool = false,
+        options : Halite::Options? = nil
+      )
+        # Don't allow the @current_page variable to be less than 1.
+        @current_page = 1 if @current_page < 1
+
+        @options = options.nil? ? Halite::Options.new : options.not_nil!
+
+        # If auto-pagination is turned on we go ahead and fetch
+        # everything at initialization.
+        fetch_all if @auto_paginate
+      end
+
+      # Fetch all pages.
+      #
+      # **Example:**
+      # ```
+      # @client.repositories.fetch_all # => Array(Repository)
+      # ```
+      #
+      # **Note:** This is automatically called if `Configurable#auto_paginate`
+      # is set to true.
+      def fetch_all : Array(T)
+        # TODO: Add rate limiting support
+        while next? # && rate_limit.remaining > 0
+          fetch_next
+        end
+        records
+      end
+
+      # Fetch a specific page.
+      #
+      # **Example:**
+      # ```
+      # pages = @client.repositories
+      # pages.fetch_page(4) # => Array(Repository)
+      # ```
+      def fetch_page(page : Int32) : Array(T)?
+        set_total_pages!
+        return unless next?
+
+        @current_page = page
+        @options.params = @options.params.merge({"page" => page.as(Halite::Options::Type)})
+
+        if @per_page
+          @options.params = @options.params.merge({"per_page" => @per_page.as(Halite::Options::Type)})
+        end
+
+        begin
+          data = @client.request(:get, @url, @options)
+        rescue e
+          return
+        end
+
+        models = Array(T).from_json(data)
+        records.concat(models)
+        models
+      end
+
+      # Fetch the next page.
+      #
+      # **Example:**
+      # ```
+      # pages = @client.repositories
+      # pages.fetch_next # => Array(Repository)
+      # ```
+      def fetch_next : Array(T)?
+        return unless next?
+        @current_page += 1
+        fetch_page(@current_page)
+      end
+
+      # Check if there is a next page.
+      #
+      # **Example:**
+      # ```
+      # pages = @client.repositories
+      # pages.fetch_next
+      # pages.next? # => Bool
+      # ```
+      def next? : Bool
+        return true if !@client.last_response
+        !!@client.last_response.not_nil!.links.not_nil!["next"]?
+      end
+
+      # Fetch the previous page.
+      #
+      # **Example:**
+      # ```
+      # pages = @client.repositories
+      # pages.fetch_next
+      # pages.fetch_previous # => Array(Repository)
+      # ```
+      #
+      # **Note:** This is really only useful if you want to fetch
+      # records backwards for some reason. Included just in case.
+      def fetch_previous : Array(T)?
+        return unless previous?
+        @current_page -= 1
+        fetch_page(@current_page)
+      end
+
+      # Check if there is a previous page.
+      #
+      # **Example:**
+      # ```
+      # pages = @client.repositories
+      # pages.fetch_next
+      # pages.previous? # => Bool
+      # ```
+      def previous? : Bool
+        @current_page > 1
+      end
+
+      # Checks if the current page is the last page.
+      #
+      # **Example:**
+      # ```
+      # pages = @client.repositories
+      # pages.fetch_all
+      # pages.last? # => Bool
+      # ```
+      def last?
+        @current_page == @total_pages
+      end
+
+      # Utility method to set the `@total_pages` variable.
+      private def set_total_pages!
+        last = @client.last_response.not_nil!.links.not_nil!["last"]?
+        if last
+          parsed_uri = URI.parse(last.target)
+          return if !parsed_uri.query
+          query = parsed_uri.query.not_nil!.split('?').last.split('&').map(&.split('=')).to_h
+          return if !query["last"]?
+          @total_pages = query["last"].not_nil!.to_i
+        end
+      end
+    end
   end
 end

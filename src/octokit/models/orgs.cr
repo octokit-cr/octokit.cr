@@ -1,6 +1,20 @@
 module Octokit
   module Models
     struct Organization
+      def path
+        Organization.path(self)
+      end
+
+      def self.path(org)
+        org = org.is_a(String | Int32) ? org : org.name
+        case org
+        when String
+          "orgs/#{org}"
+        when Int32
+          "organizations/#{org}"
+        end
+      end
+
       Octokit.rest_model(
         login: String,
         id: Int64,
@@ -57,8 +71,8 @@ module Octokit
     struct OrganizationsListOptions
       Octokit.rest_model({
         since: Int64,
-      # }.merge(ListOptions::FIELDS))
-})
+        # }.merge(ListOptions::FIELDS))
+      })
     end
   end
 end

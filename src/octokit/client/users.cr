@@ -1,6 +1,11 @@
 module Octokit
   class Client
+    # Methods for the Users API
+    #
+    # **See Also:**
+    # - [https://developer.github.com/v3/users/](https://developer.github.com/v3/users/)
     module Users
+      # :nodoc:
       alias User = Models::User
 
       # List all GitHub users
@@ -8,32 +13,34 @@ module Octokit
       # This provides a list of every user, in the order that they signed up
       # for GitHub.
       #
-      # API Reference:  https://developer.github.com/v3/users/#get-all-users
-      def all_users(options = nil)
-        res = paginate "users", options
+      # **See Also:**
+      # - [https://developer.github.com/v3/users/#get-all-users](https://developer.github.com/v3/users/#get-all-users)
+      def all_users
+        res = paginate "users"
         User.from_json(res)
       end
 
       # Get a single user
       #
-      # API Reference: https://developer.github.com/v3/users/#get-a-single-user
-      #
-      # API Reference: https://developer.github.com/v3/users/#get-the-authenticated-user
-      def user(user = nil, options = nil)
-        res = get User.path(user), options
+      # **See Also:**
+      # - [https://developer.github.com/v3/users/#get-a-single-user](https://developer.github.com/v3/users/#get-a-single-user)
+      # - [https://developer.github.com/v3/users/#get-the-authenticated-user](https://developer.github.com/v3/users/#get-the-authenticated-user)
+      def user(user = nil)
+        res = get User.path(user)
         User.from_json(res)
       end
 
       # Retrieve access token
       #
-      # Example:
+      # **Example:**
       # ```
       # Octokit.exchange_code_for_token("aaaa", "xxxx", "yyyy", {accept: "application/json"})
       # ```
       #
-      # API Reference:  https://developer.github.com/v3/oauth/#web-application-flow
-      def exchange_code_for_token(code, app_id = client_id, app_secret = client_secret, options = nil)
-        options = options.merge({
+      # **See Also:**
+      # - [https://developer.github.com/v3/oauth/#web-application-flow](https://developer.github.com/v3/oauth/#web-application-flow)
+      def exchange_code_for_token(code, app_id = client_id, app_secret = client_secret)
+        options = {
           code:          code,
           client_id:     app_id,
           client_secret: app_secret,
@@ -41,7 +48,7 @@ module Octokit
             content_type: "application/json",
             accept:       "application/json",
           },
-        })
+        }
 
         res = post "#{web_endpoint}/login/oauth/access_token", options
         Models::AccessToken.from_json(res)
@@ -56,57 +63,60 @@ module Octokit
 
       # Update the authenticated user
       #
-      # Example:
+      # **Example:**
       # ```
       # Octokit.update_user(name: "Chris Watson", email: "cawatson1993@gmail.com", company: "Manas Tech", location: "Buenos Aires", hireable: false)
       # ```
       #
-      # API Reference:  https://developer.github.com/v3/users/#update-the-authenticated-user
-      def update_user(*options)
-        res = patch "user", options
+      # **See Also:**
+      # - [https://developer.github.com/v3/users/#update-the-authenticated-user](https://developer.github.com/v3/users/#update-the-authenticated-user)
+      def update_user(**options)
+        res = patch "user", {json: options}
         User.from_json(res)
       end
 
       # Get a user's followers
       #
-      # Example:
+      # **Example:**
       # ```
       # Octokit.followers("watzon")
       # ```
       #
-      # API Reference: https://developer.github.com/v3/users/followers/#list-followers-of-a-user
-      def followers(user, options = nil)
-        res = paginate("#{User.path(user)}/followers", options)
+      # **See Also:**
+      # - [https://developer.github.com/v3/users/followers/#list-followers-of-a-user](https://developer.github.com/v3/users/followers/#list-followers-of-a-user)
+      def followers(user, **options)
+        res = paginate User, "#{User.path(user)}/followers", **options
         Array(Models::Follower).from_json(res)
       end
 
       # Get a list of users the user is following
       #
-      # Example:
+      # **Example:**
       # ```
       # Octokit.following("watzon")
       # ```
       #
-      # API Reference:  https://developer.github.com/v3/users/followers/#list-users-followed-by-another-user
-      def following(user, options = nil)
-        res = paginate("#{User.path(user)}/following", options)
+      # **See Also:**
+      # - [https://developer.github.com/v3/users/followers/#list-users-followed-by-another-user](https://developer.github.com/v3/users/followers/#list-users-followed-by-another-user)
+      def following(user, **options)
+        res = paginate User, "#{User.path(user)}/following", **options
         Array(Models::Follower).from_json(res)
       end
 
       # Check if you is following a user. Alternatively check if a given user
       # is following a target user.
       #
-      # Examples:
+      # **Examples:**
       # ```
       # @client.follows?("asterite")
       # @client.follows?("asterite", "waj")
       # ```
       #
-      # NOTE: Requires an authenticated user.
+      # **Note:** Requires an authenticated user.
       #
-      # API Reference: https://developer.github.com/v3/users/followers/#check-if-you-are-following-a-user
-      #
-      # API Reference: https://developer.github.com/v3/users/followers/#check-if-one-user-follows-another
+      # **See Also:**
+      # - [https://developer.github.com/v3/users/followers/#check-if-you-are-following-a-user](https://developer.github.com/v3/users/followers/#check-if-you-are-following-a-user)
+      # - [https://developer.github.com/v3/users/followers/#check-if-one-user-follows-another](https://developer.github.com/v3/users/followers/#check-if-one-user-follows-another)
       def follows?(user, target = nil)
         if !target
           target = user
@@ -118,61 +128,65 @@ module Octokit
 
       # Follow a user.
       #
-      # Example:
+      # **Example:**
       # ```
       # @client.follow("watzon")
       # ```
       #
-      # NOTE: Requires an authenticated user.
+      # **Note:** Requires an authenticated user.
       #
-      # API Reference: https://developer.github.com/v3/users/followers/#follow-a-user
-      def follow(user, options = nil)
-        boolean_from_response :put, "user/following/#{user}", options
+      # **See Also:**
+      # - [https://developer.github.com/v3/users/followers/#follow-a-user](https://developer.github.com/v3/users/followers/#follow-a-user)
+      def follow(user)
+        boolean_from_response :put, "user/following/#{user}"
       end
 
       # Unfollow a user.
       #
-      # Example:
+      # **Example:**
       # ```
       # @client.unfollow("watzon")
       # ```
       #
-      # NOTE: Requires an authenticated user.
+      # **Note:** Requires an authenticated user.
       #
-      # API Reference: https://developer.github.com/v3/users/followers/#unfollow-a-user
-      def unfollow(user, options = nil)
-        boolean_from_response :delete, "user/following/#{user}", options
+      # **See Also:**
+      # - [https://developer.github.com/v3/users/followers/#unfollow-a-user](https://developer.github.com/v3/users/followers/#unfollow-a-user)
+      def unfollow(user)
+        boolean_from_response :delete, "user/following/#{user}"
       end
 
       # Get a list of repos starred by a user.
       #
-      # Example:
+      # **Example:**
       # ```
       # Octokit.starred("watzon")
       # ```
       #
-      # API Reference: https://developer.github.com/v3/activity/starring/#list-repositories-being-starred
-      def starred(user = login, options = nil)
-        paginate Array(Models::Repository), user_path(user, "starred"), options
+      # **See Also:**
+      # - [https://developer.github.com/v3/activity/starring/#list-repositories-being-starred](https://developer.github.com/v3/activity/starring/#list-repositories-being-starred)
+      def starred(user = login, **options)
+        paginate User, user_path(user, "starred"), **options
       end
 
       # Check if you are starring a repo.
       #
-      # Example:
+      # **Example:**
       # ```
       # @client.starred?("watzon/octokit")
       # ```
       #
-      # NOTE: Requires an authenticated client.
+      # **Note:** Requires an authenticated client.
       #
-      # API Reference: https://developer.github.com/v3/activity/starring/#check-if-you-are-starring-a-repository
-      def starred?(repo, options = nil)
-        boolean_from_response :get, "user/starred/#{repo}", options
+      # **See Also:**
+      # - [https://developer.github.com/v3/activity/starring/#check-if-you-are-starring-a-repository](https://developer.github.com/v3/activity/starring/#check-if-you-are-starring-a-repository)
+      def starred?(repo)
+        boolean_from_response :get, "user/starred/#{repo}"
       end
 
       # Get a public key.
       #
-      # Examples:
+      # **Examples:**
       # ```
       # @client.key(1)
       #
@@ -185,115 +199,122 @@ module Octokit
       # # => "ssh-rsa AAA..."
       # ```
       #
-      # NOTE: when using dot notation to retrieve the values, ruby will return
+      # **Note:** when using dot notation to retrieve the values, ruby will return
       # the hash key for the public keys value instead of the actual value, use
       # symbol or key string to retrieve the value. See example.
       #
-      # NOTE: Requires an authenticated client.
+      # **Note:** Requires an authenticated client.
       #
-      # API Reference: https://developer.github.com/v3/users/keys/#get-a-single-public-key
-      def key(key_id, options = nil)
-        get "user/keys/#{key_id}", options
+      # **See Also:**
+      # - [https://developer.github.com/v3/users/keys/#get-a-single-public-key](https://developer.github.com/v3/users/keys/#get-a-single-public-key)
+      def key(key_id)
+        get "user/keys/#{key_id}"
       end
 
       # Get a list of public keys for a user.
       #
-      # Examples:
+      # **Examples:**
       # ```
       # @client.keys
       # @client.keys("watzon")
       # ```
-      # NOTE: Requires an authenticated client.
+      # **Note:** Requires an authenticated client.
       #
-      # API Reference: https://developer.github.com/v3/users/keys/#list-your-public-keys
-      #
-      # API Reference: https://developer.github.com/v3/users/keys/#list-public-keys-for-a-user
-      def keys(user = nil, options = nil)
-        paginate Array(Models::Key), "#{User.path user}/keys", options
+      # **See Also:**
+      # - [https://developer.github.com/v3/users/keys/#list-your-public-keys](https://developer.github.com/v3/users/keys/#list-your-public-keys)
+      # - [https://developer.github.com/v3/users/keys/#list-public-keys-for-a-user](https://developer.github.com/v3/users/keys/#list-public-keys-for-a-user)
+      def keys(user = nil)
+        paginate User, "#{User.path user}/keys", **options
       end
 
       # Add public key to user account.
       #
-      # Example:
+      # **Example:**
       # ```
       # @client.add_key("Personal projects key", "ssh-rsa AAA...")
       # ```
       #
-      # NOTE: Requires authenticated client.
+      # **Note:** Requires authenticated client.
       #
-      # API Reference: https://developer.github.com/v3/users/keys/#create-a-public-key
-      def add_key(title, key, options = nil)
-        options = options ? options.merge({title: title, key: key}) : options.merge({title: title, key: key})
-        post "user/keys", options
+      # **See Also:**
+      # - [https://developer.github.com/v3/users/keys/#create-a-public-key](https://developer.github.com/v3/users/keys/#create-a-public-key)
+      def add_key(title, key)
+        options = {title: title, key: key}
+        post "user/keys", {json: options}
       end
 
       # Delete a public key.
       #
-      # Example:
+      # **Example:**
       # ```
       # @client.remove_key(1)
       # ```
       #
-      # NOTE: Requires an authenticated client.
+      # **Note:** Requires an authenticated client.
       #
-      # API Reference: https://developer.github.com/v3/users/keys/#delete-a-public-key
-      def remove_key(id, options = nil)
-        boolean_from_response :delete, "user/keys/#{id}", options
+      # **See Also:**
+      # - [https://developer.github.com/v3/users/keys/#delete-a-public-key](https://developer.github.com/v3/users/keys/#delete-a-public-key)
+      def remove_key(id)
+        boolean_from_response :delete, "user/keys/#{id}"
       end
 
       # List email addresses for a user.
       #
-      # Example:
+      # **Example:**
       # ```
       # @client.emails
       # ```
       #
-      # NOTE: Requires an authenticated client.
+      # **Note:** Requires an authenticated client.
       #
-      # API Reference: https://developer.github.com/v3/users/emails/#list-email-addresses-for-a-user
-      def emails(options = nil)
-        paginate Array(Models::UserEmail), "user/emails", options
+      # **See Also:**
+      # - [https://developer.github.com/v3/users/emails/#list-email-addresses-for-a-user](https://developer.github.com/v3/users/emails/#list-email-addresses-for-a-user)
+      def emails(**options)
+        paginate User, "user/emails", **options
       end
 
       # List public email addresses for a user.
       #
-      # Example:
+      # **Example:**
       # ```
       # @client.public_emails
       # ```
       #
-      # NOTE: Requires an authenticated client.
+      # **Note:** Requires an authenticated client.
       #
-      # API Reference: https://developer.github.com/v3/users/emails/#list-public-email-addresses-for-a-user
-      def public_emails(options = nil)
-        paginate Array(Models::UserEmail), "user/public_emails", options
+      # **See Also:**
+      # - [https://developer.github.com/v3/users/emails/#list-public-email-addresses-for-a-user](https://developer.github.com/v3/users/emails/#list-public-email-addresses-for-a-user)
+      def public_emails(**options)
+        paginate User, "user/public_emails", **options
       end
 
       # Add email address to user.
       #
-      # Example:
+      # **Example:**
       # ```
-      # @client.add_email('new_email@user.com')
+      # @client.add_email("new_email@user.com")
       # ```
       #
-      # NOTE: Requires authenticated client.
+      # **Note:** Requires authenticated client.
       #
-      # API Reference: https://developer.github.com/v3/users/emails/#add-email-addresses
-      def add_email(email, options = nil)
+      # **See Also:**
+      # - [https://developer.github.com/v3/users/emails/#add-email-addresses](https://developer.github.com/v3/users/emails/#add-email-addresses)
+      def add_email(email)
         email = [email] unless email.is_a?(Array)
         post "user/emails", email
       end
 
       # Remove email from user.
       #
-      # Example:
+      # **Example:**
       # ```
-      # @client.remove_email('old_email@user.com')
+      # @client.remove_email("old_email@user.com")
       # ```
       #
-      # NOTE: Requires authenticated client.
+      # **Note:** Requires authenticated client.
       #
-      # API Reference: https://developer.github.com/v3/users/emails/#delete-email-addresses
+      # **See Also:**
+      # - [https://developer.github.com/v3/users/emails/#delete-email-addresses](https://developer.github.com/v3/users/emails/#delete-email-addresses)
       def remove_email(email)
         email = [email] unless email.is_a?(Array)
         boolean_from_response :delete, "user/emails", email
@@ -301,29 +322,31 @@ module Octokit
 
       # Toggle the visibility of the users primary email addresses.
       #
-      # Example:
+      # **Example:**
       # ```
-      # @client.toggle_email_visibility([{email: "email@user.com'", visibility: "private"}])
+      # @client.toggle_email_visibility([{email: "email@user.com", visibility: "private"}])
       # ```
       #
-      # NOTE: Requires authenticated client.
+      # **Note:** Requires authenticated client.
       #
-      # API Reference: https://developer.github.com/v3/users/emails/#toggle-primary-email-visibility
-      def toggle_email_visibility(options = nil)
-        res = patch "user/email/visibility", options
+      # **See Also:**
+      # - [https://developer.github.com/v3/users/emails/#toggle-primary-email-visibility](https://developer.github.com/v3/users/emails/#toggle-primary-email-visibility)
+      def toggle_email_visibility(options)
+        res = patch "user/email/visibility", {json: options}
         Array(Models::UserEmail).from_json(res)
       end
 
       # List repositories being watched by a user.
       #
-      # Example:
+      # **Example:**
       # ```
       # @client.subscriptions("watzon")
       # ```
       #
-      # API Reference: https://developer.github.com/v3/activity/watching/#list-repositories-being-watched
-      def subscriptions(user = login, options = nil)
-        paginate Array(Models::Repository), user_path(user, "subscriptions"), options
+      # **See Also:**
+      # - [https://developer.github.com/v3/activity/watching/#list-repositories-being-watched](https://developer.github.com/v3/activity/watching/#list-repositories-being-watched)
+      def subscriptions(user = login, **options)
+        paginate User, user_path(user, "subscriptions"), **options
       end
 
       # Convenience method for constructing a user specific path, if the user is logged in

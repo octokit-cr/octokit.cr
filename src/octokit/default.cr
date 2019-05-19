@@ -22,7 +22,7 @@ module Octokit
     # Default Halite middleware stack
     MIDDLEWARE = [] of Halite::Feature
 
-    # Configuration options
+    # :nodoc:
     macro options
       {% begin %}
         {
