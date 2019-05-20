@@ -1,5 +1,3 @@
-require "../macros"
-
 module Octokit
   class Client
     # Methods for the Repositories API
@@ -140,7 +138,7 @@ module Octokit
       #
       # **See Also:**
       # - [https://developer.github.com/v3/repos/#create](https://developer.github.com/v3/repos/#create)
-      def create_repository(repo, organization, **options)
+      def create_repository(repo, organization = nil, **options)
         name = Repository.get_name(repo)
         options = {name: name}.merge(options)
 
