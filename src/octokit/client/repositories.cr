@@ -61,7 +61,7 @@ module Octokit
       # List user repositories.
       #
       # If user is not supplied, repositories for the current
-      #   authenticated user are returned.
+      # authenticated user are returned.
       #
       # **Aliases:** `list_repositories`, `list_repos`, `repos`
       #
@@ -143,10 +143,12 @@ module Octokit
         options = {name: name}.merge(options)
 
         if organization.nil?
-          post "user/repos", {json: options}
+          res = post "user/repos", {json: options}
         else
-          post "#{Octokit::Models::Organization.path(organization)}/repos", {json: options}
+          res = post "#{Octokit::Models::Organization.path(organization)}/repos", {json: options}
         end
+
+        Repository.from_json(res)
       end
 
       alias_method :create_repository, :create_repo
@@ -163,6 +165,126 @@ module Octokit
       def delete_repository(repo)
         boolean_from_response :delete, Repository.path(repo)
       end
+
+      # Transfer a repository.
+      #
+      # Transfer a repository owned by your organization.
+      #
+      # **Aliases:** `transfer_repo`
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/repos/#transfer-a-repository](https://developer.github.com/v3/repos/#transfer-a-repository)
+      def transfer_repository(repo, new_owner, team_ids : Array(Int32))
+        options = { new_owner: new_owner, team_ids: team_ids }
+        res = post "#{Repository.path(repo)}/transfer", {json: options}
+        Repository.from_json(res)
+      end
+
+      alias_method :transfer_repository, :transfer_repo
+
+      # Hide a public repository.
+      #
+      # This is a convenience method that uses `#update_repository`
+      def set_private(repo)
+        update_repository repo, { private: true }
+      end
+
+      # Unhide a private repository.
+      #
+      # This is a convenience method that uses `#update_repository`
+      def set_public(repo)
+        update_repository repo, { private: false }
+      end
+
+      # Get deploy keys on a repo.
+      #
+      # Requires authenticated client.
+      #
+      # **Aliases:**
+      # - [https://developer.github.com/v3/repos/keys/#list-deploy-keys](https://developer.github.com/v3/repos/keys/#list-deploy-keys)
+      #
+      # **Example:**
+      # ```
+      # @client.deploy_keys("watzon/cadmium")
+      # ```
+      def deploy_keys(repo)
+        paginate Repository, "#{Repository.path(repo)}/keys"
+      end
+
+      alias_method :deploy_keys, :list_deploy_keys
+
+      # Get a single deploy key for a repo.
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/repos/keys/#get-a-deploy-key](https://developer.github.com/v3/repos/keys/#get-a-deploy-key)
+      #
+      # **Example:**
+      # ```
+      # @client.deploy_key("watzon/cadmium", 7729435)
+      # ```
+      def deploy_key(repo, id)
+        res = get "#{Repository.path(repo)}/keys/#{id}"
+        RepositoryDeployKey.from_json(res)
+      end
+
+      # Add deploy key to a repo.
+      #
+      # Requires authenticated client.
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/repos/keys/#add-a-new-deploy-key](https://developer.github.com/v3/repos/keys/#add-a-new-deploy-key)
+      #
+      # **Example:**
+      # ```
+      # @client.deploy_key("watzon/cadmium", "Staging server", "ssh-rsa AAA...")
+      # ```
+      def add_deploy_key(repo, title, key, read_only = false)
+        options = { title: title, key: key, read_only: read_only }
+        res = post "#{Repository.path(repo)}/keys", {json: options}
+        RepositoryDeployKey.from_json(res)
+      end
+
+      # Remove a deploy key from a repo.
+      #
+      # **Note:** Requires authenticated client.
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/repos/keys/#remove-a-deploy-key](https://developer.github.com/v3/repos/keys/#remove-a-deploy-key)
+      #
+      # **Example:**
+      # ```
+      # @client.remove_deploy_key("watzon/cadmium", 7729435)
+      # ```
+      def remove_deploy_key(repo, id)
+        boolean_from_response :delete, "#{Repository.path(repo)}/keys/#{id}"
+      end
+
+      # List collaborators.
+      #
+      # **Aliases:** `collabs`
+      #
+      # **Note:** Requires authenticated client for private repos.
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/repos/collaborators/#list-collaborators](https://developer.github.com/v3/repos/collaborators/#list-collaborators)
+      #
+      # **Examples:**
+      #
+      # With unauthenticated client
+      # ```
+      # Octokit.collaborators("watzon/cadmium")
+      # ```
+      #
+      # With authenticated client
+      # ```
+      # @client.collaborators("watzon/cadmium")
+      # ```
+      def collaborators(repo, affiliation = :all)
+        options = { affiliation: affiliation.to_s }
+        paginate User, "#{Repository.path(repo)}/collaborators", options: {json: options}
+      end
+
+      alias_method :collaborators, :collabs
     end
   end
 end

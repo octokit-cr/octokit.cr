@@ -12,3 +12,7 @@ dependencies:
   halite:
     github: icyleaf/halite
     branch: master
+development_dependencies:
+  webmock:
+    github: manastech/webmock.cr
+    branch: master

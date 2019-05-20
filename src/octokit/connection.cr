@@ -53,10 +53,11 @@ module Octokit
       *,
       start_page = 1,
       per_page = nil,
-      auto_paginate = nil,
+      auto_paginate = @auto_paginate,
       options = nil
     ) : Paginator(T) forall T
-      Paginator(T).new(self, url, start_page, per_page, auto_paginate || false, options)
+      options = make_options(options)
+      Paginator(T).new(self, url, start_page, per_page, auto_paginate, options)
     end
 
     # ditto
@@ -101,6 +102,7 @@ module Octokit
       uri = File.join(endpoint, path)
       options = options ? Default.connection_options.merge(options) : Default.connection_options
       @last_response = response = agent.request(verb: method.to_s, uri: uri, options: options)
+      handle_error(response)
       response.body
     end
 
@@ -108,6 +110,7 @@ module Octokit
       uri = File.join(endpoint, path)
       options = options ? Default.connection_options.merge(options) : Default.connection_options
       @last_response = response = agent.request(verb: method, uri: uri, options: options)
+      handle_error(response)
       yield response
     end
 
@@ -117,6 +120,13 @@ module Octokit
       @last_response.not_nil!.status_code == 204
     rescue Error::NotFound
       false
+    end
+
+    protected def handle_error(response)
+      if (300..599).includes?(response.status_code)
+        error = Error.from_response(response)
+        raise error if error
+      end
     end
 
     protected def make_options(options)
@@ -201,7 +211,6 @@ module Octokit
       # pages.fetch_page(4) # => Array(Repository)
       # ```
       def fetch_page(page : Int32) : Array(T)?
-        set_total_pages!
         return unless next?
 
         @current_page = page
@@ -211,14 +220,11 @@ module Octokit
           @options.params = @options.params.merge({"per_page" => @per_page.as(Halite::Options::Type)})
         end
 
-        begin
-          data = @client.request(:get, @url, @options)
-        rescue e
-          return
-        end
+        data = @client.request(:get, @url, @options)
+        set_total_pages!
 
         models = Array(T).from_json(data)
-        records.concat(models)
+        @records.concat(models)
         models
       end
 
@@ -244,7 +250,7 @@ module Octokit
       # pages.next? # => Bool
       # ```
       def next? : Bool
-        return true if !@client.last_response
+        return true if @client.last_response.nil?
         !!@client.last_response.not_nil!.links.not_nil!["next"]?
       end
 
@@ -291,10 +297,11 @@ module Octokit
 
       # Utility method to set the `@total_pages` variable.
       private def set_total_pages!
+        return if @client.last_response.nil?
         last = @client.last_response.not_nil!.links.not_nil!["last"]?
         if last
           parsed_uri = URI.parse(last.target)
-          return if !parsed_uri.query
+          return if parsed_uri.query.nil?
           query = parsed_uri.query.not_nil!.split('?').last.split('&').map(&.split('=')).to_h
           return if !query["last"]?
           @total_pages = query["last"].not_nil!.to_i

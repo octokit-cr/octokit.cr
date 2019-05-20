@@ -1,39 +1,41 @@
+require "json"
+
 module Octokit
   class Error < Exception
-    @response : Hash(String, String) = {} of String => String
+    @response : Halite::Response
 
-    @data : Hash(String, String) = {} of String => String
+    @data : JSON::Any? = nil
 
     # Returns the appropriate Octokit::Error subclass based
     # on status and response message
-    def self.from_response(response)
-      status = response["status"].to_i
-      body = response["body"].to_s
-      headers = response["response_headers"]
+    def self.from_response(response : Halite::Response)
+      status = response.status_code
+      body = response.body
+      headers = response.headers
 
       if klass = case status
-                 when 400      then Octokit::BadRequest
+                 when 400      then Error::BadRequest
                  when 401      then error_for_401(headers)
                  when 403      then error_for_403(body)
                  when 404      then error_for_404(body)
-                 when 405      then Octokit::MethodNotAllowed
-                 when 406      then Octokit::NotAcceptable
-                 when 409      then Octokit::Conflict
-                 when 415      then Octokit::UnsupportedMediaType
-                 when 422      then Octokit::UnprocessableEntity
-                 when 451      then Octokit::UnavailableForLegalReasons
-                 when 400..499 then Octokit::ClientError
-                 when 500      then Octokit::InternalServerError
-                 when 501      then Octokit::NotImplemented
-                 when 502      then Octokit::BadGateway
-                 when 503      then Octokit::ServiceUnavailable
-                 when 500..599 then Octokit::ServerError
+                 when 405      then Error::MethodNotAllowed
+                 when 406      then Error::NotAcceptable
+                 when 409      then Error::Conflict
+                 when 415      then Error::UnsupportedMediaType
+                 when 422      then Error::UnprocessableEntity
+                 when 451      then Error::UnavailableForLegalReasons
+                 when 400..499 then Error::ClientError
+                 when 500      then Error::InternalServerError
+                 when 501      then Error::NotImplemented
+                 when 502      then Error::BadGateway
+                 when 503      then Error::ServiceUnavailable
+                 when 500..599 then Error::ServerError
                  end
         klass.new(response)
       end
     end
 
-    def initialize(response = nil)
+    def initialize(response : Halite::Response)
       @response = response
       super(build_error_message)
     end
@@ -48,10 +50,10 @@ module Octokit
     # Returns most appropriate error for 401 HTTP status code
     # @private
     def self.error_for_401(headers)
-      if Octokit::OneTimePasswordRequired.required_header(headers)
-        Octokit::OneTimePasswordRequired
+      if Error::OneTimePasswordRequired.required_header(headers)
+        Error::OneTimePasswordRequired
       else
-        Octokit::Unauthorized
+        Error::Unauthorized
       end
     end
 
@@ -59,23 +61,23 @@ module Octokit
     # @private
     def self.error_for_403(body)
       if body =~ /rate limit exceeded/i
-        Octokit::TooManyRequests
+        Error::TooManyRequests
       elsif body =~ /login attempts exceeded/i
-        Octokit::TooManyLoginAttempts
+        Error::TooManyLoginAttempts
       elsif body =~ /returns blobs up to [0-9]+ MB/i
-        Octokit::TooLargeContent
+        Error::TooLargeContent
       elsif body =~ /abuse/i
-        Octokit::AbuseDetected
+        Error::AbuseDetected
       elsif body =~ /repository access blocked/i
-        Octokit::RepositoryUnavailable
+        Error::RepositoryUnavailable
       elsif body =~ /email address must be verified/i
-        Octokit::UnverifiedEmail
+        Error::UnverifiedEmail
       elsif body =~ /account was suspended/i
-        Octokit::AccountSuspended
+        Error::AccountSuspended
       elsif body =~ /billing issue/i
-        Octokit::BillingIssue
+        Error::BillingIssue
       else
-        Octokit::Forbidden
+        Error::Forbidden
       end
     end
 
@@ -83,9 +85,9 @@ module Octokit
     # @private
     def self.error_for_404(body)
       if body =~ /Branch not protected/i
-        Octokit::BranchNotProtected
+        Error::BranchNotProtected
       else
-        Octokit::NotFound
+        Error::NotFound
       end
     end
 
@@ -93,7 +95,7 @@ module Octokit
     # @return [Array<Hash>] Error info
     def errors
       if data && data.is_a?(Hash)
-        data["errors"] || [] of Hash(String, String)
+        data["errors"]? || [] of Hash(String, String)
       else
         [] of Hash(String, String)
       end
@@ -103,82 +105,70 @@ module Octokit
     #
     # @return [Integer]
     def response_status
-      @response["status"]
+      @response.status_code
     end
 
     # Headers returned by the GitHub server.
     #
     # @return [Hash]
     def response_headers
-      @response["response_headers"]
+      @response.headers
     end
 
     # Body returned by the GitHub server.
     #
     # @return [String]
     def response_body
-      @response["body"]
+      @response.body
     end
 
     private def data
-      @data ||=
-        if (body = @response["body"]) && !body.empty?
-          if body.is_a?(String) &&
-             @response["response_headers"] &&
-             @response["response_headers"]["content_type"] =~ /json/
-            Sawyer::Agent.serializer.decode(body)
-          else
-            body
-          end
-        else
-          nil
-        end
+      @data ||= JSON.parse(@response.body)
     end
 
     private def response_message
       case data
-      when Hash
-        data["message"]
-      when String
-        data
+      when .as_h?
+        data.as_h["message"]
+      when .as_s?
+        data.as_s
       end
     end
 
     private def response_error
-      "Error: #{data["error"]}" if data.is_a?(Hash) && data["error"]
+      "Error: #{data["error"]}" if data.as_h? && data["error"]?
     end
 
     private def response_error_summary
-      return nil unless data.is_a?(Hash) && !(data["errors"].is_a?(Array) && data["errors"].empty?)
+      return nil unless data["errors"]? && data["errors"].as_a?
+      return nil unless data["errors"].as_a.empty?
 
-      summary = "\nError summary:\n"
-      summary << data["errors"].map do |error|
-        if error.is_a? Hash
-          error.map { |k, v| "  #{k}: #{v}" }
-        else
-          "  #{error}"
+      String.build do |summary|
+        summary << "\nError summary:\n"
+        data["errors"].as_a.each do |error|
+          if error.is_a?(Hash)
+            summary << error.map { |k, v| "  #{k}: #{v}" }.join('\n')
+          elsif error.is_a?(String)
+            summary << "  #{error}"
+          end
         end
-      end.join("\n")
-
-      summary
+      end
     end
 
     private def build_error_message
-      return nil if @response.nil?
-
-      message = "#{@response[:method].to_s.upcase} "
-      message << redact_url(@response["url"].to_s) + ": "
-      message << "#{@response[:status]} - "
-      message << "#{response_message}" unless response_message.nil?
-      message << "#{response_error}" unless response_error.nil?
-      message << "#{response_error_summary}" unless response_error_summary.nil?
-      message << " // See: #{documentation_url}" unless documentation_url.nil?
-      message
+      String.build do |message|
+        message << redact_url(@response.uri.to_s) + ": "
+        message << "#{@response.status_code} - "
+        message << "#{response_message}" unless response_message.nil?
+        message << "#{response_error}" unless response_error.nil?
+        message << "#{response_error_summary}" unless response_error_summary.nil?
+        message << " // See: #{documentation_url}" unless documentation_url.nil?
+      end
     end
 
     private def redact_url(url_string)
       %w[client_secret access_token].each do |token|
-        url_string.gsub!(/#{token}=\S+/, "#{token}=(redacted)") if url_string.include? token
+        url_string = url_string.gsub(/#{token}=\S+/, "#{token}=(redacted)") if url_string.includes? token
       end
       url_string
     end
@@ -214,7 +204,7 @@ module Octokit
     end
 
     private def delivery_method_from_header
-      if match = self.class.Error::required_header(@response["response_headers"])
+      if match = self.class.Error::required_header(@response.headers)
         match[1]
       end
     end

@@ -32,11 +32,3 @@ module Octokit
   def self.enterprise_management_console_client
   end
 end
-
-c = Octokit::Client.new("watzon", "xJGBSG5dmqoc7D")
-c.auto_paginate = false
-c.per_page = 2
-# c.api_endpoint = "https://hookb.in/LgjGLlqkkkCMEMrOgOlb"
-# pp c.repository("cadmium")
-
-c.create_repository("blabla")

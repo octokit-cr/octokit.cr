@@ -155,6 +155,18 @@ module Octokit
       )
     end
 
+    struct RepositoryDeployKey
+      Octokit.rest_model(
+        id: Int32,
+        key: String,
+        url: String,
+        title: String,
+        verified: Bool,
+        created_at: String,
+        read_only: Bool
+      )
+    end
+
     struct RepositoryListOptions
       Octokit.rest_model({
         visibility: String,
