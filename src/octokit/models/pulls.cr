@@ -60,7 +60,7 @@ module Octokit
 
     struct PRLinks
       Octokit.rest_model(
-        this: { key: "self", type: PRLink },
+        this: {key: "self", type: PRLink},
         html: PRLink,
         issue: PRLink,
         comments: PRLink,
@@ -88,8 +88,8 @@ module Octokit
         base:      String,
         sort:      String,
         direction: String,
-      # }.merge(ListOptions::FIELDS))
-})
+        # }.merge(ListOptions::FIELDS))
+      })
     end
 
     struct NewPullRequest

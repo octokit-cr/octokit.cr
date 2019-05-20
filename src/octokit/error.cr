@@ -204,7 +204,8 @@ module Octokit
     end
 
     private def delivery_method_from_header
-      if match = self.class.Error::required_header(@response.headers)
+      if match = self.class.Error
+        ::required_header(@response.headers)
         match[1]
       end
     end

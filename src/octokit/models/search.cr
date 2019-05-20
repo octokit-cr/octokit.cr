@@ -5,8 +5,8 @@ module Octokit
         sort:       String,
         order:      String,
         text_match: Bool,
-      # }.merge(ListOptions::FIELDS))
-})
+        # }.merge(ListOptions::FIELDS))
+      })
     end
 
     struct SearchParameters
@@ -76,8 +76,8 @@ module Octokit
     struct CodeSearchResult
       Octokit.rest_model(
         total: Int32,
-          incomplete_results: Bool,
-          code_results: Array(CodeResult)
+        incomplete_results: Bool,
+        code_results: Array(CodeResult)
       )
     end
 

@@ -74,8 +74,8 @@ module Octokit
         since: String,
 
         until: String,
-      # }.merge(ListOptions::FIELDS))
-})
+        # }.merge(ListOptions::FIELDS))
+      })
     end
   end
 end

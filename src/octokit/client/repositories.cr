@@ -175,7 +175,7 @@ module Octokit
       # **See Also:**
       # - [https://developer.github.com/v3/repos/#transfer-a-repository](https://developer.github.com/v3/repos/#transfer-a-repository)
       def transfer_repository(repo, new_owner, team_ids : Array(Int32))
-        options = { new_owner: new_owner, team_ids: team_ids }
+        options = {new_owner: new_owner, team_ids: team_ids}
         res = post "#{Repository.path(repo)}/transfer", {json: options}
         Repository.from_json(res)
       end
@@ -186,14 +186,14 @@ module Octokit
       #
       # This is a convenience method that uses `#update_repository`
       def set_private(repo)
-        update_repository repo, { private: true }
+        update_repository repo, {private: true}
       end
 
       # Unhide a private repository.
       #
       # This is a convenience method that uses `#update_repository`
       def set_public(repo)
-        update_repository repo, { private: false }
+        update_repository repo, {private: false}
       end
 
       # Get deploy keys on a repo.
@@ -239,7 +239,7 @@ module Octokit
       # @client.deploy_key("watzon/cadmium", "Staging server", "ssh-rsa AAA...")
       # ```
       def add_deploy_key(repo, title, key, read_only = false)
-        options = { title: title, key: key, read_only: read_only }
+        options = {title: title, key: key, read_only: read_only}
         res = post "#{Repository.path(repo)}/keys", {json: options}
         RepositoryDeployKey.from_json(res)
       end
@@ -280,7 +280,7 @@ module Octokit
       # @client.collaborators("watzon/cadmium")
       # ```
       def collaborators(repo, affiliation = :all)
-        options = { affiliation: affiliation.to_s }
+        options = {affiliation: affiliation.to_s}
         paginate User, "#{Repository.path(repo)}/collaborators", options: {json: options}
       end
 

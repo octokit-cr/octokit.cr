@@ -3,8 +3,8 @@ module Octokit
     struct ListOutsideCollaboratorsOptions
       Octokit.rest_model({
         filter: String,
-      # }.merge(ListOptions::FIELDS))
-})
+        # }.merge(ListOptions::FIELDS))
+      })
     end
   end
 end

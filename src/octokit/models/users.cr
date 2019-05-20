@@ -106,8 +106,8 @@ module Octokit
     struct UserListOptions
       Octokit.rest_model({
         since: Int64,
-      # }.merge(ListOptions::FIELDS))
-})
+        # }.merge(ListOptions::FIELDS))
+      })
     end
   end
 end

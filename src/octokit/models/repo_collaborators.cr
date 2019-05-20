@@ -3,8 +3,8 @@ module Octokit
     struct ListCollaboratorOptions
       Octokit.rest_model({
         affiliation: String,
-      # }.merge(ListOptions::FIELDS))
-})
+        # }.merge(ListOptions::FIELDS))
+      })
     end
 
     struct RepositoryPermissionLevel

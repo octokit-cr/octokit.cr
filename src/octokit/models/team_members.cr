@@ -3,8 +3,8 @@ module Octokit
     struct TeamListTeamMembersOptions
       Octokit.rest_model({
         role: String,
-      # }.merge(ListOptions::FIELDS))
-})
+        # }.merge(ListOptions::FIELDS))
+      })
     end
 
     struct TeamAddTeamMembershipOptions

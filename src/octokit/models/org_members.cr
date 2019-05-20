@@ -23,15 +23,15 @@ module Octokit
         filter: String,
 
         role: String,
-      # }.merge(ListOptions::FIELDS))
-})
+        # }.merge(ListOptions::FIELDS))
+      })
     end
 
     struct ListOrgMembershipOptions
       Octokit.rest_model({
         state: String,
-      # }.merge(ListOptions::FIELDS))
-})
+        # }.merge(ListOptions::FIELDS))
+      })
     end
 
     struct CreateOrgInvitationOptions

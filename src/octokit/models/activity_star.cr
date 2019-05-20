@@ -10,7 +10,7 @@ module Octokit
     struct Stargazer
       Octokit.rest_model(
         starred_at: String,
-        user:       User
+        user: User
       )
     end
   end

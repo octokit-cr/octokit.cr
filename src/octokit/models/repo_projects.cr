@@ -3,8 +3,8 @@ module Octokit
     struct ProjctListOptions
       Octokit.rest_model({
         state: String,
-      # }.merge(ListOptions::FIELDS))
-})
+        # }.merge(ListOptions::FIELDS))
+      })
     end
   end
 end

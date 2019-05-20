@@ -82,8 +82,8 @@ module Octokit
     struct ProjectCardListOptions
       Octokit.rest_model({
         archived_state: String,
-      # }.merge(ListOptions::FIELDS))
-})
+        # }.merge(ListOptions::FIELDS))
+      })
     end
 
     struct ProjectCardOptions
@@ -114,8 +114,8 @@ module Octokit
     struct ListCollaboratorOptions
       Octokit.rest_model({
         affiliation: String,
-      # }.merge(ListOptions::FIELDS))
-})
+        # }.merge(ListOptions::FIELDS))
+      })
     end
 
     struct ProjectPermissionLevel

@@ -3,10 +3,10 @@ module Octokit
     struct ActivityWatching
       Octokit.rest_model(
         subscriptions: Bool,
-        ignored:       Bool,
-        reason:        String,
-        created_at:    String,
-        url:           String,
+        ignored: Bool,
+        reason: String,
+        created_at: String,
+        url: String,
 
         # Only populated for repository subscriptions
         repository_url: String?,

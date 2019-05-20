@@ -42,8 +42,8 @@ module Octokit
         task: String,
 
         environment: String,
-      # }.merge(ListOptions::FIELDS))
-})
+        # }.merge(ListOptions::FIELDS))
+      })
     end
 
     struct DeploymentStatus

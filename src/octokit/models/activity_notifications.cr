@@ -2,27 +2,27 @@ module Octokit
   module Models
     struct ActivityNotifications
       Octokit.rest_model(
-        id:         String,
+        id: String,
         repository: Repository,
-        subject:    NotificationSubject,
+        subject: NotificationSubject,
 
         # Reason idntifies the event that triggered the notification.
         #
         # GitHub API docs: https://developer.github.com/v3/activity/notifications/#notification-reasons
         reason: String,
 
-        unread:       Bool,
-        updated_at:   String, # TODO: Create converter for 2014-11-07T22:01:45Z
+        unread: Bool,
+        updated_at: String, # TODO: Create converter for 2014-11-07T22:01:45Z
         last_read_at: String,
-        url:          String
+        url: String
       )
 
       struct NotificationSubject
         Octokit.rest_model(
-          title:              String,
-          url:                String,
+          title: String,
+          url: String,
           latest_comment_url: String,
-          type:               String
+          type: String
         )
       end
 
@@ -32,8 +32,8 @@ module Octokit
           participating: Bool,
           since:         String,
           before:        String,
-        # }.merge(ListOptions::FIELDS))
-})
+          # }.merge(ListOptions::FIELDS))
+        })
       end
     end
   end
