@@ -31,7 +31,7 @@ pp github.user
 pp github.user("asterite")
 ```
 
-There are way too many options to list here, even at this early stage. For information on all Client API methods see [the octokit/client source files](tree/master/src). *Documentation coming soon.*
+There are way too many options to list here, even at this early stage. For information on all Client API methods see [the octokit/client source files](https://github.com/watzon/octokit.cr/tree/master/src). *Documentation coming soon.*
 
 ## Roadmap
 
