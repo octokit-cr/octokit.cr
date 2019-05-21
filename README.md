@@ -1,4 +1,6 @@
 # Octokit
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fwatzon%2Foctokit.cr.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fwatzon%2Foctokit.cr?ref=badge_shield)
+
 
 Crystal toolkit for the GitHub API.
 
@@ -96,3 +98,7 @@ I am trying to complete what I deem the most important ones first so that this s
 ## Contributors
 
 - [Chris Watson](https://github.com/watzon) - creator and maintainer
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fwatzon%2Foctokit.cr.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fwatzon%2Foctokit.cr?ref=badge_large)
