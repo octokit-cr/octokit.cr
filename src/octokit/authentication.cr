@@ -4,7 +4,8 @@ module Octokit
     # Indicates if the client was supplied Basic Auth
     # username and password
     #
-    # @see https://developer.github.com/v3/#authentication
+    # **See Also:**
+    # - [https://developer.github.com/v3/#authentication](https://developer.github.com/v3/#authentication)
     def basic_authenticated?
       !!(@login && @password)
     end
@@ -12,14 +13,16 @@ module Octokit
     # Indicates if the client was supplied an OAuth
     # access token
     #
-    # @see https://developer.github.com/v3/#authentication
+    # **See Also:**
+    # - [https://developer.github.com/v3/#authentication](https://developer.github.com/v3/#authentication)
     def token_authenticated?
       !!@access_token
     end
 
     # Indicates if the client was supplied a bearer token
     #
-    # @see https://developer.github.com/early-access/integrations/authentication/#as-an-integration
+    # **See Also:**
+    # - [https://developer.github.com/early-access/integrations/authentication/#as-an-integration](https://developer.github.com/early-access/integrations/authentication/#as-an-integration)
     def bearer_authenticated?
       !!@bearer_token
     end
@@ -27,7 +30,8 @@ module Octokit
     # Indicates if the client was supplied an OAuth
     # access token or Basic Auth username and password
     #
-    # @see https://developer.github.com/v3/#authentication
+    # **See Also:**
+    # - [https://developer.github.com/v3/#authentication](https://developer.github.com/v3/#authentication)
     def user_authenticated?
       basic_authenticated? || token_authenticated?
     end
@@ -36,7 +40,8 @@ module Octokit
     # client_id and secret credentials to make anonymous
     # requests at a higher rate limit
     #
-    # @see https://developer.github.com/v3/#unauthenticated-rate-limited-requests
+    # **See Also:**
+    # - [https://developer.github.com/v3/#unauthenticated-rate-limited-requests](https://developer.github.com/v3/#unauthenticated-rate-limited-requests)
     def application_authenticated?
       !!application_authentication
     end
