@@ -285,6 +285,120 @@ module Octokit
       end
 
       alias_method :collaborators, :collabs
+
+      # Add collaborator to a repo.
+      #
+      # This can be used to update the permissions of an existing collaborator.
+      #
+      # **Aliases:** `add_collab`
+      #
+      # **Note:** Requires authenticated client.
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/repos/collaborators/#add-user-as-a-collaborator](https://developer.github.com/v3/repos/collaborators/#add-user-as-a-collaborator)
+      #
+      # **Examples:**
+      #
+      # Add a new collaborator
+      # ```
+      # @client.add_collaborator("watzon/cadmium", "asterite")
+      # ```
+      #
+      # Update permissions for a collaborator
+      # ```
+      # @client.add_collaborator("watzon/cadmium", "asterite", permisson: "admin")
+      # ```
+      def add_collaborator(repo, collaborator, **options)
+        boolean_from_response :put, "#{Repository.path(repo)}/collaborators/#{collaborator}", {json: options}
+      end
+
+      alias_method :add_collaborator, :add_collab
+
+      # Remove collaborator from a repo.
+      #
+      # **Aliases:** `remove_collab`
+      #
+      # **Note:** Requires authenticated client.
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/repos/collaborators/#remove-user-as-a-collaborator](https://developer.github.com/v3/repos/collaborators/#remove-user-as-a-collaborator)
+      #
+      # **Example:**
+      # ```
+      # @client.remove_collaborator("watzon/cadmium", "asterite")
+      # ```
+      def remove_collaborator(repo, collaborator)
+        boolean_from_response :delete, "#{Repository.path(repo)}/collaborators/#{collaborator}"
+      end
+
+      alias_method :remove_collaborator, :remove_collab
+
+      # Check if a user is a collaborator for a repo
+      #
+      # **Note:** Requires authenticated client.
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/repos/collaborators/#check-if-a-user-is-a-collaborator](https://developer.github.com/v3/repos/collaborators/#check-if-a-user-is-a-collaborator)
+      #
+      # **Example:**
+      # ```
+      # @client.collaborator?("watzon/cadmium", "asterite")
+      # ```
+      def collaborator?(repo, collaborator)
+        boolean_from_response :get, "#{Repository.path(repo)}/collaborators/#{collaborator}"
+      end
+
+      # Get a user's permission level for a repo.
+      #
+      # **Note:** Requires authenticated client.
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/repos/collaborators/#review-a-users-permission-level](https://developer.github.com/v3/repos/collaborators/#review-a-users-permission-level)
+      #
+      # **Example:**
+      # ```
+      # @client.permission_level("watzon/cadmium", "asterite")
+      # ```
+      def permission_level(repo, collaborator)
+        res = get "#{Repository.path(repo)}/collaborators/#{collaborator}/permission"
+        Models::RepositoryPermissionLevel.from_json(res)
+      end
+
+      # List teams for a repo.
+      #
+      # **Aliases:** `repo_teams`, `teams`
+      #
+      # **Note:** Requires authenticated client that is an owner or collaborator of the repo.
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/repos/#list-teams](https://developer.github.com/v3/repos/#list-teams)
+      #
+      # **Example:**
+      # ```
+      # @client.repository_teams("watzon/cadmium")
+      # ```
+      def repository_teams(repo)
+        paginate Team, "#{Repository.path(repo)}/teams"
+      end
+
+      alias_method :repository_teams, :repo_teams
+      alias_method :repository_teams, :teams
+
+      # List all topics for a repository.
+      #
+      # **Note:** Requires authenticated client that is an owner or collaborator of the repo.
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/repos/#list-all-topics-for-a-repository](https://developer.github.com/v3/repos/#list-all-topics-for-a-repository)
+      #
+      # **Example:**
+      # ```
+      # @client.topics("watzon/cadmium")
+      # ```
+      def topics(repo)
+        headers = api_media_type(:topics)
+        paginate Models::RepositoryTopics, "#{Repository.path(repo)}/topics", options: {headers: headers}
+      end
     end
   end
 end

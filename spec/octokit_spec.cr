@@ -1,9 +1,6 @@
 require "./spec_helper"
 
 describe Octokit do
-  # TODO: Write tests
-
-  it "works" do
-    false.should eq(true)
+  it "sets defaults" do
   end
 end

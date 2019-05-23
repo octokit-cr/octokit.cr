@@ -132,5 +132,10 @@ module Octokit
     def self.web_endpoint
       ENV["OCTOKIT_WEB_ENDPOINT"]? || WEB_ENDPOINT
     end
+
+    # Default logger
+    def self.logger
+      Logger.new(STDOUT, level: Logger::WARN)
+    end
   end
 end

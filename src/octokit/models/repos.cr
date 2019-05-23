@@ -257,6 +257,12 @@ module Octokit
       )
     end
 
+    struct RepositoryTopics
+      Octokit.rest_model(
+        names: Array(String)
+      )
+    end
+
     struct Branch
       Octokit.rest_model(
         name: String,

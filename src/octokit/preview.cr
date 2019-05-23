@@ -1,4 +1,5 @@
 module Octokit
+  # Default setup options for preview features
   module Preview
     PREVIEW_TYPES = {
       "branch_protection"   => "application/vnd.github.loki-preview+json",
@@ -20,5 +21,14 @@ module Octokit
       "strict_validation"   => "application/vnd.github.speedy-preview+json",
       "drafts"              => "application/vnd.github.shadow-cat-preview",
     }
+
+    def api_media_type(type)
+      warn_preview(type)
+      {headers: {accept: PREVIEW_TYPES[type.to_s]}}
+    end
+
+    def warn_preview(type)
+      octokit_warn "WARNING: The preview version of the #{type.to_s.capitalize} API is not yet suitable for production use. You can avoid this message by supplying an appropriate media type in the 'Accept' request header."
+    end
   end
 end

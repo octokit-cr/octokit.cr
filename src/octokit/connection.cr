@@ -53,7 +53,7 @@ module Octokit
       *,
       start_page = 1,
       per_page = nil,
-      auto_paginate = @auto_paginate,
+      auto_paginate = @@auto_paginate,
       options = nil
     ) : Paginator(T) forall T
       options = make_options(options)
@@ -150,6 +150,8 @@ module Octokit
     # # => #<Octokit::Connection::Paginator(Octokit::Models::Repository):0x555c3d36a000>
     # ```
     class Paginator(T)
+      @last_response : Halite::Response? = nil
+
       # Get all collected records. This is updated every time
       # a `fetch_*` method is called.
       getter records : Array(T) = [] of T
@@ -173,7 +175,7 @@ module Octokit
         @url : String,
         @current_page : Int32 = 1,
         @per_page : Int32? = nil,
-        @auto_paginate : Bool = false,
+        @auto_paginate : Bool = Connection.auto_paginate,
         options : Halite::Options? = nil
       )
         # Don't allow the @current_page variable to be less than 1.
@@ -221,6 +223,7 @@ module Octokit
         end
 
         data = @client.request(:get, @url, @options)
+        @last_response = @client.last_response
         set_total_pages!
 
         models = Array(T).from_json(data)
@@ -250,8 +253,8 @@ module Octokit
       # pages.next? # => Bool
       # ```
       def next? : Bool
-        return true if @client.last_response.nil?
-        !!@client.last_response.not_nil!.links.not_nil!["next"]?
+        return true if @last_response.nil?
+        !!@last_response.not_nil!.links.not_nil!["next"]?
       end
 
       # Fetch the previous page.
@@ -297,8 +300,8 @@ module Octokit
 
       # Utility method to set the `@total_pages` variable.
       private def set_total_pages!
-        return if @client.last_response.nil?
-        last = @client.last_response.not_nil!.links.not_nil!["last"]?
+        return if @last_response.nil?
+        last = @last_response.not_nil!.links.not_nil!["last"]?
         if last
           parsed_uri = URI.parse(last.target)
           return if parsed_uri.query.nil?

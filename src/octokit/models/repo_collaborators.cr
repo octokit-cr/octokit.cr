@@ -10,7 +10,6 @@ module Octokit
     struct RepositoryPermissionLevel
       Octokit.rest_model(
         permission: String,
-
         user: User
       )
     end
