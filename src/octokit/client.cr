@@ -109,6 +109,7 @@ module Octokit
     include Octokit::Preview
     include Octokit::Warnable
     include Octokit::Client::Users
+    include Octokit::Client::RateLimit
     include Octokit::Client::Repositories
 
     CONVENIENCE_HEADERS = Set{"accept", "content_type"}

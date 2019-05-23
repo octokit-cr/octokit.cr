@@ -199,7 +199,7 @@ module Octokit
       # is set to true.
       def fetch_all : Array(T)
         # TODO: Add rate limiting support
-        while next? # && rate_limit.remaining > 0
+        while next? && rate_limit.remaining > 0
           fetch_next
         end
         records
