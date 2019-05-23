@@ -167,19 +167,14 @@ module Octokit
       )
     end
 
-    struct RepositoryListOptions
-      Octokit.rest_model({
-        visibility: String,
-
-        affiliation: String,
-
-        type: String,
-
-        sort: String,
-
-        direction: String,
-        # }.merge(ListOptions::FIELDS))
-      })
+    struct RepositoryTag
+      Octokit.rest_model(
+        name: String,
+        commit_sha: {type: String, root: "commit", key: "sha"},
+        commit_url: {type: String, root: "commit", key: "url"},
+        zipball_url: String,
+        tarball_url: String
+      )
     end
 
     struct RepositoryListByOrgOptions
@@ -248,35 +243,9 @@ module Octokit
       })
     end
 
-    struct RepositoryTag
-      Octokit.rest_model(
-        name: String,
-        commit: String,
-        zipball_url: String,
-        tarball_url: String
-      )
-    end
-
     struct RepositoryTopics
       Octokit.rest_model(
         names: Array(String)
-      )
-    end
-
-    struct Branch
-      Octokit.rest_model(
-        name: String,
-        commit: RepositoryCommit,
-        protected: Bool
-      )
-    end
-
-    struct Protection
-      Octokit.rest_model(
-        required_status_checks: RequiredStatusChecks,
-        required_pull_request_reviews: PullRequestReviewsEnforcement,
-        enforce_admins: AdminEnforcement,
-        restrictions: BranchRestrictions
       )
     end
 
@@ -332,20 +301,6 @@ module Octokit
       Octokit.rest_model(
         url: String,
         enabled: Bool
-      )
-    end
-
-    struct BranchRestrictions
-      Octokit.rest_model(
-        users: Array(User),
-        teams: Array(Team)
-      )
-    end
-
-    struct BranchRestrictionsRequest
-      Octokit.rest_model(
-        users: Array(User)?,
-        teams: Array(Team)?
       )
     end
 

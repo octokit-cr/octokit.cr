@@ -56,6 +56,11 @@
       
         <ul>
   
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/RateLimit" data-name="octokit::client::ratelimit">
+      <a href="../../Octokit/Client/RateLimit.html">RateLimit</a>
+      
+    </li>
+  
   <li class=" current" data-id="github.com/watzon/octokit.cr/Octokit/Client/Repositories" data-name="octokit::client::repositories">
       <a href="../../Octokit/Client/Repositories.html">Repositories</a>
       
@@ -281,6 +286,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Activity/Subscription" data-name="octokit::models::activity::subscription">
+      <a href="../../Octokit/Models/Activity/Subscription.html">Subscription</a>
+      
+    </li>
+  
 </ul>
 
       
@@ -371,13 +381,23 @@
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/BranchRestrictions" data-name="octokit::models::branchrestrictions">
-      <a href="../../Octokit/Models/BranchRestrictions.html">BranchRestrictions</a>
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/BranchCommit" data-name="octokit::models::branchcommit">
+      <a href="../../Octokit/Models/BranchCommit.html">BranchCommit</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/BranchRestrictionsRequest" data-name="octokit::models::branchrestrictionsrequest">
-      <a href="../../Octokit/Models/BranchRestrictionsRequest.html">BranchRestrictionsRequest</a>
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/BranchProtection" data-name="octokit::models::branchprotection">
+      <a href="../../Octokit/Models/BranchProtection.html">BranchProtection</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/BranchProtectionRequiredStatusChecks" data-name="octokit::models::branchprotectionrequiredstatuschecks">
+      <a href="../../Octokit/Models/BranchProtectionRequiredStatusChecks.html">BranchProtectionRequiredStatusChecks</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/BranchProtectionSummary" data-name="octokit::models::branchprotectionsummary">
+      <a href="../../Octokit/Models/BranchProtectionSummary.html">BranchProtectionSummary</a>
       
     </li>
   
@@ -1131,11 +1151,6 @@
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Protection" data-name="octokit::models::protection">
-      <a href="../../Octokit/Models/Protection.html">Protection</a>
-      
-    </li>
-  
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PublicEvent" data-name="octokit::models::publicevent">
       <a href="../../Octokit/Models/PublicEvent.html">PublicEvent</a>
       
@@ -1388,11 +1403,6 @@
   
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RepositoryListForksOptions" data-name="octokit::models::repositorylistforksoptions">
       <a href="../../Octokit/Models/RepositoryListForksOptions.html">RepositoryListForksOptions</a>
-      
-    </li>
-  
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RepositoryListOptions" data-name="octokit::models::repositorylistoptions">
-      <a href="../../Octokit/Models/RepositoryListOptions.html">RepositoryListOptions</a>
       
     </li>
   
@@ -1756,6 +1766,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/RateLimit" data-name="octokit::ratelimit">
+      <a href="../../Octokit/RateLimit.html">RateLimit</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Response" data-name="octokit::response">
       <a href="../../Octokit/Response.html">Response</a>
       
@@ -1819,7 +1834,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/watzon/octokit.cr/blob/3f1338812ad6375a0b1e9388f2380ba02f1579d8/src/octokit/client/repositories.cr#L7" target="_blank">
+      <a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L7" target="_blank">
         octokit/client/repositories.cr
       </a>
     
@@ -1838,6 +1853,13 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
+        <a href="#add_collaborator%28repo%2Ccollaborator%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#add_collaborator</strong>(repo, collaborator, **options)</a>
+        
+          <div class="summary"><p>Add collaborator to a repo.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#add_deploy_key%28repo%2Ctitle%2Ckey%2Cread_only%3Dfalse%29-instance-method" class="signature"><strong>#add_deploy_key</strong>(repo, title, key, read_only = <span class="n">false</span>)</a>
         
           <div class="summary"><p>Add deploy key to a repo.</p></div>
@@ -1852,9 +1874,51 @@
       </li>
     
       <li class="entry-summary">
+        <a href="#branch%28repo%2Cbranch%29-instance-method" class="signature"><strong>#branch</strong>(repo, branch)</a>
+        
+          <div class="summary"><p>Get a single branch from a repository.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#branch_protection%28repo%2Cbranch%29-instance-method" class="signature"><strong>#branch_protection</strong>(repo, branch)</a>
+        
+          <div class="summary"><p>Get branch protection summary.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#branches%28repo%2Cget_protected%3Dfalse%29-instance-method" class="signature"><strong>#branches</strong>(repo, get_protected = <span class="n">false</span>)</a>
+        
+          <div class="summary"><p>List branches</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#check_assignee%28repo%2Cassignee%29-instance-method" class="signature"><strong>#check_assignee</strong>(repo, assignee)</a>
+        
+          <div class="summary"><p>Check to see if a particular user is an assignee for a repository.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#collaborator%3F%28repo%2Ccollaborator%29-instance-method" class="signature"><strong>#collaborator?</strong>(repo, collaborator)</a>
+        
+          <div class="summary"><p>Check if a user is a collaborator for a repo</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#collaborators%28repo%2Caffiliation%3D%3Aall%29-instance-method" class="signature"><strong>#collaborators</strong>(repo, affiliation = <span class="n">:all</span>)</a>
         
           <div class="summary"><p>List collaborators.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#contributors%28repo%2Canon%3Dfalse%29-instance-method" class="signature"><strong>#contributors</strong>(repo, anon = <span class="n">false</span>)</a>
+        
+          <div class="summary"><p>List contributors to a repo.</p></div>
         
       </li>
     
@@ -1869,6 +1933,13 @@
         <a href="#delete_repository%28repo%29-instance-method" class="signature"><strong>#delete_repository</strong>(repo)</a>
         
           <div class="summary"><p>Delete a repository.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#delete_subscription%28repo%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#delete_subscription</strong>(repo, **options)</a>
+        
+          <div class="summary"><p>Delete a repository subscription.</p></div>
         
       </li>
     
@@ -1901,9 +1972,51 @@
       </li>
     
       <li class="entry-summary">
+        <a href="#forks%28repo%2Csort%3D%26quot%3Bnewest%26quot%3B%29-instance-method" class="signature"><strong>#forks</strong>(repo, sort = <span class="s">&quot;newest&quot;</span>)</a>
+        
+          <div class="summary"><p>List forks</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#languages%28repo%29-instance-method" class="signature"><strong>#languages</strong>(repo)</a>
+        
+          <div class="summary"><p>List programming languages in the repo.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#permission_level%28repo%2Ccollaborator%29-instance-method" class="signature"><strong>#permission_level</strong>(repo, collaborator)</a>
+        
+          <div class="summary"><p>Get a user's permission level for a repo.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#protect_branch%28repo%2Cbranch%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#protect_branch</strong>(repo, branch, **options)</a>
+        
+          <div class="summary"><p>Lock a single branch from a repository.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#remove_collaborator%28repo%2Ccollaborator%29-instance-method" class="signature"><strong>#remove_collaborator</strong>(repo, collaborator)</a>
+        
+          <div class="summary"><p>Remove collaborator from a repo.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#remove_deploy_key%28repo%2Cid%29-instance-method" class="signature"><strong>#remove_deploy_key</strong>(repo, id)</a>
         
           <div class="summary"><p>Remove a deploy key from a repo.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#replace_all_topics%28repo%2Cnames%29-instance-method" class="signature"><strong>#replace_all_topics</strong>(repo, names)</a>
+        
+          <div class="summary"><p>Replace all topics for a repository.</p></div>
         
       </li>
     
@@ -1929,6 +2042,20 @@
       </li>
     
       <li class="entry-summary">
+        <a href="#repository_assignees%28repo%29-instance-method" class="signature"><strong>#repository_assignees</strong>(repo)</a>
+        
+          <div class="summary"><p>List users available for assigning issues.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#repository_teams%28repo%29-instance-method" class="signature"><strong>#repository_teams</strong>(repo)</a>
+        
+          <div class="summary"><p>List teams for a repo.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#set_private%28repo%29-instance-method" class="signature"><strong>#set_private</strong>(repo)</a>
         
           <div class="summary"><p>Hide a public repository.</p></div>
@@ -1950,9 +2077,51 @@
       </li>
     
       <li class="entry-summary">
+        <a href="#stargazers%28repo%29-instance-method" class="signature"><strong>#stargazers</strong>(repo)</a>
+        
+          <div class="summary"><p>List stargazers of a repo.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#subscribers%28repo%29-instance-method" class="signature"><strong>#subscribers</strong>(repo)</a>
+        
+          <div class="summary"><p>List watchers subscribing to notifications for a repo.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#subscription%28repo%29-instance-method" class="signature"><strong>#subscription</strong>(repo)</a>
+        
+          <div class="summary"><p>Get a repository subscription.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tags%28repo%29-instance-method" class="signature"><strong>#tags</strong>(repo)</a>
+        
+          <div class="summary"><p>List tags</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#topics%28repo%29-instance-method" class="signature"><strong>#topics</strong>(repo)</a>
+        
+          <div class="summary"><p>List all topics for a repository.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#transfer_repository%28repo%2Cnew_owner%2Cteam_ids%3AArray%28Int32%29%29-instance-method" class="signature"><strong>#transfer_repository</strong>(repo, new_owner, team_ids : Array(Int32))</a>
         
           <div class="summary"><p>Transfer a repository.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#unprotect_branch%28repo%2Cbranch%29-instance-method" class="signature"><strong>#unprotect_branch</strong>(repo, branch)</a>
+        
+          <div class="summary"><p>Unlock a single branch from a repository.</p></div>
         
       </li>
     
@@ -1967,6 +2136,13 @@
         <a href="#unwatch%28repo%29-instance-method" class="signature"><strong>#unwatch</strong>(repo)</a>
         
           <div class="summary"><p>Unwatch a repository.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#update_subscription%28repo%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#update_subscription</strong>(repo, **options)</a>
+        
+          <div class="summary"><p>Update a repository subscription.</p></div>
         
       </li>
     
@@ -1994,6 +2170,44 @@
 
   <h2>Instance Method Detail</h2>
   
+    <div class="entry-detail" id="add_collaborator(repo,collaborator,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>add_collaborator</strong>(repo, collaborator, **options)
+
+        <a class="method-permalink" href="#add_collaborator%28repo%2Ccollaborator%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Add collaborator to a repo.</p>
+
+<p>This can be used to update the permissions of an existing collaborator.</p>
+
+<p><strong>Aliases:</strong> <code>add_collab</code></p>
+
+<p><strong>Note:</strong> Requires authenticated client.</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href="https://developer.github.com/v3/repos/collaborators/#add-user-as-a-collaborator" target="_blank">https://developer.github.com/v3/repos/collaborators/#add-user-as-a-collaborator</a></li></ul>
+
+<p><strong>Examples:</strong></p>
+
+<p>Add a new collaborator</p>
+
+<pre><code>@client.add_collaborator(<span class="s">&quot;watzon/cadmium&quot;</span>, <span class="s">&quot;asterite&quot;</span>)</code></pre>
+
+<p>Update permissions for a collaborator</p>
+
+<pre><code>@client.add_collaborator(<span class="s">&quot;watzon/cadmium&quot;</span>, <span class="s">&quot;asterite&quot;</span>, permisson: <span class="s">&quot;admin&quot;</span>)</code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L311" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
     <div class="entry-detail" id="add_deploy_key(repo,title,key,read_only=false)-instance-method">
       <div class="signature">
         
@@ -2017,7 +2231,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/3f1338812ad6375a0b1e9388f2380ba02f1579d8/src/octokit/client/repositories.cr#L241" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L241" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2042,7 +2256,146 @@ that they were created.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/3f1338812ad6375a0b1e9388f2380ba02f1579d8/src/octokit/client/repositories.cr#L91" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L91" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="branch(repo,branch)-instance-method">
+      <div class="signature">
+        
+        def <strong>branch</strong>(repo, branch)
+
+        <a class="method-permalink" href="#branch%28repo%2Cbranch%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Get a single branch from a repository.</p>
+
+<p><strong>Aliases:</strong> <code>get_branch</code></p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href="https://developer.github.com/v3/repos/branches/#get-branch" target="_blank">https://developer.github.com/v3/repos/branches/#get-branch</a></li></ul>
+
+<p><strong>Example:</strong></p>
+
+<pre><code><span class="t">Octokit</span>.branch(<span class="s">&quot;watzon/cadmium&quot;</span>, <span class="s">&quot;master&quot;</span>)</code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L543" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="branch_protection(repo,branch)-instance-method">
+      <div class="signature">
+        
+        def <strong>branch_protection</strong>(repo, branch)
+
+        <a class="method-permalink" href="#branch_protection%28repo%2Cbranch%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Get branch protection summary.</p>
+
+<p><strong>Note:</strong> Requires authenticated client</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href="https://developer.github.com/v3/repos/branches/#get-branch-protection" target="_blank">https://developer.github.com/v3/repos/branches/#get-branch-protection</a></li></ul>
+
+<p><strong>Example:</strong></p>
+
+<pre><code>@client.branch_protection(<span class="s">&quot;watzon/cadmium&quot;</span>, <span class="s">&quot;master&quot;</span>)</code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L583" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="branches(repo,get_protected=false)-instance-method">
+      <div class="signature">
+        
+        def <strong>branches</strong>(repo, get_protected = <span class="n">false</span>)
+
+        <a class="method-permalink" href="#branches%28repo%2Cget_protected%3Dfalse%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>List branches</p>
+
+<p><strong>Note:</strong> Requires authenticated client for private repos.</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href="https://developer.github.com/v3/repos/branches/#list-branches" target="_blank">https://developer.github.com/v3/repos/branches/#list-branches</a></li></ul>
+
+<p><strong>Examples:</strong></p>
+
+<pre><code><span class="t">Octokit</span>.branches(<span class="s">&quot;watzon/cadmium&quot;</span>)
+@client.branches(<span class="s">&quot;watzon/cadmium&quot;</span>)</code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L528" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="check_assignee(repo,assignee)-instance-method">
+      <div class="signature">
+        
+        def <strong>check_assignee</strong>(repo, assignee)
+
+        <a class="method-permalink" href="#check_assignee%28repo%2Cassignee%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Check to see if a particular user is an assignee for a repository.</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href="https://developer.github.com/v3/issues/assignees/#check-assignee" target="_blank">https://developer.github.com/v3/issues/assignees/#check-assignee</a></li></ul>
+
+<p><strong>Example:</strong></p>
+
+<pre><code><span class="t">Octokit</span>.repository_assignees(<span class="s">&quot;watzon/cadmium&quot;</span>)</code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L638" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="collaborator?(repo,collaborator)-instance-method">
+      <div class="signature">
+        
+        def <strong>collaborator?</strong>(repo, collaborator)
+
+        <a class="method-permalink" href="#collaborator%3F%28repo%2Ccollaborator%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Check if a user is a collaborator for a repo</p>
+
+<p><strong>Note:</strong> Requires authenticated client.</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href="https://developer.github.com/v3/repos/collaborators/#check-if-a-user-is-a-collaborator" target="_blank">https://developer.github.com/v3/repos/collaborators/#check-if-a-user-is-a-collaborator</a></li></ul>
+
+<p><strong>Example:</strong></p>
+
+<pre><code>@client.collaborator?(<span class="s">&quot;watzon/cadmium&quot;</span>, <span class="s">&quot;asterite&quot;</span>)</code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L347" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2078,7 +2431,38 @@ that they were created.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/3f1338812ad6375a0b1e9388f2380ba02f1579d8/src/octokit/client/repositories.cr#L282" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L282" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="contributors(repo,anon=false)-instance-method">
+      <div class="signature">
+        
+        def <strong>contributors</strong>(repo, anon = <span class="n">false</span>)
+
+        <a class="method-permalink" href="#contributors%28repo%2Canon%3Dfalse%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>List contributors to a repo.</p>
+
+<p><strong>Aliases:</strong> <code>contribs</code></p>
+
+<p><strong>Note:</strong> Requires authenticated client for private repos.</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href="https://developer.github.com/v3/repos/#list-contributors" target="_blank">https://developer.github.com/v3/repos/#list-contributors</a></li></ul>
+
+<p><strong>Examples:</strong></p>
+
+<pre><code><span class="t">Octokit</span>.contributors(<span class="s">&quot;watzon/cadmium&quot;</span>, <span class="n">true</span>)
+@client.contribs(<span class="s">&quot;watzon/cadmium&quot;</span>)</code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L442" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2102,7 +2486,7 @@ that they were created.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/3f1338812ad6375a0b1e9388f2380ba02f1579d8/src/octokit/client/repositories.cr#L141" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L141" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2128,7 +2512,33 @@ that they were created.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/3f1338812ad6375a0b1e9388f2380ba02f1579d8/src/octokit/client/repositories.cr#L165" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L165" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="delete_subscription(repo,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>delete_subscription</strong>(repo, **options)
+
+        <a class="method-permalink" href="#delete_subscription%28repo%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Delete a repository subscription.</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href="https://developer.github.com/v3/activity/watching/#delete-a-repository-subscription" target="_blank">https://developer.github.com/v3/activity/watching/#delete-a-repository-subscription</a></li></ul>
+
+<p><strong>Example:</strong></p>
+
+<pre><code>@client.delete_subscription(<span class="s">&quot;watzon/cadmium&quot;</span>)</code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L692" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2154,7 +2564,7 @@ that they were created.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/3f1338812ad6375a0b1e9388f2380ba02f1579d8/src/octokit/client/repositories.cr#L225" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L225" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2182,7 +2592,7 @@ that they were created.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/3f1338812ad6375a0b1e9388f2380ba02f1579d8/src/octokit/client/repositories.cr#L210" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L210" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2212,7 +2622,7 @@ that they were created.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/3f1338812ad6375a0b1e9388f2380ba02f1579d8/src/octokit/client/repositories.cr#L50" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L50" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2234,7 +2644,153 @@ that they were created.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/3f1338812ad6375a0b1e9388f2380ba02f1579d8/src/octokit/client/repositories.cr#L131" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L131" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="forks(repo,sort=&amp;quot;newest&amp;quot;)-instance-method">
+      <div class="signature">
+        
+        def <strong>forks</strong>(repo, sort = <span class="s">&quot;newest&quot;</span>)
+
+        <a class="method-permalink" href="#forks%28repo%2Csort%3D%26quot%3Bnewest%26quot%3B%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>List forks</p>
+
+<p><strong>Aliases:</strong> <code>network</code></p>
+
+<p><strong>Note:</strong> Requires authenticated client for private repos.</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href="https://developer.github.com/v3/repos/forks/#list-forks" target="_blank">https://developer.github.com/v3/repos/forks/#list-forks</a></li></ul>
+
+<p><strong>Examples:</strong></p>
+
+<pre><code><span class="t">Octokit</span>.forks(<span class="s">&quot;watzon/cadmium&quot;</span>)
+@client.forks(<span class="s">&quot;watzon/cadmium&quot;</span>, sort: <span class="s">&quot;oldest&quot;</span>)</code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L478" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="languages(repo)-instance-method">
+      <div class="signature">
+        
+        def <strong>languages</strong>(repo)
+
+        <a class="method-permalink" href="#languages%28repo%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>List programming languages in the repo.</p>
+
+<p><strong>Note:</strong> Requires authenticated client for private repos.</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href="https://developer.github.com/v3/repos/#list-languages" target="_blank">https://developer.github.com/v3/repos/#list-languages</a></li></ul>
+
+<p><strong>Examples:</strong></p>
+
+<pre><code><span class="t">Octokit</span>.languages(<span class="s">&quot;watzon/cadmium&quot;</span>)
+@client.languages(<span class="s">&quot;watzon/cadmium&quot;</span>, sort: <span class="s">&quot;oldest&quot;</span>)</code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L496" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="permission_level(repo,collaborator)-instance-method">
+      <div class="signature">
+        
+        def <strong>permission_level</strong>(repo, collaborator)
+
+        <a class="method-permalink" href="#permission_level%28repo%2Ccollaborator%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Get a user's permission level for a repo.</p>
+
+<p><strong>Note:</strong> Requires authenticated client.</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href="https://developer.github.com/v3/repos/collaborators/#review-a-users-permission-level" target="_blank">https://developer.github.com/v3/repos/collaborators/#review-a-users-permission-level</a></li></ul>
+
+<p><strong>Example:</strong></p>
+
+<pre><code>@client.permission_level(<span class="s">&quot;watzon/cadmium&quot;</span>, <span class="s">&quot;asterite&quot;</span>)</code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L362" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="protect_branch(repo,branch,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>protect_branch</strong>(repo, branch, **options)
+
+        <a class="method-permalink" href="#protect_branch%28repo%2Cbranch%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Lock a single branch from a repository.</p>
+
+<p><strong>Note:</strong> Requires authenticated client</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href="https://developer.github.com/v3/repos/branches/#get-branch" target="_blank">https://developer.github.com/v3/repos/branches/#get-branch</a></li></ul>
+
+<p><strong>Example:</strong></p>
+
+<pre><code>@client.protect_branch(<span class="s">&quot;watzon/cadmium&quot;</span>, <span class="s">&quot;master&quot;</span>)</code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L561" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="remove_collaborator(repo,collaborator)-instance-method">
+      <div class="signature">
+        
+        def <strong>remove_collaborator</strong>(repo, collaborator)
+
+        <a class="method-permalink" href="#remove_collaborator%28repo%2Ccollaborator%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Remove collaborator from a repo.</p>
+
+<p><strong>Aliases:</strong> <code>remove_collab</code></p>
+
+<p><strong>Note:</strong> Requires authenticated client.</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href="https://developer.github.com/v3/repos/collaborators/#remove-user-as-a-collaborator" target="_blank">https://developer.github.com/v3/repos/collaborators/#remove-user-as-a-collaborator</a></li></ul>
+
+<p><strong>Example:</strong></p>
+
+<pre><code>@client.remove_collaborator(<span class="s">&quot;watzon/cadmium&quot;</span>, <span class="s">&quot;asterite&quot;</span>)</code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L330" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2262,7 +2818,41 @@ that they were created.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/3f1338812ad6375a0b1e9388f2380ba02f1579d8/src/octokit/client/repositories.cr#L258" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L258" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="replace_all_topics(repo,names)-instance-method">
+      <div class="signature">
+        
+        def <strong>replace_all_topics</strong>(repo, names)
+
+        <a class="method-permalink" href="#replace_all_topics%28repo%2Cnames%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Replace all topics for a repository.</p>
+
+<p><strong>Note:</strong> Requires authenticated client.</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href="https://developer.github.com/v3/repos/#replace-all-topics-for-a-repository" target="_blank">https://developer.github.com/v3/repos/#replace-all-topics-for-a-repository</a></li></ul>
+
+<p><strong>Examples:</strong></p>
+
+<p>Replace all topics</p>
+
+<pre><code>@client.replace_all_topics(<span class="s">&quot;watzon/cadmium&quot;</span>, [<span class="s">&quot;element&quot;</span>, <span class="s">&quot;nlp&quot;</span>, <span class="s">&quot;crystal&quot;</span>, <span class="s">&quot;awesome&quot;</span>])</code></pre>
+
+<p>Clear all topics</p>
+
+<pre><code>@client.replace_all_topics(<span class="s">&quot;watzon/cadmium&quot;</span>, <span class="n">nil</span>)</code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L421" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2294,7 +2884,7 @@ authenticated user are returned.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/3f1338812ad6375a0b1e9388f2380ba02f1579d8/src/octokit/client/repositories.cr#L76" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L76" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2318,7 +2908,7 @@ authenticated user are returned.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/3f1338812ad6375a0b1e9388f2380ba02f1579d8/src/octokit/client/repositories.cr#L30" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L30" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2340,7 +2930,68 @@ authenticated user are returned.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/3f1338812ad6375a0b1e9388f2380ba02f1579d8/src/octokit/client/repositories.cr#L15" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L15" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="repository_assignees(repo)-instance-method">
+      <div class="signature">
+        
+        def <strong>repository_assignees</strong>(repo)
+
+        <a class="method-permalink" href="#repository_assignees%28repo%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>List users available for assigning issues.</p>
+
+<p><strong>Aliases:</strong> <code>repo_assignees</code></p>
+
+<p><strong>Note:</strong> Requires authenticated client for private repos.</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href="https://developer.github.com/v3/issues/assignees/#list-assignees" target="_blank">https://developer.github.com/v3/issues/assignees/#list-assignees</a></li></ul>
+
+<p><strong>Examples:</strong></p>
+
+<pre><code><span class="t">Octokit</span>.repository_assignees(<span class="s">&quot;watzon/cadmium&quot;</span>)
+@client.repository_assignees(<span class="s">&quot;watzon/cadmium&quot;</span>)</code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L623" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="repository_teams(repo)-instance-method">
+      <div class="signature">
+        
+        def <strong>repository_teams</strong>(repo)
+
+        <a class="method-permalink" href="#repository_teams%28repo%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>List teams for a repo.</p>
+
+<p><strong>Aliases:</strong> <code>repo_teams</code>, <code>teams</code></p>
+
+<p><strong>Note:</strong> Requires authenticated client that is an owner or collaborator of the repo.</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href="https://developer.github.com/v3/repos/#list-teams" target="_blank">https://developer.github.com/v3/repos/#list-teams</a></li></ul>
+
+<p><strong>Example:</strong></p>
+
+<pre><code>@client.repository_teams(<span class="s">&quot;watzon/cadmium&quot;</span>)</code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L380" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2360,7 +3011,7 @@ authenticated user are returned.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/3f1338812ad6375a0b1e9388f2380ba02f1579d8/src/octokit/client/repositories.cr#L188" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L188" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2380,7 +3031,7 @@ authenticated user are returned.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/3f1338812ad6375a0b1e9388f2380ba02f1579d8/src/octokit/client/repositories.cr#L195" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L195" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2402,7 +3053,145 @@ authenticated user are returned.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/3f1338812ad6375a0b1e9388f2380ba02f1579d8/src/octokit/client/repositories.cr#L99" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L99" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="stargazers(repo)-instance-method">
+      <div class="signature">
+        
+        def <strong>stargazers</strong>(repo)
+
+        <a class="method-permalink" href="#stargazers%28repo%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>List stargazers of a repo.</p>
+
+<p><strong>Note:</strong> Requires authenticated client for private repos.</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href="https://developer.github.com/v3/activity/starring/#list-stargazers" target="_blank">https://developer.github.com/v3/activity/starring/#list-stargazers</a></li></ul>
+
+<p><strong>Examples:</strong></p>
+
+<pre><code><span class="t">Octokit</span>.stargazers(<span class="s">&quot;watzon/cadmium&quot;</span>)
+@client.stargazers(<span class="s">&quot;watzon/cadmium&quot;</span>)</code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L460" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="subscribers(repo)-instance-method">
+      <div class="signature">
+        
+        def <strong>subscribers</strong>(repo)
+
+        <a class="method-permalink" href="#subscribers%28repo%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>List watchers subscribing to notifications for a repo.</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href="https://developer.github.com/v3/activity/watching/#list-watchers" target="_blank">https://developer.github.com/v3/activity/watching/#list-watchers</a></li></ul>
+
+<p><strong>Example:</strong></p>
+
+<pre><code>@client.subscribers(<span class="s">&quot;watzon/cadmium&quot;</span>)</code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L651" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="subscription(repo)-instance-method">
+      <div class="signature">
+        
+        def <strong>subscription</strong>(repo)
+
+        <a class="method-permalink" href="#subscription%28repo%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Get a repository subscription.</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href="https://developer.github.com/v3/activity/watching/#get-a-repository-subscription" target="_blank">https://developer.github.com/v3/activity/watching/#get-a-repository-subscription</a></li></ul>
+
+<p><strong>Example:</strong></p>
+
+<pre><code>@client.subscription(<span class="s">&quot;watzon/cadmium&quot;</span>)</code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L664" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tags(repo)-instance-method">
+      <div class="signature">
+        
+        def <strong>tags</strong>(repo)
+
+        <a class="method-permalink" href="#tags%28repo%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>List tags</p>
+
+<p><strong>Note:</strong> Requires authenticated client for private repos.</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href="https://developer.github.com/v3/repos/#list-tags" target="_blank">https://developer.github.com/v3/repos/#list-tags</a></li></ul>
+
+<p><strong>Examples:</strong></p>
+
+<pre><code><span class="t">Octokit</span>.tags(<span class="s">&quot;watzon/cadmium&quot;</span>)
+@client.tags(<span class="s">&quot;watzon/cadmium&quot;</span>)</code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L512" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="topics(repo)-instance-method">
+      <div class="signature">
+        
+        def <strong>topics</strong>(repo)
+
+        <a class="method-permalink" href="#topics%28repo%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>List all topics for a repository.</p>
+
+<p><strong>Note:</strong> Requires authenticated client that is an owner or collaborator of the repo.</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href="https://developer.github.com/v3/repos/#list-all-topics-for-a-repository" target="_blank">https://developer.github.com/v3/repos/#list-all-topics-for-a-repository</a></li></ul>
+
+<p><strong>Example:</strong></p>
+
+<pre><code>@client.topics(<span class="s">&quot;watzon/cadmium&quot;</span>)</code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L398" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2428,7 +3217,35 @@ authenticated user are returned.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/3f1338812ad6375a0b1e9388f2380ba02f1579d8/src/octokit/client/repositories.cr#L177" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L177" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="unprotect_branch(repo,branch)-instance-method">
+      <div class="signature">
+        
+        def <strong>unprotect_branch</strong>(repo, branch)
+
+        <a class="method-permalink" href="#unprotect_branch%28repo%2Cbranch%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Unlock a single branch from a repository.</p>
+
+<p><strong>Note:</strong> Requires authenticated client</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href="https://developer.github.com/v3/repos/#enabling-and-disabling-branch-protection" target="_blank">https://developer.github.com/v3/repos/#enabling-and-disabling-branch-protection</a></li></ul>
+
+<p><strong>Example:</strong></p>
+
+<pre><code>@client.unprotect_branch(<span class="s">&quot;watzon/cadmium&quot;</span>, <span class="s">&quot;master&quot;</span>)</code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L604" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2450,7 +3267,7 @@ authenticated user are returned.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/3f1338812ad6375a0b1e9388f2380ba02f1579d8/src/octokit/client/repositories.cr#L107" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L107" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2472,7 +3289,33 @@ authenticated user are returned.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/3f1338812ad6375a0b1e9388f2380ba02f1579d8/src/octokit/client/repositories.cr#L123" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L123" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="update_subscription(repo,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>update_subscription</strong>(repo, **options)
+
+        <a class="method-permalink" href="#update_subscription%28repo%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Update a repository subscription.</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href="https://developer.github.com/v3/activity/watching/#set-a-repository-subscription" target="_blank">https://developer.github.com/v3/activity/watching/#set-a-repository-subscription</a></li></ul>
+
+<p><strong>Example:</strong></p>
+
+<pre><code>@client.update_subscription(<span class="s">&quot;watzon/cadmium&quot;</span>, subscribed: <span class="n">true</span>)</code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L678" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2494,7 +3337,7 @@ authenticated user are returned.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/3f1338812ad6375a0b1e9388f2380ba02f1579d8/src/octokit/client/repositories.cr#L115" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/client/repositories.cr#L115" target="_blank">View source</a>]
         
       </div>
     </div>

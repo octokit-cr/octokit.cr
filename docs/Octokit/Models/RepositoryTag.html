@@ -56,6 +56,11 @@
       
         <ul>
   
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/RateLimit" data-name="octokit::client::ratelimit">
+      <a href="../../Octokit/Client/RateLimit.html">RateLimit</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Repositories" data-name="octokit::client::repositories">
       <a href="../../Octokit/Client/Repositories.html">Repositories</a>
       
@@ -281,6 +286,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Activity/Subscription" data-name="octokit::models::activity::subscription">
+      <a href="../../Octokit/Models/Activity/Subscription.html">Subscription</a>
+      
+    </li>
+  
 </ul>
 
       
@@ -371,13 +381,23 @@
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/BranchRestrictions" data-name="octokit::models::branchrestrictions">
-      <a href="../../Octokit/Models/BranchRestrictions.html">BranchRestrictions</a>
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/BranchCommit" data-name="octokit::models::branchcommit">
+      <a href="../../Octokit/Models/BranchCommit.html">BranchCommit</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/BranchRestrictionsRequest" data-name="octokit::models::branchrestrictionsrequest">
-      <a href="../../Octokit/Models/BranchRestrictionsRequest.html">BranchRestrictionsRequest</a>
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/BranchProtection" data-name="octokit::models::branchprotection">
+      <a href="../../Octokit/Models/BranchProtection.html">BranchProtection</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/BranchProtectionRequiredStatusChecks" data-name="octokit::models::branchprotectionrequiredstatuschecks">
+      <a href="../../Octokit/Models/BranchProtectionRequiredStatusChecks.html">BranchProtectionRequiredStatusChecks</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/BranchProtectionSummary" data-name="octokit::models::branchprotectionsummary">
+      <a href="../../Octokit/Models/BranchProtectionSummary.html">BranchProtectionSummary</a>
       
     </li>
   
@@ -1131,11 +1151,6 @@
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Protection" data-name="octokit::models::protection">
-      <a href="../../Octokit/Models/Protection.html">Protection</a>
-      
-    </li>
-  
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PublicEvent" data-name="octokit::models::publicevent">
       <a href="../../Octokit/Models/PublicEvent.html">PublicEvent</a>
       
@@ -1388,11 +1403,6 @@
   
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RepositoryListForksOptions" data-name="octokit::models::repositorylistforksoptions">
       <a href="../../Octokit/Models/RepositoryListForksOptions.html">RepositoryListForksOptions</a>
-      
-    </li>
-  
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RepositoryListOptions" data-name="octokit::models::repositorylistoptions">
-      <a href="../../Octokit/Models/RepositoryListOptions.html">RepositoryListOptions</a>
       
     </li>
   
@@ -1756,6 +1766,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/RateLimit" data-name="octokit::ratelimit">
+      <a href="../../Octokit/RateLimit.html">RateLimit</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Response" data-name="octokit::response">
       <a href="../../Octokit/Response.html">Response</a>
       
@@ -1806,7 +1821,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/watzon/octokit.cr/blob/3f1338812ad6375a0b1e9388f2380ba02f1579d8/src/octokit/models/repos.cr#L251" target="_blank">
+      <a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/models/repos.cr#L170" target="_blank">
         octokit/models/repos.cr
       </a>
     
@@ -1821,12 +1836,12 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28name%3AString%2Ccommit%3AString%2Czipball_url%3AString%2Ctarball_url%3AString%29-class-method" class="signature"><strong>.new</strong>(name : String, commit : String, zipball_url : String, tarball_url : String)</a>
+        <a href="#new%28name%3AString%2Ccommit_sha%3AString%2Ccommit_url%3AString%2Czipball_url%3AString%2Ctarball_url%3AString%29-class-method" class="signature"><strong>.new</strong>(name : String, commit_sha : String, commit_url : String, zipball_url : String, tarball_url : String)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28__temp_4000%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_4000 : JSON::PullParser)</a>
+        <a href="#new%28__temp_3949%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_3949 : JSON::PullParser)</a>
         
       </li>
     
@@ -1840,12 +1855,22 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#commit%3AString-instance-method" class="signature"><strong>#commit</strong> : String</a>
+        <a href="#commit_sha%3AString-instance-method" class="signature"><strong>#commit_sha</strong> : String</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#commit%3D%28_commit%3AString%29-instance-method" class="signature"><strong>#commit=</strong>(_commit : String)</a>
+        <a href="#commit_sha%3D%28_commit_sha%3AString%29-instance-method" class="signature"><strong>#commit_sha=</strong>(_commit_sha : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#commit_url%3AString-instance-method" class="signature"><strong>#commit_url</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#commit_url%3D%28_commit_url%3AString%29-instance-method" class="signature"><strong>#commit_url=</strong>(_commit_url : String)</a>
         
       </li>
     
@@ -1927,12 +1952,12 @@
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(name:String,commit:String,zipball_url:String,tarball_url:String)-class-method">
+    <div class="entry-detail" id="new(name:String,commit_sha:String,commit_url:String,zipball_url:String,tarball_url:String)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(name : String, commit : String, zipball_url : String, tarball_url : String)
+        def self.<strong>new</strong>(name : String, commit_sha : String, commit_url : String, zipball_url : String, tarball_url : String)
 
-        <a class="method-permalink" href="#new%28name%3AString%2Ccommit%3AString%2Czipball_url%3AString%2Ctarball_url%3AString%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28name%3AString%2Ccommit_sha%3AString%2Ccommit_url%3AString%2Czipball_url%3AString%2Ctarball_url%3AString%29-class-method">#</a>
       </div>
       
       <br/>
@@ -1941,12 +1966,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="new(__temp_4000:JSON::PullParser)-class-method">
+    <div class="entry-detail" id="new(__temp_3949:JSON::PullParser)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(__temp_4000 : JSON::PullParser)
+        def self.<strong>new</strong>(__temp_3949 : JSON::PullParser)
 
-        <a class="method-permalink" href="#new%28__temp_4000%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28__temp_3949%3AJSON%3A%3APullParser%29-class-method">#</a>
       </div>
       
       <br/>
@@ -1962,12 +1987,12 @@
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="commit:String-instance-method">
+    <div class="entry-detail" id="commit_sha:String-instance-method">
       <div class="signature">
         
-        def <strong>commit</strong> : String
+        def <strong>commit_sha</strong> : String
 
-        <a class="method-permalink" href="#commit%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#commit_sha%3AString-instance-method">#</a>
       </div>
       
       <br/>
@@ -1976,12 +2001,40 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="commit=(_commit:String)-instance-method">
+    <div class="entry-detail" id="commit_sha=(_commit_sha:String)-instance-method">
       <div class="signature">
         
-        def <strong>commit=</strong>(_commit : String)
+        def <strong>commit_sha=</strong>(_commit_sha : String)
 
-        <a class="method-permalink" href="#commit%3D%28_commit%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#commit_sha%3D%28_commit_sha%3AString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="commit_url:String-instance-method">
+      <div class="signature">
+        
+        def <strong>commit_url</strong> : String
+
+        <a class="method-permalink" href="#commit_url%3AString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="commit_url=(_commit_url:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>commit_url=</strong>(_commit_url : String)
+
+        <a class="method-permalink" href="#commit_url%3D%28_commit_url%3AString%29-instance-method">#</a>
       </div>
       
       <br/>

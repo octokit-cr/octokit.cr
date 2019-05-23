@@ -56,6 +56,11 @@
       
         <ul>
   
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/RateLimit" data-name="octokit::client::ratelimit">
+      <a href="../../Octokit/Client/RateLimit.html">RateLimit</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Repositories" data-name="octokit::client::repositories">
       <a href="../../Octokit/Client/Repositories.html">Repositories</a>
       
@@ -281,6 +286,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Activity/Subscription" data-name="octokit::models::activity::subscription">
+      <a href="../../Octokit/Models/Activity/Subscription.html">Subscription</a>
+      
+    </li>
+  
 </ul>
 
       
@@ -371,13 +381,23 @@
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/BranchRestrictions" data-name="octokit::models::branchrestrictions">
-      <a href="../../Octokit/Models/BranchRestrictions.html">BranchRestrictions</a>
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/BranchCommit" data-name="octokit::models::branchcommit">
+      <a href="../../Octokit/Models/BranchCommit.html">BranchCommit</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/BranchRestrictionsRequest" data-name="octokit::models::branchrestrictionsrequest">
-      <a href="../../Octokit/Models/BranchRestrictionsRequest.html">BranchRestrictionsRequest</a>
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/BranchProtection" data-name="octokit::models::branchprotection">
+      <a href="../../Octokit/Models/BranchProtection.html">BranchProtection</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/BranchProtectionRequiredStatusChecks" data-name="octokit::models::branchprotectionrequiredstatuschecks">
+      <a href="../../Octokit/Models/BranchProtectionRequiredStatusChecks.html">BranchProtectionRequiredStatusChecks</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/BranchProtectionSummary" data-name="octokit::models::branchprotectionsummary">
+      <a href="../../Octokit/Models/BranchProtectionSummary.html">BranchProtectionSummary</a>
       
     </li>
   
@@ -1131,11 +1151,6 @@
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Protection" data-name="octokit::models::protection">
-      <a href="../../Octokit/Models/Protection.html">Protection</a>
-      
-    </li>
-  
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PublicEvent" data-name="octokit::models::publicevent">
       <a href="../../Octokit/Models/PublicEvent.html">PublicEvent</a>
       
@@ -1388,11 +1403,6 @@
   
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RepositoryListForksOptions" data-name="octokit::models::repositorylistforksoptions">
       <a href="../../Octokit/Models/RepositoryListForksOptions.html">RepositoryListForksOptions</a>
-      
-    </li>
-  
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RepositoryListOptions" data-name="octokit::models::repositorylistoptions">
-      <a href="../../Octokit/Models/RepositoryListOptions.html">RepositoryListOptions</a>
       
     </li>
   
@@ -1756,6 +1766,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/RateLimit" data-name="octokit::ratelimit">
+      <a href="../../Octokit/RateLimit.html">RateLimit</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Response" data-name="octokit::response">
       <a href="../../Octokit/Response.html">Response</a>
       
@@ -1806,8 +1821,8 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/watzon/octokit.cr/blob/3f1338812ad6375a0b1e9388f2380ba02f1579d8/src/octokit/models/repos.cr#L260" target="_blank">
-        octokit/models/repos.cr
+      <a href="https://github.com/watzon/octokit.cr/blob/fbd88cc11d1678d456b0963c3151bbd6c370dce7/src/octokit/models/repo_branches.cr#L3" target="_blank">
+        octokit/models/repo_branches.cr
       </a>
     
     <br/>
@@ -1821,12 +1836,12 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28name%3AString%2Ccommit%3ARepositoryCommit%2Cprotected__arg0%3ABool%29-class-method" class="signature"><strong>.new</strong>(name : String, commit : RepositoryCommit, protected __arg0 : Bool)</a>
+        <a href="#new%28name%3AString%2Ccommit%3ABranchCommit%2Cprotected__arg0%3ABool%2Cprotection%3ABranchProtection%2Cprotection_url%3AString%29-class-method" class="signature"><strong>.new</strong>(name : String, commit : BranchCommit, protected __arg0 : Bool, protection : BranchProtection, protection_url : String)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28__temp_4011%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_4011 : JSON::PullParser)</a>
+        <a href="#new%28__temp_2951%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_2951 : JSON::PullParser)</a>
         
       </li>
     
@@ -1840,12 +1855,12 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#commit%3ARepositoryCommit-instance-method" class="signature"><strong>#commit</strong> : RepositoryCommit</a>
+        <a href="#commit%3ABranchCommit-instance-method" class="signature"><strong>#commit</strong> : BranchCommit</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#commit%3D%28_commit%3ARepositoryCommit%29-instance-method" class="signature"><strong>#commit=</strong>(_commit : RepositoryCommit)</a>
+        <a href="#commit%3D%28_commit%3ABranchCommit%29-instance-method" class="signature"><strong>#commit=</strong>(_commit : BranchCommit)</a>
         
       </li>
     
@@ -1866,6 +1881,26 @@
     
       <li class="entry-summary">
         <a href="#protected%3D%28_protected%3ABool%29-instance-method" class="signature"><strong>#protected=</strong>(_protected : Bool)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#protection%3ABranchProtection-instance-method" class="signature"><strong>#protection</strong> : BranchProtection</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#protection%3D%28_protection%3ABranchProtection%29-instance-method" class="signature"><strong>#protection=</strong>(_protection : BranchProtection)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#protection_url%3AString-instance-method" class="signature"><strong>#protection_url</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#protection_url%3D%28_protection_url%3AString%29-instance-method" class="signature"><strong>#protection_url=</strong>(_protection_url : String)</a>
         
       </li>
     
@@ -1917,12 +1952,12 @@
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(name:String,commit:RepositoryCommit,protected__arg0:Bool)-class-method">
+    <div class="entry-detail" id="new(name:String,commit:BranchCommit,protected__arg0:Bool,protection:BranchProtection,protection_url:String)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(name : String, commit : <a href="../../Octokit/Models/RepositoryCommit.html">RepositoryCommit</a>, protected __arg0 : Bool)
+        def self.<strong>new</strong>(name : String, commit : <a href="../../Octokit/Models/BranchCommit.html">BranchCommit</a>, protected __arg0 : Bool, protection : <a href="../../Octokit/Models/BranchProtection.html">BranchProtection</a>, protection_url : String)
 
-        <a class="method-permalink" href="#new%28name%3AString%2Ccommit%3ARepositoryCommit%2Cprotected__arg0%3ABool%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28name%3AString%2Ccommit%3ABranchCommit%2Cprotected__arg0%3ABool%2Cprotection%3ABranchProtection%2Cprotection_url%3AString%29-class-method">#</a>
       </div>
       
       <br/>
@@ -1931,12 +1966,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="new(__temp_4011:JSON::PullParser)-class-method">
+    <div class="entry-detail" id="new(__temp_2951:JSON::PullParser)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(__temp_4011 : JSON::PullParser)
+        def self.<strong>new</strong>(__temp_2951 : JSON::PullParser)
 
-        <a class="method-permalink" href="#new%28__temp_4011%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28__temp_2951%3AJSON%3A%3APullParser%29-class-method">#</a>
       </div>
       
       <br/>
@@ -1952,12 +1987,12 @@
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="commit:RepositoryCommit-instance-method">
+    <div class="entry-detail" id="commit:BranchCommit-instance-method">
       <div class="signature">
         
-        def <strong>commit</strong> : <a href="../../Octokit/Models/RepositoryCommit.html">RepositoryCommit</a>
+        def <strong>commit</strong> : <a href="../../Octokit/Models/BranchCommit.html">BranchCommit</a>
 
-        <a class="method-permalink" href="#commit%3ARepositoryCommit-instance-method">#</a>
+        <a class="method-permalink" href="#commit%3ABranchCommit-instance-method">#</a>
       </div>
       
       <br/>
@@ -1966,12 +2001,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="commit=(_commit:RepositoryCommit)-instance-method">
+    <div class="entry-detail" id="commit=(_commit:BranchCommit)-instance-method">
       <div class="signature">
         
-        def <strong>commit=</strong>(_commit : <a href="../../Octokit/Models/RepositoryCommit.html">RepositoryCommit</a>)
+        def <strong>commit=</strong>(_commit : <a href="../../Octokit/Models/BranchCommit.html">BranchCommit</a>)
 
-        <a class="method-permalink" href="#commit%3D%28_commit%3ARepositoryCommit%29-instance-method">#</a>
+        <a class="method-permalink" href="#commit%3D%28_commit%3ABranchCommit%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2028,6 +2063,62 @@
         def <strong>protected=</strong>(_protected : Bool)
 
         <a class="method-permalink" href="#protected%3D%28_protected%3ABool%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="protection:BranchProtection-instance-method">
+      <div class="signature">
+        
+        def <strong>protection</strong> : <a href="../../Octokit/Models/BranchProtection.html">BranchProtection</a>
+
+        <a class="method-permalink" href="#protection%3ABranchProtection-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="protection=(_protection:BranchProtection)-instance-method">
+      <div class="signature">
+        
+        def <strong>protection=</strong>(_protection : <a href="../../Octokit/Models/BranchProtection.html">BranchProtection</a>)
+
+        <a class="method-permalink" href="#protection%3D%28_protection%3ABranchProtection%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="protection_url:String-instance-method">
+      <div class="signature">
+        
+        def <strong>protection_url</strong> : String
+
+        <a class="method-permalink" href="#protection_url%3AString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="protection_url=(_protection_url:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>protection_url=</strong>(_protection_url : String)
+
+        <a class="method-permalink" href="#protection_url%3D%28_protection_url%3AString%29-instance-method">#</a>
       </div>
       
       <br/>

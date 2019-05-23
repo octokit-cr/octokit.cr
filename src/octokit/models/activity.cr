@@ -29,6 +29,17 @@ module Octokit
           current_user_organizations: FeedLink
         )
       end
+
+      struct Subscription
+        Octokit.rest_model(
+          subscribed: Bool,
+          ignored: Bool,
+          reason: String?,
+          created_at: String?,
+          url: String,
+          repository_url: String?
+        )
+      end
     end
   end
 end

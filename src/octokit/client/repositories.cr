@@ -399,6 +399,299 @@ module Octokit
         headers = api_media_type(:topics)
         paginate Models::RepositoryTopics, "#{Repository.path(repo)}/topics", options: {headers: headers}
       end
+
+      # Replace all topics for a repository.
+      #
+      # **Note:** Requires authenticated client.
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/repos/#replace-all-topics-for-a-repository](https://developer.github.com/v3/repos/#replace-all-topics-for-a-repository)
+      #
+      # **Examples:**
+      #
+      # Replace all topics
+      # ```
+      # @client.replace_all_topics("watzon/cadmium", ["element", "nlp", "crystal", "awesome"])
+      # ```
+      #
+      # Clear all topics
+      # ```
+      # @client.replace_all_topics("watzon/cadmium", nil)
+      # ```
+      def replace_all_topics(repo, names)
+        json = {names: names || [] of String}
+        options = {headers: api_media_type(:topics), json: json}
+        res = put "#{Repository.path(repo)}/topics", options: options
+        Models::RepositoryTopics.from_json(res)
+      end
+
+      # List contributors to a repo.
+      #
+      # **Aliases:** `contribs`
+      #
+      # **Note:** Requires authenticated client for private repos.
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/repos/#list-contributors](https://developer.github.com/v3/repos/#list-contributors)
+      #
+      # **Examples:**
+      # ```
+      # Octokit.contributors("watzon/cadmium", true)
+      # @client.contribs("watzon/cadmium")
+      # ```
+      def contributors(repo, anon = false)
+        paginate User, "#{Repository.path(repo)}/contributors", {json: {anon: anon}}
+      end
+
+      alias_method :contributors, :contribs
+
+      # List stargazers of a repo.
+      #
+      # **Note:** Requires authenticated client for private repos.
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/activity/starring/#list-stargazers](https://developer.github.com/v3/activity/starring/#list-stargazers)
+      #
+      # **Examples:**
+      # ```
+      # Octokit.stargazers("watzon/cadmium")
+      # @client.stargazers("watzon/cadmium")
+      # ```
+      def stargazers(repo)
+        paginate User, "#{Repository.path(repo)}/stargazers"
+      end
+
+      # List forks
+      #
+      # **Aliases:** `network`
+      #
+      # **Note:** Requires authenticated client for private repos.
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/repos/forks/#list-forks](https://developer.github.com/v3/repos/forks/#list-forks)
+      #
+      # **Examples:**
+      # ```
+      # Octokit.forks("watzon/cadmium")
+      # @client.forks("watzon/cadmium", sort: "oldest")
+      # ```
+      def forks(repo, sort = "newest")
+        paginate Repository, "#{Repository.path(repo)}/forks", {json: {sort: sort}}
+      end
+
+      alias_method :forks, :network
+
+      # List programming languages in the repo.
+      #
+      # **Note:** Requires authenticated client for private repos.
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/repos/#list-languages](https://developer.github.com/v3/repos/#list-languages)
+      #
+      # **Examples:**
+      # ```
+      # Octokit.languages("watzon/cadmium")
+      # @client.languages("watzon/cadmium", sort: "oldest")
+      # ```
+      def languages(repo)
+        paginate Hash(String, Int32), "#{Repository.path(repo)}/languages"
+      end
+
+      # List tags
+      #
+      # **Note:** Requires authenticated client for private repos.
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/repos/#list-tags](https://developer.github.com/v3/repos/#list-tags)
+      #
+      # **Examples:**
+      # ```
+      # Octokit.tags("watzon/cadmium")
+      # @client.tags("watzon/cadmium")
+      # ```
+      def tags(repo)
+        paginate RepositoryTag, "#{Repository.path(repo)}/tags"
+      end
+
+      # List branches
+      #
+      # **Note:** Requires authenticated client for private repos.
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/repos/branches/#list-branches](https://developer.github.com/v3/repos/branches/#list-branches)
+      #
+      # **Examples:**
+      # ```
+      # Octokit.branches("watzon/cadmium")
+      # @client.branches("watzon/cadmium")
+      # ```
+      def branches(repo, get_protected = false)
+        paginate Models::Branch, "#{Repository.path(repo)}/branches", {json: {protected: get_protected}}
+      end
+
+      # Get a single branch from a repository.
+      #
+      # **Aliases:** `get_branch`
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/repos/branches/#get-branch](https://developer.github.com/v3/repos/branches/#get-branch)
+      #
+      # **Example:**
+      # ```
+      # Octokit.branch("watzon/cadmium", "master")
+      # ```
+      def branch(repo, branch)
+        res = get "#{Repository.path(repo)}/branches/#{branch}"
+        Models::Branch.from_json(res)
+      end
+
+      alias_method :branch, :get_branch
+
+      # Lock a single branch from a repository.
+      #
+      # **Note:** Requires authenticated client
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/repos/branches/#get-branch](https://developer.github.com/v3/repos/branches/#get-branch)
+      #
+      # **Example:**
+      # ```
+      # @client.protect_branch("watzon/cadmium", "master")
+      # ```
+      def protect_branch(repo, branch, **options)
+        headers = api_media_type(:branch_protection)
+        options = options.merge({
+          restrictions:           nil,
+          required_status_checks: nil,
+        })
+        opts = {headers: headers, json: options}
+        res = put "#{Repository.path(repo)}/branches/#{branch}/protection", opts
+        Models::BranchProtectionSummary.from_json(res)
+      end
+
+      # Get branch protection summary.
+      #
+      # **Note:** Requires authenticated client
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/repos/branches/#get-branch-protection](https://developer.github.com/v3/repos/branches/#get-branch-protection)
+      #
+      # **Example:**
+      # ```
+      # @client.branch_protection("watzon/cadmium", "master")
+      # ```
+      def branch_protection(repo, branch)
+        headers = api_media_type(:branch_protection)
+        begin
+          res = get "#{Repository.path(repo)}/branches/#{branch}/protection", {headers: headers}
+          Models::BranchProtectionSummary.from_json(res.body)
+        rescue Octokit::BranchNotProtected
+          nil
+        end
+      end
+
+      # Unlock a single branch from a repository.
+      #
+      # **Note:** Requires authenticated client
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/repos/#enabling-and-disabling-branch-protection](https://developer.github.com/v3/repos/#enabling-and-disabling-branch-protection)
+      #
+      # **Example:**
+      # ```
+      # @client.unprotect_branch("watzon/cadmium", "master")
+      # ```
+      def unprotect_branch(repo, branch)
+        headers = api_media_type(:branch_protection)
+        boolean_from_response :delete, "#{Repository.path(repo)}/branches/#{branch}/protection", {headers: headers}
+      end
+
+      # List users available for assigning issues.
+      #
+      # **Aliases:** `repo_assignees`
+      #
+      # **Note:** Requires authenticated client for private repos.
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/issues/assignees/#list-assignees](https://developer.github.com/v3/issues/assignees/#list-assignees)
+      #
+      # **Examples:**
+      # ```
+      # Octokit.repository_assignees("watzon/cadmium")
+      # @client.repository_assignees("watzon/cadmium")
+      # ```
+      def repository_assignees(repo)
+        paginate User, "#{Repository.path(repo)}/assignees"
+      end
+
+      alias_method :repository_assignees, :repo_assignees
+
+      # Check to see if a particular user is an assignee for a repository.
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/issues/assignees/#check-assignee](https://developer.github.com/v3/issues/assignees/#check-assignee)
+      #
+      # **Example:**
+      # ```
+      # Octokit.repository_assignees("watzon/cadmium")
+      # ```
+      def check_assignee(repo, assignee)
+        boolean_from_response :get, "#{Repository.path(repo)}/assignees/#{assignee}"
+      end
+
+      # List watchers subscribing to notifications for a repo.
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/activity/watching/#list-watchers](https://developer.github.com/v3/activity/watching/#list-watchers)
+      #
+      # **Example:**
+      # ```
+      # @client.subscribers("watzon/cadmium")
+      # ```
+      def subscribers(repo)
+        paginate User, "#{Repository.path(repo)}/subscribers"
+      end
+
+      # Get a repository subscription.
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/activity/watching/#get-a-repository-subscription](https://developer.github.com/v3/activity/watching/#get-a-repository-subscription)
+      #
+      # **Example:**
+      # ```
+      # @client.subscription("watzon/cadmium")
+      # ```
+      def subscription(repo)
+        res = get "#{Repository.path(repo)}/subscription"
+        Models::Subscription.from_json(res.body)
+      end
+
+      # Update a repository subscription.
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/activity/watching/#set-a-repository-subscription](https://developer.github.com/v3/activity/watching/#set-a-repository-subscription)
+      #
+      # **Example:**
+      # ```
+      # @client.update_subscription("watzon/cadmium", subscribed: true)
+      # ```
+      def update_subscription(repo, **options)
+        res = put "#{Repository.path(repo)}/subscription", {json: options}
+        Models::Subscription.from_json(res.body)
+      end
+
+      # Delete a repository subscription.
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/activity/watching/#delete-a-repository-subscription](https://developer.github.com/v3/activity/watching/#delete-a-repository-subscription)
+      #
+      # **Example:**
+      # ```
+      # @client.delete_subscription("watzon/cadmium")
+      # ```
+      def delete_subscription(repo, **options)
+        boolean_from_response :delete, "#{Repository.path(repo)}/subscription", {json: options}
+      end
     end
   end
 end
