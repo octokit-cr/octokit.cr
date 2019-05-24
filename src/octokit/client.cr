@@ -217,6 +217,18 @@ module Octokit
       @client_secret = value
     end
 
+    def ensure_basic_authenticated!
+      unless !!@login && !!@password
+        raise "Client not Basic authenticated"
+      end
+    end
+
+    def ensure_token_authenticated!
+      unless !!@access_token
+        raise "Client not Token authenticated"
+      end
+    end
+
     def client_without_redirects(options = {} of String => String)
       raise "unimplemented method"
     end
