@@ -1817,10 +1817,6 @@
 to fetch the next page, the last page, or
 fetch all pages in a response.</p>
 
-<p><strong>Note:</strong> All methods that return a <code><a href="../../Octokit/Connection/Paginator.html">Paginator</a></code> accept the named parameters
-<code>:current_page</code>, <code>:per_page</code>, <code>:auto_paginate</code>, and <code>:options</code>. The types for
-these parameters are the same as in the <code><a href="../../Octokit/Connection/Paginator.html">Paginator</a></code> constructor.</p>
-
 <p><strong>Examples:</strong></p>
 
 <pre><code>pages <span class="o">=</span> @client.repositories
@@ -1843,7 +1839,7 @@ pp pages
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/connection.cr#L152" target="_blank">
+      <a href="https://github.com/watzon/octokit.cr/blob/9577e19ebb3818dede32247576ade05cf29ec87e/src/octokit/connection.cr#L148" target="_blank">
         octokit/connection.cr
       </a>
     
@@ -2017,7 +2013,7 @@ pp pages
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/connection.cr#L173" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/9577e19ebb3818dede32247576ade05cf29ec87e/src/octokit/connection.cr#L169" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2042,7 +2038,7 @@ pp pages
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/connection.cr#L192" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/9577e19ebb3818dede32247576ade05cf29ec87e/src/octokit/connection.cr#L188" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2061,7 +2057,7 @@ the index contains no record.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/connection.cr#L198" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/9577e19ebb3818dede32247576ade05cf29ec87e/src/octokit/connection.cr#L194" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2079,7 +2075,7 @@ the index contains no record.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/connection.cr#L162" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/9577e19ebb3818dede32247576ade05cf29ec87e/src/octokit/connection.cr#L158" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2097,7 +2093,7 @@ the index contains no record.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/connection.cr#L321" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/9577e19ebb3818dede32247576ade05cf29ec87e/src/octokit/connection.cr#L317" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2122,7 +2118,7 @@ is set to true.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/connection.cr#L211" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/9577e19ebb3818dede32247576ade05cf29ec87e/src/octokit/connection.cr#L207" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2145,7 +2141,7 @@ pages.fetch_next <span class="c"># =&gt; Array(Repository)</span></code></pre></
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/connection.cr#L252" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/9577e19ebb3818dede32247576ade05cf29ec87e/src/octokit/connection.cr#L248" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2168,7 +2164,7 @@ pages.fetch_page(<span class="n">4</span>) <span class="c"># =&gt; Array(Reposit
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/connection.cr#L228" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/9577e19ebb3818dede32247576ade05cf29ec87e/src/octokit/connection.cr#L224" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2195,7 +2191,7 @@ records backwards for some reason. Included just in case.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/connection.cr#L288" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/9577e19ebb3818dede32247576ade05cf29ec87e/src/octokit/connection.cr#L284" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2219,7 +2215,7 @@ pages.last? <span class="c"># =&gt; Bool</span></code></pre></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/connection.cr#L316" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/9577e19ebb3818dede32247576ade05cf29ec87e/src/octokit/connection.cr#L312" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2243,7 +2239,7 @@ pages.next? <span class="c"># =&gt; Bool</span></code></pre></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/connection.cr#L269" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/9577e19ebb3818dede32247576ade05cf29ec87e/src/octokit/connection.cr#L265" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2267,7 +2263,7 @@ pages.previous? <span class="c"># =&gt; Bool</span></code></pre></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/connection.cr#L304" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/9577e19ebb3818dede32247576ade05cf29ec87e/src/octokit/connection.cr#L300" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2286,7 +2282,7 @@ a <code>fetch_*</code> method is called.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/connection.cr#L159" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/9577e19ebb3818dede32247576ade05cf29ec87e/src/octokit/connection.cr#L155" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2306,7 +2302,7 @@ a <code>fetch_*</code> method is called.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/connection.cr#L167" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/9577e19ebb3818dede32247576ade05cf29ec87e/src/octokit/connection.cr#L163" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2326,7 +2322,7 @@ a <code>fetch_*</code> method is called.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/connection.cr#L172" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/9577e19ebb3818dede32247576ade05cf29ec87e/src/octokit/connection.cr#L168" target="_blank">View source</a>]
         
       </div>
     </div>

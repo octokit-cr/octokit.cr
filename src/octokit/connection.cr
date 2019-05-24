@@ -139,10 +139,6 @@ module Octokit
     # to fetch the next page, the last page, or
     # fetch all pages in a response.
     #
-    # **Note:** All methods that return a `Paginator` accept the named parameters
-    # `:current_page`, `:per_page`, `:auto_paginate`, and `:options`. The types for
-    # these parameters are the same as in the `Paginator` constructor.
-    #
     # **Examples:**
     # ```
     # pages = @client.repositories
