@@ -14,6 +14,9 @@ module Octokit
       # :nodoc:
       alias Issue = Models::Issue
 
+      # :nodoc:
+      alias User = Models::User
+
       # Valid filters for Issues
       FILTERS = ["all", "assigned", "created", "mentioned", "subscribed"]
 
@@ -224,7 +227,7 @@ module Octokit
       # ```
       def issues_comments(repo, number : Int32, **options)
         validate_options(options)
-        options.merge({since: options[:since].to_rfc3339}) if options[:since] === Time
+        options.merge({since: options[:since].to_rfc3339}) if options[:since].is_a?(Time)
         res = patch "#{Repository.path(repo)}/issues/#{number}", {json: options}
         Issue.from_json(res)
       end
@@ -262,6 +265,120 @@ module Octokit
         Models::IssueComment.from_json(res)
       end
 
+      # Get a single comment attached to an issue.
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/issues/comments/#create-a-comment](https://developer.github.com/v3/issues/comments/#create-a-comment)
+      #
+      # **Examples:**
+      #
+      # Add a comment to issue #4 on watzon/cadmium
+      # ```
+      # Octokit.client.add_comment("watzon/cadmium", 4, "Plenty of awesome")
+      # ```
+      def add_comment(repo, number : Int32, comment : String)
+        res = post "#{Repository.path(repo)}/issues/#{number}/comments", {json: {body: comment}}
+        Models::IssueComment.from_json(res)
+      end
+
+      # Update a single comment on an issue.
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/issues/comments/#edit-a-comment](https://developer.github.com/v3/issues/comments/#edit-a-comment)
+      #
+      # **Examples:**
+      #
+      # Update comment #495536069
+      # ```
+      # Octokit.client.update_comment("watzon/cadmium", 495536069, "Plenty of awesome!")
+      # ```
+      def update_comment(repo, number : Int32, comment : String)
+        res = patch "#{Repository.path(repo)}/issues/comments/#{number}", {json: {body: comment}}
+        Models::IssueComment.from_json(res)
+      end
+
+      # Delete a single comment.
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/issues/comments/#delete-a-comment](https://developer.github.com/v3/issues/comments/#delete-a-comment)
+      #
+      # **Examples:**
+      #
+      # Delete comment #495536069
+      # ```
+      # Octokit.client.delete_comment("watzon/cadmium", 495536069)
+      # ```
+      def delete_comment(repo, number : Int32)
+        boolean_from_response :delete, "#{Repository.path(repo)}/issues/comments/#{number}"
+      end
+
+      # Get the timeline for an issue.
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/issues/timeline/](https://developer.github.com/v3/issues/timeline/)
+      #
+      # **Examples:**
+      #
+      # Get timeline for issue #4 on watzon/cadmium
+      # ```
+      # Octokit.client.issue_timeline("watzon/cadmium", 4)
+      # ```
+      def issue_timeline(repo, number : Int32)
+        headers = api_media_type(:issue_timelines)
+        paginate Models::Timeline, "#{Repository.path(repo)}/issues/comments/#{number}", options: {headers: headers}
+      end
+
+      # List the available assignees for issues in a repository.
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/issues/assignees/#list-assignees](https://developer.github.com/v3/issues/assignees/#list-assignees)
+      #
+      # **Examples:**
+      #
+      # Get avaialble assignees on repository watzon/cadmium
+      # ```
+      # Octokit.client.list_assignees("watzon/cadmium")
+      # ```
+      def list_assignees(repo)
+        paginate User, "#{Repository.path(repo)}/assignees"
+      end
+
+      # Add assignees to an issue.
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/issues/assignees/#add-assignees-to-an-issue](https://developer.github.com/v3/issues/assignees/#add-assignees-to-an-issue)
+      #
+      # **Examples:**
+      #
+      # Add assignees "watzon" and "asterite" to issue #4 on watzon/cadmium
+      # ```
+      # Octokit.client.add_assignees("watzon/cadmium", 4, ["watzon", "asterite"])
+      # ```
+      def add_assignees(repo, number : Int32, assignees : Array(String | User))
+        assignees = assignees.map { |a| a.is_a?(User) ? a.login : a }
+        res = post "#{Repository.path(repo)}/issues/#{number}/assignees", {json: {assignees: assignees}}
+        Issue.from_json(res)
+      end
+
+      # Remove assignees from an issue.
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/issues/assignees/#remove-assignees-from-an-issue](https://developer.github.com/v3/issues/assignees/#remove-assignees-from-an-issue)
+      #
+      # **Examples:**
+      #
+      # Remove assignee "asterite" from issue #4 on watzon/cadmium
+      # ```
+      # Octokit.client.remove_assignees("watzon/cadmium", 4, ["asterite"])
+      # ```
+      def remove_assignees(repo, number : Int32, assignees : Array(String | User))
+        assignees = assignees.map { |a| a.is_a?(User) ? a.login : a }
+        res = post "#{Repository.path(repo)}/issues/#{number}/assignees", {json: {assignees: assignees}}
+        Issue.from_json(res)
+      end
+
+      # Validate options for filtering issues and log a warning if an incorrect
+      # filter is used.
       protected def validate_options(options)
         if filter = options[:filter]?
           unless FILTERS.includes?(filter.to_s)

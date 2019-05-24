@@ -52,7 +52,7 @@ There are a lot of pieces of the GitHub API to cover. Here are the ones that nee
 - [ ] [Gists]()
 - [ ] [Gitignore]()
 - [ ] [Hooks]()
-- [ ] [Issues]()
+- [x] [Issues](https://watzon.github.io/octokit.cr/Octokit/Client/RateLimit.html)
 - [ ] [Labels]()
 - [ ] [LegacySearch]()
 - [ ] [Licenses]()

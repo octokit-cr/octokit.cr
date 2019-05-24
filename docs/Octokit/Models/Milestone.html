@@ -56,6 +56,11 @@
       
         <ul>
   
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Issues" data-name="octokit::client::issues">
+      <a href="../../Octokit/Client/Issues.html">Issues</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/RateLimit" data-name="octokit::client::ratelimit">
       <a href="../../Octokit/Client/RateLimit.html">RateLimit</a>
       
@@ -1821,7 +1826,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/models/issue_milestones.cr#L3" target="_blank">
+      <a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/models/issue_milestones.cr#L3" target="_blank">
         octokit/models/issue_milestones.cr
       </a>
     
@@ -1836,7 +1841,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28url%3AString%2Chtml_url%3AString%2Clabels_url%3AString%2Cid%3AInt64%2Cnumber%3AInt32%2Cstate%3AString%2Ctitle%3AString%2Cdescription%3AString%2Ccreator%3AUser%2Copen_issues%3AInt32%2Cclosed_issues%3AInt32%2Ccreated_at%3AString%2Cupdated_at%3AString%2Cclosed_at%3AString%2Cdue_on%3AString%2Cnode_id%3AString%29-class-method" class="signature"><strong>.new</strong>(url : String, html_url : String, labels_url : String, id : Int64, number : Int32, state : String, title : String, description : String, creator : User, open_issues : Int32, closed_issues : Int32, created_at : String, updated_at : String, closed_at : String, due_on : String, node_id : String)</a>
+        <a href="#new%28url%3AString%2Chtml_url%3AString%2Clabels_url%3AString%2Cid%3AInt64%2Cnumber%3AInt32%2Cstate%3AString%2Ctitle%3AString%2Cdescription%3A%3A%3AUnion%28String%2CNil%29%2Ccreator%3AUser%2Copen_issues%3AInt32%2Cclosed_issues%3AInt32%2Ccreated_at%3AString%2Cupdated_at%3AString%2Cclosed_at%3A%3A%3AUnion%28String%2CNil%29%2Cdue_on%3A%3A%3AUnion%28String%2CNil%29%2Cnode_id%3AString%29-class-method" class="signature"><strong>.new</strong>(url : String, html_url : String, labels_url : String, id : Int64, number : Int32, state : String, title : String, description : ::Union(String, Nil), creator : User, open_issues : Int32, closed_issues : Int32, created_at : String, updated_at : String, closed_at : ::Union(String, Nil), due_on : ::Union(String, Nil), node_id : String)</a>
         
       </li>
     
@@ -1855,12 +1860,12 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#closed_at%3AString-instance-method" class="signature"><strong>#closed_at</strong> : String</a>
+        <a href="#closed_at%3A%3A%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#closed_at</strong> : ::Union(String, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#closed_at%3D%28_closed_at%3AString%29-instance-method" class="signature"><strong>#closed_at=</strong>(_closed_at : String)</a>
+        <a href="#closed_at%3D%28_closed_at%3A%3A%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#closed_at=</strong>(_closed_at : ::Union(String, Nil))</a>
         
       </li>
     
@@ -1895,22 +1900,22 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#description%3AString-instance-method" class="signature"><strong>#description</strong> : String</a>
+        <a href="#description%3A%3A%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#description</strong> : ::Union(String, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#description%3D%28_description%3AString%29-instance-method" class="signature"><strong>#description=</strong>(_description : String)</a>
+        <a href="#description%3D%28_description%3A%3A%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#description=</strong>(_description : ::Union(String, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#due_on%3AString-instance-method" class="signature"><strong>#due_on</strong> : String</a>
+        <a href="#due_on%3A%3A%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#due_on</strong> : ::Union(String, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#due_on%3D%28_due_on%3AString%29-instance-method" class="signature"><strong>#due_on=</strong>(_due_on : String)</a>
+        <a href="#due_on%3D%28_due_on%3A%3A%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#due_on=</strong>(_due_on : ::Union(String, Nil))</a>
         
       </li>
     
@@ -2062,12 +2067,12 @@
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(url:String,html_url:String,labels_url:String,id:Int64,number:Int32,state:String,title:String,description:String,creator:User,open_issues:Int32,closed_issues:Int32,created_at:String,updated_at:String,closed_at:String,due_on:String,node_id:String)-class-method">
+    <div class="entry-detail" id="new(url:String,html_url:String,labels_url:String,id:Int64,number:Int32,state:String,title:String,description:::Union(String,Nil),creator:User,open_issues:Int32,closed_issues:Int32,created_at:String,updated_at:String,closed_at:::Union(String,Nil),due_on:::Union(String,Nil),node_id:String)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(url : String, html_url : String, labels_url : String, id : Int64, number : Int32, state : String, title : String, description : String, creator : <a href="../../Octokit/Models/User.html">User</a>, open_issues : Int32, closed_issues : Int32, created_at : String, updated_at : String, closed_at : String, due_on : String, node_id : String)
+        def self.<strong>new</strong>(url : String, html_url : String, labels_url : String, id : Int64, number : Int32, state : String, title : String, description : ::Union(String, Nil), creator : <a href="../../Octokit/Models/User.html">User</a>, open_issues : Int32, closed_issues : Int32, created_at : String, updated_at : String, closed_at : ::Union(String, Nil), due_on : ::Union(String, Nil), node_id : String)
 
-        <a class="method-permalink" href="#new%28url%3AString%2Chtml_url%3AString%2Clabels_url%3AString%2Cid%3AInt64%2Cnumber%3AInt32%2Cstate%3AString%2Ctitle%3AString%2Cdescription%3AString%2Ccreator%3AUser%2Copen_issues%3AInt32%2Cclosed_issues%3AInt32%2Ccreated_at%3AString%2Cupdated_at%3AString%2Cclosed_at%3AString%2Cdue_on%3AString%2Cnode_id%3AString%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28url%3AString%2Chtml_url%3AString%2Clabels_url%3AString%2Cid%3AInt64%2Cnumber%3AInt32%2Cstate%3AString%2Ctitle%3AString%2Cdescription%3A%3A%3AUnion%28String%2CNil%29%2Ccreator%3AUser%2Copen_issues%3AInt32%2Cclosed_issues%3AInt32%2Ccreated_at%3AString%2Cupdated_at%3AString%2Cclosed_at%3A%3A%3AUnion%28String%2CNil%29%2Cdue_on%3A%3A%3AUnion%28String%2CNil%29%2Cnode_id%3AString%29-class-method">#</a>
       </div>
       
       <br/>
@@ -2097,12 +2102,12 @@
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="closed_at:String-instance-method">
+    <div class="entry-detail" id="closed_at:::Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>closed_at</strong> : String
+        def <strong>closed_at</strong> : ::Union(String, Nil)
 
-        <a class="method-permalink" href="#closed_at%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#closed_at%3A%3A%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2111,12 +2116,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="closed_at=(_closed_at:String)-instance-method">
+    <div class="entry-detail" id="closed_at=(_closed_at:::Union(String,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>closed_at=</strong>(_closed_at : String)
+        def <strong>closed_at=</strong>(_closed_at : ::Union(String, Nil))
 
-        <a class="method-permalink" href="#closed_at%3D%28_closed_at%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#closed_at%3D%28_closed_at%3A%3A%3AUnion%28String%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2209,12 +2214,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="description:String-instance-method">
+    <div class="entry-detail" id="description:::Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>description</strong> : String
+        def <strong>description</strong> : ::Union(String, Nil)
 
-        <a class="method-permalink" href="#description%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#description%3A%3A%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2223,12 +2228,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="description=(_description:String)-instance-method">
+    <div class="entry-detail" id="description=(_description:::Union(String,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>description=</strong>(_description : String)
+        def <strong>description=</strong>(_description : ::Union(String, Nil))
 
-        <a class="method-permalink" href="#description%3D%28_description%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#description%3D%28_description%3A%3A%3AUnion%28String%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2237,12 +2242,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="due_on:String-instance-method">
+    <div class="entry-detail" id="due_on:::Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>due_on</strong> : String
+        def <strong>due_on</strong> : ::Union(String, Nil)
 
-        <a class="method-permalink" href="#due_on%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#due_on%3A%3A%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2251,12 +2256,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="due_on=(_due_on:String)-instance-method">
+    <div class="entry-detail" id="due_on=(_due_on:::Union(String,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>due_on=</strong>(_due_on : String)
+        def <strong>due_on=</strong>(_due_on : ::Union(String, Nil))
 
-        <a class="method-permalink" href="#due_on%3D%28_due_on%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#due_on%3D%28_due_on%3A%3A%3AUnion%28String%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>

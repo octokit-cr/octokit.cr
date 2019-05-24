@@ -56,6 +56,11 @@
       
         <ul>
   
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Issues" data-name="octokit::client::issues">
+      <a href="../../Octokit/Client/Issues.html">Issues</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/RateLimit" data-name="octokit::client::ratelimit">
       <a href="../../Octokit/Client/RateLimit.html">RateLimit</a>
       
@@ -1838,7 +1843,7 @@ pp pages
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/connection.cr#L152" target="_blank">
+      <a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/connection.cr#L152" target="_blank">
         octokit/connection.cr
       </a>
     
@@ -1869,9 +1874,30 @@ pp pages
   <ul class="list-summary">
     
       <li class="entry-summary">
+        <a href="#%5B%5D%28index%29-instance-method" class="signature"><strong>#[]</strong>(index)</a>
+        
+          <div class="summary"><p>Get the record at a specific index.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#%5B%5D%3F%28index%29-instance-method" class="signature"><strong>#[]?</strong>(index)</a>
+        
+          <div class="summary"><p>Get the record at a specific index, returning <code>nil</code> if the index contains no record.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#current_page%3AInt32-instance-method" class="signature"><strong>#current_page</strong> : Int32</a>
         
           <div class="summary"><p>Get the current page.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#empty%3F-instance-method" class="signature"><strong>#empty?</strong></a>
+        
+          <div class="summary"><p>Checks if the paginator is empty.</p></div>
         
       </li>
     
@@ -1991,7 +2017,7 @@ pp pages
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/connection.cr#L173" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/connection.cr#L173" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2002,6 +2028,43 @@ pp pages
 
 
   <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="[](index)-instance-method">
+      <div class="signature">
+        
+        def <strong>[]</strong>(index)
+
+        <a class="method-permalink" href="#%5B%5D%28index%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Get the record at a specific index.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/connection.cr#L192" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="[]?(index)-instance-method">
+      <div class="signature">
+        
+        def <strong>[]?</strong>(index)
+
+        <a class="method-permalink" href="#%5B%5D%3F%28index%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Get the record at a specific index, returning <code>nil</code> if
+the index contains no record.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/connection.cr#L198" target="_blank">View source</a>]
+        
+      </div>
+    </div>
   
     <div class="entry-detail" id="current_page:Int32-instance-method">
       <div class="signature">
@@ -2016,7 +2079,25 @@ pp pages
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/connection.cr#L162" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/connection.cr#L162" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="empty?-instance-method">
+      <div class="signature">
+        
+        def <strong>empty?</strong>
+
+        <a class="method-permalink" href="#empty%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Checks if the paginator is empty.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/connection.cr#L321" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2041,7 +2122,7 @@ is set to true.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/connection.cr#L200" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/connection.cr#L211" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2064,7 +2145,7 @@ pages.fetch_next <span class="c"># =&gt; Array(Repository)</span></code></pre></
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/connection.cr#L241" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/connection.cr#L252" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2087,7 +2168,7 @@ pages.fetch_page(<span class="n">4</span>) <span class="c"># =&gt; Array(Reposit
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/connection.cr#L215" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/connection.cr#L228" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2114,7 +2195,7 @@ records backwards for some reason. Included just in case.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/connection.cr#L271" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/connection.cr#L288" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2138,7 +2219,7 @@ pages.last? <span class="c"># =&gt; Bool</span></code></pre></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/connection.cr#L297" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/connection.cr#L316" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2162,7 +2243,7 @@ pages.next? <span class="c"># =&gt; Bool</span></code></pre></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/connection.cr#L255" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/connection.cr#L269" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2186,7 +2267,7 @@ pages.previous? <span class="c"># =&gt; Bool</span></code></pre></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/connection.cr#L285" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/connection.cr#L304" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2205,7 +2286,7 @@ a <code>fetch_*</code> method is called.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/connection.cr#L159" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/connection.cr#L159" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2225,7 +2306,7 @@ a <code>fetch_*</code> method is called.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/connection.cr#L167" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/connection.cr#L167" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2245,7 +2326,7 @@ a <code>fetch_*</code> method is called.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/connection.cr#L172" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/connection.cr#L172" target="_blank">View source</a>]
         
       </div>
     </div>

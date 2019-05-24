@@ -56,6 +56,11 @@
       
         <ul>
   
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Issues" data-name="octokit::client::issues">
+      <a href="../Octokit/Client/Issues.html">Issues</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/RateLimit" data-name="octokit::client::ratelimit">
       <a href="../Octokit/Client/RateLimit.html">RateLimit</a>
       
@@ -1849,6 +1854,8 @@ environment variables.</p>
   
     <li class="other-type"><a href="../Octokit/Authentication.html">Octokit::Authentication</a></li>
   
+    <li class="other-type"><a href="../Octokit/Client/Issues.html">Octokit::Client::Issues</a></li>
+  
     <li class="other-type"><a href="../Octokit/Client/RateLimit.html">Octokit::Client::RateLimit</a></li>
   
     <li class="other-type"><a href="../Octokit/Client/Repositories.html">Octokit::Client::Repositories</a></li>
@@ -1877,28 +1884,35 @@ environment variables.</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/client/rate_limit.cr#L2" target="_blank">
+      <a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/client/issues.cr#L2" target="_blank">
+        octokit/client/issues.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/client/rate_limit.cr#L2" target="_blank">
         octokit/client/rate_limit.cr
       </a>
     
     <br/>
   
     
-      <a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/client/repositories.cr#L2" target="_blank">
+      <a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/client/repositories.cr#L2" target="_blank">
         octokit/client/repositories.cr
       </a>
     
     <br/>
   
     
-      <a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/client/users.cr#L2" target="_blank">
+      <a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/client/users.cr#L2" target="_blank">
         octokit/client/users.cr
       </a>
     
     <br/>
   
     
-      <a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/client.cr#L103" target="_blank">
+      <a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/client.cr#L103" target="_blank">
         octokit/client.cr
       </a>
     
@@ -1925,14 +1939,14 @@ environment variables.</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28login%3AString%2Cpassword%3AString%3F%3Dnil%2Caccess_token%3AString%3F%3Dnil%2Cbearer_token%3AString%3F%3Dnil%2Cclient_id%3AString%3F%3Dnil%2Cclient_secret%3AString%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(login : String, password : String? = <span class="n">nil</span>, access_token : String? = <span class="n">nil</span>, bearer_token : String? = <span class="n">nil</span>, client_id : String? = <span class="n">nil</span>, client_secret : String? = <span class="n">nil</span>)</a>
+        <a href="#new%28login%3AString%3F%3Dnil%2Cpassword%3AString%3F%3Dnil%2Caccess_token%3AString%3F%3Dnil%2Cbearer_token%3AString%3F%3Dnil%2Cclient_id%3AString%3F%3Dnil%2Cclient_secret%3AString%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(login : String? = <span class="n">nil</span>, password : String? = <span class="n">nil</span>, access_token : String? = <span class="n">nil</span>, bearer_token : String? = <span class="n">nil</span>, client_id : String? = <span class="n">nil</span>, client_secret : String? = <span class="n">nil</span>)</a>
         
           <div class="summary"><p>Create a new Client instance.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28login%3AString%2Cpassword%3AString%2Caccess_token%3AString%3F%3Dnil%2Cbearer_token%3AString%3F%3Dnil%2Cclient_id%3AString%3F%3Dnil%2Cclient_secret%3AString%3F%3Dnil%2C%26block%29-class-method" class="signature"><strong>.new</strong>(login : String, password : String, access_token : String? = <span class="n">nil</span>, bearer_token : String? = <span class="n">nil</span>, client_id : String? = <span class="n">nil</span>, client_secret : String? = <span class="n">nil</span>, &block)</a>
+        <a href="#new%28login%3AString%3F%3Dnil%2Cpassword%3AString%3F%3Dnil%2Caccess_token%3AString%3F%3Dnil%2Cbearer_token%3AString%3F%3Dnil%2Cclient_id%3AString%3F%3Dnil%2Cclient_secret%3AString%3F%3Dnil%2C%26block%29-class-method" class="signature"><strong>.new</strong>(login : String? = <span class="n">nil</span>, password : String? = <span class="n">nil</span>, access_token : String? = <span class="n">nil</span>, bearer_token : String? = <span class="n">nil</span>, client_id : String? = <span class="n">nil</span>, client_secret : String? = <span class="n">nil</span>, &block)</a>
         
           <div class="summary"><p>Create a new Client instance yielding a block.</p></div>
         
@@ -2622,6 +2636,120 @@ environment variables.</p>
   
     
 
+  <h3>Instance methods inherited from module <code><a href="../Octokit/Client/Issues.html">Octokit::Client::Issues</a></code></h3>
+  
+  
+    <a href="../Octokit/Client/Issues.html#add_assignees%28repo%2Cnumber%3AInt32%2Cassignees%3AArray%28String%7CUser%29%29-instance-method" class="tooltip">
+      <span>add_assignees(repo, number : Int32, assignees : Array(String | User))</span>
+    add_assignees</a>, 
+    
+  
+    <a href="../Octokit/Client/Issues.html#add_comment%28repo%2Cnumber%3AInt32%2Ccomment%3AString%29-instance-method" class="tooltip">
+      <span>add_comment(repo, number : Int32, comment : String)</span>
+    add_comment</a>, 
+    
+  
+    <a href="../Octokit/Client/Issues.html#close_issue%28repo%2Cnumber%3AInt32%2C%2A%2Aoptions%29-instance-method" class="tooltip">
+      <span>close_issue(repo, number : Int32, **options)</span>
+    close_issue</a>, 
+    
+  
+    <a href="../Octokit/Client/Issues.html#create_issue%28repo%2Ctitle%2Cbody%2C%2A%2Aoptions%29-instance-method" class="tooltip">
+      <span>create_issue(repo, title, body, **options)</span>
+    create_issue</a>, 
+    
+  
+    <a href="../Octokit/Client/Issues.html#delete_comment%28repo%2Cnumber%3AInt32%29-instance-method" class="tooltip">
+      <span>delete_comment(repo, number : Int32)</span>
+    delete_comment</a>, 
+    
+  
+    <a href="../Octokit/Client/Issues.html#issue%28repo%2Cnumber%3AInt32%29-instance-method" class="tooltip">
+      <span>issue(repo, number : Int32)</span>
+    issue</a>, 
+    
+  
+    <a href="../Octokit/Client/Issues.html#issue_comment%28repo%2Cnumber%3AInt32%29-instance-method" class="tooltip">
+      <span>issue_comment(repo, number : Int32)</span>
+    issue_comment</a>, 
+    
+  
+    <a href="../Octokit/Client/Issues.html#issue_comments%28repo%2Cnumber%3AInt32%29-instance-method" class="tooltip">
+      <span>issue_comments(repo, number : Int32)</span>
+    issue_comments</a>, 
+    
+  
+    <a href="../Octokit/Client/Issues.html#issue_timeline%28repo%2Cnumber%3AInt32%29-instance-method" class="tooltip">
+      <span>issue_timeline(repo, number : Int32)</span>
+    issue_timeline</a>, 
+    
+  
+    <a href="../Octokit/Client/Issues.html#issues_comments%28repo%2Cnumber%3AInt32%2C%2A%2Aoptions%29-instance-method" class="tooltip">
+      <span>issues_comments(repo, number : Int32, **options)</span>
+    issues_comments</a>, 
+    
+  
+    <a href="../Octokit/Client/Issues.html#list_assignees%28repo%29-instance-method" class="tooltip">
+      <span>list_assignees(repo)</span>
+    list_assignees</a>, 
+    
+  
+    <a href="../Octokit/Client/Issues.html#list_issues%28repo%3Dnil%2C%2A%2Aoptions%29-instance-method" class="tooltip">
+      <span>list_issues(repo = <span class="n">nil</span>, **options)</span>
+    list_issues</a>, 
+    
+  
+    <a href="../Octokit/Client/Issues.html#lock_issue%28repo%2Cnumber%3AInt32%2C%2A%2Aoptions%29-instance-method" class="tooltip">
+      <span>lock_issue(repo, number : Int32, **options)</span>
+    lock_issue</a>, 
+    
+  
+    <a href="../Octokit/Client/Issues.html#org_issues%28org%2C%2A%2Aoptions%29-instance-method" class="tooltip">
+      <span>org_issues(org, **options)</span>
+    org_issues</a>, 
+    
+  
+    <a href="../Octokit/Client/Issues.html#remove_assignees%28repo%2Cnumber%3AInt32%2Cassignees%3AArray%28String%7CUser%29%29-instance-method" class="tooltip">
+      <span>remove_assignees(repo, number : Int32, assignees : Array(String | User))</span>
+    remove_assignees</a>, 
+    
+  
+    <a href="../Octokit/Client/Issues.html#reopen_issue%28repo%2Cnumber%3AInt32%2C%2A%2Aoptions%29-instance-method" class="tooltip">
+      <span>reopen_issue(repo, number : Int32, **options)</span>
+    reopen_issue</a>, 
+    
+  
+    <a href="../Octokit/Client/Issues.html#unlock_issue%28repo%2Cnumber%3AInt32%2C%2A%2Aoptions%29-instance-method" class="tooltip">
+      <span>unlock_issue(repo, number : Int32, **options)</span>
+    unlock_issue</a>, 
+    
+  
+    <a href="../Octokit/Client/Issues.html#update_comment%28repo%2Cnumber%3AInt32%2Ccomment%3AString%29-instance-method" class="tooltip">
+      <span>update_comment(repo, number : Int32, comment : String)</span>
+    update_comment</a>, 
+    
+  
+    <a href="../Octokit/Client/Issues.html#update_issue%28repo%2Cnumber%3AInt32%2C%2A%2Aoptions%29-instance-method" class="tooltip">
+      <span>update_issue(repo, number : Int32, **options)</span>
+    update_issue</a>, 
+    
+  
+    <a href="../Octokit/Client/Issues.html#user_issues%28%2A%2Aoptions%29-instance-method" class="tooltip">
+      <span>user_issues(**options)</span>
+    user_issues</a>
+    
+  
+
+
+    
+
+
+    
+
+
+  
+    
+
   <h3>Instance methods inherited from module <code><a href="../Octokit/Warnable.html">Octokit::Warnable</a></code></h3>
   
   
@@ -2869,12 +2997,12 @@ environment variables.</p>
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(login:String,password:String?=nil,access_token:String?=nil,bearer_token:String?=nil,client_id:String?=nil,client_secret:String?=nil)-class-method">
+    <div class="entry-detail" id="new(login:String?=nil,password:String?=nil,access_token:String?=nil,bearer_token:String?=nil,client_id:String?=nil,client_secret:String?=nil)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(login : String, password : String? = <span class="n">nil</span>, access_token : String? = <span class="n">nil</span>, bearer_token : String? = <span class="n">nil</span>, client_id : String? = <span class="n">nil</span>, client_secret : String? = <span class="n">nil</span>)
+        def self.<strong>new</strong>(login : String? = <span class="n">nil</span>, password : String? = <span class="n">nil</span>, access_token : String? = <span class="n">nil</span>, bearer_token : String? = <span class="n">nil</span>, client_id : String? = <span class="n">nil</span>, client_secret : String? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#new%28login%3AString%2Cpassword%3AString%3F%3Dnil%2Caccess_token%3AString%3F%3Dnil%2Cbearer_token%3AString%3F%3Dnil%2Cclient_id%3AString%3F%3Dnil%2Cclient_secret%3AString%3F%3Dnil%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28login%3AString%3F%3Dnil%2Cpassword%3AString%3F%3Dnil%2Caccess_token%3AString%3F%3Dnil%2Cbearer_token%3AString%3F%3Dnil%2Cclient_id%3AString%3F%3Dnil%2Cclient_secret%3AString%3F%3Dnil%29-class-method">#</a>
       </div>
       
         <div class="doc"><p>Create a new Client instance.</p>
@@ -2887,17 +3015,17 @@ pp cli.user <span class="c"># Show information about the logged in user</span></
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/client.cr#L122" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/client.cr#L123" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="new(login:String,password:String,access_token:String?=nil,bearer_token:String?=nil,client_id:String?=nil,client_secret:String?=nil,&amp;block)-class-method">
+    <div class="entry-detail" id="new(login:String?=nil,password:String?=nil,access_token:String?=nil,bearer_token:String?=nil,client_id:String?=nil,client_secret:String?=nil,&amp;block)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(login : String, password : String, access_token : String? = <span class="n">nil</span>, bearer_token : String? = <span class="n">nil</span>, client_id : String? = <span class="n">nil</span>, client_secret : String? = <span class="n">nil</span>, &block)
+        def self.<strong>new</strong>(login : String? = <span class="n">nil</span>, password : String? = <span class="n">nil</span>, access_token : String? = <span class="n">nil</span>, bearer_token : String? = <span class="n">nil</span>, client_id : String? = <span class="n">nil</span>, client_secret : String? = <span class="n">nil</span>, &block)
 
-        <a class="method-permalink" href="#new%28login%3AString%2Cpassword%3AString%2Caccess_token%3AString%3F%3Dnil%2Cbearer_token%3AString%3F%3Dnil%2Cclient_id%3AString%3F%3Dnil%2Cclient_secret%3AString%3F%3Dnil%2C%26block%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28login%3AString%3F%3Dnil%2Cpassword%3AString%3F%3Dnil%2Caccess_token%3AString%3F%3Dnil%2Cbearer_token%3AString%3F%3Dnil%2Cclient_id%3AString%3F%3Dnil%2Cclient_secret%3AString%3F%3Dnil%2C%26block%29-class-method">#</a>
       </div>
       
         <div class="doc"><p>Create a new Client instance yielding a block.</p>
@@ -2911,7 +3039,7 @@ pp cli.user <span class="c"># Show information about the logged in user</span></
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/client.cr#L140" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/client.cr#L141" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3461,7 +3589,7 @@ support proxy's. Therefore this option does nothing for now.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/client.cr#L194" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/client.cr#L195" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3477,7 +3605,7 @@ support proxy's. Therefore this option does nothing for now.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/client.cr#L168" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/client.cr#L169" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3495,7 +3623,7 @@ support proxy's. Therefore this option does nothing for now.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/client.cr#L200" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/client.cr#L201" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3513,7 +3641,7 @@ support proxy's. Therefore this option does nothing for now.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/client.cr#L206" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/client.cr#L207" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3531,7 +3659,7 @@ support proxy's. Therefore this option does nothing for now.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/client.cr#L212" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/client.cr#L213" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3547,7 +3675,7 @@ support proxy's. Therefore this option does nothing for now.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/client.cr#L217" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/client.cr#L218" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3565,7 +3693,7 @@ support proxy's. Therefore this option does nothing for now.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/client.cr#L153" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/client.cr#L154" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3583,7 +3711,7 @@ support proxy's. Therefore this option does nothing for now.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/client.cr#L182" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/client.cr#L183" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3601,7 +3729,7 @@ support proxy's. Therefore this option does nothing for now.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/client.cr#L188" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/client.cr#L189" target="_blank">View source</a>]
         
       </div>
     </div>

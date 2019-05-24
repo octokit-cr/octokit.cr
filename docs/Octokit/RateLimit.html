@@ -56,6 +56,11 @@
       
         <ul>
   
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Issues" data-name="octokit::client::issues">
+      <a href="../Octokit/Client/Issues.html">Issues</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/RateLimit" data-name="octokit::client::ratelimit">
       <a href="../Octokit/Client/RateLimit.html">RateLimit</a>
       
@@ -1829,7 +1834,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/rate_limit.cr#L6" target="_blank">
+      <a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/rate_limit.cr#L6" target="_blank">
         octokit/rate_limit.cr
       </a>
     
@@ -1844,7 +1849,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28limit%3AInt32%2Cremaining%3AInt32%2Cresets_at%3ATime%2Cresets_in%3AInt32%29-class-method" class="signature"><strong>.new</strong>(limit : Int32, remaining : Int32, resets_at : Time, resets_in : Int32)</a>
+        <a href="#new%28limit%3AInt32%3F%3Dnil%2Cremaining%3AInt32%3F%3Dnil%2Cresets_at%3ATime%3F%3Dnil%2Cresets_in%3AInt32%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(limit : Int32? = <span class="n">nil</span>, remaining : Int32? = <span class="n">nil</span>, resets_at : Time? = <span class="n">nil</span>, resets_in : Int32? = <span class="n">nil</span>)</a>
         
       </li>
     
@@ -1900,12 +1905,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#resets_in%3AInt32%3F-instance-method" class="signature"><strong>#resets_in</strong> : Int32?</a>
+        <a href="#resets_in%3AInt64%3F-instance-method" class="signature"><strong>#resets_in</strong> : Int64?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#resets_in%3D%28resets_in%3AInt32%3F%29-instance-method" class="signature"><strong>#resets_in=</strong>(resets_in : Int32?)</a>
+        <a href="#resets_in%3D%28resets_in%3AInt64%3F%29-instance-method" class="signature"><strong>#resets_in=</strong>(resets_in : Int64?)</a>
         
       </li>
     
@@ -1952,18 +1957,18 @@
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(limit:Int32,remaining:Int32,resets_at:Time,resets_in:Int32)-class-method">
+    <div class="entry-detail" id="new(limit:Int32?=nil,remaining:Int32?=nil,resets_at:Time?=nil,resets_in:Int32?=nil)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(limit : Int32, remaining : Int32, resets_at : Time, resets_in : Int32)
+        def self.<strong>new</strong>(limit : Int32? = <span class="n">nil</span>, remaining : Int32? = <span class="n">nil</span>, resets_at : Time? = <span class="n">nil</span>, resets_in : Int32? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#new%28limit%3AInt32%2Cremaining%3AInt32%2Cresets_at%3ATime%2Cresets_in%3AInt32%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28limit%3AInt32%3F%3Dnil%2Cremaining%3AInt32%3F%3Dnil%2Cresets_at%3ATime%3F%3Dnil%2Cresets_in%3AInt32%3F%3Dnil%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/rate_limit.cr#L15" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/rate_limit.cr#L15" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1986,7 +1991,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/rate_limit.cr#L19" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/rate_limit.cr#L24" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2007,7 +2012,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/rate_limit.cr#L9" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/rate_limit.cr#L9" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2023,7 +2028,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/rate_limit.cr#L13" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/rate_limit.cr#L13" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2039,7 +2044,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/rate_limit.cr#L11" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/rate_limit.cr#L11" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2055,7 +2060,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/rate_limit.cr#L15" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/rate_limit.cr#L15" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2071,7 +2076,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/rate_limit.cr#L13" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/rate_limit.cr#L13" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2087,39 +2092,39 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/rate_limit.cr#L17" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/rate_limit.cr#L17" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="resets_in:Int32?-instance-method">
+    <div class="entry-detail" id="resets_in:Int64?-instance-method">
       <div class="signature">
         
-        def <strong>resets_in</strong> : Int32?
+        def <strong>resets_in</strong> : Int64?
 
-        <a class="method-permalink" href="#resets_in%3AInt32%3F-instance-method">#</a>
+        <a class="method-permalink" href="#resets_in%3AInt64%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/rate_limit.cr#L15" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/rate_limit.cr#L15" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="resets_in=(resets_in:Int32?)-instance-method">
+    <div class="entry-detail" id="resets_in=(resets_in:Int64?)-instance-method">
       <div class="signature">
         
-        def <strong>resets_in=</strong>(resets_in : Int32?)
+        def <strong>resets_in=</strong>(resets_in : Int64?)
 
-        <a class="method-permalink" href="#resets_in%3D%28resets_in%3AInt32%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#resets_in%3D%28resets_in%3AInt64%3F%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/8d090b2cfb0d24fa0e15f5f38dc992bd4290276f/src/octokit/rate_limit.cr#L19" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/a52123553143e27031d299e0a74a654bc47ead50/src/octokit/rate_limit.cr#L19" target="_blank">View source</a>]
         
       </div>
     </div>
