@@ -16,5 +16,5 @@ development_dependencies:
   webmock:
     github: manastech/webmock.cr
     branch: master
-  # vcr:
-  #   github: something/vcr
+  hi8:
+    github: vonkingsley/hi8.cr
