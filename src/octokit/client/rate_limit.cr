@@ -11,9 +11,9 @@ module Octokit
       # **See Also:**
       # - [https://developer.github.com/v3/rate_limit/#rate-limit](https://developer.github.com/v3/rate_limit/#rate-limit)
       def rate_limit
-        return rate_limit! if last_response.nil?
+        return rate_limit! if @last_response.nil?
 
-        Octokit::RateLimit.from_response(last_response)
+        Octokit::RateLimit.from_response(@last_response)
       end
 
       alias_method :rate_limit, :ratelimit
@@ -24,7 +24,7 @@ module Octokit
       # - [https://developer.github.com/v3/rate_limit/#rate-limit](https://developer.github.com/v3/rate_limit/#rate-limit)
       def rate_limit!
         get "rate_limit"
-        Octokit::RateLimit.from_response(last_response)
+        Octokit::RateLimit.from_response(@last_response)
       end
 
       alias_method :rate_limit!, :ratelimit!

@@ -440,7 +440,7 @@ module Octokit
       # @client.contribs("watzon/cadmium")
       # ```
       def contributors(repo, anon = false)
-        paginate User, "#{Repository.path(repo)}/contributors", {json: {anon: anon}}
+        paginate User, "#{Repository.path(repo)}/contributors", options: {json: {anon: anon}}
       end
 
       alias_method :contributors, :contribs
@@ -476,7 +476,7 @@ module Octokit
       # @client.forks("watzon/cadmium", sort: "oldest")
       # ```
       def forks(repo, sort = "newest")
-        paginate Repository, "#{Repository.path(repo)}/forks", {json: {sort: sort}}
+        paginate Repository, "#{Repository.path(repo)}/forks", options: {json: {sort: sort}}
       end
 
       alias_method :forks, :network
@@ -526,7 +526,7 @@ module Octokit
       # @client.branches("watzon/cadmium")
       # ```
       def branches(repo, get_protected = false)
-        paginate Models::Branch, "#{Repository.path(repo)}/branches", {json: {protected: get_protected}}
+        paginate Models::Branch, "#{Repository.path(repo)}/branches", options: {json: {protected: get_protected}}
       end
 
       # Get a single branch from a repository.

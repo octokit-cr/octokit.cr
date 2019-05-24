@@ -188,6 +188,17 @@ module Octokit
         fetch_all if @auto_paginate
       end
 
+      # Get the record at a specific index.
+      def [](index)
+        @records[index]
+      end
+
+      # Get the record at a specific index, returning `nil` if
+      # the index contains no record.
+      def []?(index)
+        @records[index]?
+      end
+
       # Fetch all pages.
       #
       # **Example:**
@@ -199,11 +210,13 @@ module Octokit
       # is set to true.
       def fetch_all : Array(T)
         # TODO: Add rate limiting support
-        while next? && rate_limit.remaining > 0
+        while next? # && !@client.rate_limit.remaining.nil? && @client.rate_limit.remaining.not_nil! > 0
           fetch_next
         end
         records
       end
+
+      alias_method :fetch_all, :all
 
       # Fetch a specific page.
       #
@@ -213,8 +226,6 @@ module Octokit
       # pages.fetch_page(4) # => Array(Repository)
       # ```
       def fetch_page(page : Int32) : Array(T)?
-        return unless next?
-
         @current_page = page
         @options.params = @options.params.merge({"page" => page.as(Halite::Options::Type)})
 
@@ -240,9 +251,12 @@ module Octokit
       # ```
       def fetch_next : Array(T)?
         return unless next?
+        page = fetch_page(@current_page)
         @current_page += 1
-        fetch_page(@current_page)
+        page
       end
+
+      alias_method :fetch_next, :next
 
       # Check if there is a next page.
       #
@@ -254,7 +268,10 @@ module Octokit
       # ```
       def next? : Bool
         return true if @last_response.nil?
-        !!@last_response.not_nil!.links.not_nil!["next"]?
+        if links = @last_response.try { |r| r.links }
+          return !!links["next"]?
+        end
+        false
       end
 
       # Fetch the previous page.
@@ -273,6 +290,8 @@ module Octokit
         @current_page -= 1
         fetch_page(@current_page)
       end
+
+      alias_method :fetch_previous, :previous
 
       # Check if there is a previous page.
       #
@@ -298,17 +317,22 @@ module Octokit
         @current_page == @total_pages
       end
 
+      # Checks if the paginator is empty.
+      def empty?
+        @records.empty?
+      end
+
       # Utility method to set the `@total_pages` variable.
       private def set_total_pages!
-        return if @last_response.nil?
-        last = @last_response.not_nil!.links.not_nil!["last"]?
-        if last
-          parsed_uri = URI.parse(last.target)
-          return if parsed_uri.query.nil?
-          query = parsed_uri.query.not_nil!.split('?').last.split('&').map(&.split('=')).to_h
-          return if !query["last"]?
-          @total_pages = query["last"].not_nil!.to_i
-        end
+        # return if @last_response.nil?
+        # last = @last_response.not_nil!.links.not_nil!["last"]?
+        # if last
+        #   parsed_uri = URI.parse(last.target)
+        #   return if parsed_uri.query.nil?
+        #   query = parsed_uri.query.not_nil!.split('?').last.split('&').map(&.split('=')).to_h
+        #   return if !query["last"]?
+        #   @total_pages = query["last"].not_nil!.to_i
+        # end
       end
     end
   end

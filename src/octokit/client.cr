@@ -106,6 +106,7 @@ module Octokit
     include Octokit::Connection
     include Octokit::Preview
     include Octokit::Warnable
+    include Octokit::Client::Issues
     include Octokit::Client::Users
     include Octokit::Client::RateLimit
     include Octokit::Client::Repositories

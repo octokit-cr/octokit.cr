@@ -10,19 +10,31 @@ module Octokit
 
     property resets_at : Time? = nil
 
-    property resets_in : Int32? = nil
+    property resets_in : Int64? = nil
 
-    def initialize(@limit : Int32, @remaining : Int32, @resets_at : Time, @resets_in : Int32)
+    def initialize(
+      @limit : Int32? = nil,
+      @remaining : Int32? = nil,
+      @resets_at : Time? = nil,
+      @resets_in : Int32? = nil
+    )
     end
 
     # Get rate limit info from HTTP response
     def self.from_response(response)
       info = new
       if response && !response.headers.nil?
-        info.limit = (response.headers["X-RateLimit-Limit"] || 1).to_i
-        info.remaining = (response.headers["X-RateLimit-Remaining"] || 1).to_i
-        info.resets_at = Time.unix(response.headers["X-RateLimit-Reset"]? || Time.unix)
-        info.resets_in = [(info.resets_at - Time.now).to_i, 0].max
+        limit = (response.headers["X-RateLimit-Limit"] || 1).to_i
+        remaining = (response.headers["X-RateLimit-Remaining"] || 1).to_i
+        resets_at = Time.unix(
+          response.headers["X-RateLimit-Reset"]? ? response.headers["X-RateLimit-Reset"].to_i64 : Time.now.to_unix
+        )
+        resets_in = [(resets_at - Time.now).to_i, 0_i64].max
+
+        info.limit = limit
+        info.remaining = remaining
+        info.resets_at = resets_at
+        info.resets_in = resets_in
       end
 
       info

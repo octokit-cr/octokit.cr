@@ -19,9 +19,8 @@ module Octokit
   # @@enterprise_management_console_client : Octokit::EnterpriseManagementConsoleClient? = nil
 
   # API client based on configuration options in `Configurable`
-  def self.client
-    return @@client unless @@client.nil? # && @@client.same_options?(options)
-    @@client = Octokit::Client.new(options)
+  def self.client(**options)
+    @@client.nil? ? Octokit::Client.new(**options) : @@client.not_nil!
   end
 
   # EnterpriseAdminClient client based on configuration options in `Configurable`
