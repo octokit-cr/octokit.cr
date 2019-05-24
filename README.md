@@ -75,7 +75,7 @@ There are a lot of pieces of the GitHub API to cover. Here are the ones that nee
 - [ ] [RepositoryInvitations]()
 - [ ] [Reviews]()
 - [ ] [Say]()
-- [ ] [Search]()
+- [x] [Search](https://watzon.github.io/octokit.cr/Octokit/Client/Search.html)
 - [ ] [ServiceStatus]()
 - [ ] [SourceImport]()
 - [ ] [Stats]()

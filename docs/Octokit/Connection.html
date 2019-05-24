@@ -71,6 +71,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Search" data-name="octokit::client::search">
+      <a href="../Octokit/Client/Search.html">Search</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Users" data-name="octokit::client::users">
       <a href="../Octokit/Client/Users.html">Users</a>
       
@@ -491,13 +496,13 @@
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/CommitResult" data-name="octokit::models::commitresult">
-      <a href="../Octokit/Models/CommitResult.html">CommitResult</a>
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/CommitsComparison" data-name="octokit::models::commitscomparison">
+      <a href="../Octokit/Models/CommitsComparison.html">CommitsComparison</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/CommitsComparison" data-name="octokit::models::commitscomparison">
-      <a href="../Octokit/Models/CommitsComparison.html">CommitsComparison</a>
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/CommitsSearchResult" data-name="octokit::models::commitssearchresult">
+      <a href="../Octokit/Models/CommitsSearchResult.html">CommitsSearchResult</a>
       
     </li>
   
@@ -1838,7 +1843,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/watzon/octokit.cr/blob/9577e19ebb3818dede32247576ade05cf29ec87e/src/octokit/connection.cr#L5" target="_blank">
+      <a href="https://github.com/watzon/octokit.cr/blob/475dba78dd0026117d28ba55ad33bdb70da983c7/src/octokit/connection.cr#L5" target="_blank">
         octokit/connection.cr
       </a>
     
@@ -1908,14 +1913,14 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#paginate%28klass%3AT.class%2Curl%3AString%2C%2A%2Cstart_page%3D1%2Cper_page%3Dnil%2Cauto_paginate%3D%40%40auto_paginate%2Coptions%3Dnil%29%3AOctokit%3A%3AConnection%3A%3APaginator%28T%29forallT-instance-method" class="signature"><strong>#paginate</strong>(klass : <span class="t">T</span>.<span class="k">class</span>, url : String, *, start_page = <span class="n">1</span>, per_page = <span class="n">nil</span>, auto_paginate = @@auto_paginate, options = <span class="n">nil</span>) : Octokit::Connection::Paginator(T) forall T</a>
+        <a href="#paginate%28klass%3AT.class%2Curl%3AString%2C%2A%2Cstart_page%3Dnil%2Cper_page%3Dnil%2Cauto_paginate%3D%40%40auto_paginate%2Coptions%3Dnil%29%3AOctokit%3A%3AConnection%3A%3APaginator%28T%29forallT-instance-method" class="signature"><strong>#paginate</strong>(klass : <span class="t">T</span>.<span class="k">class</span>, url : String, *, start_page = <span class="n">nil</span>, per_page = <span class="n">nil</span>, auto_paginate = @@auto_paginate, options = <span class="n">nil</span>) : Octokit::Connection::Paginator(T) forall T</a>
         
           <div class="summary"><p>Make one or more HTTP GET requests, optionally fetching the next page of results from URL in Link response header based on value in <code>#auto_paginate</code>.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#paginate%28url%2Coptions%3AHalite%3A%3AOptions%3F%3Dnil%2C%26block%29-instance-method" class="signature"><strong>#paginate</strong>(url, options : Halite::Options? = <span class="n">nil</span>, &block)</a>
+        <a href="#paginate%28klass%3AT.class%2Curl%3AString%2C%2A%2Cstart_page%3Dnil%2Cper_page%3Dnil%2Cauto_paginate%3D%40%40auto_paginate%2Coptions%3Dnil%2C%26block%29-instance-method" class="signature"><strong>#paginate</strong>(klass : <span class="t">T</span>.<span class="k">class</span>, url : String, *, start_page = <span class="n">nil</span>, per_page = <span class="n">nil</span>, auto_paginate = @@auto_paginate, options = <span class="n">nil</span>, &block)</a>
         
           <div class="summary"><p>Make one or more HTTP GET requests, optionally fetching the next page of results from URL in Link response header based on value in <code>#auto_paginate</code>.</p></div>
         
@@ -2018,7 +2023,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/9577e19ebb3818dede32247576ade05cf29ec87e/src/octokit/connection.cr#L68" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/475dba78dd0026117d28ba55ad33bdb70da983c7/src/octokit/connection.cr#L83" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2036,7 +2041,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/9577e19ebb3818dede32247576ade05cf29ec87e/src/octokit/connection.cr#L38" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/475dba78dd0026117d28ba55ad33bdb70da983c7/src/octokit/connection.cr#L38" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2054,7 +2059,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/9577e19ebb3818dede32247576ade05cf29ec87e/src/octokit/connection.cr#L18" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/475dba78dd0026117d28ba55ad33bdb70da983c7/src/octokit/connection.cr#L18" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2072,7 +2077,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/9577e19ebb3818dede32247576ade05cf29ec87e/src/octokit/connection.cr#L43" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/475dba78dd0026117d28ba55ad33bdb70da983c7/src/octokit/connection.cr#L43" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2090,17 +2095,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/9577e19ebb3818dede32247576ade05cf29ec87e/src/octokit/connection.cr#L89" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/475dba78dd0026117d28ba55ad33bdb70da983c7/src/octokit/connection.cr#L104" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="paginate(klass:T.class,url:String,*,start_page=1,per_page=nil,auto_paginate=@@auto_paginate,options=nil):Octokit::Connection::Paginator(T)forallT-instance-method">
+    <div class="entry-detail" id="paginate(klass:T.class,url:String,*,start_page=nil,per_page=nil,auto_paginate=@@auto_paginate,options=nil):Octokit::Connection::Paginator(T)forallT-instance-method">
       <div class="signature">
         
-        def <strong>paginate</strong>(klass : <span class="t">T</span>.<span class="k">class</span>, url : String, *, start_page = <span class="n">1</span>, per_page = <span class="n">nil</span>, auto_paginate = @@auto_paginate, options = <span class="n">nil</span>) : <a href="../Octokit/Connection/Paginator.html">Octokit::Connection::Paginator</a>(T) forall T
+        def <strong>paginate</strong>(klass : <span class="t">T</span>.<span class="k">class</span>, url : String, *, start_page = <span class="n">nil</span>, per_page = <span class="n">nil</span>, auto_paginate = @@auto_paginate, options = <span class="n">nil</span>) : <a href="../Octokit/Connection/Paginator.html">Octokit::Connection::Paginator</a>(T) forall T
 
-        <a class="method-permalink" href="#paginate%28klass%3AT.class%2Curl%3AString%2C%2A%2Cstart_page%3D1%2Cper_page%3Dnil%2Cauto_paginate%3D%40%40auto_paginate%2Coptions%3Dnil%29%3AOctokit%3A%3AConnection%3A%3APaginator%28T%29forallT-instance-method">#</a>
+        <a class="method-permalink" href="#paginate%28klass%3AT.class%2Curl%3AString%2C%2A%2Cstart_page%3Dnil%2Cper_page%3Dnil%2Cauto_paginate%3D%40%40auto_paginate%2Coptions%3Dnil%29%3AOctokit%3A%3AConnection%3A%3APaginator%28T%29forallT-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Make one or more HTTP GET requests, optionally fetching
@@ -2110,17 +2115,17 @@ on value in <code>#auto_paginate</code>.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/9577e19ebb3818dede32247576ade05cf29ec87e/src/octokit/connection.cr#L50" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/475dba78dd0026117d28ba55ad33bdb70da983c7/src/octokit/connection.cr#L50" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="paginate(url,options:Halite::Options?=nil,&amp;block)-instance-method">
+    <div class="entry-detail" id="paginate(klass:T.class,url:String,*,start_page=nil,per_page=nil,auto_paginate=@@auto_paginate,options=nil,&amp;block)-instance-method">
       <div class="signature">
         
-        def <strong>paginate</strong>(url, options : Halite::Options? = <span class="n">nil</span>, &block)
+        def <strong>paginate</strong>(klass : <span class="t">T</span>.<span class="k">class</span>, url : String, *, start_page = <span class="n">nil</span>, per_page = <span class="n">nil</span>, auto_paginate = @@auto_paginate, options = <span class="n">nil</span>, &block)
 
-        <a class="method-permalink" href="#paginate%28url%2Coptions%3AHalite%3A%3AOptions%3F%3Dnil%2C%26block%29-instance-method">#</a>
+        <a class="method-permalink" href="#paginate%28klass%3AT.class%2Curl%3AString%2C%2A%2Cstart_page%3Dnil%2Cper_page%3Dnil%2Cauto_paginate%3D%40%40auto_paginate%2Coptions%3Dnil%2C%26block%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Make one or more HTTP GET requests, optionally fetching
@@ -2130,7 +2135,7 @@ on value in <code>#auto_paginate</code>.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/9577e19ebb3818dede32247576ade05cf29ec87e/src/octokit/connection.cr#L64" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/475dba78dd0026117d28ba55ad33bdb70da983c7/src/octokit/connection.cr#L64" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2148,7 +2153,7 @@ on value in <code>#auto_paginate</code>.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/9577e19ebb3818dede32247576ade05cf29ec87e/src/octokit/connection.cr#L33" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/475dba78dd0026117d28ba55ad33bdb70da983c7/src/octokit/connection.cr#L33" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2166,7 +2171,7 @@ on value in <code>#auto_paginate</code>.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/9577e19ebb3818dede32247576ade05cf29ec87e/src/octokit/connection.cr#L23" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/475dba78dd0026117d28ba55ad33bdb70da983c7/src/octokit/connection.cr#L23" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2184,7 +2189,7 @@ on value in <code>#auto_paginate</code>.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/9577e19ebb3818dede32247576ade05cf29ec87e/src/octokit/connection.cr#L28" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/475dba78dd0026117d28ba55ad33bdb70da983c7/src/octokit/connection.cr#L28" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2202,7 +2207,7 @@ on value in <code>#auto_paginate</code>.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/9577e19ebb3818dede32247576ade05cf29ec87e/src/octokit/connection.cr#L84" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/475dba78dd0026117d28ba55ad33bdb70da983c7/src/octokit/connection.cr#L99" target="_blank">View source</a>]
         
       </div>
     </div>

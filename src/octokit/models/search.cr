@@ -24,7 +24,7 @@ module Octokit
       )
     end
 
-    struct CommitResult
+    struct CommitsSearchResult
       Octokit.rest_model(
         sha: String,
         commit: Commit,

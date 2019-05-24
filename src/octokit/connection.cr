@@ -51,7 +51,7 @@ module Octokit
       klass : T.class,
       url : String,
       *,
-      start_page = 1,
+      start_page = nil,
       per_page = nil,
       auto_paginate = @@auto_paginate,
       options = nil
@@ -61,7 +61,22 @@ module Octokit
     end
 
     # ditto
-    def paginate(url, options : Halite::Options? = nil, &block)
+    def paginate(
+      klass : T.class,
+      url : String,
+      *,
+      start_page = nil,
+      per_page = nil,
+      auto_paginate = @@auto_paginate,
+      options = nil,
+      &block
+    )
+      paginator = Paginator(T).new(self, url, start_page, per_page, auto_paginate, options)
+      while paginator.next?
+        data = fetch_next
+        yield(data, paginator)
+      end
+      paginator
     end
 
     # Hypermedia agent for the GitHub API
@@ -146,7 +161,7 @@ module Octokit
     # # => #<Octokit::Connection::Paginator(Octokit::Models::Repository):0x555c3d36a000>
     # ```
     class Paginator(T)
-      @last_response : Halite::Response? = nil
+      getter last_response : Halite::Response? = nil
 
       # Get all collected records. This is updated every time
       # a `fetch_*` method is called.
@@ -169,13 +184,13 @@ module Octokit
       def initialize(
         @client : Octokit::Client,
         @url : String,
-        @current_page : Int32 = 1,
+        current_page : Int32? = nil,
         @per_page : Int32? = nil,
         @auto_paginate : Bool = Connection.auto_paginate,
         options : Halite::Options? = nil
       )
         # Don't allow the @current_page variable to be less than 1.
-        @current_page = 1 if @current_page < 1
+        @current_page = 1 if current_page.nil? || current_page < 1
 
         @options = options.nil? ? Halite::Options.new : options.not_nil!
 
