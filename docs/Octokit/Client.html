@@ -61,6 +61,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/PubSubHubbub" data-name="octokit::client::pubsubhubbub">
+      <a href="../Octokit/Client/PubSubHubbub.html">PubSubHubbub</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/RateLimit" data-name="octokit::client::ratelimit">
       <a href="../Octokit/Client/RateLimit.html">RateLimit</a>
       
@@ -1866,6 +1871,8 @@ environment variables.</p>
   
     <li class="other-type"><a href="../Octokit/Client/Issues.html">Octokit::Client::Issues</a></li>
   
+    <li class="other-type"><a href="../Octokit/Client/PubSubHubbub.html">Octokit::Client::PubSubHubbub</a></li>
+  
     <li class="other-type"><a href="../Octokit/Client/RateLimit.html">Octokit::Client::RateLimit</a></li>
   
     <li class="other-type"><a href="../Octokit/Client/Repositories.html">Octokit::Client::Repositories</a></li>
@@ -1896,49 +1903,56 @@ environment variables.</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/watzon/octokit.cr/blob/99c302def25ccdc9d5cd495630e34d05412e803b/src/octokit/client/issues.cr#L2" target="_blank">
+      <a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/client/issues.cr#L2" target="_blank">
         octokit/client/issues.cr
       </a>
     
     <br/>
   
     
-      <a href="https://github.com/watzon/octokit.cr/blob/99c302def25ccdc9d5cd495630e34d05412e803b/src/octokit/client/rate_limit.cr#L2" target="_blank">
+      <a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/client/pub_sub_hubbub.cr#L4" target="_blank">
+        octokit/client/pub_sub_hubbub.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/client/rate_limit.cr#L2" target="_blank">
         octokit/client/rate_limit.cr
       </a>
     
     <br/>
   
     
-      <a href="https://github.com/watzon/octokit.cr/blob/99c302def25ccdc9d5cd495630e34d05412e803b/src/octokit/client/repositories.cr#L2" target="_blank">
+      <a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/client/repositories.cr#L2" target="_blank">
         octokit/client/repositories.cr
       </a>
     
     <br/>
   
     
-      <a href="https://github.com/watzon/octokit.cr/blob/99c302def25ccdc9d5cd495630e34d05412e803b/src/octokit/client/say.cr#L2" target="_blank">
+      <a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/client/say.cr#L2" target="_blank">
         octokit/client/say.cr
       </a>
     
     <br/>
   
     
-      <a href="https://github.com/watzon/octokit.cr/blob/99c302def25ccdc9d5cd495630e34d05412e803b/src/octokit/client/search.cr#L2" target="_blank">
+      <a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/client/search.cr#L2" target="_blank">
         octokit/client/search.cr
       </a>
     
     <br/>
   
     
-      <a href="https://github.com/watzon/octokit.cr/blob/99c302def25ccdc9d5cd495630e34d05412e803b/src/octokit/client/users.cr#L2" target="_blank">
+      <a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/client/users.cr#L2" target="_blank">
         octokit/client/users.cr
       </a>
     
     <br/>
   
     
-      <a href="https://github.com/watzon/octokit.cr/blob/99c302def25ccdc9d5cd495630e34d05412e803b/src/octokit/client.cr#L103" target="_blank">
+      <a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/client.cr#L103" target="_blank">
         octokit/client.cr
       </a>
     
@@ -2681,6 +2695,40 @@ environment variables.</p>
   
     
 
+  <h3>Instance methods inherited from module <code><a href="../Octokit/Client/PubSubHubbub.html">Octokit::Client::PubSubHubbub</a></code></h3>
+  
+  
+    <a href="../Octokit/Client/PubSubHubbub.html#subscribe%28topic%2Ccallback%2Csecret%3Dnil%29-instance-method" class="tooltip">
+      <span>subscribe(topic, callback, secret = <span class="n">nil</span>)</span>
+    subscribe</a>, 
+    
+  
+    <a href="../Octokit/Client/PubSubHubbub.html#subscribe_service_hook%28repo%2Cservice_name%2Cservice_arguments%3D%7B%7DofString%3D%3EString%2Csecret%3Dnil%29-instance-method" class="tooltip">
+      <span>subscribe_service_hook(repo, service_name, service_arguments = {} <span class="k">of</span> <span class="t">String</span> => <span class="t">String</span>, secret = <span class="n">nil</span>)</span>
+    subscribe_service_hook</a>, 
+    
+  
+    <a href="../Octokit/Client/PubSubHubbub.html#unsubscribe%28topic%2Ccallback%29-instance-method" class="tooltip">
+      <span>unsubscribe(topic, callback)</span>
+    unsubscribe</a>, 
+    
+  
+    <a href="../Octokit/Client/PubSubHubbub.html#unsubscribe_service_hook%28repo%2Cservice_name%29-instance-method" class="tooltip">
+      <span>unsubscribe_service_hook(repo, service_name)</span>
+    unsubscribe_service_hook</a>
+    
+  
+
+
+    
+
+
+    
+
+
+  
+    
+
   <h3>Instance methods inherited from module <code><a href="../Octokit/Client/Issues.html">Octokit::Client::Issues</a></code></h3>
   
   
@@ -3060,7 +3108,7 @@ pp cli.user <span class="c"># Show information about the logged in user</span></
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/99c302def25ccdc9d5cd495630e34d05412e803b/src/octokit/client.cr#L124" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/client.cr#L125" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3084,7 +3132,7 @@ pp cli.user <span class="c"># Show information about the logged in user</span></
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/99c302def25ccdc9d5cd495630e34d05412e803b/src/octokit/client.cr#L142" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/client.cr#L143" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3634,7 +3682,7 @@ support proxy's. Therefore this option does nothing for now.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/99c302def25ccdc9d5cd495630e34d05412e803b/src/octokit/client.cr#L196" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/client.cr#L197" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3650,7 +3698,7 @@ support proxy's. Therefore this option does nothing for now.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/99c302def25ccdc9d5cd495630e34d05412e803b/src/octokit/client.cr#L170" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/client.cr#L171" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3668,7 +3716,7 @@ support proxy's. Therefore this option does nothing for now.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/99c302def25ccdc9d5cd495630e34d05412e803b/src/octokit/client.cr#L202" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/client.cr#L203" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3686,7 +3734,7 @@ support proxy's. Therefore this option does nothing for now.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/99c302def25ccdc9d5cd495630e34d05412e803b/src/octokit/client.cr#L208" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/client.cr#L209" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3704,7 +3752,7 @@ support proxy's. Therefore this option does nothing for now.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/99c302def25ccdc9d5cd495630e34d05412e803b/src/octokit/client.cr#L214" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/client.cr#L215" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3720,7 +3768,7 @@ support proxy's. Therefore this option does nothing for now.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/99c302def25ccdc9d5cd495630e34d05412e803b/src/octokit/client.cr#L219" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/client.cr#L220" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3738,7 +3786,7 @@ support proxy's. Therefore this option does nothing for now.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/99c302def25ccdc9d5cd495630e34d05412e803b/src/octokit/client.cr#L155" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/client.cr#L156" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3756,7 +3804,7 @@ support proxy's. Therefore this option does nothing for now.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/99c302def25ccdc9d5cd495630e34d05412e803b/src/octokit/client.cr#L184" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/client.cr#L185" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3774,7 +3822,7 @@ support proxy's. Therefore this option does nothing for now.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/99c302def25ccdc9d5cd495630e34d05412e803b/src/octokit/client.cr#L190" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/client.cr#L191" target="_blank">View source</a>]
         
       </div>
     </div>

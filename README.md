@@ -22,7 +22,7 @@ dependencies:
 require "octokit"
 
 # Create a new Octokit Client
-github = Octokit::Client.new("watzon", "PASSWORD")
+github = Octokit.client("watzon", "PASSWORD")
 
 # Fetch information about the logged in user
 pp github.user
@@ -65,7 +65,7 @@ There are a lot of pieces of the GitHub API to cover. Here are the ones that nee
 - [ ] [Organizations]()
 - [ ] [Pages]()
 - [ ] [Projects]()
-- [ ] [PubSubHubbub]()
+- [x] [PubSubHubbub](https://watzon.github.io/octokit.cr/Octokit/Client/PubSubHubbub.html)
 - [ ] [PullRequests]()
 - [x] [RateLimit](https://watzon.github.io/octokit.cr/Octokit/Client/RateLimit.html)
 - [ ] [Reactions]()

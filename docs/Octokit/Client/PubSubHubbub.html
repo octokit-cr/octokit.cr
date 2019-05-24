@@ -14,7 +14,7 @@
 </script>
 
   <meta id="repository-name" content="github.com/watzon/octokit.cr">
-  <title>Octokit::Models::Stargazer - github.com/watzon/octokit.cr</title>
+  <title>Octokit::Client::PubSubHubbub - github.com/watzon/octokit.cr</title>
 </head>
 <body>
 
@@ -51,7 +51,7 @@
       
     </li>
   
-  <li class="parent " data-id="github.com/watzon/octokit.cr/Octokit/Client" data-name="octokit::client">
+  <li class="parent open current" data-id="github.com/watzon/octokit.cr/Octokit/Client" data-name="octokit::client">
       <a href="../../Octokit/Client.html">Client</a>
       
         <ul>
@@ -61,7 +61,7 @@
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/PubSubHubbub" data-name="octokit::client::pubsubhubbub">
+  <li class=" current" data-id="github.com/watzon/octokit.cr/Octokit/Client/PubSubHubbub" data-name="octokit::client::pubsubhubbub">
       <a href="../../Octokit/Client/PubSubHubbub.html">PubSubHubbub</a>
       
     </li>
@@ -281,7 +281,7 @@
       
     </li>
   
-  <li class="parent open current" data-id="github.com/watzon/octokit.cr/Octokit/Models" data-name="octokit::models">
+  <li class="parent " data-id="github.com/watzon/octokit.cr/Octokit/Models" data-name="octokit::models">
       <a href="../../Octokit/Models.html">Models</a>
       
         <ul>
@@ -1546,7 +1546,7 @@
       
     </li>
   
-  <li class=" current" data-id="github.com/watzon/octokit.cr/Octokit/Models/Stargazer" data-name="octokit::models::stargazer">
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Stargazer" data-name="octokit::models::stargazer">
       <a href="../../Octokit/Models/Stargazer.html">Stargazer</a>
       
     </li>
@@ -1815,12 +1815,23 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">struct</span> Octokit::Models::Stargazer
+  <span class="kind">module</span> Octokit::Client::PubSubHubbub
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../Octokit/Models/Stargazer.html">Octokit::Models::Stargazer</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+
+
+
+  <h2>Overview</h2>
+
+  <p>Methods for the PubSubHubbub API</p>
+
+<p><strong>Note:</strong> The pubsub api requires clients to be OAuth authenticated.</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href="https://developer.github.com/v3/repos/hooks/#pubsubhubbub" target="_blank">https://developer.github.com/v3/repos/hooks/#pubsubhubbub</a></li></ul>
 
 
 
@@ -1832,8 +1843,12 @@
 
 
 
-
-
+  <h2>Direct including types</h2>
+  <ul class="other-types-list">
+  
+    <li class="other-type"><a href="../../Octokit/Client.html">Octokit::Client</a></li>
+  
+  </ul>
 
 
 
@@ -1841,8 +1856,8 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/models/activity_star.cr#L10" target="_blank">
-        octokit/models/activity_star.cr
+      <a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/client/pub_sub_hubbub.cr#L11" target="_blank">
+        octokit/client/pub_sub_hubbub.cr
       </a>
     
     <br/>
@@ -1852,21 +1867,6 @@
 
 
 
-  <h2>Constructors</h2>
-  <ul class="list-summary">
-    
-      <li class="entry-summary">
-        <a href="#new%28starred_at%3AString%2Cuser%3AUser%29-class-method" class="signature"><strong>.new</strong>(starred_at : String, user : User)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#new%28__temp_184%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_184 : JSON::PullParser)</a>
-        
-      </li>
-    
-  </ul>
-
 
 
 
@@ -1875,27 +1875,30 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#starred_at%3AString-instance-method" class="signature"><strong>#starred_at</strong> : String</a>
+        <a href="#subscribe%28topic%2Ccallback%2Csecret%3Dnil%29-instance-method" class="signature"><strong>#subscribe</strong>(topic, callback, secret = <span class="n">nil</span>)</a>
+        
+          <div class="summary"><p>Subscribe to a pubsub topic</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#starred_at%3D%28_starred_at%3AString%29-instance-method" class="signature"><strong>#starred_at=</strong>(_starred_at : String)</a>
+        <a href="#subscribe_service_hook%28repo%2Cservice_name%2Cservice_arguments%3D%7B%7DofString%3D%3EString%2Csecret%3Dnil%29-instance-method" class="signature"><strong>#subscribe_service_hook</strong>(repo, service_name, service_arguments = {} <span class="k">of</span> <span class="t">String</span> => <span class="t">String</span>, secret = <span class="n">nil</span>)</a>
+        
+          <div class="summary"><p>Subscribe to a repository through pubsub.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method" class="signature"><strong>#to_json</strong>(json : JSON::Builder)</a>
+        <a href="#unsubscribe%28topic%2Ccallback%29-instance-method" class="signature"><strong>#unsubscribe</strong>(topic, callback)</a>
+        
+          <div class="summary"><p>Unsubscribe from a pubsub topic</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#user%3AUser-instance-method" class="signature"><strong>#user</strong> : User</a>
+        <a href="#unsubscribe_service_hook%28repo%2Cservice_name%29-instance-method" class="signature"><strong>#unsubscribe_service_hook</strong>(repo, service_name)</a>
         
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#user%3D%28_user%3AUser%29-instance-method" class="signature"><strong>#user=</strong>(_user : User)</a>
+          <div class="summary"><p>Unsubscribe from a repository through pubsub.</p></div>
         
       </li>
     
@@ -1907,69 +1910,8 @@
 
 <div class="methods-inherited">
   
-    
-
-
-    
-
-
-    
-
-
-  
-    
-
-
-    
-
-
-    
-
-
-  
-    
-
-
-    
-
-
-    
-
-
-  
 </div>
 
-
-  <h2>Constructor Detail</h2>
-  
-    <div class="entry-detail" id="new(starred_at:String,user:User)-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(starred_at : String, user : <a href="../../Octokit/Models/User.html">User</a>)
-
-        <a class="method-permalink" href="#new%28starred_at%3AString%2Cuser%3AUser%29-class-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="new(__temp_184:JSON::PullParser)-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(__temp_184 : JSON::PullParser)
-
-        <a class="method-permalink" href="#new%28__temp_184%3AJSON%3A%3APullParser%29-class-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
 
 
 
@@ -1977,72 +1919,124 @@
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="starred_at:String-instance-method">
+    <div class="entry-detail" id="subscribe(topic,callback,secret=nil)-instance-method">
       <div class="signature">
         
-        def <strong>starred_at</strong> : String
+        def <strong>subscribe</strong>(topic, callback, secret = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#starred_at%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#subscribe%28topic%2Ccallback%2Csecret%3Dnil%29-instance-method">#</a>
       </div>
+      
+        <div class="doc"><p>Subscribe to a pubsub topic</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href="https://developer.github.com/v3/repos/hooks/#subscribing" target="_blank">https://developer.github.com/v3/repos/hooks/#subscribing</a></li></ul>
+
+<p><strong>Example:</strong></p>
+
+<p>Subscribe to push events from one of your repositories, having an email sent when fired.</p>
+
+<pre><code>@client <span class="o">=</span> <span class="t">Octokit</span>.client.(oauth_token: <span class="s">&quot;token&quot;</span>)
+@client.subscribe(<span class="s">&quot;https://github.com/watzon/cadmium/events/push&quot;</span>, <span class="s">&quot;github://Email?address=chris@watzon.me&quot;</span>)</code></pre></div>
       
       <br/>
       <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/client/pub_sub_hubbub.cr#L24" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="starred_at=(_starred_at:String)-instance-method">
+    <div class="entry-detail" id="subscribe_service_hook(repo,service_name,service_arguments={}ofString=&gt;String,secret=nil)-instance-method">
       <div class="signature">
         
-        def <strong>starred_at=</strong>(_starred_at : String)
+        def <strong>subscribe_service_hook</strong>(repo, service_name, service_arguments = {} <span class="k">of</span> <span class="t">String</span> => <span class="t">String</span>, secret = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#starred_at%3D%28_starred_at%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#subscribe_service_hook%28repo%2Cservice_name%2Cservice_arguments%3D%7B%7DofString%3D%3EString%2Csecret%3Dnil%29-instance-method">#</a>
       </div>
+      
+        <div class="doc"><p>Subscribe to a repository through pubsub.</p>
+
+<p><strong>Note:</strong> A list of services is available @
+<a href="https://github.com/github/github-services/tree/master/docs" target="_blank">https://github.com/github/github-services/tree/master/docs</a>.</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href="https://developer.github.com/v3/repos/hooks/#subscribing" target="_blank">https://developer.github.com/v3/repos/hooks/#subscribing</a></li></ul>
+
+<p><strong>Example:</strong></p>
+
+<p>Subscribe to push events to one of your repositories to Travis-CI</p>
+
+<pre><code>@client <span class="o">=</span> <span class="t">Octokit</span>.client.(oauth_token: <span class="s">&quot;token&quot;</span>)
+@client.subscribe_service_hook(<span class="s">&quot;watzon/cadmium&quot;</span>, <span class="s">&quot;Travis&quot;</span>, { <span class="n">:token</span> => <span class="s">&quot;test&quot;</span>, <span class="n">:domain</span> => <span class="s">&quot;domain&quot;</span>, <span class="n">:user</span> => <span class="s">&quot;user&quot;</span> })</code></pre></div>
       
       <br/>
       <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/client/pub_sub_hubbub.cr#L72" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="to_json(json:JSON::Builder)-instance-method">
+    <div class="entry-detail" id="unsubscribe(topic,callback)-instance-method">
       <div class="signature">
         
-        def <strong>to_json</strong>(json : JSON::Builder)
+        def <strong>unsubscribe</strong>(topic, callback)
 
-        <a class="method-permalink" href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method">#</a>
+        <a class="method-permalink" href="#unsubscribe%28topic%2Ccallback%29-instance-method">#</a>
       </div>
+      
+        <div class="doc"><p>Unsubscribe from a pubsub topic</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href="https://developer.github.com/v3/repos/hooks/#subscribing" target="_blank">https://developer.github.com/v3/repos/hooks/#subscribing</a></li></ul>
+
+<p><strong>Example:</strong></p>
+
+<p>Unsubscribe to push events from one of your repositories, no longer having an email sent when fired</p>
+
+<pre><code>@client <span class="o">=</span> <span class="t">Octokit</span>.client(oauth_token: <span class="s">&quot;token&quot;</span>)
+@client.unsubscribe(<span class="s">&quot;https://github.com/watzon/cadmium/events/push&quot;</span>, <span class="s">&quot;github://Email?address=chris@watzon.me&quot;</span>)</code></pre></div>
       
       <br/>
       <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/client/pub_sub_hubbub.cr#L47" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="user:User-instance-method">
+    <div class="entry-detail" id="unsubscribe_service_hook(repo,service_name)-instance-method">
       <div class="signature">
         
-        def <strong>user</strong> : <a href="../../Octokit/Models/User.html">User</a>
+        def <strong>unsubscribe_service_hook</strong>(repo, service_name)
 
-        <a class="method-permalink" href="#user%3AUser-instance-method">#</a>
+        <a class="method-permalink" href="#unsubscribe_service_hook%28repo%2Cservice_name%29-instance-method">#</a>
       </div>
+      
+        <div class="doc"><p>Unsubscribe from a repository through pubsub.</p>
+
+<p><strong>Note:</strong> A list of services is available @
+<a href="https://github.com/github/github-services/tree/master/docs" target="_blank">https://github.com/github/github-services/tree/master/docs</a>.</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href="https://developer.github.com/v3/repos/hooks/#subscribing" target="_blank">https://developer.github.com/v3/repos/hooks/#subscribing</a></li></ul>
+
+<p><strong>Example:</strong></p>
+
+<p>Subscribe to push events to one of your repositories to Travis-CI</p>
+
+<pre><code>@client <span class="o">=</span> <span class="t">Octokit</span>.client.(oauth_token: <span class="s">&quot;token&quot;</span>)
+@client.unsubscribe_service_hook(<span class="s">&quot;watzon/cadmium&quot;</span>, <span class="s">&quot;Travis&quot;</span>)</code></pre></div>
       
       <br/>
       <div>
         
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="user=(_user:User)-instance-method">
-      <div class="signature">
-        
-        def <strong>user=</strong>(_user : <a href="../../Octokit/Models/User.html">User</a>)
-
-        <a class="method-permalink" href="#user%3D%28_user%3AUser%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
+          [<a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/client/pub_sub_hubbub.cr#L98" target="_blank">View source</a>]
         
       </div>
     </div>
