@@ -34,7 +34,7 @@ module Octokit
       #
       # **Example:**
       # ```
-      # Octokit.exchange_code_for_token("aaaa", "xxxx", "yyyy", {accept: "application/json"})
+      # Octokit.client.exchange_code_for_token("aaaa", "xxxx", "yyyy", {accept: "application/json"})
       # ```
       #
       # **See Also:**
@@ -65,7 +65,7 @@ module Octokit
       #
       # **Example:**
       # ```
-      # Octokit.update_user(name: "Chris Watson", email: "cawatson1993@gmail.com", company: "Manas Tech", location: "Buenos Aires", hireable: false)
+      # Octokit.client.update_user(name: "Chris Watson", email: "cawatson1993@gmail.com", company: "Manas Tech", location: "Buenos Aires", hireable: false)
       # ```
       #
       # **See Also:**
@@ -79,7 +79,7 @@ module Octokit
       #
       # **Example:**
       # ```
-      # Octokit.followers("watzon")
+      # Octokit.client.followers("watzon")
       # ```
       #
       # **See Also:**
@@ -93,7 +93,7 @@ module Octokit
       #
       # **Example:**
       # ```
-      # Octokit.following("watzon")
+      # Octokit.client.following("watzon")
       # ```
       #
       # **See Also:**
@@ -160,7 +160,7 @@ module Octokit
       #
       # **Example:**
       # ```
-      # Octokit.starred("watzon")
+      # Octokit.client.starred("watzon")
       # ```
       #
       # **See Also:**

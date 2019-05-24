@@ -69,7 +69,7 @@ module Octokit
         parent: Repository?,
         source: Repository?,
         organization: Organization?,
-        permissions: Hash(String, Bool),
+        permissions: Hash(String, Bool)?,
         allow_rebase_merge: Bool?,
         allow_squash_merge: Bool?,
         allow_merge_commit: Bool?,

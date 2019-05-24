@@ -6,7 +6,7 @@ module Octokit
         url: String,
         name: String,
         color: String,
-        description: String,
+        description: String?,
         default: Bool,
         node_id: String
       )

@@ -24,7 +24,7 @@ module Octokit
 
     def api_media_type(type)
       warn_preview(type)
-      {headers: {accept: PREVIEW_TYPES[type.to_s]}}
+      {accept: PREVIEW_TYPES[type.to_s]}
     end
 
     def warn_preview(type)

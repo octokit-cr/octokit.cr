@@ -33,3 +33,6 @@ module Octokit
     raise "not implemented!"
   end
 end
+
+# client = Octokit.client(login: "watzon", password: "xJGBSG5dmqoc7D")
+pp Octokit.client.issue_comment("watzon/cadmium", 495536069)

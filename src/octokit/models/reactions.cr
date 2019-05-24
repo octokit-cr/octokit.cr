@@ -13,8 +13,8 @@ module Octokit
     struct Reactions
       Octokit.rest_model(
         total_count: Int32,
-        plus_one: Int32,
-        minus_one: Int32,
+        plus_one: {type: Int32, key: "+1"},
+        minus_one: {type: Int32, key: "-1"},
         laugh: Int32,
         confused: Int32,
         heart: Int32,

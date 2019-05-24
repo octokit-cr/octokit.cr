@@ -121,7 +121,7 @@ module Octokit
     # pp cli.user # Show information about the logged in user
     # ```
     def initialize(
-      @login : String,
+      @login : String? = nil,
       @password : String? = nil,
       @access_token : String? = nil,
       @bearer_token : String? = nil,
@@ -139,8 +139,8 @@ module Octokit
     # end
     # ```
     def initialize(
-      @login : String,
-      @password : String,
+      @login : String? = nil,
+      @password : String? = nil,
       @access_token : String? = nil,
       @bearer_token : String? = nil,
       @client_id : String? = nil,

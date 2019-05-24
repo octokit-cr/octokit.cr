@@ -10,7 +10,7 @@ module Octokit
         created_at: String,
         updated_at: String,
 
-        author_associations: String,
+        author_associations: String?,
         url: String,
         html_url: String,
         issue_url: String

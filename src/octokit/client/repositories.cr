@@ -272,7 +272,7 @@ module Octokit
       #
       # With unauthenticated client
       # ```
-      # Octokit.collaborators("watzon/cadmium")
+      # Octokit.client.collaborators("watzon/cadmium")
       # ```
       #
       # With authenticated client
@@ -436,7 +436,7 @@ module Octokit
       #
       # **Examples:**
       # ```
-      # Octokit.contributors("watzon/cadmium", true)
+      # Octokit.client.contributors("watzon/cadmium", true)
       # @client.contribs("watzon/cadmium")
       # ```
       def contributors(repo, anon = false)
@@ -454,7 +454,7 @@ module Octokit
       #
       # **Examples:**
       # ```
-      # Octokit.stargazers("watzon/cadmium")
+      # Octokit.client.stargazers("watzon/cadmium")
       # @client.stargazers("watzon/cadmium")
       # ```
       def stargazers(repo)
@@ -472,7 +472,7 @@ module Octokit
       #
       # **Examples:**
       # ```
-      # Octokit.forks("watzon/cadmium")
+      # Octokit.client.forks("watzon/cadmium")
       # @client.forks("watzon/cadmium", sort: "oldest")
       # ```
       def forks(repo, sort = "newest")
@@ -490,7 +490,7 @@ module Octokit
       #
       # **Examples:**
       # ```
-      # Octokit.languages("watzon/cadmium")
+      # Octokit.client.languages("watzon/cadmium")
       # @client.languages("watzon/cadmium", sort: "oldest")
       # ```
       def languages(repo)
@@ -506,7 +506,7 @@ module Octokit
       #
       # **Examples:**
       # ```
-      # Octokit.tags("watzon/cadmium")
+      # Octokit.client.tags("watzon/cadmium")
       # @client.tags("watzon/cadmium")
       # ```
       def tags(repo)
@@ -522,7 +522,7 @@ module Octokit
       #
       # **Examples:**
       # ```
-      # Octokit.branches("watzon/cadmium")
+      # Octokit.client.branches("watzon/cadmium")
       # @client.branches("watzon/cadmium")
       # ```
       def branches(repo, get_protected = false)
@@ -538,7 +538,7 @@ module Octokit
       #
       # **Example:**
       # ```
-      # Octokit.branch("watzon/cadmium", "master")
+      # Octokit.client.branch("watzon/cadmium", "master")
       # ```
       def branch(repo, branch)
         res = get "#{Repository.path(repo)}/branches/#{branch}"
@@ -617,7 +617,7 @@ module Octokit
       #
       # **Examples:**
       # ```
-      # Octokit.repository_assignees("watzon/cadmium")
+      # Octokit.client.repository_assignees("watzon/cadmium")
       # @client.repository_assignees("watzon/cadmium")
       # ```
       def repository_assignees(repo)
@@ -633,7 +633,7 @@ module Octokit
       #
       # **Example:**
       # ```
-      # Octokit.repository_assignees("watzon/cadmium")
+      # Octokit.client.repository_assignees("watzon/cadmium")
       # ```
       def check_assignee(repo, assignee)
         boolean_from_response :get, "#{Repository.path(repo)}/assignees/#{assignee}"

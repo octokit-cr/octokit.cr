@@ -9,14 +9,14 @@ module Octokit
         number: Int32,
         state: String,
         title: String,
-        description: String,
+        description: String?,
         creator: User,
         open_issues: Int32,
         closed_issues: Int32,
         created_at: String,
         updated_at: String,
-        closed_at: String,
-        due_on: String,
+        closed_at: String?,
+        due_on: String?,
         node_id: String
       )
     end
