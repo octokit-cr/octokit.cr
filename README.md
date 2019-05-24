@@ -87,6 +87,8 @@ I am trying to complete what I deem the most important ones first so that this s
 
 ## Contributing
 
+I don't only welcome contributions, I beg for them. If this is a library that might help you out please, help me by forking this repo and porting one of the many APIs that's not checked above. Thank you!
+
 1. Fork it (<https://github.com/watzon/octokit/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
@@ -96,3 +98,7 @@ I am trying to complete what I deem the most important ones first so that this s
 ## Contributors
 
 - [Chris Watson](https://github.com/watzon) - creator and maintainer
+
+# Thanks
+
+Thanks to all of the maintainers of [octokit/octokit.rb] who made this so much easier on me. This library is a port of the ruby library and I've tried to keep the APIs as similar as possible.
