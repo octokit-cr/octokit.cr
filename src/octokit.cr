@@ -20,12 +20,23 @@ module Octokit
   # @@enterprise_management_console_client : Octokit::EnterpriseManagementConsoleClient? = nil
 
   # API client based on configuration options in `Configurable`
-  def self.client(login, password)
-    @@client.nil? ? Octokit::Client.new(login: login, password: password) : @@client.not_nil!
-  end
-
-  def self.client(**options)
-    @@client.nil? ? Octokit::Client.new(**options) : @@client.not_nil!
+  def self.client(
+    login = nil,
+    password = nil,
+    *,
+    access_token = nil,
+    bearer_token = nil,
+    client_id = nil,
+    client_secret = nil
+  )
+    @@client.nil? ? Octokit::Client.new(
+      login,
+      password,
+      access_token,
+      bearer_token,
+      client_id,
+      client_secret
+    ) : @@client.not_nil!
   end
 
   # EnterpriseAdminClient client based on configuration options in `Configurable`
