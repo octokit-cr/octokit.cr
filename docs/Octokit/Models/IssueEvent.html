@@ -71,6 +71,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Releases" data-name="octokit::client::releases">
+      <a href="../../Octokit/Client/Releases.html">Releases</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Repositories" data-name="octokit::client::repositories">
       <a href="../../Octokit/Client/Repositories.html">Repositories</a>
       
@@ -83,6 +88,11 @@
   
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Search" data-name="octokit::client::search">
       <a href="../../Octokit/Client/Search.html">Search</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Statuses" data-name="octokit::client::statuses">
+      <a href="../../Octokit/Client/Statuses.html">Statuses</a>
       
     </li>
   
@@ -1806,6 +1816,21 @@
       
     </li>
   
+  <li class="parent " data-id="github.com/watzon/octokit.cr/Time" data-name="time">
+      <a href="../../Time.html">Time</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/watzon/octokit.cr/Time/ISO8601Converter" data-name="time::iso8601converter">
+      <a href="../../Time/ISO8601Converter.html">ISO8601Converter</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
 </ul>
 
   </div>
@@ -1841,7 +1866,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/models/issue_events.cr#L3" target="_blank">
+      <a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/models/issue_events.cr#L3" target="_blank">
         octokit/models/issue_events.cr
       </a>
     
@@ -1856,7 +1881,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28id%3AInt64%2Curl%3AString%2Cactor%3AUser%2Cevent%3AString%2Ccreated_at%3AString%2Cissue%3AIssue%2Cassignee%3A%3A%3AUnion%28User%2CNil%29%2Cassigner%3A%3A%3AUnion%28User%2CNil%29%2Ccommit_id%3A%3A%3AUnion%28String%2CNil%29%2Cmilestone%3A%3A%3AUnion%28Milestone%2CNil%29%2Clabel%3A%3A%3AUnion%28Label%2CNil%29%2Crename%3A%3A%3AUnion%28Rename%2CNil%29%2Clock_reason%3A%3A%3AUnion%28String%2CNil%29%2Cproject_card%3A%3A%3AUnion%28ProjectCard%2CNil%29%2Cdismissed_review%3A%3A%3AUnion%28DismissedReview%2CNil%29%29-class-method" class="signature"><strong>.new</strong>(id : Int64, url : String, actor : User, event : String, created_at : String, issue : Issue, assignee : ::Union(User, Nil), assigner : ::Union(User, Nil), commit_id : ::Union(String, Nil), milestone : ::Union(Milestone, Nil), label : ::Union(Label, Nil), rename : ::Union(Rename, Nil), lock_reason : ::Union(String, Nil), project_card : ::Union(ProjectCard, Nil), dismissed_review : ::Union(DismissedReview, Nil))</a>
+        <a href="#new%28id%3AInt64%2Curl%3AString%2Cactor%3AUser%2Cevent%3AString%2Ccreated_at%3ATime%2Cissue%3AIssue%2Cassignee%3A%3A%3AUnion%28User%2CNil%29%2Cassigner%3A%3A%3AUnion%28User%2CNil%29%2Ccommit_id%3A%3A%3AUnion%28String%2CNil%29%2Cmilestone%3A%3A%3AUnion%28Milestone%2CNil%29%2Clabel%3A%3A%3AUnion%28Label%2CNil%29%2Crename%3A%3A%3AUnion%28Rename%2CNil%29%2Clock_reason%3A%3A%3AUnion%28String%2CNil%29%2Cproject_card%3A%3A%3AUnion%28ProjectCard%2CNil%29%2Cdismissed_review%3A%3A%3AUnion%28DismissedReview%2CNil%29%29-class-method" class="signature"><strong>.new</strong>(id : Int64, url : String, actor : User, event : String, created_at : Time, issue : Issue, assignee : ::Union(User, Nil), assigner : ::Union(User, Nil), commit_id : ::Union(String, Nil), milestone : ::Union(Milestone, Nil), label : ::Union(Label, Nil), rename : ::Union(Rename, Nil), lock_reason : ::Union(String, Nil), project_card : ::Union(ProjectCard, Nil), dismissed_review : ::Union(DismissedReview, Nil))</a>
         
       </li>
     
@@ -1915,12 +1940,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#created_at%3AString-instance-method" class="signature"><strong>#created_at</strong> : String</a>
+        <a href="#created_at%3ATime-instance-method" class="signature"><strong>#created_at</strong> : Time</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#created_at%3D%28_created_at%3AString%29-instance-method" class="signature"><strong>#created_at=</strong>(_created_at : String)</a>
+        <a href="#created_at%3D%28_created_at%3ATime%29-instance-method" class="signature"><strong>#created_at=</strong>(_created_at : Time)</a>
         
       </li>
     
@@ -2072,12 +2097,12 @@
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(id:Int64,url:String,actor:User,event:String,created_at:String,issue:Issue,assignee:::Union(User,Nil),assigner:::Union(User,Nil),commit_id:::Union(String,Nil),milestone:::Union(Milestone,Nil),label:::Union(Label,Nil),rename:::Union(Rename,Nil),lock_reason:::Union(String,Nil),project_card:::Union(ProjectCard,Nil),dismissed_review:::Union(DismissedReview,Nil))-class-method">
+    <div class="entry-detail" id="new(id:Int64,url:String,actor:User,event:String,created_at:Time,issue:Issue,assignee:::Union(User,Nil),assigner:::Union(User,Nil),commit_id:::Union(String,Nil),milestone:::Union(Milestone,Nil),label:::Union(Label,Nil),rename:::Union(Rename,Nil),lock_reason:::Union(String,Nil),project_card:::Union(ProjectCard,Nil),dismissed_review:::Union(DismissedReview,Nil))-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(id : Int64, url : String, actor : <a href="../../Octokit/Models/User.html">User</a>, event : String, created_at : String, issue : <a href="../../Octokit/Models/Issue.html">Issue</a>, assignee : ::Union(<a href="../../Octokit/Models/User.html">User</a>, Nil), assigner : ::Union(<a href="../../Octokit/Models/User.html">User</a>, Nil), commit_id : ::Union(String, Nil), milestone : ::Union(<a href="../../Octokit/Models/Milestone.html">Milestone</a>, Nil), label : ::Union(<a href="../../Octokit/Models/Label.html">Label</a>, Nil), rename : ::Union(<a href="../../Octokit/Models/Rename.html">Rename</a>, Nil), lock_reason : ::Union(String, Nil), project_card : ::Union(<a href="../../Octokit/Models/ProjectCard.html">ProjectCard</a>, Nil), dismissed_review : ::Union(<a href="../../Octokit/Models/DismissedReview.html">DismissedReview</a>, Nil))
+        def self.<strong>new</strong>(id : Int64, url : String, actor : <a href="../../Octokit/Models/User.html">User</a>, event : String, created_at : <a href="../../Time.html">Time</a>, issue : <a href="../../Octokit/Models/Issue.html">Issue</a>, assignee : ::Union(<a href="../../Octokit/Models/User.html">User</a>, Nil), assigner : ::Union(<a href="../../Octokit/Models/User.html">User</a>, Nil), commit_id : ::Union(String, Nil), milestone : ::Union(<a href="../../Octokit/Models/Milestone.html">Milestone</a>, Nil), label : ::Union(<a href="../../Octokit/Models/Label.html">Label</a>, Nil), rename : ::Union(<a href="../../Octokit/Models/Rename.html">Rename</a>, Nil), lock_reason : ::Union(String, Nil), project_card : ::Union(<a href="../../Octokit/Models/ProjectCard.html">ProjectCard</a>, Nil), dismissed_review : ::Union(<a href="../../Octokit/Models/DismissedReview.html">DismissedReview</a>, Nil))
 
-        <a class="method-permalink" href="#new%28id%3AInt64%2Curl%3AString%2Cactor%3AUser%2Cevent%3AString%2Ccreated_at%3AString%2Cissue%3AIssue%2Cassignee%3A%3A%3AUnion%28User%2CNil%29%2Cassigner%3A%3A%3AUnion%28User%2CNil%29%2Ccommit_id%3A%3A%3AUnion%28String%2CNil%29%2Cmilestone%3A%3A%3AUnion%28Milestone%2CNil%29%2Clabel%3A%3A%3AUnion%28Label%2CNil%29%2Crename%3A%3A%3AUnion%28Rename%2CNil%29%2Clock_reason%3A%3A%3AUnion%28String%2CNil%29%2Cproject_card%3A%3A%3AUnion%28ProjectCard%2CNil%29%2Cdismissed_review%3A%3A%3AUnion%28DismissedReview%2CNil%29%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28id%3AInt64%2Curl%3AString%2Cactor%3AUser%2Cevent%3AString%2Ccreated_at%3ATime%2Cissue%3AIssue%2Cassignee%3A%3A%3AUnion%28User%2CNil%29%2Cassigner%3A%3A%3AUnion%28User%2CNil%29%2Ccommit_id%3A%3A%3AUnion%28String%2CNil%29%2Cmilestone%3A%3A%3AUnion%28Milestone%2CNil%29%2Clabel%3A%3A%3AUnion%28Label%2CNil%29%2Crename%3A%3A%3AUnion%28Rename%2CNil%29%2Clock_reason%3A%3A%3AUnion%28String%2CNil%29%2Cproject_card%3A%3A%3AUnion%28ProjectCard%2CNil%29%2Cdismissed_review%3A%3A%3AUnion%28DismissedReview%2CNil%29%29-class-method">#</a>
       </div>
       
       <br/>
@@ -2219,12 +2244,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="created_at:String-instance-method">
+    <div class="entry-detail" id="created_at:Time-instance-method">
       <div class="signature">
         
-        def <strong>created_at</strong> : String
+        def <strong>created_at</strong> : <a href="../../Time.html">Time</a>
 
-        <a class="method-permalink" href="#created_at%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#created_at%3ATime-instance-method">#</a>
       </div>
       
       <br/>
@@ -2233,12 +2258,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="created_at=(_created_at:String)-instance-method">
+    <div class="entry-detail" id="created_at=(_created_at:Time)-instance-method">
       <div class="signature">
         
-        def <strong>created_at=</strong>(_created_at : String)
+        def <strong>created_at=</strong>(_created_at : <a href="../../Time.html">Time</a>)
 
-        <a class="method-permalink" href="#created_at%3D%28_created_at%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#created_at%3D%28_created_at%3ATime%29-instance-method">#</a>
       </div>
       
       <br/>

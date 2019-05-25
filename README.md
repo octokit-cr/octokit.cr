@@ -79,7 +79,7 @@ There are a lot of pieces of the GitHub API to cover. Here are the ones that nee
 - [ ] [ServiceStatus]()
 - [ ] [SourceImport]()
 - [ ] [Stats]()
-- [ ] [Statuses]()
+- [x] [Statuses](https://watzon.github.io/octokit.cr/Octokit/Client/Statuses.html)
 - [ ] [Traffic]()
 - [x] [Users](https://watzon.github.io/octokit.cr/Octokit/Client/Users.html)
 

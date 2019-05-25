@@ -9,7 +9,7 @@ module Octokit
         repo: Repository,
         actor: User,
         org: Organization,
-        created_at: String,
+        created_at: {type: Time, converter: Time::ISO8601Converter},
         id: String
       )
     end

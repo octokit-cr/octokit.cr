@@ -71,6 +71,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Releases" data-name="octokit::client::releases">
+      <a href="../../Octokit/Client/Releases.html">Releases</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Repositories" data-name="octokit::client::repositories">
       <a href="../../Octokit/Client/Repositories.html">Repositories</a>
       
@@ -83,6 +88,11 @@
   
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Search" data-name="octokit::client::search">
       <a href="../../Octokit/Client/Search.html">Search</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Statuses" data-name="octokit::client::statuses">
+      <a href="../../Octokit/Client/Statuses.html">Statuses</a>
       
     </li>
   
@@ -1806,6 +1816,21 @@
       
     </li>
   
+  <li class="parent " data-id="github.com/watzon/octokit.cr/Time" data-name="time">
+      <a href="../../Time.html">Time</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/watzon/octokit.cr/Time/ISO8601Converter" data-name="time::iso8601converter">
+      <a href="../../Time/ISO8601Converter.html">ISO8601Converter</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
 </ul>
 
   </div>
@@ -1841,7 +1866,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/models/repo_statuses.cr#L3" target="_blank">
+      <a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/models/repo_statuses.cr#L3" target="_blank">
         octokit/models/repo_statuses.cr
       </a>
     
@@ -1856,7 +1881,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28id%3AInt64%2Cnode_id%3AString%2Curl%3AString%2Cstate%3AString%2Ctarget_url%3AString%2Cdescription%3AString%2Ccontext%3AString%2Ccreator%3AUser%2Ccreated_at%3AString%2Cupdated_at%3AString%29-class-method" class="signature"><strong>.new</strong>(id : Int64, node_id : String, url : String, state : String, target_url : String, description : String, context : String, creator : User, created_at : String, updated_at : String)</a>
+        <a href="#new%28url%3AString%2Cavatar_id%3A%3A%3AUnion%28String%2CNil%29%2Cid%3AInt32%2Cnode_id%3AString%2Cstate%3AString%2Cdescription%3AString%2Ctarget_url%3A%3A%3AUnion%28String%2CNil%29%2Ccontext%3AString%2Ccreated_at%3ATime%2Cupdated_at%3ATime%2Ccreator%3A%3A%3AUnion%28User%2CNil%29%29-class-method" class="signature"><strong>.new</strong>(url : String, avatar_id : ::Union(String, Nil), id : Int32, node_id : String, state : String, description : String, target_url : ::Union(String, Nil), context : String, created_at : Time, updated_at : Time, creator : ::Union(User, Nil))</a>
         
       </li>
     
@@ -1875,6 +1900,16 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
+        <a href="#avatar_id%3A%3A%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#avatar_id</strong> : ::Union(String, Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#avatar_id%3D%28_avatar_id%3A%3A%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#avatar_id=</strong>(_avatar_id : ::Union(String, Nil))</a>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#context%3AString-instance-method" class="signature"><strong>#context</strong> : String</a>
         
       </li>
@@ -1885,22 +1920,22 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#created_at%3AString-instance-method" class="signature"><strong>#created_at</strong> : String</a>
+        <a href="#created_at%3ATime-instance-method" class="signature"><strong>#created_at</strong> : Time</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#created_at%3D%28_created_at%3AString%29-instance-method" class="signature"><strong>#created_at=</strong>(_created_at : String)</a>
+        <a href="#created_at%3D%28_created_at%3ATime%29-instance-method" class="signature"><strong>#created_at=</strong>(_created_at : Time)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#creator%3AUser-instance-method" class="signature"><strong>#creator</strong> : User</a>
+        <a href="#creator%3A%3A%3AUnion%28User%2CNil%29-instance-method" class="signature"><strong>#creator</strong> : ::Union(User, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#creator%3D%28_creator%3AUser%29-instance-method" class="signature"><strong>#creator=</strong>(_creator : User)</a>
+        <a href="#creator%3D%28_creator%3A%3A%3AUnion%28User%2CNil%29%29-instance-method" class="signature"><strong>#creator=</strong>(_creator : ::Union(User, Nil))</a>
         
       </li>
     
@@ -1915,12 +1950,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#id%3AInt64-instance-method" class="signature"><strong>#id</strong> : Int64</a>
+        <a href="#id%3AInt32-instance-method" class="signature"><strong>#id</strong> : Int32</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#id%3D%28_id%3AInt64%29-instance-method" class="signature"><strong>#id=</strong>(_id : Int64)</a>
+        <a href="#id%3D%28_id%3AInt32%29-instance-method" class="signature"><strong>#id=</strong>(_id : Int32)</a>
         
       </li>
     
@@ -1945,12 +1980,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#target_url%3AString-instance-method" class="signature"><strong>#target_url</strong> : String</a>
+        <a href="#target_url%3A%3A%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#target_url</strong> : ::Union(String, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#target_url%3D%28_target_url%3AString%29-instance-method" class="signature"><strong>#target_url=</strong>(_target_url : String)</a>
+        <a href="#target_url%3D%28_target_url%3A%3A%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#target_url=</strong>(_target_url : ::Union(String, Nil))</a>
         
       </li>
     
@@ -1960,12 +1995,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#updated_at%3AString-instance-method" class="signature"><strong>#updated_at</strong> : String</a>
+        <a href="#updated_at%3ATime-instance-method" class="signature"><strong>#updated_at</strong> : Time</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#updated_at%3D%28_updated_at%3AString%29-instance-method" class="signature"><strong>#updated_at=</strong>(_updated_at : String)</a>
+        <a href="#updated_at%3D%28_updated_at%3ATime%29-instance-method" class="signature"><strong>#updated_at=</strong>(_updated_at : Time)</a>
         
       </li>
     
@@ -2022,12 +2057,12 @@
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(id:Int64,node_id:String,url:String,state:String,target_url:String,description:String,context:String,creator:User,created_at:String,updated_at:String)-class-method">
+    <div class="entry-detail" id="new(url:String,avatar_id:::Union(String,Nil),id:Int32,node_id:String,state:String,description:String,target_url:::Union(String,Nil),context:String,created_at:Time,updated_at:Time,creator:::Union(User,Nil))-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(id : Int64, node_id : String, url : String, state : String, target_url : String, description : String, context : String, creator : <a href="../../Octokit/Models/User.html">User</a>, created_at : String, updated_at : String)
+        def self.<strong>new</strong>(url : String, avatar_id : ::Union(String, Nil), id : Int32, node_id : String, state : String, description : String, target_url : ::Union(String, Nil), context : String, created_at : <a href="../../Time.html">Time</a>, updated_at : <a href="../../Time.html">Time</a>, creator : ::Union(<a href="../../Octokit/Models/User.html">User</a>, Nil))
 
-        <a class="method-permalink" href="#new%28id%3AInt64%2Cnode_id%3AString%2Curl%3AString%2Cstate%3AString%2Ctarget_url%3AString%2Cdescription%3AString%2Ccontext%3AString%2Ccreator%3AUser%2Ccreated_at%3AString%2Cupdated_at%3AString%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28url%3AString%2Cavatar_id%3A%3A%3AUnion%28String%2CNil%29%2Cid%3AInt32%2Cnode_id%3AString%2Cstate%3AString%2Cdescription%3AString%2Ctarget_url%3A%3A%3AUnion%28String%2CNil%29%2Ccontext%3AString%2Ccreated_at%3ATime%2Cupdated_at%3ATime%2Ccreator%3A%3A%3AUnion%28User%2CNil%29%29-class-method">#</a>
       </div>
       
       <br/>
@@ -2057,6 +2092,34 @@
 
   <h2>Instance Method Detail</h2>
   
+    <div class="entry-detail" id="avatar_id:::Union(String,Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>avatar_id</strong> : ::Union(String, Nil)
+
+        <a class="method-permalink" href="#avatar_id%3A%3A%3AUnion%28String%2CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="avatar_id=(_avatar_id:::Union(String,Nil))-instance-method">
+      <div class="signature">
+        
+        def <strong>avatar_id=</strong>(_avatar_id : ::Union(String, Nil))
+
+        <a class="method-permalink" href="#avatar_id%3D%28_avatar_id%3A%3A%3AUnion%28String%2CNil%29%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
     <div class="entry-detail" id="context:String-instance-method">
       <div class="signature">
         
@@ -2085,12 +2148,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="created_at:String-instance-method">
+    <div class="entry-detail" id="created_at:Time-instance-method">
       <div class="signature">
         
-        def <strong>created_at</strong> : String
+        def <strong>created_at</strong> : <a href="../../Time.html">Time</a>
 
-        <a class="method-permalink" href="#created_at%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#created_at%3ATime-instance-method">#</a>
       </div>
       
       <br/>
@@ -2099,12 +2162,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="created_at=(_created_at:String)-instance-method">
+    <div class="entry-detail" id="created_at=(_created_at:Time)-instance-method">
       <div class="signature">
         
-        def <strong>created_at=</strong>(_created_at : String)
+        def <strong>created_at=</strong>(_created_at : <a href="../../Time.html">Time</a>)
 
-        <a class="method-permalink" href="#created_at%3D%28_created_at%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#created_at%3D%28_created_at%3ATime%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2113,12 +2176,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="creator:User-instance-method">
+    <div class="entry-detail" id="creator:::Union(User,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>creator</strong> : <a href="../../Octokit/Models/User.html">User</a>
+        def <strong>creator</strong> : ::Union(<a href="../../Octokit/Models/User.html">User</a>, Nil)
 
-        <a class="method-permalink" href="#creator%3AUser-instance-method">#</a>
+        <a class="method-permalink" href="#creator%3A%3A%3AUnion%28User%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2127,12 +2190,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="creator=(_creator:User)-instance-method">
+    <div class="entry-detail" id="creator=(_creator:::Union(User,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>creator=</strong>(_creator : <a href="../../Octokit/Models/User.html">User</a>)
+        def <strong>creator=</strong>(_creator : ::Union(<a href="../../Octokit/Models/User.html">User</a>, Nil))
 
-        <a class="method-permalink" href="#creator%3D%28_creator%3AUser%29-instance-method">#</a>
+        <a class="method-permalink" href="#creator%3D%28_creator%3A%3A%3AUnion%28User%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2169,12 +2232,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="id:Int64-instance-method">
+    <div class="entry-detail" id="id:Int32-instance-method">
       <div class="signature">
         
-        def <strong>id</strong> : Int64
+        def <strong>id</strong> : Int32
 
-        <a class="method-permalink" href="#id%3AInt64-instance-method">#</a>
+        <a class="method-permalink" href="#id%3AInt32-instance-method">#</a>
       </div>
       
       <br/>
@@ -2183,12 +2246,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="id=(_id:Int64)-instance-method">
+    <div class="entry-detail" id="id=(_id:Int32)-instance-method">
       <div class="signature">
         
-        def <strong>id=</strong>(_id : Int64)
+        def <strong>id=</strong>(_id : Int32)
 
-        <a class="method-permalink" href="#id%3D%28_id%3AInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#id%3D%28_id%3AInt32%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2253,12 +2316,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="target_url:String-instance-method">
+    <div class="entry-detail" id="target_url:::Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>target_url</strong> : String
+        def <strong>target_url</strong> : ::Union(String, Nil)
 
-        <a class="method-permalink" href="#target_url%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#target_url%3A%3A%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2267,12 +2330,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="target_url=(_target_url:String)-instance-method">
+    <div class="entry-detail" id="target_url=(_target_url:::Union(String,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>target_url=</strong>(_target_url : String)
+        def <strong>target_url=</strong>(_target_url : ::Union(String, Nil))
 
-        <a class="method-permalink" href="#target_url%3D%28_target_url%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#target_url%3D%28_target_url%3A%3A%3AUnion%28String%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2295,12 +2358,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="updated_at:String-instance-method">
+    <div class="entry-detail" id="updated_at:Time-instance-method">
       <div class="signature">
         
-        def <strong>updated_at</strong> : String
+        def <strong>updated_at</strong> : <a href="../../Time.html">Time</a>
 
-        <a class="method-permalink" href="#updated_at%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#updated_at%3ATime-instance-method">#</a>
       </div>
       
       <br/>
@@ -2309,12 +2372,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="updated_at=(_updated_at:String)-instance-method">
+    <div class="entry-detail" id="updated_at=(_updated_at:Time)-instance-method">
       <div class="signature">
         
-        def <strong>updated_at=</strong>(_updated_at : String)
+        def <strong>updated_at=</strong>(_updated_at : <a href="../../Time.html">Time</a>)
 
-        <a class="method-permalink" href="#updated_at%3D%28_updated_at%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#updated_at%3D%28_updated_at%3ATime%29-instance-method">#</a>
       </div>
       
       <br/>

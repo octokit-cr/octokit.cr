@@ -7,8 +7,8 @@ module Octokit
         body: String,
         user: User,
         reactions: Reactions,
-        created_at: String,
-        updated_at: String,
+        created_at: {type: Time, converter: Time::ISO8601Converter},
+        updated_at: {type: Time, converter: Time::ISO8601Converter},
 
         author_associations: String?,
         url: String,

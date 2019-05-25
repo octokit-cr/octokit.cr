@@ -71,6 +71,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Releases" data-name="octokit::client::releases">
+      <a href="../../Octokit/Client/Releases.html">Releases</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Repositories" data-name="octokit::client::repositories">
       <a href="../../Octokit/Client/Repositories.html">Repositories</a>
       
@@ -83,6 +88,11 @@
   
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Search" data-name="octokit::client::search">
       <a href="../../Octokit/Client/Search.html">Search</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Statuses" data-name="octokit::client::statuses">
+      <a href="../../Octokit/Client/Statuses.html">Statuses</a>
       
     </li>
   
@@ -1806,6 +1816,21 @@
       
     </li>
   
+  <li class="parent " data-id="github.com/watzon/octokit.cr/Time" data-name="time">
+      <a href="../../Time.html">Time</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/watzon/octokit.cr/Time/ISO8601Converter" data-name="time::iso8601converter">
+      <a href="../../Time/ISO8601Converter.html">ISO8601Converter</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
 </ul>
 
   </div>
@@ -1841,7 +1866,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/models/team_discussions.cr#L3" target="_blank">
+      <a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/models/team_discussions.cr#L3" target="_blank">
         octokit/models/team_discussions.cr
       </a>
     
@@ -1856,12 +1881,12 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28author%3AUser%2Cbody%3AString%2Cbody_html%3AString%2Cbody_version%3AString%2Ccomments_count%3AInt32%2Ccomments_url%3AString%2Ccreated_at%3AString%2Clast_edited_at%3AString%2Chtml_url%3AString%2Cnode_id%3AString%2Cnumber%3AInt32%2Cpinned%3ABool%2Cprivate__arg0%3ABool%2Cteam_url%3AString%2Ctitle%3AString%2Cupdated_at%3AString%2Curl%3AString%2Creactions%3AReactions%29-class-method" class="signature"><strong>.new</strong>(author : User, body : String, body_html : String, body_version : String, comments_count : Int32, comments_url : String, created_at : String, last_edited_at : String, html_url : String, node_id : String, number : Int32, pinned : Bool, private __arg0 : Bool, team_url : String, title : String, updated_at : String, url : String, reactions : Reactions)</a>
+        <a href="#new%28author%3AUser%2Cbody%3AString%2Cbody_html%3AString%2Cbody_version%3AString%2Ccomments_count%3AInt32%2Ccomments_url%3AString%2Ccreated_at%3ATime%2Clast_edited_at%3AString%2Chtml_url%3AString%2Cnode_id%3AString%2Cnumber%3AInt32%2Cpinned%3ABool%2Cprivate__arg0%3ABool%2Cteam_url%3AString%2Ctitle%3AString%2Cupdated_at%3ATime%2Curl%3AString%2Creactions%3AReactions%29-class-method" class="signature"><strong>.new</strong>(author : User, body : String, body_html : String, body_version : String, comments_count : Int32, comments_url : String, created_at : Time, last_edited_at : String, html_url : String, node_id : String, number : Int32, pinned : Bool, private __arg0 : Bool, team_url : String, title : String, updated_at : Time, url : String, reactions : Reactions)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28__temp_4302%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_4302 : JSON::PullParser)</a>
+        <a href="#new%28__temp_4304%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_4304 : JSON::PullParser)</a>
         
       </li>
     
@@ -1935,12 +1960,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#created_at%3AString-instance-method" class="signature"><strong>#created_at</strong> : String</a>
+        <a href="#created_at%3ATime-instance-method" class="signature"><strong>#created_at</strong> : Time</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#created_at%3D%28_created_at%3AString%29-instance-method" class="signature"><strong>#created_at=</strong>(_created_at : String)</a>
+        <a href="#created_at%3D%28_created_at%3ATime%29-instance-method" class="signature"><strong>#created_at=</strong>(_created_at : Time)</a>
         
       </li>
     
@@ -2040,12 +2065,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#updated_at%3AString-instance-method" class="signature"><strong>#updated_at</strong> : String</a>
+        <a href="#updated_at%3ATime-instance-method" class="signature"><strong>#updated_at</strong> : Time</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#updated_at%3D%28_updated_at%3AString%29-instance-method" class="signature"><strong>#updated_at=</strong>(_updated_at : String)</a>
+        <a href="#updated_at%3D%28_updated_at%3ATime%29-instance-method" class="signature"><strong>#updated_at=</strong>(_updated_at : Time)</a>
         
       </li>
     
@@ -2102,12 +2127,12 @@
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(author:User,body:String,body_html:String,body_version:String,comments_count:Int32,comments_url:String,created_at:String,last_edited_at:String,html_url:String,node_id:String,number:Int32,pinned:Bool,private__arg0:Bool,team_url:String,title:String,updated_at:String,url:String,reactions:Reactions)-class-method">
+    <div class="entry-detail" id="new(author:User,body:String,body_html:String,body_version:String,comments_count:Int32,comments_url:String,created_at:Time,last_edited_at:String,html_url:String,node_id:String,number:Int32,pinned:Bool,private__arg0:Bool,team_url:String,title:String,updated_at:Time,url:String,reactions:Reactions)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(author : <a href="../../Octokit/Models/User.html">User</a>, body : String, body_html : String, body_version : String, comments_count : Int32, comments_url : String, created_at : String, last_edited_at : String, html_url : String, node_id : String, number : Int32, pinned : Bool, private __arg0 : Bool, team_url : String, title : String, updated_at : String, url : String, reactions : <a href="../../Octokit/Models/Reactions.html">Reactions</a>)
+        def self.<strong>new</strong>(author : <a href="../../Octokit/Models/User.html">User</a>, body : String, body_html : String, body_version : String, comments_count : Int32, comments_url : String, created_at : <a href="../../Time.html">Time</a>, last_edited_at : String, html_url : String, node_id : String, number : Int32, pinned : Bool, private __arg0 : Bool, team_url : String, title : String, updated_at : <a href="../../Time.html">Time</a>, url : String, reactions : <a href="../../Octokit/Models/Reactions.html">Reactions</a>)
 
-        <a class="method-permalink" href="#new%28author%3AUser%2Cbody%3AString%2Cbody_html%3AString%2Cbody_version%3AString%2Ccomments_count%3AInt32%2Ccomments_url%3AString%2Ccreated_at%3AString%2Clast_edited_at%3AString%2Chtml_url%3AString%2Cnode_id%3AString%2Cnumber%3AInt32%2Cpinned%3ABool%2Cprivate__arg0%3ABool%2Cteam_url%3AString%2Ctitle%3AString%2Cupdated_at%3AString%2Curl%3AString%2Creactions%3AReactions%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28author%3AUser%2Cbody%3AString%2Cbody_html%3AString%2Cbody_version%3AString%2Ccomments_count%3AInt32%2Ccomments_url%3AString%2Ccreated_at%3ATime%2Clast_edited_at%3AString%2Chtml_url%3AString%2Cnode_id%3AString%2Cnumber%3AInt32%2Cpinned%3ABool%2Cprivate__arg0%3ABool%2Cteam_url%3AString%2Ctitle%3AString%2Cupdated_at%3ATime%2Curl%3AString%2Creactions%3AReactions%29-class-method">#</a>
       </div>
       
       <br/>
@@ -2116,12 +2141,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="new(__temp_4302:JSON::PullParser)-class-method">
+    <div class="entry-detail" id="new(__temp_4304:JSON::PullParser)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(__temp_4302 : JSON::PullParser)
+        def self.<strong>new</strong>(__temp_4304 : JSON::PullParser)
 
-        <a class="method-permalink" href="#new%28__temp_4302%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28__temp_4304%3AJSON%3A%3APullParser%29-class-method">#</a>
       </div>
       
       <br/>
@@ -2305,12 +2330,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="created_at:String-instance-method">
+    <div class="entry-detail" id="created_at:Time-instance-method">
       <div class="signature">
         
-        def <strong>created_at</strong> : String
+        def <strong>created_at</strong> : <a href="../../Time.html">Time</a>
 
-        <a class="method-permalink" href="#created_at%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#created_at%3ATime-instance-method">#</a>
       </div>
       
       <br/>
@@ -2319,12 +2344,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="created_at=(_created_at:String)-instance-method">
+    <div class="entry-detail" id="created_at=(_created_at:Time)-instance-method">
       <div class="signature">
         
-        def <strong>created_at=</strong>(_created_at : String)
+        def <strong>created_at=</strong>(_created_at : <a href="../../Time.html">Time</a>)
 
-        <a class="method-permalink" href="#created_at%3D%28_created_at%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#created_at%3D%28_created_at%3ATime%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2599,12 +2624,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="updated_at:String-instance-method">
+    <div class="entry-detail" id="updated_at:Time-instance-method">
       <div class="signature">
         
-        def <strong>updated_at</strong> : String
+        def <strong>updated_at</strong> : <a href="../../Time.html">Time</a>
 
-        <a class="method-permalink" href="#updated_at%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#updated_at%3ATime-instance-method">#</a>
       </div>
       
       <br/>
@@ -2613,12 +2638,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="updated_at=(_updated_at:String)-instance-method">
+    <div class="entry-detail" id="updated_at=(_updated_at:Time)-instance-method">
       <div class="signature">
         
-        def <strong>updated_at=</strong>(_updated_at : String)
+        def <strong>updated_at=</strong>(_updated_at : <a href="../../Time.html">Time</a>)
 
-        <a class="method-permalink" href="#updated_at%3D%28_updated_at%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#updated_at%3D%28_updated_at%3ATime%29-instance-method">#</a>
       </div>
       
       <br/>

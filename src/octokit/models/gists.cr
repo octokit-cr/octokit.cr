@@ -11,8 +11,8 @@ module Octokit
         html_url: String,
         git_pull_url: String,
         git_push_url: String,
-        created_at: String,
-        updated_at: String,
+        created_at: {type: Time, converter: Time::ISO8601Converter},
+        updated_at: {type: Time, converter: Time::ISO8601Converter},
         node_id: String
       )
     end
@@ -33,8 +33,8 @@ module Octokit
         url: String,
         user: User,
         id: String,
-        created_at: String,
-        updated_at: String,
+        created_at: {type: Time, converter: Time::ISO8601Converter},
+        updated_at: {type: Time, converter: Time::ISO8601Converter},
         node_id: String
       )
     end

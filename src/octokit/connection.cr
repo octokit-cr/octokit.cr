@@ -186,11 +186,13 @@ module Octokit
         @url : String,
         current_page : Int32? = nil,
         @per_page : Int32? = nil,
-        @auto_paginate : Bool = Connection.auto_paginate,
+        auto_paginate : Bool? = nil,
         options : Halite::Options? = nil
       )
+        @auto_paginate = auto_paginate.nil? ? Octokit.auto_paginate : auto_paginate
+
         # Don't allow the @current_page variable to be less than 1.
-        @current_page = 1 if current_page.nil? || current_page < 1
+        @current_page = current_page.nil? || current_page < 1 ? 1 : current_page
 
         @options = options.nil? ? Halite::Options.new : options.not_nil!
 

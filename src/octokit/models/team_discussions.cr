@@ -8,7 +8,7 @@ module Octokit
         body_version: String,
         comments_count: Int32,
         comments_url: String,
-        created_at: String,
+        created_at: {type: Time, converter: Time::ISO8601Converter},
         last_edited_at: String,
         html_url: String,
         node_id: String,
@@ -17,7 +17,7 @@ module Octokit
         private: Bool,
         team_url: String,
         title: String,
-        updated_at: String,
+        updated_at: {type: Time, converter: Time::ISO8601Converter},
         url: String,
         reactions: Reactions
       )

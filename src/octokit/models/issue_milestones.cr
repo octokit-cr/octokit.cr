@@ -13,8 +13,8 @@ module Octokit
         creator: User,
         open_issues: Int32,
         closed_issues: Int32,
-        created_at: String,
-        updated_at: String,
+        created_at: {type: Time, converter: Time::ISO8601Converter},
+        updated_at: {type: Time, converter: Time::ISO8601Converter},
         closed_at: String?,
         due_on: String?,
         node_id: String

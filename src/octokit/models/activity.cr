@@ -35,7 +35,7 @@ module Octokit
           subscribed: Bool,
           ignored: Bool,
           reason: String?,
-          created_at: String?,
+          created_at: {type: Time?, converter: Time::ISO8601Converter},
           url: String,
           repository_url: String?
         )

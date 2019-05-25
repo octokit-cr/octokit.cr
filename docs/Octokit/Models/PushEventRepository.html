@@ -71,6 +71,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Releases" data-name="octokit::client::releases">
+      <a href="../../Octokit/Client/Releases.html">Releases</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Repositories" data-name="octokit::client::repositories">
       <a href="../../Octokit/Client/Repositories.html">Repositories</a>
       
@@ -83,6 +88,11 @@
   
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Search" data-name="octokit::client::search">
       <a href="../../Octokit/Client/Search.html">Search</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Statuses" data-name="octokit::client::statuses">
+      <a href="../../Octokit/Client/Statuses.html">Statuses</a>
       
     </li>
   
@@ -1806,6 +1816,21 @@
       
     </li>
   
+  <li class="parent " data-id="github.com/watzon/octokit.cr/Time" data-name="time">
+      <a href="../../Time.html">Time</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/watzon/octokit.cr/Time/ISO8601Converter" data-name="time::iso8601converter">
+      <a href="../../Time/ISO8601Converter.html">ISO8601Converter</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
 </ul>
 
   </div>
@@ -1841,7 +1866,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/models/event_types.cr#L529" target="_blank">
+      <a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/models/event_types.cr#L529" target="_blank">
         octokit/models/event_types.cr
       </a>
     
@@ -1856,7 +1881,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28id%3AInt64%2Cnode_id%3AString%2Cname%3AString%2Cfull_name%3AString%2Cowner%3AUser%2Cprivate__arg0%3ABool%2Cdescription%3AString%2Cfork%3ABool%2Ccreated_at%3AString%2Cpushed_at%3AString%2Cupdated_at%3AString%2Chomepage%3AString%2Csize%3AInt32%2Cstargazers_count%3AInt32%2Cwatchers_count%3AInt32%2Clanguage%3AString%2Chas_issues%3ABool%2Chas_downloads%3ABool%2Chas_wiki%3ABool%2Chas_pages%3ABool%2Cforks_count%3AInt32%2Copen_issues_count%3AInt32%2Cdefault_branch%3AString%2Cmaster_branch%3AString%2Corganization%3AString%2Curl%3AString%2Carchive_url%3AString%2Chtml_url%3AString%2Cstatuses_url%3AString%2Cgit_url%3AString%2Cssh_url%3AString%2Cclone_url%3AString%2Csvn_url%3AString%29-class-method" class="signature"><strong>.new</strong>(id : Int64, node_id : String, name : String, full_name : String, owner : User, private __arg0 : Bool, description : String, fork : Bool, created_at : String, pushed_at : String, updated_at : String, homepage : String, size : Int32, stargazers_count : Int32, watchers_count : Int32, language : String, has_issues : Bool, has_downloads : Bool, has_wiki : Bool, has_pages : Bool, forks_count : Int32, open_issues_count : Int32, default_branch : String, master_branch : String, organization : String, url : String, archive_url : String, html_url : String, statuses_url : String, git_url : String, ssh_url : String, clone_url : String, svn_url : String)</a>
+        <a href="#new%28id%3AInt64%2Cnode_id%3AString%2Cname%3AString%2Cfull_name%3AString%2Cowner%3AUser%2Cprivate__arg0%3ABool%2Cdescription%3AString%2Cfork%3ABool%2Ccreated_at%3ATime%2Cpushed_at%3AString%2Cupdated_at%3ATime%2Chomepage%3AString%2Csize%3AInt32%2Cstargazers_count%3AInt32%2Cwatchers_count%3AInt32%2Clanguage%3AString%2Chas_issues%3ABool%2Chas_downloads%3ABool%2Chas_wiki%3ABool%2Chas_pages%3ABool%2Cforks_count%3AInt32%2Copen_issues_count%3AInt32%2Cdefault_branch%3AString%2Cmaster_branch%3AString%2Corganization%3AString%2Curl%3AString%2Carchive_url%3AString%2Chtml_url%3AString%2Cstatuses_url%3AString%2Cgit_url%3AString%2Cssh_url%3AString%2Cclone_url%3AString%2Csvn_url%3AString%29-class-method" class="signature"><strong>.new</strong>(id : Int64, node_id : String, name : String, full_name : String, owner : User, private __arg0 : Bool, description : String, fork : Bool, created_at : Time, pushed_at : String, updated_at : Time, homepage : String, size : Int32, stargazers_count : Int32, watchers_count : Int32, language : String, has_issues : Bool, has_downloads : Bool, has_wiki : Bool, has_pages : Bool, forks_count : Int32, open_issues_count : Int32, default_branch : String, master_branch : String, organization : String, url : String, archive_url : String, html_url : String, statuses_url : String, git_url : String, ssh_url : String, clone_url : String, svn_url : String)</a>
         
       </li>
     
@@ -1895,12 +1920,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#created_at%3AString-instance-method" class="signature"><strong>#created_at</strong> : String</a>
+        <a href="#created_at%3ATime-instance-method" class="signature"><strong>#created_at</strong> : Time</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#created_at%3D%28_created_at%3AString%29-instance-method" class="signature"><strong>#created_at=</strong>(_created_at : String)</a>
+        <a href="#created_at%3D%28_created_at%3ATime%29-instance-method" class="signature"><strong>#created_at=</strong>(_created_at : Time)</a>
         
       </li>
     
@@ -2180,12 +2205,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#updated_at%3AString-instance-method" class="signature"><strong>#updated_at</strong> : String</a>
+        <a href="#updated_at%3ATime-instance-method" class="signature"><strong>#updated_at</strong> : Time</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#updated_at%3D%28_updated_at%3AString%29-instance-method" class="signature"><strong>#updated_at=</strong>(_updated_at : String)</a>
+        <a href="#updated_at%3D%28_updated_at%3ATime%29-instance-method" class="signature"><strong>#updated_at=</strong>(_updated_at : Time)</a>
         
       </li>
     
@@ -2252,12 +2277,12 @@
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(id:Int64,node_id:String,name:String,full_name:String,owner:User,private__arg0:Bool,description:String,fork:Bool,created_at:String,pushed_at:String,updated_at:String,homepage:String,size:Int32,stargazers_count:Int32,watchers_count:Int32,language:String,has_issues:Bool,has_downloads:Bool,has_wiki:Bool,has_pages:Bool,forks_count:Int32,open_issues_count:Int32,default_branch:String,master_branch:String,organization:String,url:String,archive_url:String,html_url:String,statuses_url:String,git_url:String,ssh_url:String,clone_url:String,svn_url:String)-class-method">
+    <div class="entry-detail" id="new(id:Int64,node_id:String,name:String,full_name:String,owner:User,private__arg0:Bool,description:String,fork:Bool,created_at:Time,pushed_at:String,updated_at:Time,homepage:String,size:Int32,stargazers_count:Int32,watchers_count:Int32,language:String,has_issues:Bool,has_downloads:Bool,has_wiki:Bool,has_pages:Bool,forks_count:Int32,open_issues_count:Int32,default_branch:String,master_branch:String,organization:String,url:String,archive_url:String,html_url:String,statuses_url:String,git_url:String,ssh_url:String,clone_url:String,svn_url:String)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(id : Int64, node_id : String, name : String, full_name : String, owner : <a href="../../Octokit/Models/User.html">User</a>, private __arg0 : Bool, description : String, fork : Bool, created_at : String, pushed_at : String, updated_at : String, homepage : String, size : Int32, stargazers_count : Int32, watchers_count : Int32, language : String, has_issues : Bool, has_downloads : Bool, has_wiki : Bool, has_pages : Bool, forks_count : Int32, open_issues_count : Int32, default_branch : String, master_branch : String, organization : String, url : String, archive_url : String, html_url : String, statuses_url : String, git_url : String, ssh_url : String, clone_url : String, svn_url : String)
+        def self.<strong>new</strong>(id : Int64, node_id : String, name : String, full_name : String, owner : <a href="../../Octokit/Models/User.html">User</a>, private __arg0 : Bool, description : String, fork : Bool, created_at : <a href="../../Time.html">Time</a>, pushed_at : String, updated_at : <a href="../../Time.html">Time</a>, homepage : String, size : Int32, stargazers_count : Int32, watchers_count : Int32, language : String, has_issues : Bool, has_downloads : Bool, has_wiki : Bool, has_pages : Bool, forks_count : Int32, open_issues_count : Int32, default_branch : String, master_branch : String, organization : String, url : String, archive_url : String, html_url : String, statuses_url : String, git_url : String, ssh_url : String, clone_url : String, svn_url : String)
 
-        <a class="method-permalink" href="#new%28id%3AInt64%2Cnode_id%3AString%2Cname%3AString%2Cfull_name%3AString%2Cowner%3AUser%2Cprivate__arg0%3ABool%2Cdescription%3AString%2Cfork%3ABool%2Ccreated_at%3AString%2Cpushed_at%3AString%2Cupdated_at%3AString%2Chomepage%3AString%2Csize%3AInt32%2Cstargazers_count%3AInt32%2Cwatchers_count%3AInt32%2Clanguage%3AString%2Chas_issues%3ABool%2Chas_downloads%3ABool%2Chas_wiki%3ABool%2Chas_pages%3ABool%2Cforks_count%3AInt32%2Copen_issues_count%3AInt32%2Cdefault_branch%3AString%2Cmaster_branch%3AString%2Corganization%3AString%2Curl%3AString%2Carchive_url%3AString%2Chtml_url%3AString%2Cstatuses_url%3AString%2Cgit_url%3AString%2Cssh_url%3AString%2Cclone_url%3AString%2Csvn_url%3AString%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28id%3AInt64%2Cnode_id%3AString%2Cname%3AString%2Cfull_name%3AString%2Cowner%3AUser%2Cprivate__arg0%3ABool%2Cdescription%3AString%2Cfork%3ABool%2Ccreated_at%3ATime%2Cpushed_at%3AString%2Cupdated_at%3ATime%2Chomepage%3AString%2Csize%3AInt32%2Cstargazers_count%3AInt32%2Cwatchers_count%3AInt32%2Clanguage%3AString%2Chas_issues%3ABool%2Chas_downloads%3ABool%2Chas_wiki%3ABool%2Chas_pages%3ABool%2Cforks_count%3AInt32%2Copen_issues_count%3AInt32%2Cdefault_branch%3AString%2Cmaster_branch%3AString%2Corganization%3AString%2Curl%3AString%2Carchive_url%3AString%2Chtml_url%3AString%2Cstatuses_url%3AString%2Cgit_url%3AString%2Cssh_url%3AString%2Cclone_url%3AString%2Csvn_url%3AString%29-class-method">#</a>
       </div>
       
       <br/>
@@ -2343,12 +2368,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="created_at:String-instance-method">
+    <div class="entry-detail" id="created_at:Time-instance-method">
       <div class="signature">
         
-        def <strong>created_at</strong> : String
+        def <strong>created_at</strong> : <a href="../../Time.html">Time</a>
 
-        <a class="method-permalink" href="#created_at%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#created_at%3ATime-instance-method">#</a>
       </div>
       
       <br/>
@@ -2357,12 +2382,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="created_at=(_created_at:String)-instance-method">
+    <div class="entry-detail" id="created_at=(_created_at:Time)-instance-method">
       <div class="signature">
         
-        def <strong>created_at=</strong>(_created_at : String)
+        def <strong>created_at=</strong>(_created_at : <a href="../../Time.html">Time</a>)
 
-        <a class="method-permalink" href="#created_at%3D%28_created_at%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#created_at%3D%28_created_at%3ATime%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3141,12 +3166,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="updated_at:String-instance-method">
+    <div class="entry-detail" id="updated_at:Time-instance-method">
       <div class="signature">
         
-        def <strong>updated_at</strong> : String
+        def <strong>updated_at</strong> : <a href="../../Time.html">Time</a>
 
-        <a class="method-permalink" href="#updated_at%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#updated_at%3ATime-instance-method">#</a>
       </div>
       
       <br/>
@@ -3155,12 +3180,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="updated_at=(_updated_at:String)-instance-method">
+    <div class="entry-detail" id="updated_at=(_updated_at:Time)-instance-method">
       <div class="signature">
         
-        def <strong>updated_at=</strong>(_updated_at : String)
+        def <strong>updated_at=</strong>(_updated_at : <a href="../../Time.html">Time</a>)
 
-        <a class="method-permalink" href="#updated_at%3D%28_updated_at%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#updated_at%3D%28_updated_at%3ATime%29-instance-method">#</a>
       </div>
       
       <br/>

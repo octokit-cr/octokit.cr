@@ -8,7 +8,7 @@ module Octokit
         inviter: User,
 
         permissions: String,
-        created_at: String,
+        created_at: {type: Time, converter: Time::ISO8601Converter},
         url: String,
         html_url: String
       )

@@ -71,6 +71,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Releases" data-name="octokit::client::releases">
+      <a href="../../Octokit/Client/Releases.html">Releases</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Repositories" data-name="octokit::client::repositories">
       <a href="../../Octokit/Client/Repositories.html">Repositories</a>
       
@@ -83,6 +88,11 @@
   
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Search" data-name="octokit::client::search">
       <a href="../../Octokit/Client/Search.html">Search</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Statuses" data-name="octokit::client::statuses">
+      <a href="../../Octokit/Client/Statuses.html">Statuses</a>
       
     </li>
   
@@ -1806,6 +1816,21 @@
       
     </li>
   
+  <li class="parent " data-id="github.com/watzon/octokit.cr/Time" data-name="time">
+      <a href="../../Time.html">Time</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/watzon/octokit.cr/Time/ISO8601Converter" data-name="time::iso8601converter">
+      <a href="../../Time/ISO8601Converter.html">ISO8601Converter</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
 </ul>
 
   </div>
@@ -1841,7 +1866,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/models/teams.cr#L28" target="_blank">
+      <a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/models/teams.cr#L28" target="_blank">
         octokit/models/teams.cr
       </a>
     
@@ -1856,12 +1881,12 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28id%3AInt64%2Cnode_id%3AString%2Clogin%3AString%2Cemail%3AString%2Crole%3AString%2Ccreated_at%3AString%2Cinviter%3AUser%2Cteam_count%3AInt32%2Cinvitation_team_url%3AString%29-class-method" class="signature"><strong>.new</strong>(id : Int64, node_id : String, login : String, email : String, role : String, created_at : String, inviter : User, team_count : Int32, invitation_team_url : String)</a>
+        <a href="#new%28id%3AInt64%2Cnode_id%3AString%2Clogin%3AString%2Cemail%3AString%2Crole%3AString%2Ccreated_at%3ATime%2Cinviter%3AUser%2Cteam_count%3AInt32%2Cinvitation_team_url%3AString%29-class-method" class="signature"><strong>.new</strong>(id : Int64, node_id : String, login : String, email : String, role : String, created_at : Time, inviter : User, team_count : Int32, invitation_team_url : String)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28__temp_4389%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_4389 : JSON::PullParser)</a>
+        <a href="#new%28__temp_4391%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_4391 : JSON::PullParser)</a>
         
       </li>
     
@@ -1875,12 +1900,12 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#created_at%3AString-instance-method" class="signature"><strong>#created_at</strong> : String</a>
+        <a href="#created_at%3ATime-instance-method" class="signature"><strong>#created_at</strong> : Time</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#created_at%3D%28_created_at%3AString%29-instance-method" class="signature"><strong>#created_at=</strong>(_created_at : String)</a>
+        <a href="#created_at%3D%28_created_at%3ATime%29-instance-method" class="signature"><strong>#created_at=</strong>(_created_at : Time)</a>
         
       </li>
     
@@ -2012,12 +2037,12 @@
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(id:Int64,node_id:String,login:String,email:String,role:String,created_at:String,inviter:User,team_count:Int32,invitation_team_url:String)-class-method">
+    <div class="entry-detail" id="new(id:Int64,node_id:String,login:String,email:String,role:String,created_at:Time,inviter:User,team_count:Int32,invitation_team_url:String)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(id : Int64, node_id : String, login : String, email : String, role : String, created_at : String, inviter : <a href="../../Octokit/Models/User.html">User</a>, team_count : Int32, invitation_team_url : String)
+        def self.<strong>new</strong>(id : Int64, node_id : String, login : String, email : String, role : String, created_at : <a href="../../Time.html">Time</a>, inviter : <a href="../../Octokit/Models/User.html">User</a>, team_count : Int32, invitation_team_url : String)
 
-        <a class="method-permalink" href="#new%28id%3AInt64%2Cnode_id%3AString%2Clogin%3AString%2Cemail%3AString%2Crole%3AString%2Ccreated_at%3AString%2Cinviter%3AUser%2Cteam_count%3AInt32%2Cinvitation_team_url%3AString%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28id%3AInt64%2Cnode_id%3AString%2Clogin%3AString%2Cemail%3AString%2Crole%3AString%2Ccreated_at%3ATime%2Cinviter%3AUser%2Cteam_count%3AInt32%2Cinvitation_team_url%3AString%29-class-method">#</a>
       </div>
       
       <br/>
@@ -2026,12 +2051,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="new(__temp_4389:JSON::PullParser)-class-method">
+    <div class="entry-detail" id="new(__temp_4391:JSON::PullParser)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(__temp_4389 : JSON::PullParser)
+        def self.<strong>new</strong>(__temp_4391 : JSON::PullParser)
 
-        <a class="method-permalink" href="#new%28__temp_4389%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28__temp_4391%3AJSON%3A%3APullParser%29-class-method">#</a>
       </div>
       
       <br/>
@@ -2047,12 +2072,12 @@
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="created_at:String-instance-method">
+    <div class="entry-detail" id="created_at:Time-instance-method">
       <div class="signature">
         
-        def <strong>created_at</strong> : String
+        def <strong>created_at</strong> : <a href="../../Time.html">Time</a>
 
-        <a class="method-permalink" href="#created_at%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#created_at%3ATime-instance-method">#</a>
       </div>
       
       <br/>
@@ -2061,12 +2086,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="created_at=(_created_at:String)-instance-method">
+    <div class="entry-detail" id="created_at=(_created_at:Time)-instance-method">
       <div class="signature">
         
-        def <strong>created_at=</strong>(_created_at : String)
+        def <strong>created_at=</strong>(_created_at : <a href="../../Time.html">Time</a>)
 
-        <a class="method-permalink" href="#created_at%3D%28_created_at%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#created_at%3D%28_created_at%3ATime%29-instance-method">#</a>
       </div>
       
       <br/>

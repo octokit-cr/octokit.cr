@@ -12,7 +12,7 @@ module Octokit
         reason: String,
 
         unread: Bool,
-        updated_at: String, # TODO: Create converter for 2014-11-07T22:01:45Z
+        updated_at: {type: Time, converter: Time::ISO8601Converter}, # TODO: Create converter for 2014-11-07T22:01:45Z
         last_read_at: String,
         url: String
       )

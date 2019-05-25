@@ -1,4 +1,5 @@
 require "json"
+require "xml"
 
 module Octokit
   class Error < Exception
@@ -124,6 +125,11 @@ module Octokit
 
     private def data
       @data ||= JSON.parse(@response.body)
+    rescue JSON::ParseException
+      # TODO: Clean this up
+      xml = XML.parse(@response.body)
+      title = xml.xpath_node("//title")
+      @data ||= JSON.parse("\{\"message\": \"#{title.not_nil!.content}\"}")
     end
 
     private def response_message

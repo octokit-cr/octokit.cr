@@ -32,7 +32,7 @@ module Octokit
         pusher: User,
         commit: String,
         duration: Int32,
-        created_at: String,
+        created_at: {type: Time, converter: Time::ISO8601Converter},
         updated_at: String
       )
     end

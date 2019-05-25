@@ -1,3 +1,4 @@
+require "./octokit/core_ext/*"
 require "./octokit/macros"
 require "./octokit/helpers"
 require "./octokit/default"

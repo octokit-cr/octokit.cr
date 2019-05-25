@@ -9,7 +9,7 @@ module Octokit
         description: String,
         external_url: String,
         html_url: String,
-        created_at: String,
+        created_at: {type: Time, converter: Time::ISO8601Converter},
         updated_at: String
       )
     end
@@ -44,7 +44,7 @@ module Octokit
         repository_selection: String,
         events: Array(String),
         permissions: InstallationPermissions,
-        created_at: String,
+        created_at: {type: Time, converter: Time::ISO8601Converter},
         updated_at: String
       )
     end

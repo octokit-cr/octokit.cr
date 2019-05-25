@@ -71,6 +71,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Releases" data-name="octokit::client::releases">
+      <a href="../../Octokit/Client/Releases.html">Releases</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Repositories" data-name="octokit::client::repositories">
       <a href="../../Octokit/Client/Repositories.html">Repositories</a>
       
@@ -83,6 +88,11 @@
   
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Search" data-name="octokit::client::search">
       <a href="../../Octokit/Client/Search.html">Search</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Statuses" data-name="octokit::client::statuses">
+      <a href="../../Octokit/Client/Statuses.html">Statuses</a>
       
     </li>
   
@@ -1806,6 +1816,21 @@
       
     </li>
   
+  <li class="parent " data-id="github.com/watzon/octokit.cr/Time" data-name="time">
+      <a href="../../Time.html">Time</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/watzon/octokit.cr/Time/ISO8601Converter" data-name="time::iso8601converter">
+      <a href="../../Time/ISO8601Converter.html">ISO8601Converter</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
 </ul>
 
   </div>
@@ -1841,7 +1866,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/models/orgs.cr#L3" target="_blank">
+      <a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/models/orgs.cr#L3" target="_blank">
         octokit/models/orgs.cr
       </a>
     
@@ -1856,7 +1881,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28login%3AString%2Cid%3AInt64%2Cnode_id%3AString%2Cavatar_url%3AString%2Chtml_url%3AString%2Cname%3AString%2Ccompany%3AString%2Cblog%3AString%2Clocation%3AString%2Cemail%3AString%2Cdescription%3AString%2Cpublic_repos%3AInt32%2Cpublic_gists%3AInt32%2Cfollowers%3AInt32%2Cfollowing%3AInt32%2Ccreated_at%3AString%2Cupdated_at%3AString%2Ctotal_private_repos%3AInt32%2Cowned_private_repos%3AInt32%2Cprivate_gists%3AInt32%2Cdisk_usage%3AInt32%2Ccollaborators%3AInt32%2Cbilling_email%3AString%2Ctype%3AString%2Cplan%3APlan%2Ctwo_factor_requirement_enabled%3ABool%2Cdefault_repo_permission%3AString%2Cdefault_repo_settings%3AString%2Cmembers_can_create_repos%3ABool%2Curl%3AString%2Cevents_url%3AString%2Chooks_url%3AString%2Cissues_url%3AString%2Cmembers_url%3AString%2Cpublic_members_url%3AString%2Crepos_url%3AString%29-class-method" class="signature"><strong>.new</strong>(login : String, id : Int64, node_id : String, avatar_url : String, html_url : String, name : String, company : String, blog : String, location : String, email : String, description : String, public_repos : Int32, public_gists : Int32, followers : Int32, following : Int32, created_at : String, updated_at : String, total_private_repos : Int32, owned_private_repos : Int32, private_gists : Int32, disk_usage : Int32, collaborators : Int32, billing_email : String, type : String, plan : Plan, two_factor_requirement_enabled : Bool, default_repo_permission : String, default_repo_settings : String, members_can_create_repos : Bool, url : String, events_url : String, hooks_url : String, issues_url : String, members_url : String, public_members_url : String, repos_url : String)</a>
+        <a href="#new%28login%3AString%2Cid%3AInt64%2Cnode_id%3AString%2Cavatar_url%3AString%2Chtml_url%3AString%2Cname%3AString%2Ccompany%3AString%2Cblog%3AString%2Clocation%3AString%2Cemail%3AString%2Cdescription%3AString%2Cpublic_repos%3AInt32%2Cpublic_gists%3AInt32%2Cfollowers%3AInt32%2Cfollowing%3AInt32%2Ccreated_at%3ATime%2Cupdated_at%3ATime%2Ctotal_private_repos%3AInt32%2Cowned_private_repos%3AInt32%2Cprivate_gists%3AInt32%2Cdisk_usage%3AInt32%2Ccollaborators%3AInt32%2Cbilling_email%3AString%2Ctype%3AString%2Cplan%3APlan%2Ctwo_factor_requirement_enabled%3ABool%2Cdefault_repo_permission%3AString%2Cdefault_repo_settings%3AString%2Cmembers_can_create_repos%3ABool%2Curl%3AString%2Cevents_url%3AString%2Chooks_url%3AString%2Cissues_url%3AString%2Cmembers_url%3AString%2Cpublic_members_url%3AString%2Crepos_url%3AString%29-class-method" class="signature"><strong>.new</strong>(login : String, id : Int64, node_id : String, avatar_url : String, html_url : String, name : String, company : String, blog : String, location : String, email : String, description : String, public_repos : Int32, public_gists : Int32, followers : Int32, following : Int32, created_at : Time, updated_at : Time, total_private_repos : Int32, owned_private_repos : Int32, private_gists : Int32, disk_usage : Int32, collaborators : Int32, billing_email : String, type : String, plan : Plan, two_factor_requirement_enabled : Bool, default_repo_permission : String, default_repo_settings : String, members_can_create_repos : Bool, url : String, events_url : String, hooks_url : String, issues_url : String, members_url : String, public_members_url : String, repos_url : String)</a>
         
       </li>
     
@@ -1935,12 +1960,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#created_at%3AString-instance-method" class="signature"><strong>#created_at</strong> : String</a>
+        <a href="#created_at%3ATime-instance-method" class="signature"><strong>#created_at</strong> : Time</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#created_at%3D%28_created_at%3AString%29-instance-method" class="signature"><strong>#created_at=</strong>(_created_at : String)</a>
+        <a href="#created_at%3D%28_created_at%3ATime%29-instance-method" class="signature"><strong>#created_at=</strong>(_created_at : Time)</a>
         
       </li>
     
@@ -2235,12 +2260,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#updated_at%3AString-instance-method" class="signature"><strong>#updated_at</strong> : String</a>
+        <a href="#updated_at%3ATime-instance-method" class="signature"><strong>#updated_at</strong> : Time</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#updated_at%3D%28_updated_at%3AString%29-instance-method" class="signature"><strong>#updated_at=</strong>(_updated_at : String)</a>
+        <a href="#updated_at%3D%28_updated_at%3ATime%29-instance-method" class="signature"><strong>#updated_at=</strong>(_updated_at : Time)</a>
         
       </li>
     
@@ -2297,12 +2322,12 @@
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(login:String,id:Int64,node_id:String,avatar_url:String,html_url:String,name:String,company:String,blog:String,location:String,email:String,description:String,public_repos:Int32,public_gists:Int32,followers:Int32,following:Int32,created_at:String,updated_at:String,total_private_repos:Int32,owned_private_repos:Int32,private_gists:Int32,disk_usage:Int32,collaborators:Int32,billing_email:String,type:String,plan:Plan,two_factor_requirement_enabled:Bool,default_repo_permission:String,default_repo_settings:String,members_can_create_repos:Bool,url:String,events_url:String,hooks_url:String,issues_url:String,members_url:String,public_members_url:String,repos_url:String)-class-method">
+    <div class="entry-detail" id="new(login:String,id:Int64,node_id:String,avatar_url:String,html_url:String,name:String,company:String,blog:String,location:String,email:String,description:String,public_repos:Int32,public_gists:Int32,followers:Int32,following:Int32,created_at:Time,updated_at:Time,total_private_repos:Int32,owned_private_repos:Int32,private_gists:Int32,disk_usage:Int32,collaborators:Int32,billing_email:String,type:String,plan:Plan,two_factor_requirement_enabled:Bool,default_repo_permission:String,default_repo_settings:String,members_can_create_repos:Bool,url:String,events_url:String,hooks_url:String,issues_url:String,members_url:String,public_members_url:String,repos_url:String)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(login : String, id : Int64, node_id : String, avatar_url : String, html_url : String, name : String, company : String, blog : String, location : String, email : String, description : String, public_repos : Int32, public_gists : Int32, followers : Int32, following : Int32, created_at : String, updated_at : String, total_private_repos : Int32, owned_private_repos : Int32, private_gists : Int32, disk_usage : Int32, collaborators : Int32, billing_email : String, type : String, plan : <a href="../../Octokit/Models/Plan.html">Plan</a>, two_factor_requirement_enabled : Bool, default_repo_permission : String, default_repo_settings : String, members_can_create_repos : Bool, url : String, events_url : String, hooks_url : String, issues_url : String, members_url : String, public_members_url : String, repos_url : String)
+        def self.<strong>new</strong>(login : String, id : Int64, node_id : String, avatar_url : String, html_url : String, name : String, company : String, blog : String, location : String, email : String, description : String, public_repos : Int32, public_gists : Int32, followers : Int32, following : Int32, created_at : <a href="../../Time.html">Time</a>, updated_at : <a href="../../Time.html">Time</a>, total_private_repos : Int32, owned_private_repos : Int32, private_gists : Int32, disk_usage : Int32, collaborators : Int32, billing_email : String, type : String, plan : <a href="../../Octokit/Models/Plan.html">Plan</a>, two_factor_requirement_enabled : Bool, default_repo_permission : String, default_repo_settings : String, members_can_create_repos : Bool, url : String, events_url : String, hooks_url : String, issues_url : String, members_url : String, public_members_url : String, repos_url : String)
 
-        <a class="method-permalink" href="#new%28login%3AString%2Cid%3AInt64%2Cnode_id%3AString%2Cavatar_url%3AString%2Chtml_url%3AString%2Cname%3AString%2Ccompany%3AString%2Cblog%3AString%2Clocation%3AString%2Cemail%3AString%2Cdescription%3AString%2Cpublic_repos%3AInt32%2Cpublic_gists%3AInt32%2Cfollowers%3AInt32%2Cfollowing%3AInt32%2Ccreated_at%3AString%2Cupdated_at%3AString%2Ctotal_private_repos%3AInt32%2Cowned_private_repos%3AInt32%2Cprivate_gists%3AInt32%2Cdisk_usage%3AInt32%2Ccollaborators%3AInt32%2Cbilling_email%3AString%2Ctype%3AString%2Cplan%3APlan%2Ctwo_factor_requirement_enabled%3ABool%2Cdefault_repo_permission%3AString%2Cdefault_repo_settings%3AString%2Cmembers_can_create_repos%3ABool%2Curl%3AString%2Cevents_url%3AString%2Chooks_url%3AString%2Cissues_url%3AString%2Cmembers_url%3AString%2Cpublic_members_url%3AString%2Crepos_url%3AString%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28login%3AString%2Cid%3AInt64%2Cnode_id%3AString%2Cavatar_url%3AString%2Chtml_url%3AString%2Cname%3AString%2Ccompany%3AString%2Cblog%3AString%2Clocation%3AString%2Cemail%3AString%2Cdescription%3AString%2Cpublic_repos%3AInt32%2Cpublic_gists%3AInt32%2Cfollowers%3AInt32%2Cfollowing%3AInt32%2Ccreated_at%3ATime%2Cupdated_at%3ATime%2Ctotal_private_repos%3AInt32%2Cowned_private_repos%3AInt32%2Cprivate_gists%3AInt32%2Cdisk_usage%3AInt32%2Ccollaborators%3AInt32%2Cbilling_email%3AString%2Ctype%3AString%2Cplan%3APlan%2Ctwo_factor_requirement_enabled%3ABool%2Cdefault_repo_permission%3AString%2Cdefault_repo_settings%3AString%2Cmembers_can_create_repos%3ABool%2Curl%3AString%2Cevents_url%3AString%2Chooks_url%3AString%2Cissues_url%3AString%2Cmembers_url%3AString%2Cpublic_members_url%3AString%2Crepos_url%3AString%29-class-method">#</a>
       </div>
       
       <br/>
@@ -2341,7 +2366,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/models/orgs.cr#L8" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/models/orgs.cr#L8" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2491,12 +2516,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="created_at:String-instance-method">
+    <div class="entry-detail" id="created_at:Time-instance-method">
       <div class="signature">
         
-        def <strong>created_at</strong> : String
+        def <strong>created_at</strong> : <a href="../../Time.html">Time</a>
 
-        <a class="method-permalink" href="#created_at%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#created_at%3ATime-instance-method">#</a>
       </div>
       
       <br/>
@@ -2505,12 +2530,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="created_at=(_created_at:String)-instance-method">
+    <div class="entry-detail" id="created_at=(_created_at:Time)-instance-method">
       <div class="signature">
         
-        def <strong>created_at=</strong>(_created_at : String)
+        def <strong>created_at=</strong>(_created_at : <a href="../../Time.html">Time</a>)
 
-        <a class="method-permalink" href="#created_at%3D%28_created_at%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#created_at%3D%28_created_at%3ATime%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3062,7 +3087,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/models/orgs.cr#L4" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/models/orgs.cr#L4" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3333,12 +3358,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="updated_at:String-instance-method">
+    <div class="entry-detail" id="updated_at:Time-instance-method">
       <div class="signature">
         
-        def <strong>updated_at</strong> : String
+        def <strong>updated_at</strong> : <a href="../../Time.html">Time</a>
 
-        <a class="method-permalink" href="#updated_at%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#updated_at%3ATime-instance-method">#</a>
       </div>
       
       <br/>
@@ -3347,12 +3372,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="updated_at=(_updated_at:String)-instance-method">
+    <div class="entry-detail" id="updated_at=(_updated_at:Time)-instance-method">
       <div class="signature">
         
-        def <strong>updated_at=</strong>(_updated_at : String)
+        def <strong>updated_at=</strong>(_updated_at : <a href="../../Time.html">Time</a>)
 
-        <a class="method-permalink" href="#updated_at%3D%28_updated_at%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#updated_at%3D%28_updated_at%3ATime%29-instance-method">#</a>
       </div>
       
       <br/>

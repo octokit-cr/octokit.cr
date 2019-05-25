@@ -41,8 +41,8 @@ module Octokit
 
     struct Hook
       Octokit.rest_model(
-        created_at: String,
-        updated_at: String,
+        created_at: {type: Time, converter: Time::ISO8601Converter},
+        updated_at: {type: Time, converter: Time::ISO8601Converter},
         url: String,
         id: Int64,
 

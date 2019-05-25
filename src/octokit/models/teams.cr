@@ -33,7 +33,7 @@ module Octokit
         email: String,
 
         role: String,
-        created_at: String,
+        created_at: {type: Time, converter: Time::ISO8601Converter},
         inviter: User,
         team_count: Int32,
         invitation_team_url: String

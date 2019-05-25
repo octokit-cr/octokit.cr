@@ -9,7 +9,7 @@ module Octokit
 
         event: String,
 
-        created_at: String,
+        created_at: {type: Time, converter: Time::ISO8601Converter},
         issue: Issue,
 
         assignee: User?,

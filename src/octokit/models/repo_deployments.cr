@@ -11,8 +11,8 @@ module Octokit
         environment: String,
         description: String,
         creator: User,
-        created_at: String,
-        updated_at: String,
+        created_at: {type: Time, converter: Time::ISO8601Converter},
+        updated_at: {type: Time, converter: Time::ISO8601Converter},
         statuses_url: String,
         repository_url: String,
         node_id: String
@@ -54,8 +54,8 @@ module Octokit
         creator: User,
         description: String,
         target_url: String,
-        created_at: String,
-        updated_at: String,
+        created_at: {type: Time, converter: Time::ISO8601Converter},
+        updated_at: {type: Time, converter: Time::ISO8601Converter},
         deployment_url: String,
         repository_url: String,
         node_id: String

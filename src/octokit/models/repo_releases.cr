@@ -10,7 +10,7 @@ module Octokit
         prerelease: Bool,
 
         id: Int64?,
-        created_at: String?,
+        created_at: {type: Time?, converter: Time::ISO8601Converter},
         published_at: String?,
         url: String?,
         html_url: String?,
@@ -34,8 +34,8 @@ module Octokit
         content_type: String,
         size: Int32,
         download_count: Int32,
-        created_at: String,
-        updated_at: String,
+        created_at: {type: Time, converter: Time::ISO8601Converter},
+        updated_at: {type: Time, converter: Time::ISO8601Converter},
         browser_download_url: String,
         uploader: User,
         node_id: String

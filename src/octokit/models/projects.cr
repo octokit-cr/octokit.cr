@@ -10,8 +10,8 @@ module Octokit
         body: String,
         number: Int32,
         state: String,
-        created_at: String,
-        updated_at: String,
+        created_at: {type: Time, converter: Time::ISO8601Converter},
+        updated_at: {type: Time, converter: Time::ISO8601Converter},
         node_id: String,
 
         creator: User
@@ -39,8 +39,8 @@ module Octokit
         url: String,
         projects_url: String,
         cards_url: String,
-        created_at: String,
-        updated_at: String,
+        created_at: {type: Time, converter: Time::ISO8601Converter},
+        updated_at: {type: Time, converter: Time::ISO8601Converter},
         node_id: String
       )
     end
@@ -65,8 +65,8 @@ module Octokit
         id: Int64,
         note: String,
         creator: User,
-        created_at: String,
-        updated_at: String,
+        created_at: {type: Time, converter: Time::ISO8601Converter},
+        updated_at: {type: Time, converter: Time::ISO8601Converter},
         node_id: String,
         archived: Bool,
 

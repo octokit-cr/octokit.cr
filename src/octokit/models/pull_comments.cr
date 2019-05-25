@@ -15,8 +15,8 @@ module Octokit
         original_commit_id: String,
         user: User,
         reactions: Reactions,
-        created_at: String,
-        updated_at: String,
+        created_at: {type: Time, converter: Time::ISO8601Converter},
+        updated_at: {type: Time, converter: Time::ISO8601Converter},
 
         author_association: String,
         url: String,

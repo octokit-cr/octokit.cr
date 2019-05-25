@@ -71,6 +71,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Releases" data-name="octokit::client::releases">
+      <a href="../../Octokit/Client/Releases.html">Releases</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Repositories" data-name="octokit::client::repositories">
       <a href="../../Octokit/Client/Repositories.html">Repositories</a>
       
@@ -83,6 +88,11 @@
   
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Search" data-name="octokit::client::search">
       <a href="../../Octokit/Client/Search.html">Search</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Statuses" data-name="octokit::client::statuses">
+      <a href="../../Octokit/Client/Statuses.html">Statuses</a>
       
     </li>
   
@@ -1806,6 +1816,21 @@
       
     </li>
   
+  <li class="parent " data-id="github.com/watzon/octokit.cr/Time" data-name="time">
+      <a href="../../Time.html">Time</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/watzon/octokit.cr/Time/ISO8601Converter" data-name="time::iso8601converter">
+      <a href="../../Time/ISO8601Converter.html">ISO8601Converter</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
 </ul>
 
   </div>
@@ -1841,7 +1866,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/models/repos.cr#L3" target="_blank">
+      <a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/models/repos.cr#L3" target="_blank">
         octokit/models/repos.cr
       </a>
     
@@ -1856,12 +1881,12 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28id%3AInt64%2Cnode_id%3AString%2Cowner%3ARepositoryOwner%2Cname%3AString%2Cfull_name%3AString%2Cdescription%3A%3A%3AUnion%28String%2CNil%29%2Chomepage%3A%3A%3AUnion%28String%2CNil%29%2Ccode_of_conduct%3A%3A%3AUnion%28CodeOfConduct%2CNil%29%2Cdefault_branch%3AString%2Cmaster_branch%3A%3A%3AUnion%28String%2CNil%29%2Ccreated_at%3AString%2Cpushed_at%3AString%2Cupdated_at%3AString%2Chtml_url%3AString%2Cclone_url%3AString%2Cgit_url%3AString%2Cmirror_url%3A%3A%3AUnion%28String%2CNil%29%2Cssh_url%3AString%2Csvn_url%3AString%2Clanguage%3A%3A%3AUnion%28String%2CNil%29%2Cfork%3ABool%2Cforks_count%3AInt32%2Cnetwork_count%3A%3A%3AUnion%28Int32%2CNil%29%2Copen_issues_count%3AInt32%2Cstargazers_count%3AInt32%2Csubscribers_count%3A%3A%3AUnion%28Int32%2CNil%29%2Cwatchers_count%3AInt32%2Csize%3AInt32%2Cauto_init%3A%3A%3AUnion%28Bool%2CNil%29%2Cparent%3A%3A%3AUnion%28Repository%2CNil%29%2Csource%3A%3A%3AUnion%28Repository%2CNil%29%2Corganization%3A%3A%3AUnion%28Organization%2CNil%29%2Cpermissions%3A%3A%3AUnion%28Hash%28String%2CBool%29%2CNil%29%2Callow_rebase_merge%3A%3A%3AUnion%28Bool%2CNil%29%2Callow_squash_merge%3A%3A%3AUnion%28Bool%2CNil%29%2Callow_merge_commit%3A%3A%3AUnion%28Bool%2CNil%29%2Ctopics%3A%3A%3AUnion%28Array%28String%29%2CNil%29%2Carchived%3ABool%2Cdisabled%3ABool%2Clicense%3A%3A%3AUnion%28License%2CNil%29%2Cprivate__arg0%3ABool%2Chas_issues%3ABool%2Chas_wiki%3ABool%2Chas_pages%3ABool%2Chas_projects%3ABool%2Chas_downloads%3ABool%2Clicense_template%3A%3A%3AUnion%28String%2CNil%29%2Cgitignore_template%3A%3A%3AUnion%28String%2CNil%29%2Cteam_id%3A%3A%3AUnion%28Int64%2CNil%29%2Curl%3AString%2Carchive_url%3AString%2Cassignees_url%3AString%2Cblobs_url%3AString%2Cbranches_url%3AString%2Ccollaborators_url%3AString%2Ccomments_url%3AString%2Ccommits_url%3AString%2Ccompare_url%3AString%2Ccontents_url%3AString%2Ccontributors_url%3AString%2Cdeployments_url%3AString%2Cdownloads_url%3AString%2Cevents_url%3AString%2Cforks_url%3AString%2Cgit_commits_url%3AString%2Cgit_refs_url%3AString%2Cgit_tags_url%3AString%2Chooks_url%3AString%2Cissue_comment_url%3A%3A%3AUnion%28String%2CNil%29%2Cissue_events_url%3AString%2Cissues_url%3AString%2Ckeys_url%3AString%2Clabels_url%3AString%2Clanguages_url%3AString%2Cmerges_url%3AString%2Cmilestones_url%3AString%2Cnotifications_url%3AString%2Cpulls_url%3AString%2Creleases_url%3AString%2Cstargazers_url%3AString%2Cstatuses_url%3AString%2Csubscribers_url%3AString%2Csubscription_url%3AString%2Ctags_url%3AString%2Ctrees_url%3AString%2Cteams_url%3AString%2Ctext_matches%3A%3A%3AUnion%28Array%28TextMatch%29%2CNil%29%29-class-method" class="signature"><strong>.new</strong>(id : Int64, node_id : String, owner : RepositoryOwner, name : String, full_name : String, description : ::Union(String, Nil), homepage : ::Union(String, Nil), code_of_conduct : ::Union(CodeOfConduct, Nil), default_branch : String, master_branch : ::Union(String, Nil), created_at : String, pushed_at : String, updated_at : String, html_url : String, clone_url : String, git_url : String, mirror_url : ::Union(String, Nil), ssh_url : String, svn_url : String, language : ::Union(String, Nil), fork : Bool, forks_count : Int32, network_count : ::Union(Int32, Nil), open_issues_count : Int32, stargazers_count : Int32, subscribers_count : ::Union(Int32, Nil), watchers_count : Int32, size : Int32, auto_init : ::Union(Bool, Nil), parent : ::Union(Repository, Nil), source : ::Union(Repository, Nil), organization : ::Union(Organization, Nil), permissions : ::Union(Hash(String, Bool), Nil), allow_rebase_merge : ::Union(Bool, Nil), allow_squash_merge : ::Union(Bool, Nil), allow_merge_commit : ::Union(Bool, Nil), topics : ::Union(Array(String), Nil), archived : Bool, disabled : Bool, license : ::Union(License, Nil), private __arg0 : Bool, has_issues : Bool, has_wiki : Bool, has_pages : Bool, has_projects : Bool, has_downloads : Bool, license_template : ::Union(String, Nil), gitignore_template : ::Union(String, Nil), team_id : ::Union(Int64, Nil), url : String, archive_url : String, assignees_url : String, blobs_url : String, branches_url : String, collaborators_url : String, comments_url : String, commits_url : String, compare_url : String, contents_url : String, contributors_url : String, deployments_url : String, downloads_url : String, events_url : String, forks_url : String, git_commits_url : String, git_refs_url : String, git_tags_url : String, hooks_url : String, issue_comment_url : ::Union(String, Nil), issue_events_url : String, issues_url : String, keys_url : String, labels_url : String, languages_url : String, merges_url : String, milestones_url : String, notifications_url : String, pulls_url : String, releases_url : String, stargazers_url : String, statuses_url : String, subscribers_url : String, subscription_url : String, tags_url : String, trees_url : String, teams_url : String, text_matches : ::Union(Array(TextMatch), Nil))</a>
+        <a href="#new%28id%3AInt64%2Cnode_id%3AString%2Cowner%3ARepositoryOwner%2Cname%3AString%2Cfull_name%3AString%2Cdescription%3A%3A%3AUnion%28String%2CNil%29%2Chomepage%3A%3A%3AUnion%28String%2CNil%29%2Ccode_of_conduct%3A%3A%3AUnion%28CodeOfConduct%2CNil%29%2Cdefault_branch%3A%3A%3AUnion%28String%2CNil%29%2Cmaster_branch%3A%3A%3AUnion%28String%2CNil%29%2Ccreated_at%3A%3A%3AUnion%28Time%2CNil%29%2Cpushed_at%3A%3A%3AUnion%28Time%2CNil%29%2Cupdated_at%3A%3A%3AUnion%28Time%2CNil%29%2Chtml_url%3AString%2Cclone_url%3A%3A%3AUnion%28String%2CNil%29%2Cgit_url%3A%3A%3AUnion%28String%2CNil%29%2Cmirror_url%3A%3A%3AUnion%28String%2CNil%29%2Cssh_url%3A%3A%3AUnion%28String%2CNil%29%2Csvn_url%3A%3A%3AUnion%28String%2CNil%29%2Clanguage%3A%3A%3AUnion%28String%2CNil%29%2Cfork%3ABool%2Cforks_count%3A%3A%3AUnion%28Int32%2CNil%29%2Cnetwork_count%3A%3A%3AUnion%28Int32%2CNil%29%2Copen_issues_count%3A%3A%3AUnion%28Int32%2CNil%29%2Cstargazers_count%3A%3A%3AUnion%28Int32%2CNil%29%2Csubscribers_count%3A%3A%3AUnion%28Int32%2CNil%29%2Cwatchers_count%3A%3A%3AUnion%28Int32%2CNil%29%2Csize%3A%3A%3AUnion%28Int32%2CNil%29%2Cauto_init%3A%3A%3AUnion%28Bool%2CNil%29%2Cparent%3A%3A%3AUnion%28Repository%2CNil%29%2Csource%3A%3A%3AUnion%28Repository%2CNil%29%2Corganization%3A%3A%3AUnion%28Organization%2CNil%29%2Cpermissions%3A%3A%3AUnion%28Hash%28String%2CBool%29%2CNil%29%2Callow_rebase_merge%3A%3A%3AUnion%28Bool%2CNil%29%2Callow_squash_merge%3A%3A%3AUnion%28Bool%2CNil%29%2Callow_merge_commit%3A%3A%3AUnion%28Bool%2CNil%29%2Ctopics%3A%3A%3AUnion%28Array%28String%29%2CNil%29%2Carchived%3A%3A%3AUnion%28Bool%2CNil%29%2Cdisabled%3A%3A%3AUnion%28Bool%2CNil%29%2Clicense%3A%3A%3AUnion%28License%2CNil%29%2Cprivate__arg0%3ABool%2Chas_issues%3A%3A%3AUnion%28Bool%2CNil%29%2Chas_wiki%3A%3A%3AUnion%28Bool%2CNil%29%2Chas_pages%3A%3A%3AUnion%28Bool%2CNil%29%2Chas_projects%3A%3A%3AUnion%28Bool%2CNil%29%2Chas_downloads%3A%3A%3AUnion%28Bool%2CNil%29%2Clicense_template%3A%3A%3AUnion%28String%2CNil%29%2Cgitignore_template%3A%3A%3AUnion%28String%2CNil%29%2Cteam_id%3A%3A%3AUnion%28Int64%2CNil%29%2Curl%3AString%2Carchive_url%3AString%2Cassignees_url%3AString%2Cblobs_url%3AString%2Cbranches_url%3AString%2Ccollaborators_url%3AString%2Ccomments_url%3AString%2Ccommits_url%3AString%2Ccompare_url%3AString%2Ccontents_url%3AString%2Ccontributors_url%3AString%2Cdeployments_url%3AString%2Cdownloads_url%3AString%2Cevents_url%3AString%2Cforks_url%3AString%2Cgit_commits_url%3AString%2Cgit_refs_url%3AString%2Cgit_tags_url%3AString%2Chooks_url%3AString%2Cissue_comment_url%3A%3A%3AUnion%28String%2CNil%29%2Cissue_events_url%3AString%2Cissues_url%3AString%2Ckeys_url%3AString%2Clabels_url%3AString%2Clanguages_url%3AString%2Cmerges_url%3AString%2Cmilestones_url%3AString%2Cnotifications_url%3AString%2Cpulls_url%3AString%2Creleases_url%3AString%2Cstargazers_url%3AString%2Cstatuses_url%3AString%2Csubscribers_url%3AString%2Csubscription_url%3AString%2Ctags_url%3AString%2Ctrees_url%3AString%2Cteams_url%3AString%2Ctext_matches%3A%3A%3AUnion%28Array%28TextMatch%29%2CNil%29%29-class-method" class="signature"><strong>.new</strong>(id : Int64, node_id : String, owner : RepositoryOwner, name : String, full_name : String, description : ::Union(String, Nil), homepage : ::Union(String, Nil), code_of_conduct : ::Union(CodeOfConduct, Nil), default_branch : ::Union(String, Nil), master_branch : ::Union(String, Nil), created_at : ::Union(Time, Nil), pushed_at : ::Union(Time, Nil), updated_at : ::Union(Time, Nil), html_url : String, clone_url : ::Union(String, Nil), git_url : ::Union(String, Nil), mirror_url : ::Union(String, Nil), ssh_url : ::Union(String, Nil), svn_url : ::Union(String, Nil), language : ::Union(String, Nil), fork : Bool, forks_count : ::Union(Int32, Nil), network_count : ::Union(Int32, Nil), open_issues_count : ::Union(Int32, Nil), stargazers_count : ::Union(Int32, Nil), subscribers_count : ::Union(Int32, Nil), watchers_count : ::Union(Int32, Nil), size : ::Union(Int32, Nil), auto_init : ::Union(Bool, Nil), parent : ::Union(Repository, Nil), source : ::Union(Repository, Nil), organization : ::Union(Organization, Nil), permissions : ::Union(Hash(String, Bool), Nil), allow_rebase_merge : ::Union(Bool, Nil), allow_squash_merge : ::Union(Bool, Nil), allow_merge_commit : ::Union(Bool, Nil), topics : ::Union(Array(String), Nil), archived : ::Union(Bool, Nil), disabled : ::Union(Bool, Nil), license : ::Union(License, Nil), private __arg0 : Bool, has_issues : ::Union(Bool, Nil), has_wiki : ::Union(Bool, Nil), has_pages : ::Union(Bool, Nil), has_projects : ::Union(Bool, Nil), has_downloads : ::Union(Bool, Nil), license_template : ::Union(String, Nil), gitignore_template : ::Union(String, Nil), team_id : ::Union(Int64, Nil), url : String, archive_url : String, assignees_url : String, blobs_url : String, branches_url : String, collaborators_url : String, comments_url : String, commits_url : String, compare_url : String, contents_url : String, contributors_url : String, deployments_url : String, downloads_url : String, events_url : String, forks_url : String, git_commits_url : String, git_refs_url : String, git_tags_url : String, hooks_url : String, issue_comment_url : ::Union(String, Nil), issue_events_url : String, issues_url : String, keys_url : String, labels_url : String, languages_url : String, merges_url : String, milestones_url : String, notifications_url : String, pulls_url : String, releases_url : String, stargazers_url : String, statuses_url : String, subscribers_url : String, subscription_url : String, tags_url : String, trees_url : String, teams_url : String, text_matches : ::Union(Array(TextMatch), Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28__temp_3716%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_3716 : JSON::PullParser)</a>
+        <a href="#new%28__temp_3718%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_3718 : JSON::PullParser)</a>
         
       </li>
     
@@ -1940,12 +1965,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#archived%3ABool-instance-method" class="signature"><strong>#archived</strong> : Bool</a>
+        <a href="#archived%3A%3A%3AUnion%28Bool%2CNil%29-instance-method" class="signature"><strong>#archived</strong> : ::Union(Bool, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#archived%3D%28_archived%3ABool%29-instance-method" class="signature"><strong>#archived=</strong>(_archived : Bool)</a>
+        <a href="#archived%3D%28_archived%3A%3A%3AUnion%28Bool%2CNil%29%29-instance-method" class="signature"><strong>#archived=</strong>(_archived : ::Union(Bool, Nil))</a>
         
       </li>
     
@@ -1990,12 +2015,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#clone_url%3AString-instance-method" class="signature"><strong>#clone_url</strong> : String</a>
+        <a href="#clone_url%3A%3A%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#clone_url</strong> : ::Union(String, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#clone_url%3D%28_clone_url%3AString%29-instance-method" class="signature"><strong>#clone_url=</strong>(_clone_url : String)</a>
+        <a href="#clone_url%3D%28_clone_url%3A%3A%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#clone_url=</strong>(_clone_url : ::Union(String, Nil))</a>
         
       </li>
     
@@ -2070,22 +2095,22 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#created_at%3AString-instance-method" class="signature"><strong>#created_at</strong> : String</a>
+        <a href="#created_at%3A%3A%3AUnion%28Time%2CNil%29-instance-method" class="signature"><strong>#created_at</strong> : ::Union(Time, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#created_at%3D%28_created_at%3AString%29-instance-method" class="signature"><strong>#created_at=</strong>(_created_at : String)</a>
+        <a href="#created_at%3D%28_created_at%3A%3A%3AUnion%28Time%2CNil%29%29-instance-method" class="signature"><strong>#created_at=</strong>(_created_at : ::Union(Time, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#default_branch%3AString-instance-method" class="signature"><strong>#default_branch</strong> : String</a>
+        <a href="#default_branch%3A%3A%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#default_branch</strong> : ::Union(String, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#default_branch%3D%28_default_branch%3AString%29-instance-method" class="signature"><strong>#default_branch=</strong>(_default_branch : String)</a>
+        <a href="#default_branch%3D%28_default_branch%3A%3A%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#default_branch=</strong>(_default_branch : ::Union(String, Nil))</a>
         
       </li>
     
@@ -2110,12 +2135,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#disabled%3ABool-instance-method" class="signature"><strong>#disabled</strong> : Bool</a>
+        <a href="#disabled%3A%3A%3AUnion%28Bool%2CNil%29-instance-method" class="signature"><strong>#disabled</strong> : ::Union(Bool, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#disabled%3D%28_disabled%3ABool%29-instance-method" class="signature"><strong>#disabled=</strong>(_disabled : Bool)</a>
+        <a href="#disabled%3D%28_disabled%3A%3A%3AUnion%28Bool%2CNil%29%29-instance-method" class="signature"><strong>#disabled=</strong>(_disabled : ::Union(Bool, Nil))</a>
         
       </li>
     
@@ -2150,12 +2175,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#forks_count%3AInt32-instance-method" class="signature"><strong>#forks_count</strong> : Int32</a>
+        <a href="#forks_count%3A%3A%3AUnion%28Int32%2CNil%29-instance-method" class="signature"><strong>#forks_count</strong> : ::Union(Int32, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#forks_count%3D%28_forks_count%3AInt32%29-instance-method" class="signature"><strong>#forks_count=</strong>(_forks_count : Int32)</a>
+        <a href="#forks_count%3D%28_forks_count%3A%3A%3AUnion%28Int32%2CNil%29%29-instance-method" class="signature"><strong>#forks_count=</strong>(_forks_count : ::Union(Int32, Nil))</a>
         
       </li>
     
@@ -2210,12 +2235,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#git_url%3AString-instance-method" class="signature"><strong>#git_url</strong> : String</a>
+        <a href="#git_url%3A%3A%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#git_url</strong> : ::Union(String, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#git_url%3D%28_git_url%3AString%29-instance-method" class="signature"><strong>#git_url=</strong>(_git_url : String)</a>
+        <a href="#git_url%3D%28_git_url%3A%3A%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#git_url=</strong>(_git_url : ::Union(String, Nil))</a>
         
       </li>
     
@@ -2230,52 +2255,52 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#has_downloads%3ABool-instance-method" class="signature"><strong>#has_downloads</strong> : Bool</a>
+        <a href="#has_downloads%3A%3A%3AUnion%28Bool%2CNil%29-instance-method" class="signature"><strong>#has_downloads</strong> : ::Union(Bool, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#has_downloads%3D%28_has_downloads%3ABool%29-instance-method" class="signature"><strong>#has_downloads=</strong>(_has_downloads : Bool)</a>
+        <a href="#has_downloads%3D%28_has_downloads%3A%3A%3AUnion%28Bool%2CNil%29%29-instance-method" class="signature"><strong>#has_downloads=</strong>(_has_downloads : ::Union(Bool, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#has_issues%3ABool-instance-method" class="signature"><strong>#has_issues</strong> : Bool</a>
+        <a href="#has_issues%3A%3A%3AUnion%28Bool%2CNil%29-instance-method" class="signature"><strong>#has_issues</strong> : ::Union(Bool, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#has_issues%3D%28_has_issues%3ABool%29-instance-method" class="signature"><strong>#has_issues=</strong>(_has_issues : Bool)</a>
+        <a href="#has_issues%3D%28_has_issues%3A%3A%3AUnion%28Bool%2CNil%29%29-instance-method" class="signature"><strong>#has_issues=</strong>(_has_issues : ::Union(Bool, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#has_pages%3ABool-instance-method" class="signature"><strong>#has_pages</strong> : Bool</a>
+        <a href="#has_pages%3A%3A%3AUnion%28Bool%2CNil%29-instance-method" class="signature"><strong>#has_pages</strong> : ::Union(Bool, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#has_pages%3D%28_has_pages%3ABool%29-instance-method" class="signature"><strong>#has_pages=</strong>(_has_pages : Bool)</a>
+        <a href="#has_pages%3D%28_has_pages%3A%3A%3AUnion%28Bool%2CNil%29%29-instance-method" class="signature"><strong>#has_pages=</strong>(_has_pages : ::Union(Bool, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#has_projects%3ABool-instance-method" class="signature"><strong>#has_projects</strong> : Bool</a>
+        <a href="#has_projects%3A%3A%3AUnion%28Bool%2CNil%29-instance-method" class="signature"><strong>#has_projects</strong> : ::Union(Bool, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#has_projects%3D%28_has_projects%3ABool%29-instance-method" class="signature"><strong>#has_projects=</strong>(_has_projects : Bool)</a>
+        <a href="#has_projects%3D%28_has_projects%3A%3A%3AUnion%28Bool%2CNil%29%29-instance-method" class="signature"><strong>#has_projects=</strong>(_has_projects : ::Union(Bool, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#has_wiki%3ABool-instance-method" class="signature"><strong>#has_wiki</strong> : Bool</a>
+        <a href="#has_wiki%3A%3A%3AUnion%28Bool%2CNil%29-instance-method" class="signature"><strong>#has_wiki</strong> : ::Union(Bool, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#has_wiki%3D%28_has_wiki%3ABool%29-instance-method" class="signature"><strong>#has_wiki=</strong>(_has_wiki : Bool)</a>
+        <a href="#has_wiki%3D%28_has_wiki%3A%3A%3AUnion%28Bool%2CNil%29%29-instance-method" class="signature"><strong>#has_wiki=</strong>(_has_wiki : ::Union(Bool, Nil))</a>
         
       </li>
     
@@ -2490,12 +2515,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#open_issues_count%3AInt32-instance-method" class="signature"><strong>#open_issues_count</strong> : Int32</a>
+        <a href="#open_issues_count%3A%3A%3AUnion%28Int32%2CNil%29-instance-method" class="signature"><strong>#open_issues_count</strong> : ::Union(Int32, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#open_issues_count%3D%28_open_issues_count%3AInt32%29-instance-method" class="signature"><strong>#open_issues_count=</strong>(_open_issues_count : Int32)</a>
+        <a href="#open_issues_count%3D%28_open_issues_count%3A%3A%3AUnion%28Int32%2CNil%29%29-instance-method" class="signature"><strong>#open_issues_count=</strong>(_open_issues_count : ::Union(Int32, Nil))</a>
         
       </li>
     
@@ -2560,12 +2585,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#pushed_at%3AString-instance-method" class="signature"><strong>#pushed_at</strong> : String</a>
+        <a href="#pushed_at%3A%3A%3AUnion%28Time%2CNil%29-instance-method" class="signature"><strong>#pushed_at</strong> : ::Union(Time, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#pushed_at%3D%28_pushed_at%3AString%29-instance-method" class="signature"><strong>#pushed_at=</strong>(_pushed_at : String)</a>
+        <a href="#pushed_at%3D%28_pushed_at%3A%3A%3AUnion%28Time%2CNil%29%29-instance-method" class="signature"><strong>#pushed_at=</strong>(_pushed_at : ::Union(Time, Nil))</a>
         
       </li>
     
@@ -2580,12 +2605,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#size%3AInt32-instance-method" class="signature"><strong>#size</strong> : Int32</a>
+        <a href="#size%3A%3A%3AUnion%28Int32%2CNil%29-instance-method" class="signature"><strong>#size</strong> : ::Union(Int32, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#size%3D%28_size%3AInt32%29-instance-method" class="signature"><strong>#size=</strong>(_size : Int32)</a>
+        <a href="#size%3D%28_size%3A%3A%3AUnion%28Int32%2CNil%29%29-instance-method" class="signature"><strong>#size=</strong>(_size : ::Union(Int32, Nil))</a>
         
       </li>
     
@@ -2605,22 +2630,22 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#ssh_url%3AString-instance-method" class="signature"><strong>#ssh_url</strong> : String</a>
+        <a href="#ssh_url%3A%3A%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#ssh_url</strong> : ::Union(String, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#ssh_url%3D%28_ssh_url%3AString%29-instance-method" class="signature"><strong>#ssh_url=</strong>(_ssh_url : String)</a>
+        <a href="#ssh_url%3D%28_ssh_url%3A%3A%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#ssh_url=</strong>(_ssh_url : ::Union(String, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#stargazers_count%3AInt32-instance-method" class="signature"><strong>#stargazers_count</strong> : Int32</a>
+        <a href="#stargazers_count%3A%3A%3AUnion%28Int32%2CNil%29-instance-method" class="signature"><strong>#stargazers_count</strong> : ::Union(Int32, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#stargazers_count%3D%28_stargazers_count%3AInt32%29-instance-method" class="signature"><strong>#stargazers_count=</strong>(_stargazers_count : Int32)</a>
+        <a href="#stargazers_count%3D%28_stargazers_count%3A%3A%3AUnion%28Int32%2CNil%29%29-instance-method" class="signature"><strong>#stargazers_count=</strong>(_stargazers_count : ::Union(Int32, Nil))</a>
         
       </li>
     
@@ -2675,12 +2700,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#svn_url%3AString-instance-method" class="signature"><strong>#svn_url</strong> : String</a>
+        <a href="#svn_url%3A%3A%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#svn_url</strong> : ::Union(String, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#svn_url%3D%28_svn_url%3AString%29-instance-method" class="signature"><strong>#svn_url=</strong>(_svn_url : String)</a>
+        <a href="#svn_url%3D%28_svn_url%3A%3A%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#svn_url=</strong>(_svn_url : ::Union(String, Nil))</a>
         
       </li>
     
@@ -2755,12 +2780,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#updated_at%3AString-instance-method" class="signature"><strong>#updated_at</strong> : String</a>
+        <a href="#updated_at%3A%3A%3AUnion%28Time%2CNil%29-instance-method" class="signature"><strong>#updated_at</strong> : ::Union(Time, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#updated_at%3D%28_updated_at%3AString%29-instance-method" class="signature"><strong>#updated_at=</strong>(_updated_at : String)</a>
+        <a href="#updated_at%3D%28_updated_at%3A%3A%3AUnion%28Time%2CNil%29%29-instance-method" class="signature"><strong>#updated_at=</strong>(_updated_at : ::Union(Time, Nil))</a>
         
       </li>
     
@@ -2775,12 +2800,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#watchers_count%3AInt32-instance-method" class="signature"><strong>#watchers_count</strong> : Int32</a>
+        <a href="#watchers_count%3A%3A%3AUnion%28Int32%2CNil%29-instance-method" class="signature"><strong>#watchers_count</strong> : ::Union(Int32, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#watchers_count%3D%28_watchers_count%3AInt32%29-instance-method" class="signature"><strong>#watchers_count=</strong>(_watchers_count : Int32)</a>
+        <a href="#watchers_count%3D%28_watchers_count%3A%3A%3AUnion%28Int32%2CNil%29%29-instance-method" class="signature"><strong>#watchers_count=</strong>(_watchers_count : ::Union(Int32, Nil))</a>
         
       </li>
     
@@ -2817,12 +2842,12 @@
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(id:Int64,node_id:String,owner:RepositoryOwner,name:String,full_name:String,description:::Union(String,Nil),homepage:::Union(String,Nil),code_of_conduct:::Union(CodeOfConduct,Nil),default_branch:String,master_branch:::Union(String,Nil),created_at:String,pushed_at:String,updated_at:String,html_url:String,clone_url:String,git_url:String,mirror_url:::Union(String,Nil),ssh_url:String,svn_url:String,language:::Union(String,Nil),fork:Bool,forks_count:Int32,network_count:::Union(Int32,Nil),open_issues_count:Int32,stargazers_count:Int32,subscribers_count:::Union(Int32,Nil),watchers_count:Int32,size:Int32,auto_init:::Union(Bool,Nil),parent:::Union(Repository,Nil),source:::Union(Repository,Nil),organization:::Union(Organization,Nil),permissions:::Union(Hash(String,Bool),Nil),allow_rebase_merge:::Union(Bool,Nil),allow_squash_merge:::Union(Bool,Nil),allow_merge_commit:::Union(Bool,Nil),topics:::Union(Array(String),Nil),archived:Bool,disabled:Bool,license:::Union(License,Nil),private__arg0:Bool,has_issues:Bool,has_wiki:Bool,has_pages:Bool,has_projects:Bool,has_downloads:Bool,license_template:::Union(String,Nil),gitignore_template:::Union(String,Nil),team_id:::Union(Int64,Nil),url:String,archive_url:String,assignees_url:String,blobs_url:String,branches_url:String,collaborators_url:String,comments_url:String,commits_url:String,compare_url:String,contents_url:String,contributors_url:String,deployments_url:String,downloads_url:String,events_url:String,forks_url:String,git_commits_url:String,git_refs_url:String,git_tags_url:String,hooks_url:String,issue_comment_url:::Union(String,Nil),issue_events_url:String,issues_url:String,keys_url:String,labels_url:String,languages_url:String,merges_url:String,milestones_url:String,notifications_url:String,pulls_url:String,releases_url:String,stargazers_url:String,statuses_url:String,subscribers_url:String,subscription_url:String,tags_url:String,trees_url:String,teams_url:String,text_matches:::Union(Array(TextMatch),Nil))-class-method">
+    <div class="entry-detail" id="new(id:Int64,node_id:String,owner:RepositoryOwner,name:String,full_name:String,description:::Union(String,Nil),homepage:::Union(String,Nil),code_of_conduct:::Union(CodeOfConduct,Nil),default_branch:::Union(String,Nil),master_branch:::Union(String,Nil),created_at:::Union(Time,Nil),pushed_at:::Union(Time,Nil),updated_at:::Union(Time,Nil),html_url:String,clone_url:::Union(String,Nil),git_url:::Union(String,Nil),mirror_url:::Union(String,Nil),ssh_url:::Union(String,Nil),svn_url:::Union(String,Nil),language:::Union(String,Nil),fork:Bool,forks_count:::Union(Int32,Nil),network_count:::Union(Int32,Nil),open_issues_count:::Union(Int32,Nil),stargazers_count:::Union(Int32,Nil),subscribers_count:::Union(Int32,Nil),watchers_count:::Union(Int32,Nil),size:::Union(Int32,Nil),auto_init:::Union(Bool,Nil),parent:::Union(Repository,Nil),source:::Union(Repository,Nil),organization:::Union(Organization,Nil),permissions:::Union(Hash(String,Bool),Nil),allow_rebase_merge:::Union(Bool,Nil),allow_squash_merge:::Union(Bool,Nil),allow_merge_commit:::Union(Bool,Nil),topics:::Union(Array(String),Nil),archived:::Union(Bool,Nil),disabled:::Union(Bool,Nil),license:::Union(License,Nil),private__arg0:Bool,has_issues:::Union(Bool,Nil),has_wiki:::Union(Bool,Nil),has_pages:::Union(Bool,Nil),has_projects:::Union(Bool,Nil),has_downloads:::Union(Bool,Nil),license_template:::Union(String,Nil),gitignore_template:::Union(String,Nil),team_id:::Union(Int64,Nil),url:String,archive_url:String,assignees_url:String,blobs_url:String,branches_url:String,collaborators_url:String,comments_url:String,commits_url:String,compare_url:String,contents_url:String,contributors_url:String,deployments_url:String,downloads_url:String,events_url:String,forks_url:String,git_commits_url:String,git_refs_url:String,git_tags_url:String,hooks_url:String,issue_comment_url:::Union(String,Nil),issue_events_url:String,issues_url:String,keys_url:String,labels_url:String,languages_url:String,merges_url:String,milestones_url:String,notifications_url:String,pulls_url:String,releases_url:String,stargazers_url:String,statuses_url:String,subscribers_url:String,subscription_url:String,tags_url:String,trees_url:String,teams_url:String,text_matches:::Union(Array(TextMatch),Nil))-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(id : Int64, node_id : String, owner : <a href="../../Octokit/Models/RepositoryOwner.html">RepositoryOwner</a>, name : String, full_name : String, description : ::Union(String, Nil), homepage : ::Union(String, Nil), code_of_conduct : ::Union(<a href="../../Octokit/Models/CodeOfConduct.html">CodeOfConduct</a>, Nil), default_branch : String, master_branch : ::Union(String, Nil), created_at : String, pushed_at : String, updated_at : String, html_url : String, clone_url : String, git_url : String, mirror_url : ::Union(String, Nil), ssh_url : String, svn_url : String, language : ::Union(String, Nil), fork : Bool, forks_count : Int32, network_count : ::Union(Int32, Nil), open_issues_count : Int32, stargazers_count : Int32, subscribers_count : ::Union(Int32, Nil), watchers_count : Int32, size : Int32, auto_init : ::Union(Bool, Nil), parent : ::Union(<a href="../../Octokit/Models/Repository.html">Repository</a>, Nil), source : ::Union(<a href="../../Octokit/Models/Repository.html">Repository</a>, Nil), organization : ::Union(<a href="../../Octokit/Models/Organization.html">Organization</a>, Nil), permissions : ::Union(Hash(String, Bool), Nil), allow_rebase_merge : ::Union(Bool, Nil), allow_squash_merge : ::Union(Bool, Nil), allow_merge_commit : ::Union(Bool, Nil), topics : ::Union(Array(String), Nil), archived : Bool, disabled : Bool, license : ::Union(<a href="../../Octokit/Models/License.html">License</a>, Nil), private __arg0 : Bool, has_issues : Bool, has_wiki : Bool, has_pages : Bool, has_projects : Bool, has_downloads : Bool, license_template : ::Union(String, Nil), gitignore_template : ::Union(String, Nil), team_id : ::Union(Int64, Nil), url : String, archive_url : String, assignees_url : String, blobs_url : String, branches_url : String, collaborators_url : String, comments_url : String, commits_url : String, compare_url : String, contents_url : String, contributors_url : String, deployments_url : String, downloads_url : String, events_url : String, forks_url : String, git_commits_url : String, git_refs_url : String, git_tags_url : String, hooks_url : String, issue_comment_url : ::Union(String, Nil), issue_events_url : String, issues_url : String, keys_url : String, labels_url : String, languages_url : String, merges_url : String, milestones_url : String, notifications_url : String, pulls_url : String, releases_url : String, stargazers_url : String, statuses_url : String, subscribers_url : String, subscription_url : String, tags_url : String, trees_url : String, teams_url : String, text_matches : ::Union(Array(<a href="../../Octokit/Models/TextMatch.html">TextMatch</a>), Nil))
+        def self.<strong>new</strong>(id : Int64, node_id : String, owner : <a href="../../Octokit/Models/RepositoryOwner.html">RepositoryOwner</a>, name : String, full_name : String, description : ::Union(String, Nil), homepage : ::Union(String, Nil), code_of_conduct : ::Union(<a href="../../Octokit/Models/CodeOfConduct.html">CodeOfConduct</a>, Nil), default_branch : ::Union(String, Nil), master_branch : ::Union(String, Nil), created_at : ::Union(<a href="../../Time.html">Time</a>, Nil), pushed_at : ::Union(<a href="../../Time.html">Time</a>, Nil), updated_at : ::Union(<a href="../../Time.html">Time</a>, Nil), html_url : String, clone_url : ::Union(String, Nil), git_url : ::Union(String, Nil), mirror_url : ::Union(String, Nil), ssh_url : ::Union(String, Nil), svn_url : ::Union(String, Nil), language : ::Union(String, Nil), fork : Bool, forks_count : ::Union(Int32, Nil), network_count : ::Union(Int32, Nil), open_issues_count : ::Union(Int32, Nil), stargazers_count : ::Union(Int32, Nil), subscribers_count : ::Union(Int32, Nil), watchers_count : ::Union(Int32, Nil), size : ::Union(Int32, Nil), auto_init : ::Union(Bool, Nil), parent : ::Union(<a href="../../Octokit/Models/Repository.html">Repository</a>, Nil), source : ::Union(<a href="../../Octokit/Models/Repository.html">Repository</a>, Nil), organization : ::Union(<a href="../../Octokit/Models/Organization.html">Organization</a>, Nil), permissions : ::Union(Hash(String, Bool), Nil), allow_rebase_merge : ::Union(Bool, Nil), allow_squash_merge : ::Union(Bool, Nil), allow_merge_commit : ::Union(Bool, Nil), topics : ::Union(Array(String), Nil), archived : ::Union(Bool, Nil), disabled : ::Union(Bool, Nil), license : ::Union(<a href="../../Octokit/Models/License.html">License</a>, Nil), private __arg0 : Bool, has_issues : ::Union(Bool, Nil), has_wiki : ::Union(Bool, Nil), has_pages : ::Union(Bool, Nil), has_projects : ::Union(Bool, Nil), has_downloads : ::Union(Bool, Nil), license_template : ::Union(String, Nil), gitignore_template : ::Union(String, Nil), team_id : ::Union(Int64, Nil), url : String, archive_url : String, assignees_url : String, blobs_url : String, branches_url : String, collaborators_url : String, comments_url : String, commits_url : String, compare_url : String, contents_url : String, contributors_url : String, deployments_url : String, downloads_url : String, events_url : String, forks_url : String, git_commits_url : String, git_refs_url : String, git_tags_url : String, hooks_url : String, issue_comment_url : ::Union(String, Nil), issue_events_url : String, issues_url : String, keys_url : String, labels_url : String, languages_url : String, merges_url : String, milestones_url : String, notifications_url : String, pulls_url : String, releases_url : String, stargazers_url : String, statuses_url : String, subscribers_url : String, subscription_url : String, tags_url : String, trees_url : String, teams_url : String, text_matches : ::Union(Array(<a href="../../Octokit/Models/TextMatch.html">TextMatch</a>), Nil))
 
-        <a class="method-permalink" href="#new%28id%3AInt64%2Cnode_id%3AString%2Cowner%3ARepositoryOwner%2Cname%3AString%2Cfull_name%3AString%2Cdescription%3A%3A%3AUnion%28String%2CNil%29%2Chomepage%3A%3A%3AUnion%28String%2CNil%29%2Ccode_of_conduct%3A%3A%3AUnion%28CodeOfConduct%2CNil%29%2Cdefault_branch%3AString%2Cmaster_branch%3A%3A%3AUnion%28String%2CNil%29%2Ccreated_at%3AString%2Cpushed_at%3AString%2Cupdated_at%3AString%2Chtml_url%3AString%2Cclone_url%3AString%2Cgit_url%3AString%2Cmirror_url%3A%3A%3AUnion%28String%2CNil%29%2Cssh_url%3AString%2Csvn_url%3AString%2Clanguage%3A%3A%3AUnion%28String%2CNil%29%2Cfork%3ABool%2Cforks_count%3AInt32%2Cnetwork_count%3A%3A%3AUnion%28Int32%2CNil%29%2Copen_issues_count%3AInt32%2Cstargazers_count%3AInt32%2Csubscribers_count%3A%3A%3AUnion%28Int32%2CNil%29%2Cwatchers_count%3AInt32%2Csize%3AInt32%2Cauto_init%3A%3A%3AUnion%28Bool%2CNil%29%2Cparent%3A%3A%3AUnion%28Repository%2CNil%29%2Csource%3A%3A%3AUnion%28Repository%2CNil%29%2Corganization%3A%3A%3AUnion%28Organization%2CNil%29%2Cpermissions%3A%3A%3AUnion%28Hash%28String%2CBool%29%2CNil%29%2Callow_rebase_merge%3A%3A%3AUnion%28Bool%2CNil%29%2Callow_squash_merge%3A%3A%3AUnion%28Bool%2CNil%29%2Callow_merge_commit%3A%3A%3AUnion%28Bool%2CNil%29%2Ctopics%3A%3A%3AUnion%28Array%28String%29%2CNil%29%2Carchived%3ABool%2Cdisabled%3ABool%2Clicense%3A%3A%3AUnion%28License%2CNil%29%2Cprivate__arg0%3ABool%2Chas_issues%3ABool%2Chas_wiki%3ABool%2Chas_pages%3ABool%2Chas_projects%3ABool%2Chas_downloads%3ABool%2Clicense_template%3A%3A%3AUnion%28String%2CNil%29%2Cgitignore_template%3A%3A%3AUnion%28String%2CNil%29%2Cteam_id%3A%3A%3AUnion%28Int64%2CNil%29%2Curl%3AString%2Carchive_url%3AString%2Cassignees_url%3AString%2Cblobs_url%3AString%2Cbranches_url%3AString%2Ccollaborators_url%3AString%2Ccomments_url%3AString%2Ccommits_url%3AString%2Ccompare_url%3AString%2Ccontents_url%3AString%2Ccontributors_url%3AString%2Cdeployments_url%3AString%2Cdownloads_url%3AString%2Cevents_url%3AString%2Cforks_url%3AString%2Cgit_commits_url%3AString%2Cgit_refs_url%3AString%2Cgit_tags_url%3AString%2Chooks_url%3AString%2Cissue_comment_url%3A%3A%3AUnion%28String%2CNil%29%2Cissue_events_url%3AString%2Cissues_url%3AString%2Ckeys_url%3AString%2Clabels_url%3AString%2Clanguages_url%3AString%2Cmerges_url%3AString%2Cmilestones_url%3AString%2Cnotifications_url%3AString%2Cpulls_url%3AString%2Creleases_url%3AString%2Cstargazers_url%3AString%2Cstatuses_url%3AString%2Csubscribers_url%3AString%2Csubscription_url%3AString%2Ctags_url%3AString%2Ctrees_url%3AString%2Cteams_url%3AString%2Ctext_matches%3A%3A%3AUnion%28Array%28TextMatch%29%2CNil%29%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28id%3AInt64%2Cnode_id%3AString%2Cowner%3ARepositoryOwner%2Cname%3AString%2Cfull_name%3AString%2Cdescription%3A%3A%3AUnion%28String%2CNil%29%2Chomepage%3A%3A%3AUnion%28String%2CNil%29%2Ccode_of_conduct%3A%3A%3AUnion%28CodeOfConduct%2CNil%29%2Cdefault_branch%3A%3A%3AUnion%28String%2CNil%29%2Cmaster_branch%3A%3A%3AUnion%28String%2CNil%29%2Ccreated_at%3A%3A%3AUnion%28Time%2CNil%29%2Cpushed_at%3A%3A%3AUnion%28Time%2CNil%29%2Cupdated_at%3A%3A%3AUnion%28Time%2CNil%29%2Chtml_url%3AString%2Cclone_url%3A%3A%3AUnion%28String%2CNil%29%2Cgit_url%3A%3A%3AUnion%28String%2CNil%29%2Cmirror_url%3A%3A%3AUnion%28String%2CNil%29%2Cssh_url%3A%3A%3AUnion%28String%2CNil%29%2Csvn_url%3A%3A%3AUnion%28String%2CNil%29%2Clanguage%3A%3A%3AUnion%28String%2CNil%29%2Cfork%3ABool%2Cforks_count%3A%3A%3AUnion%28Int32%2CNil%29%2Cnetwork_count%3A%3A%3AUnion%28Int32%2CNil%29%2Copen_issues_count%3A%3A%3AUnion%28Int32%2CNil%29%2Cstargazers_count%3A%3A%3AUnion%28Int32%2CNil%29%2Csubscribers_count%3A%3A%3AUnion%28Int32%2CNil%29%2Cwatchers_count%3A%3A%3AUnion%28Int32%2CNil%29%2Csize%3A%3A%3AUnion%28Int32%2CNil%29%2Cauto_init%3A%3A%3AUnion%28Bool%2CNil%29%2Cparent%3A%3A%3AUnion%28Repository%2CNil%29%2Csource%3A%3A%3AUnion%28Repository%2CNil%29%2Corganization%3A%3A%3AUnion%28Organization%2CNil%29%2Cpermissions%3A%3A%3AUnion%28Hash%28String%2CBool%29%2CNil%29%2Callow_rebase_merge%3A%3A%3AUnion%28Bool%2CNil%29%2Callow_squash_merge%3A%3A%3AUnion%28Bool%2CNil%29%2Callow_merge_commit%3A%3A%3AUnion%28Bool%2CNil%29%2Ctopics%3A%3A%3AUnion%28Array%28String%29%2CNil%29%2Carchived%3A%3A%3AUnion%28Bool%2CNil%29%2Cdisabled%3A%3A%3AUnion%28Bool%2CNil%29%2Clicense%3A%3A%3AUnion%28License%2CNil%29%2Cprivate__arg0%3ABool%2Chas_issues%3A%3A%3AUnion%28Bool%2CNil%29%2Chas_wiki%3A%3A%3AUnion%28Bool%2CNil%29%2Chas_pages%3A%3A%3AUnion%28Bool%2CNil%29%2Chas_projects%3A%3A%3AUnion%28Bool%2CNil%29%2Chas_downloads%3A%3A%3AUnion%28Bool%2CNil%29%2Clicense_template%3A%3A%3AUnion%28String%2CNil%29%2Cgitignore_template%3A%3A%3AUnion%28String%2CNil%29%2Cteam_id%3A%3A%3AUnion%28Int64%2CNil%29%2Curl%3AString%2Carchive_url%3AString%2Cassignees_url%3AString%2Cblobs_url%3AString%2Cbranches_url%3AString%2Ccollaborators_url%3AString%2Ccomments_url%3AString%2Ccommits_url%3AString%2Ccompare_url%3AString%2Ccontents_url%3AString%2Ccontributors_url%3AString%2Cdeployments_url%3AString%2Cdownloads_url%3AString%2Cevents_url%3AString%2Cforks_url%3AString%2Cgit_commits_url%3AString%2Cgit_refs_url%3AString%2Cgit_tags_url%3AString%2Chooks_url%3AString%2Cissue_comment_url%3A%3A%3AUnion%28String%2CNil%29%2Cissue_events_url%3AString%2Cissues_url%3AString%2Ckeys_url%3AString%2Clabels_url%3AString%2Clanguages_url%3AString%2Cmerges_url%3AString%2Cmilestones_url%3AString%2Cnotifications_url%3AString%2Cpulls_url%3AString%2Creleases_url%3AString%2Cstargazers_url%3AString%2Cstatuses_url%3AString%2Csubscribers_url%3AString%2Csubscription_url%3AString%2Ctags_url%3AString%2Ctrees_url%3AString%2Cteams_url%3AString%2Ctext_matches%3A%3A%3AUnion%28Array%28TextMatch%29%2CNil%29%29-class-method">#</a>
       </div>
       
       <br/>
@@ -2831,12 +2856,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="new(__temp_3716:JSON::PullParser)-class-method">
+    <div class="entry-detail" id="new(__temp_3718:JSON::PullParser)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(__temp_3716 : JSON::PullParser)
+        def self.<strong>new</strong>(__temp_3718 : JSON::PullParser)
 
-        <a class="method-permalink" href="#new%28__temp_3716%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28__temp_3718%3AJSON%3A%3APullParser%29-class-method">#</a>
       </div>
       
       <br/>
@@ -2861,7 +2886,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/models/repos.cr#L23" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/models/repos.cr#L23" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2877,7 +2902,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/models/repos.cr#L19" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/models/repos.cr#L19" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2893,7 +2918,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/models/repos.cr#L30" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/models/repos.cr#L30" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2909,7 +2934,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/models/repos.cr#L10" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/models/repos.cr#L10" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -3031,12 +3056,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="archived:Bool-instance-method">
+    <div class="entry-detail" id="archived:::Union(Bool,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>archived</strong> : Bool
+        def <strong>archived</strong> : ::Union(Bool, Nil)
 
-        <a class="method-permalink" href="#archived%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#archived%3A%3A%3AUnion%28Bool%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3045,12 +3070,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="archived=(_archived:Bool)-instance-method">
+    <div class="entry-detail" id="archived=(_archived:::Union(Bool,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>archived=</strong>(_archived : Bool)
+        def <strong>archived=</strong>(_archived : ::Union(Bool, Nil))
 
-        <a class="method-permalink" href="#archived%3D%28_archived%3ABool%29-instance-method">#</a>
+        <a class="method-permalink" href="#archived%3D%28_archived%3A%3A%3AUnion%28Bool%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3171,12 +3196,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="clone_url:String-instance-method">
+    <div class="entry-detail" id="clone_url:::Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>clone_url</strong> : String
+        def <strong>clone_url</strong> : ::Union(String, Nil)
 
-        <a class="method-permalink" href="#clone_url%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#clone_url%3A%3A%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3185,12 +3210,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="clone_url=(_clone_url:String)-instance-method">
+    <div class="entry-detail" id="clone_url=(_clone_url:::Union(String,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>clone_url=</strong>(_clone_url : String)
+        def <strong>clone_url=</strong>(_clone_url : ::Union(String, Nil))
 
-        <a class="method-permalink" href="#clone_url%3D%28_clone_url%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#clone_url%3D%28_clone_url%3A%3A%3AUnion%28String%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3395,12 +3420,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="created_at:String-instance-method">
+    <div class="entry-detail" id="created_at:::Union(Time,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>created_at</strong> : String
+        def <strong>created_at</strong> : ::Union(<a href="../../Time.html">Time</a>, Nil)
 
-        <a class="method-permalink" href="#created_at%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#created_at%3A%3A%3AUnion%28Time%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3409,12 +3434,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="created_at=(_created_at:String)-instance-method">
+    <div class="entry-detail" id="created_at=(_created_at:::Union(Time,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>created_at=</strong>(_created_at : String)
+        def <strong>created_at=</strong>(_created_at : ::Union(<a href="../../Time.html">Time</a>, Nil))
 
-        <a class="method-permalink" href="#created_at%3D%28_created_at%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#created_at%3D%28_created_at%3A%3A%3AUnion%28Time%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3423,12 +3448,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="default_branch:String-instance-method">
+    <div class="entry-detail" id="default_branch:::Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>default_branch</strong> : String
+        def <strong>default_branch</strong> : ::Union(String, Nil)
 
-        <a class="method-permalink" href="#default_branch%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#default_branch%3A%3A%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3437,12 +3462,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="default_branch=(_default_branch:String)-instance-method">
+    <div class="entry-detail" id="default_branch=(_default_branch:::Union(String,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>default_branch=</strong>(_default_branch : String)
+        def <strong>default_branch=</strong>(_default_branch : ::Union(String, Nil))
 
-        <a class="method-permalink" href="#default_branch%3D%28_default_branch%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#default_branch%3D%28_default_branch%3A%3A%3AUnion%28String%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3507,12 +3532,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="disabled:Bool-instance-method">
+    <div class="entry-detail" id="disabled:::Union(Bool,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>disabled</strong> : Bool
+        def <strong>disabled</strong> : ::Union(Bool, Nil)
 
-        <a class="method-permalink" href="#disabled%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#disabled%3A%3A%3AUnion%28Bool%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3521,12 +3546,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="disabled=(_disabled:Bool)-instance-method">
+    <div class="entry-detail" id="disabled=(_disabled:::Union(Bool,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>disabled=</strong>(_disabled : Bool)
+        def <strong>disabled=</strong>(_disabled : ::Union(Bool, Nil))
 
-        <a class="method-permalink" href="#disabled%3D%28_disabled%3ABool%29-instance-method">#</a>
+        <a class="method-permalink" href="#disabled%3D%28_disabled%3A%3A%3AUnion%28Bool%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3619,12 +3644,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="forks_count:Int32-instance-method">
+    <div class="entry-detail" id="forks_count:::Union(Int32,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>forks_count</strong> : Int32
+        def <strong>forks_count</strong> : ::Union(Int32, Nil)
 
-        <a class="method-permalink" href="#forks_count%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#forks_count%3A%3A%3AUnion%28Int32%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3633,12 +3658,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="forks_count=(_forks_count:Int32)-instance-method">
+    <div class="entry-detail" id="forks_count=(_forks_count:::Union(Int32,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>forks_count=</strong>(_forks_count : Int32)
+        def <strong>forks_count=</strong>(_forks_count : ::Union(Int32, Nil))
 
-        <a class="method-permalink" href="#forks_count%3D%28_forks_count%3AInt32%29-instance-method">#</a>
+        <a class="method-permalink" href="#forks_count%3D%28_forks_count%3A%3A%3AUnion%28Int32%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3787,12 +3812,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="git_url:String-instance-method">
+    <div class="entry-detail" id="git_url:::Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>git_url</strong> : String
+        def <strong>git_url</strong> : ::Union(String, Nil)
 
-        <a class="method-permalink" href="#git_url%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#git_url%3A%3A%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3801,12 +3826,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="git_url=(_git_url:String)-instance-method">
+    <div class="entry-detail" id="git_url=(_git_url:::Union(String,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>git_url=</strong>(_git_url : String)
+        def <strong>git_url=</strong>(_git_url : ::Union(String, Nil))
 
-        <a class="method-permalink" href="#git_url%3D%28_git_url%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#git_url%3D%28_git_url%3A%3A%3AUnion%28String%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3843,12 +3868,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="has_downloads:Bool-instance-method">
+    <div class="entry-detail" id="has_downloads:::Union(Bool,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>has_downloads</strong> : Bool
+        def <strong>has_downloads</strong> : ::Union(Bool, Nil)
 
-        <a class="method-permalink" href="#has_downloads%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#has_downloads%3A%3A%3AUnion%28Bool%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3857,12 +3882,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="has_downloads=(_has_downloads:Bool)-instance-method">
+    <div class="entry-detail" id="has_downloads=(_has_downloads:::Union(Bool,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>has_downloads=</strong>(_has_downloads : Bool)
+        def <strong>has_downloads=</strong>(_has_downloads : ::Union(Bool, Nil))
 
-        <a class="method-permalink" href="#has_downloads%3D%28_has_downloads%3ABool%29-instance-method">#</a>
+        <a class="method-permalink" href="#has_downloads%3D%28_has_downloads%3A%3A%3AUnion%28Bool%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3871,12 +3896,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="has_issues:Bool-instance-method">
+    <div class="entry-detail" id="has_issues:::Union(Bool,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>has_issues</strong> : Bool
+        def <strong>has_issues</strong> : ::Union(Bool, Nil)
 
-        <a class="method-permalink" href="#has_issues%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#has_issues%3A%3A%3AUnion%28Bool%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3885,12 +3910,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="has_issues=(_has_issues:Bool)-instance-method">
+    <div class="entry-detail" id="has_issues=(_has_issues:::Union(Bool,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>has_issues=</strong>(_has_issues : Bool)
+        def <strong>has_issues=</strong>(_has_issues : ::Union(Bool, Nil))
 
-        <a class="method-permalink" href="#has_issues%3D%28_has_issues%3ABool%29-instance-method">#</a>
+        <a class="method-permalink" href="#has_issues%3D%28_has_issues%3A%3A%3AUnion%28Bool%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3899,12 +3924,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="has_pages:Bool-instance-method">
+    <div class="entry-detail" id="has_pages:::Union(Bool,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>has_pages</strong> : Bool
+        def <strong>has_pages</strong> : ::Union(Bool, Nil)
 
-        <a class="method-permalink" href="#has_pages%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#has_pages%3A%3A%3AUnion%28Bool%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3913,12 +3938,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="has_pages=(_has_pages:Bool)-instance-method">
+    <div class="entry-detail" id="has_pages=(_has_pages:::Union(Bool,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>has_pages=</strong>(_has_pages : Bool)
+        def <strong>has_pages=</strong>(_has_pages : ::Union(Bool, Nil))
 
-        <a class="method-permalink" href="#has_pages%3D%28_has_pages%3ABool%29-instance-method">#</a>
+        <a class="method-permalink" href="#has_pages%3D%28_has_pages%3A%3A%3AUnion%28Bool%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3927,12 +3952,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="has_projects:Bool-instance-method">
+    <div class="entry-detail" id="has_projects:::Union(Bool,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>has_projects</strong> : Bool
+        def <strong>has_projects</strong> : ::Union(Bool, Nil)
 
-        <a class="method-permalink" href="#has_projects%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#has_projects%3A%3A%3AUnion%28Bool%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3941,12 +3966,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="has_projects=(_has_projects:Bool)-instance-method">
+    <div class="entry-detail" id="has_projects=(_has_projects:::Union(Bool,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>has_projects=</strong>(_has_projects : Bool)
+        def <strong>has_projects=</strong>(_has_projects : ::Union(Bool, Nil))
 
-        <a class="method-permalink" href="#has_projects%3D%28_has_projects%3ABool%29-instance-method">#</a>
+        <a class="method-permalink" href="#has_projects%3D%28_has_projects%3A%3A%3AUnion%28Bool%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3955,12 +3980,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="has_wiki:Bool-instance-method">
+    <div class="entry-detail" id="has_wiki:::Union(Bool,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>has_wiki</strong> : Bool
+        def <strong>has_wiki</strong> : ::Union(Bool, Nil)
 
-        <a class="method-permalink" href="#has_wiki%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#has_wiki%3A%3A%3AUnion%28Bool%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3969,12 +3994,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="has_wiki=(_has_wiki:Bool)-instance-method">
+    <div class="entry-detail" id="has_wiki=(_has_wiki:::Union(Bool,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>has_wiki=</strong>(_has_wiki : Bool)
+        def <strong>has_wiki=</strong>(_has_wiki : ::Union(Bool, Nil))
 
-        <a class="method-permalink" href="#has_wiki%3D%28_has_wiki%3ABool%29-instance-method">#</a>
+        <a class="method-permalink" href="#has_wiki%3D%28_has_wiki%3A%3A%3AUnion%28Bool%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -4571,12 +4596,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="open_issues_count:Int32-instance-method">
+    <div class="entry-detail" id="open_issues_count:::Union(Int32,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>open_issues_count</strong> : Int32
+        def <strong>open_issues_count</strong> : ::Union(Int32, Nil)
 
-        <a class="method-permalink" href="#open_issues_count%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#open_issues_count%3A%3A%3AUnion%28Int32%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -4585,12 +4610,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="open_issues_count=(_open_issues_count:Int32)-instance-method">
+    <div class="entry-detail" id="open_issues_count=(_open_issues_count:::Union(Int32,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>open_issues_count=</strong>(_open_issues_count : Int32)
+        def <strong>open_issues_count=</strong>(_open_issues_count : ::Union(Int32, Nil))
 
-        <a class="method-permalink" href="#open_issues_count%3D%28_open_issues_count%3AInt32%29-instance-method">#</a>
+        <a class="method-permalink" href="#open_issues_count%3D%28_open_issues_count%3A%3A%3AUnion%28Int32%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -4767,12 +4792,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="pushed_at:String-instance-method">
+    <div class="entry-detail" id="pushed_at:::Union(Time,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>pushed_at</strong> : String
+        def <strong>pushed_at</strong> : ::Union(<a href="../../Time.html">Time</a>, Nil)
 
-        <a class="method-permalink" href="#pushed_at%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#pushed_at%3A%3A%3AUnion%28Time%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -4781,12 +4806,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="pushed_at=(_pushed_at:String)-instance-method">
+    <div class="entry-detail" id="pushed_at=(_pushed_at:::Union(Time,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>pushed_at=</strong>(_pushed_at : String)
+        def <strong>pushed_at=</strong>(_pushed_at : ::Union(<a href="../../Time.html">Time</a>, Nil))
 
-        <a class="method-permalink" href="#pushed_at%3D%28_pushed_at%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#pushed_at%3D%28_pushed_at%3A%3A%3AUnion%28Time%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -4823,12 +4848,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="size:Int32-instance-method">
+    <div class="entry-detail" id="size:::Union(Int32,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>size</strong> : Int32
+        def <strong>size</strong> : ::Union(Int32, Nil)
 
-        <a class="method-permalink" href="#size%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#size%3A%3A%3AUnion%28Int32%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -4837,12 +4862,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="size=(_size:Int32)-instance-method">
+    <div class="entry-detail" id="size=(_size:::Union(Int32,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>size=</strong>(_size : Int32)
+        def <strong>size=</strong>(_size : ::Union(Int32, Nil))
 
-        <a class="method-permalink" href="#size%3D%28_size%3AInt32%29-instance-method">#</a>
+        <a class="method-permalink" href="#size%3D%28_size%3A%3A%3AUnion%28Int32%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -4862,7 +4887,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/models/repos.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/models/repos.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -4895,12 +4920,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="ssh_url:String-instance-method">
+    <div class="entry-detail" id="ssh_url:::Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>ssh_url</strong> : String
+        def <strong>ssh_url</strong> : ::Union(String, Nil)
 
-        <a class="method-permalink" href="#ssh_url%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#ssh_url%3A%3A%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -4909,12 +4934,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="ssh_url=(_ssh_url:String)-instance-method">
+    <div class="entry-detail" id="ssh_url=(_ssh_url:::Union(String,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>ssh_url=</strong>(_ssh_url : String)
+        def <strong>ssh_url=</strong>(_ssh_url : ::Union(String, Nil))
 
-        <a class="method-permalink" href="#ssh_url%3D%28_ssh_url%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#ssh_url%3D%28_ssh_url%3A%3A%3AUnion%28String%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -4923,12 +4948,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="stargazers_count:Int32-instance-method">
+    <div class="entry-detail" id="stargazers_count:::Union(Int32,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>stargazers_count</strong> : Int32
+        def <strong>stargazers_count</strong> : ::Union(Int32, Nil)
 
-        <a class="method-permalink" href="#stargazers_count%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#stargazers_count%3A%3A%3AUnion%28Int32%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -4937,12 +4962,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="stargazers_count=(_stargazers_count:Int32)-instance-method">
+    <div class="entry-detail" id="stargazers_count=(_stargazers_count:::Union(Int32,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>stargazers_count=</strong>(_stargazers_count : Int32)
+        def <strong>stargazers_count=</strong>(_stargazers_count : ::Union(Int32, Nil))
 
-        <a class="method-permalink" href="#stargazers_count%3D%28_stargazers_count%3AInt32%29-instance-method">#</a>
+        <a class="method-permalink" href="#stargazers_count%3D%28_stargazers_count%3A%3A%3AUnion%28Int32%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -5091,12 +5116,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="svn_url:String-instance-method">
+    <div class="entry-detail" id="svn_url:::Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>svn_url</strong> : String
+        def <strong>svn_url</strong> : ::Union(String, Nil)
 
-        <a class="method-permalink" href="#svn_url%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#svn_url%3A%3A%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -5105,12 +5130,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="svn_url=(_svn_url:String)-instance-method">
+    <div class="entry-detail" id="svn_url=(_svn_url:::Union(String,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>svn_url=</strong>(_svn_url : String)
+        def <strong>svn_url=</strong>(_svn_url : ::Union(String, Nil))
 
-        <a class="method-permalink" href="#svn_url%3D%28_svn_url%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#svn_url%3D%28_svn_url%3A%3A%3AUnion%28String%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -5256,7 +5281,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/dd849e1b6561c96788a22c7b88a778a13d91be27/src/octokit/models/repos.cr#L15" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/models/repos.cr#L15" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -5317,12 +5342,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="updated_at:String-instance-method">
+    <div class="entry-detail" id="updated_at:::Union(Time,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>updated_at</strong> : String
+        def <strong>updated_at</strong> : ::Union(<a href="../../Time.html">Time</a>, Nil)
 
-        <a class="method-permalink" href="#updated_at%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#updated_at%3A%3A%3AUnion%28Time%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -5331,12 +5356,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="updated_at=(_updated_at:String)-instance-method">
+    <div class="entry-detail" id="updated_at=(_updated_at:::Union(Time,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>updated_at=</strong>(_updated_at : String)
+        def <strong>updated_at=</strong>(_updated_at : ::Union(<a href="../../Time.html">Time</a>, Nil))
 
-        <a class="method-permalink" href="#updated_at%3D%28_updated_at%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#updated_at%3D%28_updated_at%3A%3A%3AUnion%28Time%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -5373,12 +5398,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="watchers_count:Int32-instance-method">
+    <div class="entry-detail" id="watchers_count:::Union(Int32,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>watchers_count</strong> : Int32
+        def <strong>watchers_count</strong> : ::Union(Int32, Nil)
 
-        <a class="method-permalink" href="#watchers_count%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#watchers_count%3A%3A%3AUnion%28Int32%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -5387,12 +5412,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="watchers_count=(_watchers_count:Int32)-instance-method">
+    <div class="entry-detail" id="watchers_count=(_watchers_count:::Union(Int32,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>watchers_count=</strong>(_watchers_count : Int32)
+        def <strong>watchers_count=</strong>(_watchers_count : ::Union(Int32, Nil))
 
-        <a class="method-permalink" href="#watchers_count%3D%28_watchers_count%3AInt32%29-instance-method">#</a>
+        <a class="method-permalink" href="#watchers_count%3D%28_watchers_count%3A%3A%3AUnion%28Int32%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>

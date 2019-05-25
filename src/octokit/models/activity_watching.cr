@@ -5,7 +5,7 @@ module Octokit
         subscriptions: Bool,
         ignored: Bool,
         reason: String,
-        created_at: String,
+        created_at: {type: Time, converter: Time::ISO8601Converter},
         url: String,
 
         # Only populated for repository subscriptions

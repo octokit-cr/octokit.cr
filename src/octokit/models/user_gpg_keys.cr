@@ -12,7 +12,7 @@ module Octokit
         can_encrypt_coms: Bool,
         can_encrypt_storage: Bool,
         can_certify: Bool,
-        created_at: String,
+        created_at: {type: Time, converter: Time::ISO8601Converter},
         expires_at: String
       )
     end
