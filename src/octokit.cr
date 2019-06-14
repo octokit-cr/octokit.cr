@@ -13,8 +13,6 @@ require "./octokit/enterprise_management_console_client"
 module Octokit
   include Octokit::Configurable
 
-  @@client : Octokit::Client? = nil
-
   # @@enterprise_admin_client : Octokit::EnterpriseAdminClient? = nil
 
   # @@enterprise_management_console_client : Octokit::EnterpriseManagementConsoleClient? = nil
@@ -29,14 +27,14 @@ module Octokit
     client_id = nil,
     client_secret = nil
   )
-    @@client.nil? ? Octokit::Client.new(
+    Octokit::Client.new(
       login,
       password,
       access_token,
       bearer_token,
       client_id,
       client_secret
-    ) : @@client.not_nil!
+    )
   end
 
   # EnterpriseAdminClient client based on configuration options in `Configurable`
@@ -49,8 +47,3 @@ module Octokit
     raise "not implemented!"
   end
 end
-
-Octokit.reset!
-
-client = Octokit.client(login: "watzon", password: "xJGBSG5dmqoc7D")
-pp client.authorizations
