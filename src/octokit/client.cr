@@ -106,6 +106,7 @@ module Octokit
     include Octokit::Connection
     include Octokit::Preview
     include Octokit::Warnable
+    include Octokit::Client::Authorizations
     include Octokit::Client::Issues
     include Octokit::Client::PubSubHubbub
     include Octokit::Client::Users

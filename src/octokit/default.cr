@@ -7,6 +7,8 @@ require "./version"
 module Octokit
   # Default configuration options for `Client`
   module Default
+    extend self
+
     # Default API endpoint
     API_ENDPOINT = "https://api.github.com"
 
@@ -34,47 +36,47 @@ module Octokit
     end
 
     # Default access token from ENV
-    def self.access_token
+    def access_token
       ENV["OCTOKIT_ACCESS_TOKEN"]?
     end
 
     # Default API endpoint from ENV
-    def self.api_endpoint
+    def api_endpoint
       ENV["OCTOKIT_API_ENDPOINT"]? || API_ENDPOINT
     end
 
     # Default pagination preference from ENV
-    def self.auto_paginate
+    def auto_paginate
       !!ENV["OCTOKIT_AUTO_PAGINATE"]? || false
     end
 
     # Default bearer token from ENV
-    def self.bearer_token
+    def bearer_token
       ENV["OCTOKIT_BEARER_TOKEN"]?
     end
 
     # Default OAuth app key from ENV
-    def self.client_id
+    def client_id
       ENV["OCTOKIT_CLIENT_ID"]?
     end
 
     # Default OAuth app secret from ENV
-    def self.client_secret
+    def client_secret
       ENV["OCTOKIT_SECRET"]?
     end
 
     # Default management console password from ENV
-    def self.management_console_password
+    def management_console_password
       ENV["OCTOKIT_ENTERPRISE_MANAGEMENT_CONSOLE_PASSWORD"]?
     end
 
     # Default management console endpoint from ENV
-    def self.management_console_endpoint
+    def management_console_endpoint
       ENV["OCTOKIT_ENTERPRISE_MANAGEMENT_CONSOLE_ENDPOINT"]?
     end
 
     # Default options for `Halite::Options`
-    def self.connection_options
+    def connection_options
       Halite::Options.new(
         headers: {
           accept:     default_media_type,
@@ -84,39 +86,39 @@ module Octokit
     end
 
     # Default media type from ENV or `MEDIA_TYPE`
-    def self.default_media_type
+    def default_media_type
       ENV["OCTOKIT_DEFAULT_MEDIA_TYPE"]? || MEDIA_TYPE
     end
 
     # Default GitHub username for Basic Auth from ENV
-    def self.login
+    def login
       ENV["OCTOKIT_LOGIN"]?
     end
 
     # Middleware stack for `Halite::Client`
-    def self.middleware
+    def middleware
       MIDDLEWARE
     end
 
     # Default GitHub password for Basic Auth from ENV
-    def self.password
+    def password
       ENV["OCTOKIT_PASSWORD"]?
     end
 
     # Default pagination page size from ENV
-    def self.per_page
+    def per_page
       page_size = ENV["OCTOKIT_PER_PAGE"]?
       page_size.to_i if page_size
     end
 
     # Default proxy server URI for Halite::Client from ENV
     # NOTE: Won't work until proxies are implemented by Halite
-    def self.proxy
+    def proxy
       ENV["OCTOKIT_PROXY"]?
     end
 
     # Default SSL verify mode from ENV
-    def self.ssl_verify_mode
+    def ssl_verify_mode
       # 0 is OpenSSL::SSL::NONE
       # 1 is OpenSSL::SSL::PEER
       # the standard default for SSL is PEER which requires a server certificate check on the client
@@ -124,17 +126,17 @@ module Octokit
     end
 
     # Default User-Agent header string from ENV or `USER_AGENT`
-    def self.user_agent
+    def user_agent
       ENV["OCTOKIT_USER_AGENT"]? || USER_AGENT
     end
 
     # Default web endpoint from ENV or `WEB_ENDPOINT`
-    def self.web_endpoint
+    def web_endpoint
       ENV["OCTOKIT_WEB_ENDPOINT"]? || WEB_ENDPOINT
     end
 
     # Default logger
-    def self.logger
+    def logger
       Logger.new(STDOUT, level: Logger::WARN)
     end
   end

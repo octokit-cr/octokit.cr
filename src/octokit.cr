@@ -49,3 +49,8 @@ module Octokit
     raise "not implemented!"
   end
 end
+
+Octokit.reset!
+
+client = Octokit.client(login: "watzon", password: "xJGBSG5dmqoc7D")
+pp client.authorizations

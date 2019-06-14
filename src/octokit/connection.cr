@@ -1,3 +1,4 @@
+require "base64"
 require "halite"
 require "./authentication"
 
@@ -81,17 +82,29 @@ module Octokit
 
     # Hypermedia agent for the GitHub API
     def agent
-      @agent ||= Halite::Client.new do
-        # headers accept: default_media_type
-        headers content_type: "application/json"
-        # headers user_agent: user_agent
-        if basic_authenticated?
-          basic_auth(@login.to_s, @password.to_s)
-        elsif token_authenticated?
-          auth("token #{@access_token}")
-        elsif bearer_authenticated?
-          auth("Bearer #{@bearer_token}")
-        end
+      if @agent.nil?
+        headers = {
+          content_type: "application/json",
+          accept:       default_media_type,
+          user_agent:   user_agent,
+        }
+
+        auth_header = if basic_authenticated?
+                        {authorization: make_basic_auth(@login.to_s, @password.to_s)}
+                      elsif token_authenticated?
+                        {authorization: make_token_auth(@access_token.to_s)}
+                      elsif bearer_authenticated?
+                        {authorization: make_bearer_auth(@bearer_token.to_s)}
+                      end
+
+        headers = headers.merge(auth_header) if auth_header
+
+        @agent = Halite::Client.new(
+          endpoint: endpoint,
+          headers: headers
+        )
+      else
+        @agent.not_nil!
       end
     end
 
@@ -105,6 +118,19 @@ module Octokit
       @last_response
     end
 
+    def make_basic_auth(user, password)
+      encoded = Base64.encode("#{user}:#{password}")
+      "Authorization: #{encoded}".strip
+    end
+
+    def make_token_auth(access_token)
+      "Authorization: token #{access_token}".strip
+    end
+
+    def make_bearer_auth(bearer_token)
+      "Authorization: bearer #{bearer_token}".strip
+    end
+
     protected def endpoint
       api_endpoint
     end
@@ -114,19 +140,20 @@ module Octokit
     end
 
     protected def request(method, path, options = nil)
-      uri = File.join(endpoint, path)
+      path = File.join("/", path)
       options = options ? Default.connection_options.merge(options) : Default.connection_options
-      @last_response = response = agent.request(verb: method.to_s, uri: uri, options: options)
+      @last_response = response = agent.request(verb: method.to_s, uri: path, options: options)
       handle_error(response)
       response.body
     end
 
     protected def request(method, path, options = nil, &block)
-      uri = File.join(endpoint, path)
+      path = File.join("/", path)
       options = options ? Default.connection_options.merge(options) : Default.connection_options
-      @last_response = response = agent.request(verb: method, uri: uri, options: options)
+      @last_response = response = agent.request(verb: method, uri: path, options: options)
       handle_error(response)
       yield response
+      response.body
     end
 
     # Executes the request, checking if it was successful
@@ -189,7 +216,7 @@ module Octokit
         auto_paginate : Bool? = nil,
         options : Halite::Options? = nil
       )
-        @auto_paginate = auto_paginate.nil? ? Octokit.auto_paginate : auto_paginate
+        @auto_paginate = auto_paginate.nil? ? Client.auto_paginate : auto_paginate
 
         # Don't allow the @current_page variable to be less than 1.
         @current_page = current_page.nil? || current_page < 1 ? 1 : current_page

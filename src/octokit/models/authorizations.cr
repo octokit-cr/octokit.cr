@@ -1,6 +1,6 @@
 module Octokit
   module Models
-    struct Authorizations
+    struct Authorization
       Octokit.rest_model(
         id: Int64,
         url: String,

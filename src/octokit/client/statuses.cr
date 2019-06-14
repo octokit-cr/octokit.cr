@@ -26,6 +26,7 @@ module Octokit
       # **See All:**
       # - [https://developer.github.com/v3/repos/statuses/#get-the-combined-status-for-a-specific-ref](https://developer.github.com/v3/repos/statuses/#get-the-combined-status-for-a-specific-ref)
       def combined_status(repo, ref)
+        puts "#{Repository.path(repo)}/commits/#{ref}/status"
         res = get "#{Repository.path(repo)}/commits/#{ref}/status"
         CombinedStatus.from_json(res)
       end
