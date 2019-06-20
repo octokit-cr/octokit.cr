@@ -11,7 +11,7 @@ license: MIT
 dependencies:
   halite:
     github: icyleaf/halite
-    branch: master
+    version: 0.10.1
 development_dependencies:
   webmock:
     github: manastech/webmock.cr

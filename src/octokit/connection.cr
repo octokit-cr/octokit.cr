@@ -82,29 +82,11 @@ module Octokit
 
     # Hypermedia agent for the GitHub API
     def agent
-      if @agent.nil?
-        headers = {
-          content_type: "application/json",
-          accept:       default_media_type,
-          user_agent:   user_agent,
-        }
-
-        auth_header = if basic_authenticated?
-                        {authorization: make_basic_auth(@login.to_s, @password.to_s)}
-                      elsif token_authenticated?
-                        {authorization: make_token_auth(@access_token.to_s)}
-                      elsif bearer_authenticated?
-                        {authorization: make_bearer_auth(@bearer_token.to_s)}
-                      end
-
-        headers = headers.merge(auth_header) if auth_header
-
-        @agent = Halite::Client.new(
-          # endpoint: endpoint,
-          headers: headers
-        )
-      else
-        @agent.not_nil!
+      @agent ||= Halite::Client.new do
+        auth(make_auth_header.to_s) if make_auth_header
+        user_agent(@user_agent)
+        accept(Default::MEDIA_TYPE)
+        logging(true)
       end
     end
 
@@ -120,15 +102,25 @@ module Octokit
 
     def make_basic_auth(user, password)
       encoded = Base64.encode("#{user}:#{password}")
-      "Authorization: #{encoded}".strip
+      encoded.strip
     end
 
     def make_token_auth(access_token)
-      "Authorization: token #{access_token}".strip
+      "Token #{access_token}".strip
     end
 
     def make_bearer_auth(bearer_token)
-      "Authorization: bearer #{bearer_token}".strip
+      "Bearer #{bearer_token}".strip
+    end
+
+    def make_auth_header
+      if basic_authenticated?
+        make_basic_auth(@login.to_s, @password.to_s)
+      elsif token_authenticated?
+        make_token_auth(@access_token.to_s)
+      elsif bearer_authenticated?
+        make_bearer_auth(@bearer_token.to_s)
+      end
     end
 
     protected def endpoint
@@ -141,15 +133,15 @@ module Octokit
 
     protected def request(method, path, options = nil)
       path = File.join(endpoint, path) unless path.nil? || path.starts_with?("http")
-      options = options ? Default.connection_options.merge(options) : Default.connection_options
-      @last_response = response = agent.request(verb: method.to_s, uri: path, options: options)
+      options = options ? @connection_options.merge(options) : @connection_options
+      @last_response = response = agent.request(verb: method.to_s, uri: path, options: @connection_options)
       handle_error(response)
       response.body
     end
 
     protected def request(method, path, options = nil, &block)
       path = File.join(endpoint, path) unless path.nil? || path.starts_with?("http")
-      options = options ? Default.connection_options.merge(options) : Default.connection_options
+      options = options ? @connection_options.merge(options) : @connection_options
       @last_response = response = agent.request(verb: method, uri: path, options: options)
       handle_error(response)
       yield response

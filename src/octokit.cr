@@ -11,8 +11,6 @@ require "./octokit/enterprise_management_console_client"
 # **Note:** All examples contained herein assume that `@client` is an instantiated
 # `Octokit::Client` with a valid user configured.
 module Octokit
-  include Octokit::Configurable
-
   # @@enterprise_admin_client : Octokit::EnterpriseAdminClient? = nil
 
   # @@enterprise_management_console_client : Octokit::EnterpriseManagementConsoleClient? = nil
@@ -48,6 +46,3 @@ module Octokit
   end
 
 end
-
-client = Octokit.client(login: "watzon", password: "xJGBSG5dmqoc7D")
-pp client.search_repositories("q=language:crystal+sort:updated-asc+limit").fetch_next["total_count"]

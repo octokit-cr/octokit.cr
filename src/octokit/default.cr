@@ -81,8 +81,7 @@ module Octokit
         headers: {
           accept:     default_media_type,
           user_agent: user_agent,
-        }
-      )
+        })
     end
 
     # Default media type from ENV or `MEDIA_TYPE`
