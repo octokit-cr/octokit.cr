@@ -18,9 +18,9 @@ module Octokit
 
     struct RepositoriesSearchResult
       Octokit.rest_model(
-        total: Int32,
+        total_count: Int32,
         incomplete_results: Bool,
-        repositories: Array(Repository)
+        items: Array(Repository)
       )
     end
 

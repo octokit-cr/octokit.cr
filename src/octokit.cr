@@ -48,3 +48,6 @@ module Octokit
   end
 
 end
+
+client = Octokit.client(login: "watzon", password: "xJGBSG5dmqoc7D")
+pp client.search_repositories("q=language:crystal+sort:updated-asc+limit").fetch_next["total_count"]
