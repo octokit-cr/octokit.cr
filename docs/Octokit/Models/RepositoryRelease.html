@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.27.2">
+<meta name="generator" content="Crystal Docs 0.29.0">
 
 
 <link href="../../css/style.css" rel="stylesheet" type="text/css">
@@ -55,6 +55,11 @@
       <a href="../../Octokit/Client.html">Client</a>
       
         <ul>
+  
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Authorizations" data-name="octokit::client::authorizations">
+      <a href="../../Octokit/Client/Authorizations.html">Authorizations</a>
+      
+    </li>
   
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Issues" data-name="octokit::client::issues">
       <a href="../../Octokit/Client/Issues.html">Issues</a>
@@ -381,6 +386,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Authorization" data-name="octokit::models::authorization">
+      <a href="../../Octokit/Models/Authorization.html">Authorization</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/AuthorizationApp" data-name="octokit::models::authorizationapp">
       <a href="../../Octokit/Models/AuthorizationApp.html">AuthorizationApp</a>
       
@@ -388,11 +398,6 @@
   
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/AuthorizationRequest" data-name="octokit::models::authorizationrequest">
       <a href="../../Octokit/Models/AuthorizationRequest.html">AuthorizationRequest</a>
-      
-    </li>
-  
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Authorizations" data-name="octokit::models::authorizations">
-      <a href="../../Octokit/Models/Authorizations.html">Authorizations</a>
       
     </li>
   
@@ -1866,7 +1871,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/models/repo_releases.cr#L3" target="_blank">
+      <a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/models/repo_releases.cr#L3" target="_blank">
         octokit/models/repo_releases.cr
       </a>
     
@@ -1881,7 +1886,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28tag_name%3AString%2Ctarget_commit_hash%3AString%2Cname%3AString%2Cbody%3AString%2Cdraft%3ABool%2Cprerelease%3ABool%2Cid%3A%3A%3AUnion%28Int64%2CNil%29%2Ccreated_at%3A%3A%3AUnion%28Time%2CNil%29%2Cpublished_at%3A%3A%3AUnion%28String%2CNil%29%2Curl%3A%3A%3AUnion%28String%2CNil%29%2Chtml_url%3A%3A%3AUnion%28String%2CNil%29%2Cassets_url%3A%3A%3AUnion%28String%2CNil%29%2Cassets%3A%3A%3AUnion%28Array%28String%29%2CNil%29%2Cupload_url%3A%3A%3AUnion%28String%2CNil%29%2Czipball_url%3A%3A%3AUnion%28String%2CNil%29%2Ctarball_url%3A%3A%3AUnion%28String%2CNil%29%2Cauthor%3A%3A%3AUnion%28User%2CNil%29%2Cnode_id%3A%3A%3AUnion%28String%2CNil%29%29-class-method" class="signature"><strong>.new</strong>(tag_name : String, target_commit_hash : String, name : String, body : String, draft : Bool, prerelease : Bool, id : ::Union(Int64, Nil), created_at : ::Union(Time, Nil), published_at : ::Union(String, Nil), url : ::Union(String, Nil), html_url : ::Union(String, Nil), assets_url : ::Union(String, Nil), assets : ::Union(Array(String), Nil), upload_url : ::Union(String, Nil), zipball_url : ::Union(String, Nil), tarball_url : ::Union(String, Nil), author : ::Union(User, Nil), node_id : ::Union(String, Nil))</a>
+        <a href="#new%28tag_name%3AString%2Ctarget_commitish%3AString%2Cname%3AString%2Cbody%3AString%2Cdraft%3ABool%2Cprerelease%3ABool%2Cid%3A%3A%3AUnion%28Int64%2CNil%29%2Ccreated_at%3A%3A%3AUnion%28Time%2CNil%29%2Cpublished_at%3A%3A%3AUnion%28String%2CNil%29%2Curl%3A%3A%3AUnion%28String%2CNil%29%2Chtml_url%3A%3A%3AUnion%28String%2CNil%29%2Cassets_url%3A%3A%3AUnion%28String%2CNil%29%2Cassets%3A%3A%3AUnion%28Array%28ReleaseAsset%29%2CNil%29%2Cupload_url%3AString%2Czipball_url%3A%3A%3AUnion%28String%2CNil%29%2Ctarball_url%3A%3A%3AUnion%28String%2CNil%29%2Cauthor%3A%3A%3AUnion%28User%2CNil%29%2Cnode_id%3A%3A%3AUnion%28String%2CNil%29%29-class-method" class="signature"><strong>.new</strong>(tag_name : String, target_commitish : String, name : String, body : String, draft : Bool, prerelease : Bool, id : ::Union(Int64, Nil), created_at : ::Union(Time, Nil), published_at : ::Union(String, Nil), url : ::Union(String, Nil), html_url : ::Union(String, Nil), assets_url : ::Union(String, Nil), assets : ::Union(Array(ReleaseAsset), Nil), upload_url : String, zipball_url : ::Union(String, Nil), tarball_url : ::Union(String, Nil), author : ::Union(User, Nil), node_id : ::Union(String, Nil))</a>
         
       </li>
     
@@ -1900,12 +1905,12 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#assets%3A%3A%3AUnion%28Array%28String%29%2CNil%29-instance-method" class="signature"><strong>#assets</strong> : ::Union(Array(String), Nil)</a>
+        <a href="#assets%3A%3A%3AUnion%28Array%28ReleaseAsset%29%2CNil%29-instance-method" class="signature"><strong>#assets</strong> : ::Union(Array(ReleaseAsset), Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#assets%3D%28_assets%3A%3A%3AUnion%28Array%28String%29%2CNil%29%29-instance-method" class="signature"><strong>#assets=</strong>(_assets : ::Union(Array(String), Nil))</a>
+        <a href="#assets%3D%28_assets%3A%3A%3AUnion%28Array%28ReleaseAsset%29%2CNil%29%29-instance-method" class="signature"><strong>#assets=</strong>(_assets : ::Union(Array(ReleaseAsset), Nil))</a>
         
       </li>
     
@@ -2040,12 +2045,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#target_commit_hash%3AString-instance-method" class="signature"><strong>#target_commit_hash</strong> : String</a>
+        <a href="#target_commitish%3AString-instance-method" class="signature"><strong>#target_commitish</strong> : String</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#target_commit_hash%3D%28_target_commit_hash%3AString%29-instance-method" class="signature"><strong>#target_commit_hash=</strong>(_target_commit_hash : String)</a>
+        <a href="#target_commitish%3D%28_target_commitish%3AString%29-instance-method" class="signature"><strong>#target_commitish=</strong>(_target_commitish : String)</a>
         
       </li>
     
@@ -2055,12 +2060,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#upload_url%3A%3A%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#upload_url</strong> : ::Union(String, Nil)</a>
+        <a href="#upload_url%3AString-instance-method" class="signature"><strong>#upload_url</strong> : String</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#upload_url%3D%28_upload_url%3A%3A%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#upload_url=</strong>(_upload_url : ::Union(String, Nil))</a>
+        <a href="#upload_url%3D%28_upload_url%3AString%29-instance-method" class="signature"><strong>#upload_url=</strong>(_upload_url : String)</a>
         
       </li>
     
@@ -2127,12 +2132,12 @@
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(tag_name:String,target_commit_hash:String,name:String,body:String,draft:Bool,prerelease:Bool,id:::Union(Int64,Nil),created_at:::Union(Time,Nil),published_at:::Union(String,Nil),url:::Union(String,Nil),html_url:::Union(String,Nil),assets_url:::Union(String,Nil),assets:::Union(Array(String),Nil),upload_url:::Union(String,Nil),zipball_url:::Union(String,Nil),tarball_url:::Union(String,Nil),author:::Union(User,Nil),node_id:::Union(String,Nil))-class-method">
+    <div class="entry-detail" id="new(tag_name:String,target_commitish:String,name:String,body:String,draft:Bool,prerelease:Bool,id:::Union(Int64,Nil),created_at:::Union(Time,Nil),published_at:::Union(String,Nil),url:::Union(String,Nil),html_url:::Union(String,Nil),assets_url:::Union(String,Nil),assets:::Union(Array(ReleaseAsset),Nil),upload_url:String,zipball_url:::Union(String,Nil),tarball_url:::Union(String,Nil),author:::Union(User,Nil),node_id:::Union(String,Nil))-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(tag_name : String, target_commit_hash : String, name : String, body : String, draft : Bool, prerelease : Bool, id : ::Union(Int64, Nil), created_at : ::Union(<a href="../../Time.html">Time</a>, Nil), published_at : ::Union(String, Nil), url : ::Union(String, Nil), html_url : ::Union(String, Nil), assets_url : ::Union(String, Nil), assets : ::Union(Array(String), Nil), upload_url : ::Union(String, Nil), zipball_url : ::Union(String, Nil), tarball_url : ::Union(String, Nil), author : ::Union(<a href="../../Octokit/Models/User.html">User</a>, Nil), node_id : ::Union(String, Nil))
+        def self.<strong>new</strong>(tag_name : String, target_commitish : String, name : String, body : String, draft : Bool, prerelease : Bool, id : ::Union(Int64, Nil), created_at : ::Union(<a href="../../Time.html">Time</a>, Nil), published_at : ::Union(String, Nil), url : ::Union(String, Nil), html_url : ::Union(String, Nil), assets_url : ::Union(String, Nil), assets : ::Union(Array(<a href="../../Octokit/Models/ReleaseAsset.html">ReleaseAsset</a>), Nil), upload_url : String, zipball_url : ::Union(String, Nil), tarball_url : ::Union(String, Nil), author : ::Union(<a href="../../Octokit/Models/User.html">User</a>, Nil), node_id : ::Union(String, Nil))
 
-        <a class="method-permalink" href="#new%28tag_name%3AString%2Ctarget_commit_hash%3AString%2Cname%3AString%2Cbody%3AString%2Cdraft%3ABool%2Cprerelease%3ABool%2Cid%3A%3A%3AUnion%28Int64%2CNil%29%2Ccreated_at%3A%3A%3AUnion%28Time%2CNil%29%2Cpublished_at%3A%3A%3AUnion%28String%2CNil%29%2Curl%3A%3A%3AUnion%28String%2CNil%29%2Chtml_url%3A%3A%3AUnion%28String%2CNil%29%2Cassets_url%3A%3A%3AUnion%28String%2CNil%29%2Cassets%3A%3A%3AUnion%28Array%28String%29%2CNil%29%2Cupload_url%3A%3A%3AUnion%28String%2CNil%29%2Czipball_url%3A%3A%3AUnion%28String%2CNil%29%2Ctarball_url%3A%3A%3AUnion%28String%2CNil%29%2Cauthor%3A%3A%3AUnion%28User%2CNil%29%2Cnode_id%3A%3A%3AUnion%28String%2CNil%29%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28tag_name%3AString%2Ctarget_commitish%3AString%2Cname%3AString%2Cbody%3AString%2Cdraft%3ABool%2Cprerelease%3ABool%2Cid%3A%3A%3AUnion%28Int64%2CNil%29%2Ccreated_at%3A%3A%3AUnion%28Time%2CNil%29%2Cpublished_at%3A%3A%3AUnion%28String%2CNil%29%2Curl%3A%3A%3AUnion%28String%2CNil%29%2Chtml_url%3A%3A%3AUnion%28String%2CNil%29%2Cassets_url%3A%3A%3AUnion%28String%2CNil%29%2Cassets%3A%3A%3AUnion%28Array%28ReleaseAsset%29%2CNil%29%2Cupload_url%3AString%2Czipball_url%3A%3A%3AUnion%28String%2CNil%29%2Ctarball_url%3A%3A%3AUnion%28String%2CNil%29%2Cauthor%3A%3A%3AUnion%28User%2CNil%29%2Cnode_id%3A%3A%3AUnion%28String%2CNil%29%29-class-method">#</a>
       </div>
       
       <br/>
@@ -2162,12 +2167,12 @@
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="assets:::Union(Array(String),Nil)-instance-method">
+    <div class="entry-detail" id="assets:::Union(Array(ReleaseAsset),Nil)-instance-method">
       <div class="signature">
         
-        def <strong>assets</strong> : ::Union(Array(String), Nil)
+        def <strong>assets</strong> : ::Union(Array(<a href="../../Octokit/Models/ReleaseAsset.html">ReleaseAsset</a>), Nil)
 
-        <a class="method-permalink" href="#assets%3A%3A%3AUnion%28Array%28String%29%2CNil%29-instance-method">#</a>
+        <a class="method-permalink" href="#assets%3A%3A%3AUnion%28Array%28ReleaseAsset%29%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2176,12 +2181,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="assets=(_assets:::Union(Array(String),Nil))-instance-method">
+    <div class="entry-detail" id="assets=(_assets:::Union(Array(ReleaseAsset),Nil))-instance-method">
       <div class="signature">
         
-        def <strong>assets=</strong>(_assets : ::Union(Array(String), Nil))
+        def <strong>assets=</strong>(_assets : ::Union(Array(<a href="../../Octokit/Models/ReleaseAsset.html">ReleaseAsset</a>), Nil))
 
-        <a class="method-permalink" href="#assets%3D%28_assets%3A%3A%3AUnion%28Array%28String%29%2CNil%29%29-instance-method">#</a>
+        <a class="method-permalink" href="#assets%3D%28_assets%3A%3A%3AUnion%28Array%28ReleaseAsset%29%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2554,12 +2559,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="target_commit_hash:String-instance-method">
+    <div class="entry-detail" id="target_commitish:String-instance-method">
       <div class="signature">
         
-        def <strong>target_commit_hash</strong> : String
+        def <strong>target_commitish</strong> : String
 
-        <a class="method-permalink" href="#target_commit_hash%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#target_commitish%3AString-instance-method">#</a>
       </div>
       
       <br/>
@@ -2568,12 +2573,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="target_commit_hash=(_target_commit_hash:String)-instance-method">
+    <div class="entry-detail" id="target_commitish=(_target_commitish:String)-instance-method">
       <div class="signature">
         
-        def <strong>target_commit_hash=</strong>(_target_commit_hash : String)
+        def <strong>target_commitish=</strong>(_target_commitish : String)
 
-        <a class="method-permalink" href="#target_commit_hash%3D%28_target_commit_hash%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#target_commitish%3D%28_target_commitish%3AString%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2596,12 +2601,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="upload_url:::Union(String,Nil)-instance-method">
+    <div class="entry-detail" id="upload_url:String-instance-method">
       <div class="signature">
         
-        def <strong>upload_url</strong> : ::Union(String, Nil)
+        def <strong>upload_url</strong> : String
 
-        <a class="method-permalink" href="#upload_url%3A%3A%3AUnion%28String%2CNil%29-instance-method">#</a>
+        <a class="method-permalink" href="#upload_url%3AString-instance-method">#</a>
       </div>
       
       <br/>
@@ -2610,12 +2615,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="upload_url=(_upload_url:::Union(String,Nil))-instance-method">
+    <div class="entry-detail" id="upload_url=(_upload_url:String)-instance-method">
       <div class="signature">
         
-        def <strong>upload_url=</strong>(_upload_url : ::Union(String, Nil))
+        def <strong>upload_url=</strong>(_upload_url : String)
 
-        <a class="method-permalink" href="#upload_url%3D%28_upload_url%3A%3A%3AUnion%28String%2CNil%29%29-instance-method">#</a>
+        <a class="method-permalink" href="#upload_url%3D%28_upload_url%3AString%29-instance-method">#</a>
       </div>
       
       <br/>

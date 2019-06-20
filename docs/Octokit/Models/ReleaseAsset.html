@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.27.2">
+<meta name="generator" content="Crystal Docs 0.29.0">
 
 
 <link href="../../css/style.css" rel="stylesheet" type="text/css">
@@ -55,6 +55,11 @@
       <a href="../../Octokit/Client.html">Client</a>
       
         <ul>
+  
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Authorizations" data-name="octokit::client::authorizations">
+      <a href="../../Octokit/Client/Authorizations.html">Authorizations</a>
+      
+    </li>
   
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Issues" data-name="octokit::client::issues">
       <a href="../../Octokit/Client/Issues.html">Issues</a>
@@ -381,6 +386,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Authorization" data-name="octokit::models::authorization">
+      <a href="../../Octokit/Models/Authorization.html">Authorization</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/AuthorizationApp" data-name="octokit::models::authorizationapp">
       <a href="../../Octokit/Models/AuthorizationApp.html">AuthorizationApp</a>
       
@@ -388,11 +398,6 @@
   
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/AuthorizationRequest" data-name="octokit::models::authorizationrequest">
       <a href="../../Octokit/Models/AuthorizationRequest.html">AuthorizationRequest</a>
-      
-    </li>
-  
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Authorizations" data-name="octokit::models::authorizations">
-      <a href="../../Octokit/Models/Authorizations.html">Authorizations</a>
       
     </li>
   
@@ -1866,7 +1871,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/models/repo_releases.cr#L27" target="_blank">
+      <a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/models/repo_releases.cr#L27" target="_blank">
         octokit/models/repo_releases.cr
       </a>
     
@@ -1881,7 +1886,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28id%3AString%2Curl%3AString%2Cname%3AString%2Clabel%3AString%2Cstate%3AString%2Ccontent_type%3AString%2Csize%3AInt32%2Cdownload_count%3AInt32%2Ccreated_at%3ATime%2Cupdated_at%3ATime%2Cbrowser_download_url%3AString%2Cuploader%3AUser%2Cnode_id%3AString%29-class-method" class="signature"><strong>.new</strong>(id : String, url : String, name : String, label : String, state : String, content_type : String, size : Int32, download_count : Int32, created_at : Time, updated_at : Time, browser_download_url : String, uploader : User, node_id : String)</a>
+        <a href="#new%28id%3AInt32%2Curl%3AString%2Cname%3AString%2Clabel%3A%3A%3AUnion%28String%2CNil%29%2Cstate%3AString%2Ccontent_type%3AString%2Csize%3AInt32%2Cdownload_count%3AInt32%2Ccreated_at%3ATime%2Cupdated_at%3ATime%2Cbrowser_download_url%3AString%2Cuploader%3AUser%2Cnode_id%3AString%29-class-method" class="signature"><strong>.new</strong>(id : Int32, url : String, name : String, label : ::Union(String, Nil), state : String, content_type : String, size : Int32, download_count : Int32, created_at : Time, updated_at : Time, browser_download_url : String, uploader : User, node_id : String)</a>
         
       </li>
     
@@ -1940,22 +1945,22 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#id%3AString-instance-method" class="signature"><strong>#id</strong> : String</a>
+        <a href="#id%3AInt32-instance-method" class="signature"><strong>#id</strong> : Int32</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#id%3D%28_id%3AString%29-instance-method" class="signature"><strong>#id=</strong>(_id : String)</a>
+        <a href="#id%3D%28_id%3AInt32%29-instance-method" class="signature"><strong>#id=</strong>(_id : Int32)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#label%3AString-instance-method" class="signature"><strong>#label</strong> : String</a>
+        <a href="#label%3A%3A%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#label</strong> : ::Union(String, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#label%3D%28_label%3AString%29-instance-method" class="signature"><strong>#label=</strong>(_label : String)</a>
+        <a href="#label%3D%28_label%3A%3A%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#label=</strong>(_label : ::Union(String, Nil))</a>
         
       </li>
     
@@ -2077,12 +2082,12 @@
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(id:String,url:String,name:String,label:String,state:String,content_type:String,size:Int32,download_count:Int32,created_at:Time,updated_at:Time,browser_download_url:String,uploader:User,node_id:String)-class-method">
+    <div class="entry-detail" id="new(id:Int32,url:String,name:String,label:::Union(String,Nil),state:String,content_type:String,size:Int32,download_count:Int32,created_at:Time,updated_at:Time,browser_download_url:String,uploader:User,node_id:String)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(id : String, url : String, name : String, label : String, state : String, content_type : String, size : Int32, download_count : Int32, created_at : <a href="../../Time.html">Time</a>, updated_at : <a href="../../Time.html">Time</a>, browser_download_url : String, uploader : <a href="../../Octokit/Models/User.html">User</a>, node_id : String)
+        def self.<strong>new</strong>(id : Int32, url : String, name : String, label : ::Union(String, Nil), state : String, content_type : String, size : Int32, download_count : Int32, created_at : <a href="../../Time.html">Time</a>, updated_at : <a href="../../Time.html">Time</a>, browser_download_url : String, uploader : <a href="../../Octokit/Models/User.html">User</a>, node_id : String)
 
-        <a class="method-permalink" href="#new%28id%3AString%2Curl%3AString%2Cname%3AString%2Clabel%3AString%2Cstate%3AString%2Ccontent_type%3AString%2Csize%3AInt32%2Cdownload_count%3AInt32%2Ccreated_at%3ATime%2Cupdated_at%3ATime%2Cbrowser_download_url%3AString%2Cuploader%3AUser%2Cnode_id%3AString%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28id%3AInt32%2Curl%3AString%2Cname%3AString%2Clabel%3A%3A%3AUnion%28String%2CNil%29%2Cstate%3AString%2Ccontent_type%3AString%2Csize%3AInt32%2Cdownload_count%3AInt32%2Ccreated_at%3ATime%2Cupdated_at%3ATime%2Cbrowser_download_url%3AString%2Cuploader%3AUser%2Cnode_id%3AString%29-class-method">#</a>
       </div>
       
       <br/>
@@ -2224,12 +2229,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="id:String-instance-method">
+    <div class="entry-detail" id="id:Int32-instance-method">
       <div class="signature">
         
-        def <strong>id</strong> : String
+        def <strong>id</strong> : Int32
 
-        <a class="method-permalink" href="#id%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#id%3AInt32-instance-method">#</a>
       </div>
       
       <br/>
@@ -2238,12 +2243,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="id=(_id:String)-instance-method">
+    <div class="entry-detail" id="id=(_id:Int32)-instance-method">
       <div class="signature">
         
-        def <strong>id=</strong>(_id : String)
+        def <strong>id=</strong>(_id : Int32)
 
-        <a class="method-permalink" href="#id%3D%28_id%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#id%3D%28_id%3AInt32%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2252,12 +2257,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="label:String-instance-method">
+    <div class="entry-detail" id="label:::Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>label</strong> : String
+        def <strong>label</strong> : ::Union(String, Nil)
 
-        <a class="method-permalink" href="#label%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#label%3A%3A%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2266,12 +2271,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="label=(_label:String)-instance-method">
+    <div class="entry-detail" id="label=(_label:::Union(String,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>label=</strong>(_label : String)
+        def <strong>label=</strong>(_label : ::Union(String, Nil))
 
-        <a class="method-permalink" href="#label%3D%28_label%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#label%3D%28_label%3A%3A%3AUnion%28String%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>

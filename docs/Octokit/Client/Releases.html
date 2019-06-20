@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.27.2">
+<meta name="generator" content="Crystal Docs 0.29.0">
 
 
 <link href="../../css/style.css" rel="stylesheet" type="text/css">
@@ -55,6 +55,11 @@
       <a href="../../Octokit/Client.html">Client</a>
       
         <ul>
+  
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Authorizations" data-name="octokit::client::authorizations">
+      <a href="../../Octokit/Client/Authorizations.html">Authorizations</a>
+      
+    </li>
   
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Issues" data-name="octokit::client::issues">
       <a href="../../Octokit/Client/Issues.html">Issues</a>
@@ -381,6 +386,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Authorization" data-name="octokit::models::authorization">
+      <a href="../../Octokit/Models/Authorization.html">Authorization</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/AuthorizationApp" data-name="octokit::models::authorizationapp">
       <a href="../../Octokit/Models/AuthorizationApp.html">AuthorizationApp</a>
       
@@ -388,11 +398,6 @@
   
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/AuthorizationRequest" data-name="octokit::models::authorizationrequest">
       <a href="../../Octokit/Models/AuthorizationRequest.html">AuthorizationRequest</a>
-      
-    </li>
-  
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Authorizations" data-name="octokit::models::authorizations">
-      <a href="../../Octokit/Models/Authorizations.html">Authorizations</a>
       
     </li>
   
@@ -1840,12 +1845,10 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">class</span> Octokit::Client::Releases
+  <span class="kind">module</span> Octokit::Client::Releases
 
 </h1>
 
-
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../Octokit/Client/Releases.html">Octokit::Client::Releases</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
 
 
 
@@ -1868,13 +1871,20 @@
 
 
 
+  <h2>Direct including types</h2>
+  <ul class="other-types-list">
+  
+    <li class="other-type"><a href="../../Octokit/Client.html">Octokit::Client</a></li>
+  
+  </ul>
+
 
 
 
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/client/releases.cr#L7" target="_blank">
+      <a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/client/releases.cr#L9" target="_blank">
         octokit/client/releases.cr
       </a>
     
@@ -1893,9 +1903,86 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#releases%28repo%29-instance-method" class="signature"><strong>#releases</strong>(repo)</a>
+        <a href="#create_release%28repo%2Ctag_name%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#create_release</strong>(repo, tag_name, **options)</a>
+        
+          <div class="summary"><p>Create a release</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#delete_release%28repo%2Cid%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#delete_release</strong>(repo, id, **options)</a>
+        
+          <div class="summary"><p>Delete a release</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#delete_release_asset%28repo%2Cid%29-instance-method" class="signature"><strong>#delete_release_asset</strong>(repo, id)</a>
+        
+          <div class="summary"><p>Delete a release asset</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#latest_release%28repo%29-instance-method" class="signature"><strong>#latest_release</strong>(repo)</a>
+        
+          <div class="summary"><p>Get the latest release</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#release%28repo%2Cid%29-instance-method" class="signature"><strong>#release</strong>(repo, id)</a>
+        
+          <div class="summary"><p>Get a release</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#release_asset%28repo%2Cid%29-instance-method" class="signature"><strong>#release_asset</strong>(repo, id)</a>
+        
+          <div class="summary"><p>Get a single release asset</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#release_assets%28repo%2Cid%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#release_assets</strong>(repo, id, **options)</a>
+        
+          <div class="summary"><p>List release assets</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#release_for_tag%28repo%2Ctag_name%29-instance-method" class="signature"><strong>#release_for_tag</strong>(repo, tag_name)</a>
+        
+          <div class="summary"><p>Get the releases for a given tag</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#releases%28path%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#releases</strong>(path, **options)</a>
         
           <div class="summary"><p>List releases for a repository.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#update_release%28repo%2Cid%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#update_release</strong>(repo, id, **options)</a>
+        
+          <div class="summary"><p>Update a release</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#update_release_asset%28repo%2Cid%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#update_release_asset</strong>(repo, id, **options)</a>
+        
+          <div class="summary"><p>Update a release asset</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#upload_asset%28repo%2Cid%2Cpath_or_file%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#upload_asset</strong>(repo, id, path_or_file, **options)</a>
+        
+          <div class="summary"><p>Upload a release asset</p></div>
         
       </li>
     
@@ -1907,26 +1994,6 @@
 
 <div class="methods-inherited">
   
-    
-
-
-    
-
-
-    
-
-
-  
-    
-
-
-    
-
-
-    
-
-
-  
 </div>
 
 
@@ -1936,12 +2003,188 @@
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="releases(repo)-instance-method">
+    <div class="entry-detail" id="create_release(repo,tag_name,**options)-instance-method">
       <div class="signature">
         
-        def <strong>releases</strong>(repo)
+        def <strong>create_release</strong>(repo, tag_name, **options)
 
-        <a class="method-permalink" href="#releases%28repo%29-instance-method">#</a>
+        <a class="method-permalink" href="#create_release%28repo%2Ctag_name%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Create a release</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href=" https://developer.github.com/v3/repos/releases/#create-a-release" target="_blank"> https://developer.github.com/v3/repos/releases/#create-a-release</a></li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/client/releases.cr#L31" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="delete_release(repo,id,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>delete_release</strong>(repo, id, **options)
+
+        <a class="method-permalink" href="#delete_release%28repo%2Cid%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Delete a release</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href=" https://developer.github.com/v3/repos/releases/#delete-a-release" target="_blank"> https://developer.github.com/v3/repos/releases/#delete-a-release</a></li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/client/releases.cr#L59" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="delete_release_asset(repo,id)-instance-method">
+      <div class="signature">
+        
+        def <strong>delete_release_asset</strong>(repo, id)
+
+        <a class="method-permalink" href="#delete_release_asset%28repo%2Cid%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Delete a release asset</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href=" https://developer.github.com/v3/repos/releases/#delete-a-release-asset" target="_blank"> https://developer.github.com/v3/repos/releases/#delete-a-release-asset</a></li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/client/releases.cr#L119" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="latest_release(repo)-instance-method">
+      <div class="signature">
+        
+        def <strong>latest_release</strong>(repo)
+
+        <a class="method-permalink" href="#latest_release%28repo%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Get the latest release</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href=" https://developer.github.com/v3/repos/releases/#get-the-latest-release" target="_blank"> https://developer.github.com/v3/repos/releases/#get-the-latest-release</a></li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/client/releases.cr#L136" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="release(repo,id)-instance-method">
+      <div class="signature">
+        
+        def <strong>release</strong>(repo, id)
+
+        <a class="method-permalink" href="#release%28repo%2Cid%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Get a release</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href=" https://developer.github.com/v3/repos/releases/#create-a-release" target="_blank"> https://developer.github.com/v3/repos/releases/#create-a-release</a></li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/client/releases.cr#L41" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="release_asset(repo,id)-instance-method">
+      <div class="signature">
+        
+        def <strong>release_asset</strong>(repo, id)
+
+        <a class="method-permalink" href="#release_asset%28repo%2Cid%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Get a single release asset</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href=" https://developer.github.com/v3/repos/releases/#get-a-single-release-asset" target="_blank"> https://developer.github.com/v3/repos/releases/#get-a-single-release-asset</a></li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/client/releases.cr#L101" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="release_assets(repo,id,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>release_assets</strong>(repo, id, **options)
+
+        <a class="method-permalink" href="#release_assets%28repo%2Cid%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>List release assets</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href=" https://developer.github.com/v3/repos/releases/#list-assets-for-a-release" target="_blank"> https://developer.github.com/v3/repos/releases/#list-assets-for-a-release</a></li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/client/releases.cr#L67" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="release_for_tag(repo,tag_name)-instance-method">
+      <div class="signature">
+        
+        def <strong>release_for_tag</strong>(repo, tag_name)
+
+        <a class="method-permalink" href="#release_for_tag%28repo%2Ctag_name%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Get the releases for a given tag</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href=" https://developer.github.com/v3/repos/releases/#get-a-release-by-tag-name" target="_blank"> https://developer.github.com/v3/repos/releases/#get-a-release-by-tag-name</a></li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/client/releases.cr#L127" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="releases(path,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>releases</strong>(path, **options)
+
+        <a class="method-permalink" href="#releases%28path%2C%2A%2Aoptions%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>List releases for a repository.</p>
@@ -1953,7 +2196,75 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/client/releases.cr#L21" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/client/releases.cr#L23" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="update_release(repo,id,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>update_release</strong>(repo, id, **options)
+
+        <a class="method-permalink" href="#update_release%28repo%2Cid%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Update a release</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href=" https://developer.github.com/v3/repos/releases/#edit-a-release" target="_blank"> https://developer.github.com/v3/repos/releases/#edit-a-release</a></li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/client/releases.cr#L50" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="update_release_asset(repo,id,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>update_release_asset</strong>(repo, id, **options)
+
+        <a class="method-permalink" href="#update_release_asset%28repo%2Cid%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Update a release asset</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href=" https://developer.github.com/v3/repos/releases/#edit-a-release-asset" target="_blank"> https://developer.github.com/v3/repos/releases/#edit-a-release-asset</a></li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/client/releases.cr#L110" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="upload_asset(repo,id,path_or_file,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>upload_asset</strong>(repo, id, path_or_file, **options)
+
+        <a class="method-permalink" href="#upload_asset%28repo%2Cid%2Cpath_or_file%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Upload a release asset</p>
+
+<p><span class="flag orange">TODO</span>  Get this to work</p>
+
+<p><strong>See Also:</strong></p>
+
+<ul><li><a href=" https://developer.github.com/v3/repos/releases/#upload-a-release-asset" target="_blank"> https://developer.github.com/v3/repos/releases/#upload-a-release-asset</a></li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/client/releases.cr#L77" target="_blank">View source</a>]
         
       </div>
     </div>

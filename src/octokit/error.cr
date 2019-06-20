@@ -3,7 +3,7 @@ require "xml"
 
 module Octokit
   class Error < Exception
-    @response : Halite::Response
+    @response : Halite::Response?
 
     @data : JSON::Any? = nil
 
@@ -36,7 +36,7 @@ module Octokit
       end
     end
 
-    def initialize(response : Halite::Response)
+    def initialize(response : Halite::Response? = nil)
       @response = response
       super(build_error_message)
     end
@@ -106,28 +106,28 @@ module Octokit
     #
     # @return [Integer]
     def response_status
-      @response.status_code
+      @response.not_nil!.status_code
     end
 
     # Headers returned by the GitHub server.
     #
     # @return [Hash]
     def response_headers
-      @response.headers
+      @response.not_nil!.headers
     end
 
     # Body returned by the GitHub server.
     #
     # @return [String]
     def response_body
-      @response.body
+      @response.not_nil!.body
     end
 
     private def data
-      @data ||= JSON.parse(@response.body)
+      @data ||= JSON.parse(@response.not_nil!.body)
     rescue JSON::ParseException
       # TODO: Clean this up
-      xml = XML.parse(@response.body)
+      xml = XML.parse(@response.not_nil!.body)
       title = xml.xpath_node("//title")
       @data ||= JSON.parse("\{\"message\": \"#{title.not_nil!.content}\"}")
     end
@@ -163,8 +163,8 @@ module Octokit
 
     private def build_error_message
       String.build do |message|
-        message << redact_url(@response.uri.to_s) + ": "
-        message << "#{@response.status_code} - "
+        message << redact_url(@response.not_nil!.uri.to_s) + ": "
+        message << "#{@response.not_nil!.status_code} - "
         message << "#{response_message}" unless response_message.nil?
         message << "#{response_error}" unless response_error.nil?
         message << "#{response_error_summary}" unless response_error_summary.nil?
@@ -211,7 +211,7 @@ module Octokit
 
     private def delivery_method_from_header
       if match = self.class.Error
-        ::required_header(@response.headers)
+        ::required_header(@response.not_nil!.headers)
         match[1]
       end
     end

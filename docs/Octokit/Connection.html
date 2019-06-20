@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.27.2">
+<meta name="generator" content="Crystal Docs 0.29.0">
 
 
 <link href="../css/style.css" rel="stylesheet" type="text/css">
@@ -55,6 +55,11 @@
       <a href="../Octokit/Client.html">Client</a>
       
         <ul>
+  
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Authorizations" data-name="octokit::client::authorizations">
+      <a href="../Octokit/Client/Authorizations.html">Authorizations</a>
+      
+    </li>
   
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Issues" data-name="octokit::client::issues">
       <a href="../Octokit/Client/Issues.html">Issues</a>
@@ -381,6 +386,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Authorization" data-name="octokit::models::authorization">
+      <a href="../Octokit/Models/Authorization.html">Authorization</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/AuthorizationApp" data-name="octokit::models::authorizationapp">
       <a href="../Octokit/Models/AuthorizationApp.html">AuthorizationApp</a>
       
@@ -388,11 +398,6 @@
   
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/AuthorizationRequest" data-name="octokit::models::authorizationrequest">
       <a href="../Octokit/Models/AuthorizationRequest.html">AuthorizationRequest</a>
-      
-    </li>
-  
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Authorizations" data-name="octokit::models::authorizations">
-      <a href="../Octokit/Models/Authorizations.html">Authorizations</a>
       
     </li>
   
@@ -1878,7 +1883,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/connection.cr#L5" target="_blank">
+      <a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/connection.cr#L6" target="_blank">
         octokit/connection.cr
       </a>
     
@@ -1944,6 +1949,21 @@
         <a href="#last_response-instance-method" class="signature"><strong>#last_response</strong></a>
         
           <div class="summary"><p>Response for last HTTP request</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#make_basic_auth%28user%2Cpassword%29-instance-method" class="signature"><strong>#make_basic_auth</strong>(user, password)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#make_bearer_auth%28bearer_token%29-instance-method" class="signature"><strong>#make_bearer_auth</strong>(bearer_token)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#make_token_auth%28access_token%29-instance-method" class="signature"><strong>#make_token_auth</strong>(access_token)</a>
         
       </li>
     
@@ -2058,7 +2078,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/connection.cr#L83" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/connection.cr#L84" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2076,7 +2096,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/connection.cr#L38" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/connection.cr#L39" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2094,7 +2114,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/connection.cr#L18" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/connection.cr#L19" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2112,7 +2132,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/connection.cr#L43" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/connection.cr#L44" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2130,7 +2150,55 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/connection.cr#L104" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/connection.cr#L117" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="make_basic_auth(user,password)-instance-method">
+      <div class="signature">
+        
+        def <strong>make_basic_auth</strong>(user, password)
+
+        <a class="method-permalink" href="#make_basic_auth%28user%2Cpassword%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/connection.cr#L121" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="make_bearer_auth(bearer_token)-instance-method">
+      <div class="signature">
+        
+        def <strong>make_bearer_auth</strong>(bearer_token)
+
+        <a class="method-permalink" href="#make_bearer_auth%28bearer_token%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/connection.cr#L130" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="make_token_auth(access_token)-instance-method">
+      <div class="signature">
+        
+        def <strong>make_token_auth</strong>(access_token)
+
+        <a class="method-permalink" href="#make_token_auth%28access_token%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/connection.cr#L126" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2150,7 +2218,7 @@ on value in <code>#auto_paginate</code>.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/connection.cr#L50" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/connection.cr#L51" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2170,7 +2238,7 @@ on value in <code>#auto_paginate</code>.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/connection.cr#L64" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/connection.cr#L65" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2188,7 +2256,7 @@ on value in <code>#auto_paginate</code>.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/connection.cr#L33" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/connection.cr#L34" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2206,7 +2274,7 @@ on value in <code>#auto_paginate</code>.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/connection.cr#L23" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/connection.cr#L24" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2224,7 +2292,7 @@ on value in <code>#auto_paginate</code>.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/connection.cr#L28" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/connection.cr#L29" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2242,7 +2310,7 @@ on value in <code>#auto_paginate</code>.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/connection.cr#L99" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/connection.cr#L112" target="_blank">View source</a>]
         
       </div>
     </div>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.27.2">
+<meta name="generator" content="Crystal Docs 0.29.0">
 
 
 <link href="../css/style.css" rel="stylesheet" type="text/css">
@@ -55,6 +55,11 @@
       <a href="../Octokit/Client.html">Client</a>
       
         <ul>
+  
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Authorizations" data-name="octokit::client::authorizations">
+      <a href="../Octokit/Client/Authorizations.html">Authorizations</a>
+      
+    </li>
   
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Issues" data-name="octokit::client::issues">
       <a href="../Octokit/Client/Issues.html">Issues</a>
@@ -381,6 +386,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Authorization" data-name="octokit::models::authorization">
+      <a href="../Octokit/Models/Authorization.html">Authorization</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/AuthorizationApp" data-name="octokit::models::authorizationapp">
       <a href="../Octokit/Models/AuthorizationApp.html">AuthorizationApp</a>
       
@@ -388,11 +398,6 @@
   
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/AuthorizationRequest" data-name="octokit::models::authorizationrequest">
       <a href="../Octokit/Models/AuthorizationRequest.html">AuthorizationRequest</a>
-      
-    </li>
-  
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Authorizations" data-name="octokit::models::authorizations">
-      <a href="../Octokit/Models/Authorizations.html">Authorizations</a>
       
     </li>
   
@@ -1877,7 +1882,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/configurable.cr#L6" target="_blank">
+      <a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L6" target="_blank">
         octokit/configurable.cr
       </a>
     
@@ -1896,9 +1901,93 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
+        <a href="#access_token-instance-method" class="signature"><strong>#access_token</strong></a>
+        
+          <div class="summary"><p>Get access token for authentication.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#access_token%3D%28token%29-instance-method" class="signature"><strong>#access_token=</strong>(token)</a>
+        
+          <div class="summary"><p>Set access token for authentication.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#add_middleware%28middleware%3AHalite%3A%3AFeature%29-instance-method" class="signature"><strong>#add_middleware</strong>(middleware : Halite::Feature)</a>
+        
+          <div class="summary"><p>Add middleware to the middleware stack.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#api_endpoint-instance-method" class="signature"><strong>#api_endpoint</strong></a>
         
           <div class="summary"><p>API endpoint for <code><a href="../Octokit/Client.html">Client</a></code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#api_endpoint%3D%28val%29-instance-method" class="signature"><strong>#api_endpoint=</strong>(val)</a>
+        
+          <div class="summary"><p>Set the api endpoint.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#auto_paginate-instance-method" class="signature"><strong>#auto_paginate</strong></a>
+        
+          <div class="summary"><p>Do we want to auto paginate.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#auto_paginate%3D%28val%29-instance-method" class="signature"><strong>#auto_paginate=</strong>(val)</a>
+        
+          <div class="summary"><p>Set if we want to auto paginate.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#bearer_token-instance-method" class="signature"><strong>#bearer_token</strong></a>
+        
+          <div class="summary"><p>Get the bearer token.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#bearer_token%3D%28token%29-instance-method" class="signature"><strong>#bearer_token=</strong>(token)</a>
+        
+          <div class="summary"><p>Set the bearer token.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#client_id-instance-method" class="signature"><strong>#client_id</strong></a>
+        
+          <div class="summary"><p>Get the Client ID.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#client_id%3D%28val%29-instance-method" class="signature"><strong>#client_id=</strong>(val)</a>
+        
+          <div class="summary"><p>Set the Client ID.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#client_secret-instance-method" class="signature"><strong>#client_secret</strong></a>
+        
+          <div class="summary"><p>Get the Client Secret.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#client_secret%3D%28val%29-instance-method" class="signature"><strong>#client_secret=</strong>(val)</a>
+        
+          <div class="summary"><p>Set the Client secret.</p></div>
         
       </li>
     
@@ -1910,9 +1999,58 @@
       </li>
     
       <li class="entry-summary">
+        <a href="#connection_options-instance-method" class="signature"><strong>#connection_options</strong></a>
+        
+          <div class="summary"><p>Get the default connection options passed to Halite.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#connection_options%3D%28val%29-instance-method" class="signature"><strong>#connection_options=</strong>(val)</a>
+        
+          <div class="summary"><p>Set the default connection options passed to Halite.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#default_media_type-instance-method" class="signature"><strong>#default_media_type</strong></a>
+        
+          <div class="summary"><p>Get the default media type for headers.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#default_media_type%3D%28val%29-instance-method" class="signature"><strong>#default_media_type=</strong>(val)</a>
+        
+          <div class="summary"><p>Set the default media type for headers.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#logger-instance-method" class="signature"><strong>#logger</strong></a>
+        
+          <div class="summary"><p>Get the configured logger instance.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#logger%3D%28val%29-instance-method" class="signature"><strong>#logger=</strong>(val)</a>
+        
+          <div class="summary"><p>Set a configured logger instance.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#login-instance-method" class="signature"><strong>#login</strong></a>
         
           <div class="summary"><p>The username of the authenticated user</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#login%3D%28val%29-instance-method" class="signature"><strong>#login=</strong>(val)</a>
+        
+          <div class="summary"><p>Set the user login.</p></div>
         
       </li>
     
@@ -1924,27 +2062,111 @@
       </li>
     
       <li class="entry-summary">
+        <a href="#management_console_endpoint%3D%28val%29-instance-method" class="signature"><strong>#management_console_endpoint=</strong>(val)</a>
+        
+          <div class="summary"><p>Set the management console password.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#middleware-instance-method" class="signature"><strong>#middleware</strong></a>
+        
+          <div class="summary"><p>Get the middleware stack for Halite.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#middleware%3D%28val%29-instance-method" class="signature"><strong>#middleware=</strong>(val)</a>
+        
+          <div class="summary"><p>Set the middleware stack for Halite.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#password%3D%28val%29-instance-method" class="signature"><strong>#password=</strong>(val)</a>
+        
+          <div class="summary"><p>Set the user password.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#per_page-instance-method" class="signature"><strong>#per_page</strong></a>
+        
+          <div class="summary"><p>Get the maximum results returned per page for paginated endpoints.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#per_page%3D%28val%29-instance-method" class="signature"><strong>#per_page=</strong>(val)</a>
+        
+          <div class="summary"><p>Set the maximum results returned per page for paginated endpoints.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#proxy-instance-method" class="signature"><strong>#proxy</strong></a>
+        
+          <div class="summary"><p>Get the proxy to use when connecting.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#proxy%3D%28val%29-instance-method" class="signature"><strong>#proxy=</strong>(val)</a>
+        
+          <div class="summary"><p>Set the proxy to use when connecting.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#reset%21-instance-method" class="signature"><strong>#reset!</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ssl_verify_mode-instance-method" class="signature"><strong>#ssl_verify_mode</strong></a>
+        
+          <div class="summary"><p>Get the <code>OpenSSL</code> verify mode to use for SSL connections.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ssl_verify_mode%3D%28mode%29-instance-method" class="signature"><strong>#ssl_verify_mode=</strong>(mode)</a>
+        
+          <div class="summary"><p>Set the <code>OpenSSL</code> verify mode to use for SSL connections.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#user_agent-instance-method" class="signature"><strong>#user_agent</strong></a>
+        
+          <div class="summary"><p>Get the User Agent header to be passed to all requests.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#user_agent%3D%28val%29-instance-method" class="signature"><strong>#user_agent=</strong>(val)</a>
+        
+          <div class="summary"><p>Set the User Agent header to be passed to all requests.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#web_endpoint-instance-method" class="signature"><strong>#web_endpoint</strong></a>
         
           <div class="summary"><p>Base URL for generated web URLs</p></div>
         
       </li>
     
-  </ul>
-
-
-
-  <h2>Macro Summary</h2>
-  <ul class="list-summary">
-    
       <li class="entry-summary">
-        <a href="#reset%21-macro" class="signature"><strong>reset!</strong></a>
+        <a href="#web_endpoint%3D%28val%29-instance-method" class="signature"><strong>#web_endpoint=</strong>(val)</a>
         
-          <div class="summary"><p>Resets the configuration options to their defaults definied in <code><a href="../Octokit/Default.html">Default</a></code>.</p></div>
+          <div class="summary"><p>Set the web endpoint.</p></div>
         
       </li>
     
   </ul>
+
+
 
 
 
@@ -1959,6 +2181,60 @@
 
   <h2>Instance Method Detail</h2>
   
+    <div class="entry-detail" id="access_token-instance-method">
+      <div class="signature">
+        
+        def <strong>access_token</strong>
+
+        <a class="method-permalink" href="#access_token-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Get access token for authentication.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L33" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="access_token=(token)-instance-method">
+      <div class="signature">
+        
+        def <strong>access_token=</strong>(token)
+
+        <a class="method-permalink" href="#access_token%3D%28token%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set access token for authentication.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L38" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="add_middleware(middleware:Halite::Feature)-instance-method">
+      <div class="signature">
+        
+        def <strong>add_middleware</strong>(middleware : Halite::Feature)
+
+        <a class="method-permalink" href="#add_middleware%28middleware%3AHalite%3A%3AFeature%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Add middleware to the middleware stack.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L130" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
     <div class="entry-detail" id="api_endpoint-instance-method">
       <div class="signature">
         
@@ -1972,7 +2248,169 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/configurable.cr#L116" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L286" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="api_endpoint=(val)-instance-method">
+      <div class="signature">
+        
+        def <strong>api_endpoint=</strong>(val)
+
+        <a class="method-permalink" href="#api_endpoint%3D%28val%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set the api endpoint.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L223" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="auto_paginate-instance-method">
+      <div class="signature">
+        
+        def <strong>auto_paginate</strong>
+
+        <a class="method-permalink" href="#auto_paginate-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Do we want to auto paginate.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L45" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="auto_paginate=(val)-instance-method">
+      <div class="signature">
+        
+        def <strong>auto_paginate=</strong>(val)
+
+        <a class="method-permalink" href="#auto_paginate%3D%28val%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set if we want to auto paginate.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L50" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="bearer_token-instance-method">
+      <div class="signature">
+        
+        def <strong>bearer_token</strong>
+
+        <a class="method-permalink" href="#bearer_token-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Get the bearer token.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L57" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="bearer_token=(token)-instance-method">
+      <div class="signature">
+        
+        def <strong>bearer_token=</strong>(token)
+
+        <a class="method-permalink" href="#bearer_token%3D%28token%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set the bearer token.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L62" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="client_id-instance-method">
+      <div class="signature">
+        
+        def <strong>client_id</strong>
+
+        <a class="method-permalink" href="#client_id-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Get the Client ID.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L69" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="client_id=(val)-instance-method">
+      <div class="signature">
+        
+        def <strong>client_id=</strong>(val)
+
+        <a class="method-permalink" href="#client_id%3D%28val%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set the Client ID.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L74" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="client_secret-instance-method">
+      <div class="signature">
+        
+        def <strong>client_secret</strong>
+
+        <a class="method-permalink" href="#client_secret-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Get the Client Secret.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L81" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="client_secret=(val)-instance-method">
+      <div class="signature">
+        
+        def <strong>client_secret=</strong>(val)
+
+        <a class="method-permalink" href="#client_secret%3D%28val%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set the Client secret.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L86" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1996,7 +2434,115 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/configurable.cr#L102" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L268" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="connection_options-instance-method">
+      <div class="signature">
+        
+        def <strong>connection_options</strong>
+
+        <a class="method-permalink" href="#connection_options-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Get the default connection options passed to Halite.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L107" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="connection_options=(val)-instance-method">
+      <div class="signature">
+        
+        def <strong>connection_options=</strong>(val)
+
+        <a class="method-permalink" href="#connection_options%3D%28val%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set the default connection options passed to Halite.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L112" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="default_media_type-instance-method">
+      <div class="signature">
+        
+        def <strong>default_media_type</strong>
+
+        <a class="method-permalink" href="#default_media_type-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Get the default media type for headers.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L94" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="default_media_type=(val)-instance-method">
+      <div class="signature">
+        
+        def <strong>default_media_type=</strong>(val)
+
+        <a class="method-permalink" href="#default_media_type%3D%28val%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set the default media type for headers.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L99" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="logger-instance-method">
+      <div class="signature">
+        
+        def <strong>logger</strong>
+
+        <a class="method-permalink" href="#logger-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Get the configured logger instance.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L150" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="logger=(val)-instance-method">
+      <div class="signature">
+        
+        def <strong>logger=</strong>(val)
+
+        <a class="method-permalink" href="#logger%3D%28val%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set a configured logger instance.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L155" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2014,7 +2560,25 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/configurable.cr#L132" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L302" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="login=(val)-instance-method">
+      <div class="signature">
+        
+        def <strong>login=</strong>(val)
+
+        <a class="method-permalink" href="#login%3D%28val%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set the user login.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L237" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2032,7 +2596,247 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/configurable.cr#L121" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L291" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="management_console_endpoint=(val)-instance-method">
+      <div class="signature">
+        
+        def <strong>management_console_endpoint=</strong>(val)
+
+        <a class="method-permalink" href="#management_console_endpoint%3D%28val%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set the management console password.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L256" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="middleware-instance-method">
+      <div class="signature">
+        
+        def <strong>middleware</strong>
+
+        <a class="method-permalink" href="#middleware-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Get the middleware stack for Halite.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L120" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="middleware=(val)-instance-method">
+      <div class="signature">
+        
+        def <strong>middleware=</strong>(val)
+
+        <a class="method-permalink" href="#middleware%3D%28val%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set the middleware stack for Halite.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L125" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="password=(val)-instance-method">
+      <div class="signature">
+        
+        def <strong>password=</strong>(val)
+
+        <a class="method-permalink" href="#password%3D%28val%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set the user password.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L230" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="per_page-instance-method">
+      <div class="signature">
+        
+        def <strong>per_page</strong>
+
+        <a class="method-permalink" href="#per_page-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Get the maximum results returned per page for paginated endpoints.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L137" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="per_page=(val)-instance-method">
+      <div class="signature">
+        
+        def <strong>per_page=</strong>(val)
+
+        <a class="method-permalink" href="#per_page%3D%28val%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set the maximum results returned per page for paginated endpoints.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L142" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="proxy-instance-method">
+      <div class="signature">
+        
+        def <strong>proxy</strong>
+
+        <a class="method-permalink" href="#proxy-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Get the proxy to use when connecting.
+<strong>Note:</strong> Crystal's <code>HTTP::Client</code> and by extension <code>Halite</code> do not yet
+support proxy's. Therefore this option does nothing for now.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L164" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="proxy=(val)-instance-method">
+      <div class="signature">
+        
+        def <strong>proxy=</strong>(val)
+
+        <a class="method-permalink" href="#proxy%3D%28val%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set the proxy to use when connecting.
+<strong>Note:</strong> Crystal's <code>HTTP::Client</code> and by extension <code>Halite</code> do not yet
+support proxy's. Therefore this option does nothing for now.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L171" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="reset!-instance-method">
+      <div class="signature">
+        
+        def <strong>reset!</strong>
+
+        <a class="method-permalink" href="#reset%21-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L272" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ssl_verify_mode-instance-method">
+      <div class="signature">
+        
+        def <strong>ssl_verify_mode</strong>
+
+        <a class="method-permalink" href="#ssl_verify_mode-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Get the <code>OpenSSL</code> verify mode to use for SSL connections.
+0 is OpenSSL::SSL::NONE
+1 is OpenSSL::SSL::PEER</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L180" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ssl_verify_mode=(mode)-instance-method">
+      <div class="signature">
+        
+        def <strong>ssl_verify_mode=</strong>(mode)
+
+        <a class="method-permalink" href="#ssl_verify_mode%3D%28mode%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set the <code>OpenSSL</code> verify mode to use for SSL connections.
+0 is OpenSSL::SSL::NONE
+1 is OpenSSL::SSL::PEER</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L187" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="user_agent-instance-method">
+      <div class="signature">
+        
+        def <strong>user_agent</strong>
+
+        <a class="method-permalink" href="#user_agent-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Get the User Agent header to be passed to all requests.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L194" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="user_agent=(val)-instance-method">
+      <div class="signature">
+        
+        def <strong>user_agent=</strong>(val)
+
+        <a class="method-permalink" href="#user_agent%3D%28val%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set the User Agent header to be passed to all requests.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L199" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2050,34 +2854,31 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/configurable.cr#L127" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L297" target="_blank">View source</a>]
         
       </div>
     </div>
   
-
-
-
-  <h2>Macro Detail</h2>
-  
-    <div class="entry-detail" id="reset!-macro">
+    <div class="entry-detail" id="web_endpoint=(val)-instance-method">
       <div class="signature">
         
-        macro <strong>reset!</strong>
+        def <strong>web_endpoint=</strong>(val)
 
-        <a class="method-permalink" href="#reset%21-macro">#</a>
+        <a class="method-permalink" href="#web_endpoint%3D%28val%29-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Resets the configuration options to their defaults definied in <code><a href="../Octokit/Default.html">Default</a></code>.</p></div>
+        <div class="doc"><p>Set the web endpoint.</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/configurable.cr#L107" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/configurable.cr#L211" target="_blank">View source</a>]
         
       </div>
     </div>
   
+
+
 
 
 </div>

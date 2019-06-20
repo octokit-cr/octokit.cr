@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.27.2">
+<meta name="generator" content="Crystal Docs 0.29.0">
 
 
 <link href="../css/style.css" rel="stylesheet" type="text/css">
@@ -55,6 +55,11 @@
       <a href="../Octokit/Client.html">Client</a>
       
         <ul>
+  
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Authorizations" data-name="octokit::client::authorizations">
+      <a href="../Octokit/Client/Authorizations.html">Authorizations</a>
+      
+    </li>
   
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Issues" data-name="octokit::client::issues">
       <a href="../Octokit/Client/Issues.html">Issues</a>
@@ -381,6 +386,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Authorization" data-name="octokit::models::authorization">
+      <a href="../Octokit/Models/Authorization.html">Authorization</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/AuthorizationApp" data-name="octokit::models::authorizationapp">
       <a href="../Octokit/Models/AuthorizationApp.html">AuthorizationApp</a>
       
@@ -388,11 +398,6 @@
   
   <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/AuthorizationRequest" data-name="octokit::models::authorizationrequest">
       <a href="../Octokit/Models/AuthorizationRequest.html">AuthorizationRequest</a>
-      
-    </li>
-  
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Authorizations" data-name="octokit::models::authorizations">
-      <a href="../Octokit/Models/Authorizations.html">Authorizations</a>
       
     </li>
   
@@ -1858,6 +1863,13 @@
 
 
 
+  <h2>Extended Modules</h2>
+  <ul class="other-types-list">
+  
+    <li class="other-type"><a href="../Octokit/Default.html">Octokit::Default</a></li>
+  
+  </ul>
+
 
 
 
@@ -1868,7 +1880,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/default.cr#L9" target="_blank">
+      <a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/default.cr#L9" target="_blank">
         octokit/default.cr
       </a>
     
@@ -1933,145 +1945,145 @@
 
 
 
-  <h2>Class Method Summary</h2>
+
+
+  <h2>Instance Method Summary</h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#access_token-class-method" class="signature"><strong>.access_token</strong></a>
+        <a href="#access_token-instance-method" class="signature"><strong>#access_token</strong></a>
         
           <div class="summary"><p>Default access token from ENV</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#api_endpoint-class-method" class="signature"><strong>.api_endpoint</strong></a>
+        <a href="#api_endpoint-instance-method" class="signature"><strong>#api_endpoint</strong></a>
         
           <div class="summary"><p>Default API endpoint from ENV</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#auto_paginate-class-method" class="signature"><strong>.auto_paginate</strong></a>
+        <a href="#auto_paginate-instance-method" class="signature"><strong>#auto_paginate</strong></a>
         
           <div class="summary"><p>Default pagination preference from ENV</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#bearer_token-class-method" class="signature"><strong>.bearer_token</strong></a>
+        <a href="#bearer_token-instance-method" class="signature"><strong>#bearer_token</strong></a>
         
           <div class="summary"><p>Default bearer token from ENV</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#client_id-class-method" class="signature"><strong>.client_id</strong></a>
+        <a href="#client_id-instance-method" class="signature"><strong>#client_id</strong></a>
         
           <div class="summary"><p>Default OAuth app key from ENV</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#client_secret-class-method" class="signature"><strong>.client_secret</strong></a>
+        <a href="#client_secret-instance-method" class="signature"><strong>#client_secret</strong></a>
         
           <div class="summary"><p>Default OAuth app secret from ENV</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#connection_options-class-method" class="signature"><strong>.connection_options</strong></a>
+        <a href="#connection_options-instance-method" class="signature"><strong>#connection_options</strong></a>
         
           <div class="summary"><p>Default options for <code>Halite::Options</code></p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#default_media_type-class-method" class="signature"><strong>.default_media_type</strong></a>
+        <a href="#default_media_type-instance-method" class="signature"><strong>#default_media_type</strong></a>
         
           <div class="summary"><p>Default media type from ENV or <code><a href="../Octokit/Default.html#MEDIA_TYPE">MEDIA_TYPE</a></code></p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#logger-class-method" class="signature"><strong>.logger</strong></a>
+        <a href="#logger-instance-method" class="signature"><strong>#logger</strong></a>
         
           <div class="summary"><p>Default logger</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#login-class-method" class="signature"><strong>.login</strong></a>
+        <a href="#login-instance-method" class="signature"><strong>#login</strong></a>
         
           <div class="summary"><p>Default GitHub username for Basic Auth from ENV</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#management_console_endpoint-class-method" class="signature"><strong>.management_console_endpoint</strong></a>
+        <a href="#management_console_endpoint-instance-method" class="signature"><strong>#management_console_endpoint</strong></a>
         
           <div class="summary"><p>Default management console endpoint from ENV</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#management_console_password-class-method" class="signature"><strong>.management_console_password</strong></a>
+        <a href="#management_console_password-instance-method" class="signature"><strong>#management_console_password</strong></a>
         
           <div class="summary"><p>Default management console password from ENV</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#middleware-class-method" class="signature"><strong>.middleware</strong></a>
+        <a href="#middleware-instance-method" class="signature"><strong>#middleware</strong></a>
         
           <div class="summary"><p>Middleware stack for <code>Halite::Client</code></p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#password-class-method" class="signature"><strong>.password</strong></a>
+        <a href="#password-instance-method" class="signature"><strong>#password</strong></a>
         
           <div class="summary"><p>Default GitHub password for Basic Auth from ENV</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#per_page-class-method" class="signature"><strong>.per_page</strong></a>
+        <a href="#per_page-instance-method" class="signature"><strong>#per_page</strong></a>
         
           <div class="summary"><p>Default pagination page size from ENV</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#proxy-class-method" class="signature"><strong>.proxy</strong></a>
+        <a href="#proxy-instance-method" class="signature"><strong>#proxy</strong></a>
         
           <div class="summary"><p>Default proxy server URI for Halite::Client from ENV NOTE: Won't work until proxies are implemented by Halite</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#ssl_verify_mode-class-method" class="signature"><strong>.ssl_verify_mode</strong></a>
+        <a href="#ssl_verify_mode-instance-method" class="signature"><strong>#ssl_verify_mode</strong></a>
         
           <div class="summary"><p>Default SSL verify mode from ENV</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#user_agent-class-method" class="signature"><strong>.user_agent</strong></a>
+        <a href="#user_agent-instance-method" class="signature"><strong>#user_agent</strong></a>
         
           <div class="summary"><p>Default User-Agent header string from ENV or <code><a href="../Octokit/Default.html#USER_AGENT">USER_AGENT</a></code></p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#web_endpoint-class-method" class="signature"><strong>.web_endpoint</strong></a>
+        <a href="#web_endpoint-instance-method" class="signature"><strong>#web_endpoint</strong></a>
         
           <div class="summary"><p>Default web endpoint from ENV or <code><a href="../Octokit/Default.html#WEB_ENDPOINT">WEB_ENDPOINT</a></code></p></div>
         
       </li>
     
   </ul>
-
-
 
 
 
@@ -2084,14 +2096,16 @@
 
 
 
-  <h2>Class Method Detail</h2>
+
+
+  <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="access_token-class-method">
+    <div class="entry-detail" id="access_token-instance-method">
       <div class="signature">
         
-        def self.<strong>access_token</strong>
+        def <strong>access_token</strong>
 
-        <a class="method-permalink" href="#access_token-class-method">#</a>
+        <a class="method-permalink" href="#access_token-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Default access token from ENV</p></div>
@@ -2099,17 +2113,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/default.cr#L37" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/default.cr#L39" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="api_endpoint-class-method">
+    <div class="entry-detail" id="api_endpoint-instance-method">
       <div class="signature">
         
-        def self.<strong>api_endpoint</strong>
+        def <strong>api_endpoint</strong>
 
-        <a class="method-permalink" href="#api_endpoint-class-method">#</a>
+        <a class="method-permalink" href="#api_endpoint-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Default API endpoint from ENV</p></div>
@@ -2117,17 +2131,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/default.cr#L42" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/default.cr#L44" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="auto_paginate-class-method">
+    <div class="entry-detail" id="auto_paginate-instance-method">
       <div class="signature">
         
-        def self.<strong>auto_paginate</strong>
+        def <strong>auto_paginate</strong>
 
-        <a class="method-permalink" href="#auto_paginate-class-method">#</a>
+        <a class="method-permalink" href="#auto_paginate-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Default pagination preference from ENV</p></div>
@@ -2135,17 +2149,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/default.cr#L47" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/default.cr#L49" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="bearer_token-class-method">
+    <div class="entry-detail" id="bearer_token-instance-method">
       <div class="signature">
         
-        def self.<strong>bearer_token</strong>
+        def <strong>bearer_token</strong>
 
-        <a class="method-permalink" href="#bearer_token-class-method">#</a>
+        <a class="method-permalink" href="#bearer_token-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Default bearer token from ENV</p></div>
@@ -2153,17 +2167,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/default.cr#L52" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/default.cr#L54" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="client_id-class-method">
+    <div class="entry-detail" id="client_id-instance-method">
       <div class="signature">
         
-        def self.<strong>client_id</strong>
+        def <strong>client_id</strong>
 
-        <a class="method-permalink" href="#client_id-class-method">#</a>
+        <a class="method-permalink" href="#client_id-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Default OAuth app key from ENV</p></div>
@@ -2171,17 +2185,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/default.cr#L57" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/default.cr#L59" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="client_secret-class-method">
+    <div class="entry-detail" id="client_secret-instance-method">
       <div class="signature">
         
-        def self.<strong>client_secret</strong>
+        def <strong>client_secret</strong>
 
-        <a class="method-permalink" href="#client_secret-class-method">#</a>
+        <a class="method-permalink" href="#client_secret-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Default OAuth app secret from ENV</p></div>
@@ -2189,17 +2203,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/default.cr#L62" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/default.cr#L64" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="connection_options-class-method">
+    <div class="entry-detail" id="connection_options-instance-method">
       <div class="signature">
         
-        def self.<strong>connection_options</strong>
+        def <strong>connection_options</strong>
 
-        <a class="method-permalink" href="#connection_options-class-method">#</a>
+        <a class="method-permalink" href="#connection_options-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Default options for <code>Halite::Options</code></p></div>
@@ -2207,17 +2221,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/default.cr#L77" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/default.cr#L79" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="default_media_type-class-method">
+    <div class="entry-detail" id="default_media_type-instance-method">
       <div class="signature">
         
-        def self.<strong>default_media_type</strong>
+        def <strong>default_media_type</strong>
 
-        <a class="method-permalink" href="#default_media_type-class-method">#</a>
+        <a class="method-permalink" href="#default_media_type-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Default media type from ENV or <code><a href="../Octokit/Default.html#MEDIA_TYPE">MEDIA_TYPE</a></code></p></div>
@@ -2225,17 +2239,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/default.cr#L87" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/default.cr#L89" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="logger-class-method">
+    <div class="entry-detail" id="logger-instance-method">
       <div class="signature">
         
-        def self.<strong>logger</strong>
+        def <strong>logger</strong>
 
-        <a class="method-permalink" href="#logger-class-method">#</a>
+        <a class="method-permalink" href="#logger-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Default logger</p></div>
@@ -2243,17 +2257,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/default.cr#L137" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/default.cr#L139" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="login-class-method">
+    <div class="entry-detail" id="login-instance-method">
       <div class="signature">
         
-        def self.<strong>login</strong>
+        def <strong>login</strong>
 
-        <a class="method-permalink" href="#login-class-method">#</a>
+        <a class="method-permalink" href="#login-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Default GitHub username for Basic Auth from ENV</p></div>
@@ -2261,17 +2275,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/default.cr#L92" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/default.cr#L94" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="management_console_endpoint-class-method">
+    <div class="entry-detail" id="management_console_endpoint-instance-method">
       <div class="signature">
         
-        def self.<strong>management_console_endpoint</strong>
+        def <strong>management_console_endpoint</strong>
 
-        <a class="method-permalink" href="#management_console_endpoint-class-method">#</a>
+        <a class="method-permalink" href="#management_console_endpoint-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Default management console endpoint from ENV</p></div>
@@ -2279,17 +2293,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/default.cr#L72" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/default.cr#L74" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="management_console_password-class-method">
+    <div class="entry-detail" id="management_console_password-instance-method">
       <div class="signature">
         
-        def self.<strong>management_console_password</strong>
+        def <strong>management_console_password</strong>
 
-        <a class="method-permalink" href="#management_console_password-class-method">#</a>
+        <a class="method-permalink" href="#management_console_password-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Default management console password from ENV</p></div>
@@ -2297,17 +2311,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/default.cr#L67" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/default.cr#L69" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="middleware-class-method">
+    <div class="entry-detail" id="middleware-instance-method">
       <div class="signature">
         
-        def self.<strong>middleware</strong>
+        def <strong>middleware</strong>
 
-        <a class="method-permalink" href="#middleware-class-method">#</a>
+        <a class="method-permalink" href="#middleware-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Middleware stack for <code>Halite::Client</code></p></div>
@@ -2315,17 +2329,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/default.cr#L97" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/default.cr#L99" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="password-class-method">
+    <div class="entry-detail" id="password-instance-method">
       <div class="signature">
         
-        def self.<strong>password</strong>
+        def <strong>password</strong>
 
-        <a class="method-permalink" href="#password-class-method">#</a>
+        <a class="method-permalink" href="#password-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Default GitHub password for Basic Auth from ENV</p></div>
@@ -2333,17 +2347,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/default.cr#L102" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/default.cr#L104" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="per_page-class-method">
+    <div class="entry-detail" id="per_page-instance-method">
       <div class="signature">
         
-        def self.<strong>per_page</strong>
+        def <strong>per_page</strong>
 
-        <a class="method-permalink" href="#per_page-class-method">#</a>
+        <a class="method-permalink" href="#per_page-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Default pagination page size from ENV</p></div>
@@ -2351,17 +2365,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/default.cr#L107" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/default.cr#L109" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="proxy-class-method">
+    <div class="entry-detail" id="proxy-instance-method">
       <div class="signature">
         
-        def self.<strong>proxy</strong>
+        def <strong>proxy</strong>
 
-        <a class="method-permalink" href="#proxy-class-method">#</a>
+        <a class="method-permalink" href="#proxy-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Default proxy server URI for Halite::Client from ENV</p>
@@ -2371,17 +2385,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/default.cr#L114" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/default.cr#L116" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="ssl_verify_mode-class-method">
+    <div class="entry-detail" id="ssl_verify_mode-instance-method">
       <div class="signature">
         
-        def self.<strong>ssl_verify_mode</strong>
+        def <strong>ssl_verify_mode</strong>
 
-        <a class="method-permalink" href="#ssl_verify_mode-class-method">#</a>
+        <a class="method-permalink" href="#ssl_verify_mode-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Default SSL verify mode from ENV</p></div>
@@ -2389,17 +2403,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/default.cr#L119" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/default.cr#L121" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="user_agent-class-method">
+    <div class="entry-detail" id="user_agent-instance-method">
       <div class="signature">
         
-        def self.<strong>user_agent</strong>
+        def <strong>user_agent</strong>
 
-        <a class="method-permalink" href="#user_agent-class-method">#</a>
+        <a class="method-permalink" href="#user_agent-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Default User-Agent header string from ENV or <code><a href="../Octokit/Default.html#USER_AGENT">USER_AGENT</a></code></p></div>
@@ -2407,17 +2421,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/default.cr#L127" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/default.cr#L129" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="web_endpoint-class-method">
+    <div class="entry-detail" id="web_endpoint-instance-method">
       <div class="signature">
         
-        def self.<strong>web_endpoint</strong>
+        def <strong>web_endpoint</strong>
 
-        <a class="method-permalink" href="#web_endpoint-class-method">#</a>
+        <a class="method-permalink" href="#web_endpoint-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Default web endpoint from ENV or <code><a href="../Octokit/Default.html#WEB_ENDPOINT">WEB_ENDPOINT</a></code></p></div>
@@ -2425,13 +2439,11 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/watzon/octokit.cr/blob/495e6db40566ae6f9dbfd2649c9bec168a5909fa/src/octokit/default.cr#L132" target="_blank">View source</a>]
+          [<a href="https://github.com/watzon/octokit.cr/blob/4188d19cabab56e6301151c5827fe2bee96bab04/src/octokit/default.cr#L134" target="_blank">View source</a>]
         
       </div>
     </div>
   
-
-
 
 
 

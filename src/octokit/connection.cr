@@ -100,7 +100,7 @@ module Octokit
         headers = headers.merge(auth_header) if auth_header
 
         @agent = Halite::Client.new(
-          endpoint: endpoint,
+          # endpoint: endpoint,
           headers: headers
         )
       else
@@ -140,7 +140,7 @@ module Octokit
     end
 
     protected def request(method, path, options = nil)
-      path = File.join("/", path)
+      path = File.join(endpoint, path) unless path.nil? || path.starts_with?("http")
       options = options ? Default.connection_options.merge(options) : Default.connection_options
       @last_response = response = agent.request(verb: method.to_s, uri: path, options: options)
       handle_error(response)
@@ -148,7 +148,7 @@ module Octokit
     end
 
     protected def request(method, path, options = nil, &block)
-      path = File.join("/", path)
+      path = File.join(endpoint, path) unless path.nil? || path.starts_with?("http")
       options = options ? Default.connection_options.merge(options) : Default.connection_options
       @last_response = response = agent.request(verb: method, uri: path, options: options)
       handle_error(response)
@@ -216,7 +216,7 @@ module Octokit
         auto_paginate : Bool? = nil,
         options : Halite::Options? = nil
       )
-        @auto_paginate = auto_paginate.nil? ? Client.auto_paginate : auto_paginate
+        @auto_paginate = auto_paginate.nil? ? @client.auto_paginate : auto_paginate
 
         # Don't allow the @current_page variable to be less than 1.
         @current_page = current_page.nil? || current_page < 1 ? 1 : current_page

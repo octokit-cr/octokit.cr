@@ -29,10 +29,12 @@ module Octokit
 
       def self.path(repo)
         case repo
-        when Int32
+        when Number
           "repositories/#{repo}"
         when String
           "repos/#{Repository.slug(repo)}"
+        else
+          raise "repo must be a number or string"
         end
       end
 

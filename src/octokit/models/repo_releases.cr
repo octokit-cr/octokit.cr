@@ -3,7 +3,7 @@ module Octokit
     struct RepositoryRelease
       Octokit.rest_model(
         tag_name: String,
-        target_commit_hash: String,
+        target_commitish: String,
         name: String,
         body: String,
         draft: Bool,
@@ -15,8 +15,8 @@ module Octokit
         url: String?,
         html_url: String?,
         assets_url: String?,
-        assets: Array(String)?,
-        upload_url: String?,
+        assets: Array(ReleaseAsset)?,
+        upload_url: String,
         zipball_url: String?,
         tarball_url: String?,
         author: User?,
@@ -26,10 +26,10 @@ module Octokit
 
     struct ReleaseAsset
       Octokit.rest_model(
-        id: String,
+        id: Int32,
         url: String,
         name: String,
-        label: String,
+        label: String?,
         state: String,
         content_type: String,
         size: Int32,
