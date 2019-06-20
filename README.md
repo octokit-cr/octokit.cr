@@ -56,7 +56,7 @@ There are a lot of pieces of the GitHub API to cover. Here are the ones that nee
 - [ ] [Labels]()
 - [ ] [LegacySearch]()
 - [ ] [Licenses]()
-- [ ] [Markdown]()
+- [x] [Markdown](https://watzon.github.io/octokit.cr/Octokit/Client/Markdown.htm)
 - [ ] [Marketplace]()
 - [ ] [Meta]()
 - [ ] [Milestones]()
@@ -70,7 +70,7 @@ There are a lot of pieces of the GitHub API to cover. Here are the ones that nee
 - [x] [RateLimit](https://watzon.github.io/octokit.cr/Octokit/Client/RateLimit.html)
 - [ ] [Reactions]()
 - [ ] [Refs]()
-- [ ] [Releases]()
+- [x] [Releases](https://watzon.github.io/octokit.cr/Octokit/Client/Releases.htm)
 - [x] [Repositories](https://watzon.github.io/octokit.cr/Octokit/Client/Repositories.html)
 - [ ] [RepositoryInvitations]()
 - [ ] [Reviews]()
@@ -101,4 +101,4 @@ I don't only welcome contributions, I beg for them. If this is a library that mi
 
 # Thanks
 
-Thanks to all of the maintainers of [octokit/octokit.rb] who made this so much easier on me. This library is a port of the ruby library and I've tried to keep the APIs as similar as possible.
+Thanks to all of the maintainers of [octokit/octokit.rb](https://github.com/octokit/octokit.rb) who made this so much easier on me. This library is a port of the ruby library and I've tried to keep the APIs as similar as possible.

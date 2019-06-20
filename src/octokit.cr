@@ -46,4 +46,5 @@ module Octokit
   def self.enterprise_management_console_client
     raise "not implemented!"
   end
+
 end

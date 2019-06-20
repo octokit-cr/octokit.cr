@@ -108,6 +108,7 @@ module Octokit
     include Octokit::Warnable
     include Octokit::Client::Authorizations
     include Octokit::Client::Issues
+    include Octokit::Client::Markdown
     include Octokit::Client::PubSubHubbub
     include Octokit::Client::Users
     include Octokit::Client::RateLimit
