@@ -6,7 +6,7 @@ module Octokit
   module Connection
     include Octokit::Authentication
 
-    @last_response : Halite::Response? = nil
+    getter last_response : Halite::Response? = nil
 
     @agent : Halite::Client? = nil
 
@@ -54,7 +54,7 @@ module Octokit
       *,
       start_page = nil,
       per_page = nil,
-      auto_paginate = @@auto_paginate,
+      auto_paginate = @auto_paginate,
       options = nil
     ) : Paginator(T) forall T
       options = make_options(options)
@@ -68,7 +68,7 @@ module Octokit
       *,
       start_page = nil,
       per_page = nil,
-      auto_paginate = @@auto_paginate,
+      auto_paginate = @auto_paginate,
       options = nil,
       &block
     )
@@ -86,7 +86,6 @@ module Octokit
         auth(make_auth_header.to_s) if make_auth_header
         user_agent(@user_agent)
         accept(Default::MEDIA_TYPE)
-        logging(true)
       end
     end
 
@@ -134,7 +133,7 @@ module Octokit
     protected def request(method, path, options = nil)
       path = File.join(endpoint, path) unless path.nil? || path.starts_with?("http")
       options = options ? @connection_options.merge(options) : @connection_options
-      @last_response = response = agent.request(verb: method.to_s, uri: path, options: @connection_options)
+      @last_response = response = agent.request(verb: method.to_s, uri: path, options: options)
       handle_error(response)
       response.body
     end
@@ -211,7 +210,7 @@ module Octokit
         @auto_paginate = auto_paginate.nil? ? @client.auto_paginate : auto_paginate
 
         # Don't allow the @current_page variable to be less than 1.
-        @current_page = current_page.nil? || current_page < 1 ? 1 : current_page
+        @current_page = current_page.nil? || current_page < 0 ? 0 : current_page
 
         @options = options.nil? ? Halite::Options.new : options.not_nil!
 
@@ -265,13 +264,16 @@ module Octokit
           @options.params = @options.params.merge({"per_page" => @per_page.as(Halite::Options::Type)})
         end
 
-        data = @client.request(:get, @url, @options)
-        @last_response = @client.last_response
-        set_total_pages!
-
-        models = Array(T).from_json(data)
-        @records.concat(models)
-        models
+        begin
+          data = @client.request(:get, @url, @options)
+          set_total_pages!
+          models = Array(T).from_json(data)
+          @records.concat(models)
+          models
+        rescue Octokit::Error::NotFound
+          @total_pages = 0
+          [] of T
+        end
       end
 
       # Fetch the next page.
@@ -283,9 +285,8 @@ module Octokit
       # ```
       def fetch_next : Array(T)?
         return unless next?
-        page = fetch_page(@current_page)
         @current_page += 1
-        page
+        fetch_page(@current_page)
       end
 
       alias_method :fetch_next, :next
@@ -299,11 +300,12 @@ module Octokit
       # pages.next? # => Bool
       # ```
       def next? : Bool
-        return true if @last_response.nil?
-        if links = @last_response.try { |r| r.links }
-          return !!links["next"]?
+        if total_pages = @total_pages
+          return true if @current_page < total_pages && total_pages != 0
+          false
+        else
+          true
         end
-        false
       end
 
       # Fetch the previous page.
@@ -334,7 +336,7 @@ module Octokit
       # pages.previous? # => Bool
       # ```
       def previous? : Bool
-        @current_page > 1
+        @current_page > 0
       end
 
       # Checks if the current page is the last page.
@@ -356,15 +358,18 @@ module Octokit
 
       # Utility method to set the `@total_pages` variable.
       private def set_total_pages!
-        # return if @last_response.nil?
-        # last = @last_response.not_nil!.links.not_nil!["last"]?
-        # if last
-        #   parsed_uri = URI.parse(last.target)
-        #   return if parsed_uri.query.nil?
-        #   query = parsed_uri.query.not_nil!.split('?').last.split('&').map(&.split('=')).to_h
-        #   return if !query["last"]?
-        #   @total_pages = query["last"].not_nil!.to_i
-        # end
+        return 0 if @client.last_response.nil?
+        if links = @client.last_response.try { |r| r.links }
+          return 0 unless links["last"]?
+          if target = links["last"].target
+            if match = target.match(/page=([0-9]+)/)
+              @total_pages = match[1].to_i
+            end
+          else
+          end
+        else
+          0
+        end
       end
     end
   end

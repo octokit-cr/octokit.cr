@@ -222,7 +222,6 @@ module Octokit
       # ```
       def authorize_url(app_id = client_id, **options) : String
         String.build do |authorize_url|
-          puts login, @password
           authorize_url << (options[:endpoint]? || web_endpoint)
           authorize_url << "login/oauth/authorize?client_id=#{app_id}"
 
