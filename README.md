@@ -10,8 +10,8 @@ Crystal toolkit for the GitHub API.
 
 ```yaml
 dependencies:
- octokit:
-   github: watzon/octokit
+  octokit:
+    github: watzon/octokit.cr
 ```
 
 2. Run `shards install`
