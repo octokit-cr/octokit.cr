@@ -22,7 +22,11 @@ dependencies:
 require "octokit"
 
 # Create a new Octokit Client
+# Your password should be your Personal Access Token (PAT)
 github = Octokit.client("watzon", "PASSWORD")
+
+# Also, you can authenticate this way:
+# github = Octokit.client("watzon", access_token: "PAT")
 
 # Fetch information about the logged in user
 pp github.user
@@ -56,7 +60,7 @@ There are a lot of pieces of the GitHub API to cover. Here are the ones that nee
 - [ ] [Labels]()
 - [ ] [LegacySearch]()
 - [ ] [Licenses]()
-- [x] [Markdown](https://watzon.github.io/octokit.cr/Octokit/Client/Markdown.htm)
+- [x] [Markdown](https://watzon.github.io/octokit.cr/Octokit/Client/Markdown.html)
 - [ ] [Marketplace]()
 - [ ] [Meta]()
 - [ ] [Milestones]()
@@ -70,7 +74,7 @@ There are a lot of pieces of the GitHub API to cover. Here are the ones that nee
 - [x] [RateLimit](https://watzon.github.io/octokit.cr/Octokit/Client/RateLimit.html)
 - [ ] [Reactions]()
 - [ ] [Refs]()
-- [x] [Releases](https://watzon.github.io/octokit.cr/Octokit/Client/Releases.htm)
+- [x] [Releases](https://watzon.github.io/octokit.cr/Octokit/Client/Releases.html)
 - [x] [Repositories](https://watzon.github.io/octokit.cr/Octokit/Client/Repositories.html)
 - [ ] [RepositoryInvitations]()
 - [ ] [Reviews]()
