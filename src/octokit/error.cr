@@ -199,7 +199,7 @@ module Octokit
 
     # @private
     def self.required_header(headers)
-      OTP_DELIVERY_PATTERN.match headers["X-GitHub-OTP"].to_s
+      OTP_DELIVERY_PATTERN.match headers["X-GitHub-OTP"]?.to_s
     end
 
     # Delivery method for the user's OTP

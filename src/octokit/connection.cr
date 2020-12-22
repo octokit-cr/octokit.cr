@@ -83,7 +83,13 @@ module Octokit
     # Hypermedia agent for the GitHub API
     def agent
       @agent ||= Halite::Client.new do
-        auth(make_auth_header.to_s) if make_auth_header
+        if basic_authenticated?
+          basic_auth(@login.to_s, @password.to_s)
+        elsif token_authenticated?
+          auth("Token #{@access_token.to_s}")
+        elsif bearer_authenticated?
+          auth("Bearer #{@access_token.to_s}")
+        end
         user_agent(@user_agent)
         accept(Default::MEDIA_TYPE)
       end
@@ -97,29 +103,6 @@ module Octokit
     # Response for last HTTP request
     def last_response
       @last_response
-    end
-
-    def make_basic_auth(user, password)
-      encoded = Base64.encode("#{user}:#{password}")
-      encoded.strip
-    end
-
-    def make_token_auth(access_token)
-      "Token #{access_token}".strip
-    end
-
-    def make_bearer_auth(bearer_token)
-      "Bearer #{bearer_token}".strip
-    end
-
-    def make_auth_header
-      if basic_authenticated?
-        make_basic_auth(@login.to_s, @password.to_s)
-      elsif token_authenticated?
-        make_token_auth(@access_token.to_s)
-      elsif bearer_authenticated?
-        make_bearer_auth(@bearer_token.to_s)
-      end
     end
 
     protected def endpoint
