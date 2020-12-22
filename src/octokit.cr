@@ -46,20 +46,3 @@ module Octokit
   end
 
 end
-
-client = Octokit.client(access_token: "ed991767703e7696f09b5f3b233d8b356b50a937")
-
-puts "Fetching repositories"
-repos = client.repositories("watzon").fetch_all
-
-puts "Selecting forks"
-repos = repos.select { |r| r.fork == true }
-
-repos.each do |repo|
-  puts "Delete repository #{repo.full_name}? "
-  response = gets
-  if ["y", "Y"].includes?(response)
-    puts "Deleting #{repo.full_name}"
-    client.delete_repository(repo.id)
-  end
-end
