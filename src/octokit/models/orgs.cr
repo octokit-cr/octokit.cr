@@ -7,13 +7,7 @@ module Octokit
       end
 
       def self.path(org)
-        org = org.is_a(String | Int32) ? org : org.name
-        case org
-        when String
-          "orgs/#{org}"
-        when Int32
-          "organizations/#{org}"
-        end
+        "orgs/#{org}"
       end
 
       Octokit.rest_model(
