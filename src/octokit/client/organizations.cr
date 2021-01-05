@@ -20,7 +20,7 @@ module Octokit
       def organizations
         #paginate Organization, "organizations", **options
         res = paginate "organizations"
-        Organization.from_json(res)
+        OrganizationListItem.from_json(res)
       end
 
       # Get a single organization
