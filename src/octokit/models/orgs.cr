@@ -1,8 +1,9 @@
 module Octokit
   module Models
+
     struct Organization
       def path
-        Organization.path(self)
+       Organization.path(self)
       end
 
       def self.path(org)
@@ -56,6 +57,23 @@ module Octokit
         members_url: String,
         public_members_url: String,
         repos_url: String
+      )
+    end
+
+    struct OrganizationListItem
+      Octokit.rest_model(
+        login: String,
+        id: Int32,
+        node_id: String,
+        url: String,
+        repos_url: String,
+        events_url: String,
+        hooks_url: String,
+        issues_url: String,
+        members_url: String,
+        public_members_url: String,
+        avatar_url: String,
+        description: String|Nil
       )
     end
 
