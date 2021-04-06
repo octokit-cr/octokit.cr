@@ -4,14 +4,16 @@ version: 0.1.0
 authors:
   - Chris Watson <chris@watzon.me>
 
-crystal: 0.28.0
+crystal: ">= 1.0.0"
 
 license: MIT
 
 dependencies:
+  json_mapping:
+    github: crystal-lang/json_mapping.cr
   halite:
     github: icyleaf/halite
-    version: 0.10.7
+    version: 0.12.0
 development_dependencies:
   webmock:
     github: manastech/webmock.cr

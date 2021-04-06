@@ -136,7 +136,8 @@ module Octokit
 
     # Default logger
     def logger
-      Logger.new(STDOUT, level: Logger::WARN)
+      Log.setup(:warn)
+      ::Log.for(self)
     end
   end
 end
