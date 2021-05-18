@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-in-container:
+    runs-on: ubuntu-latest
+    env:
+      OCTOKIT_USER: ${{ secrets.OCTOKIT_USER }}
+      OCTOKIT_TOKEN: ${{ secrets.OCTOKIT_TOKEN }}
+
+    strategy:
+      fail-fast: false
+
+    container:
+      image: crystallang/crystal:latest
+
+    name: Build on Linux
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+            crystal -v
+            shards install --ignore-crystal-version
+            printenv | sort
+
+      - name: Run examples
+        run: |
+            crystal eg/example.cr
