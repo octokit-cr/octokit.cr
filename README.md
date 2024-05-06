@@ -16,6 +16,8 @@ Crystal toolkit for the GitHub API.
         github: octokit-cr/octokit.cr
     ```
 
+    > You can pin it to a release tag or a commit for extra stability
+
 2. Run `shards install`
 
 ## Usage
