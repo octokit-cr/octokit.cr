@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Crystal Docs 1.11.2">
-<meta name="crystal_docs.project_version" content="main">
+<meta name="crystal_docs.project_version" content="deployment-and-repo-updates">
 <meta name="crystal_docs.project_name" content="octokit">
 
 
@@ -14,7 +14,7 @@
 <script type="text/javascript" src="js/doc.js"></script>
 
   <meta name="repository-name" content="octokit">
-  <title>octokit main</title>
+  <title>octokit deployment-and-repo-updates</title>
   <script type="text/javascript">
   CrystalDocs.base_path = "";
   </script>
@@ -45,7 +45,7 @@
       </h1>
 
       <span class="project-version">
-        main
+        deployment-and-repo-updates
       </span>
     </div>
   </div>
@@ -1908,12 +1908,9 @@
     <use href="#octicon-link"/>
   </svg>
 </a>octokit</h1>
-<p><a href="https://github.com/GrantBirki/octokit.cr/actions/workflows/test.yml"><img src="https://github.com/GrantBirki/octokit.cr/actions/workflows/test.yml/badge.svg" alt="test" /></a> <a href="https://github.com/GrantBirki/octokit.cr/actions/workflows/lint.yml"><img src="https://github.com/GrantBirki/octokit.cr/actions/workflows/lint.yml/badge.svg" alt="lint" /></a> <a href="https://github.com/GrantBirki/octokit.cr/actions/workflows/acceptance.yml"><img src="https://github.com/GrantBirki/octokit.cr/actions/workflows/acceptance.yml/badge.svg" alt="acceptance" /></a></p>
+<p><a href="https://github.com/octokit-cr/octokit.cr/actions/workflows/test.yml"><img src="https://github.com/octokit-cr/octokit.cr/actions/workflows/test.yml/badge.svg" alt="test" /></a> <a href="https://github.com/octokit-cr/octokit.cr/actions/workflows/lint.yml"><img src="https://github.com/octokit-cr/octokit.cr/actions/workflows/lint.yml/badge.svg" alt="lint" /></a> <a href="https://github.com/octokit-cr/octokit.cr/actions/workflows/acceptance.yml"><img src="https://github.com/octokit-cr/octokit.cr/actions/workflows/acceptance.yml/badge.svg" alt="acceptance" /></a></p>
 <p>Crystal toolkit for the GitHub API.</p>
 <p><strong>Note:</strong> This is in the very early stages of development. The GitHub API is expansive and there is a lot to do to get this up and running. For a list of API connections that have been completed and are still to come, see the <a href="#roadmap">Roadmap</a></p>
-<blockquote>
-<p>This project is a maintained fork of <a href="https://github.com/watzon/octokit.cr">watzon/octokit.cr</a></p>
-</blockquote>
 <h2><a id="installation" class="anchor" href="#installation">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
@@ -1924,7 +1921,7 @@
 <p>Add the dependency to your <code>shard.yml</code>:</p>
 <pre><code class="language-yaml">dependencies:
   octokit:
-    github: grantbirki/octokit.cr</code></pre>
+    github: octokit-cr/octokit.cr</code></pre>
 </li>
 <li>
 <p>Run <code>shards install</code></p>
@@ -1948,8 +1945,8 @@ github <span class="o">=</span> <span class="t">Octokit</span>.client(<span clas
 pp github.user
 
 <span class="c"># Fetch information about another user</span>
-pp github.user(<span class="s">&quot;asterite&quot;</span>)</code></pre>
-<p>There are way too many options to list here, even at this early stage. For more usage examples see the <a href="https://grantbirki.github.io/octokit.cr/">documentation</a>.</p>
+pp github.user(<span class="s">&quot;watzon&quot;</span>)</code></pre>
+<p>There are way too many options to list here, even at this early stage. For more usage examples see the <a href="https://octokit-cr.github.io/octokit.cr/">documentation</a>.</p>
 <h2><a id="roadmap" class="anchor" href="#roadmap">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
@@ -1964,7 +1961,7 @@ pp github.user(<span class="s">&quot;asterite&quot;</span>)</code></pre>
 <li>[ ] <a href="">Commits</a></li>
 <li>[ ] <a href="">CommunityProfile</a></li>
 <li>[ ] <a href="">Contents</a></li>
-<li>[x] <a href="https://grantbirki.github.io/octokit.cr/Octokit/Client/Deployments.html">Deployments</a></li>
+<li>[x] <a href="https://octokit-cr.github.io/octokit.cr/Octokit/Client/Deployments.html">Deployments</a></li>
 <li>[ ] <a href="">Downloads</a></li>
 <li>[ ] <a href="">Emojis</a></li>
 <li>[ ] <a href="">Events</a></li>
@@ -1972,11 +1969,11 @@ pp github.user(<span class="s">&quot;asterite&quot;</span>)</code></pre>
 <li>[ ] <a href="">Gists</a></li>
 <li>[ ] <a href="">Gitignore</a></li>
 <li>[ ] <a href="">Hooks</a></li>
-<li>[x] <a href="https://grantbirki.github.io/octokit.cr/Octokit/Client/Issues.html">Issues</a></li>
+<li>[x] <a href="https://octokit-cr.github.io/octokit.cr/Octokit/Client/Issues.html">Issues</a></li>
 <li>[ ] <a href="">Labels</a></li>
 <li>[ ] <a href="">LegacySearch</a></li>
 <li>[ ] <a href="">Licenses</a></li>
-<li>[x] <a href="https://grantbirki.github.io/octokit.cr/Octokit/Client/Markdown.html">Markdown</a></li>
+<li>[x] <a href="https://octokit-cr.github.io/octokit.cr/Octokit/Client/Markdown.html">Markdown</a></li>
 <li>[ ] <a href="">Marketplace</a></li>
 <li>[ ] <a href="">Meta</a></li>
 <li>[ ] <a href="">Milestones</a></li>
@@ -1985,23 +1982,23 @@ pp github.user(<span class="s">&quot;asterite&quot;</span>)</code></pre>
 <li>[ ] <a href="">Organizations</a></li>
 <li>[ ] <a href="">Pages</a></li>
 <li>[ ] <a href="">Projects</a></li>
-<li>[x] <a href="https://grantbirki.github.io/octokit.cr/Octokit/Client/PubSubHubbub.html">PubSubHubbub</a></li>
+<li>[x] <a href="https://octokit-cr.github.io/octokit.cr/Octokit/Client/PubSubHubbub.html">PubSubHubbub</a></li>
 <li>[ ] <a href="">PullRequests</a></li>
-<li>[x] <a href="https://grantbirki.github.io/octokit.cr/Octokit/Client/RateLimit.html">RateLimit</a></li>
+<li>[x] <a href="https://octokit-cr.github.io/octokit.cr/Octokit/Client/RateLimit.html">RateLimit</a></li>
 <li>[ ] <a href="">Reactions</a></li>
 <li>[ ] <a href="">Refs</a></li>
-<li>[x] <a href="https://grantbirki.github.io/octokit.cr/Octokit/Client/Releases.html">Releases</a></li>
-<li>[x] <a href="https://grantbirki.github.io/octokit.cr/Octokit/Client/Repositories.html">Repositories</a></li>
+<li>[x] <a href="https://octokit-cr.github.io/octokit.cr/Octokit/Client/Releases.html">Releases</a></li>
+<li>[x] <a href="https://octokit-cr.github.io/octokit.cr/Octokit/Client/Repositories.html">Repositories</a></li>
 <li>[ ] <a href="">RepositoryInvitations</a></li>
 <li>[ ] <a href="">Reviews</a></li>
-<li>[x] <a href="https://grantbirki.github.io/octokit.cr/Octokit/Client/Say.html">Say</a></li>
-<li>[x] <a href="https://grantbirki.github.io/octokit.cr/Octokit/Client/Search.html">Search</a></li>
+<li>[x] <a href="https://octokit-cr.github.io/octokit.cr/Octokit/Client/Say.html">Say</a></li>
+<li>[x] <a href="https://octokit-cr.github.io/octokit.cr/Octokit/Client/Search.html">Search</a></li>
 <li>[ ] <a href="">ServiceStatus</a></li>
 <li>[ ] <a href="">SourceImport</a></li>
 <li>[ ] <a href="">Stats</a></li>
-<li>[x] <a href="https://grantbirki.github.io/octokit.cr/Octokit/Client/Statuses.html">Statuses</a></li>
+<li>[x] <a href="https://octokit-cr.github.io/octokit.cr/Octokit/Client/Statuses.html">Statuses</a></li>
 <li>[ ] <a href="">Traffic</a></li>
-<li>[x] <a href="https://grantbirki.github.io/octokit.cr/Octokit/Client/Users.html">Users</a></li>
+<li>[x] <a href="https://octokit-cr.github.io/octokit.cr/Octokit/Client/Users.html">Users</a></li>
 </ul>
 <p>I am trying to complete what I deem the most important ones first so that this shard can be immediately useful. Keep in mind, however, that the API may change at any time.</p>
 <h2><a id="contributing" class="anchor" href="#contributing">
