@@ -7,7 +7,7 @@ describe Octokit do
 
   describe ".get" do
     context "when fetching info about the octokit.cr repo" do
-      repo_data = github.get("/repos/GrantBirki/octokit.cr")
+      repo_data = github.get("/repos/octokit-cr/octokit.cr")
       repo_data = JSON.parse(repo_data)
 
       it "should have a name" do

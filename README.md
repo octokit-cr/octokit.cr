@@ -1,12 +1,10 @@
 # octokit
 
-[![test](https://github.com/GrantBirki/octokit.cr/actions/workflows/test.yml/badge.svg)](https://github.com/GrantBirki/octokit.cr/actions/workflows/test.yml) [![lint](https://github.com/GrantBirki/octokit.cr/actions/workflows/lint.yml/badge.svg)](https://github.com/GrantBirki/octokit.cr/actions/workflows/lint.yml) [![acceptance](https://github.com/GrantBirki/octokit.cr/actions/workflows/acceptance.yml/badge.svg)](https://github.com/GrantBirki/octokit.cr/actions/workflows/acceptance.yml)
+[![test](https://github.com/octokit-cr/octokit.cr/actions/workflows/test.yml/badge.svg)](https://github.com/octokit-cr/octokit.cr/actions/workflows/test.yml) [![lint](https://github.com/octokit-cr/octokit.cr/actions/workflows/lint.yml/badge.svg)](https://github.com/octokit-cr/octokit.cr/actions/workflows/lint.yml) [![acceptance](https://github.com/octokit-cr/octokit.cr/actions/workflows/acceptance.yml/badge.svg)](https://github.com/octokit-cr/octokit.cr/actions/workflows/acceptance.yml)
 
 Crystal toolkit for the GitHub API.
 
 **Note:** This is in the very early stages of development. The GitHub API is expansive and there is a lot to do to get this up and running. For a list of API connections that have been completed and are still to come, see the [Roadmap](#roadmap)
-
-> This project is a maintained fork of [watzon/octokit.cr](https://github.com/watzon/octokit.cr)
 
 ## Installation
 
@@ -15,7 +13,7 @@ Crystal toolkit for the GitHub API.
     ```yaml
     dependencies:
       octokit:
-        github: grantbirki/octokit.cr
+        github: octokit-cr/octokit.cr
     ```
 
 2. Run `shards install`
@@ -36,10 +34,10 @@ github = Octokit.client("grantbirki", "PASSWORD")
 pp github.user
 
 # Fetch information about another user
-pp github.user("asterite")
+pp github.user("watzon")
 ```
 
-There are way too many options to list here, even at this early stage. For more usage examples see the [documentation](https://grantbirki.github.io/octokit.cr/).
+There are way too many options to list here, even at this early stage. For more usage examples see the [documentation](https://octokit-cr.github.io/octokit.cr/).
 
 ## Roadmap
 
@@ -52,7 +50,7 @@ There are a lot of pieces of the GitHub API to cover. Here are the ones that nee
 - [ ] [Commits]()
 - [ ] [CommunityProfile]()
 - [ ] [Contents]()
-- [x] [Deployments](https://grantbirki.github.io/octokit.cr/Octokit/Client/Deployments.html)
+- [x] [Deployments](https://octokit-cr.github.io/octokit.cr/Octokit/Client/Deployments.html)
 - [ ] [Downloads]()
 - [ ] [Emojis]()
 - [ ] [Events]()
@@ -60,11 +58,11 @@ There are a lot of pieces of the GitHub API to cover. Here are the ones that nee
 - [ ] [Gists]()
 - [ ] [Gitignore]()
 - [ ] [Hooks]()
-- [x] [Issues](https://grantbirki.github.io/octokit.cr/Octokit/Client/Issues.html)
+- [x] [Issues](https://octokit-cr.github.io/octokit.cr/Octokit/Client/Issues.html)
 - [ ] [Labels]()
 - [ ] [LegacySearch]()
 - [ ] [Licenses]()
-- [x] [Markdown](https://grantbirki.github.io/octokit.cr/Octokit/Client/Markdown.html)
+- [x] [Markdown](https://octokit-cr.github.io/octokit.cr/Octokit/Client/Markdown.html)
 - [ ] [Marketplace]()
 - [ ] [Meta]()
 - [ ] [Milestones]()
@@ -73,23 +71,23 @@ There are a lot of pieces of the GitHub API to cover. Here are the ones that nee
 - [ ] [Organizations]()
 - [ ] [Pages]()
 - [ ] [Projects]()
-- [x] [PubSubHubbub](https://grantbirki.github.io/octokit.cr/Octokit/Client/PubSubHubbub.html)
+- [x] [PubSubHubbub](https://octokit-cr.github.io/octokit.cr/Octokit/Client/PubSubHubbub.html)
 - [ ] [PullRequests]()
-- [x] [RateLimit](https://grantbirki.github.io/octokit.cr/Octokit/Client/RateLimit.html)
+- [x] [RateLimit](https://octokit-cr.github.io/octokit.cr/Octokit/Client/RateLimit.html)
 - [ ] [Reactions]()
 - [ ] [Refs]()
-- [x] [Releases](https://grantbirki.github.io/octokit.cr/Octokit/Client/Releases.html)
-- [x] [Repositories](https://grantbirki.github.io/octokit.cr/Octokit/Client/Repositories.html)
+- [x] [Releases](https://octokit-cr.github.io/octokit.cr/Octokit/Client/Releases.html)
+- [x] [Repositories](https://octokit-cr.github.io/octokit.cr/Octokit/Client/Repositories.html)
 - [ ] [RepositoryInvitations]()
 - [ ] [Reviews]()
-- [x] [Say](https://grantbirki.github.io/octokit.cr/Octokit/Client/Say.html)
-- [x] [Search](https://grantbirki.github.io/octokit.cr/Octokit/Client/Search.html)
+- [x] [Say](https://octokit-cr.github.io/octokit.cr/Octokit/Client/Say.html)
+- [x] [Search](https://octokit-cr.github.io/octokit.cr/Octokit/Client/Search.html)
 - [ ] [ServiceStatus]()
 - [ ] [SourceImport]()
 - [ ] [Stats]()
-- [x] [Statuses](https://grantbirki.github.io/octokit.cr/Octokit/Client/Statuses.html)
+- [x] [Statuses](https://octokit-cr.github.io/octokit.cr/Octokit/Client/Statuses.html)
 - [ ] [Traffic]()
-- [x] [Users](https://grantbirki.github.io/octokit.cr/Octokit/Client/Users.html)
+- [x] [Users](https://octokit-cr.github.io/octokit.cr/Octokit/Client/Users.html)
 
 I am trying to complete what I deem the most important ones first so that this shard can be immediately useful. Keep in mind, however, that the API may change at any time.
 
