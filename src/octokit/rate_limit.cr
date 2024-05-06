@@ -27,9 +27,9 @@ module Octokit
         limit = (response.headers["X-RateLimit-Limit"] || 1).to_i
         remaining = (response.headers["X-RateLimit-Remaining"] || 1).to_i
         resets_at = Time.unix(
-          response.headers["X-RateLimit-Reset"]? ? response.headers["X-RateLimit-Reset"].to_i64 : Time.now.to_unix
+          response.headers["X-RateLimit-Reset"]? ? response.headers["X-RateLimit-Reset"].to_i64 : Time.utc.to_unix
         )
-        resets_in = [(resets_at - Time.now).to_i, 0_i64].max
+        resets_in = [(resets_at - Time.utc).to_i, 0_i64].max
 
         info.limit = limit
         info.remaining = remaining

@@ -1,3 +1,6 @@
+require "../core_ext/time"
+require "../helpers"
+
 module Octokit
   module Models
     struct Authorization

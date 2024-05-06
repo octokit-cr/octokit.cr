@@ -1,4 +1,5 @@
 require "json_mapping"
+
 module Octokit
   # writes basic initializer from properti maps used by JSON.mapping
   # if a `mustbe` field is present for the value, the initializer will set the

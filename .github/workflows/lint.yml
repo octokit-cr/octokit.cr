@@ -1,0 +1,37 @@
+name: lint
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: fetch crystal version
+        id: crystal-version
+        run: echo "crystal=$(cat .crystal-version)"
+
+      - name: install crystal
+        uses: crystal-lang/install-crystal@v1.8.2
+        with:
+          crystal: ${{ steps.crystal-version.outputs.crystal }}
+
+      - name: bootstrap
+        run: script/bootstrap
+
+      - name: lint
+        run: script/lint
+
+      - name: format check
+        run: script/format --check

@@ -30,7 +30,7 @@ module Octokit
       # - [ https://developer.github.com/v3/repos/releases/#create-a-release]( https://developer.github.com/v3/repos/releases/#create-a-release)
       def create_release(repo, tag_name, **options)
         options = options.merge({tag_name: tag_name})
-        res = post "#{Repository.path(path)}/releases", { json: options }
+        res = post "#{Repository.path(path)}/releases", {json: options}
         RepositoryRelease.from_json(res)
       end
 
@@ -48,7 +48,7 @@ module Octokit
       # **See Also:**
       # - [ https://developer.github.com/v3/repos/releases/#edit-a-release]( https://developer.github.com/v3/repos/releases/#edit-a-release)
       def update_release(repo, id, **options)
-        res = patch "#{Repository.path(path)}/releases/#{id}", { json: options }
+        res = patch "#{Repository.path(path)}/releases/#{id}", {json: options}
         RepositoryRelease.from_json(res)
       end
 
@@ -108,7 +108,7 @@ module Octokit
       # **See Also:**
       # - [ https://developer.github.com/v3/repos/releases/#edit-a-release-asset]( https://developer.github.com/v3/repos/releases/#edit-a-release-asset)
       def update_release_asset(repo, id, **options)
-        res = patch "#{Repository.path(repo)}/releases/assets/#{id}", { json: options }
+        res = patch "#{Repository.path(repo)}/releases/assets/#{id}", {json: options}
         ReleaseAsset.from_json(res)
       end
 

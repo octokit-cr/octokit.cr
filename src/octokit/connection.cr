@@ -1,6 +1,7 @@
 require "base64"
 require "halite"
 require "./authentication"
+require "./macros"
 
 module Octokit
   module Connection
@@ -70,7 +71,7 @@ module Octokit
       per_page = nil,
       auto_paginate = @auto_paginate,
       options = nil,
-      &block
+      &
     )
       paginator = Paginator(T).new(self, url, start_page, per_page, auto_paginate, options)
       while paginator.next?
@@ -121,7 +122,7 @@ module Octokit
       response.body
     end
 
-    protected def request(method, path, options = nil, &block)
+    protected def request(method, path, options = nil, &)
       path = File.join(endpoint, path) unless path.nil? || path.starts_with?("http")
       options = options ? @connection_options.merge(options) : @connection_options
       @last_response = response = agent.request(verb: method, uri: path, options: options)
@@ -342,7 +343,7 @@ module Octokit
       # Utility method to set the `@total_pages` variable.
       private def set_total_pages!
         return 0 if @client.last_response.nil?
-        if links = @client.last_response.try { |r| r.links }
+        if links = @client.last_response.try(&.links)
           return 0 unless links["last"]?
           if target = links["last"].target
             if match = target.match(/page=([0-9]+)/)

@@ -1,3 +1,5 @@
+require "../models/repo_statuses"
+
 module Octokit
   class Client
     # Methods for the Commit Statuses API

@@ -1,0 +1,70 @@
+#!/bin/bash
+
+set -e
+
+# COLORS
+OFF='\033[0m'
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+PURPLE='\033[0;35m'
+YELLOW='\033[0;33m'
+
+# set the working directory to the root of the project
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
+
+# check to ensure both crystal and shards are installed
+if ! [ -x "$(command -v crystal)" ]; then
+  echo -e "❌ ${RED}Error${OFF}: crystal is not installed"
+  echo "Please install crystal via crenv -> https://github.com/crenv/crenv"
+  exit 1
+fi
+
+if ! [ -x "$(command -v shards)" ]; then
+  echo -e "❌ ${RED}Error${OFF}: shards is not installed"
+  echo "Please install crystal (comes with shards) via crenv -> https://github.com/crenv/crenv"
+  exit 1
+fi
+
+compatability_warning=""
+
+# Get OS info
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  os="linux"
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  os="mac"
+
+  # if CRYSTAL_OPTS is not set to `--link-flags=-Wl,-ld_classic` then print a warning
+  if [[ -z "$CRYSTAL_OPTS" || "$CRYSTAL_OPTS" != "--link-flags=-Wl,-ld_classic" ]]; then
+    compatability_warning="⚠️ ${YELLOW}Warning${OFF}: crystal may have issues on macOS due to -> https://github.com/crystal-lang/crystal/issues/13846. If you have issues, please consider exporting the following env vars in your terminal -> https://github.com/GrantBirki/dotfiles/blob/d57db3e4167aa5ae7766c5e544f38ead111f040c/dotfiles/.bashrc#L199"
+  fi
+
+elif [[ "$OSTYPE" == "cygwin" ]]; then
+  os="cygwin"
+  compatability_warning="⚠️ ${YELLOW}Warning${OFF}: cygwin is not officially supported. Please use WSL2 or a Linux VM"
+elif [[ "$OSTYPE" == "msys" ]]; then
+  os="msys"
+  compatability_warning="⚠️ ${YELLOW}Warning${OFF}: msys is not officially supported. Please use WSL2 or a Linux VM"
+elif [[ "$OSTYPE" == "win32" ]]; then
+  os="win"
+  compatability_warning="⚠️ ${YELLOW}Warning${OFF}: Windows is not officially supported. Please use WSL2 or a Linux VM"
+elif [[ "$OSTYPE" == "freebsd"* ]]; then
+  os="freebsd"
+  compatability_warning="⚠️ ${YELLOW}Warning${OFF}: FreeBSD is not officially supported. It may work but it is not tested. Please consider using a debian based Linux distro"
+else
+  os="unknown"
+  compatability_warning="⚠️ ${YELLOW}Warning${OFF}: Your OS is not officially supported. It may work but it is not tested. Please consider using a debian based Linux distro"
+fi
+
+# print the warning if it isn't an empty string and SUPPRESS_BOOTSTRAP_WARNINGS is not true
+if [[ ! -z "$compatability_warning" && "$SUPPRESS_BOOTSTRAP_WARNINGS" != "true" ]]; then
+  echo -e "$compatability_warning"
+  echo ""
+  echo -e "You can set ${PURPLE}SUPPRESS_BOOTSTRAP_WARNINGS=true${OFF} in your environment to suppress this warning"
+fi
+
+script/preinstall
+
+SHARDS_CACHE_PATH="$DIR/.cache/shards" shards install --frozen $@
+
+script/postinstall

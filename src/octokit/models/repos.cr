@@ -1,3 +1,5 @@
+require "../models/misc"
+
 module Octokit
   module Models
     class Repository
@@ -60,13 +62,13 @@ module Octokit
         svn_url: String?,
         language: String?,
         fork: Bool,
-        forks_count: { type: Int32, default: 0 },
-        network_count: { type: Int32, default: 0 },
-        open_issues_count: { type: Int32, default: 0 },
-        stargazers_count: { type: Int32, default: 0 },
-        subscribers_count: { type: Int32, default: 0 },
-        watchers_count: { type: Int32, default: 0 },
-        size: { type: Int32, default: 0 },
+        forks_count: {type: Int32, default: 0},
+        network_count: {type: Int32, default: 0},
+        open_issues_count: {type: Int32, default: 0},
+        stargazers_count: {type: Int32, default: 0},
+        subscribers_count: {type: Int32, default: 0},
+        watchers_count: {type: Int32, default: 0},
+        size: {type: Int32, default: 0},
         auto_init: Bool?,
         parent: Repository?,
         source: Repository?,

@@ -1,0 +1,22 @@
+name: ameba
+version: 1.6.1
+
+authors:
+  - Vitalii Elenhaupt <velenhaupt@gmail.com>
+  - Sijawusz Pur Rahnama <sija@sija.pl>
+
+targets:
+  ameba:
+    main: src/cli.cr
+
+scripts:
+  postinstall: shards build -Dpreview_mt
+
+# TODO: remove pre-compiled executable in future releases
+executables:
+  - ameba
+  - ameba.cr
+
+crystal: ~> 1.10
+
+license: MIT

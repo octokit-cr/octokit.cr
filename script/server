@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -e
+
+# set the working directory to the root of the project
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
+
+SHARDS_CACHE_PATH="$DIR/.cache/shards" shards run --release --debug --error-trace
