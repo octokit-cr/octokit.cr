@@ -265,7 +265,7 @@ module Octokit
     #   auto_paginate = true
     # end
     # ```
-    def configure(&block)
+    def configure(&)
       yield
     end
 

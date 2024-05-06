@@ -1,3 +1,5 @@
+require "../models/repos"
+
 module Octokit
   module Models
     struct ActivityNotifications

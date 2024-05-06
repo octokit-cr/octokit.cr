@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# set the working directory to the root of the project
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
+
+mkdir -p "$DIR/bin"
+
+# ensure the ameba binary is built and available in the bin directory
+AMEBA_UP_TO_DATE=false
+# first, check the version of the ameba binary in the lock file
+AMEBA_VERSION=$(shards list | grep ameba | awk '{print $3}' | tr -d '()')
+
+# if the bin/ameba binary exists, check if it is the correct version
+if [ -f "$DIR/bin/ameba" ]; then
+  CURRENT_VERSION=$("$DIR/bin/ameba" --version)
+  if [ "$AMEBA_VERSION" = "$CURRENT_VERSION" ]; then
+    AMEBA_UP_TO_DATE=true
+  else
+    echo "ameba binary is not up to date"
+    echo "ameba version (./bin/ameba): $CURRENT_VERSION"
+    echo "ameba version (shards list): $AMEBA_VERSION"
+    AMEBA_UP_TO_DATE=false
+  fi
+fi
+
+if [ "$AMEBA_UP_TO_DATE" = false ]; then
+  echo "building ameba binary"
+  cd "$DIR/lib/ameba" && shards build && cp bin/ameba "$DIR/bin/ameba" && cd "$DIR"
+fi

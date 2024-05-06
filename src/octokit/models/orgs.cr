@@ -1,9 +1,11 @@
+require "../core_ext/time"
+require "../helpers"
+
 module Octokit
   module Models
-
     struct Organization
       def path
-       Organization.path(self)
+        Organization.path(self)
       end
 
       def self.path(org)
@@ -67,7 +69,7 @@ module Octokit
         members_url: String,
         public_members_url: String,
         avatar_url: String,
-        description: String|Nil
+        description: String | Nil
       )
     end
 

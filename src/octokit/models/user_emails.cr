@@ -1,3 +1,5 @@
+require "../helpers"
+
 module Octokit
   module Models
     struct UserEmail

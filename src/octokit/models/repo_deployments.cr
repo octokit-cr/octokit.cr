@@ -1,3 +1,5 @@
+require "./users"
+
 module Octokit
   module Models
     struct Deployment
@@ -48,7 +50,7 @@ module Octokit
 
     struct DeploymentStatus
       Octokit.rest_model(
-        id: String,
+        id: Int64,
 
         state: String,
         creator: User,

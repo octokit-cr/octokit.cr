@@ -1,4 +1,6 @@
-# Octokit
+# octokit
+
+[![test](https://github.com/octokit-cr/octokit.cr/actions/workflows/test.yml/badge.svg)](https://github.com/octokit-cr/octokit.cr/actions/workflows/test.yml) [![lint](https://github.com/octokit-cr/octokit.cr/actions/workflows/lint.yml/badge.svg)](https://github.com/octokit-cr/octokit.cr/actions/workflows/lint.yml) [![acceptance](https://github.com/octokit-cr/octokit.cr/actions/workflows/acceptance.yml/badge.svg)](https://github.com/octokit-cr/octokit.cr/actions/workflows/acceptance.yml)
 
 Crystal toolkit for the GitHub API.
 
@@ -8,11 +10,13 @@ Crystal toolkit for the GitHub API.
 
 1. Add the dependency to your `shard.yml`:
 
-```yaml
-dependencies:
-  octokit:
-    github: watzon/octokit.cr
-```
+    ```yaml
+    dependencies:
+      octokit:
+        github: octokit-cr/octokit.cr
+    ```
+
+    > You can pin it to a release tag or a commit for extra stability
 
 2. Run `shards install`
 
@@ -23,19 +27,19 @@ require "octokit"
 
 # Create a new Octokit Client
 # Your password should be your Personal Access Token (PAT)
-github = Octokit.client("watzon", "PASSWORD")
+github = Octokit.client("grantbirki", "PASSWORD")
 
 # Also, you can authenticate this way:
-# github = Octokit.client("watzon", access_token: "PAT")
+# github = Octokit.client("grantbirki", access_token: "PAT")
 
 # Fetch information about the logged in user
 pp github.user
 
 # Fetch information about another user
-pp github.user("asterite")
+pp github.user("watzon")
 ```
 
-There are way too many options to list here, even at this early stage. For more usage examples see the [documentation](https://watzon.github.io/octokit.cr/).
+There are way too many options to list here, even at this early stage. For more usage examples see the [documentation](https://octokit-cr.github.io/octokit.cr/).
 
 ## Roadmap
 
@@ -48,7 +52,7 @@ There are a lot of pieces of the GitHub API to cover. Here are the ones that nee
 - [ ] [Commits]()
 - [ ] [CommunityProfile]()
 - [ ] [Contents]()
-- [ ] [Deployments]()
+- [x] [Deployments](https://octokit-cr.github.io/octokit.cr/Octokit/Client/Deployments.html)
 - [ ] [Downloads]()
 - [ ] [Emojis]()
 - [ ] [Events]()
@@ -56,11 +60,11 @@ There are a lot of pieces of the GitHub API to cover. Here are the ones that nee
 - [ ] [Gists]()
 - [ ] [Gitignore]()
 - [ ] [Hooks]()
-- [x] [Issues](https://watzon.github.io/octokit.cr/Octokit/Client/RateLimit.html)
+- [x] [Issues](https://octokit-cr.github.io/octokit.cr/Octokit/Client/Issues.html)
 - [ ] [Labels]()
 - [ ] [LegacySearch]()
 - [ ] [Licenses]()
-- [x] [Markdown](https://watzon.github.io/octokit.cr/Octokit/Client/Markdown.html)
+- [x] [Markdown](https://octokit-cr.github.io/octokit.cr/Octokit/Client/Markdown.html)
 - [ ] [Marketplace]()
 - [ ] [Meta]()
 - [ ] [Milestones]()
@@ -69,23 +73,23 @@ There are a lot of pieces of the GitHub API to cover. Here are the ones that nee
 - [ ] [Organizations]()
 - [ ] [Pages]()
 - [ ] [Projects]()
-- [x] [PubSubHubbub](https://watzon.github.io/octokit.cr/Octokit/Client/PubSubHubbub.html)
+- [x] [PubSubHubbub](https://octokit-cr.github.io/octokit.cr/Octokit/Client/PubSubHubbub.html)
 - [ ] [PullRequests]()
-- [x] [RateLimit](https://watzon.github.io/octokit.cr/Octokit/Client/RateLimit.html)
+- [x] [RateLimit](https://octokit-cr.github.io/octokit.cr/Octokit/Client/RateLimit.html)
 - [ ] [Reactions]()
 - [ ] [Refs]()
-- [x] [Releases](https://watzon.github.io/octokit.cr/Octokit/Client/Releases.html)
-- [x] [Repositories](https://watzon.github.io/octokit.cr/Octokit/Client/Repositories.html)
+- [x] [Releases](https://octokit-cr.github.io/octokit.cr/Octokit/Client/Releases.html)
+- [x] [Repositories](https://octokit-cr.github.io/octokit.cr/Octokit/Client/Repositories.html)
 - [ ] [RepositoryInvitations]()
 - [ ] [Reviews]()
-- [x] [Say](https://watzon.github.io/octokit.cr/Octokit/Client/Say.html)
-- [x] [Search](https://watzon.github.io/octokit.cr/Octokit/Client/Search.html)
+- [x] [Say](https://octokit-cr.github.io/octokit.cr/Octokit/Client/Say.html)
+- [x] [Search](https://octokit-cr.github.io/octokit.cr/Octokit/Client/Search.html)
 - [ ] [ServiceStatus]()
 - [ ] [SourceImport]()
 - [ ] [Stats]()
-- [x] [Statuses](https://watzon.github.io/octokit.cr/Octokit/Client/Statuses.html)
+- [x] [Statuses](https://octokit-cr.github.io/octokit.cr/Octokit/Client/Statuses.html)
 - [ ] [Traffic]()
-- [x] [Users](https://watzon.github.io/octokit.cr/Octokit/Client/Users.html)
+- [x] [Users](https://octokit-cr.github.io/octokit.cr/Octokit/Client/Users.html)
 
 I am trying to complete what I deem the most important ones first so that this shard can be immediately useful. Keep in mind, however, that the API may change at any time.
 
@@ -93,7 +97,7 @@ I am trying to complete what I deem the most important ones first so that this s
 
 I don't only welcome contributions, I beg for them. If this is a library that might help you out please, help me by forking this repo and porting one of the many APIs that's not checked above. Thank you!
 
-1. Fork it (<https://github.com/watzon/octokit/fork>)
+1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
@@ -101,8 +105,9 @@ I don't only welcome contributions, I beg for them. If this is a library that mi
 
 ## Contributors
 
-- [Chris Watson](https://github.com/watzon) - creator and maintainer
+- [Grant Birkinbine](https://github.com/GrantBirki)
+- [Chris Watson](https://github.com/watzon) - original creator and maintainer
 
-# Thanks
+## Thanks
 
 Thanks to all of the maintainers of [octokit/octokit.rb](https://github.com/octokit/octokit.rb) who made this so much easier on me. This library is a port of the ruby library and I've tried to keep the APIs as similar as possible.

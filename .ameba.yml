@@ -1,0 +1,28 @@
+Lint/NotNil:
+  Enabled: false
+
+Style/RedundantReturn:
+  Enabled: false
+
+Documentation/DocumentationAdmonition:
+  Enabled: false
+
+Lint/RedundantStringCoercion:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Naming/AccessorMethodName:
+  Enabled: false
+
+Style/NegatedConditionsInUnless:
+  Enabled: false
+
+Naming/BlockParameterName:
+  Enabled: false
+
+Globs:
+  - "**/*.cr"
+  - "!lib"
+  - "!spec/acceptance/acceptance.cr"

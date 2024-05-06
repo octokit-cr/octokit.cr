@@ -1,112 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.29.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.11.2">
+<meta name="crystal_docs.project_version" content="main">
+<meta name="crystal_docs.project_name" content="octokit">
 
 
-<link href="../../css/style.css" rel="stylesheet" type="text/css">
 
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../../";
-</script>
 
-  <meta id="repository-name" content="github.com/watzon/octokit.cr">
-  <title>Octokit::Models::Timeline - github.com/watzon/octokit.cr</title>
+  <meta name="repository-name" content="octokit">
+  <title>Octokit::Models::Timeline - octokit main</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../../";
+  </script>
 </head>
 <body>
 
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
       <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
-    <div class="repository-links">
-      <a href="../../index.html">README</a>
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../../index.html">
+          octokit
+        </a>
+      </h1>
+
+      <span class="project-version">
+        main
+      </span>
     </div>
   </div>
 
-  <div class="search-results" class="hidden">
+  <div class="search-results hidden">
     <ul class="search-list"></ul>
   </div>
 
   <div class="types-list">
     <ul>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/toplevel" data-name="top level namespace">
+  <li class=" " data-id="octokit/toplevel" data-name="top level namespace">
       <a href="../../toplevel.html">Top Level Namespace</a>
       
     </li>
   
-  <li class="parent open current" data-id="github.com/watzon/octokit.cr/Octokit" data-name="octokit">
+  <li class="parent open current" data-id="octokit/Octokit" data-name="octokit">
       <a href="../../Octokit.html">Octokit</a>
       
         <ul>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Authentication" data-name="octokit::authentication">
+  <li class=" " data-id="octokit/Octokit/Authentication" data-name="octokit::authentication">
       <a href="../../Octokit/Authentication.html">Authentication</a>
       
     </li>
   
-  <li class="parent " data-id="github.com/watzon/octokit.cr/Octokit/Client" data-name="octokit::client">
+  <li class="parent " data-id="octokit/Octokit/Client" data-name="octokit::client">
       <a href="../../Octokit/Client.html">Client</a>
       
         <ul>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Authorizations" data-name="octokit::client::authorizations">
+  <li class=" " data-id="octokit/Octokit/Client/Authorizations" data-name="octokit::client::authorizations">
       <a href="../../Octokit/Client/Authorizations.html">Authorizations</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Issues" data-name="octokit::client::issues">
+  <li class=" " data-id="octokit/Octokit/Client/Deployments" data-name="octokit::client::deployments">
+      <a href="../../Octokit/Client/Deployments.html">Deployments</a>
+      
+    </li>
+  
+  <li class=" " data-id="octokit/Octokit/Client/Issues" data-name="octokit::client::issues">
       <a href="../../Octokit/Client/Issues.html">Issues</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Markdown" data-name="octokit::client::markdown">
+  <li class=" " data-id="octokit/Octokit/Client/Markdown" data-name="octokit::client::markdown">
       <a href="../../Octokit/Client/Markdown.html">Markdown</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/PubSubHubbub" data-name="octokit::client::pubsubhubbub">
+  <li class="parent " data-id="octokit/Octokit/Client/Organizations" data-name="octokit::client::organizations">
+      <a href="../../Octokit/Client/Organizations.html">Organizations</a>
+      
+        <ul>
+  
+  <li class=" " data-id="octokit/Octokit/Client/Organizations/OrganizationListItem" data-name="octokit::client::organizations::organizationlistitem">
+      <a href="../../Octokit/Client/Organizations/OrganizationListItem.html">OrganizationListItem</a>
+      
+    </li>
+  
+  <li class=" " data-id="octokit/Octokit/Client/Organizations/User" data-name="octokit::client::organizations::user">
+      <a href="../../Octokit/Client/Organizations/User.html">User</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="octokit/Octokit/Client/PubSubHubbub" data-name="octokit::client::pubsubhubbub">
       <a href="../../Octokit/Client/PubSubHubbub.html">PubSubHubbub</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/RateLimit" data-name="octokit::client::ratelimit">
+  <li class=" " data-id="octokit/Octokit/Client/RateLimit" data-name="octokit::client::ratelimit">
       <a href="../../Octokit/Client/RateLimit.html">RateLimit</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Releases" data-name="octokit::client::releases">
+  <li class=" " data-id="octokit/Octokit/Client/Releases" data-name="octokit::client::releases">
       <a href="../../Octokit/Client/Releases.html">Releases</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Repositories" data-name="octokit::client::repositories">
+  <li class=" " data-id="octokit/Octokit/Client/Repositories" data-name="octokit::client::repositories">
       <a href="../../Octokit/Client/Repositories.html">Repositories</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Say" data-name="octokit::client::say">
+  <li class=" " data-id="octokit/Octokit/Client/Say" data-name="octokit::client::say">
       <a href="../../Octokit/Client/Say.html">Say</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Search" data-name="octokit::client::search">
+  <li class=" " data-id="octokit/Octokit/Client/Search" data-name="octokit::client::search">
       <a href="../../Octokit/Client/Search.html">Search</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Statuses" data-name="octokit::client::statuses">
+  <li class=" " data-id="octokit/Octokit/Client/Statuses" data-name="octokit::client::statuses">
       <a href="../../Octokit/Client/Statuses.html">Statuses</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Client/Users" data-name="octokit::client::users">
+  <li class=" " data-id="octokit/Octokit/Client/Users" data-name="octokit::client::users">
       <a href="../../Octokit/Client/Users.html">Users</a>
       
     </li>
@@ -116,17 +162,17 @@
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Configurable" data-name="octokit::configurable">
+  <li class=" " data-id="octokit/Octokit/Configurable" data-name="octokit::configurable">
       <a href="../../Octokit/Configurable.html">Configurable</a>
       
     </li>
   
-  <li class="parent " data-id="github.com/watzon/octokit.cr/Octokit/Connection" data-name="octokit::connection">
+  <li class="parent " data-id="octokit/Octokit/Connection" data-name="octokit::connection">
       <a href="../../Octokit/Connection.html">Connection</a>
       
         <ul>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Connection/Paginator" data-name="octokit::connection::paginator(t)">
+  <li class=" " data-id="octokit/Octokit/Connection/Paginator" data-name="octokit::connection::paginator(t)">
       <a href="../../Octokit/Connection/Paginator.html">Paginator</a>
       
     </li>
@@ -136,162 +182,162 @@
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Default" data-name="octokit::default">
+  <li class=" " data-id="octokit/Octokit/Default" data-name="octokit::default">
       <a href="../../Octokit/Default.html">Default</a>
       
     </li>
   
-  <li class="parent " data-id="github.com/watzon/octokit.cr/Octokit/Error" data-name="octokit::error">
+  <li class="parent " data-id="octokit/Octokit/Error" data-name="octokit::error">
       <a href="../../Octokit/Error.html">Error</a>
       
         <ul>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Error/AbuseDetected" data-name="octokit::error::abusedetected">
+  <li class=" " data-id="octokit/Octokit/Error/AbuseDetected" data-name="octokit::error::abusedetected">
       <a href="../../Octokit/Error/AbuseDetected.html">AbuseDetected</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Error/AccountSuspended" data-name="octokit::error::accountsuspended">
+  <li class=" " data-id="octokit/Octokit/Error/AccountSuspended" data-name="octokit::error::accountsuspended">
       <a href="../../Octokit/Error/AccountSuspended.html">AccountSuspended</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Error/ApplicationCredentialsRequired" data-name="octokit::error::applicationcredentialsrequired">
+  <li class=" " data-id="octokit/Octokit/Error/ApplicationCredentialsRequired" data-name="octokit::error::applicationcredentialsrequired">
       <a href="../../Octokit/Error/ApplicationCredentialsRequired.html">ApplicationCredentialsRequired</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Error/ArgumentError" data-name="octokit::error::argumenterror">
+  <li class=" " data-id="octokit/Octokit/Error/ArgumentError" data-name="octokit::error::argumenterror">
       <a href="../../Octokit/Error/ArgumentError.html">ArgumentError</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Error/BadGateway" data-name="octokit::error::badgateway">
+  <li class=" " data-id="octokit/Octokit/Error/BadGateway" data-name="octokit::error::badgateway">
       <a href="../../Octokit/Error/BadGateway.html">BadGateway</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Error/BadRequest" data-name="octokit::error::badrequest">
+  <li class=" " data-id="octokit/Octokit/Error/BadRequest" data-name="octokit::error::badrequest">
       <a href="../../Octokit/Error/BadRequest.html">BadRequest</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Error/BillingIssue" data-name="octokit::error::billingissue">
+  <li class=" " data-id="octokit/Octokit/Error/BillingIssue" data-name="octokit::error::billingissue">
       <a href="../../Octokit/Error/BillingIssue.html">BillingIssue</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Error/BranchNotProtected" data-name="octokit::error::branchnotprotected">
+  <li class=" " data-id="octokit/Octokit/Error/BranchNotProtected" data-name="octokit::error::branchnotprotected">
       <a href="../../Octokit/Error/BranchNotProtected.html">BranchNotProtected</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Error/ClientError" data-name="octokit::error::clienterror">
+  <li class=" " data-id="octokit/Octokit/Error/ClientError" data-name="octokit::error::clienterror">
       <a href="../../Octokit/Error/ClientError.html">ClientError</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Error/Conflict" data-name="octokit::error::conflict">
+  <li class=" " data-id="octokit/Octokit/Error/Conflict" data-name="octokit::error::conflict">
       <a href="../../Octokit/Error/Conflict.html">Conflict</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Error/Forbidden" data-name="octokit::error::forbidden">
+  <li class=" " data-id="octokit/Octokit/Error/Forbidden" data-name="octokit::error::forbidden">
       <a href="../../Octokit/Error/Forbidden.html">Forbidden</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Error/InternalServerError" data-name="octokit::error::internalservererror">
+  <li class=" " data-id="octokit/Octokit/Error/InternalServerError" data-name="octokit::error::internalservererror">
       <a href="../../Octokit/Error/InternalServerError.html">InternalServerError</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Error/InvalidRepository" data-name="octokit::error::invalidrepository">
+  <li class=" " data-id="octokit/Octokit/Error/InvalidRepository" data-name="octokit::error::invalidrepository">
       <a href="../../Octokit/Error/InvalidRepository.html">InvalidRepository</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Error/MethodNotAllowed" data-name="octokit::error::methodnotallowed">
+  <li class=" " data-id="octokit/Octokit/Error/MethodNotAllowed" data-name="octokit::error::methodnotallowed">
       <a href="../../Octokit/Error/MethodNotAllowed.html">MethodNotAllowed</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Error/MissingContentType" data-name="octokit::error::missingcontenttype">
+  <li class=" " data-id="octokit/Octokit/Error/MissingContentType" data-name="octokit::error::missingcontenttype">
       <a href="../../Octokit/Error/MissingContentType.html">MissingContentType</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Error/NotAcceptable" data-name="octokit::error::notacceptable">
+  <li class=" " data-id="octokit/Octokit/Error/NotAcceptable" data-name="octokit::error::notacceptable">
       <a href="../../Octokit/Error/NotAcceptable.html">NotAcceptable</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Error/NotFound" data-name="octokit::error::notfound">
+  <li class=" " data-id="octokit/Octokit/Error/NotFound" data-name="octokit::error::notfound">
       <a href="../../Octokit/Error/NotFound.html">NotFound</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Error/NotImplemented" data-name="octokit::error::notimplemented">
+  <li class=" " data-id="octokit/Octokit/Error/NotImplemented" data-name="octokit::error::notimplemented">
       <a href="../../Octokit/Error/NotImplemented.html">NotImplemented</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Error/OneTimePasswordRequired" data-name="octokit::error::onetimepasswordrequired">
+  <li class=" " data-id="octokit/Octokit/Error/OneTimePasswordRequired" data-name="octokit::error::onetimepasswordrequired">
       <a href="../../Octokit/Error/OneTimePasswordRequired.html">OneTimePasswordRequired</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Error/RepositoryUnavailable" data-name="octokit::error::repositoryunavailable">
+  <li class=" " data-id="octokit/Octokit/Error/RepositoryUnavailable" data-name="octokit::error::repositoryunavailable">
       <a href="../../Octokit/Error/RepositoryUnavailable.html">RepositoryUnavailable</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Error/ServerError" data-name="octokit::error::servererror">
+  <li class=" " data-id="octokit/Octokit/Error/ServerError" data-name="octokit::error::servererror">
       <a href="../../Octokit/Error/ServerError.html">ServerError</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Error/ServiceUnavailable" data-name="octokit::error::serviceunavailable">
+  <li class=" " data-id="octokit/Octokit/Error/ServiceUnavailable" data-name="octokit::error::serviceunavailable">
       <a href="../../Octokit/Error/ServiceUnavailable.html">ServiceUnavailable</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Error/TooLargeContent" data-name="octokit::error::toolargecontent">
+  <li class=" " data-id="octokit/Octokit/Error/TooLargeContent" data-name="octokit::error::toolargecontent">
       <a href="../../Octokit/Error/TooLargeContent.html">TooLargeContent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Error/TooManyLoginAttempts" data-name="octokit::error::toomanyloginattempts">
+  <li class=" " data-id="octokit/Octokit/Error/TooManyLoginAttempts" data-name="octokit::error::toomanyloginattempts">
       <a href="../../Octokit/Error/TooManyLoginAttempts.html">TooManyLoginAttempts</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Error/TooManyRequests" data-name="octokit::error::toomanyrequests">
+  <li class=" " data-id="octokit/Octokit/Error/TooManyRequests" data-name="octokit::error::toomanyrequests">
       <a href="../../Octokit/Error/TooManyRequests.html">TooManyRequests</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Error/Unauthorized" data-name="octokit::error::unauthorized">
+  <li class=" " data-id="octokit/Octokit/Error/Unauthorized" data-name="octokit::error::unauthorized">
       <a href="../../Octokit/Error/Unauthorized.html">Unauthorized</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Error/UnavailableForLegalReasons" data-name="octokit::error::unavailableforlegalreasons">
+  <li class=" " data-id="octokit/Octokit/Error/UnavailableForLegalReasons" data-name="octokit::error::unavailableforlegalreasons">
       <a href="../../Octokit/Error/UnavailableForLegalReasons.html">UnavailableForLegalReasons</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Error/UnprocessableEntity" data-name="octokit::error::unprocessableentity">
+  <li class=" " data-id="octokit/Octokit/Error/UnprocessableEntity" data-name="octokit::error::unprocessableentity">
       <a href="../../Octokit/Error/UnprocessableEntity.html">UnprocessableEntity</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Error/UnsupportedMediaType" data-name="octokit::error::unsupportedmediatype">
+  <li class=" " data-id="octokit/Octokit/Error/UnsupportedMediaType" data-name="octokit::error::unsupportedmediatype">
       <a href="../../Octokit/Error/UnsupportedMediaType.html">UnsupportedMediaType</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Error/UnverifiedEmail" data-name="octokit::error::unverifiedemail">
+  <li class=" " data-id="octokit/Octokit/Error/UnverifiedEmail" data-name="octokit::error::unverifiedemail">
       <a href="../../Octokit/Error/UnverifiedEmail.html">UnverifiedEmail</a>
       
     </li>
@@ -301,32 +347,32 @@
       
     </li>
   
-  <li class="parent open current" data-id="github.com/watzon/octokit.cr/Octokit/Models" data-name="octokit::models">
+  <li class="parent open current" data-id="octokit/Octokit/Models" data-name="octokit::models">
       <a href="../../Octokit/Models.html">Models</a>
       
         <ul>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/AccessToken" data-name="octokit::models::accesstoken">
+  <li class=" " data-id="octokit/Octokit/Models/AccessToken" data-name="octokit::models::accesstoken">
       <a href="../../Octokit/Models/AccessToken.html">AccessToken</a>
       
     </li>
   
-  <li class="parent " data-id="github.com/watzon/octokit.cr/Octokit/Models/Activity" data-name="octokit::models::activity">
+  <li class="parent " data-id="octokit/Octokit/Models/Activity" data-name="octokit::models::activity">
       <a href="../../Octokit/Models/Activity.html">Activity</a>
       
         <ul>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Activity/FeedLink" data-name="octokit::models::activity::feedlink">
+  <li class=" " data-id="octokit/Octokit/Models/Activity/FeedLink" data-name="octokit::models::activity::feedlink">
       <a href="../../Octokit/Models/Activity/FeedLink.html">FeedLink</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Activity/Links" data-name="octokit::models::activity::links">
+  <li class=" " data-id="octokit/Octokit/Models/Activity/Links" data-name="octokit::models::activity::links">
       <a href="../../Octokit/Models/Activity/Links.html">Links</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Activity/Subscription" data-name="octokit::models::activity::subscription">
+  <li class=" " data-id="octokit/Octokit/Models/Activity/Subscription" data-name="octokit::models::activity::subscription">
       <a href="../../Octokit/Models/Activity/Subscription.html">Subscription</a>
       
     </li>
@@ -336,17 +382,17 @@
       
     </li>
   
-  <li class="parent " data-id="github.com/watzon/octokit.cr/Octokit/Models/ActivityNotifications" data-name="octokit::models::activitynotifications">
+  <li class="parent " data-id="octokit/Octokit/Models/ActivityNotifications" data-name="octokit::models::activitynotifications">
       <a href="../../Octokit/Models/ActivityNotifications.html">ActivityNotifications</a>
       
         <ul>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/ActivityNotifications/NotificationListOptions" data-name="octokit::models::activitynotifications::notificationlistoptions">
+  <li class=" " data-id="octokit/Octokit/Models/ActivityNotifications/NotificationListOptions" data-name="octokit::models::activitynotifications::notificationlistoptions">
       <a href="../../Octokit/Models/ActivityNotifications/NotificationListOptions.html">NotificationListOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/ActivityNotifications/NotificationSubject" data-name="octokit::models::activitynotifications::notificationsubject">
+  <li class=" " data-id="octokit/Octokit/Models/ActivityNotifications/NotificationSubject" data-name="octokit::models::activitynotifications::notificationsubject">
       <a href="../../Octokit/Models/ActivityNotifications/NotificationSubject.html">NotificationSubject</a>
       
     </li>
@@ -356,1137 +402,1142 @@
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/ActivityStar" data-name="octokit::models::activitystar">
+  <li class=" " data-id="octokit/Octokit/Models/ActivityStar" data-name="octokit::models::activitystar">
       <a href="../../Octokit/Models/ActivityStar.html">ActivityStar</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/ActivityWatching" data-name="octokit::models::activitywatching">
+  <li class=" " data-id="octokit/Octokit/Models/ActivityWatching" data-name="octokit::models::activitywatching">
       <a href="../../Octokit/Models/ActivityWatching.html">ActivityWatching</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/AdminEnforcement" data-name="octokit::models::adminenforcement">
+  <li class=" " data-id="octokit/Octokit/Models/AdminEnforcement" data-name="octokit::models::adminenforcement">
       <a href="../../Octokit/Models/AdminEnforcement.html">AdminEnforcement</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/AdminStats" data-name="octokit::models::adminstats">
+  <li class=" " data-id="octokit/Octokit/Models/AdminStats" data-name="octokit::models::adminstats">
       <a href="../../Octokit/Models/AdminStats.html">AdminStats</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/APIMeta" data-name="octokit::models::apimeta">
+  <li class=" " data-id="octokit/Octokit/Models/APIMeta" data-name="octokit::models::apimeta">
       <a href="../../Octokit/Models/APIMeta.html">APIMeta</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/App" data-name="octokit::models::app">
+  <li class=" " data-id="octokit/Octokit/Models/App" data-name="octokit::models::app">
       <a href="../../Octokit/Models/App.html">App</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Attachment" data-name="octokit::models::attachment">
+  <li class=" " data-id="octokit/Octokit/Models/Attachment" data-name="octokit::models::attachment">
       <a href="../../Octokit/Models/Attachment.html">Attachment</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Authorization" data-name="octokit::models::authorization">
+  <li class=" " data-id="octokit/Octokit/Models/Authorization" data-name="octokit::models::authorization">
       <a href="../../Octokit/Models/Authorization.html">Authorization</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/AuthorizationApp" data-name="octokit::models::authorizationapp">
+  <li class=" " data-id="octokit/Octokit/Models/AuthorizationApp" data-name="octokit::models::authorizationapp">
       <a href="../../Octokit/Models/AuthorizationApp.html">AuthorizationApp</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/AuthorizationRequest" data-name="octokit::models::authorizationrequest">
+  <li class=" " data-id="octokit/Octokit/Models/AuthorizationRequest" data-name="octokit::models::authorizationrequest">
       <a href="../../Octokit/Models/AuthorizationRequest.html">AuthorizationRequest</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/AuthorizationUpdateRequest" data-name="octokit::models::authorizationupdaterequest">
+  <li class=" " data-id="octokit/Octokit/Models/AuthorizationUpdateRequest" data-name="octokit::models::authorizationupdaterequest">
       <a href="../../Octokit/Models/AuthorizationUpdateRequest.html">AuthorizationUpdateRequest</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Blob" data-name="octokit::models::blob">
+  <li class=" " data-id="octokit/Octokit/Models/Blob" data-name="octokit::models::blob">
       <a href="../../Octokit/Models/Blob.html">Blob</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Branch" data-name="octokit::models::branch">
+  <li class=" " data-id="octokit/Octokit/Models/Branch" data-name="octokit::models::branch">
       <a href="../../Octokit/Models/Branch.html">Branch</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/BranchCommit" data-name="octokit::models::branchcommit">
+  <li class=" " data-id="octokit/Octokit/Models/BranchCommit" data-name="octokit::models::branchcommit">
       <a href="../../Octokit/Models/BranchCommit.html">BranchCommit</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/BranchProtection" data-name="octokit::models::branchprotection">
+  <li class=" " data-id="octokit/Octokit/Models/BranchProtection" data-name="octokit::models::branchprotection">
       <a href="../../Octokit/Models/BranchProtection.html">BranchProtection</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/BranchProtectionRequiredStatusChecks" data-name="octokit::models::branchprotectionrequiredstatuschecks">
+  <li class=" " data-id="octokit/Octokit/Models/BranchProtectionRequiredStatusChecks" data-name="octokit::models::branchprotectionrequiredstatuschecks">
       <a href="../../Octokit/Models/BranchProtectionRequiredStatusChecks.html">BranchProtectionRequiredStatusChecks</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/BranchProtectionSummary" data-name="octokit::models::branchprotectionsummary">
+  <li class=" " data-id="octokit/Octokit/Models/BranchProtectionSummary" data-name="octokit::models::branchprotectionsummary">
       <a href="../../Octokit/Models/BranchProtectionSummary.html">BranchProtectionSummary</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/CheckRun" data-name="octokit::models::checkrun">
+  <li class=" " data-id="octokit/Octokit/Models/CheckRun" data-name="octokit::models::checkrun">
       <a href="../../Octokit/Models/CheckRun.html">CheckRun</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/CheckRunAnnotation" data-name="octokit::models::checkrunannotation">
+  <li class=" " data-id="octokit/Octokit/Models/CheckRunAnnotation" data-name="octokit::models::checkrunannotation">
       <a href="../../Octokit/Models/CheckRunAnnotation.html">CheckRunAnnotation</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/CheckRunEvent" data-name="octokit::models::checkrunevent">
+  <li class=" " data-id="octokit/Octokit/Models/CheckRunEvent" data-name="octokit::models::checkrunevent">
       <a href="../../Octokit/Models/CheckRunEvent.html">CheckRunEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/CheckRunImage" data-name="octokit::models::checkrunimage">
+  <li class=" " data-id="octokit/Octokit/Models/CheckRunImage" data-name="octokit::models::checkrunimage">
       <a href="../../Octokit/Models/CheckRunImage.html">CheckRunImage</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/CheckRunOutput" data-name="octokit::models::checkrunoutput">
+  <li class=" " data-id="octokit/Octokit/Models/CheckRunOutput" data-name="octokit::models::checkrunoutput">
       <a href="../../Octokit/Models/CheckRunOutput.html">CheckRunOutput</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/CheckSuite" data-name="octokit::models::checksuite">
+  <li class=" " data-id="octokit/Octokit/Models/CheckSuite" data-name="octokit::models::checksuite">
       <a href="../../Octokit/Models/CheckSuite.html">CheckSuite</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/CheckSuiteEvent" data-name="octokit::models::checksuiteevent">
+  <li class=" " data-id="octokit/Octokit/Models/CheckSuiteEvent" data-name="octokit::models::checksuiteevent">
       <a href="../../Octokit/Models/CheckSuiteEvent.html">CheckSuiteEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/CodeOfConduct" data-name="octokit::models::codeofconduct">
+  <li class=" " data-id="octokit/Octokit/Models/CodeOfConduct" data-name="octokit::models::codeofconduct">
       <a href="../../Octokit/Models/CodeOfConduct.html">CodeOfConduct</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/CodeResult" data-name="octokit::models::coderesult">
+  <li class=" " data-id="octokit/Octokit/Models/CodeResult" data-name="octokit::models::coderesult">
       <a href="../../Octokit/Models/CodeResult.html">CodeResult</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/CodeSearchResult" data-name="octokit::models::codesearchresult">
+  <li class=" " data-id="octokit/Octokit/Models/CodeSearchResult" data-name="octokit::models::codesearchresult">
       <a href="../../Octokit/Models/CodeSearchResult.html">CodeSearchResult</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/CombinedStatus" data-name="octokit::models::combinedstatus">
+  <li class=" " data-id="octokit/Octokit/Models/CombinedStatus" data-name="octokit::models::combinedstatus">
       <a href="../../Octokit/Models/CombinedStatus.html">CombinedStatus</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/CommentStats" data-name="octokit::models::commentstats">
+  <li class=" " data-id="octokit/Octokit/Models/CommentStats" data-name="octokit::models::commentstats">
       <a href="../../Octokit/Models/CommentStats.html">CommentStats</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Commit" data-name="octokit::models::commit">
+  <li class=" " data-id="octokit/Octokit/Models/Commit" data-name="octokit::models::commit">
       <a href="../../Octokit/Models/Commit.html">Commit</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/CommitAuthor" data-name="octokit::models::commitauthor">
+  <li class=" " data-id="octokit/Octokit/Models/CommitAuthor" data-name="octokit::models::commitauthor">
       <a href="../../Octokit/Models/CommitAuthor.html">CommitAuthor</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/CommitCommentEvent" data-name="octokit::models::commitcommentevent">
+  <li class=" " data-id="octokit/Octokit/Models/CommitCommentEvent" data-name="octokit::models::commitcommentevent">
       <a href="../../Octokit/Models/CommitCommentEvent.html">CommitCommentEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/CommitFile" data-name="octokit::models::commitfile">
+  <li class=" " data-id="octokit/Octokit/Models/CommitFile" data-name="octokit::models::commitfile">
       <a href="../../Octokit/Models/CommitFile.html">CommitFile</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/CommitListOptions" data-name="octokit::models::commitlistoptions">
+  <li class=" " data-id="octokit/Octokit/Models/CommitListOptions" data-name="octokit::models::commitlistoptions">
       <a href="../../Octokit/Models/CommitListOptions.html">CommitListOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/CommitsComparison" data-name="octokit::models::commitscomparison">
+  <li class=" " data-id="octokit/Octokit/Models/CommitsComparison" data-name="octokit::models::commitscomparison">
       <a href="../../Octokit/Models/CommitsComparison.html">CommitsComparison</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/CommitsSearchResult" data-name="octokit::models::commitssearchresult">
+  <li class=" " data-id="octokit/Octokit/Models/CommitsSearchResult" data-name="octokit::models::commitssearchresult">
       <a href="../../Octokit/Models/CommitsSearchResult.html">CommitsSearchResult</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/CommitStats" data-name="octokit::models::commitstats">
+  <li class=" " data-id="octokit/Octokit/Models/CommitStats" data-name="octokit::models::commitstats">
       <a href="../../Octokit/Models/CommitStats.html">CommitStats</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/CommunityHealthFiles" data-name="octokit::models::communityhealthfiles">
+  <li class=" " data-id="octokit/Octokit/Models/CommunityHealthFiles" data-name="octokit::models::communityhealthfiles">
       <a href="../../Octokit/Models/CommunityHealthFiles.html">CommunityHealthFiles</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/CommunityHealthMetrics" data-name="octokit::models::communityhealthmetrics">
+  <li class=" " data-id="octokit/Octokit/Models/CommunityHealthMetrics" data-name="octokit::models::communityhealthmetrics">
       <a href="../../Octokit/Models/CommunityHealthMetrics.html">CommunityHealthMetrics</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Contributor" data-name="octokit::models::contributor">
+  <li class=" " data-id="octokit/Octokit/Models/Contributor" data-name="octokit::models::contributor">
       <a href="../../Octokit/Models/Contributor.html">Contributor</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/ContributorStats" data-name="octokit::models::contributorstats">
+  <li class=" " data-id="octokit/Octokit/Models/ContributorStats" data-name="octokit::models::contributorstats">
       <a href="../../Octokit/Models/ContributorStats.html">ContributorStats</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/CreateEvent" data-name="octokit::models::createevent">
+  <li class=" " data-id="octokit/Octokit/Models/CreateEvent" data-name="octokit::models::createevent">
       <a href="../../Octokit/Models/CreateEvent.html">CreateEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/CreateHookRequest" data-name="octokit::models::createhookrequest">
+  <li class=" " data-id="octokit/Octokit/Models/CreateHookRequest" data-name="octokit::models::createhookrequest">
       <a href="../../Octokit/Models/CreateHookRequest.html">CreateHookRequest</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/CreateOrgInvitationOptions" data-name="octokit::models::createorginvitationoptions">
+  <li class=" " data-id="octokit/Octokit/Models/CreateOrgInvitationOptions" data-name="octokit::models::createorginvitationoptions">
       <a href="../../Octokit/Models/CreateOrgInvitationOptions.html">CreateOrgInvitationOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/CreateRefRequest" data-name="octokit::models::createrefrequest">
+  <li class=" " data-id="octokit/Octokit/Models/CreateRefRequest" data-name="octokit::models::createrefrequest">
       <a href="../../Octokit/Models/CreateRefRequest.html">CreateRefRequest</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/CreateRepoRequest" data-name="octokit::models::createreporequest">
+  <li class=" " data-id="octokit/Octokit/Models/CreateRepoRequest" data-name="octokit::models::createreporequest">
       <a href="../../Octokit/Models/CreateRepoRequest.html">CreateRepoRequest</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/CreateTagRequest" data-name="octokit::models::createtagrequest">
+  <li class=" " data-id="octokit/Octokit/Models/CreateTagRequest" data-name="octokit::models::createtagrequest">
       <a href="../../Octokit/Models/CreateTagRequest.html">CreateTagRequest</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/DeleteEvent" data-name="octokit::models::deleteevent">
+  <li class=" " data-id="octokit/Octokit/Models/DeleteEvent" data-name="octokit::models::deleteevent">
       <a href="../../Octokit/Models/DeleteEvent.html">DeleteEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/DeployKeyEvent" data-name="octokit::models::deploykeyevent">
+  <li class=" " data-id="octokit/Octokit/Models/DeployKeyEvent" data-name="octokit::models::deploykeyevent">
       <a href="../../Octokit/Models/DeployKeyEvent.html">DeployKeyEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Deployment" data-name="octokit::models::deployment">
+  <li class=" " data-id="octokit/Octokit/Models/Deployment" data-name="octokit::models::deployment">
       <a href="../../Octokit/Models/Deployment.html">Deployment</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/DeploymentEvent" data-name="octokit::models::deploymentevent">
+  <li class=" " data-id="octokit/Octokit/Models/DeploymentEvent" data-name="octokit::models::deploymentevent">
       <a href="../../Octokit/Models/DeploymentEvent.html">DeploymentEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/DeploymentRequest" data-name="octokit::models::deploymentrequest">
+  <li class=" " data-id="octokit/Octokit/Models/DeploymentRequest" data-name="octokit::models::deploymentrequest">
       <a href="../../Octokit/Models/DeploymentRequest.html">DeploymentRequest</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/DeploymentsListOptions" data-name="octokit::models::deploymentslistoptions">
+  <li class=" " data-id="octokit/Octokit/Models/DeploymentsListOptions" data-name="octokit::models::deploymentslistoptions">
       <a href="../../Octokit/Models/DeploymentsListOptions.html">DeploymentsListOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/DeploymentStatus" data-name="octokit::models::deploymentstatus">
+  <li class=" " data-id="octokit/Octokit/Models/DeploymentStatus" data-name="octokit::models::deploymentstatus">
       <a href="../../Octokit/Models/DeploymentStatus.html">DeploymentStatus</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/DeploymentStatusEvent" data-name="octokit::models::deploymentstatusevent">
+  <li class=" " data-id="octokit/Octokit/Models/DeploymentStatusEvent" data-name="octokit::models::deploymentstatusevent">
       <a href="../../Octokit/Models/DeploymentStatusEvent.html">DeploymentStatusEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/DeploymentStatusRequest" data-name="octokit::models::deploymentstatusrequest">
+  <li class=" " data-id="octokit/Octokit/Models/DeploymentStatusRequest" data-name="octokit::models::deploymentstatusrequest">
       <a href="../../Octokit/Models/DeploymentStatusRequest.html">DeploymentStatusRequest</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/DiscussionComment" data-name="octokit::models::discussioncomment">
+  <li class=" " data-id="octokit/Octokit/Models/DiscussionComment" data-name="octokit::models::discussioncomment">
       <a href="../../Octokit/Models/DiscussionComment.html">DiscussionComment</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/DiscussionCommentListOptions" data-name="octokit::models::discussioncommentlistoptions">
+  <li class=" " data-id="octokit/Octokit/Models/DiscussionCommentListOptions" data-name="octokit::models::discussioncommentlistoptions">
       <a href="../../Octokit/Models/DiscussionCommentListOptions.html">DiscussionCommentListOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/DiscussionListOptions" data-name="octokit::models::discussionlistoptions">
+  <li class=" " data-id="octokit/Octokit/Models/DiscussionListOptions" data-name="octokit::models::discussionlistoptions">
       <a href="../../Octokit/Models/DiscussionListOptions.html">DiscussionListOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/DismissalRestrictions" data-name="octokit::models::dismissalrestrictions">
+  <li class=" " data-id="octokit/Octokit/Models/DismissalRestrictions" data-name="octokit::models::dismissalrestrictions">
       <a href="../../Octokit/Models/DismissalRestrictions.html">DismissalRestrictions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/DismissalRestrictionsRequest" data-name="octokit::models::dismissalrestrictionsrequest">
+  <li class=" " data-id="octokit/Octokit/Models/DismissalRestrictionsRequest" data-name="octokit::models::dismissalrestrictionsrequest">
       <a href="../../Octokit/Models/DismissalRestrictionsRequest.html">DismissalRestrictionsRequest</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/DismissedReview" data-name="octokit::models::dismissedreview">
+  <li class=" " data-id="octokit/Octokit/Models/DismissedReview" data-name="octokit::models::dismissedreview">
       <a href="../../Octokit/Models/DismissedReview.html">DismissedReview</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/DraftReviewComment" data-name="octokit::models::draftreviewcomment">
+  <li class=" " data-id="octokit/Octokit/Models/DraftReviewComment" data-name="octokit::models::draftreviewcomment">
       <a href="../../Octokit/Models/DraftReviewComment.html">DraftReviewComment</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/EditChange" data-name="octokit::models::editchange">
+  <li class=" " data-id="octokit/Octokit/Models/EditChange" data-name="octokit::models::editchange">
       <a href="../../Octokit/Models/EditChange.html">EditChange</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Event" data-name="octokit::models::event">
+  <li class=" " data-id="octokit/Octokit/Models/Event" data-name="octokit::models::event">
       <a href="../../Octokit/Models/Event.html">Event</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Follower" data-name="octokit::models::follower">
+  <li class=" " data-id="octokit/Octokit/Models/Follower" data-name="octokit::models::follower">
       <a href="../../Octokit/Models/Follower.html">Follower</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/ForkEvent" data-name="octokit::models::forkevent">
+  <li class=" " data-id="octokit/Octokit/Models/ForkEvent" data-name="octokit::models::forkevent">
       <a href="../../Octokit/Models/ForkEvent.html">ForkEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/GistFile" data-name="octokit::models::gistfile">
+  <li class=" " data-id="octokit/Octokit/Models/GistFile" data-name="octokit::models::gistfile">
       <a href="../../Octokit/Models/GistFile.html">GistFile</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/GistFork" data-name="octokit::models::gistfork">
+  <li class=" " data-id="octokit/Octokit/Models/GistFork" data-name="octokit::models::gistfork">
       <a href="../../Octokit/Models/GistFork.html">GistFork</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/GistListOptions" data-name="octokit::models::gistlistoptions">
+  <li class=" " data-id="octokit/Octokit/Models/GistListOptions" data-name="octokit::models::gistlistoptions">
       <a href="../../Octokit/Models/GistListOptions.html">GistListOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Gists" data-name="octokit::models::gists">
+  <li class=" " data-id="octokit/Octokit/Models/Gists" data-name="octokit::models::gists">
       <a href="../../Octokit/Models/Gists.html">Gists</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/GistStats" data-name="octokit::models::giststats">
+  <li class=" " data-id="octokit/Octokit/Models/GistStats" data-name="octokit::models::giststats">
       <a href="../../Octokit/Models/GistStats.html">GistStats</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/GitHubAppAuthorizationEvent" data-name="octokit::models::githubappauthorizationevent">
+  <li class=" " data-id="octokit/Octokit/Models/GitHubAppAuthorizationEvent" data-name="octokit::models::githubappauthorizationevent">
       <a href="../../Octokit/Models/GitHubAppAuthorizationEvent.html">GitHubAppAuthorizationEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Gitignore" data-name="octokit::models::gitignore">
+  <li class=" " data-id="octokit/Octokit/Models/Gitignore" data-name="octokit::models::gitignore">
       <a href="../../Octokit/Models/Gitignore.html">Gitignore</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/GitObject" data-name="octokit::models::gitobject">
+  <li class=" " data-id="octokit/Octokit/Models/GitObject" data-name="octokit::models::gitobject">
       <a href="../../Octokit/Models/GitObject.html">GitObject</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/GollumEvent" data-name="octokit::models::gollumevent">
+  <li class=" " data-id="octokit/Octokit/Models/GollumEvent" data-name="octokit::models::gollumevent">
       <a href="../../Octokit/Models/GollumEvent.html">GollumEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/GPGEmail" data-name="octokit::models::gpgemail">
+  <li class=" " data-id="octokit/Octokit/Models/GPGEmail" data-name="octokit::models::gpgemail">
       <a href="../../Octokit/Models/GPGEmail.html">GPGEmail</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/GPGKey" data-name="octokit::models::gpgkey">
+  <li class=" " data-id="octokit/Octokit/Models/GPGKey" data-name="octokit::models::gpgkey">
       <a href="../../Octokit/Models/GPGKey.html">GPGKey</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Grant" data-name="octokit::models::grant">
+  <li class=" " data-id="octokit/Octokit/Models/Grant" data-name="octokit::models::grant">
       <a href="../../Octokit/Models/Grant.html">Grant</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Hook" data-name="octokit::models::hook">
+  <li class=" " data-id="octokit/Octokit/Models/Hook" data-name="octokit::models::hook">
       <a href="../../Octokit/Models/Hook.html">Hook</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/HookStats" data-name="octokit::models::hookstats">
+  <li class=" " data-id="octokit/Octokit/Models/HookStats" data-name="octokit::models::hookstats">
       <a href="../../Octokit/Models/HookStats.html">HookStats</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Hovercard" data-name="octokit::models::hovercard">
+  <li class=" " data-id="octokit/Octokit/Models/Hovercard" data-name="octokit::models::hovercard">
       <a href="../../Octokit/Models/Hovercard.html">Hovercard</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/HovercardOptions" data-name="octokit::models::hovercardoptions">
+  <li class=" " data-id="octokit/Octokit/Models/HovercardOptions" data-name="octokit::models::hovercardoptions">
       <a href="../../Octokit/Models/HovercardOptions.html">HovercardOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Import" data-name="octokit::models::import">
+  <li class=" " data-id="octokit/Octokit/Models/Import" data-name="octokit::models::import">
       <a href="../../Octokit/Models/Import.html">Import</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Installation" data-name="octokit::models::installation">
+  <li class=" " data-id="octokit/Octokit/Models/Installation" data-name="octokit::models::installation">
       <a href="../../Octokit/Models/Installation.html">Installation</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/InstallationEvent" data-name="octokit::models::installationevent">
+  <li class=" " data-id="octokit/Octokit/Models/InstallationEvent" data-name="octokit::models::installationevent">
       <a href="../../Octokit/Models/InstallationEvent.html">InstallationEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/InstallationPermissions" data-name="octokit::models::installationpermissions">
+  <li class=" " data-id="octokit/Octokit/Models/InstallationPermissions" data-name="octokit::models::installationpermissions">
       <a href="../../Octokit/Models/InstallationPermissions.html">InstallationPermissions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/InstallationRepositoriesEvent" data-name="octokit::models::installationrepositoriesevent">
+  <li class=" " data-id="octokit/Octokit/Models/InstallationRepositoriesEvent" data-name="octokit::models::installationrepositoriesevent">
       <a href="../../Octokit/Models/InstallationRepositoriesEvent.html">InstallationRepositoriesEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/InstallationToken" data-name="octokit::models::installationtoken">
+  <li class=" " data-id="octokit/Octokit/Models/InstallationToken" data-name="octokit::models::installationtoken">
       <a href="../../Octokit/Models/InstallationToken.html">InstallationToken</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/InteractionsRestriction" data-name="octokit::models::interactionsrestriction">
+  <li class=" " data-id="octokit/Octokit/Models/InteractionsRestriction" data-name="octokit::models::interactionsrestriction">
       <a href="../../Octokit/Models/InteractionsRestriction.html">InteractionsRestriction</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Invitation" data-name="octokit::models::invitation">
+  <li class=" " data-id="octokit/Octokit/Models/Invitation" data-name="octokit::models::invitation">
       <a href="../../Octokit/Models/Invitation.html">Invitation</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Issue" data-name="octokit::models::issue">
+  <li class=" " data-id="octokit/Octokit/Models/Issue" data-name="octokit::models::issue">
       <a href="../../Octokit/Models/Issue.html">Issue</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/IssueComment" data-name="octokit::models::issuecomment">
+  <li class=" " data-id="octokit/Octokit/Models/IssueComment" data-name="octokit::models::issuecomment">
       <a href="../../Octokit/Models/IssueComment.html">IssueComment</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/IssueCommentEvent" data-name="octokit::models::issuecommentevent">
+  <li class=" " data-id="octokit/Octokit/Models/IssueCommentEvent" data-name="octokit::models::issuecommentevent">
       <a href="../../Octokit/Models/IssueCommentEvent.html">IssueCommentEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/IssueEvent" data-name="octokit::models::issueevent">
+  <li class=" " data-id="octokit/Octokit/Models/IssueEvent" data-name="octokit::models::issueevent">
       <a href="../../Octokit/Models/IssueEvent.html">IssueEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/IssueListOptions" data-name="octokit::models::issuelistoptions">
+  <li class=" " data-id="octokit/Octokit/Models/IssueListOptions" data-name="octokit::models::issuelistoptions">
       <a href="../../Octokit/Models/IssueListOptions.html">IssueListOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/IssueRequest" data-name="octokit::models::issuerequest">
+  <li class=" " data-id="octokit/Octokit/Models/IssueRequest" data-name="octokit::models::issuerequest">
       <a href="../../Octokit/Models/IssueRequest.html">IssueRequest</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/IssuesEvent" data-name="octokit::models::issuesevent">
+  <li class=" " data-id="octokit/Octokit/Models/IssuesEvent" data-name="octokit::models::issuesevent">
       <a href="../../Octokit/Models/IssuesEvent.html">IssuesEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/IssuesSearchResult" data-name="octokit::models::issuessearchresult">
+  <li class=" " data-id="octokit/Octokit/Models/IssuesSearchResult" data-name="octokit::models::issuessearchresult">
       <a href="../../Octokit/Models/IssuesSearchResult.html">IssuesSearchResult</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/IssueStats" data-name="octokit::models::issuestats">
+  <li class=" " data-id="octokit/Octokit/Models/IssueStats" data-name="octokit::models::issuestats">
       <a href="../../Octokit/Models/IssueStats.html">IssueStats</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Key" data-name="octokit::models::key">
+  <li class=" " data-id="octokit/Octokit/Models/Key" data-name="octokit::models::key">
       <a href="../../Octokit/Models/Key.html">Key</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Label" data-name="octokit::models::label">
+  <li class=" " data-id="octokit/Octokit/Models/Label" data-name="octokit::models::label">
       <a href="../../Octokit/Models/Label.html">Label</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/LabelEvent" data-name="octokit::models::labelevent">
+  <li class=" " data-id="octokit/Octokit/Models/LabelEvent" data-name="octokit::models::labelevent">
       <a href="../../Octokit/Models/LabelEvent.html">LabelEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/LabelResult" data-name="octokit::models::labelresult">
+  <li class=" " data-id="octokit/Octokit/Models/LabelResult" data-name="octokit::models::labelresult">
       <a href="../../Octokit/Models/LabelResult.html">LabelResult</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/LargeFile" data-name="octokit::models::largefile">
+  <li class=" " data-id="octokit/Octokit/Models/LargeFile" data-name="octokit::models::largefile">
       <a href="../../Octokit/Models/LargeFile.html">LargeFile</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/License" data-name="octokit::models::license">
+  <li class=" " data-id="octokit/Octokit/Models/License" data-name="octokit::models::license">
       <a href="../../Octokit/Models/License.html">License</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/ListCollaboratorOptions" data-name="octokit::models::listcollaboratoroptions">
+  <li class=" " data-id="octokit/Octokit/Models/ListCollaboratorOptions" data-name="octokit::models::listcollaboratoroptions">
       <a href="../../Octokit/Models/ListCollaboratorOptions.html">ListCollaboratorOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/ListContributorsOptions" data-name="octokit::models::listcontributorsoptions">
+  <li class=" " data-id="octokit/Octokit/Models/ListContributorsOptions" data-name="octokit::models::listcontributorsoptions">
       <a href="../../Octokit/Models/ListContributorsOptions.html">ListContributorsOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/ListMembershipOptions" data-name="octokit::models::listmembershipoptions">
+  <li class=" " data-id="octokit/Octokit/Models/ListMembershipOptions" data-name="octokit::models::listmembershipoptions">
       <a href="../../Octokit/Models/ListMembershipOptions.html">ListMembershipOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/ListOptions" data-name="octokit::models::listoptions">
+  <li class=" " data-id="octokit/Octokit/Models/ListOptions" data-name="octokit::models::listoptions">
       <a href="../../Octokit/Models/ListOptions.html">ListOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/ListOrgMembershipOptions" data-name="octokit::models::listorgmembershipoptions">
+  <li class=" " data-id="octokit/Octokit/Models/ListOrgMembershipOptions" data-name="octokit::models::listorgmembershipoptions">
       <a href="../../Octokit/Models/ListOrgMembershipOptions.html">ListOrgMembershipOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/ListOutsideCollaboratorsOptions" data-name="octokit::models::listoutsidecollaboratorsoptions">
+  <li class=" " data-id="octokit/Octokit/Models/ListOutsideCollaboratorsOptions" data-name="octokit::models::listoutsidecollaboratorsoptions">
       <a href="../../Octokit/Models/ListOutsideCollaboratorsOptions.html">ListOutsideCollaboratorsOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/MarkdownOptions" data-name="octokit::models::markdownoptions">
+  <li class=" " data-id="octokit/Octokit/Models/MarkdownOptions" data-name="octokit::models::markdownoptions">
       <a href="../../Octokit/Models/MarkdownOptions.html">MarkdownOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/MarkdownRequest" data-name="octokit::models::markdownrequest">
+  <li class=" " data-id="octokit/Octokit/Models/MarkdownRequest" data-name="octokit::models::markdownrequest">
       <a href="../../Octokit/Models/MarkdownRequest.html">MarkdownRequest</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/MarketplacePendingChange" data-name="octokit::models::marketplacependingchange">
+  <li class=" " data-id="octokit/Octokit/Models/MarketplacePendingChange" data-name="octokit::models::marketplacependingchange">
       <a href="../../Octokit/Models/MarketplacePendingChange.html">MarketplacePendingChange</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/MarketplacePlan" data-name="octokit::models::marketplaceplan">
+  <li class=" " data-id="octokit/Octokit/Models/MarketplacePlan" data-name="octokit::models::marketplaceplan">
       <a href="../../Octokit/Models/MarketplacePlan.html">MarketplacePlan</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/MarketplacePlanAccount" data-name="octokit::models::marketplaceplanaccount">
+  <li class=" " data-id="octokit/Octokit/Models/MarketplacePlanAccount" data-name="octokit::models::marketplaceplanaccount">
       <a href="../../Octokit/Models/MarketplacePlanAccount.html">MarketplacePlanAccount</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/MarketplacePurchase" data-name="octokit::models::marketplacepurchase">
+  <li class=" " data-id="octokit/Octokit/Models/MarketplacePurchase" data-name="octokit::models::marketplacepurchase">
       <a href="../../Octokit/Models/MarketplacePurchase.html">MarketplacePurchase</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/MarketplacePurchaseEvent" data-name="octokit::models::marketplacepurchaseevent">
+  <li class=" " data-id="octokit/Octokit/Models/MarketplacePurchaseEvent" data-name="octokit::models::marketplacepurchaseevent">
       <a href="../../Octokit/Models/MarketplacePurchaseEvent.html">MarketplacePurchaseEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Match" data-name="octokit::models::match">
+  <li class=" " data-id="octokit/Octokit/Models/Match" data-name="octokit::models::match">
       <a href="../../Octokit/Models/Match.html">Match</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/MemberEvent" data-name="octokit::models::memberevent">
+  <li class=" " data-id="octokit/Octokit/Models/MemberEvent" data-name="octokit::models::memberevent">
       <a href="../../Octokit/Models/MemberEvent.html">MemberEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Membership" data-name="octokit::models::membership">
+  <li class=" " data-id="octokit/Octokit/Models/Membership" data-name="octokit::models::membership">
       <a href="../../Octokit/Models/Membership.html">Membership</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/MembershipEvent" data-name="octokit::models::membershipevent">
+  <li class=" " data-id="octokit/Octokit/Models/MembershipEvent" data-name="octokit::models::membershipevent">
       <a href="../../Octokit/Models/MembershipEvent.html">MembershipEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/MetaEvent" data-name="octokit::models::metaevent">
+  <li class=" " data-id="octokit/Octokit/Models/MetaEvent" data-name="octokit::models::metaevent">
       <a href="../../Octokit/Models/MetaEvent.html">MetaEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Metric" data-name="octokit::models::metric">
+  <li class=" " data-id="octokit/Octokit/Models/Metric" data-name="octokit::models::metric">
       <a href="../../Octokit/Models/Metric.html">Metric</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Migration" data-name="octokit::models::migration">
+  <li class=" " data-id="octokit/Octokit/Models/Migration" data-name="octokit::models::migration">
       <a href="../../Octokit/Models/Migration.html">Migration</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/MigrationOptions" data-name="octokit::models::migrationoptions">
+  <li class=" " data-id="octokit/Octokit/Models/MigrationOptions" data-name="octokit::models::migrationoptions">
       <a href="../../Octokit/Models/MigrationOptions.html">MigrationOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Milestone" data-name="octokit::models::milestone">
+  <li class=" " data-id="octokit/Octokit/Models/Milestone" data-name="octokit::models::milestone">
       <a href="../../Octokit/Models/Milestone.html">Milestone</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/MilestoneEvent" data-name="octokit::models::milestoneevent">
+  <li class=" " data-id="octokit/Octokit/Models/MilestoneEvent" data-name="octokit::models::milestoneevent">
       <a href="../../Octokit/Models/MilestoneEvent.html">MilestoneEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/MilestoneStats" data-name="octokit::models::milestonestats">
+  <li class=" " data-id="octokit/Octokit/Models/MilestoneStats" data-name="octokit::models::milestonestats">
       <a href="../../Octokit/Models/MilestoneStats.html">MilestoneStats</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/NewPullRequest" data-name="octokit::models::newpullrequest">
+  <li class=" " data-id="octokit/Octokit/Models/NewPullRequest" data-name="octokit::models::newpullrequest">
       <a href="../../Octokit/Models/NewPullRequest.html">NewPullRequest</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/NewTeam" data-name="octokit::models::newteam">
+  <li class=" " data-id="octokit/Octokit/Models/NewTeam" data-name="octokit::models::newteam">
       <a href="../../Octokit/Models/NewTeam.html">NewTeam</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Organization" data-name="octokit::models::organization">
+  <li class=" " data-id="octokit/Octokit/Models/Organization" data-name="octokit::models::organization">
       <a href="../../Octokit/Models/Organization.html">Organization</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/OrganizationEvent" data-name="octokit::models::organizationevent">
+  <li class=" " data-id="octokit/Octokit/Models/OrganizationEvent" data-name="octokit::models::organizationevent">
       <a href="../../Octokit/Models/OrganizationEvent.html">OrganizationEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/OrganizationsListOptions" data-name="octokit::models::organizationslistoptions">
+  <li class=" " data-id="octokit/Octokit/Models/OrganizationListItem" data-name="octokit::models::organizationlistitem">
+      <a href="../../Octokit/Models/OrganizationListItem.html">OrganizationListItem</a>
+      
+    </li>
+  
+  <li class=" " data-id="octokit/Octokit/Models/OrganizationsListOptions" data-name="octokit::models::organizationslistoptions">
       <a href="../../Octokit/Models/OrganizationsListOptions.html">OrganizationsListOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/OrgBlockEvent" data-name="octokit::models::orgblockevent">
+  <li class=" " data-id="octokit/Octokit/Models/OrgBlockEvent" data-name="octokit::models::orgblockevent">
       <a href="../../Octokit/Models/OrgBlockEvent.html">OrgBlockEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/OrgStats" data-name="octokit::models::orgstats">
+  <li class=" " data-id="octokit/Octokit/Models/OrgStats" data-name="octokit::models::orgstats">
       <a href="../../Octokit/Models/OrgStats.html">OrgStats</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Page" data-name="octokit::models::page">
+  <li class=" " data-id="octokit/Octokit/Models/Page" data-name="octokit::models::page">
       <a href="../../Octokit/Models/Page.html">Page</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PageBuildEvent" data-name="octokit::models::pagebuildevent">
+  <li class=" " data-id="octokit/Octokit/Models/PageBuildEvent" data-name="octokit::models::pagebuildevent">
       <a href="../../Octokit/Models/PageBuildEvent.html">PageBuildEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Pages" data-name="octokit::models::pages">
+  <li class=" " data-id="octokit/Octokit/Models/Pages" data-name="octokit::models::pages">
       <a href="../../Octokit/Models/Pages.html">Pages</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PagesBuild" data-name="octokit::models::pagesbuild">
+  <li class=" " data-id="octokit/Octokit/Models/PagesBuild" data-name="octokit::models::pagesbuild">
       <a href="../../Octokit/Models/PagesBuild.html">PagesBuild</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PagesError" data-name="octokit::models::pageserror">
+  <li class=" " data-id="octokit/Octokit/Models/PagesError" data-name="octokit::models::pageserror">
       <a href="../../Octokit/Models/PagesError.html">PagesError</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PagesSource" data-name="octokit::models::pagessource">
+  <li class=" " data-id="octokit/Octokit/Models/PagesSource" data-name="octokit::models::pagessource">
       <a href="../../Octokit/Models/PagesSource.html">PagesSource</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PageStats" data-name="octokit::models::pagestats">
+  <li class=" " data-id="octokit/Octokit/Models/PageStats" data-name="octokit::models::pagestats">
       <a href="../../Octokit/Models/PageStats.html">PageStats</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PingEvent" data-name="octokit::models::pingevent">
+  <li class=" " data-id="octokit/Octokit/Models/PingEvent" data-name="octokit::models::pingevent">
       <a href="../../Octokit/Models/PingEvent.html">PingEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Plan" data-name="octokit::models::plan">
+  <li class=" " data-id="octokit/Octokit/Models/Plan" data-name="octokit::models::plan">
       <a href="../../Octokit/Models/Plan.html">Plan</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PreReceiveHook" data-name="octokit::models::prereceivehook">
+  <li class=" " data-id="octokit/Octokit/Models/PreReceiveHook" data-name="octokit::models::prereceivehook">
       <a href="../../Octokit/Models/PreReceiveHook.html">PreReceiveHook</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PRLink" data-name="octokit::models::prlink">
+  <li class=" " data-id="octokit/Octokit/Models/PRLink" data-name="octokit::models::prlink">
       <a href="../../Octokit/Models/PRLink.html">PRLink</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PRLinks" data-name="octokit::models::prlinks">
+  <li class=" " data-id="octokit/Octokit/Models/PRLinks" data-name="octokit::models::prlinks">
       <a href="../../Octokit/Models/PRLinks.html">PRLinks</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/ProjctListOptions" data-name="octokit::models::projctlistoptions">
+  <li class=" " data-id="octokit/Octokit/Models/ProjctListOptions" data-name="octokit::models::projctlistoptions">
       <a href="../../Octokit/Models/ProjctListOptions.html">ProjctListOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Project" data-name="octokit::models::project">
+  <li class=" " data-id="octokit/Octokit/Models/Project" data-name="octokit::models::project">
       <a href="../../Octokit/Models/Project.html">Project</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/ProjectCard" data-name="octokit::models::projectcard">
+  <li class=" " data-id="octokit/Octokit/Models/ProjectCard" data-name="octokit::models::projectcard">
       <a href="../../Octokit/Models/ProjectCard.html">ProjectCard</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/ProjectCardChange" data-name="octokit::models::projectcardchange">
+  <li class=" " data-id="octokit/Octokit/Models/ProjectCardChange" data-name="octokit::models::projectcardchange">
       <a href="../../Octokit/Models/ProjectCardChange.html">ProjectCardChange</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/ProjectCardEvent" data-name="octokit::models::projectcardevent">
+  <li class=" " data-id="octokit/Octokit/Models/ProjectCardEvent" data-name="octokit::models::projectcardevent">
       <a href="../../Octokit/Models/ProjectCardEvent.html">ProjectCardEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/ProjectCardListOptions" data-name="octokit::models::projectcardlistoptions">
+  <li class=" " data-id="octokit/Octokit/Models/ProjectCardListOptions" data-name="octokit::models::projectcardlistoptions">
       <a href="../../Octokit/Models/ProjectCardListOptions.html">ProjectCardListOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/ProjectCardMoveOptions" data-name="octokit::models::projectcardmoveoptions">
+  <li class=" " data-id="octokit/Octokit/Models/ProjectCardMoveOptions" data-name="octokit::models::projectcardmoveoptions">
       <a href="../../Octokit/Models/ProjectCardMoveOptions.html">ProjectCardMoveOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/ProjectCardOptions" data-name="octokit::models::projectcardoptions">
+  <li class=" " data-id="octokit/Octokit/Models/ProjectCardOptions" data-name="octokit::models::projectcardoptions">
       <a href="../../Octokit/Models/ProjectCardOptions.html">ProjectCardOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/ProjectChange" data-name="octokit::models::projectchange">
+  <li class=" " data-id="octokit/Octokit/Models/ProjectChange" data-name="octokit::models::projectchange">
       <a href="../../Octokit/Models/ProjectChange.html">ProjectChange</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/ProjectCollaboratorOptions" data-name="octokit::models::projectcollaboratoroptions">
+  <li class=" " data-id="octokit/Octokit/Models/ProjectCollaboratorOptions" data-name="octokit::models::projectcollaboratoroptions">
       <a href="../../Octokit/Models/ProjectCollaboratorOptions.html">ProjectCollaboratorOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/ProjectColumn" data-name="octokit::models::projectcolumn">
+  <li class=" " data-id="octokit/Octokit/Models/ProjectColumn" data-name="octokit::models::projectcolumn">
       <a href="../../Octokit/Models/ProjectColumn.html">ProjectColumn</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/ProjectColumnChange" data-name="octokit::models::projectcolumnchange">
+  <li class=" " data-id="octokit/Octokit/Models/ProjectColumnChange" data-name="octokit::models::projectcolumnchange">
       <a href="../../Octokit/Models/ProjectColumnChange.html">ProjectColumnChange</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/ProjectColumnEvent" data-name="octokit::models::projectcolumnevent">
+  <li class=" " data-id="octokit/Octokit/Models/ProjectColumnEvent" data-name="octokit::models::projectcolumnevent">
       <a href="../../Octokit/Models/ProjectColumnEvent.html">ProjectColumnEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/ProjectColumnMoveOptions" data-name="octokit::models::projectcolumnmoveoptions">
+  <li class=" " data-id="octokit/Octokit/Models/ProjectColumnMoveOptions" data-name="octokit::models::projectcolumnmoveoptions">
       <a href="../../Octokit/Models/ProjectColumnMoveOptions.html">ProjectColumnMoveOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/ProjectColumnOptions" data-name="octokit::models::projectcolumnoptions">
+  <li class=" " data-id="octokit/Octokit/Models/ProjectColumnOptions" data-name="octokit::models::projectcolumnoptions">
       <a href="../../Octokit/Models/ProjectColumnOptions.html">ProjectColumnOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/ProjectEvent" data-name="octokit::models::projectevent">
+  <li class=" " data-id="octokit/Octokit/Models/ProjectEvent" data-name="octokit::models::projectevent">
       <a href="../../Octokit/Models/ProjectEvent.html">ProjectEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/ProjectOptions" data-name="octokit::models::projectoptions">
+  <li class=" " data-id="octokit/Octokit/Models/ProjectOptions" data-name="octokit::models::projectoptions">
       <a href="../../Octokit/Models/ProjectOptions.html">ProjectOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/ProjectPermissionLevel" data-name="octokit::models::projectpermissionlevel">
+  <li class=" " data-id="octokit/Octokit/Models/ProjectPermissionLevel" data-name="octokit::models::projectpermissionlevel">
       <a href="../../Octokit/Models/ProjectPermissionLevel.html">ProjectPermissionLevel</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PublicEvent" data-name="octokit::models::publicevent">
+  <li class=" " data-id="octokit/Octokit/Models/PublicEvent" data-name="octokit::models::publicevent">
       <a href="../../Octokit/Models/PublicEvent.html">PublicEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PullRequest" data-name="octokit::models::pullrequest">
+  <li class=" " data-id="octokit/Octokit/Models/PullRequest" data-name="octokit::models::pullrequest">
       <a href="../../Octokit/Models/PullRequest.html">PullRequest</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PullRequestBranch" data-name="octokit::models::pullrequestbranch">
+  <li class=" " data-id="octokit/Octokit/Models/PullRequestBranch" data-name="octokit::models::pullrequestbranch">
       <a href="../../Octokit/Models/PullRequestBranch.html">PullRequestBranch</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PullRequestComment" data-name="octokit::models::pullrequestcomment">
+  <li class=" " data-id="octokit/Octokit/Models/PullRequestComment" data-name="octokit::models::pullrequestcomment">
       <a href="../../Octokit/Models/PullRequestComment.html">PullRequestComment</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PullRequestEvent" data-name="octokit::models::pullrequestevent">
+  <li class=" " data-id="octokit/Octokit/Models/PullRequestEvent" data-name="octokit::models::pullrequestevent">
       <a href="../../Octokit/Models/PullRequestEvent.html">PullRequestEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PullRequestLinks" data-name="octokit::models::pullrequestlinks">
+  <li class=" " data-id="octokit/Octokit/Models/PullRequestLinks" data-name="octokit::models::pullrequestlinks">
       <a href="../../Octokit/Models/PullRequestLinks.html">PullRequestLinks</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PullRequestListCommentOptions" data-name="octokit::models::pullrequestlistcommentoptions">
+  <li class=" " data-id="octokit/Octokit/Models/PullRequestListCommentOptions" data-name="octokit::models::pullrequestlistcommentoptions">
       <a href="../../Octokit/Models/PullRequestListCommentOptions.html">PullRequestListCommentOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PullRequestListOptions" data-name="octokit::models::pullrequestlistoptions">
+  <li class=" " data-id="octokit/Octokit/Models/PullRequestListOptions" data-name="octokit::models::pullrequestlistoptions">
       <a href="../../Octokit/Models/PullRequestListOptions.html">PullRequestListOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PullRequestMergeRequest" data-name="octokit::models::pullrequestmergerequest">
+  <li class=" " data-id="octokit/Octokit/Models/PullRequestMergeRequest" data-name="octokit::models::pullrequestmergerequest">
       <a href="../../Octokit/Models/PullRequestMergeRequest.html">PullRequestMergeRequest</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PullRequestMergeResult" data-name="octokit::models::pullrequestmergeresult">
+  <li class=" " data-id="octokit/Octokit/Models/PullRequestMergeResult" data-name="octokit::models::pullrequestmergeresult">
       <a href="../../Octokit/Models/PullRequestMergeResult.html">PullRequestMergeResult</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PullRequestOptions" data-name="octokit::models::pullrequestoptions">
+  <li class=" " data-id="octokit/Octokit/Models/PullRequestOptions" data-name="octokit::models::pullrequestoptions">
       <a href="../../Octokit/Models/PullRequestOptions.html">PullRequestOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PullRequestReview" data-name="octokit::models::pullrequestreview">
+  <li class=" " data-id="octokit/Octokit/Models/PullRequestReview" data-name="octokit::models::pullrequestreview">
       <a href="../../Octokit/Models/PullRequestReview.html">PullRequestReview</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PullRequestReviewCommentEvent" data-name="octokit::models::pullrequestreviewcommentevent">
+  <li class=" " data-id="octokit/Octokit/Models/PullRequestReviewCommentEvent" data-name="octokit::models::pullrequestreviewcommentevent">
       <a href="../../Octokit/Models/PullRequestReviewCommentEvent.html">PullRequestReviewCommentEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PullRequestReviewDismissalRequest" data-name="octokit::models::pullrequestreviewdismissalrequest">
+  <li class=" " data-id="octokit/Octokit/Models/PullRequestReviewDismissalRequest" data-name="octokit::models::pullrequestreviewdismissalrequest">
       <a href="../../Octokit/Models/PullRequestReviewDismissalRequest.html">PullRequestReviewDismissalRequest</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PullRequestReviewEvent" data-name="octokit::models::pullrequestreviewevent">
+  <li class=" " data-id="octokit/Octokit/Models/PullRequestReviewEvent" data-name="octokit::models::pullrequestreviewevent">
       <a href="../../Octokit/Models/PullRequestReviewEvent.html">PullRequestReviewEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PullRequestReviewRequest" data-name="octokit::models::pullrequestreviewrequest">
+  <li class=" " data-id="octokit/Octokit/Models/PullRequestReviewRequest" data-name="octokit::models::pullrequestreviewrequest">
       <a href="../../Octokit/Models/PullRequestReviewRequest.html">PullRequestReviewRequest</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PullRequestReviewsEnforcement" data-name="octokit::models::pullrequestreviewsenforcement">
+  <li class=" " data-id="octokit/Octokit/Models/PullRequestReviewsEnforcement" data-name="octokit::models::pullrequestreviewsenforcement">
       <a href="../../Octokit/Models/PullRequestReviewsEnforcement.html">PullRequestReviewsEnforcement</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PullRequestReviewsEnforcementRequest" data-name="octokit::models::pullrequestreviewsenforcementrequest">
+  <li class=" " data-id="octokit/Octokit/Models/PullRequestReviewsEnforcementRequest" data-name="octokit::models::pullrequestreviewsenforcementrequest">
       <a href="../../Octokit/Models/PullRequestReviewsEnforcementRequest.html">PullRequestReviewsEnforcementRequest</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PullRequestReviewsEnforcementUpdate" data-name="octokit::models::pullrequestreviewsenforcementupdate">
+  <li class=" " data-id="octokit/Octokit/Models/PullRequestReviewsEnforcementUpdate" data-name="octokit::models::pullrequestreviewsenforcementupdate">
       <a href="../../Octokit/Models/PullRequestReviewsEnforcementUpdate.html">PullRequestReviewsEnforcementUpdate</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PullRequestUpdate" data-name="octokit::models::pullrequestupdate">
+  <li class=" " data-id="octokit/Octokit/Models/PullRequestUpdate" data-name="octokit::models::pullrequestupdate">
       <a href="../../Octokit/Models/PullRequestUpdate.html">PullRequestUpdate</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PullStats" data-name="octokit::models::pullstats">
+  <li class=" " data-id="octokit/Octokit/Models/PullStats" data-name="octokit::models::pullstats">
       <a href="../../Octokit/Models/PullStats.html">PullStats</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PunchCard" data-name="octokit::models::punchcard">
+  <li class=" " data-id="octokit/Octokit/Models/PunchCard" data-name="octokit::models::punchcard">
       <a href="../../Octokit/Models/PunchCard.html">PunchCard</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PushEvent" data-name="octokit::models::pushevent">
+  <li class=" " data-id="octokit/Octokit/Models/PushEvent" data-name="octokit::models::pushevent">
       <a href="../../Octokit/Models/PushEvent.html">PushEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PushEventCommit" data-name="octokit::models::pusheventcommit">
+  <li class=" " data-id="octokit/Octokit/Models/PushEventCommit" data-name="octokit::models::pusheventcommit">
       <a href="../../Octokit/Models/PushEventCommit.html">PushEventCommit</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PushEventRepoOwner" data-name="octokit::models::pusheventrepoowner">
+  <li class=" " data-id="octokit/Octokit/Models/PushEventRepoOwner" data-name="octokit::models::pusheventrepoowner">
       <a href="../../Octokit/Models/PushEventRepoOwner.html">PushEventRepoOwner</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/PushEventRepository" data-name="octokit::models::pusheventrepository">
+  <li class=" " data-id="octokit/Octokit/Models/PushEventRepository" data-name="octokit::models::pusheventrepository">
       <a href="../../Octokit/Models/PushEventRepository.html">PushEventRepository</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RawOptions" data-name="octokit::models::rawoptions">
+  <li class=" " data-id="octokit/Octokit/Models/RawOptions" data-name="octokit::models::rawoptions">
       <a href="../../Octokit/Models/RawOptions.html">RawOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RawType" data-name="octokit::models::rawtype">
+  <li class=" " data-id="octokit/Octokit/Models/RawType" data-name="octokit::models::rawtype">
       <a href="../../Octokit/Models/RawType.html">RawType</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Reaction" data-name="octokit::models::reaction">
+  <li class=" " data-id="octokit/Octokit/Models/Reaction" data-name="octokit::models::reaction">
       <a href="../../Octokit/Models/Reaction.html">Reaction</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Reactions" data-name="octokit::models::reactions">
+  <li class=" " data-id="octokit/Octokit/Models/Reactions" data-name="octokit::models::reactions">
       <a href="../../Octokit/Models/Reactions.html">Reactions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Reference" data-name="octokit::models::reference">
+  <li class=" " data-id="octokit/Octokit/Models/Reference" data-name="octokit::models::reference">
       <a href="../../Octokit/Models/Reference.html">Reference</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/ReleaseAsset" data-name="octokit::models::releaseasset">
+  <li class=" " data-id="octokit/Octokit/Models/ReleaseAsset" data-name="octokit::models::releaseasset">
       <a href="../../Octokit/Models/ReleaseAsset.html">ReleaseAsset</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/ReleaseEvent" data-name="octokit::models::releaseevent">
+  <li class=" " data-id="octokit/Octokit/Models/ReleaseEvent" data-name="octokit::models::releaseevent">
       <a href="../../Octokit/Models/ReleaseEvent.html">ReleaseEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Rename" data-name="octokit::models::rename">
+  <li class=" " data-id="octokit/Octokit/Models/Rename" data-name="octokit::models::rename">
       <a href="../../Octokit/Models/Rename.html">Rename</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RepositoriesSearchResult" data-name="octokit::models::repositoriessearchresult">
+  <li class=" " data-id="octokit/Octokit/Models/RepositoriesSearchResult" data-name="octokit::models::repositoriessearchresult">
       <a href="../../Octokit/Models/RepositoriesSearchResult.html">RepositoriesSearchResult</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Repository" data-name="octokit::models::repository">
+  <li class=" " data-id="octokit/Octokit/Models/Repository" data-name="octokit::models::repository">
       <a href="../../Octokit/Models/Repository.html">Repository</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RepositoryAddCollaboratorOptions" data-name="octokit::models::repositoryaddcollaboratoroptions">
+  <li class=" " data-id="octokit/Octokit/Models/RepositoryAddCollaboratorOptions" data-name="octokit::models::repositoryaddcollaboratoroptions">
       <a href="../../Octokit/Models/RepositoryAddCollaboratorOptions.html">RepositoryAddCollaboratorOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RepositoryComment" data-name="octokit::models::repositorycomment">
+  <li class=" " data-id="octokit/Octokit/Models/RepositoryComment" data-name="octokit::models::repositorycomment">
       <a href="../../Octokit/Models/RepositoryComment.html">RepositoryComment</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RepositoryCommit" data-name="octokit::models::repositorycommit">
+  <li class=" " data-id="octokit/Octokit/Models/RepositoryCommit" data-name="octokit::models::repositorycommit">
       <a href="../../Octokit/Models/RepositoryCommit.html">RepositoryCommit</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RepositoryContent" data-name="octokit::models::repositorycontent">
+  <li class=" " data-id="octokit/Octokit/Models/RepositoryContent" data-name="octokit::models::repositorycontent">
       <a href="../../Octokit/Models/RepositoryContent.html">RepositoryContent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RepositoryContentFileOptions" data-name="octokit::models::repositorycontentfileoptions">
+  <li class=" " data-id="octokit/Octokit/Models/RepositoryContentFileOptions" data-name="octokit::models::repositorycontentfileoptions">
       <a href="../../Octokit/Models/RepositoryContentFileOptions.html">RepositoryContentFileOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RepositoryContentGetOptions" data-name="octokit::models::repositorycontentgetoptions">
+  <li class=" " data-id="octokit/Octokit/Models/RepositoryContentGetOptions" data-name="octokit::models::repositorycontentgetoptions">
       <a href="../../Octokit/Models/RepositoryContentGetOptions.html">RepositoryContentGetOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RepositoryContentResponse" data-name="octokit::models::repositorycontentresponse">
+  <li class=" " data-id="octokit/Octokit/Models/RepositoryContentResponse" data-name="octokit::models::repositorycontentresponse">
       <a href="../../Octokit/Models/RepositoryContentResponse.html">RepositoryContentResponse</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RepositoryCreateForkOptions" data-name="octokit::models::repositorycreateforkoptions">
+  <li class=" " data-id="octokit/Octokit/Models/RepositoryCreateForkOptions" data-name="octokit::models::repositorycreateforkoptions">
       <a href="../../Octokit/Models/RepositoryCreateForkOptions.html">RepositoryCreateForkOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RepositoryDeployKey" data-name="octokit::models::repositorydeploykey">
+  <li class=" " data-id="octokit/Octokit/Models/RepositoryDeployKey" data-name="octokit::models::repositorydeploykey">
       <a href="../../Octokit/Models/RepositoryDeployKey.html">RepositoryDeployKey</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RepositoryEvent" data-name="octokit::models::repositoryevent">
+  <li class=" " data-id="octokit/Octokit/Models/RepositoryEvent" data-name="octokit::models::repositoryevent">
       <a href="../../Octokit/Models/RepositoryEvent.html">RepositoryEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RepositoryInvitation" data-name="octokit::models::repositoryinvitation">
+  <li class=" " data-id="octokit/Octokit/Models/RepositoryInvitation" data-name="octokit::models::repositoryinvitation">
       <a href="../../Octokit/Models/RepositoryInvitation.html">RepositoryInvitation</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RepositoryLicense" data-name="octokit::models::repositorylicense">
+  <li class=" " data-id="octokit/Octokit/Models/RepositoryLicense" data-name="octokit::models::repositorylicense">
       <a href="../../Octokit/Models/RepositoryLicense.html">RepositoryLicense</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RepositoryListAllOptions" data-name="octokit::models::repositorylistalloptions">
+  <li class=" " data-id="octokit/Octokit/Models/RepositoryListAllOptions" data-name="octokit::models::repositorylistalloptions">
       <a href="../../Octokit/Models/RepositoryListAllOptions.html">RepositoryListAllOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RepositoryListByOrgOptions" data-name="octokit::models::repositorylistbyorgoptions">
+  <li class=" " data-id="octokit/Octokit/Models/RepositoryListByOrgOptions" data-name="octokit::models::repositorylistbyorgoptions">
       <a href="../../Octokit/Models/RepositoryListByOrgOptions.html">RepositoryListByOrgOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RepositoryListForksOptions" data-name="octokit::models::repositorylistforksoptions">
+  <li class=" " data-id="octokit/Octokit/Models/RepositoryListForksOptions" data-name="octokit::models::repositorylistforksoptions">
       <a href="../../Octokit/Models/RepositoryListForksOptions.html">RepositoryListForksOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RepositoryMergeRequest" data-name="octokit::models::repositorymergerequest">
+  <li class=" " data-id="octokit/Octokit/Models/RepositoryMergeRequest" data-name="octokit::models::repositorymergerequest">
       <a href="../../Octokit/Models/RepositoryMergeRequest.html">RepositoryMergeRequest</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RepositoryOwner" data-name="octokit::models::repositoryowner">
+  <li class=" " data-id="octokit/Octokit/Models/RepositoryOwner" data-name="octokit::models::repositoryowner">
       <a href="../../Octokit/Models/RepositoryOwner.html">RepositoryOwner</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RepositoryPermissionLevel" data-name="octokit::models::repositorypermissionlevel">
+  <li class=" " data-id="octokit/Octokit/Models/RepositoryPermissionLevel" data-name="octokit::models::repositorypermissionlevel">
       <a href="../../Octokit/Models/RepositoryPermissionLevel.html">RepositoryPermissionLevel</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RepositoryRelease" data-name="octokit::models::repositoryrelease">
+  <li class=" " data-id="octokit/Octokit/Models/RepositoryRelease" data-name="octokit::models::repositoryrelease">
       <a href="../../Octokit/Models/RepositoryRelease.html">RepositoryRelease</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RepositoryReleaseRequest" data-name="octokit::models::repositoryreleaserequest">
+  <li class=" " data-id="octokit/Octokit/Models/RepositoryReleaseRequest" data-name="octokit::models::repositoryreleaserequest">
       <a href="../../Octokit/Models/RepositoryReleaseRequest.html">RepositoryReleaseRequest</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RepositoryTag" data-name="octokit::models::repositorytag">
+  <li class=" " data-id="octokit/Octokit/Models/RepositoryTag" data-name="octokit::models::repositorytag">
       <a href="../../Octokit/Models/RepositoryTag.html">RepositoryTag</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RepositoryTopics" data-name="octokit::models::repositorytopics">
+  <li class=" " data-id="octokit/Octokit/Models/RepositoryTopics" data-name="octokit::models::repositorytopics">
       <a href="../../Octokit/Models/RepositoryTopics.html">RepositoryTopics</a>
       
     </li>
   
-  <li class="parent " data-id="github.com/watzon/octokit.cr/Octokit/Models/RepositoryVulnerabilityAlertEvent" data-name="octokit::models::repositoryvulnerabilityalertevent">
+  <li class="parent " data-id="octokit/Octokit/Models/RepositoryVulnerabilityAlertEvent" data-name="octokit::models::repositoryvulnerabilityalertevent">
       <a href="../../Octokit/Models/RepositoryVulnerabilityAlertEvent.html">RepositoryVulnerabilityAlertEvent</a>
       
         <ul>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RepositoryVulnerabilityAlertEvent/Alert" data-name="octokit::models::repositoryvulnerabilityalertevent::alert">
+  <li class=" " data-id="octokit/Octokit/Models/RepositoryVulnerabilityAlertEvent/Alert" data-name="octokit::models::repositoryvulnerabilityalertevent::alert">
       <a href="../../Octokit/Models/RepositoryVulnerabilityAlertEvent/Alert.html">Alert</a>
       
     </li>
@@ -1496,127 +1547,127 @@
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RepoStats" data-name="octokit::models::repostats">
+  <li class=" " data-id="octokit/Octokit/Models/RepoStats" data-name="octokit::models::repostats">
       <a href="../../Octokit/Models/RepoStats.html">RepoStats</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RepoStatus" data-name="octokit::models::repostatus">
+  <li class=" " data-id="octokit/Octokit/Models/RepoStatus" data-name="octokit::models::repostatus">
       <a href="../../Octokit/Models/RepoStatus.html">RepoStatus</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RequestedAction" data-name="octokit::models::requestedaction">
+  <li class=" " data-id="octokit/Octokit/Models/RequestedAction" data-name="octokit::models::requestedaction">
       <a href="../../Octokit/Models/RequestedAction.html">RequestedAction</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RequiredStatusChecks" data-name="octokit::models::requiredstatuschecks">
+  <li class=" " data-id="octokit/Octokit/Models/RequiredStatusChecks" data-name="octokit::models::requiredstatuschecks">
       <a href="../../Octokit/Models/RequiredStatusChecks.html">RequiredStatusChecks</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/RequiredStatusChecksRequest" data-name="octokit::models::requiredstatuschecksrequest">
+  <li class=" " data-id="octokit/Octokit/Models/RequiredStatusChecksRequest" data-name="octokit::models::requiredstatuschecksrequest">
       <a href="../../Octokit/Models/RequiredStatusChecksRequest.html">RequiredStatusChecksRequest</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Reviewers" data-name="octokit::models::reviewers">
+  <li class=" " data-id="octokit/Octokit/Models/Reviewers" data-name="octokit::models::reviewers">
       <a href="../../Octokit/Models/Reviewers.html">Reviewers</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/ReviewersRequest" data-name="octokit::models::reviewersrequest">
+  <li class=" " data-id="octokit/Octokit/Models/ReviewersRequest" data-name="octokit::models::reviewersrequest">
       <a href="../../Octokit/Models/ReviewersRequest.html">ReviewersRequest</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/SearchOptions" data-name="octokit::models::searchoptions">
+  <li class=" " data-id="octokit/Octokit/Models/SearchOptions" data-name="octokit::models::searchoptions">
       <a href="../../Octokit/Models/SearchOptions.html">SearchOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/SearchParameters" data-name="octokit::models::searchparameters">
+  <li class=" " data-id="octokit/Octokit/Models/SearchParameters" data-name="octokit::models::searchparameters">
       <a href="../../Octokit/Models/SearchParameters.html">SearchParameters</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/SignaturesProtectedBranch" data-name="octokit::models::signaturesprotectedbranch">
+  <li class=" " data-id="octokit/Octokit/Models/SignaturesProtectedBranch" data-name="octokit::models::signaturesprotectedbranch">
       <a href="../../Octokit/Models/SignaturesProtectedBranch.html">SignaturesProtectedBranch</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/SignatureVerification" data-name="octokit::models::signatureverification">
+  <li class=" " data-id="octokit/Octokit/Models/SignatureVerification" data-name="octokit::models::signatureverification">
       <a href="../../Octokit/Models/SignatureVerification.html">SignatureVerification</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Source" data-name="octokit::models::source">
+  <li class=" " data-id="octokit/Octokit/Models/Source" data-name="octokit::models::source">
       <a href="../../Octokit/Models/Source.html">Source</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/SourceImportAuthor" data-name="octokit::models::sourceimportauthor">
+  <li class=" " data-id="octokit/Octokit/Models/SourceImportAuthor" data-name="octokit::models::sourceimportauthor">
       <a href="../../Octokit/Models/SourceImportAuthor.html">SourceImportAuthor</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/StarEvent" data-name="octokit::models::starevent">
+  <li class=" " data-id="octokit/Octokit/Models/StarEvent" data-name="octokit::models::starevent">
       <a href="../../Octokit/Models/StarEvent.html">StarEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Stargazer" data-name="octokit::models::stargazer">
+  <li class=" " data-id="octokit/Octokit/Models/Stargazer" data-name="octokit::models::stargazer">
       <a href="../../Octokit/Models/Stargazer.html">Stargazer</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/StartMigration" data-name="octokit::models::startmigration">
+  <li class=" " data-id="octokit/Octokit/Models/StartMigration" data-name="octokit::models::startmigration">
       <a href="../../Octokit/Models/StartMigration.html">StartMigration</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/StartUserMigration" data-name="octokit::models::startusermigration">
+  <li class=" " data-id="octokit/Octokit/Models/StartUserMigration" data-name="octokit::models::startusermigration">
       <a href="../../Octokit/Models/StartUserMigration.html">StartUserMigration</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/StatusEvent" data-name="octokit::models::statusevent">
+  <li class=" " data-id="octokit/Octokit/Models/StatusEvent" data-name="octokit::models::statusevent">
       <a href="../../Octokit/Models/StatusEvent.html">StatusEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Tag" data-name="octokit::models::tag">
+  <li class=" " data-id="octokit/Octokit/Models/Tag" data-name="octokit::models::tag">
       <a href="../../Octokit/Models/Tag.html">Tag</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Team" data-name="octokit::models::team">
+  <li class=" " data-id="octokit/Octokit/Models/Team" data-name="octokit::models::team">
       <a href="../../Octokit/Models/Team.html">Team</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/TeamAddEvent" data-name="octokit::models::teamaddevent">
+  <li class=" " data-id="octokit/Octokit/Models/TeamAddEvent" data-name="octokit::models::teamaddevent">
       <a href="../../Octokit/Models/TeamAddEvent.html">TeamAddEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/TeamAddTeamMembershipOptions" data-name="octokit::models::teamaddteammembershipoptions">
+  <li class=" " data-id="octokit/Octokit/Models/TeamAddTeamMembershipOptions" data-name="octokit::models::teamaddteammembershipoptions">
       <a href="../../Octokit/Models/TeamAddTeamMembershipOptions.html">TeamAddTeamMembershipOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/TeamAddTeamRepoOptions" data-name="octokit::models::teamaddteamrepooptions">
+  <li class=" " data-id="octokit/Octokit/Models/TeamAddTeamRepoOptions" data-name="octokit::models::teamaddteamrepooptions">
       <a href="../../Octokit/Models/TeamAddTeamRepoOptions.html">TeamAddTeamRepoOptions</a>
       
     </li>
   
-  <li class="parent " data-id="github.com/watzon/octokit.cr/Octokit/Models/TeamChange" data-name="octokit::models::teamchange">
+  <li class="parent " data-id="octokit/Octokit/Models/TeamChange" data-name="octokit::models::teamchange">
       <a href="../../Octokit/Models/TeamChange.html">TeamChange</a>
       
         <ul>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/TeamChange/From" data-name="octokit::models::teamchange::from">
+  <li class=" " data-id="octokit/Octokit/Models/TeamChange/From" data-name="octokit::models::teamchange::from">
       <a href="../../Octokit/Models/TeamChange/From.html">From</a>
       
     </li>
@@ -1626,172 +1677,177 @@
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/TeamDiscussion" data-name="octokit::models::teamdiscussion">
+  <li class=" " data-id="octokit/Octokit/Models/TeamDiscussion" data-name="octokit::models::teamdiscussion">
       <a href="../../Octokit/Models/TeamDiscussion.html">TeamDiscussion</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/TeamEvent" data-name="octokit::models::teamevent">
+  <li class=" " data-id="octokit/Octokit/Models/TeamEvent" data-name="octokit::models::teamevent">
       <a href="../../Octokit/Models/TeamEvent.html">TeamEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/TeamLDAPMapping" data-name="octokit::models::teamldapmapping">
+  <li class=" " data-id="octokit/Octokit/Models/TeamLDAPMapping" data-name="octokit::models::teamldapmapping">
       <a href="../../Octokit/Models/TeamLDAPMapping.html">TeamLDAPMapping</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/TeamListTeamMembersOptions" data-name="octokit::models::teamlistteammembersoptions">
+  <li class=" " data-id="octokit/Octokit/Models/TeamListTeamMembersOptions" data-name="octokit::models::teamlistteammembersoptions">
       <a href="../../Octokit/Models/TeamListTeamMembersOptions.html">TeamListTeamMembersOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/TeamProjectOptions" data-name="octokit::models::teamprojectoptions">
+  <li class=" " data-id="octokit/Octokit/Models/TeamProjectOptions" data-name="octokit::models::teamprojectoptions">
       <a href="../../Octokit/Models/TeamProjectOptions.html">TeamProjectOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/TextMatch" data-name="octokit::models::textmatch">
+  <li class=" " data-id="octokit/Octokit/Models/TextMatch" data-name="octokit::models::textmatch">
       <a href="../../Octokit/Models/TextMatch.html">TextMatch</a>
       
     </li>
   
-  <li class=" current" data-id="github.com/watzon/octokit.cr/Octokit/Models/Timeline" data-name="octokit::models::timeline">
+  <li class=" current" data-id="octokit/Octokit/Models/Timeline" data-name="octokit::models::timeline">
       <a href="../../Octokit/Models/Timeline.html">Timeline</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/TrafficBreakdownOptions" data-name="octokit::models::trafficbreakdownoptions">
+  <li class=" " data-id="octokit/Octokit/Models/TrafficBreakdownOptions" data-name="octokit::models::trafficbreakdownoptions">
       <a href="../../Octokit/Models/TrafficBreakdownOptions.html">TrafficBreakdownOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/TrafficClones" data-name="octokit::models::trafficclones">
+  <li class=" " data-id="octokit/Octokit/Models/TrafficClones" data-name="octokit::models::trafficclones">
       <a href="../../Octokit/Models/TrafficClones.html">TrafficClones</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/TrafficData" data-name="octokit::models::trafficdata">
+  <li class=" " data-id="octokit/Octokit/Models/TrafficData" data-name="octokit::models::trafficdata">
       <a href="../../Octokit/Models/TrafficData.html">TrafficData</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/TrafficPath" data-name="octokit::models::trafficpath">
+  <li class=" " data-id="octokit/Octokit/Models/TrafficPath" data-name="octokit::models::trafficpath">
       <a href="../../Octokit/Models/TrafficPath.html">TrafficPath</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/TrafficReferrer" data-name="octokit::models::trafficreferrer">
+  <li class=" " data-id="octokit/Octokit/Models/TrafficReferrer" data-name="octokit::models::trafficreferrer">
       <a href="../../Octokit/Models/TrafficReferrer.html">TrafficReferrer</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/TrafficViews" data-name="octokit::models::trafficviews">
+  <li class=" " data-id="octokit/Octokit/Models/TrafficViews" data-name="octokit::models::trafficviews">
       <a href="../../Octokit/Models/TrafficViews.html">TrafficViews</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/TransferRequest" data-name="octokit::models::transferrequest">
+  <li class=" " data-id="octokit/Octokit/Models/TransferRequest" data-name="octokit::models::transferrequest">
       <a href="../../Octokit/Models/TransferRequest.html">TransferRequest</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/Tree" data-name="octokit::models::tree">
+  <li class=" " data-id="octokit/Octokit/Models/Tree" data-name="octokit::models::tree">
       <a href="../../Octokit/Models/Tree.html">Tree</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/TreeEntry" data-name="octokit::models::treeentry">
+  <li class=" " data-id="octokit/Octokit/Models/TreeEntry" data-name="octokit::models::treeentry">
       <a href="../../Octokit/Models/TreeEntry.html">TreeEntry</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/UpdateRefRequest" data-name="octokit::models::updaterefrequest">
+  <li class=" " data-id="octokit/Octokit/Models/UpdateRefRequest" data-name="octokit::models::updaterefrequest">
       <a href="../../Octokit/Models/UpdateRefRequest.html">UpdateRefRequest</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/UploadOptions" data-name="octokit::models::uploadoptions">
+  <li class=" " data-id="octokit/Octokit/Models/UploadOptions" data-name="octokit::models::uploadoptions">
       <a href="../../Octokit/Models/UploadOptions.html">UploadOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/User" data-name="octokit::models::user">
+  <li class=" " data-id="octokit/Octokit/Models/User" data-name="octokit::models::user">
       <a href="../../Octokit/Models/User.html">User</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/UserContext" data-name="octokit::models::usercontext">
+  <li class=" " data-id="octokit/Octokit/Models/UserContext" data-name="octokit::models::usercontext">
       <a href="../../Octokit/Models/UserContext.html">UserContext</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/UserEmail" data-name="octokit::models::useremail">
+  <li class=" " data-id="octokit/Octokit/Models/UserEmail" data-name="octokit::models::useremail">
       <a href="../../Octokit/Models/UserEmail.html">UserEmail</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/UserLDAPMapping" data-name="octokit::models::userldapmapping">
+  <li class=" " data-id="octokit/Octokit/Models/UserLDAPMapping" data-name="octokit::models::userldapmapping">
       <a href="../../Octokit/Models/UserLDAPMapping.html">UserLDAPMapping</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/UserListOptions" data-name="octokit::models::userlistoptions">
+  <li class=" " data-id="octokit/Octokit/Models/UserListOptions" data-name="octokit::models::userlistoptions">
       <a href="../../Octokit/Models/UserListOptions.html">UserListOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/UserMigration" data-name="octokit::models::usermigration">
+  <li class=" " data-id="octokit/Octokit/Models/UserMigration" data-name="octokit::models::usermigration">
       <a href="../../Octokit/Models/UserMigration.html">UserMigration</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/UserMigrationOptions" data-name="octokit::models::usermigrationoptions">
+  <li class=" " data-id="octokit/Octokit/Models/UserMigrationOptions" data-name="octokit::models::usermigrationoptions">
       <a href="../../Octokit/Models/UserMigrationOptions.html">UserMigrationOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/UserSearchResult" data-name="octokit::models::usersearchresult">
+  <li class=" " data-id="octokit/Octokit/Models/Users" data-name="octokit::models::users">
+      <a href="../../Octokit/Models/Users.html">Users</a>
+      
+    </li>
+  
+  <li class=" " data-id="octokit/Octokit/Models/UserSearchResult" data-name="octokit::models::usersearchresult">
       <a href="../../Octokit/Models/UserSearchResult.html">UserSearchResult</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/UserStats" data-name="octokit::models::userstats">
+  <li class=" " data-id="octokit/Octokit/Models/UserStats" data-name="octokit::models::userstats">
       <a href="../../Octokit/Models/UserStats.html">UserStats</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/UserSuspendOptions" data-name="octokit::models::usersuspendoptions">
+  <li class=" " data-id="octokit/Octokit/Models/UserSuspendOptions" data-name="octokit::models::usersuspendoptions">
       <a href="../../Octokit/Models/UserSuspendOptions.html">UserSuspendOptions</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/WatchEvent" data-name="octokit::models::watchevent">
+  <li class=" " data-id="octokit/Octokit/Models/WatchEvent" data-name="octokit::models::watchevent">
       <a href="../../Octokit/Models/WatchEvent.html">WatchEvent</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/WebHookAuthor" data-name="octokit::models::webhookauthor">
+  <li class=" " data-id="octokit/Octokit/Models/WebHookAuthor" data-name="octokit::models::webhookauthor">
       <a href="../../Octokit/Models/WebHookAuthor.html">WebHookAuthor</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/WebHookCommit" data-name="octokit::models::webhookcommit">
+  <li class=" " data-id="octokit/Octokit/Models/WebHookCommit" data-name="octokit::models::webhookcommit">
       <a href="../../Octokit/Models/WebHookCommit.html">WebHookCommit</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/WebHookPayload" data-name="octokit::models::webhookpayload">
+  <li class=" " data-id="octokit/Octokit/Models/WebHookPayload" data-name="octokit::models::webhookpayload">
       <a href="../../Octokit/Models/WebHookPayload.html">WebHookPayload</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/WeeklyCommitActivity" data-name="octokit::models::weeklycommitactivity">
+  <li class=" " data-id="octokit/Octokit/Models/WeeklyCommitActivity" data-name="octokit::models::weeklycommitactivity">
       <a href="../../Octokit/Models/WeeklyCommitActivity.html">WeeklyCommitActivity</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Models/WeeklyStats" data-name="octokit::models::weeklystats">
+  <li class=" " data-id="octokit/Octokit/Models/WeeklyStats" data-name="octokit::models::weeklystats">
       <a href="../../Octokit/Models/WeeklyStats.html">WeeklyStats</a>
       
     </li>
@@ -1801,22 +1857,22 @@
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Preview" data-name="octokit::preview">
+  <li class=" " data-id="octokit/Octokit/Preview" data-name="octokit::preview">
       <a href="../../Octokit/Preview.html">Preview</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/RateLimit" data-name="octokit::ratelimit">
+  <li class=" " data-id="octokit/Octokit/RateLimit" data-name="octokit::ratelimit">
       <a href="../../Octokit/RateLimit.html">RateLimit</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Response" data-name="octokit::response">
+  <li class=" " data-id="octokit/Octokit/Response" data-name="octokit::response">
       <a href="../../Octokit/Response.html">Response</a>
       
     </li>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Octokit/Warnable" data-name="octokit::warnable">
+  <li class=" " data-id="octokit/Octokit/Warnable" data-name="octokit::warnable">
       <a href="../../Octokit/Warnable.html">Warnable</a>
       
     </li>
@@ -1826,12 +1882,12 @@
       
     </li>
   
-  <li class="parent " data-id="github.com/watzon/octokit.cr/Time" data-name="time">
+  <li class="parent " data-id="octokit/Time" data-name="time">
       <a href="../../Time.html">Time</a>
       
         <ul>
   
-  <li class=" " data-id="github.com/watzon/octokit.cr/Time/ISO8601Converter" data-name="time::iso8601converter">
+  <li class=" " data-id="octokit/Time/ISO8601Converter" data-name="time::iso8601converter">
       <a href="../../Time/ISO8601Converter.html">ISO8601Converter</a>
       
     </li>
@@ -1850,7 +1906,7 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">struct</span> Octokit::Models::Timeline
+  <span class="kind">struct</span> Octokit::<wbr>Models::<wbr>Timeline
 
 </h1>
 
@@ -1873,10 +1929,17 @@
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/watzon/octokit.cr/blob/abb2856d9d356b1aec33c800074d35f3f815ddb1/src/octokit/models/issue_timeline.cr#L3" target="_blank">
+      <a href="https://github.com/octokit-cr/octokit.cr/blob/28eaf282f7220c24fb7f2c0f4cd7679880eda9c8/src/octokit/models/issue_timeline.cr#L3" target="_blank">
         octokit/models/issue_timeline.cr
       </a>
     
@@ -1887,16 +1950,23 @@
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28id%3AInt64%2Curl%3AString%2Ccommit_url%3AString%2Cactor%3AUser%2Cevent%3AString%2Ccommit_id%3AString%2Ccreated_at%3ATime%2Clabel%3A%3A%3AUnion%28Label%2CNil%29%2Cassignee%3A%3A%3AUnion%28User%2CNil%29%2Cmilestone%3A%3A%3AUnion%28User%2CNil%29%2Csource%3A%3A%3AUnion%28Source%2CNil%29%2Crename%3A%3A%3AUnion%28Rename%2CNil%29%2Cproject_card%3A%3A%3AUnion%28ProjectCard%2CNil%29%29-class-method" class="signature"><strong>.new</strong>(id : Int64, url : String, commit_url : String, actor : User, event : String, commit_id : String, created_at : Time, label : ::Union(Label, Nil), assignee : ::Union(User, Nil), milestone : ::Union(User, Nil), source : ::Union(Source, Nil), rename : ::Union(Rename, Nil), project_card : ::Union(ProjectCard, Nil))</a>
+        <a href="#new%28id%3AInt64%2Curl%3AString%2Ccommit_url%3AString%2Cactor%3AUser%2Cevent%3AString%2Ccommit_id%3AString%2Ccreated_at%3ATime%2Clabel%3AUnion%28Label%2CNil%29%2Cassignee%3AUnion%28User%2CNil%29%2Cmilestone%3AUnion%28User%2CNil%29%2Csource%3AUnion%28Source%2CNil%29%2Crename%3AUnion%28Rename%2CNil%29%2Cproject_card%3AUnion%28ProjectCard%2CNil%29%29-class-method" class="signature"><strong>.new</strong>(id : Int64, url : String, commit_url : String, actor : User, event : String, commit_id : String, created_at : Time, label : Union(Label, Nil), assignee : Union(User, Nil), milestone : Union(User, Nil), source : Union(Source, Nil), rename : Union(Rename, Nil), project_card : Union(ProjectCard, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28__temp_1931%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_1931 : JSON::PullParser)</a>
+        <a href="#new%28__temp_2402%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_2402 : JSON::PullParser)</a>
         
       </li>
     
@@ -1906,7 +1976,16 @@
 
 
 
-  <h2>Instance Method Summary</h2>
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
@@ -1920,12 +1999,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#assignee%3A%3A%3AUnion%28User%2CNil%29-instance-method" class="signature"><strong>#assignee</strong> : ::Union(User, Nil)</a>
+        <a href="#assignee%3AUnion%28User%2CNil%29-instance-method" class="signature"><strong>#assignee</strong> : Union(User, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#assignee%3D%28_assignee%3A%3A%3AUnion%28User%2CNil%29%29-instance-method" class="signature"><strong>#assignee=</strong>(_assignee : ::Union(User, Nil))</a>
+        <a href="#assignee%3D%28_assignee%3AUnion%28User%2CNil%29%29-instance-method" class="signature"><strong>#assignee=</strong>(_assignee : Union(User, Nil))</a>
         
       </li>
     
@@ -1980,52 +2059,52 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#label%3A%3A%3AUnion%28Label%2CNil%29-instance-method" class="signature"><strong>#label</strong> : ::Union(Label, Nil)</a>
+        <a href="#label%3AUnion%28Label%2CNil%29-instance-method" class="signature"><strong>#label</strong> : Union(Label, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#label%3D%28_label%3A%3A%3AUnion%28Label%2CNil%29%29-instance-method" class="signature"><strong>#label=</strong>(_label : ::Union(Label, Nil))</a>
+        <a href="#label%3D%28_label%3AUnion%28Label%2CNil%29%29-instance-method" class="signature"><strong>#label=</strong>(_label : Union(Label, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#milestone%3A%3A%3AUnion%28User%2CNil%29-instance-method" class="signature"><strong>#milestone</strong> : ::Union(User, Nil)</a>
+        <a href="#milestone%3AUnion%28User%2CNil%29-instance-method" class="signature"><strong>#milestone</strong> : Union(User, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#milestone%3D%28_milestone%3A%3A%3AUnion%28User%2CNil%29%29-instance-method" class="signature"><strong>#milestone=</strong>(_milestone : ::Union(User, Nil))</a>
+        <a href="#milestone%3D%28_milestone%3AUnion%28User%2CNil%29%29-instance-method" class="signature"><strong>#milestone=</strong>(_milestone : Union(User, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#project_card%3A%3A%3AUnion%28ProjectCard%2CNil%29-instance-method" class="signature"><strong>#project_card</strong> : ::Union(ProjectCard, Nil)</a>
+        <a href="#project_card%3AUnion%28ProjectCard%2CNil%29-instance-method" class="signature"><strong>#project_card</strong> : Union(ProjectCard, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#project_card%3D%28_project_card%3A%3A%3AUnion%28ProjectCard%2CNil%29%29-instance-method" class="signature"><strong>#project_card=</strong>(_project_card : ::Union(ProjectCard, Nil))</a>
+        <a href="#project_card%3D%28_project_card%3AUnion%28ProjectCard%2CNil%29%29-instance-method" class="signature"><strong>#project_card=</strong>(_project_card : Union(ProjectCard, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#rename%3A%3A%3AUnion%28Rename%2CNil%29-instance-method" class="signature"><strong>#rename</strong> : ::Union(Rename, Nil)</a>
+        <a href="#rename%3AUnion%28Rename%2CNil%29-instance-method" class="signature"><strong>#rename</strong> : Union(Rename, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#rename%3D%28_rename%3A%3A%3AUnion%28Rename%2CNil%29%29-instance-method" class="signature"><strong>#rename=</strong>(_rename : ::Union(Rename, Nil))</a>
+        <a href="#rename%3D%28_rename%3AUnion%28Rename%2CNil%29%29-instance-method" class="signature"><strong>#rename=</strong>(_rename : Union(Rename, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#source%3A%3A%3AUnion%28Source%2CNil%29-instance-method" class="signature"><strong>#source</strong> : ::Union(Source, Nil)</a>
+        <a href="#source%3AUnion%28Source%2CNil%29-instance-method" class="signature"><strong>#source</strong> : Union(Source, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#source%3D%28_source%3A%3A%3AUnion%28Source%2CNil%29%29-instance-method" class="signature"><strong>#source=</strong>(_source : ::Union(Source, Nil))</a>
+        <a href="#source%3D%28_source%3AUnion%28Source%2CNil%29%29-instance-method" class="signature"><strong>#source=</strong>(_source : Union(Source, Nil))</a>
         
       </li>
     
@@ -2048,8 +2127,6 @@
 
 
 
-
-
 <div class="methods-inherited">
   
     
@@ -2061,17 +2138,26 @@
     
 
 
-  
-    
-
-
-    
-
-
     
 
 
   
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
     
 
 
@@ -2085,14 +2171,21 @@
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
-    <div class="entry-detail" id="new(id:Int64,url:String,commit_url:String,actor:User,event:String,commit_id:String,created_at:Time,label:::Union(Label,Nil),assignee:::Union(User,Nil),milestone:::Union(User,Nil),source:::Union(Source,Nil),rename:::Union(Rename,Nil),project_card:::Union(ProjectCard,Nil))-class-method">
+    <div class="entry-detail" id="new(id:Int64,url:String,commit_url:String,actor:User,event:String,commit_id:String,created_at:Time,label:Union(Label,Nil),assignee:Union(User,Nil),milestone:Union(User,Nil),source:Union(Source,Nil),rename:Union(Rename,Nil),project_card:Union(ProjectCard,Nil))-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(id : Int64, url : String, commit_url : String, actor : <a href="../../Octokit/Models/User.html">User</a>, event : String, commit_id : String, created_at : <a href="../../Time.html">Time</a>, label : ::Union(<a href="../../Octokit/Models/Label.html">Label</a>, Nil), assignee : ::Union(<a href="../../Octokit/Models/User.html">User</a>, Nil), milestone : ::Union(<a href="../../Octokit/Models/User.html">User</a>, Nil), source : ::Union(<a href="../../Octokit/Models/Source.html">Source</a>, Nil), rename : ::Union(<a href="../../Octokit/Models/Rename.html">Rename</a>, Nil), project_card : ::Union(<a href="../../Octokit/Models/ProjectCard.html">ProjectCard</a>, Nil))
+        def self.<strong>new</strong>(id : Int64, url : String, commit_url : String, actor : <a href="../../Octokit/Models/User.html">User</a>, event : String, commit_id : String, created_at : <a href="../../Time.html">Time</a>, label : Union(<a href="../../Octokit/Models/Label.html">Label</a>, Nil), assignee : Union(<a href="../../Octokit/Models/User.html">User</a>, Nil), milestone : Union(<a href="../../Octokit/Models/User.html">User</a>, Nil), source : Union(<a href="../../Octokit/Models/Source.html">Source</a>, Nil), rename : Union(<a href="../../Octokit/Models/Rename.html">Rename</a>, Nil), project_card : Union(<a href="../../Octokit/Models/ProjectCard.html">ProjectCard</a>, Nil))
 
-        <a class="method-permalink" href="#new%28id%3AInt64%2Curl%3AString%2Ccommit_url%3AString%2Cactor%3AUser%2Cevent%3AString%2Ccommit_id%3AString%2Ccreated_at%3ATime%2Clabel%3A%3A%3AUnion%28Label%2CNil%29%2Cassignee%3A%3A%3AUnion%28User%2CNil%29%2Cmilestone%3A%3A%3AUnion%28User%2CNil%29%2Csource%3A%3A%3AUnion%28Source%2CNil%29%2Crename%3A%3A%3AUnion%28Rename%2CNil%29%2Cproject_card%3A%3A%3AUnion%28ProjectCard%2CNil%29%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28id%3AInt64%2Curl%3AString%2Ccommit_url%3AString%2Cactor%3AUser%2Cevent%3AString%2Ccommit_id%3AString%2Ccreated_at%3ATime%2Clabel%3AUnion%28Label%2CNil%29%2Cassignee%3AUnion%28User%2CNil%29%2Cmilestone%3AUnion%28User%2CNil%29%2Csource%3AUnion%28Source%2CNil%29%2Crename%3AUnion%28Rename%2CNil%29%2Cproject_card%3AUnion%28ProjectCard%2CNil%29%29-class-method">#</a>
       </div>
       
       <br/>
@@ -2101,12 +2194,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="new(__temp_1931:JSON::PullParser)-class-method">
+    <div class="entry-detail" id="new(__temp_2402:JSON::PullParser)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(__temp_1931 : JSON::PullParser)
+        def self.<strong>new</strong>(__temp_2402 : JSON::PullParser)
 
-        <a class="method-permalink" href="#new%28__temp_1931%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28__temp_2402%3AJSON%3A%3APullParser%29-class-method">#</a>
       </div>
       
       <br/>
@@ -2120,7 +2213,16 @@
 
 
 
-  <h2>Instance Method Detail</h2>
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="actor:User-instance-method">
       <div class="signature">
@@ -2150,12 +2252,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="assignee:::Union(User,Nil)-instance-method">
+    <div class="entry-detail" id="assignee:Union(User,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>assignee</strong> : ::Union(<a href="../../Octokit/Models/User.html">User</a>, Nil)
+        def <strong>assignee</strong> : Union(<a href="../../Octokit/Models/User.html">User</a>, Nil)
 
-        <a class="method-permalink" href="#assignee%3A%3A%3AUnion%28User%2CNil%29-instance-method">#</a>
+        <a class="method-permalink" href="#assignee%3AUnion%28User%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2164,12 +2266,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="assignee=(_assignee:::Union(User,Nil))-instance-method">
+    <div class="entry-detail" id="assignee=(_assignee:Union(User,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>assignee=</strong>(_assignee : ::Union(<a href="../../Octokit/Models/User.html">User</a>, Nil))
+        def <strong>assignee=</strong>(_assignee : Union(<a href="../../Octokit/Models/User.html">User</a>, Nil))
 
-        <a class="method-permalink" href="#assignee%3D%28_assignee%3A%3A%3AUnion%28User%2CNil%29%29-instance-method">#</a>
+        <a class="method-permalink" href="#assignee%3D%28_assignee%3AUnion%28User%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2318,12 +2420,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="label:::Union(Label,Nil)-instance-method">
+    <div class="entry-detail" id="label:Union(Label,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>label</strong> : ::Union(<a href="../../Octokit/Models/Label.html">Label</a>, Nil)
+        def <strong>label</strong> : Union(<a href="../../Octokit/Models/Label.html">Label</a>, Nil)
 
-        <a class="method-permalink" href="#label%3A%3A%3AUnion%28Label%2CNil%29-instance-method">#</a>
+        <a class="method-permalink" href="#label%3AUnion%28Label%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2332,12 +2434,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="label=(_label:::Union(Label,Nil))-instance-method">
+    <div class="entry-detail" id="label=(_label:Union(Label,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>label=</strong>(_label : ::Union(<a href="../../Octokit/Models/Label.html">Label</a>, Nil))
+        def <strong>label=</strong>(_label : Union(<a href="../../Octokit/Models/Label.html">Label</a>, Nil))
 
-        <a class="method-permalink" href="#label%3D%28_label%3A%3A%3AUnion%28Label%2CNil%29%29-instance-method">#</a>
+        <a class="method-permalink" href="#label%3D%28_label%3AUnion%28Label%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2346,12 +2448,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="milestone:::Union(User,Nil)-instance-method">
+    <div class="entry-detail" id="milestone:Union(User,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>milestone</strong> : ::Union(<a href="../../Octokit/Models/User.html">User</a>, Nil)
+        def <strong>milestone</strong> : Union(<a href="../../Octokit/Models/User.html">User</a>, Nil)
 
-        <a class="method-permalink" href="#milestone%3A%3A%3AUnion%28User%2CNil%29-instance-method">#</a>
+        <a class="method-permalink" href="#milestone%3AUnion%28User%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2360,12 +2462,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="milestone=(_milestone:::Union(User,Nil))-instance-method">
+    <div class="entry-detail" id="milestone=(_milestone:Union(User,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>milestone=</strong>(_milestone : ::Union(<a href="../../Octokit/Models/User.html">User</a>, Nil))
+        def <strong>milestone=</strong>(_milestone : Union(<a href="../../Octokit/Models/User.html">User</a>, Nil))
 
-        <a class="method-permalink" href="#milestone%3D%28_milestone%3A%3A%3AUnion%28User%2CNil%29%29-instance-method">#</a>
+        <a class="method-permalink" href="#milestone%3D%28_milestone%3AUnion%28User%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2374,12 +2476,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="project_card:::Union(ProjectCard,Nil)-instance-method">
+    <div class="entry-detail" id="project_card:Union(ProjectCard,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>project_card</strong> : ::Union(<a href="../../Octokit/Models/ProjectCard.html">ProjectCard</a>, Nil)
+        def <strong>project_card</strong> : Union(<a href="../../Octokit/Models/ProjectCard.html">ProjectCard</a>, Nil)
 
-        <a class="method-permalink" href="#project_card%3A%3A%3AUnion%28ProjectCard%2CNil%29-instance-method">#</a>
+        <a class="method-permalink" href="#project_card%3AUnion%28ProjectCard%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2388,12 +2490,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="project_card=(_project_card:::Union(ProjectCard,Nil))-instance-method">
+    <div class="entry-detail" id="project_card=(_project_card:Union(ProjectCard,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>project_card=</strong>(_project_card : ::Union(<a href="../../Octokit/Models/ProjectCard.html">ProjectCard</a>, Nil))
+        def <strong>project_card=</strong>(_project_card : Union(<a href="../../Octokit/Models/ProjectCard.html">ProjectCard</a>, Nil))
 
-        <a class="method-permalink" href="#project_card%3D%28_project_card%3A%3A%3AUnion%28ProjectCard%2CNil%29%29-instance-method">#</a>
+        <a class="method-permalink" href="#project_card%3D%28_project_card%3AUnion%28ProjectCard%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2402,12 +2504,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="rename:::Union(Rename,Nil)-instance-method">
+    <div class="entry-detail" id="rename:Union(Rename,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>rename</strong> : ::Union(<a href="../../Octokit/Models/Rename.html">Rename</a>, Nil)
+        def <strong>rename</strong> : Union(<a href="../../Octokit/Models/Rename.html">Rename</a>, Nil)
 
-        <a class="method-permalink" href="#rename%3A%3A%3AUnion%28Rename%2CNil%29-instance-method">#</a>
+        <a class="method-permalink" href="#rename%3AUnion%28Rename%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2416,12 +2518,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="rename=(_rename:::Union(Rename,Nil))-instance-method">
+    <div class="entry-detail" id="rename=(_rename:Union(Rename,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>rename=</strong>(_rename : ::Union(<a href="../../Octokit/Models/Rename.html">Rename</a>, Nil))
+        def <strong>rename=</strong>(_rename : Union(<a href="../../Octokit/Models/Rename.html">Rename</a>, Nil))
 
-        <a class="method-permalink" href="#rename%3D%28_rename%3A%3A%3AUnion%28Rename%2CNil%29%29-instance-method">#</a>
+        <a class="method-permalink" href="#rename%3D%28_rename%3AUnion%28Rename%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2430,12 +2532,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="source:::Union(Source,Nil)-instance-method">
+    <div class="entry-detail" id="source:Union(Source,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>source</strong> : ::Union(<a href="../../Octokit/Models/Source.html">Source</a>, Nil)
+        def <strong>source</strong> : Union(<a href="../../Octokit/Models/Source.html">Source</a>, Nil)
 
-        <a class="method-permalink" href="#source%3A%3A%3AUnion%28Source%2CNil%29-instance-method">#</a>
+        <a class="method-permalink" href="#source%3AUnion%28Source%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2444,12 +2546,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="source=(_source:::Union(Source,Nil))-instance-method">
+    <div class="entry-detail" id="source=(_source:Union(Source,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>source=</strong>(_source : ::Union(<a href="../../Octokit/Models/Source.html">Source</a>, Nil))
+        def <strong>source=</strong>(_source : Union(<a href="../../Octokit/Models/Source.html">Source</a>, Nil))
 
-        <a class="method-permalink" href="#source%3D%28_source%3A%3A%3AUnion%28Source%2CNil%29%29-instance-method">#</a>
+        <a class="method-permalink" href="#source%3D%28_source%3AUnion%28Source%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2500,8 +2602,6 @@
       </div>
     </div>
   
-
-
 
 
 </div>

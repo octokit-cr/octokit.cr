@@ -1,3 +1,5 @@
+require "../connection"
+
 module Octokit
   class Client
     # Methods for API rate limiting info

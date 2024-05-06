@@ -1,3 +1,6 @@
+require "../models/orgs"
+require "../models/users"
+
 module Octokit
   class Client
     # Methods for the Organizations API
@@ -18,7 +21,7 @@ module Octokit
       # **See Also:**
       # - [https://developer.github.com/v3/orgs/#list-organizations](https://developer.github.com/v3/orgs/#list-organizations)
       def organizations
-        #paginate Organization, "organizations", **options
+        # paginate Organization, "organizations", **options
         res = paginate "organizations"
         OrganizationListItem.from_json(res)
       end
@@ -36,7 +39,7 @@ module Octokit
       #
       # **See Also:**
       # - [https://developer.github.com/v3/orgs#list-organizations-for-the-authenticated-user](https://developer.github.com/v3/orgs#list-organizations-for-the-authenticated-user)
-      def organizations_for_authenticated_user()
+      def organizations_for_authenticated_user
         paginate OrganizationListItem, "user/orgs"
       end
 
@@ -47,8 +50,6 @@ module Octokit
       def organizations_for_user(user)
         paginate OrganizationListItem, "#{User.path user}/orgs"
       end
-
-
     end
   end
 end
