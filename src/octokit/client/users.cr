@@ -79,7 +79,7 @@ module Octokit
       #
       # **Example:**
       # ```
-      # Octokit.client.followers("watzon")
+      # Octokit.client.followers("monalisa")
       # ```
       #
       # **See Also:**
@@ -93,7 +93,7 @@ module Octokit
       #
       # **Example:**
       # ```
-      # Octokit.client.following("watzon")
+      # Octokit.client.following("monalisa")
       # ```
       #
       # **See Also:**
@@ -130,7 +130,7 @@ module Octokit
       #
       # **Example:**
       # ```
-      # @client.follow("watzon")
+      # @client.follow("monalisa")
       # ```
       #
       # **Note:** Requires an authenticated user.
@@ -145,7 +145,7 @@ module Octokit
       #
       # **Example:**
       # ```
-      # @client.unfollow("watzon")
+      # @client.unfollow("monalisa")
       # ```
       #
       # **Note:** Requires an authenticated user.
@@ -160,7 +160,7 @@ module Octokit
       #
       # **Example:**
       # ```
-      # Octokit.client.starred("watzon")
+      # Octokit.client.starred("monalisa")
       # ```
       #
       # **See Also:**
@@ -216,7 +216,7 @@ module Octokit
       # **Examples:**
       # ```
       # @client.keys
-      # @client.keys("watzon")
+      # @client.keys("monalisa")
       # ```
       # **Note:** Requires an authenticated client.
       #
@@ -340,7 +340,7 @@ module Octokit
       #
       # **Example:**
       # ```
-      # @client.subscriptions("watzon")
+      # @client.subscriptions("monalisa")
       # ```
       #
       # **See Also:**

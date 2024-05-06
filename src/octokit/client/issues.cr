@@ -1,3 +1,8 @@
+require "../models/repos"
+require "../models/orgs"
+require "../models/issues"
+require "../models/users"
+
 module Octokit
   class Client
     # Methods for the Issues API
@@ -200,7 +205,7 @@ module Octokit
       #
       # Change only the assignee of issue #4
       # ```
-      # @client.update_issue("watzon/cadmium", 4, assignee: "watzon")
+      # @client.update_issue("watzon/cadmium", 4, assignee: "monalisa")
       # ```
       def update_issue(repo, number : Int32, **options)
         res = patch "#{Repository.path(repo)}/issues/#{number}", {json: options}
@@ -350,9 +355,9 @@ module Octokit
       #
       # **Examples:**
       #
-      # Add assignees "watzon" and "asterite" to issue #4 on watzon/cadmium
+      # Add assignees "monalisa" and "asterite" to issue #4 on watzon/cadmium
       # ```
-      # Octokit.client.add_assignees("watzon/cadmium", 4, ["watzon", "asterite"])
+      # Octokit.client.add_assignees("watzon/cadmium", 4, ["monalisa", "asterite"])
       # ```
       def add_assignees(repo, number : Int32, assignees : Array(String | User))
         assignees = assignees.map { |a| a.is_a?(User) ? a.login : a }

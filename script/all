@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# COLORS
+OFF='\033[0m'
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+PURPLE='\033[0;35m'
+
+# runs all formatting scripts and tests at once
+
+# set the working directory to the root of the project
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
+
+set -e
+
+script/format
+echo ""
+
+script/lint --fix
+echo ""
+
+script/test

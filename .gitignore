@@ -1,9 +1,17 @@
-/lib/
-/bin/
-/.shards/
+# crystal
+.cache/shards/*
+tmp/
+bin/
+.shards/
 *.dwarf
+dist/
 
-# Libraries don't need dependency lock
-# Dependencies will be locked in applications that use them
-/shard.lock
-/.vscode/
+# non-critical vendored crystal files
+lib/**/.github/
+lib/**/docs/
+lib/**/examples/
+lib/**/spec/
+
+# secrets
+creds.env
+*.pem

@@ -1,3 +1,6 @@
+require "../helpers"
+require "../core_ext/time"
+
 module Octokit
   module Models
     struct GPGKey

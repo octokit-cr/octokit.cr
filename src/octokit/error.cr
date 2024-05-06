@@ -129,7 +129,7 @@ module Octokit
       # TODO: Clean this up
       xml = XML.parse(@response.not_nil!.body)
       title = xml.xpath_node("//title")
-      @data ||= JSON.parse("\{\"message\": \"#{title.not_nil!.content}\"}")
+      @data ||= JSON.parse("{\"message\": \"#{title.not_nil!.content}\"}")
     end
 
     private def response_message

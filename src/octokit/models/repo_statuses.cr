@@ -1,5 +1,10 @@
+require "../core_ext/time"
+require "./users"
+
 module Octokit
   module Models
+    alias Users = Octokit::Models::User
+
     struct RepoStatus
       Octokit.rest_model(
         url: String,
