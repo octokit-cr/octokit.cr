@@ -1,0 +1,14 @@
+name: openssl_ext
+version: 2.4.4
+crystal: ">= 0.36.1"
+
+development_dependencies:
+  ameba:
+    github: veelenga/ameba
+
+authors:
+  - Connor Imrie <3436576+CImrie@users.noreply.github.com>
+  - Kevin <root@unixs.org>
+  - Stephen von Takach <steve@vontaka.ch>
+
+license: MIT

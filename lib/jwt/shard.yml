@@ -1,0 +1,22 @@
+name: jwt
+version: 1.6.1
+crystal: ">= 0.36.1"
+
+authors:
+  - Potapov Sergey <blake131313@gmail.com>
+  - Stephen von Takach <steve@vontaka.ch>
+
+dependencies:
+  openssl_ext:
+    github: spider-gazelle/openssl_ext
+    version: ~> 2.0
+
+  bindata:
+    github: spider-gazelle/bindata
+    version: ~> 2.0
+
+development_dependencies:
+  ameba:
+    github: veelenga/ameba
+
+license: MIT
