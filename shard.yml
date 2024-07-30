@@ -16,9 +16,6 @@ dependencies:
   halite:
     github: icyleaf/halite
     version: 0.12.0
-  jwt:
-    github: crystal-community/jwt
-    version: 1.6.1
 development_dependencies:
   webmock:
     github: manastech/webmock.cr

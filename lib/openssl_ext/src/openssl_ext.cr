@@ -1,7 +1,0 @@
-require "openssl"
-require "random/secure"
-require "./openssl_ext/*"
-require "./openssl_ext/asn1/*"
-require "./openssl_ext/bio/*"
-require "./openssl_ext/pkey/*"
-require "./openssl_ext/x509/*"
