@@ -1,9 +1,0 @@
-doc
-lib
-.crystal
-.shards
-app
-*.dwarf
-*.DS_Store
-bin
-
