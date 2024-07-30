@@ -1,3 +1,5 @@
+require "./users"
+
 module Octokit
   module Models
     struct App
@@ -26,7 +28,8 @@ module Octokit
         metadata: String,
         contents: String,
         issues: String,
-        single_file: String
+        single_file: String?,
+        single_file_name: String?
       )
     end
 
@@ -40,7 +43,7 @@ module Octokit
         repositories_url: String,
         html_url: String,
         target_type: String,
-        single_file_name: String,
+        single_file_name: String?,
         repository_selection: String,
         events: Array(String),
         permissions: InstallationPermissions,
