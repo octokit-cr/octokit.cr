@@ -13,12 +13,3 @@ shards:
   ameba:
     git: https://github.com/crystal-ameba/ameba.git
     version: 1.6.1
-  openssl_ext:
-    git: https://github.com/spider-gazelle/openssl_ext.git
-    version: 2.4.4
-  bindata:
-    git: https://github.com/spider-gazelle/bindata.git
-    version: 2.1.0
-  jwt:
-    git: https://github.com/crystal-community/jwt.git
-    version: 1.6.1
