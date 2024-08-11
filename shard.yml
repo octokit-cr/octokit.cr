@@ -1,11 +1,11 @@
 name: octokit
-version: 0.2.4
+version: 0.2.5
 
 authors:
   - Grant Birkinbine
   - Chris Watson <chris@watzon.me>
 
-crystal: ">= 1.12.1"
+crystal: ">= 1.13.1"
 
 license: MIT
 
