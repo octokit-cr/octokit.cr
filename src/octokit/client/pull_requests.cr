@@ -29,6 +29,13 @@ module Octokit
       # Valid directions in which to sort PullRequests
       DIRECTIONS = ["asc", "desc"]
 
+      # The default options for listing pull requests
+      DEFAULTS = {
+        state: "open",
+        sort: "created",
+        direction: "desc"
+      }
+
       # List pull requests for a repository
       #
       # **See Also:**
@@ -38,13 +45,14 @@ module Octokit
       #
       # ```
       # Octokit.pull_requests("crystal-lang/crystal")
+      # Octokit.pull_requests("crystal-lang/crystal", state: "closed") 
       # ```
       def pull_requests(repo : String, **options) : Paginator(PullRequest)
         validate_options(options)
         paginate(
           PullRequest,
           "#{Repository.path(repo)}/pulls",
-          options: {json: options}
+          options: {params: DEFAULTS.merge(options)}
         )
       end
 
