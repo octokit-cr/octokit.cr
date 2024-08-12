@@ -288,10 +288,10 @@ module Octokit
       # **Examples:**
       #
       # ```
-      # Octokit.delete_pull_request_comment("crystal-lang/crystal", 123, 456)
+      # Octokit.delete_pull_request_comment("crystal-lang/crystal", 456)
       # ```
-      def delete_pull_request_comment(repo : String, number : Int64, comment_id : Int64, **options)
-        delete "#{Repository.path repo}/pulls/#{number}/comments/#{comment_id}", {params: options}
+      def delete_pull_request_comment(repo : String, comment_id : Int64, **options)
+        delete "#{Repository.path repo}/pulls/comments/#{comment_id}", {params: options}
       end
 
       alias_method :delete_pull_request_comment, :delete_pull_comment
