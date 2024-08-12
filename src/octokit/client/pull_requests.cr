@@ -58,6 +58,36 @@ module Octokit
 
       alias_method :pull_requests, :pulls
 
+      # Close a pull request
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/pulls/#update-a-pull-request](https://developer.github.com/v3/pulls/#update-a-pull-request)
+      #
+      # **Examples:**
+      #
+      # ```
+      # Octokit.close_pull_request("crystal-lang/crystal", 123)
+      # ```
+      # def close_pull_request(repo : String, number : Int64, **options)
+        # TODO
+      # end
+
+      # Update a pull request branch
+      #
+      # **See Also:**
+      # - [https://developer.github.com/v3/pulls/#update-a-pull-request-branch](https://developer.github.com/v3/pulls/#update-a-pull-request-branch)
+      #
+      # **Examples:**
+      # ```
+      # Octokit.update_pull_request_branch("crystal-lang/crystal", 123)
+      # ``` 
+      def update_pull_request_branch(repo : String, number : Int64, **options) : Bool
+        boolean_from_response(
+          :put,
+          "#{Repository.path(repo)}/pulls/#{number}/update-branch"
+        )
+      end
+
       # Validate options for filtering issues and log a warning if an incorrect
       # filter is used.
       protected def validate_options(options)
