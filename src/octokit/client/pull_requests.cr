@@ -18,7 +18,7 @@ module Octokit
       # :nodoc:
       alias PullRequest = Octokit::Models::PullRequest
       # :nodoc:
-      alias Commit = Octokit::Models::Commit 
+      alias Commit = Octokit::Models::Commit
 
       # Valid filters for PullRequests
       FILTERS = ["all", "assigned", "created", "mentioned", "subscribed"]
