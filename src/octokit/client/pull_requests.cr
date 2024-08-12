@@ -2,6 +2,7 @@ require "uri"
 require "../models/repos"
 require "../models/pulls"
 require "../models/commits"
+require "../models/pull_comments"
 
 module Octokit
   class Client
@@ -19,6 +20,8 @@ module Octokit
       alias PullRequest = Octokit::Models::PullRequest
       # :nodoc:
       alias Commit = Octokit::Models::Commit
+      # :nodoc:
+      alias PullRequestComment = Octokit::Models::PullRequestComment 
 
       # Valid filters for PullRequests
       FILTERS = ["all", "assigned", "created", "mentioned", "subscribed"]
@@ -140,8 +143,8 @@ module Octokit
 
       alias_method :pull_request_commits, :pull_commits
 
-      # List comments on a pull request
-      #
+      # List review comments on a pull request
+      # This method applies to pull request review comments
       # **See Also:**
       # - [https://developer.github.com/v3/pulls/comments/#list-comments-on-a-pull-request](https://developer.github.com/v3/pulls/comments/#list-comments-on-a-pull-request)
       #
