@@ -74,7 +74,7 @@ There are a lot of pieces of the GitHub API to cover. Here are the ones that nee
 - [ ] [Pages]()
 - [ ] [Projects]()
 - [x] [PubSubHubbub](https://octokit-cr.github.io/octokit.cr/Octokit/Client/PubSubHubbub.html)
-- [ ] [PullRequests]()
+- [x] [PullRequests](https://octokit-cr.github.io/octokit.cr/Octokit/Client/PullRequests.html)
 - [x] [RateLimit](https://octokit-cr.github.io/octokit.cr/Octokit/Client/RateLimit.html)
 - [ ] [Reactions]()
 - [ ] [Refs]()
