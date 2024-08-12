@@ -270,11 +270,11 @@ module Octokit
       # **Examples:**
       #
       # ```
-      # Octokit.update_pull_request_comment("crystal-lang/crystal", 123, 456, "New comment body")
+      # Octokit.update_pull_request_comment("crystal-lang/crystal", 456, "New comment body")
       # ```
-      def update_pull_request_comment(repo : String, number : Int64, comment_id : Int64, body : String, **options)
+      def update_pull_request_comment(repo : String, comment_id : Int64, body : String, **options)
         options = {body: body}.merge(options)
-        patch "#{Repository.path repo}/pulls/#{number}/comments/#{comment_id}", {json: options}
+        patch "#{Repository.path repo}/pulls/comments/#{comment_id}", {json: options}
       end
 
       alias_method :update_pull_request_comment, :update_pull_comment
