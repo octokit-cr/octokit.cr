@@ -16,6 +16,9 @@ module Octokit
     # Header keys that can be passed in options hash to {#get},{#head}
     CONVENIENCE_HEADERS = Set{"accept", "content_type"}
 
+    # Successful status codes from PUT/POST/PATCH requests
+    SUCCESSFUL_STATUSES = [200, 201, 202, 204] 
+
     # Make a HTTP GET request
     def get(url, options = nil)
       request "get", url, make_options(options)
@@ -134,7 +137,7 @@ module Octokit
     # Executes the request, checking if it was successful
     protected def boolean_from_response(method, path, options = nil)
       request(method, path, options)
-      @last_response.not_nil!.status_code == 204
+      @last_response.not_nil!.status_code.in?(SUCCESSFUL_STATUSES)
     rescue Error::NotFound
       false
     end
