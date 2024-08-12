@@ -334,12 +334,12 @@ module Octokit
       # pages.fetch_all
       # pages.last? # => Bool
       # ```
-      def last?
+      def last? : Bool
         @current_page == @total_pages
       end
 
       # Checks if the paginator is empty.
-      def empty?
+      def empty? : Bool
         @records.empty?
       end
 
