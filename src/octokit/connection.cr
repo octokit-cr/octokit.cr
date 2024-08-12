@@ -117,7 +117,7 @@ module Octokit
       @agent = nil
     end
 
-    protected def request(method : Symbol, path : String, options = nil)
+    protected def request(method : Symbol | String, path : String, options = nil)
       path = File.join(endpoint, path) unless path.nil? || path.starts_with?("http")
       options = options ? @connection_options.merge(options) : @connection_options
       @last_response = response = agent.request(verb: method.to_s, uri: path, options: options)
@@ -125,7 +125,7 @@ module Octokit
       response.body
     end
 
-    protected def request(method : Symbol, path : String, options = nil, &)
+    protected def request(method : Symbol | String, path : String, options = nil, &)
       path = File.join(endpoint, path) unless path.nil? || path.starts_with?("http")
       options = options ? @connection_options.merge(options) : @connection_options
       @last_response = response = agent.request(verb: method, uri: path, options: options)
