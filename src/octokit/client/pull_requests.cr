@@ -192,10 +192,10 @@ module Octokit
       # **Examples:**
       #
       # ```
-      # Octokit.pull_request_comment("crystal-lang/crystal", 123, 456)
+      # Octokit.pull_request_comment("crystal-lang/crystal", 456)
       # ```
-      def pull_request_comment(repo : String, number : Int64, comment_id : Int64, **options)
-        get "#{Repository.path(repo)}/pulls/#{number}/comments/#{comment_id}", {params: options}
+      def pull_request_comment(repo : String, comment_id : Int64, **options)
+        get "#{Repository.path(repo)}/pulls/comments/#{comment_id}", {params: options}
       end
 
       alias_method :pull_request_comment, :pull_comment
