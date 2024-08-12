@@ -5,7 +5,7 @@ module Octokit
     # OCTOKIT_SILENT is set to true.
     def octokit_warn(message)
       unless !!ENV["OCTOKIT_SILENT"]?
-        Octokit.logger.warn(message)
+        @logger.warn { message }
       end
     end
   end

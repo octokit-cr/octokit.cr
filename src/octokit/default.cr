@@ -36,7 +36,7 @@ module Octokit
     end
 
     # Default access token from ENV
-    def access_token
+    def access_token : String?
       ENV["OCTOKIT_ACCESS_TOKEN"]?
     end
 
@@ -76,7 +76,7 @@ module Octokit
     end
 
     # Default options for `Halite::Options`
-    def connection_options
+    def connection_options : Halite::Options
       Halite::Options.new(
         headers: {
           accept:     default_media_type,
@@ -90,7 +90,7 @@ module Octokit
     end
 
     # Default GitHub username for Basic Auth from ENV
-    def login
+    def login : String?
       ENV["OCTOKIT_LOGIN"]?
     end
 
@@ -100,12 +100,12 @@ module Octokit
     end
 
     # Default GitHub password for Basic Auth from ENV
-    def password
+    def password : String?
       ENV["OCTOKIT_PASSWORD"]?
     end
 
     # Default pagination page size from ENV
-    def per_page
+    def per_page : Int32?
       page_size = ENV["OCTOKIT_PER_PAGE"]?
       page_size.to_i if page_size
     end
@@ -117,7 +117,7 @@ module Octokit
     end
 
     # Default SSL verify mode from ENV
-    def ssl_verify_mode
+    def ssl_verify_mode : Int32
       # 0 is OpenSSL::SSL::NONE
       # 1 is OpenSSL::SSL::PEER
       # the standard default for SSL is PEER which requires a server certificate check on the client
@@ -125,18 +125,19 @@ module Octokit
     end
 
     # Default User-Agent header string from ENV or `USER_AGENT`
-    def user_agent
+    def user_agent : String
       ENV["OCTOKIT_USER_AGENT"]? || USER_AGENT
     end
 
     # Default web endpoint from ENV or `WEB_ENDPOINT`
-    def web_endpoint
+    def web_endpoint : String
       ENV["OCTOKIT_WEB_ENDPOINT"]? || WEB_ENDPOINT
     end
 
     # Default logger
     def logger
-      Log.setup(:warn)
+      log_level = ENV["OCTOKIT_LOG_LEVEL"]?.to_s.upcase || "INFO".to_s.upcase
+      Log.setup(log_level)
       ::Log.for(self)
     end
   end

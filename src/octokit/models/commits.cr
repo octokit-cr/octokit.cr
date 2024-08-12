@@ -12,24 +12,24 @@ module Octokit
     struct Commit
       Octokit.rest_model(
         sha: String,
-        author: CommitAuthor,
-        committer: CommitAuthor,
-        message: String,
-        tree: Tree,
-        parents: Array(Commit),
-        stats: CommitStats,
+        author: CommitAuthor?,
+        committer: CommitAuthor?,
+        message: String?,
+        tree: Tree?,
+        parents: Array(Commit)?,
+        stats: CommitStats?,
         html_url: String,
         url: String,
-        verification: SignatureVerification,
-        node_id: String
+        verification: SignatureVerification?,
+        node_id: String?
       )
     end
 
     struct CommitAuthor
       Octokit.rest_model(
-        date: String,
-        name: String,
-        email: String,
+        date: String?,
+        name: String?,
+        email: String?,
 
         login: String
       )

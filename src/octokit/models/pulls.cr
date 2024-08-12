@@ -1,3 +1,6 @@
+require "../core_ext/time"
+require "./issue_labels"
+
 module Octokit
   module Models
     struct PullRequest
@@ -6,24 +9,24 @@ module Octokit
         number: Int32,
         state: String,
         title: String,
-        body: String,
+        body: String?,
         created_at: {type: Time, converter: Time::ISO8601Converter},
         updated_at: {type: Time, converter: Time::ISO8601Converter},
-        closed_at: String,
-        merged_at: String,
-        labels: Array(Label),
+        closed_at: String?,
+        merged_at: String?,
+        labels: Array(Label)?,
         user: User,
         draft: Bool,
-        merged: Bool,
-        mergeable: Bool,
-        mergeable_state: String,
-        merged_by: String,
+        merged: Bool?,
+        mergeable: Bool?,
+        mergeable_state: String?,
+        merged_by: String?,
         merge_commit_sha: String,
-        comments: Int32,
-        commits: Int32,
-        additions: Int32,
-        deletions: Int32,
-        changed_files: Int32,
+        comments: Int32?,
+        commits: Int32?,
+        additions: Int32?,
+        deletions: Int32?,
+        changed_files: Int32?,
         url: String,
         html_url: String,
         issue_url: String,
@@ -33,22 +36,22 @@ module Octokit
         commits_url: String,
         comments_url: String,
         review_comment_url: String,
-        review_comments: Int32,
-        assignee: User,
-        assignees: Array(User),
-        milestone: Milestone,
-        maintainer_can_modify: Bool,
+        review_comments: Int32?,
+        assignee: User?,
+        assignees: Array(User)?,
+        milestone: Milestone?,
+        maintainer_can_modify: Bool?,
         author_association: String,
         node_id: String,
         requested_reviewers: Array(User),
 
         requested_teams: Array(Team),
 
-        links: PRLinks,
+        links: PRLinks?,
         head: PullRequestBranch,
         base: PullRequestBranch,
 
-        active_lock_reason: String
+        active_lock_reason: String?
       )
     end
 
@@ -76,7 +79,7 @@ module Octokit
         label: String,
         ref: String,
         sha: String,
-        repo: Repository,
+        repo: Repository?,
         user: User
       )
     end
