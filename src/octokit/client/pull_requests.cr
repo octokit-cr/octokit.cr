@@ -3,6 +3,7 @@ require "../models/repos"
 require "../models/pulls"
 require "../models/commits"
 require "../models/pull_comments"
+require "../models/repo_commits"
 
 module Octokit
   class Client
@@ -22,6 +23,8 @@ module Octokit
       alias Commit = Octokit::Models::Commit
       # :nodoc:
       alias PullRequestComment = Octokit::Models::PullRequestComment
+      # :nodoc:
+      alias CommitFile = Octokit::Models::CommitFile 
 
       # Valid filters for PullRequests
       FILTERS = ["all", "assigned", "created", "mentioned", "subscribed"]
@@ -307,9 +310,9 @@ module Octokit
       # ```
       # Octokit.pull_request_files("crystal-lang/crystal", 123)
       # ```
-      def pull_request_files(repo : String, number : Int64, **options) : Paginator(PullRequestFile)
+      def pull_request_files(repo : String, number : Int64, **options) : Paginator(CommitFile)
         paginate(
-          PullRequestFile,
+          CommitFile,
           "#{Repository.path(repo)}/pulls/#{number}/files",
           options: {params: options}
         )

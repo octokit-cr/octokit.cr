@@ -37,7 +37,7 @@ module Octokit
         blob_url: String,
         raw_url: String,
         contents_url: String,
-        previous_filename: String
+        previous_filename: String?
       )
     end
 
