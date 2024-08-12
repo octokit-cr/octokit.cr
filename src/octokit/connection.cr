@@ -135,7 +135,7 @@ module Octokit
     end
 
     # Executes the request, checking if it was successful
-    protected def boolean_from_response(method : Symbol, path : String, options = nil)
+    protected def boolean_from_response(method : Symbol, path : String, options : NamedTuple | Nil = nil) : Bool
       request(method, path, make_options(options))
       @last_response.not_nil!.status_code.in?(SUCCESSFUL_STATUSES)
     rescue Error::NotFound
