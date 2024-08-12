@@ -345,17 +345,19 @@ module Octokit
 
       # Utility method to set the `@total_pages` variable.
       private def set_total_pages!
-        return 0 if @client.last_response.nil?
+        return @total_pages = 0 if @client.last_response.nil?
         if links = @client.last_response.try(&.links)
-          return 0 unless links["last"]?
+          unless links["last"]?
+            @total_pages = 1
+            return
+          end
           if target = links["last"].target
             if match = target.match(/page=([0-9]+)/)
               @total_pages = match[1].to_i
             end
-          else
           end
         else
-          0
+          @total_pages = 1
         end
       end
     end
