@@ -147,7 +147,9 @@ module Octokit
       alias_method :pull_request_commits, :pull_commits
 
       # List review comments on a pull request
+      #
       # This method applies to pull request review comments. Pull request review comments are NOT the same as standard comments left on PRs - those are issue comments.
+      #
       # **See Also:**
       # - [https://developer.github.com/v3/pulls/comments/#list-comments-on-a-pull-request](https://developer.github.com/v3/pulls/comments/#list-comments-on-a-pull-request)
       #
@@ -167,6 +169,8 @@ module Octokit
       alias_method :pull_requests_comments, :reviews_comments
 
       # List comments on a pull request
+      #
+      # This method applies to pull request review comments. Pull request review comments are NOT the same as standard comments left on PRs - those are issue comments.
       #
       # **See Also:**
       # - [https://developer.github.com/v3/pulls/comments/#list-comments-on-a-pull-request](https://developer.github.com/v3/pulls/comments/#list-comments-on-a-pull-request)
@@ -189,6 +193,8 @@ module Octokit
 
       # Get a single comment on a pull request
       #
+      # This method applies to pull request review comments. Pull request review comments are NOT the same as standard comments left on PRs - those are issue comments.
+      #
       # **See Also:**
       # - [https://developer.github.com/v3/pulls/comments/#get-a-single-comment](https://developer.github.com/v3/pulls/comments/#get-a-single-comment)
       #
@@ -206,25 +212,27 @@ module Octokit
 
       # Create a comment on a pull request
       #
+      # This method applies to pull request review comments. Pull request review comments are NOT the same as standard comments left on PRs - those are issue comments.
+      #
       # **See Also:**
       # - [https://developer.github.com/v3/pulls/comments/#create-a-comment](https://developer.github.com/v3/pulls/comments/#create-a-comment)
       #
-      # repo (String) — A GitHub repository
-      # number (Integer) — Pull request number
-      # body (String) — Comment content
-      # commit_id (String) — Sha of the commit to comment on
-      # path (String) — Relative path of the file to comment on
-      # line (Integer) — Line number in the diff to comment on
-      # side (String) — Side of the diff that the comment applies to (LEFT or RIGHT)
-      # start_line (Integer) — Start line for multi-line comments
-      # start_side (String) — Start side for multi-line comments (LEFT or RIGHT)
-      # in_reply_to (Integer) — ID of the review comment to reply to
-      # subject_type (String) — Level at which the comment is targeted (line or file)
+      # - repo (String) — A GitHub repository
+      # - number (Integer) — Pull request number
+      # - body (String) — Comment content
+      # - commit_id (String) — Sha of the commit to comment on
+      # - path (String) — Relative path of the file to comment on
+      # - line (Integer) — Line number in the diff to comment on
+      # - side (String) — Side of the diff that the comment applies to (LEFT or RIGHT)
+      # - start_line (Integer) — Start line for multi-line comments
+      # - start_side (String) — Start side for multi-line comments (LEFT or RIGHT)
+      # - in_reply_to (Integer) — ID of the review comment to reply to
+      # - subject_type (String) — Level at which the comment is targeted (line or file)
       #
       # **Examples:**
       #
       # ```
-      # Octokit.create_pull_request_comment("crystal-lang/crystal", 123, "Comment body", "commit_id", "path", 1, side: "RIGHT")
+      # Octokit.create_pull_request_comment("crystal-lang/crystal", 123, "Comment body", "commit_id", "path/to/file.txt", 1, side: "RIGHT")
       # ```
       def create_pull_request_comment(
         repo : String,
