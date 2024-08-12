@@ -45,7 +45,7 @@ module Octokit
       #
       # ```
       # Octokit.pull_requests("crystal-lang/crystal")
-      # Octokit.pull_requests("crystal-lang/crystal", state: "closed") 
+      # Octokit.pull_requests("crystal-lang/crystal", state: "closed")
       # ```
       def pull_requests(repo : String, **options) : Paginator(PullRequest)
         validate_options(options)
