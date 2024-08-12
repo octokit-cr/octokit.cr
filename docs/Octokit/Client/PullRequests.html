@@ -14,7 +14,7 @@
 <script type="text/javascript" src="../../js/doc.js"></script>
 
   <meta name="repository-name" content="octokit">
-  <title>Octokit::Client::Markdown - octokit main</title>
+  <title>Octokit::Client::PullRequests - octokit main</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../../";
   </script>
@@ -92,7 +92,7 @@
       
     </li>
   
-  <li class=" current" data-id="octokit/Octokit/Client/Markdown" data-name="octokit::client::markdown">
+  <li class=" " data-id="octokit/Octokit/Client/Markdown" data-name="octokit::client::markdown">
       <a href="../../Octokit/Client/Markdown.html">Markdown</a>
       
     </li>
@@ -122,7 +122,7 @@
       
     </li>
   
-  <li class=" " data-id="octokit/Octokit/Client/PullRequests" data-name="octokit::client::pullrequests">
+  <li class=" current" data-id="octokit/Octokit/Client/PullRequests" data-name="octokit::client::pullrequests">
       <a href="../../Octokit/Client/PullRequests.html">PullRequests</a>
       
     </li>
@@ -1911,7 +1911,7 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">module</span> Octokit::<wbr>Client::<wbr>Markdown
+  <span class="kind">module</span> Octokit::<wbr>Client::<wbr>PullRequests
 
 </h1>
 
@@ -1956,14 +1956,73 @@
   </h2>
   
     
-      <a href="https://github.com/octokit-cr/octokit.cr/blob/0eb439d2b6b7bdf68cfaa1af8ec116f8acb0b1a8/src/octokit/client/markdown.cr#L3" target="_blank">
-        octokit/client/markdown.cr
+      <a href="https://github.com/octokit-cr/octokit.cr/blob/0eb439d2b6b7bdf68cfaa1af8ec116f8acb0b1a8/src/octokit/client/pull_requests.cr#L17" target="_blank">
+        octokit/client/pull_requests.cr
       </a>
     
     <br/>
   
 
 
+
+  
+    <h2>
+      <a id="constant-summary" class="anchor" href="#constant-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Constant Summary
+    </h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="DEFAULTS">
+        <strong>DEFAULTS</strong> = <code>{state: <span class="s">&quot;open&quot;</span>, sort: <span class="s">&quot;created&quot;</span>, direction: <span class="s">&quot;desc&quot;</span>}</code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>The default options for listing pull requests</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="DIRECTIONS">
+        <strong>DIRECTIONS</strong> = <code>[<span class="s">&quot;asc&quot;</span>, <span class="s">&quot;desc&quot;</span>]</code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Valid directions in which to sort PullRequests</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="FILTERS">
+        <strong>FILTERS</strong> = <code>[<span class="s">&quot;all&quot;</span>, <span class="s">&quot;assigned&quot;</span>, <span class="s">&quot;created&quot;</span>, <span class="s">&quot;mentioned&quot;</span>, <span class="s">&quot;subscribed&quot;</span>]</code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Valid filters for PullRequests</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="SORTS">
+        <strong>SORTS</strong> = <code>[<span class="s">&quot;created&quot;</span>, <span class="s">&quot;updated&quot;</span>, <span class="s">&quot;comments&quot;</span>]</code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Valid sort for PullRequests</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="STATES">
+        <strong>STATES</strong> = <code>[<span class="s">&quot;all&quot;</span>, <span class="s">&quot;open&quot;</span>, <span class="s">&quot;closed&quot;</span>]</code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Valid states for PullRequests</p>
+      </dd>
+      
+    
+  </dl>
 
 
 
@@ -1984,9 +2043,121 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#markdown%28text%2Cmode%3D%3Amarkdown%2Ccontext%3Dnil%29-instance-method" class="signature"><strong>#markdown</strong>(text, mode = <span class="n">:markdown</span>, context = <span class="n">nil</span>)</a>
+        <a href="#close_pull_request%28repo%3AString%2Cnumber%3AInt64%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#close_pull_request</strong>(repo : String, number : Int64, **options)</a>
         
-          <div class="summary"><p>Render an arbitrary Markdown document</p></div>
+          <div class="summary"><p>Close a pull request</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#create_pull_request%28repo%3AString%2Cbase%3AString%2Chead%3AString%2Ctitle%3AString%2Cbody%3AString%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#create_pull_request</strong>(repo : String, base : String, head : String, title : String, body : String, **options)</a>
+        
+          <div class="summary"><p>Create a pull request</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#create_pull_request_comment%28repo%3AString%2Cnumber%3AInt64%2Cbody%3AString%2Ccommit_id%3AString%2Cpath%3AString%2Cline%3AInt32%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#create_pull_request_comment</strong>(repo : String, number : Int64, body : String, commit_id : String, path : String, line : Int32, **options)</a>
+        
+          <div class="summary"><p>Create a comment on a pull request</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#create_pull_request_comment_reply%28repo%3AString%2Cnumber%3AInt64%2Cbody%3AString%2Cin_reply_to%3AInt64%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#create_pull_request_comment_reply</strong>(repo : String, number : Int64, body : String, in_reply_to : Int64, **options)</a>
+        
+          <div class="summary"><p>Create a reply to a comment on a pull request</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#create_pull_request_for_issue%28repo%3AString%2Cbase%3AString%2Chead%3AString%2Cissue%3AInt32%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#create_pull_request_for_issue</strong>(repo : String, base : String, head : String, issue : Int32, **options)</a>
+        
+          <div class="summary"><p>Create a pull request for an issue</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#delete_pull_request_comment%28repo%3AString%2Ccomment_id%3AInt64%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#delete_pull_request_comment</strong>(repo : String, comment_id : Int64, **options)</a>
+        
+          <div class="summary"><p>Delete a comment on a pull request</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#merge_pull_request%28repo%3AString%2Cnumber%3AInt64%2Ccommit_message%3AString%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#merge_pull_request</strong>(repo : String, number : Int64, commit_message : String, **options)</a>
+        
+          <div class="summary"><p>Merge a pull request</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pull_merged%3F%28repo%3AString%2Cnumber%3AInt64%2C%2A%2Aoptions%29%3ABool-instance-method" class="signature"><strong>#pull_merged?</strong>(repo : String, number : Int64, **options) : Bool</a>
+        
+          <div class="summary"><p>Check if a pull request has been merged</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pull_request_comment%28repo%3AString%2Ccomment_id%3AInt64%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#pull_request_comment</strong>(repo : String, comment_id : Int64, **options)</a>
+        
+          <div class="summary"><p>Get a single comment on a pull request</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pull_request_comments%28repo%3AString%2Cnumber%3AInt64%2C%2A%2Aoptions%29%3APaginator%28PullRequestComment%29-instance-method" class="signature"><strong>#pull_request_comments</strong>(repo : String, number : Int64, **options) : Paginator(PullRequestComment)</a>
+        
+          <div class="summary"><p>List comments on a pull request</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pull_request_commits%28repo%3AString%2Cnumber%3AInt64%2C%2A%2Aoptions%29%3APaginator%28Commit%29-instance-method" class="signature"><strong>#pull_request_commits</strong>(repo : String, number : Int64, **options) : Paginator(Commit)</a>
+        
+          <div class="summary"><p>List commits on a pull request</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pull_request_files%28repo%3AString%2Cnumber%3AInt64%2C%2A%2Aoptions%29%3APaginator%28CommitFile%29-instance-method" class="signature"><strong>#pull_request_files</strong>(repo : String, number : Int64, **options) : Paginator(CommitFile)</a>
+        
+          <div class="summary"><p>List files on a pull request</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pull_requests%28repo%3AString%2C%2A%2Aoptions%29%3APaginator%28PullRequest%29-instance-method" class="signature"><strong>#pull_requests</strong>(repo : String, **options) : Paginator(PullRequest)</a>
+        
+          <div class="summary"><p>List pull requests for a repository</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pull_requests_comments%28repo%3AString%2Cnumber%3AInt64%2C%2A%2Aoptions%29%3APaginator%28PullRequestComment%29-instance-method" class="signature"><strong>#pull_requests_comments</strong>(repo : String, number : Int64, **options) : Paginator(PullRequestComment)</a>
+        
+          <div class="summary"><p>List review comments on a pull request</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#update_pull_request%28repo%3AString%2Cnumber%3AInt64%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#update_pull_request</strong>(repo : String, number : Int64, **options)</a>
+        
+          <div class="summary"><p>Update a pull request</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#update_pull_request_branch%28repo%3AString%2Cnumber%3AInt64%2C%2A%2Aoptions%29%3ABool-instance-method" class="signature"><strong>#update_pull_request_branch</strong>(repo : String, number : Int64, **options) : Bool</a>
+        
+          <div class="summary"><p>Update a pull request branch</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#update_pull_request_comment%28repo%3AString%2Ccomment_id%3AInt64%2Cbody%3AString%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#update_pull_request_comment</strong>(repo : String, comment_id : Int64, body : String, **options)</a>
+        
+          <div class="summary"><p>Update a comment on a pull request</p></div>
         
       </li>
     
@@ -2014,25 +2185,501 @@
     Instance Method Detail
   </h2>
   
-    <div class="entry-detail" id="markdown(text,mode=:markdown,context=nil)-instance-method">
+    <div class="entry-detail" id="close_pull_request(repo:String,number:Int64,**options)-instance-method">
       <div class="signature">
         
-        def <strong>markdown</strong>(text, mode = <span class="n">:markdown</span>, context = <span class="n">nil</span>)
+        def <strong>close_pull_request</strong>(repo : String, number : Int64, **options)
 
-        <a class="method-permalink" href="#markdown%28text%2Cmode%3D%3Amarkdown%2Ccontext%3Dnil%29-instance-method">#</a>
+        <a class="method-permalink" href="#close_pull_request%28repo%3AString%2Cnumber%3AInt64%2C%2A%2Aoptions%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
-          <p>Render an arbitrary Markdown document</p>
-<p>Example:</p>
-<pre><code class="language-crystal"><span class="t">Octokit</span>.markdown(<span class="s">&quot;Fixed in #111&quot;</span>, mode: <span class="n">:gfm</span>, context: <span class="s">&quot;watzon/cadmium&quot;</span>)</code></pre>
+          <p>Close a pull request</p>
+<p><strong>See Also:</strong></p>
+<ul>
+<li><a href="https://developer.github.com/v3/pulls/#update-a-pull-request">https://developer.github.com/v3/pulls/#update-a-pull-request</a></li>
+</ul>
+<p><strong>Examples:</strong></p>
+<pre><code class="language-crystal"><span class="t">Octokit</span>.close_pull_request(<span class="s">&quot;crystal-lang/crystal&quot;</span>, <span class="n">123</span>)</code></pre>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/octokit-cr/octokit.cr/blob/0eb439d2b6b7bdf68cfaa1af8ec116f8acb0b1a8/src/octokit/client/markdown.cr#L10" target="_blank">View source</a>]
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/0eb439d2b6b7bdf68cfaa1af8ec116f8acb0b1a8/src/octokit/client/pull_requests.cr#L124" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="create_pull_request(repo:String,base:String,head:String,title:String,body:String,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>create_pull_request</strong>(repo : String, base : String, head : String, title : String, body : String, **options)
+
+        <a class="method-permalink" href="#create_pull_request%28repo%3AString%2Cbase%3AString%2Chead%3AString%2Ctitle%3AString%2Cbody%3AString%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Create a pull request</p>
+<p><strong>See Also:</strong></p>
+<ul>
+<li><a href="https://developer.github.com/v3/pulls/#create-a-pull-request">https://developer.github.com/v3/pulls/#create-a-pull-request</a></li>
+</ul>
+<p><strong>Examples:</strong></p>
+<pre><code class="language-crystal"><span class="t">Octokit</span>.create_pull_request(<span class="s">&quot;crystal-lang/crystal&quot;</span>, <span class="s">&quot;master&quot;</span>, <span class="s">&quot;new-branch&quot;</span>, <span class="s">&quot;Title&quot;</span>, <span class="s">&quot;Body&quot;</span>)</code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/0eb439d2b6b7bdf68cfaa1af8ec116f8acb0b1a8/src/octokit/client/pull_requests.cr#L80" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="create_pull_request_comment(repo:String,number:Int64,body:String,commit_id:String,path:String,line:Int32,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>create_pull_request_comment</strong>(repo : String, number : Int64, body : String, commit_id : String, path : String, line : Int32, **options)
+
+        <a class="method-permalink" href="#create_pull_request_comment%28repo%3AString%2Cnumber%3AInt64%2Cbody%3AString%2Ccommit_id%3AString%2Cpath%3AString%2Cline%3AInt32%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Create a comment on a pull request</p>
+<p>This method applies to pull request review comments. Pull request review comments are NOT the same as standard comments left on PRs - those are issue comments.</p>
+<p><strong>See Also:</strong></p>
+<ul>
+<li>
+<p><a href="https://developer.github.com/v3/pulls/comments/#create-a-comment">https://developer.github.com/v3/pulls/comments/#create-a-comment</a></p>
+</li>
+<li>
+<p>repo (String) — A GitHub repository</p>
+</li>
+<li>
+<p>number (Integer) — Pull request number</p>
+</li>
+<li>
+<p>body (String) — Comment content</p>
+</li>
+<li>
+<p>commit_id (String) — Sha of the commit to comment on</p>
+</li>
+<li>
+<p>path (String) — Relative path of the file to comment on</p>
+</li>
+<li>
+<p>line (Integer) — Line number in the diff to comment on</p>
+</li>
+<li>
+<p>side (String) — Side of the diff that the comment applies to (LEFT or RIGHT)</p>
+</li>
+<li>
+<p>start_line (Integer) — Start line for multi-line comments</p>
+</li>
+<li>
+<p>start_side (String) — Start side for multi-line comments (LEFT or RIGHT)</p>
+</li>
+<li>
+<p>in_reply_to (Integer) — ID of the review comment to reply to</p>
+</li>
+<li>
+<p>subject_type (String) — Level at which the comment is targeted (line or file)</p>
+</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<pre><code class="language-crystal"><span class="t">Octokit</span>.create_pull_request_comment(<span class="s">&quot;crystal-lang/crystal&quot;</span>, <span class="n">123</span>, <span class="s">&quot;Comment body&quot;</span>, <span class="s">&quot;commit_id&quot;</span>, <span class="s">&quot;path/to/file.txt&quot;</span>, <span class="n">1</span>, side: <span class="s">&quot;RIGHT&quot;</span>)</code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/0eb439d2b6b7bdf68cfaa1af8ec116f8acb0b1a8/src/octokit/client/pull_requests.cr#L237" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="create_pull_request_comment_reply(repo:String,number:Int64,body:String,in_reply_to:Int64,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>create_pull_request_comment_reply</strong>(repo : String, number : Int64, body : String, in_reply_to : Int64, **options)
+
+        <a class="method-permalink" href="#create_pull_request_comment_reply%28repo%3AString%2Cnumber%3AInt64%2Cbody%3AString%2Cin_reply_to%3AInt64%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Create a reply to a comment on a pull request</p>
+<p><strong>See Also:</strong></p>
+<ul>
+<li><a href="https://developer.github.com/v3/pulls/comments/#create-a-reply-to-a-comment">https://developer.github.com/v3/pulls/comments/#create-a-reply-to-a-comment</a></li>
+</ul>
+<p><strong>Examples:</strong></p>
+<pre><code class="language-crystal"><span class="t">Octokit</span>.create_pull_request_comment_reply(<span class="s">&quot;crystal-lang/crystal&quot;</span>, <span class="n">123</span>, <span class="s">&quot;Comment body&quot;</span>, <span class="n">456</span>)</code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/0eb439d2b6b7bdf68cfaa1af8ec116f8acb0b1a8/src/octokit/client/pull_requests.cr#L268" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="create_pull_request_for_issue(repo:String,base:String,head:String,issue:Int32,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>create_pull_request_for_issue</strong>(repo : String, base : String, head : String, issue : Int32, **options)
+
+        <a class="method-permalink" href="#create_pull_request_for_issue%28repo%3AString%2Cbase%3AString%2Chead%3AString%2Cissue%3AInt32%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Create a pull request for an issue</p>
+<p><strong>See Also:</strong></p>
+<ul>
+<li><a href="https://developer.github.com/v3/pulls/#create-a-pull-request">https://developer.github.com/v3/pulls/#create-a-pull-request</a></li>
+</ul>
+<p><strong>Examples:</strong></p>
+<pre><code class="language-crystal"><span class="t">Octokit</span>.create_pull_request_for_issue(<span class="s">&quot;crystal-lang/crystal&quot;</span>, <span class="s">&quot;master&quot;</span>, <span class="s">&quot;new-branch&quot;</span>, <span class="n">123</span>)</code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/0eb439d2b6b7bdf68cfaa1af8ec116f8acb0b1a8/src/octokit/client/pull_requests.cr#L95" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="delete_pull_request_comment(repo:String,comment_id:Int64,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>delete_pull_request_comment</strong>(repo : String, comment_id : Int64, **options)
+
+        <a class="method-permalink" href="#delete_pull_request_comment%28repo%3AString%2Ccomment_id%3AInt64%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Delete a comment on a pull request</p>
+<p><strong>See Also:</strong></p>
+<ul>
+<li><a href="https://developer.github.com/v3/pulls/comments/#delete-a-comment">https://developer.github.com/v3/pulls/comments/#delete-a-comment</a></li>
+</ul>
+<p><strong>Examples:</strong></p>
+<pre><code class="language-crystal"><span class="t">Octokit</span>.delete_pull_request_comment(<span class="s">&quot;crystal-lang/crystal&quot;</span>, <span class="n">456</span>)</code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/0eb439d2b6b7bdf68cfaa1af8ec116f8acb0b1a8/src/octokit/client/pull_requests.cr#L304" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="merge_pull_request(repo:String,number:Int64,commit_message:String,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>merge_pull_request</strong>(repo : String, number : Int64, commit_message : String, **options)
+
+        <a class="method-permalink" href="#merge_pull_request%28repo%3AString%2Cnumber%3AInt64%2Ccommit_message%3AString%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Merge a pull request</p>
+<p><strong>See Also:</strong></p>
+<ul>
+<li><a href="https://developer.github.com/v3/pulls/#merge-a-pull-request">https://developer.github.com/v3/pulls/#merge-a-pull-request</a></li>
+</ul>
+<p><strong>Examples:</strong></p>
+<pre><code class="language-crystal"><span class="t">Octokit</span>.merge_pull_request(<span class="s">&quot;crystal-lang/crystal&quot;</span>, <span class="n">123</span>, <span class="s">&quot;Commit message&quot;</span>)</code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/0eb439d2b6b7bdf68cfaa1af8ec116f8acb0b1a8/src/octokit/client/pull_requests.cr#L357" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pull_merged?(repo:String,number:Int64,**options):Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>pull_merged?</strong>(repo : String, number : Int64, **options) : Bool
+
+        <a class="method-permalink" href="#pull_merged%3F%28repo%3AString%2Cnumber%3AInt64%2C%2A%2Aoptions%29%3ABool-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Check if a pull request has been merged</p>
+<p><strong>See Also:</strong></p>
+<ul>
+<li><a href="https://developer.github.com/v3/pulls/#get-if-a-pull-request-has-been-merged">https://developer.github.com/v3/pulls/#get-if-a-pull-request-has-been-merged</a></li>
+</ul>
+<p><strong>Examples:</strong></p>
+<pre><code class="language-crystal"><span class="t">Octokit</span>.pull_merged?(<span class="s">&quot;crystal-lang/crystal&quot;</span>, <span class="n">123</span>)</code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/0eb439d2b6b7bdf68cfaa1af8ec116f8acb0b1a8/src/octokit/client/pull_requests.cr#L372" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pull_request_comment(repo:String,comment_id:Int64,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>pull_request_comment</strong>(repo : String, comment_id : Int64, **options)
+
+        <a class="method-permalink" href="#pull_request_comment%28repo%3AString%2Ccomment_id%3AInt64%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Get a single comment on a pull request</p>
+<p>This method applies to pull request review comments. Pull request review comments are NOT the same as standard comments left on PRs - those are issue comments.</p>
+<p><strong>See Also:</strong></p>
+<ul>
+<li><a href="https://developer.github.com/v3/pulls/comments/#get-a-single-comment">https://developer.github.com/v3/pulls/comments/#get-a-single-comment</a></li>
+</ul>
+<p><strong>Examples:</strong></p>
+<pre><code class="language-crystal"><span class="t">Octokit</span>.pull_request_comment(<span class="s">&quot;crystal-lang/crystal&quot;</span>, <span class="n">456</span>)</code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/0eb439d2b6b7bdf68cfaa1af8ec116f8acb0b1a8/src/octokit/client/pull_requests.cr#L206" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pull_request_comments(repo:String,number:Int64,**options):Paginator(PullRequestComment)-instance-method">
+      <div class="signature">
+        
+        def <strong>pull_request_comments</strong>(repo : String, number : Int64, **options) : <a href="../../Octokit/Connection/Paginator.html">Paginator</a>(PullRequestComment)
+
+        <a class="method-permalink" href="#pull_request_comments%28repo%3AString%2Cnumber%3AInt64%2C%2A%2Aoptions%29%3APaginator%28PullRequestComment%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>List comments on a pull request</p>
+<p>This method applies to pull request review comments. Pull request review comments are NOT the same as standard comments left on PRs - those are issue comments.</p>
+<p><strong>See Also:</strong></p>
+<ul>
+<li><a href="https://developer.github.com/v3/pulls/comments/#list-comments-on-a-pull-request">https://developer.github.com/v3/pulls/comments/#list-comments-on-a-pull-request</a></li>
+</ul>
+<p><strong>Examples:</strong></p>
+<pre><code class="language-crystal"><span class="t">Octokit</span>.pull_request_comments(<span class="s">&quot;crystal-lang/crystal&quot;</span>, <span class="n">123</span>)</code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/0eb439d2b6b7bdf68cfaa1af8ec116f8acb0b1a8/src/octokit/client/pull_requests.cr#L183" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pull_request_commits(repo:String,number:Int64,**options):Paginator(Commit)-instance-method">
+      <div class="signature">
+        
+        def <strong>pull_request_commits</strong>(repo : String, number : Int64, **options) : <a href="../../Octokit/Connection/Paginator.html">Paginator</a>(Commit)
+
+        <a class="method-permalink" href="#pull_request_commits%28repo%3AString%2Cnumber%3AInt64%2C%2A%2Aoptions%29%3APaginator%28Commit%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>List commits on a pull request</p>
+<p><strong>See Also:</strong></p>
+<ul>
+<li><a href="https://developer.github.com/v3/pulls/#list-commits-on-a-pull-request">https://developer.github.com/v3/pulls/#list-commits-on-a-pull-request</a></li>
+</ul>
+<p><strong>Examples:</strong></p>
+<pre><code class="language-crystal"><span class="t">Octokit</span>.pull_request_commits(<span class="s">&quot;crystal-lang/crystal&quot;</span>, <span class="n">123</span>)</code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/0eb439d2b6b7bdf68cfaa1af8ec116f8acb0b1a8/src/octokit/client/pull_requests.cr#L139" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pull_request_files(repo:String,number:Int64,**options):Paginator(CommitFile)-instance-method">
+      <div class="signature">
+        
+        def <strong>pull_request_files</strong>(repo : String, number : Int64, **options) : <a href="../../Octokit/Connection/Paginator.html">Paginator</a>(CommitFile)
+
+        <a class="method-permalink" href="#pull_request_files%28repo%3AString%2Cnumber%3AInt64%2C%2A%2Aoptions%29%3APaginator%28CommitFile%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>List files on a pull request</p>
+<p><strong>See Also:</strong></p>
+<ul>
+<li><a href="https://developer.github.com/v3/pulls/#list-pull-requests-files">https://developer.github.com/v3/pulls/#list-pull-requests-files</a></li>
+</ul>
+<p><strong>Examples:</strong></p>
+<pre><code class="language-crystal"><span class="t">Octokit</span>.pull_request_files(<span class="s">&quot;crystal-lang/crystal&quot;</span>, <span class="n">123</span>)</code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/0eb439d2b6b7bdf68cfaa1af8ec116f8acb0b1a8/src/octokit/client/pull_requests.cr#L321" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pull_requests(repo:String,**options):Paginator(PullRequest)-instance-method">
+      <div class="signature">
+        
+        def <strong>pull_requests</strong>(repo : String, **options) : <a href="../../Octokit/Connection/Paginator.html">Paginator</a>(PullRequest)
+
+        <a class="method-permalink" href="#pull_requests%28repo%3AString%2C%2A%2Aoptions%29%3APaginator%28PullRequest%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>List pull requests for a repository</p>
+<p><strong>See Also:</strong></p>
+<ul>
+<li><a href="https://developer.github.com/v3/pulls/#list-pull-requests">https://developer.github.com/v3/pulls/#list-pull-requests</a></li>
+</ul>
+<p><strong>Examples:</strong></p>
+<pre><code class="language-crystal"><span class="t">Octokit</span>.pull_requests(<span class="s">&quot;crystal-lang/crystal&quot;</span>)
+<span class="t">Octokit</span>.pull_requests(<span class="s">&quot;crystal-lang/crystal&quot;</span>, state: <span class="s">&quot;closed&quot;</span>)</code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/0eb439d2b6b7bdf68cfaa1af8ec116f8acb0b1a8/src/octokit/client/pull_requests.cr#L59" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pull_requests_comments(repo:String,number:Int64,**options):Paginator(PullRequestComment)-instance-method">
+      <div class="signature">
+        
+        def <strong>pull_requests_comments</strong>(repo : String, number : Int64, **options) : <a href="../../Octokit/Connection/Paginator.html">Paginator</a>(PullRequestComment)
+
+        <a class="method-permalink" href="#pull_requests_comments%28repo%3AString%2Cnumber%3AInt64%2C%2A%2Aoptions%29%3APaginator%28PullRequestComment%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>List review comments on a pull request</p>
+<p>This method applies to pull request review comments. Pull request review comments are NOT the same as standard comments left on PRs - those are issue comments.</p>
+<p><strong>See Also:</strong></p>
+<ul>
+<li><a href="https://developer.github.com/v3/pulls/comments/#list-comments-on-a-pull-request">https://developer.github.com/v3/pulls/comments/#list-comments-on-a-pull-request</a></li>
+</ul>
+<p><strong>Examples:</strong></p>
+<pre><code class="language-crystal"><span class="t">Octokit</span>.pull_requests_comments(<span class="s">&quot;crystal-lang/crystal&quot;</span>, <span class="n">123</span>)</code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/0eb439d2b6b7bdf68cfaa1af8ec116f8acb0b1a8/src/octokit/client/pull_requests.cr#L161" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="update_pull_request(repo:String,number:Int64,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>update_pull_request</strong>(repo : String, number : Int64, **options)
+
+        <a class="method-permalink" href="#update_pull_request%28repo%3AString%2Cnumber%3AInt64%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Update a pull request</p>
+<p><strong>See Also:</strong></p>
+<ul>
+<li><a href="https://developer.github.com/v3/pulls/#update-a-pull-request">https://developer.github.com/v3/pulls/#update-a-pull-request</a></li>
+</ul>
+<p><strong>Examples:</strong></p>
+<pre><code class="language-crystal"><span class="t">Octokit</span>.update_pull_request(<span class="s">&quot;crystal-lang/crystal&quot;</span>, <span class="n">123</span>, title: <span class="s">&quot;New Title&quot;</span>, body: <span class="s">&quot;New Body&quot;</span>)</code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/0eb439d2b6b7bdf68cfaa1af8ec116f8acb0b1a8/src/octokit/client/pull_requests.cr#L110" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="update_pull_request_branch(repo:String,number:Int64,**options):Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>update_pull_request_branch</strong>(repo : String, number : Int64, **options) : Bool
+
+        <a class="method-permalink" href="#update_pull_request_branch%28repo%3AString%2Cnumber%3AInt64%2C%2A%2Aoptions%29%3ABool-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Update a pull request branch</p>
+<p><strong>See Also:</strong></p>
+<ul>
+<li><a href="https://developer.github.com/v3/pulls/#update-a-pull-request-branch">https://developer.github.com/v3/pulls/#update-a-pull-request-branch</a></li>
+</ul>
+<p><strong>Examples:</strong></p>
+<pre><code class="language-crystal"><span class="t">Octokit</span>.update_pull_request_branch(<span class="s">&quot;crystal-lang/crystal&quot;</span>, <span class="n">123</span>)</code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/0eb439d2b6b7bdf68cfaa1af8ec116f8acb0b1a8/src/octokit/client/pull_requests.cr#L340" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="update_pull_request_comment(repo:String,comment_id:Int64,body:String,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>update_pull_request_comment</strong>(repo : String, comment_id : Int64, body : String, **options)
+
+        <a class="method-permalink" href="#update_pull_request_comment%28repo%3AString%2Ccomment_id%3AInt64%2Cbody%3AString%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Update a comment on a pull request</p>
+<p><strong>See Also:</strong></p>
+<ul>
+<li><a href="https://developer.github.com/v3/pulls/comments/#update-a-comment">https://developer.github.com/v3/pulls/comments/#update-a-comment</a></li>
+</ul>
+<p><strong>Examples:</strong></p>
+<pre><code class="language-crystal"><span class="t">Octokit</span>.update_pull_request_comment(<span class="s">&quot;crystal-lang/crystal&quot;</span>, <span class="n">456</span>, <span class="s">&quot;New comment body&quot;</span>)</code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/0eb439d2b6b7bdf68cfaa1af8ec116f8acb0b1a8/src/octokit/client/pull_requests.cr#L286" target="_blank">View source</a>]
         
       </div>
     </div>

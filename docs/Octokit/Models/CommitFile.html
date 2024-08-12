@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Crystal Docs 1.11.2">
+<meta name="generator" content="Crystal Docs 1.10.1">
 <meta name="crystal_docs.project_version" content="main">
 <meta name="crystal_docs.project_name" content="octokit">
 
@@ -119,6 +119,11 @@
   
   <li class=" " data-id="octokit/Octokit/Client/PubSubHubbub" data-name="octokit::client::pubsubhubbub">
       <a href="../../Octokit/Client/PubSubHubbub.html">PubSubHubbub</a>
+      
+    </li>
+  
+  <li class=" " data-id="octokit/Octokit/Client/PullRequests" data-name="octokit::client::pullrequests">
+      <a href="../../Octokit/Client/PullRequests.html">PullRequests</a>
       
     </li>
   
@@ -1939,7 +1944,7 @@
   </h2>
   
     
-      <a href="https://github.com/octokit-cr/octokit.cr/blob/28eaf282f7220c24fb7f2c0f4cd7679880eda9c8/src/octokit/models/repo_commits.cr#L28" target="_blank">
+      <a href="https://github.com/octokit-cr/octokit.cr/blob/0eb439d2b6b7bdf68cfaa1af8ec116f8acb0b1a8/src/octokit/models/repo_commits.cr#L28" target="_blank">
         octokit/models/repo_commits.cr
       </a>
     
@@ -1961,12 +1966,12 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28sha%3AString%2Cfilename%3AString%2Cadditions%3AInt32%2Cdeletions%3AInt32%2Cchanges%3AInt32%2Cstatus%3AString%2Cpatch%3AString%2Cblob_url%3AString%2Craw_url%3AString%2Ccontents_url%3AString%2Cprevious_filename%3AString%29-class-method" class="signature"><strong>.new</strong>(sha : String, filename : String, additions : Int32, deletions : Int32, changes : Int32, status : String, patch : String, blob_url : String, raw_url : String, contents_url : String, previous_filename : String)</a>
+        <a href="#new%28sha%3AString%2Cfilename%3AString%2Cadditions%3AInt32%2Cdeletions%3AInt32%2Cchanges%3AInt32%2Cstatus%3AString%2Cpatch%3AUnion%28String%2CNil%29%2Cblob_url%3AString%2Craw_url%3AString%2Ccontents_url%3AString%2Cprevious_filename%3AUnion%28String%2CNil%29%29-class-method" class="signature"><strong>.new</strong>(sha : String, filename : String, additions : Int32, deletions : Int32, changes : Int32, status : String, patch : Union(String, Nil), blob_url : String, raw_url : String, contents_url : String, previous_filename : Union(String, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28__temp_3519%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_3519 : JSON::PullParser)</a>
+        <a href="#new%28__temp_3520%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_3520 : JSON::PullParser)</a>
         
       </li>
     
@@ -2049,22 +2054,22 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#patch%3AString-instance-method" class="signature"><strong>#patch</strong> : String</a>
+        <a href="#patch%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#patch</strong> : Union(String, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#patch%3D%28_patch%3AString%29-instance-method" class="signature"><strong>#patch=</strong>(_patch : String)</a>
+        <a href="#patch%3D%28_patch%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#patch=</strong>(_patch : Union(String, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#previous_filename%3AString-instance-method" class="signature"><strong>#previous_filename</strong> : String</a>
+        <a href="#previous_filename%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#previous_filename</strong> : Union(String, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#previous_filename%3D%28_previous_filename%3AString%29-instance-method" class="signature"><strong>#previous_filename=</strong>(_previous_filename : String)</a>
+        <a href="#previous_filename%3D%28_previous_filename%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#previous_filename=</strong>(_previous_filename : Union(String, Nil))</a>
         
       </li>
     
@@ -2160,12 +2165,12 @@
     Constructor Detail
   </h2>
   
-    <div class="entry-detail" id="new(sha:String,filename:String,additions:Int32,deletions:Int32,changes:Int32,status:String,patch:String,blob_url:String,raw_url:String,contents_url:String,previous_filename:String)-class-method">
+    <div class="entry-detail" id="new(sha:String,filename:String,additions:Int32,deletions:Int32,changes:Int32,status:String,patch:Union(String,Nil),blob_url:String,raw_url:String,contents_url:String,previous_filename:Union(String,Nil))-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(sha : String, filename : String, additions : Int32, deletions : Int32, changes : Int32, status : String, patch : String, blob_url : String, raw_url : String, contents_url : String, previous_filename : String)
+        def self.<strong>new</strong>(sha : String, filename : String, additions : Int32, deletions : Int32, changes : Int32, status : String, patch : Union(String, Nil), blob_url : String, raw_url : String, contents_url : String, previous_filename : Union(String, Nil))
 
-        <a class="method-permalink" href="#new%28sha%3AString%2Cfilename%3AString%2Cadditions%3AInt32%2Cdeletions%3AInt32%2Cchanges%3AInt32%2Cstatus%3AString%2Cpatch%3AString%2Cblob_url%3AString%2Craw_url%3AString%2Ccontents_url%3AString%2Cprevious_filename%3AString%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28sha%3AString%2Cfilename%3AString%2Cadditions%3AInt32%2Cdeletions%3AInt32%2Cchanges%3AInt32%2Cstatus%3AString%2Cpatch%3AUnion%28String%2CNil%29%2Cblob_url%3AString%2Craw_url%3AString%2Ccontents_url%3AString%2Cprevious_filename%3AUnion%28String%2CNil%29%29-class-method">#</a>
       </div>
       
       <br/>
@@ -2174,12 +2179,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="new(__temp_3519:JSON::PullParser)-class-method">
+    <div class="entry-detail" id="new(__temp_3520:JSON::PullParser)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(__temp_3519 : JSON::PullParser)
+        def self.<strong>new</strong>(__temp_3520 : JSON::PullParser)
 
-        <a class="method-permalink" href="#new%28__temp_3519%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28__temp_3520%3AJSON%3A%3APullParser%29-class-method">#</a>
       </div>
       
       <br/>
@@ -2372,12 +2377,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="patch:String-instance-method">
+    <div class="entry-detail" id="patch:Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>patch</strong> : String
+        def <strong>patch</strong> : Union(String, Nil)
 
-        <a class="method-permalink" href="#patch%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#patch%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2386,12 +2391,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="patch=(_patch:String)-instance-method">
+    <div class="entry-detail" id="patch=(_patch:Union(String,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>patch=</strong>(_patch : String)
+        def <strong>patch=</strong>(_patch : Union(String, Nil))
 
-        <a class="method-permalink" href="#patch%3D%28_patch%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#patch%3D%28_patch%3AUnion%28String%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2400,12 +2405,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="previous_filename:String-instance-method">
+    <div class="entry-detail" id="previous_filename:Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>previous_filename</strong> : String
+        def <strong>previous_filename</strong> : Union(String, Nil)
 
-        <a class="method-permalink" href="#previous_filename%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#previous_filename%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2414,12 +2419,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="previous_filename=(_previous_filename:String)-instance-method">
+    <div class="entry-detail" id="previous_filename=(_previous_filename:Union(String,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>previous_filename=</strong>(_previous_filename : String)
+        def <strong>previous_filename=</strong>(_previous_filename : Union(String, Nil))
 
-        <a class="method-permalink" href="#previous_filename%3D%28_previous_filename%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#previous_filename%3D%28_previous_filename%3AUnion%28String%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>

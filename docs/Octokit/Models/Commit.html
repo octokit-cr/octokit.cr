@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Crystal Docs 1.11.2">
+<meta name="generator" content="Crystal Docs 1.10.1">
 <meta name="crystal_docs.project_version" content="main">
 <meta name="crystal_docs.project_name" content="octokit">
 
@@ -119,6 +119,11 @@
   
   <li class=" " data-id="octokit/Octokit/Client/PubSubHubbub" data-name="octokit::client::pubsubhubbub">
       <a href="../../Octokit/Client/PubSubHubbub.html">PubSubHubbub</a>
+      
+    </li>
+  
+  <li class=" " data-id="octokit/Octokit/Client/PullRequests" data-name="octokit::client::pullrequests">
+      <a href="../../Octokit/Client/PullRequests.html">PullRequests</a>
       
     </li>
   
@@ -1939,7 +1944,7 @@
   </h2>
   
     
-      <a href="https://github.com/octokit-cr/octokit.cr/blob/28eaf282f7220c24fb7f2c0f4cd7679880eda9c8/src/octokit/models/commits.cr#L12" target="_blank">
+      <a href="https://github.com/octokit-cr/octokit.cr/blob/0eb439d2b6b7bdf68cfaa1af8ec116f8acb0b1a8/src/octokit/models/commits.cr#L12" target="_blank">
         octokit/models/commits.cr
       </a>
     
@@ -1961,12 +1966,12 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28sha%3AString%2Cauthor%3ACommitAuthor%2Ccommitter%3ACommitAuthor%2Cmessage%3AString%2Ctree%3ATree%2Cparents%3AArray%28Commit%29%2Cstats%3ACommitStats%2Chtml_url%3AString%2Curl%3AString%2Cverification%3ASignatureVerification%2Cnode_id%3AString%29-class-method" class="signature"><strong>.new</strong>(sha : String, author : CommitAuthor, committer : CommitAuthor, message : String, tree : Tree, parents : Array(Commit), stats : CommitStats, html_url : String, url : String, verification : SignatureVerification, node_id : String)</a>
+        <a href="#new%28sha%3AString%2Cauthor%3AUnion%28CommitAuthor%2CNil%29%2Ccommitter%3AUnion%28CommitAuthor%2CNil%29%2Cmessage%3AUnion%28String%2CNil%29%2Ctree%3AUnion%28Tree%2CNil%29%2Cparents%3AUnion%28Array%28Commit%29%2CNil%29%2Cstats%3AUnion%28CommitStats%2CNil%29%2Chtml_url%3AString%2Curl%3AString%2Cverification%3AUnion%28SignatureVerification%2CNil%29%2Cnode_id%3AUnion%28String%2CNil%29%29-class-method" class="signature"><strong>.new</strong>(sha : String, author : Union(CommitAuthor, Nil), committer : Union(CommitAuthor, Nil), message : Union(String, Nil), tree : Union(Tree, Nil), parents : Union(Array(Commit), Nil), stats : Union(CommitStats, Nil), html_url : String, url : String, verification : Union(SignatureVerification, Nil), node_id : Union(String, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28__temp_1210%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_1210 : JSON::PullParser)</a>
+        <a href="#new%28__temp_1211%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_1211 : JSON::PullParser)</a>
         
       </li>
     
@@ -1989,22 +1994,22 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#author%3ACommitAuthor-instance-method" class="signature"><strong>#author</strong> : CommitAuthor</a>
+        <a href="#author%3AUnion%28CommitAuthor%2CNil%29-instance-method" class="signature"><strong>#author</strong> : Union(CommitAuthor, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#author%3D%28_author%3ACommitAuthor%29-instance-method" class="signature"><strong>#author=</strong>(_author : CommitAuthor)</a>
+        <a href="#author%3D%28_author%3AUnion%28CommitAuthor%2CNil%29%29-instance-method" class="signature"><strong>#author=</strong>(_author : Union(CommitAuthor, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#committer%3ACommitAuthor-instance-method" class="signature"><strong>#committer</strong> : CommitAuthor</a>
+        <a href="#committer%3AUnion%28CommitAuthor%2CNil%29-instance-method" class="signature"><strong>#committer</strong> : Union(CommitAuthor, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#committer%3D%28_committer%3ACommitAuthor%29-instance-method" class="signature"><strong>#committer=</strong>(_committer : CommitAuthor)</a>
+        <a href="#committer%3D%28_committer%3AUnion%28CommitAuthor%2CNil%29%29-instance-method" class="signature"><strong>#committer=</strong>(_committer : Union(CommitAuthor, Nil))</a>
         
       </li>
     
@@ -2019,32 +2024,32 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#message%3AString-instance-method" class="signature"><strong>#message</strong> : String</a>
+        <a href="#message%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#message</strong> : Union(String, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#message%3D%28_message%3AString%29-instance-method" class="signature"><strong>#message=</strong>(_message : String)</a>
+        <a href="#message%3D%28_message%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#message=</strong>(_message : Union(String, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#node_id%3AString-instance-method" class="signature"><strong>#node_id</strong> : String</a>
+        <a href="#node_id%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#node_id</strong> : Union(String, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#node_id%3D%28_node_id%3AString%29-instance-method" class="signature"><strong>#node_id=</strong>(_node_id : String)</a>
+        <a href="#node_id%3D%28_node_id%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#node_id=</strong>(_node_id : Union(String, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#parents%3AArray%28Commit%29-instance-method" class="signature"><strong>#parents</strong> : Array(Commit)</a>
+        <a href="#parents%3AUnion%28Array%28Commit%29%2CNil%29-instance-method" class="signature"><strong>#parents</strong> : Union(Array(Commit), Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#parents%3D%28_parents%3AArray%28Commit%29%29-instance-method" class="signature"><strong>#parents=</strong>(_parents : Array(Commit))</a>
+        <a href="#parents%3D%28_parents%3AUnion%28Array%28Commit%29%2CNil%29%29-instance-method" class="signature"><strong>#parents=</strong>(_parents : Union(Array(Commit), Nil))</a>
         
       </li>
     
@@ -2059,12 +2064,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#stats%3ACommitStats-instance-method" class="signature"><strong>#stats</strong> : CommitStats</a>
+        <a href="#stats%3AUnion%28CommitStats%2CNil%29-instance-method" class="signature"><strong>#stats</strong> : Union(CommitStats, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#stats%3D%28_stats%3ACommitStats%29-instance-method" class="signature"><strong>#stats=</strong>(_stats : CommitStats)</a>
+        <a href="#stats%3D%28_stats%3AUnion%28CommitStats%2CNil%29%29-instance-method" class="signature"><strong>#stats=</strong>(_stats : Union(CommitStats, Nil))</a>
         
       </li>
     
@@ -2074,12 +2079,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#tree%3ATree-instance-method" class="signature"><strong>#tree</strong> : Tree</a>
+        <a href="#tree%3AUnion%28Tree%2CNil%29-instance-method" class="signature"><strong>#tree</strong> : Union(Tree, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#tree%3D%28_tree%3ATree%29-instance-method" class="signature"><strong>#tree=</strong>(_tree : Tree)</a>
+        <a href="#tree%3D%28_tree%3AUnion%28Tree%2CNil%29%29-instance-method" class="signature"><strong>#tree=</strong>(_tree : Union(Tree, Nil))</a>
         
       </li>
     
@@ -2094,12 +2099,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#verification%3ASignatureVerification-instance-method" class="signature"><strong>#verification</strong> : SignatureVerification</a>
+        <a href="#verification%3AUnion%28SignatureVerification%2CNil%29-instance-method" class="signature"><strong>#verification</strong> : Union(SignatureVerification, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#verification%3D%28_verification%3ASignatureVerification%29-instance-method" class="signature"><strong>#verification=</strong>(_verification : SignatureVerification)</a>
+        <a href="#verification%3D%28_verification%3AUnion%28SignatureVerification%2CNil%29%29-instance-method" class="signature"><strong>#verification=</strong>(_verification : Union(SignatureVerification, Nil))</a>
         
       </li>
     
@@ -2160,12 +2165,12 @@
     Constructor Detail
   </h2>
   
-    <div class="entry-detail" id="new(sha:String,author:CommitAuthor,committer:CommitAuthor,message:String,tree:Tree,parents:Array(Commit),stats:CommitStats,html_url:String,url:String,verification:SignatureVerification,node_id:String)-class-method">
+    <div class="entry-detail" id="new(sha:String,author:Union(CommitAuthor,Nil),committer:Union(CommitAuthor,Nil),message:Union(String,Nil),tree:Union(Tree,Nil),parents:Union(Array(Commit),Nil),stats:Union(CommitStats,Nil),html_url:String,url:String,verification:Union(SignatureVerification,Nil),node_id:Union(String,Nil))-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(sha : String, author : <a href="../../Octokit/Models/CommitAuthor.html">CommitAuthor</a>, committer : <a href="../../Octokit/Models/CommitAuthor.html">CommitAuthor</a>, message : String, tree : <a href="../../Octokit/Models/Tree.html">Tree</a>, parents : Array(<a href="../../Octokit/Models/Commit.html">Commit</a>), stats : <a href="../../Octokit/Models/CommitStats.html">CommitStats</a>, html_url : String, url : String, verification : <a href="../../Octokit/Models/SignatureVerification.html">SignatureVerification</a>, node_id : String)
+        def self.<strong>new</strong>(sha : String, author : Union(<a href="../../Octokit/Models/CommitAuthor.html">CommitAuthor</a>, Nil), committer : Union(<a href="../../Octokit/Models/CommitAuthor.html">CommitAuthor</a>, Nil), message : Union(String, Nil), tree : Union(<a href="../../Octokit/Models/Tree.html">Tree</a>, Nil), parents : Union(Array(<a href="../../Octokit/Models/Commit.html">Commit</a>), Nil), stats : Union(<a href="../../Octokit/Models/CommitStats.html">CommitStats</a>, Nil), html_url : String, url : String, verification : Union(<a href="../../Octokit/Models/SignatureVerification.html">SignatureVerification</a>, Nil), node_id : Union(String, Nil))
 
-        <a class="method-permalink" href="#new%28sha%3AString%2Cauthor%3ACommitAuthor%2Ccommitter%3ACommitAuthor%2Cmessage%3AString%2Ctree%3ATree%2Cparents%3AArray%28Commit%29%2Cstats%3ACommitStats%2Chtml_url%3AString%2Curl%3AString%2Cverification%3ASignatureVerification%2Cnode_id%3AString%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28sha%3AString%2Cauthor%3AUnion%28CommitAuthor%2CNil%29%2Ccommitter%3AUnion%28CommitAuthor%2CNil%29%2Cmessage%3AUnion%28String%2CNil%29%2Ctree%3AUnion%28Tree%2CNil%29%2Cparents%3AUnion%28Array%28Commit%29%2CNil%29%2Cstats%3AUnion%28CommitStats%2CNil%29%2Chtml_url%3AString%2Curl%3AString%2Cverification%3AUnion%28SignatureVerification%2CNil%29%2Cnode_id%3AUnion%28String%2CNil%29%29-class-method">#</a>
       </div>
       
       <br/>
@@ -2174,12 +2179,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="new(__temp_1210:JSON::PullParser)-class-method">
+    <div class="entry-detail" id="new(__temp_1211:JSON::PullParser)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(__temp_1210 : JSON::PullParser)
+        def self.<strong>new</strong>(__temp_1211 : JSON::PullParser)
 
-        <a class="method-permalink" href="#new%28__temp_1210%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28__temp_1211%3AJSON%3A%3APullParser%29-class-method">#</a>
       </div>
       
       <br/>
@@ -2204,12 +2209,12 @@
     Instance Method Detail
   </h2>
   
-    <div class="entry-detail" id="author:CommitAuthor-instance-method">
+    <div class="entry-detail" id="author:Union(CommitAuthor,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>author</strong> : <a href="../../Octokit/Models/CommitAuthor.html">CommitAuthor</a>
+        def <strong>author</strong> : Union(<a href="../../Octokit/Models/CommitAuthor.html">CommitAuthor</a>, Nil)
 
-        <a class="method-permalink" href="#author%3ACommitAuthor-instance-method">#</a>
+        <a class="method-permalink" href="#author%3AUnion%28CommitAuthor%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2218,12 +2223,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="author=(_author:CommitAuthor)-instance-method">
+    <div class="entry-detail" id="author=(_author:Union(CommitAuthor,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>author=</strong>(_author : <a href="../../Octokit/Models/CommitAuthor.html">CommitAuthor</a>)
+        def <strong>author=</strong>(_author : Union(<a href="../../Octokit/Models/CommitAuthor.html">CommitAuthor</a>, Nil))
 
-        <a class="method-permalink" href="#author%3D%28_author%3ACommitAuthor%29-instance-method">#</a>
+        <a class="method-permalink" href="#author%3D%28_author%3AUnion%28CommitAuthor%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2232,12 +2237,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="committer:CommitAuthor-instance-method">
+    <div class="entry-detail" id="committer:Union(CommitAuthor,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>committer</strong> : <a href="../../Octokit/Models/CommitAuthor.html">CommitAuthor</a>
+        def <strong>committer</strong> : Union(<a href="../../Octokit/Models/CommitAuthor.html">CommitAuthor</a>, Nil)
 
-        <a class="method-permalink" href="#committer%3ACommitAuthor-instance-method">#</a>
+        <a class="method-permalink" href="#committer%3AUnion%28CommitAuthor%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2246,12 +2251,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="committer=(_committer:CommitAuthor)-instance-method">
+    <div class="entry-detail" id="committer=(_committer:Union(CommitAuthor,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>committer=</strong>(_committer : <a href="../../Octokit/Models/CommitAuthor.html">CommitAuthor</a>)
+        def <strong>committer=</strong>(_committer : Union(<a href="../../Octokit/Models/CommitAuthor.html">CommitAuthor</a>, Nil))
 
-        <a class="method-permalink" href="#committer%3D%28_committer%3ACommitAuthor%29-instance-method">#</a>
+        <a class="method-permalink" href="#committer%3D%28_committer%3AUnion%28CommitAuthor%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2288,12 +2293,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="message:String-instance-method">
+    <div class="entry-detail" id="message:Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>message</strong> : String
+        def <strong>message</strong> : Union(String, Nil)
 
-        <a class="method-permalink" href="#message%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#message%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2302,12 +2307,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="message=(_message:String)-instance-method">
+    <div class="entry-detail" id="message=(_message:Union(String,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>message=</strong>(_message : String)
+        def <strong>message=</strong>(_message : Union(String, Nil))
 
-        <a class="method-permalink" href="#message%3D%28_message%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#message%3D%28_message%3AUnion%28String%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2316,12 +2321,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="node_id:String-instance-method">
+    <div class="entry-detail" id="node_id:Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>node_id</strong> : String
+        def <strong>node_id</strong> : Union(String, Nil)
 
-        <a class="method-permalink" href="#node_id%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#node_id%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2330,12 +2335,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="node_id=(_node_id:String)-instance-method">
+    <div class="entry-detail" id="node_id=(_node_id:Union(String,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>node_id=</strong>(_node_id : String)
+        def <strong>node_id=</strong>(_node_id : Union(String, Nil))
 
-        <a class="method-permalink" href="#node_id%3D%28_node_id%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#node_id%3D%28_node_id%3AUnion%28String%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2344,12 +2349,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="parents:Array(Commit)-instance-method">
+    <div class="entry-detail" id="parents:Union(Array(Commit),Nil)-instance-method">
       <div class="signature">
         
-        def <strong>parents</strong> : Array(<a href="../../Octokit/Models/Commit.html">Commit</a>)
+        def <strong>parents</strong> : Union(Array(<a href="../../Octokit/Models/Commit.html">Commit</a>), Nil)
 
-        <a class="method-permalink" href="#parents%3AArray%28Commit%29-instance-method">#</a>
+        <a class="method-permalink" href="#parents%3AUnion%28Array%28Commit%29%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2358,12 +2363,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="parents=(_parents:Array(Commit))-instance-method">
+    <div class="entry-detail" id="parents=(_parents:Union(Array(Commit),Nil))-instance-method">
       <div class="signature">
         
-        def <strong>parents=</strong>(_parents : Array(<a href="../../Octokit/Models/Commit.html">Commit</a>))
+        def <strong>parents=</strong>(_parents : Union(Array(<a href="../../Octokit/Models/Commit.html">Commit</a>), Nil))
 
-        <a class="method-permalink" href="#parents%3D%28_parents%3AArray%28Commit%29%29-instance-method">#</a>
+        <a class="method-permalink" href="#parents%3D%28_parents%3AUnion%28Array%28Commit%29%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2400,12 +2405,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="stats:CommitStats-instance-method">
+    <div class="entry-detail" id="stats:Union(CommitStats,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>stats</strong> : <a href="../../Octokit/Models/CommitStats.html">CommitStats</a>
+        def <strong>stats</strong> : Union(<a href="../../Octokit/Models/CommitStats.html">CommitStats</a>, Nil)
 
-        <a class="method-permalink" href="#stats%3ACommitStats-instance-method">#</a>
+        <a class="method-permalink" href="#stats%3AUnion%28CommitStats%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2414,12 +2419,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="stats=(_stats:CommitStats)-instance-method">
+    <div class="entry-detail" id="stats=(_stats:Union(CommitStats,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>stats=</strong>(_stats : <a href="../../Octokit/Models/CommitStats.html">CommitStats</a>)
+        def <strong>stats=</strong>(_stats : Union(<a href="../../Octokit/Models/CommitStats.html">CommitStats</a>, Nil))
 
-        <a class="method-permalink" href="#stats%3D%28_stats%3ACommitStats%29-instance-method">#</a>
+        <a class="method-permalink" href="#stats%3D%28_stats%3AUnion%28CommitStats%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2442,12 +2447,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="tree:Tree-instance-method">
+    <div class="entry-detail" id="tree:Union(Tree,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>tree</strong> : <a href="../../Octokit/Models/Tree.html">Tree</a>
+        def <strong>tree</strong> : Union(<a href="../../Octokit/Models/Tree.html">Tree</a>, Nil)
 
-        <a class="method-permalink" href="#tree%3ATree-instance-method">#</a>
+        <a class="method-permalink" href="#tree%3AUnion%28Tree%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2456,12 +2461,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="tree=(_tree:Tree)-instance-method">
+    <div class="entry-detail" id="tree=(_tree:Union(Tree,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>tree=</strong>(_tree : <a href="../../Octokit/Models/Tree.html">Tree</a>)
+        def <strong>tree=</strong>(_tree : Union(<a href="../../Octokit/Models/Tree.html">Tree</a>, Nil))
 
-        <a class="method-permalink" href="#tree%3D%28_tree%3ATree%29-instance-method">#</a>
+        <a class="method-permalink" href="#tree%3D%28_tree%3AUnion%28Tree%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2498,12 +2503,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="verification:SignatureVerification-instance-method">
+    <div class="entry-detail" id="verification:Union(SignatureVerification,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>verification</strong> : <a href="../../Octokit/Models/SignatureVerification.html">SignatureVerification</a>
+        def <strong>verification</strong> : Union(<a href="../../Octokit/Models/SignatureVerification.html">SignatureVerification</a>, Nil)
 
-        <a class="method-permalink" href="#verification%3ASignatureVerification-instance-method">#</a>
+        <a class="method-permalink" href="#verification%3AUnion%28SignatureVerification%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2512,12 +2517,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="verification=(_verification:SignatureVerification)-instance-method">
+    <div class="entry-detail" id="verification=(_verification:Union(SignatureVerification,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>verification=</strong>(_verification : <a href="../../Octokit/Models/SignatureVerification.html">SignatureVerification</a>)
+        def <strong>verification=</strong>(_verification : Union(<a href="../../Octokit/Models/SignatureVerification.html">SignatureVerification</a>, Nil))
 
-        <a class="method-permalink" href="#verification%3D%28_verification%3ASignatureVerification%29-instance-method">#</a>
+        <a class="method-permalink" href="#verification%3D%28_verification%3AUnion%28SignatureVerification%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
