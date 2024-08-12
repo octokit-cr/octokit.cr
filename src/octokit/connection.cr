@@ -17,7 +17,7 @@ module Octokit
     CONVENIENCE_HEADERS = Set{"accept", "content_type"}
 
     # Successful status codes from PUT/POST/PATCH requests
-    SUCCESSFUL_STATUSES = [200, 201, 202, 204] 
+    SUCCESSFUL_STATUSES = [201, 202, 204] 
 
     # Make a HTTP GET request
     def get(url, options = nil)
