@@ -147,7 +147,7 @@ module Octokit
       alias_method :pull_request_commits, :pull_commits
 
       # List review comments on a pull request
-      # This method applies to pull request review comments
+      # This method applies to pull request review comments. Pull request review comments are NOT the same as standard comments left on PRs - those are issue comments.
       # **See Also:**
       # - [https://developer.github.com/v3/pulls/comments/#list-comments-on-a-pull-request](https://developer.github.com/v3/pulls/comments/#list-comments-on-a-pull-request)
       #
