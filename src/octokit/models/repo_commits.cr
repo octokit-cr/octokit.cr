@@ -33,7 +33,7 @@ module Octokit
         deletions: Int32,
         changes: Int32,
         status: String,
-        patch: String,
+        patch: String?,
         blob_url: String,
         raw_url: String,
         contents_url: String,
