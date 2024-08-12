@@ -69,7 +69,7 @@ module Octokit
       # Octokit.close_pull_request("crystal-lang/crystal", 123)
       # ```
       # def close_pull_request(repo : String, number : Int64, **options)
-        # TODO
+      # TODO
       # end
 
       # Update a pull request branch
@@ -80,7 +80,7 @@ module Octokit
       # **Examples:**
       # ```
       # Octokit.update_pull_request_branch("crystal-lang/crystal", 123)
-      # ``` 
+      # ```
       def update_pull_request_branch(repo : String, number : Int64, **options) : Bool
         boolean_from_response(
           :put,
