@@ -117,7 +117,7 @@ module Octokit
       @agent = nil
     end
 
-    protected def request(method, path, options = nil)
+    protected def request(method : Symbol, path : String, options = nil)
       path = File.join(endpoint, path) unless path.nil? || path.starts_with?("http")
       options = options ? @connection_options.merge(options) : @connection_options
       @last_response = response = agent.request(verb: method.to_s, uri: path, options: options)
@@ -125,7 +125,7 @@ module Octokit
       response.body
     end
 
-    protected def request(method, path, options = nil, &)
+    protected def request(method : Symbol, path : String, options = nil, &)
       path = File.join(endpoint, path) unless path.nil? || path.starts_with?("http")
       options = options ? @connection_options.merge(options) : @connection_options
       @last_response = response = agent.request(verb: method, uri: path, options: options)
@@ -135,8 +135,8 @@ module Octokit
     end
 
     # Executes the request, checking if it was successful
-    protected def boolean_from_response(method, path, options = nil)
-      request(method, path, options)
+    protected def boolean_from_response(method : Symbol, path : String, options = nil)
+      request(method, path, make_options(options))
       @last_response.not_nil!.status_code.in?(SUCCESSFUL_STATUSES)
     rescue Error::NotFound
       false
@@ -149,7 +149,7 @@ module Octokit
       end
     end
 
-    protected def make_options(options)
+    protected def make_options(options) : Halite::Options?
       return if options.nil?
       options.is_a?(Halite::Options) ? options : Halite::Options.new(**options)
     end
