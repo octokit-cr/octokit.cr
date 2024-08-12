@@ -206,13 +206,38 @@ module Octokit
       # **See Also:**
       # - [https://developer.github.com/v3/pulls/comments/#create-a-comment](https://developer.github.com/v3/pulls/comments/#create-a-comment)
       #
+      # repo (String) — A GitHub repository
+      # number (Integer) — Pull request number
+      # body (String) — Comment content
+      # commit_id (String) — Sha of the commit to comment on
+      # path (String) — Relative path of the file to comment on
+      # line (Integer) — Line number in the diff to comment on
+      # side (String) — Side of the diff that the comment applies to (LEFT or RIGHT)
+      # start_line (Integer) — Start line for multi-line comments
+      # start_side (String) — Start side for multi-line comments (LEFT or RIGHT)
+      # in_reply_to (Integer) — ID of the review comment to reply to
+      # subject_type (String) — Level at which the comment is targeted (line or file)
+      #
       # **Examples:**
       #
       # ```
-      # Octokit.create_pull_request_comment("crystal-lang/crystal", 123, "Comment body", "commit_id", "path", 1)
+      # Octokit.create_pull_request_comment("crystal-lang/crystal", 123, "Comment body", "commit_id", "path", 1, side: "RIGHT")
       # ```
-      def create_pull_request_comment(repo : String, number : Int64, body : String, commit_id : String, path : String, position : Int32, **options)
-        options = {body: body, commit_id: commit_id, path: path, position: position}.merge(options)
+      def create_pull_request_comment(
+        repo : String,
+        number : Int64,
+        body : String,
+        commit_id : String,
+        path : String,
+        line : Int32,
+        **options
+      )
+        options = {
+          body:      body,
+          commit_id: commit_id,
+          path:      path,
+          line:      line,
+        }.merge(options)
         post "#{Repository.path repo}/pulls/#{number}/comments", {json: options}
       end
 
