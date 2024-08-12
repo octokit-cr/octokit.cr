@@ -1,6 +1,7 @@
 require "uri"
 require "../models/repos"
 require "../models/pulls"
+require "../models/commits"
 
 module Octokit
   class Client
@@ -16,6 +17,8 @@ module Octokit
       alias Repository = Models::Repository
       # :nodoc:
       alias PullRequest = Octokit::Models::PullRequest
+      # :nodoc:
+      alias Commit = Octokit::Models::Commit 
 
       # Valid filters for PullRequests
       FILTERS = ["all", "assigned", "created", "mentioned", "subscribed"]
