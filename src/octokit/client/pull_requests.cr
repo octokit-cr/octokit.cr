@@ -31,9 +31,9 @@ module Octokit
 
       # The default options for listing pull requests
       DEFAULTS = {
-        state: "open",
-        sort: "created",
-        direction: "desc"
+        state:     "open",
+        sort:      "created",
+        direction: "desc",
       }
 
       # List pull requests for a repository
