@@ -2,28 +2,76 @@
 
 # set the working directory to the root of the project
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
+VENDOR_DIR="$DIR/vendor"
+SHARDS_INSTALL_PATH="$VENDOR_DIR/shards/install"
+
+LINUX_VENDOR_DIR="$VENDOR_DIR/linux_x86_64/bin"
+DARWIN_VENDOR_DIR_X64="$VENDOR_DIR/darwin_x86_64/bin"
+DARWIN_VENDOR_DIR_ARM64="$VENDOR_DIR/darwin_arm64/bin"
+
+if [[ "$CI" == "true" ]]; then
+  source script/ci-env
+fi
 
 mkdir -p "$DIR/bin"
 
-# ensure the ameba binary is built and available in the bin directory
-AMEBA_UP_TO_DATE=false
-# first, check the version of the ameba binary in the lock file
-AMEBA_VERSION=$(shards list | grep ameba | awk '{print $3}' | tr -d '()')
+flags="$@"
 
-# if the bin/ameba binary exists, check if it is the correct version
-if [ -f "$DIR/bin/ameba" ]; then
-  CURRENT_VERSION=$("$DIR/bin/ameba" --version)
-  if [ "$AMEBA_VERSION" = "$CURRENT_VERSION" ]; then
-    AMEBA_UP_TO_DATE=true
-  else
-    echo "ameba binary is not up to date"
-    echo "ameba version (./bin/ameba): $CURRENT_VERSION"
-    echo "ameba version (shards list): $AMEBA_VERSION"
-    AMEBA_UP_TO_DATE=false
-  fi
+if [[ "$flags" == *"--ci"* ]]; then
+  echo $OSTYPE
+  echo $(uname -m)
 fi
 
-if [ "$AMEBA_UP_TO_DATE" = false ]; then
-  echo "building ameba binary"
-  cd "$DIR/lib/ameba" && shards build && cp bin/ameba "$DIR/bin/ameba" && cd "$DIR"
+# Determine if the system is a Mac or Linux
+os="unknown"
+arch="unknown"
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+  os="linux"
+  if [[ "$flags" == *"--ci"* ]]; then
+    echo "OSTYPE: $OSTYPE"
+    echo "running in CI mode, copying vendored binaries to bin/ directory (linux)"
+    cp -r "$LINUX_VENDOR_DIR/." "$DIR/bin"
+  fi
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  os="mac"
+  arch=$(uname -m)
+  if [[ "$flags" == *"--ci"* ]]; then
+    echo "OSTYPE: $OSTYPE"
+    echo "ARCH: $arch"
+    echo "running in CI mode, copying vendored binaries to bin/ directory (mac)"
+    if [ "$arch" = "x86_64" ]; then
+      cp -r "$DARWIN_VENDOR_DIR_X64/." "$DIR/bin"
+    elif [ "$arch" = "arm64" ]; then
+      cp -r "$DARWIN_VENDOR_DIR_ARM64/" "$DIR/bin"
+    else
+      echo "Unknown architecture: $arch"
+    fi
+  fi
+else
+  os="unknown"
+fi
+
+if [[ ! "$@" == *"--production"* ]]; then
+  # ensure the ameba binary is built and available in the bin directory
+  AMEBA_UP_TO_DATE=false
+  # first, check the version of the ameba binary in the lock file
+  AMEBA_VERSION=$(SHARDS_INSTALL_PATH="$SHARDS_INSTALL_PATH" shards list | grep ameba | awk '{print $3}' | tr -d '()')
+
+  # if the bin/ameba binary exists, check if it is the correct version
+  if [ -f "$DIR/bin/ameba" ]; then
+    CURRENT_VERSION=$("$DIR/bin/ameba" --version)
+    if [ "$AMEBA_VERSION" = "$CURRENT_VERSION" ]; then
+      AMEBA_UP_TO_DATE=true
+    else
+      echo "ameba binary is not up to date"
+      echo "ameba version (./bin/ameba): $CURRENT_VERSION"
+      echo "ameba version (shards list): $AMEBA_VERSION"
+      AMEBA_UP_TO_DATE=false
+    fi
+  fi
+
+  if [ "$AMEBA_UP_TO_DATE" = false ]; then
+    echo "building ameba binary"
+    cd "$SHARDS_INSTALL_PATH/ameba" && shards build && cp bin/ameba "$DIR/bin/ameba" && cd "$DIR"
+  fi
 fi

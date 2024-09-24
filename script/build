@@ -1,0 +1,31 @@
+#!/bin/bash
+
+set -e
+
+# COLORS
+OFF='\033[0m'
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+PURPLE='\033[0;35m'
+
+# set the working directory to the root of the project
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
+VENDOR_DIR="$DIR/vendor"
+SHARDS_CACHE_PATH="$VENDOR_DIR/.cache/shards"
+SHARDS_INSTALL_PATH="$VENDOR_DIR/shards/install"
+
+if [[ "$CI" == "true" ]]; then
+  source script/ci-env
+fi
+
+# if the --production flag is passed or the CRYSTAL_ENV environment variable is set to production,
+# always ensure the CRYSTAL_PATH is set with vendored shards
+if [[ "$@" == *"--production"* ]] || [[ "$CRYSTAL_ENV" == "production" ]]; then
+  echo "🔨 setting CRYSTAL_PATH to $VENDOR_DIR/shards/install:$(crystal env CRYSTAL_PATH)"
+  export CRYSTAL_PATH="vendor/shards/install:$(crystal env CRYSTAL_PATH)"
+fi
+
+echo -e "🔨 ${BLUE}building in ${PURPLE}release${BLUE} mode${OFF}"
+SHARDS_CACHE_PATH="$SHARDS_CACHE_PATH" SHARDS_INSTALL_PATH="$SHARDS_INSTALL_PATH" shards build --production --release --progress --debug --error-trace
+echo -e "📦 ${GREEN}build complete${OFF}"

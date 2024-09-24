@@ -27,5 +27,8 @@ jobs:
         with:
           crystal: ${{ steps.crystal-version.outputs.crystal }}
 
+      - name: bootstrap
+        run: script/bootstrap --ci
+
       - name: test
         run: script/test

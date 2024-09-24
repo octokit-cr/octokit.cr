@@ -2,9 +2,16 @@
 .cache/shards/*
 tmp/
 bin/
+!vendor/bin/
+!vendor/darwin_arm64/bin/
+!vendor/darwin_x86_64/bin/
+!vendor/linux_x86_64/bin/
 .shards/
 *.dwarf
 dist/
+vendor/shards/install
+vendor/.cache
+
 
 # non-critical vendored crystal files
 lib/**/.github/
