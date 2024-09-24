@@ -22,7 +22,9 @@ Style/NegatedConditionsInUnless:
 Naming/BlockParameterName:
   Enabled: false
 
+# exclude all files in vendor/cache
 Globs:
   - "**/*.cr"
-  - "!lib"
   - "!spec/acceptance/acceptance.cr"
+  - "!vendor"
+  - "!tmp"
