@@ -1,0 +1,59 @@
+#!/bin/bash
+
+# set the working directory to the root of the project
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
+VENDOR_DIR="$DIR/vendor"
+SHARDS_CACHE_PATH="$VENDOR_DIR/.cache/shards"
+SHARDS_INSTALL_PATH="$VENDOR_DIR/shards/install"
+SHARDS_CACHED="$VENDOR_DIR/shards/cache"
+
+file="vendor/shards/install/.shards.info"
+
+# Function to parse owner and repo from URL
+parse_owner_repo() {
+  local url=$1
+  # Use awk to extract the owner and repo name
+  echo $url | awk -F'/' '{print $(NF-1)"/"$(NF)}' | sed 's/.git$//'
+}
+
+if ! [ -x "$(command -v yq)" ]; then
+  echo -e "❌ ${RED}Error${OFF}: yq is not installed"
+  echo "Please install yq -> https://github.com/mikefarah/yq"
+  exit 1
+fi
+
+TRASHDIR=$(mktemp -d /tmp/bootstrap.XXXXXXXXXXXXXXXXX)
+cleanup() {
+  rm -rf "$TRASHDIR"
+}
+trap cleanup EXIT
+
+# Use yq to parse the file and extract shard names and versions
+shards=$(yq eval '.shards | to_entries | .[] | "\(.key)|\(.value.git)|\(.value.version)"' $file)
+
+# Loop over each shard
+echo "$shards" | while IFS= read -r shard; do
+  # Extract name and version
+  name=$(echo $shard | cut -d'|' -f1)
+  git_url=$(echo $shard | cut -d'|' -f2)
+  owner_repo=$(parse_owner_repo $git_url)
+  owner=$(echo $owner_repo | cut -d'/' -f1)
+  repo=$(echo $owner_repo | cut -d'/' -f2)
+  version=$(echo $shard | cut -d'|' -f3)
+
+  mkdir -p "$TRASHDIR/$name-$version.shard/shard/$name"
+  mkdir -p "$TRASHDIR/$name-$version.shard/cache/$owner/$repo.git"
+  cp -r "$SHARDS_INSTALL_PATH/$name/"* "$TRASHDIR/$name-$version.shard/shard/$name" 2>/dev/null || true
+  cp -r "$SHARDS_CACHE_PATH/github.com/$owner/$repo.git/"* "$TRASHDIR/$name-$version.shard/cache/$owner/$repo.git"
+
+  echo '{"name": "'$name'", "version": "'$version'", "repository": "'$owner/$repo'"}' > "$TRASHDIR/$name-$version.shard/metadata.json"
+
+  # Change to the temporary directory and zip the shard and cache directories
+  (cd "$TRASHDIR/$name-$version.shard" && zip -q -r "$TRASHDIR/$name-$version.zip" shard cache metadata.json -x "*.shard.vendor.cache.sha256")
+
+  # Move the zip to the cache
+  mkdir -p "$SHARDS_CACHED"
+  mv "$TRASHDIR/$name-$version.zip" "$SHARDS_CACHED/$name-$version.shard"
+  
+  # echo "cached $name $version"
+done

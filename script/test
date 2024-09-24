@@ -14,6 +14,10 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
 
 echo -e "🧪 ${BLUE}running unit tests...${OFF}"
 
+if [[ "$CI" == "true" ]]; then
+  source script/ci-env
+fi
+
 crystal spec
 
 echo -e "✅ ${GREEN}tests complete!${OFF}"

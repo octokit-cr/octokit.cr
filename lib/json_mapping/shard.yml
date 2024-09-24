@@ -1,9 +1,0 @@
-name: json_mapping
-version: 0.1.1
-
-authors:
-  - Brian J. Cardiff <bcardiff@manas.tech>
-
-crystal: ">= 0.34.0, < 2.0.0"
-
-license: MIT

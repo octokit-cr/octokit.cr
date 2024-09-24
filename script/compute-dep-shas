@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# set the working directory to the root of the project
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
+VENDOR_DIR="$DIR/vendor"
+SHARDS_CACHE_PATH="$VENDOR_DIR/.cache/shards"
+SHARDS_INSTALL_PATH="$VENDOR_DIR/shards/install"
+SHARDS_CACHED="$VENDOR_DIR/shards/cache"
+
+SHARD_SHA_FILE=".shard.vendor.cache.sha256"
+
+file="vendor/shards/install/.shards.info"
+
+if [ -f "$VENDOR_DIR/shards/install/.shards.info" ]; then
+
+  # Use yq to parse the file and extract shard names and versions
+  shards=$(yq eval '.shards | to_entries | .[] | "\(.key)|\(.value.git)|\(.value.version)"' $file)
+
+  # Loop over each shard
+  echo "$shards" | while IFS= read -r shard; do
+    # Extract name and version
+    name=$(echo $shard | cut -d'|' -f1)
+    version=$(echo $shard | cut -d'|' -f3)
+
+    # if the shard sha256 file does not exist, try to compute and create it
+    if [ ! -f "$SHARDS_INSTALL_PATH/name/$SHARD_SHA_FILE" ]; then
+      shard_cache_sha=$(shasum -a 256 "$SHARDS_CACHED/$name-$version.shard" | cut -d' ' -f1)
+      cat > "$SHARDS_INSTALL_PATH/$name/$SHARD_SHA_FILE" <<< "$shard_cache_sha"
+    fi
+  done
+fi
