@@ -132,6 +132,11 @@
       
     </li>
   
+  <li class=" " data-id="octokit/Octokit/Client/Reactions" data-name="octokit::client::reactions">
+      <a href="../../Octokit/Client/Reactions.html">Reactions</a>
+      
+    </li>
+  
   <li class=" " data-id="octokit/Octokit/Client/Releases" data-name="octokit::client::releases">
       <a href="../../Octokit/Client/Releases.html">Releases</a>
       
@@ -1944,7 +1949,7 @@
   </h2>
   
     
-      <a href="https://github.com/octokit-cr/octokit.cr/blob/0eb439d2b6b7bdf68cfaa1af8ec116f8acb0b1a8/src/octokit/models/reactions.cr#L13" target="_blank">
+      <a href="https://github.com/octokit-cr/octokit.cr/blob/58f7c7ce25d4744be3f4507158e0490322cd2404/src/octokit/models/reactions.cr#L15" target="_blank">
         octokit/models/reactions.cr
       </a>
     
@@ -1966,12 +1971,12 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28total_count%3AInt32%2Cplus_one%3AInt32%2Cminus_one%3AInt32%2Claugh%3AInt32%2Cconfused%3AInt32%2Cheart%3AInt32%2Chooray%3AInt32%2Curl%3AString%29-class-method" class="signature"><strong>.new</strong>(total_count : Int32, plus_one : Int32, minus_one : Int32, laugh : Int32, confused : Int32, heart : Int32, hooray : Int32, url : String)</a>
+        <a href="#new%28total_count%3AInt32%2Cplus_one%3AInt32%2Cminus_one%3AInt32%2Claugh%3AInt32%2Cconfused%3AInt32%2Cheart%3AInt32%2Chooray%3AInt32%2Crocket%3AInt32%2Ceyes%3AInt32%2Curl%3AString%29-class-method" class="signature"><strong>.new</strong>(total_count : Int32, plus_one : Int32, minus_one : Int32, laugh : Int32, confused : Int32, heart : Int32, hooray : Int32, rocket : Int32, eyes : Int32, url : String)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28__temp_3391%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_3391 : JSON::PullParser)</a>
+        <a href="#new%28__temp_3536%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_3536 : JSON::PullParser)</a>
         
       </li>
     
@@ -2000,6 +2005,16 @@
     
       <li class="entry-summary">
         <a href="#confused%3D%28_confused%3AInt32%29-instance-method" class="signature"><strong>#confused=</strong>(_confused : Int32)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#eyes%3AInt32-instance-method" class="signature"><strong>#eyes</strong> : Int32</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#eyes%3D%28_eyes%3AInt32%29-instance-method" class="signature"><strong>#eyes=</strong>(_eyes : Int32)</a>
         
       </li>
     
@@ -2050,6 +2065,16 @@
     
       <li class="entry-summary">
         <a href="#plus_one%3D%28_plus_one%3AInt32%29-instance-method" class="signature"><strong>#plus_one=</strong>(_plus_one : Int32)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#rocket%3AInt32-instance-method" class="signature"><strong>#rocket</strong> : Int32</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#rocket%3D%28_rocket%3AInt32%29-instance-method" class="signature"><strong>#rocket=</strong>(_rocket : Int32)</a>
         
       </li>
     
@@ -2135,12 +2160,12 @@
     Constructor Detail
   </h2>
   
-    <div class="entry-detail" id="new(total_count:Int32,plus_one:Int32,minus_one:Int32,laugh:Int32,confused:Int32,heart:Int32,hooray:Int32,url:String)-class-method">
+    <div class="entry-detail" id="new(total_count:Int32,plus_one:Int32,minus_one:Int32,laugh:Int32,confused:Int32,heart:Int32,hooray:Int32,rocket:Int32,eyes:Int32,url:String)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(total_count : Int32, plus_one : Int32, minus_one : Int32, laugh : Int32, confused : Int32, heart : Int32, hooray : Int32, url : String)
+        def self.<strong>new</strong>(total_count : Int32, plus_one : Int32, minus_one : Int32, laugh : Int32, confused : Int32, heart : Int32, hooray : Int32, rocket : Int32, eyes : Int32, url : String)
 
-        <a class="method-permalink" href="#new%28total_count%3AInt32%2Cplus_one%3AInt32%2Cminus_one%3AInt32%2Claugh%3AInt32%2Cconfused%3AInt32%2Cheart%3AInt32%2Chooray%3AInt32%2Curl%3AString%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28total_count%3AInt32%2Cplus_one%3AInt32%2Cminus_one%3AInt32%2Claugh%3AInt32%2Cconfused%3AInt32%2Cheart%3AInt32%2Chooray%3AInt32%2Crocket%3AInt32%2Ceyes%3AInt32%2Curl%3AString%29-class-method">#</a>
       </div>
       
       <br/>
@@ -2149,12 +2174,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="new(__temp_3391:JSON::PullParser)-class-method">
+    <div class="entry-detail" id="new(__temp_3536:JSON::PullParser)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(__temp_3391 : JSON::PullParser)
+        def self.<strong>new</strong>(__temp_3536 : JSON::PullParser)
 
-        <a class="method-permalink" href="#new%28__temp_3391%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28__temp_3536%3AJSON%3A%3APullParser%29-class-method">#</a>
       </div>
       
       <br/>
@@ -2199,6 +2224,34 @@
         def <strong>confused=</strong>(_confused : Int32)
 
         <a class="method-permalink" href="#confused%3D%28_confused%3AInt32%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="eyes:Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>eyes</strong> : Int32
+
+        <a class="method-permalink" href="#eyes%3AInt32-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="eyes=(_eyes:Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>eyes=</strong>(_eyes : Int32)
+
+        <a class="method-permalink" href="#eyes%3D%28_eyes%3AInt32%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2339,6 +2392,34 @@
         def <strong>plus_one=</strong>(_plus_one : Int32)
 
         <a class="method-permalink" href="#plus_one%3D%28_plus_one%3AInt32%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="rocket:Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>rocket</strong> : Int32
+
+        <a class="method-permalink" href="#rocket%3AInt32-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="rocket=(_rocket:Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>rocket=</strong>(_rocket : Int32)
+
+        <a class="method-permalink" href="#rocket%3D%28_rocket%3AInt32%29-instance-method">#</a>
       </div>
       
       <br/>
