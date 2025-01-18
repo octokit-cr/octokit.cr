@@ -15,6 +15,12 @@ module Octokit
       # :nodoc:
       alias Repository = Models::Repository
 
+      # :nodoc:
+      alias Reaction = Models::Reaction 
+
+      # :nodoc:
+      alias Reactions = Models::Reactions 
+
       # List reactions for a commit comment
       #
       # **See Also:**
@@ -42,8 +48,8 @@ module Octokit
       # Octokit.create_commit_comment_reaction("monsalisa/app", 123456, "+1")
       # ```
       def create_commit_comment_reaction(repo : String, id : Int64, reaction : String, **options)
-        options = options.merge({"content" => reaction})
-        post("#{Repository.path(repo)}/comments/#{id}/reactions", options)
+        options = options.merge({json: {content: reaction}})
+        Reaction.from_json(post("#{Repository.path(repo)}/comments/#{id}/reactions", options))
       end
 
       # List reactions for an issue
@@ -71,8 +77,8 @@ module Octokit
       # Octokit.create_issue_reaction("monsalisa/app", 123456, "heart")
       # ```
       def create_issue_reaction(repo : String, number : Int64, reaction : String, **options)
-        options = options.merge({"content" => reaction})
-        post("#{Repository.path(repo)}/issues/#{number}/reactions", options)
+        options = options.merge({json: {content: reaction}})
+        Reaction.from_json(post("#{Repository.path(repo)}/issues/#{number}/reactions", options))
       end
 
       # List reactions for an issue comment
@@ -99,9 +105,9 @@ module Octokit
       # ```
       # Octokit.create_issue_comment_reaction("monsalisa/app", 987654, "laugh")
       # ```
-      def create_issue_comment_reaction(repo : String, id : Int64, reaction : String, **options)
-        options = options.merge({"content" => reaction})
-        post("#{Repository.path(repo)}/issues/comments/#{id}/reactions", options)
+      def create_issue_comment_reaction(repo : String, id : Int64, reaction : String, **options) : Reaction
+        options = options.merge({json: {content: reaction}})
+        Reaction.from_json(post("#{Repository.path(repo)}/issues/comments/#{id}/reactions", options))
       end
 
       # Delete a reaction from an issue comment
@@ -143,8 +149,8 @@ module Octokit
       # Octokit.create_pull_request_review_comment_reaction("monsalisa/app", 555111, "hooray")
       # ```
       def create_pull_request_review_comment_reaction(repo : String, id : Int64, reaction : String, **options)
-        options = options.merge({"content" => reaction})
-        post("#{Repository.path(repo)}/pulls/comments/#{id}/reactions", options)
+        options = options.merge({json: {content: reaction}})
+        Reaction.from_json(post("#{Repository.path(repo)}/pulls/comments/#{id}/reactions", options))
       end
 
       # Delete a reaction
@@ -186,8 +192,8 @@ module Octokit
       # Octokit.create_release_reaction("monsalisa/app", 987654, "heart")
       # ```
       def create_release_reaction(repo : String, release_id : Int64, reaction : String, **options)
-        options = options.merge({"content" => reaction})
-        post("#{Repository.path(repo)}/releases/#{release_id}/reactions", options)
+        options = options.merge({json: {content: reaction}})
+        Reaction.from_json(post("#{Repository.path(repo)}/releases/#{release_id}/reactions", options))
       end
 
       # Delete a reaction for a release
