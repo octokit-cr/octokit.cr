@@ -5,7 +5,7 @@ authors:
   - Grant Birkinbine
   - Chris Watson <chris@watzon.me>
 
-crystal: ">= 1.13.1"
+crystal: ">= 1.14.1"
 
 license: MIT
 
@@ -22,4 +22,4 @@ development_dependencies:
     version: 0.14.0
   ameba:
     github: crystal-ameba/ameba
-    version: ~> 1.6.1
+    version: == 1.6.1
