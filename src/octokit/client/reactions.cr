@@ -16,10 +16,10 @@ module Octokit
       alias Repository = Models::Repository
 
       # :nodoc:
-      alias Reaction = Models::Reaction 
+      alias Reaction = Models::Reaction
 
       # :nodoc:
-      alias Reactions = Models::Reactions 
+      alias Reactions = Models::Reactions
 
       # List reactions for a commit comment
       #
