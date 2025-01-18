@@ -21,7 +21,7 @@ module Octokit
         mergeable: Bool?,
         mergeable_state: String?,
         merged_by: String?,
-        merge_commit_sha: String,
+        merge_commit_sha: String?,
         comments: Int32?,
         commits: Int32?,
         additions: Int32?,
