@@ -1,3 +1,5 @@
+require "./users"
+
 module Octokit
   module Models
     struct Issue

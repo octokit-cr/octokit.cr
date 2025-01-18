@@ -76,7 +76,7 @@ There are a lot of pieces of the GitHub API to cover. Here are the ones that nee
 - [x] [PubSubHubbub](https://octokit-cr.github.io/octokit.cr/Octokit/Client/PubSubHubbub.html)
 - [x] [PullRequests](https://octokit-cr.github.io/octokit.cr/Octokit/Client/PullRequests.html)
 - [x] [RateLimit](https://octokit-cr.github.io/octokit.cr/Octokit/Client/RateLimit.html)
-- [ ] [Reactions]()
+- [x] [Reactions](https://octokit-cr.github.io/octokit.cr/Octokit/Client/Reactions.html)
 - [ ] [Refs]()
 - [x] [Releases](https://octokit-cr.github.io/octokit.cr/Octokit/Client/Releases.html)
 - [x] [Repositories](https://octokit-cr.github.io/octokit.cr/Octokit/Client/Repositories.html)

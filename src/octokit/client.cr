@@ -114,6 +114,7 @@ module Octokit
     include Octokit::Client::Users
     include Octokit::Client::RateLimit
     include Octokit::Client::Repositories
+    include Octokit::Client::Reactions
     include Octokit::Client::Organizations
     include Octokit::Client::Releases
     include Octokit::Client::Search
