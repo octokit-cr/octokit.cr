@@ -76,7 +76,7 @@ module Octokit
       # ```
       # Octokit.create_issue_reaction("monsalisa/app", 123456, "heart")
       # ```
-      def create_issue_reaction(repo : String, number : Int64, reaction : String, **options)
+      def create_issue_reaction(repo : String, number : Int64, reaction : String, **options) : Reaction
         options = options.merge({json: {content: reaction}})
         Reaction.from_json(post("#{Repository.path(repo)}/issues/#{number}/reactions", options))
       end
@@ -89,10 +89,15 @@ module Octokit
       # **Examples:**
       #
       # ```
-      # Octokit.issue_comment_reactions("monsalisa/app", 987654)
+      # reactions = Octokit.issue_comment_reactions("monsalisa/app", 987654)
+      # reactions.records.each do |reaction|
+      #   puts reaction.content    # --> "+1" (example)
+      #   puts reaction.user.login # --> "octocat" (example)
+      #   puts reaction.id         # --> 271694398 (example)
+      # end
       # ```
-      def issue_comment_reactions(repo : String, id : Int64, **options)
-        get("#{Repository.path(repo)}/issues/comments/#{id}/reactions", options)
+      def issue_comment_reactions(repo : String, id : Int64, **options) : Paginator(Reaction)
+        paginate(Reaction, "#{Repository.path(repo)}/issues/comments/#{id}/reactions", **options)
       end
 
       # Create reaction for an issue comment
