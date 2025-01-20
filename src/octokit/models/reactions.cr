@@ -7,7 +7,6 @@ module Octokit
         id: Int64,
         user: User,
         node_id: String,
-
         content: String
       )
     end

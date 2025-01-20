@@ -16,6 +16,12 @@ module Octokit
       alias Repository = Models::Repository
 
       # :nodoc:
+      alias Deployment = Models::Deployment
+
+      # :nodoc:
+      alias DeploymentStatus = Models::DeploymentStatus
+
+      # :nodoc:
       VALID_STATES = %w[error failure inactive in_progress queued pending success]
 
       # Fetch a single deployment for a repository
@@ -28,10 +34,11 @@ module Octokit
       # Fetch a single deployment for a repository
       #
       # ```
-      # Octokit.deployment("monsalisa/app", 123456)
+      # deployment = Octokit.deployment("monsalisa/app", 123456)
+      # puts deployment.id
       # ```
-      def deployment(repo : String, deployment_id : Int64, **options)
-        get("#{Repository.path(repo)}/deployments/#{deployment_id}", options)
+      def deployment(repo : String, deployment_id : Int64, **options) : Deployment
+        Deployment.from_json(get("#{Repository.path(repo)}/deployments/#{deployment_id}", **options))
       end
 
       # List deployments for a repository
@@ -51,15 +58,15 @@ module Octokit
       # Octokit.deployments("monalisa/app", {"environment" => "production"})
       # ```
       # An alias method exists for `deployments` called `list_deployments` which can be used interchangeably
-      def deployments(repo : String, params : Hash(String, String) = {} of String => String, **options)
+      def deployments(repo : String, params : Hash(String, String) = {} of String => String, **options) : Paginator(Deployment)
         query_string = params.map { |k, v| "#{URI.encode_path(k)}=#{URI.encode_path(v)}" }.join("&")
         url = "#{Repository.path(repo)}/deployments"
         url += "?#{query_string}" unless query_string.empty?
-        get(url, options)
+        paginate(Deployment, url, **options)
       end
 
       # Alias for `deployments`
-      def list_deployments(repo : String, params : Hash(String, String) = {} of String => String, **options)
+      def list_deployments(repo : String, params : Hash(String, String) = {} of String => String, **options) : Paginator(Deployment)
         deployments(repo, params, **options)
       end
 
@@ -91,7 +98,7 @@ module Octokit
         transient_environment : Bool = false,
         production_environment : Bool = true,
         **options
-      )
+      ) : Deployment
         options = options.merge({
           json: {
             ref:                    ref,
@@ -106,7 +113,7 @@ module Octokit
           },
         })
 
-        post("#{Repository.path(repo)}/deployments", options)
+        Deployment.from_json(post("#{Repository.path(repo)}/deployments", options))
       end
 
       # Delete a Deployment
@@ -125,8 +132,8 @@ module Octokit
       # ```
       # Octokit.delete_deployment("monalisa/app", 123456)
       # ```
-      def delete_deployment(repo : String, deployment_id : Int64, **options)
-        delete("#{Repository.path(repo)}/deployments/#{deployment_id}", options)
+      def delete_deployment(repo : String, deployment_id : Int64, **options) : Bool
+        boolean_from_response(:delete, "#{Repository.path(repo)}/deployments/#{deployment_id}", **options)
       end
 
       # Get a deployment status
@@ -139,8 +146,8 @@ module Octokit
       # ```
       # Octokit.deployment_status("monalisa/app", 1234567890, 1234567890)
       # ```
-      def deployment_status(repo : String, deployment_id : Int64, status_id : Int64, **options)
-        get("#{Repository.path(repo)}/deployments/#{deployment_id}/statuses/#{status_id}", options)
+      def deployment_status(repo : String, deployment_id : Int64, status_id : Int64, **options) : DeploymentStatus
+        DeploymentStatus.from_json(get("#{Repository.path(repo)}/deployments/#{deployment_id}/statuses/#{status_id}", **options))
       end
 
       # List all statuses for a Deployment
@@ -166,17 +173,16 @@ module Octokit
       # ```
       #
       # Returns an array of deployment statuses
-      def deployment_statuses(repo : String, deployment_id : Int64, **options) : Paginator(Octokit::Models::DeploymentStatus)
+      def deployment_statuses(repo : String, deployment_id : Int64, **options) : Paginator(DeploymentStatus)
         paginate(
-          Octokit::Models::DeploymentStatus,
-          "#{Repository.path(repo)}/deployments/#{deployment_id}" + "/statuses",
-          start_page: options[:page]?,
-          per_page: options[:per_page]?
+          DeploymentStatus,
+          "#{Repository.path(repo)}/deployments/#{deployment_id}/statuses",
+          **options
         )
       end
 
       # alias for `deployment_statuses`
-      def list_deployment_statuses(repo : String, deployment_id : Int64, **options) : Paginator(Octokit::Models::DeploymentStatus)
+      def list_deployment_statuses(repo : String, deployment_id : Int64, **options) : Paginator(DeploymentStatus)
         deployment_statuses(repo, deployment_id, **options)
       end
 
@@ -208,7 +214,7 @@ module Octokit
         environment_url : String = "",
         auto_inactive : Bool = true,
         **options
-      )
+      ) : DeploymentStatus
         raise "ArgumentError: state must be one of error, failure, inactive, in_progress, queued, pending, success" unless VALID_STATES.includes?(state)
 
         options = options.merge({
@@ -223,7 +229,7 @@ module Octokit
           },
         })
 
-        post("#{Repository.path(repo)}/deployments/#{deployment_id}" + "/statuses", options)
+        DeploymentStatus.from_json(post("#{Repository.path(repo)}/deployments/#{deployment_id}/statuses", options))
       end
     end
   end

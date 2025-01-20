@@ -18,9 +18,6 @@ module Octokit
       # :nodoc:
       alias Reaction = Models::Reaction
 
-      # :nodoc:
-      alias Reactions = Models::Reactions
-
       # List reactions for a commit comment
       #
       # **See Also:**
@@ -33,8 +30,8 @@ module Octokit
       # ```
       # Octokit.commit_comment_reactions("monsalisa/app", 123456)
       # ```
-      def commit_comment_reactions(repo : String, id : Int64, **options)
-        get("#{Repository.path(repo)}/comments/#{id}/reactions", options)
+      def commit_comment_reactions(repo : String, id : Int64, **options) : Paginator(Reaction)
+        paginate(Reaction, "#{Repository.path(repo)}/comments/#{id}/reactions", **options)
       end
 
       # Create a reaction for a commit comment
@@ -47,7 +44,7 @@ module Octokit
       # ```
       # Octokit.create_commit_comment_reaction("monsalisa/app", 123456, "+1")
       # ```
-      def create_commit_comment_reaction(repo : String, id : Int64, reaction : String, **options)
+      def create_commit_comment_reaction(repo : String, id : Int64, reaction : String, **options) : Reaction
         options = options.merge({json: {content: reaction}})
         Reaction.from_json(post("#{Repository.path(repo)}/comments/#{id}/reactions", options))
       end
@@ -62,8 +59,8 @@ module Octokit
       # ```
       # Octokit.issue_reactions("monsalisa/app", 123456)
       # ```
-      def issue_reactions(repo : String, number : Int64, **options)
-        get("#{Repository.path(repo)}/issues/#{number}/reactions", options)
+      def issue_reactions(repo : String, number : Int64, **options) : Paginator(Reaction)
+        paginate(Reaction, "#{Repository.path(repo)}/issues/#{number}/reactions", **options)
       end
 
       # Create reaction for an issue
@@ -76,7 +73,7 @@ module Octokit
       # ```
       # Octokit.create_issue_reaction("monsalisa/app", 123456, "heart")
       # ```
-      def create_issue_reaction(repo : String, number : Int64, reaction : String, **options)
+      def create_issue_reaction(repo : String, number : Int64, reaction : String, **options) : Reaction
         options = options.merge({json: {content: reaction}})
         Reaction.from_json(post("#{Repository.path(repo)}/issues/#{number}/reactions", options))
       end
@@ -89,10 +86,15 @@ module Octokit
       # **Examples:**
       #
       # ```
-      # Octokit.issue_comment_reactions("monsalisa/app", 987654)
+      # reactions = Octokit.issue_comment_reactions("monsalisa/app", 987654)
+      # reactions.records.each do |reaction|
+      #   puts reaction.content    # --> "+1" (example)
+      #   puts reaction.user.login # --> "octocat" (example)
+      #   puts reaction.id         # --> 271694398 (example)
+      # end
       # ```
-      def issue_comment_reactions(repo : String, id : Int64, **options)
-        get("#{Repository.path(repo)}/issues/comments/#{id}/reactions", options)
+      def issue_comment_reactions(repo : String, id : Int64, **options) : Paginator(Reaction)
+        paginate(Reaction, "#{Repository.path(repo)}/issues/comments/#{id}/reactions", **options)
       end
 
       # Create reaction for an issue comment
@@ -120,8 +122,8 @@ module Octokit
       # ```
       # Octokit.delete_issue_comment_reaction("monsalisa/app", 987654, 123)
       # ```
-      def delete_issue_comment_reaction(repo : String, comment_id : Int64, reaction_id : Int64, **options)
-        boolean_from_response(:delete, "#{Repository.path(repo)}/issues/comments/#{comment_id}/reactions/#{reaction_id}", options)
+      def delete_issue_comment_reaction(repo : String, comment_id : Int64, reaction_id : Int64, **options) : Bool
+        boolean_from_response(:delete, "#{Repository.path(repo)}/issues/comments/#{comment_id}/reactions/#{reaction_id}", **options)
       end
 
       # List reactions for a pull request review comment
@@ -134,8 +136,8 @@ module Octokit
       # ```
       # Octokit.pull_request_review_comment_reactions("monsalisa/app", 555111)
       # ```
-      def pull_request_review_comment_reactions(repo : String, id : Int64, **options)
-        get("#{Repository.path(repo)}/pulls/comments/#{id}/reactions", options)
+      def pull_request_review_comment_reactions(repo : String, id : Int64, **options) : Paginator(Reaction)
+        paginate(Reaction, "#{Repository.path(repo)}/pulls/comments/#{id}/reactions", **options)
       end
 
       # Create reaction for a pull request review comment
@@ -148,7 +150,7 @@ module Octokit
       # ```
       # Octokit.create_pull_request_review_comment_reaction("monsalisa/app", 555111, "hooray")
       # ```
-      def create_pull_request_review_comment_reaction(repo : String, id : Int64, reaction : String, **options)
+      def create_pull_request_review_comment_reaction(repo : String, id : Int64, reaction : String, **options) : Reaction
         options = options.merge({json: {content: reaction}})
         Reaction.from_json(post("#{Repository.path(repo)}/pulls/comments/#{id}/reactions", options))
       end
@@ -163,8 +165,8 @@ module Octokit
       # ```
       # Octokit.delete_issue_reaction("monsalisa/app", 987654, 123)
       # ```
-      def delete_issue_reaction(repo : String, issue_id : Int64, reaction_id : Int64, **options)
-        boolean_from_response(:delete, "#{Repository.path(repo)}/issues/#{issue_id}/reactions/#{reaction_id}", options)
+      def delete_issue_reaction(repo : String, issue_id : Int64, reaction_id : Int64, **options) : Bool
+        boolean_from_response(:delete, "#{Repository.path(repo)}/issues/#{issue_id}/reactions/#{reaction_id}", **options)
       end
 
       # List reactions for a release
@@ -177,8 +179,8 @@ module Octokit
       # ```
       # Octokit.release_reactions("monsalisa/app", 987654)
       # ```
-      def release_reactions(repo : String, release_id : Int64, **options)
-        get("#{Repository.path(repo)}/releases/#{release_id}/reactions", options)
+      def release_reactions(repo : String, release_id : Int64, **options) : Paginator(Reaction)
+        paginate(Reaction, "#{Repository.path(repo)}/releases/#{release_id}/reactions", **options)
       end
 
       # Create reaction for a release
@@ -191,7 +193,7 @@ module Octokit
       # ```
       # Octokit.create_release_reaction("monsalisa/app", 987654, "heart")
       # ```
-      def create_release_reaction(repo : String, release_id : Int64, reaction : String, **options)
+      def create_release_reaction(repo : String, release_id : Int64, reaction : String, **options) : Reaction
         options = options.merge({json: {content: reaction}})
         Reaction.from_json(post("#{Repository.path(repo)}/releases/#{release_id}/reactions", options))
       end
@@ -206,8 +208,8 @@ module Octokit
       # ```
       # Octokit.delete_release_reaction("monsalisa/app", 987654, 123)
       # ```
-      def delete_release_reaction(repo : String, release_id : Int64, reaction_id : Int64, **options)
-        boolean_from_response(:delete, "#{Repository.path(repo)}/releases/#{release_id}/reactions/#{reaction_id}", options)
+      def delete_release_reaction(repo : String, release_id : Int64, reaction_id : Int64, **options) : Bool
+        boolean_from_response(:delete, "#{Repository.path(repo)}/releases/#{release_id}/reactions/#{reaction_id}", **options)
       end
     end
   end
