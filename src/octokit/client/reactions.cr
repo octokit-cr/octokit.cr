@@ -46,7 +46,7 @@ module Octokit
       # ```
       def create_commit_comment_reaction(repo : String, id : Int64, reaction : String, **options) : Reaction
         options = options.merge({json: {content: reaction}})
-        Reaction.from_json(post("#{Repository.path(repo)}/comments/#{id}/reactions", **options))
+        Reaction.from_json(post("#{Repository.path(repo)}/comments/#{id}/reactions", options))
       end
 
       # List reactions for an issue
@@ -75,7 +75,7 @@ module Octokit
       # ```
       def create_issue_reaction(repo : String, number : Int64, reaction : String, **options) : Reaction
         options = options.merge({json: {content: reaction}})
-        Reaction.from_json(post("#{Repository.path(repo)}/issues/#{number}/reactions", **options))
+        Reaction.from_json(post("#{Repository.path(repo)}/issues/#{number}/reactions", options))
       end
 
       # List reactions for an issue comment
@@ -109,7 +109,7 @@ module Octokit
       # ```
       def create_issue_comment_reaction(repo : String, id : Int64, reaction : String, **options) : Reaction
         options = options.merge({json: {content: reaction}})
-        Reaction.from_json(post("#{Repository.path(repo)}/issues/comments/#{id}/reactions", **options))
+        Reaction.from_json(post("#{Repository.path(repo)}/issues/comments/#{id}/reactions", options))
       end
 
       # Delete a reaction from an issue comment
@@ -152,7 +152,7 @@ module Octokit
       # ```
       def create_pull_request_review_comment_reaction(repo : String, id : Int64, reaction : String, **options) : Reaction
         options = options.merge({json: {content: reaction}})
-        Reaction.from_json(post("#{Repository.path(repo)}/pulls/comments/#{id}/reactions", **options))
+        Reaction.from_json(post("#{Repository.path(repo)}/pulls/comments/#{id}/reactions", options))
       end
 
       # Delete a reaction
@@ -195,7 +195,7 @@ module Octokit
       # ```
       def create_release_reaction(repo : String, release_id : Int64, reaction : String, **options) : Reaction
         options = options.merge({json: {content: reaction}})
-        Reaction.from_json(post("#{Repository.path(repo)}/releases/#{release_id}/reactions", **options))
+        Reaction.from_json(post("#{Repository.path(repo)}/releases/#{release_id}/reactions", options))
       end
 
       # Delete a reaction for a release
