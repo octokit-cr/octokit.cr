@@ -1961,7 +1961,7 @@
   </h2>
   
     
-      <a href="https://github.com/octokit-cr/octokit.cr/blob/58f7c7ce25d4744be3f4507158e0490322cd2404/src/octokit/client/reactions.cr#L14" target="_blank">
+      <a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/client/reactions.cr#L14" target="_blank">
         octokit/client/reactions.cr
       </a>
     
@@ -1989,14 +1989,14 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#commit_comment_reactions%28repo%3AString%2Cid%3AInt64%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#commit_comment_reactions</strong>(repo : String, id : Int64, **options)</a>
+        <a href="#commit_comment_reactions%28repo%3AString%2Cid%3AInt64%2C%2A%2Aoptions%29%3APaginator%28Reaction%29-instance-method" class="signature"><strong>#commit_comment_reactions</strong>(repo : String, id : Int64, **options) : Paginator(Reaction)</a>
         
           <div class="summary"><p>List reactions for a commit comment</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#create_commit_comment_reaction%28repo%3AString%2Cid%3AInt64%2Creaction%3AString%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#create_commit_comment_reaction</strong>(repo : String, id : Int64, reaction : String, **options)</a>
+        <a href="#create_commit_comment_reaction%28repo%3AString%2Cid%3AInt64%2Creaction%3AString%2C%2A%2Aoptions%29%3AReaction-instance-method" class="signature"><strong>#create_commit_comment_reaction</strong>(repo : String, id : Int64, reaction : String, **options) : Reaction</a>
         
           <div class="summary"><p>Create a reaction for a commit comment</p></div>
         
@@ -2010,70 +2010,70 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#create_issue_reaction%28repo%3AString%2Cnumber%3AInt64%2Creaction%3AString%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#create_issue_reaction</strong>(repo : String, number : Int64, reaction : String, **options)</a>
+        <a href="#create_issue_reaction%28repo%3AString%2Cnumber%3AInt64%2Creaction%3AString%2C%2A%2Aoptions%29%3AReaction-instance-method" class="signature"><strong>#create_issue_reaction</strong>(repo : String, number : Int64, reaction : String, **options) : Reaction</a>
         
           <div class="summary"><p>Create reaction for an issue</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#create_pull_request_review_comment_reaction%28repo%3AString%2Cid%3AInt64%2Creaction%3AString%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#create_pull_request_review_comment_reaction</strong>(repo : String, id : Int64, reaction : String, **options)</a>
+        <a href="#create_pull_request_review_comment_reaction%28repo%3AString%2Cid%3AInt64%2Creaction%3AString%2C%2A%2Aoptions%29%3AReaction-instance-method" class="signature"><strong>#create_pull_request_review_comment_reaction</strong>(repo : String, id : Int64, reaction : String, **options) : Reaction</a>
         
           <div class="summary"><p>Create reaction for a pull request review comment</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#create_release_reaction%28repo%3AString%2Crelease_id%3AInt64%2Creaction%3AString%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#create_release_reaction</strong>(repo : String, release_id : Int64, reaction : String, **options)</a>
+        <a href="#create_release_reaction%28repo%3AString%2Crelease_id%3AInt64%2Creaction%3AString%2C%2A%2Aoptions%29%3AReaction-instance-method" class="signature"><strong>#create_release_reaction</strong>(repo : String, release_id : Int64, reaction : String, **options) : Reaction</a>
         
           <div class="summary"><p>Create reaction for a release</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#delete_issue_comment_reaction%28repo%3AString%2Ccomment_id%3AInt64%2Creaction_id%3AInt64%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#delete_issue_comment_reaction</strong>(repo : String, comment_id : Int64, reaction_id : Int64, **options)</a>
+        <a href="#delete_issue_comment_reaction%28repo%3AString%2Ccomment_id%3AInt64%2Creaction_id%3AInt64%2C%2A%2Aoptions%29%3ABool-instance-method" class="signature"><strong>#delete_issue_comment_reaction</strong>(repo : String, comment_id : Int64, reaction_id : Int64, **options) : Bool</a>
         
           <div class="summary"><p>Delete a reaction from an issue comment</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#delete_issue_reaction%28repo%3AString%2Cissue_id%3AInt64%2Creaction_id%3AInt64%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#delete_issue_reaction</strong>(repo : String, issue_id : Int64, reaction_id : Int64, **options)</a>
+        <a href="#delete_issue_reaction%28repo%3AString%2Cissue_id%3AInt64%2Creaction_id%3AInt64%2C%2A%2Aoptions%29%3ABool-instance-method" class="signature"><strong>#delete_issue_reaction</strong>(repo : String, issue_id : Int64, reaction_id : Int64, **options) : Bool</a>
         
           <div class="summary"><p>Delete a reaction</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#delete_release_reaction%28repo%3AString%2Crelease_id%3AInt64%2Creaction_id%3AInt64%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#delete_release_reaction</strong>(repo : String, release_id : Int64, reaction_id : Int64, **options)</a>
+        <a href="#delete_release_reaction%28repo%3AString%2Crelease_id%3AInt64%2Creaction_id%3AInt64%2C%2A%2Aoptions%29%3ABool-instance-method" class="signature"><strong>#delete_release_reaction</strong>(repo : String, release_id : Int64, reaction_id : Int64, **options) : Bool</a>
         
           <div class="summary"><p>Delete a reaction for a release</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#issue_comment_reactions%28repo%3AString%2Cid%3AInt64%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#issue_comment_reactions</strong>(repo : String, id : Int64, **options)</a>
+        <a href="#issue_comment_reactions%28repo%3AString%2Cid%3AInt64%2C%2A%2Aoptions%29%3APaginator%28Reaction%29-instance-method" class="signature"><strong>#issue_comment_reactions</strong>(repo : String, id : Int64, **options) : Paginator(Reaction)</a>
         
           <div class="summary"><p>List reactions for an issue comment</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#issue_reactions%28repo%3AString%2Cnumber%3AInt64%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#issue_reactions</strong>(repo : String, number : Int64, **options)</a>
+        <a href="#issue_reactions%28repo%3AString%2Cnumber%3AInt64%2C%2A%2Aoptions%29%3APaginator%28Reaction%29-instance-method" class="signature"><strong>#issue_reactions</strong>(repo : String, number : Int64, **options) : Paginator(Reaction)</a>
         
           <div class="summary"><p>List reactions for an issue</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#pull_request_review_comment_reactions%28repo%3AString%2Cid%3AInt64%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#pull_request_review_comment_reactions</strong>(repo : String, id : Int64, **options)</a>
+        <a href="#pull_request_review_comment_reactions%28repo%3AString%2Cid%3AInt64%2C%2A%2Aoptions%29%3APaginator%28Reaction%29-instance-method" class="signature"><strong>#pull_request_review_comment_reactions</strong>(repo : String, id : Int64, **options) : Paginator(Reaction)</a>
         
           <div class="summary"><p>List reactions for a pull request review comment</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#release_reactions%28repo%3AString%2Crelease_id%3AInt64%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#release_reactions</strong>(repo : String, release_id : Int64, **options)</a>
+        <a href="#release_reactions%28repo%3AString%2Crelease_id%3AInt64%2C%2A%2Aoptions%29%3APaginator%28Reaction%29-instance-method" class="signature"><strong>#release_reactions</strong>(repo : String, release_id : Int64, **options) : Paginator(Reaction)</a>
         
           <div class="summary"><p>List reactions for a release</p></div>
         
@@ -2103,12 +2103,12 @@
     Instance Method Detail
   </h2>
   
-    <div class="entry-detail" id="commit_comment_reactions(repo:String,id:Int64,**options)-instance-method">
+    <div class="entry-detail" id="commit_comment_reactions(repo:String,id:Int64,**options):Paginator(Reaction)-instance-method">
       <div class="signature">
         
-        def <strong>commit_comment_reactions</strong>(repo : String, id : Int64, **options)
+        def <strong>commit_comment_reactions</strong>(repo : String, id : Int64, **options) : <a href="../../Octokit/Connection/Paginator.html">Paginator</a>(Reaction)
 
-        <a class="method-permalink" href="#commit_comment_reactions%28repo%3AString%2Cid%3AInt64%2C%2A%2Aoptions%29-instance-method">#</a>
+        <a class="method-permalink" href="#commit_comment_reactions%28repo%3AString%2Cid%3AInt64%2C%2A%2Aoptions%29%3APaginator%28Reaction%29-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -2126,17 +2126,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/octokit-cr/octokit.cr/blob/58f7c7ce25d4744be3f4507158e0490322cd2404/src/octokit/client/reactions.cr#L36" target="_blank">View source</a>]
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/client/reactions.cr#L33" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="create_commit_comment_reaction(repo:String,id:Int64,reaction:String,**options)-instance-method">
+    <div class="entry-detail" id="create_commit_comment_reaction(repo:String,id:Int64,reaction:String,**options):Reaction-instance-method">
       <div class="signature">
         
-        def <strong>create_commit_comment_reaction</strong>(repo : String, id : Int64, reaction : String, **options)
+        def <strong>create_commit_comment_reaction</strong>(repo : String, id : Int64, reaction : String, **options) : Reaction
 
-        <a class="method-permalink" href="#create_commit_comment_reaction%28repo%3AString%2Cid%3AInt64%2Creaction%3AString%2C%2A%2Aoptions%29-instance-method">#</a>
+        <a class="method-permalink" href="#create_commit_comment_reaction%28repo%3AString%2Cid%3AInt64%2Creaction%3AString%2C%2A%2Aoptions%29%3AReaction-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -2153,7 +2153,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/octokit-cr/octokit.cr/blob/58f7c7ce25d4744be3f4507158e0490322cd2404/src/octokit/client/reactions.cr#L50" target="_blank">View source</a>]
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/client/reactions.cr#L47" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2180,17 +2180,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/octokit-cr/octokit.cr/blob/58f7c7ce25d4744be3f4507158e0490322cd2404/src/octokit/client/reactions.cr#L108" target="_blank">View source</a>]
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/client/reactions.cr#L110" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="create_issue_reaction(repo:String,number:Int64,reaction:String,**options)-instance-method">
+    <div class="entry-detail" id="create_issue_reaction(repo:String,number:Int64,reaction:String,**options):Reaction-instance-method">
       <div class="signature">
         
-        def <strong>create_issue_reaction</strong>(repo : String, number : Int64, reaction : String, **options)
+        def <strong>create_issue_reaction</strong>(repo : String, number : Int64, reaction : String, **options) : Reaction
 
-        <a class="method-permalink" href="#create_issue_reaction%28repo%3AString%2Cnumber%3AInt64%2Creaction%3AString%2C%2A%2Aoptions%29-instance-method">#</a>
+        <a class="method-permalink" href="#create_issue_reaction%28repo%3AString%2Cnumber%3AInt64%2Creaction%3AString%2C%2A%2Aoptions%29%3AReaction-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -2207,17 +2207,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/octokit-cr/octokit.cr/blob/58f7c7ce25d4744be3f4507158e0490322cd2404/src/octokit/client/reactions.cr#L79" target="_blank">View source</a>]
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/client/reactions.cr#L76" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="create_pull_request_review_comment_reaction(repo:String,id:Int64,reaction:String,**options)-instance-method">
+    <div class="entry-detail" id="create_pull_request_review_comment_reaction(repo:String,id:Int64,reaction:String,**options):Reaction-instance-method">
       <div class="signature">
         
-        def <strong>create_pull_request_review_comment_reaction</strong>(repo : String, id : Int64, reaction : String, **options)
+        def <strong>create_pull_request_review_comment_reaction</strong>(repo : String, id : Int64, reaction : String, **options) : Reaction
 
-        <a class="method-permalink" href="#create_pull_request_review_comment_reaction%28repo%3AString%2Cid%3AInt64%2Creaction%3AString%2C%2A%2Aoptions%29-instance-method">#</a>
+        <a class="method-permalink" href="#create_pull_request_review_comment_reaction%28repo%3AString%2Cid%3AInt64%2Creaction%3AString%2C%2A%2Aoptions%29%3AReaction-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -2234,17 +2234,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/octokit-cr/octokit.cr/blob/58f7c7ce25d4744be3f4507158e0490322cd2404/src/octokit/client/reactions.cr#L151" target="_blank">View source</a>]
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/client/reactions.cr#L153" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="create_release_reaction(repo:String,release_id:Int64,reaction:String,**options)-instance-method">
+    <div class="entry-detail" id="create_release_reaction(repo:String,release_id:Int64,reaction:String,**options):Reaction-instance-method">
       <div class="signature">
         
-        def <strong>create_release_reaction</strong>(repo : String, release_id : Int64, reaction : String, **options)
+        def <strong>create_release_reaction</strong>(repo : String, release_id : Int64, reaction : String, **options) : Reaction
 
-        <a class="method-permalink" href="#create_release_reaction%28repo%3AString%2Crelease_id%3AInt64%2Creaction%3AString%2C%2A%2Aoptions%29-instance-method">#</a>
+        <a class="method-permalink" href="#create_release_reaction%28repo%3AString%2Crelease_id%3AInt64%2Creaction%3AString%2C%2A%2Aoptions%29%3AReaction-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -2261,17 +2261,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/octokit-cr/octokit.cr/blob/58f7c7ce25d4744be3f4507158e0490322cd2404/src/octokit/client/reactions.cr#L194" target="_blank">View source</a>]
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/client/reactions.cr#L196" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="delete_issue_comment_reaction(repo:String,comment_id:Int64,reaction_id:Int64,**options)-instance-method">
+    <div class="entry-detail" id="delete_issue_comment_reaction(repo:String,comment_id:Int64,reaction_id:Int64,**options):Bool-instance-method">
       <div class="signature">
         
-        def <strong>delete_issue_comment_reaction</strong>(repo : String, comment_id : Int64, reaction_id : Int64, **options)
+        def <strong>delete_issue_comment_reaction</strong>(repo : String, comment_id : Int64, reaction_id : Int64, **options) : Bool
 
-        <a class="method-permalink" href="#delete_issue_comment_reaction%28repo%3AString%2Ccomment_id%3AInt64%2Creaction_id%3AInt64%2C%2A%2Aoptions%29-instance-method">#</a>
+        <a class="method-permalink" href="#delete_issue_comment_reaction%28repo%3AString%2Ccomment_id%3AInt64%2Creaction_id%3AInt64%2C%2A%2Aoptions%29%3ABool-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -2288,17 +2288,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/octokit-cr/octokit.cr/blob/58f7c7ce25d4744be3f4507158e0490322cd2404/src/octokit/client/reactions.cr#L123" target="_blank">View source</a>]
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/client/reactions.cr#L125" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="delete_issue_reaction(repo:String,issue_id:Int64,reaction_id:Int64,**options)-instance-method">
+    <div class="entry-detail" id="delete_issue_reaction(repo:String,issue_id:Int64,reaction_id:Int64,**options):Bool-instance-method">
       <div class="signature">
         
-        def <strong>delete_issue_reaction</strong>(repo : String, issue_id : Int64, reaction_id : Int64, **options)
+        def <strong>delete_issue_reaction</strong>(repo : String, issue_id : Int64, reaction_id : Int64, **options) : Bool
 
-        <a class="method-permalink" href="#delete_issue_reaction%28repo%3AString%2Cissue_id%3AInt64%2Creaction_id%3AInt64%2C%2A%2Aoptions%29-instance-method">#</a>
+        <a class="method-permalink" href="#delete_issue_reaction%28repo%3AString%2Cissue_id%3AInt64%2Creaction_id%3AInt64%2C%2A%2Aoptions%29%3ABool-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -2315,17 +2315,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/octokit-cr/octokit.cr/blob/58f7c7ce25d4744be3f4507158e0490322cd2404/src/octokit/client/reactions.cr#L166" target="_blank">View source</a>]
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/client/reactions.cr#L168" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="delete_release_reaction(repo:String,release_id:Int64,reaction_id:Int64,**options)-instance-method">
+    <div class="entry-detail" id="delete_release_reaction(repo:String,release_id:Int64,reaction_id:Int64,**options):Bool-instance-method">
       <div class="signature">
         
-        def <strong>delete_release_reaction</strong>(repo : String, release_id : Int64, reaction_id : Int64, **options)
+        def <strong>delete_release_reaction</strong>(repo : String, release_id : Int64, reaction_id : Int64, **options) : Bool
 
-        <a class="method-permalink" href="#delete_release_reaction%28repo%3AString%2Crelease_id%3AInt64%2Creaction_id%3AInt64%2C%2A%2Aoptions%29-instance-method">#</a>
+        <a class="method-permalink" href="#delete_release_reaction%28repo%3AString%2Crelease_id%3AInt64%2Creaction_id%3AInt64%2C%2A%2Aoptions%29%3ABool-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -2342,17 +2342,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/octokit-cr/octokit.cr/blob/58f7c7ce25d4744be3f4507158e0490322cd2404/src/octokit/client/reactions.cr#L209" target="_blank">View source</a>]
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/client/reactions.cr#L211" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="issue_comment_reactions(repo:String,id:Int64,**options)-instance-method">
+    <div class="entry-detail" id="issue_comment_reactions(repo:String,id:Int64,**options):Paginator(Reaction)-instance-method">
       <div class="signature">
         
-        def <strong>issue_comment_reactions</strong>(repo : String, id : Int64, **options)
+        def <strong>issue_comment_reactions</strong>(repo : String, id : Int64, **options) : <a href="../../Octokit/Connection/Paginator.html">Paginator</a>(Reaction)
 
-        <a class="method-permalink" href="#issue_comment_reactions%28repo%3AString%2Cid%3AInt64%2C%2A%2Aoptions%29-instance-method">#</a>
+        <a class="method-permalink" href="#issue_comment_reactions%28repo%3AString%2Cid%3AInt64%2C%2A%2Aoptions%29%3APaginator%28Reaction%29-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -2363,23 +2363,28 @@
 <li><a href="https://docs.github.com/en/rest/reactions/reactions?apiVersion=2022-11-28#list-reactions-for-an-issue-comment">https://docs.github.com/en/rest/reactions/reactions?apiVersion=2022-11-28#list-reactions-for-an-issue-comment</a></li>
 </ul>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-crystal"><span class="t">Octokit</span>.issue_comment_reactions(<span class="s">&quot;monsalisa/app&quot;</span>, <span class="n">987654</span>)</code></pre>
+<pre><code class="language-crystal">reactions <span class="o">=</span> <span class="t">Octokit</span>.issue_comment_reactions(<span class="s">&quot;monsalisa/app&quot;</span>, <span class="n">987654</span>)
+reactions.records.each <span class="k">do</span> <span class="o">|</span>reaction<span class="o">|</span>
+  puts reaction.content    <span class="c"># --&gt; &quot;+1&quot; (example)</span>
+  puts reaction.user.login <span class="c"># --&gt; &quot;octocat&quot; (example)</span>
+  puts reaction.id         <span class="c"># --&gt; 271694398 (example)</span>
+<span class="k">end</span></code></pre>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/octokit-cr/octokit.cr/blob/58f7c7ce25d4744be3f4507158e0490322cd2404/src/octokit/client/reactions.cr#L94" target="_blank">View source</a>]
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/client/reactions.cr#L96" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="issue_reactions(repo:String,number:Int64,**options)-instance-method">
+    <div class="entry-detail" id="issue_reactions(repo:String,number:Int64,**options):Paginator(Reaction)-instance-method">
       <div class="signature">
         
-        def <strong>issue_reactions</strong>(repo : String, number : Int64, **options)
+        def <strong>issue_reactions</strong>(repo : String, number : Int64, **options) : <a href="../../Octokit/Connection/Paginator.html">Paginator</a>(Reaction)
 
-        <a class="method-permalink" href="#issue_reactions%28repo%3AString%2Cnumber%3AInt64%2C%2A%2Aoptions%29-instance-method">#</a>
+        <a class="method-permalink" href="#issue_reactions%28repo%3AString%2Cnumber%3AInt64%2C%2A%2Aoptions%29%3APaginator%28Reaction%29-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -2396,17 +2401,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/octokit-cr/octokit.cr/blob/58f7c7ce25d4744be3f4507158e0490322cd2404/src/octokit/client/reactions.cr#L65" target="_blank">View source</a>]
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/client/reactions.cr#L62" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="pull_request_review_comment_reactions(repo:String,id:Int64,**options)-instance-method">
+    <div class="entry-detail" id="pull_request_review_comment_reactions(repo:String,id:Int64,**options):Paginator(Reaction)-instance-method">
       <div class="signature">
         
-        def <strong>pull_request_review_comment_reactions</strong>(repo : String, id : Int64, **options)
+        def <strong>pull_request_review_comment_reactions</strong>(repo : String, id : Int64, **options) : <a href="../../Octokit/Connection/Paginator.html">Paginator</a>(Reaction)
 
-        <a class="method-permalink" href="#pull_request_review_comment_reactions%28repo%3AString%2Cid%3AInt64%2C%2A%2Aoptions%29-instance-method">#</a>
+        <a class="method-permalink" href="#pull_request_review_comment_reactions%28repo%3AString%2Cid%3AInt64%2C%2A%2Aoptions%29%3APaginator%28Reaction%29-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -2423,17 +2428,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/octokit-cr/octokit.cr/blob/58f7c7ce25d4744be3f4507158e0490322cd2404/src/octokit/client/reactions.cr#L137" target="_blank">View source</a>]
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/client/reactions.cr#L139" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="release_reactions(repo:String,release_id:Int64,**options)-instance-method">
+    <div class="entry-detail" id="release_reactions(repo:String,release_id:Int64,**options):Paginator(Reaction)-instance-method">
       <div class="signature">
         
-        def <strong>release_reactions</strong>(repo : String, release_id : Int64, **options)
+        def <strong>release_reactions</strong>(repo : String, release_id : Int64, **options) : <a href="../../Octokit/Connection/Paginator.html">Paginator</a>(Reaction)
 
-        <a class="method-permalink" href="#release_reactions%28repo%3AString%2Crelease_id%3AInt64%2C%2A%2Aoptions%29-instance-method">#</a>
+        <a class="method-permalink" href="#release_reactions%28repo%3AString%2Crelease_id%3AInt64%2C%2A%2Aoptions%29%3APaginator%28Reaction%29-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -2450,7 +2455,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/octokit-cr/octokit.cr/blob/58f7c7ce25d4744be3f4507158e0490322cd2404/src/octokit/client/reactions.cr#L180" target="_blank">View source</a>]
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/client/reactions.cr#L182" target="_blank">View source</a>]
         
       </div>
     </div>
