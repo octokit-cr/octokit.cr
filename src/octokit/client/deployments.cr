@@ -16,10 +16,10 @@ module Octokit
       alias Repository = Models::Repository
 
       # :nodoc:
-      alias Deployment = Models::Deployment 
+      alias Deployment = Models::Deployment
 
       # :nodoc:
-      alias DeploymentStatus = Models::DeploymentStatus 
+      alias DeploymentStatus = Models::DeploymentStatus
 
       # :nodoc:
       VALID_STATES = %w[error failure inactive in_progress queued pending success]
@@ -35,7 +35,7 @@ module Octokit
       #
       # ```
       # deployment = Octokit.deployment("monsalisa/app", 123456)
-      # puts deployment.id 
+      # puts deployment.id
       # ```
       def deployment(repo : String, deployment_id : Int64, **options) : Deployment
         Deployment.from_json(get("#{Repository.path(repo)}/deployments/#{deployment_id}", **options))
