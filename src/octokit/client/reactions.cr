@@ -114,6 +114,10 @@ module Octokit
 
       # Delete a reaction from an issue comment
       #
+      # **IMPORTANT:**
+      # - You must be the author of the reaction to delete it.
+      # - [https://github.com/orgs/community/discussions/28525#discussioncomment-3370231](https://github.com/orgs/community/discussions/28525#discussioncomment-3370231)
+      #
       # **See Also:**
       # - [https://docs.github.com/en/rest/reactions/reactions?apiVersion=2022-11-28#delete-an-issue-comment-reaction](https://docs.github.com/en/rest/reactions/reactions?apiVersion=2022-11-28#delete-an-issue-comment-reaction)
       #
