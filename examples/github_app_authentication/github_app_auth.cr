@@ -3,21 +3,21 @@
 # Helpful: https://github.com/octokit/handbook?tab=readme-ov-file#github-app-authentication-json-web-token
 #
 # Usage (examples):
-# github = GitHub.new
+# github = GitHubApp.new
 # github.get "/meta"
 # github.get "/repos/<org>/<repo>"
 # github.user "grantbirki"
 
 # Why? In some cases, you may not want to have a static long lived token like a GitHub PAT when authenticating...
 # Most importantly, this class will handle automatic token refreshing for you out-of-the-box. Simply provide the...
-# correct environment variables, call `GitHub.new`, and then use the returned object as you would an Octokit client.
+# correct environment variables, call `GitHubApp.new`, and then use the returned object as you would an Octokit client.
 
-require "octokit"
+require "../../src/octokit"
 require "jwt"
 require "openssl"
 require "json"
 
-class GitHub
+class GitHubApp
   TOKEN_EXPIRATION_TIME = 2700 # 45 minutes
   JWT_EXPIRATION_TIME   =  600 # 10 minutes
 
@@ -85,6 +85,3 @@ class GitHub
     client.respond_to?(method_name) || super
   end
 end
-
-# github = GitHub.new
-# github.add_comment("<owner>/<repo>", <number>, "some comment here")
