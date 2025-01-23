@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Crystal Docs 1.11.2">
+<meta name="generator" content="Crystal Docs 1.10.1">
 <meta name="crystal_docs.project_version" content="main">
 <meta name="crystal_docs.project_name" content="octokit">
 
@@ -122,8 +122,18 @@
       
     </li>
   
+  <li class=" " data-id="octokit/Octokit/Client/PullRequests" data-name="octokit::client::pullrequests">
+      <a href="../Octokit/Client/PullRequests.html">PullRequests</a>
+      
+    </li>
+  
   <li class=" " data-id="octokit/Octokit/Client/RateLimit" data-name="octokit::client::ratelimit">
       <a href="../Octokit/Client/RateLimit.html">RateLimit</a>
+      
+    </li>
+  
+  <li class=" " data-id="octokit/Octokit/Client/Reactions" data-name="octokit::client::reactions">
+      <a href="../Octokit/Client/Reactions.html">Reactions</a>
       
     </li>
   
@@ -1962,7 +1972,7 @@
   </h2>
   
     
-      <a href="https://github.com/octokit-cr/octokit.cr/blob/28eaf282f7220c24fb7f2c0f4cd7679880eda9c8/src/octokit/default.cr#L9" target="_blank">
+      <a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/default.cr#L9" target="_blank">
         octokit/default.cr
       </a>
     
@@ -2049,7 +2059,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#access_token-instance-method" class="signature"><strong>#access_token</strong></a>
+        <a href="#access_token%3AString%7CNil-instance-method" class="signature"><strong>#access_token</strong> : String | Nil</a>
         
           <div class="summary"><p>Default access token from ENV</p></div>
         
@@ -2091,7 +2101,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#connection_options-instance-method" class="signature"><strong>#connection_options</strong></a>
+        <a href="#connection_options%3AHalite%3A%3AOptions-instance-method" class="signature"><strong>#connection_options</strong> : Halite::Options</a>
         
           <div class="summary"><p>Default options for <code>Halite::Options</code></p></div>
         
@@ -2112,7 +2122,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#login-instance-method" class="signature"><strong>#login</strong></a>
+        <a href="#login%3AString%7CNil-instance-method" class="signature"><strong>#login</strong> : String | Nil</a>
         
           <div class="summary"><p>Default GitHub username for Basic Auth from ENV</p></div>
         
@@ -2140,14 +2150,14 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#password-instance-method" class="signature"><strong>#password</strong></a>
+        <a href="#password%3AString%7CNil-instance-method" class="signature"><strong>#password</strong> : String | Nil</a>
         
           <div class="summary"><p>Default GitHub password for Basic Auth from ENV</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#per_page-instance-method" class="signature"><strong>#per_page</strong></a>
+        <a href="#per_page%3AInt32%7CNil-instance-method" class="signature"><strong>#per_page</strong> : Int32 | Nil</a>
         
           <div class="summary"><p>Default pagination page size from ENV</p></div>
         
@@ -2161,21 +2171,21 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#ssl_verify_mode-instance-method" class="signature"><strong>#ssl_verify_mode</strong></a>
+        <a href="#ssl_verify_mode%3AInt32-instance-method" class="signature"><strong>#ssl_verify_mode</strong> : Int32</a>
         
           <div class="summary"><p>Default SSL verify mode from ENV</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#user_agent-instance-method" class="signature"><strong>#user_agent</strong></a>
+        <a href="#user_agent%3AString-instance-method" class="signature"><strong>#user_agent</strong> : String</a>
         
           <div class="summary"><p>Default User-Agent header string from ENV or <code><a href="../Octokit/Default.html#USER_AGENT">USER_AGENT</a></code></p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#web_endpoint-instance-method" class="signature"><strong>#web_endpoint</strong></a>
+        <a href="#web_endpoint%3AString-instance-method" class="signature"><strong>#web_endpoint</strong> : String</a>
         
           <div class="summary"><p>Default web endpoint from ENV or <code><a href="../Octokit/Default.html#WEB_ENDPOINT">WEB_ENDPOINT</a></code></p></div>
         
@@ -2205,12 +2215,12 @@
     Instance Method Detail
   </h2>
   
-    <div class="entry-detail" id="access_token-instance-method">
+    <div class="entry-detail" id="access_token:String|Nil-instance-method">
       <div class="signature">
         
-        def <strong>access_token</strong>
+        def <strong>access_token</strong> : String | Nil
 
-        <a class="method-permalink" href="#access_token-instance-method">#</a>
+        <a class="method-permalink" href="#access_token%3AString%7CNil-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -2221,7 +2231,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/octokit-cr/octokit.cr/blob/28eaf282f7220c24fb7f2c0f4cd7679880eda9c8/src/octokit/default.cr#L39" target="_blank">View source</a>]
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/default.cr#L39" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2242,7 +2252,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/octokit-cr/octokit.cr/blob/28eaf282f7220c24fb7f2c0f4cd7679880eda9c8/src/octokit/default.cr#L44" target="_blank">View source</a>]
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/default.cr#L44" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2263,7 +2273,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/octokit-cr/octokit.cr/blob/28eaf282f7220c24fb7f2c0f4cd7679880eda9c8/src/octokit/default.cr#L49" target="_blank">View source</a>]
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/default.cr#L49" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2284,7 +2294,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/octokit-cr/octokit.cr/blob/28eaf282f7220c24fb7f2c0f4cd7679880eda9c8/src/octokit/default.cr#L54" target="_blank">View source</a>]
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/default.cr#L54" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2305,7 +2315,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/octokit-cr/octokit.cr/blob/28eaf282f7220c24fb7f2c0f4cd7679880eda9c8/src/octokit/default.cr#L59" target="_blank">View source</a>]
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/default.cr#L59" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2326,17 +2336,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/octokit-cr/octokit.cr/blob/28eaf282f7220c24fb7f2c0f4cd7679880eda9c8/src/octokit/default.cr#L64" target="_blank">View source</a>]
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/default.cr#L64" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="connection_options-instance-method">
+    <div class="entry-detail" id="connection_options:Halite::Options-instance-method">
       <div class="signature">
         
-        def <strong>connection_options</strong>
+        def <strong>connection_options</strong> : Halite::Options
 
-        <a class="method-permalink" href="#connection_options-instance-method">#</a>
+        <a class="method-permalink" href="#connection_options%3AHalite%3A%3AOptions-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -2347,7 +2357,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/octokit-cr/octokit.cr/blob/28eaf282f7220c24fb7f2c0f4cd7679880eda9c8/src/octokit/default.cr#L79" target="_blank">View source</a>]
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/default.cr#L79" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2368,7 +2378,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/octokit-cr/octokit.cr/blob/28eaf282f7220c24fb7f2c0f4cd7679880eda9c8/src/octokit/default.cr#L88" target="_blank">View source</a>]
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/default.cr#L88" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2389,17 +2399,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/octokit-cr/octokit.cr/blob/28eaf282f7220c24fb7f2c0f4cd7679880eda9c8/src/octokit/default.cr#L138" target="_blank">View source</a>]
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/default.cr#L138" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="login-instance-method">
+    <div class="entry-detail" id="login:String|Nil-instance-method">
       <div class="signature">
         
-        def <strong>login</strong>
+        def <strong>login</strong> : String | Nil
 
-        <a class="method-permalink" href="#login-instance-method">#</a>
+        <a class="method-permalink" href="#login%3AString%7CNil-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -2410,7 +2420,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/octokit-cr/octokit.cr/blob/28eaf282f7220c24fb7f2c0f4cd7679880eda9c8/src/octokit/default.cr#L93" target="_blank">View source</a>]
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/default.cr#L93" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2431,7 +2441,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/octokit-cr/octokit.cr/blob/28eaf282f7220c24fb7f2c0f4cd7679880eda9c8/src/octokit/default.cr#L74" target="_blank">View source</a>]
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/default.cr#L74" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2452,7 +2462,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/octokit-cr/octokit.cr/blob/28eaf282f7220c24fb7f2c0f4cd7679880eda9c8/src/octokit/default.cr#L69" target="_blank">View source</a>]
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/default.cr#L69" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2473,17 +2483,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/octokit-cr/octokit.cr/blob/28eaf282f7220c24fb7f2c0f4cd7679880eda9c8/src/octokit/default.cr#L98" target="_blank">View source</a>]
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/default.cr#L98" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="password-instance-method">
+    <div class="entry-detail" id="password:String|Nil-instance-method">
       <div class="signature">
         
-        def <strong>password</strong>
+        def <strong>password</strong> : String | Nil
 
-        <a class="method-permalink" href="#password-instance-method">#</a>
+        <a class="method-permalink" href="#password%3AString%7CNil-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -2494,17 +2504,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/octokit-cr/octokit.cr/blob/28eaf282f7220c24fb7f2c0f4cd7679880eda9c8/src/octokit/default.cr#L103" target="_blank">View source</a>]
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/default.cr#L103" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="per_page-instance-method">
+    <div class="entry-detail" id="per_page:Int32|Nil-instance-method">
       <div class="signature">
         
-        def <strong>per_page</strong>
+        def <strong>per_page</strong> : Int32 | Nil
 
-        <a class="method-permalink" href="#per_page-instance-method">#</a>
+        <a class="method-permalink" href="#per_page%3AInt32%7CNil-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -2515,7 +2525,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/octokit-cr/octokit.cr/blob/28eaf282f7220c24fb7f2c0f4cd7679880eda9c8/src/octokit/default.cr#L108" target="_blank">View source</a>]
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/default.cr#L108" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2537,17 +2547,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/octokit-cr/octokit.cr/blob/28eaf282f7220c24fb7f2c0f4cd7679880eda9c8/src/octokit/default.cr#L115" target="_blank">View source</a>]
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/default.cr#L115" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="ssl_verify_mode-instance-method">
+    <div class="entry-detail" id="ssl_verify_mode:Int32-instance-method">
       <div class="signature">
         
-        def <strong>ssl_verify_mode</strong>
+        def <strong>ssl_verify_mode</strong> : Int32
 
-        <a class="method-permalink" href="#ssl_verify_mode-instance-method">#</a>
+        <a class="method-permalink" href="#ssl_verify_mode%3AInt32-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -2558,17 +2568,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/octokit-cr/octokit.cr/blob/28eaf282f7220c24fb7f2c0f4cd7679880eda9c8/src/octokit/default.cr#L120" target="_blank">View source</a>]
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/default.cr#L120" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="user_agent-instance-method">
+    <div class="entry-detail" id="user_agent:String-instance-method">
       <div class="signature">
         
-        def <strong>user_agent</strong>
+        def <strong>user_agent</strong> : String
 
-        <a class="method-permalink" href="#user_agent-instance-method">#</a>
+        <a class="method-permalink" href="#user_agent%3AString-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -2579,17 +2589,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/octokit-cr/octokit.cr/blob/28eaf282f7220c24fb7f2c0f4cd7679880eda9c8/src/octokit/default.cr#L128" target="_blank">View source</a>]
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/default.cr#L128" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="web_endpoint-instance-method">
+    <div class="entry-detail" id="web_endpoint:String-instance-method">
       <div class="signature">
         
-        def <strong>web_endpoint</strong>
+        def <strong>web_endpoint</strong> : String
 
-        <a class="method-permalink" href="#web_endpoint-instance-method">#</a>
+        <a class="method-permalink" href="#web_endpoint%3AString-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -2600,7 +2610,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/octokit-cr/octokit.cr/blob/28eaf282f7220c24fb7f2c0f4cd7679880eda9c8/src/octokit/default.cr#L133" target="_blank">View source</a>]
+          [<a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/default.cr#L133" target="_blank">View source</a>]
         
       </div>
     </div>

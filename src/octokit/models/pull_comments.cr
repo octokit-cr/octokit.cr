@@ -4,7 +4,7 @@ module Octokit
       Octokit.rest_model(
         id: Int64,
         node_id: String,
-        in_reply_to: Int64,
+        in_reply_to: Int64?,
         body: String,
         path: String,
         diff_hunk: String,

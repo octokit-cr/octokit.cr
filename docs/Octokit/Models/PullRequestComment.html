@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Crystal Docs 1.11.2">
+<meta name="generator" content="Crystal Docs 1.10.1">
 <meta name="crystal_docs.project_version" content="main">
 <meta name="crystal_docs.project_name" content="octokit">
 
@@ -122,8 +122,18 @@
       
     </li>
   
+  <li class=" " data-id="octokit/Octokit/Client/PullRequests" data-name="octokit::client::pullrequests">
+      <a href="../../Octokit/Client/PullRequests.html">PullRequests</a>
+      
+    </li>
+  
   <li class=" " data-id="octokit/Octokit/Client/RateLimit" data-name="octokit::client::ratelimit">
       <a href="../../Octokit/Client/RateLimit.html">RateLimit</a>
+      
+    </li>
+  
+  <li class=" " data-id="octokit/Octokit/Client/Reactions" data-name="octokit::client::reactions">
+      <a href="../../Octokit/Client/Reactions.html">Reactions</a>
       
     </li>
   
@@ -1939,7 +1949,7 @@
   </h2>
   
     
-      <a href="https://github.com/octokit-cr/octokit.cr/blob/28eaf282f7220c24fb7f2c0f4cd7679880eda9c8/src/octokit/models/pull_comments.cr#L3" target="_blank">
+      <a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/models/pull_comments.cr#L3" target="_blank">
         octokit/models/pull_comments.cr
       </a>
     
@@ -1961,12 +1971,12 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28id%3AInt64%2Cnode_id%3AString%2Cin_reply_to%3AInt64%2Cbody%3AString%2Cpath%3AString%2Cdiff_hunk%3AString%2Cpull_request_review_id%3AInt64%2Cposition%3AInt32%2Coriginal_position%3AInt32%2Ccommit_id%3AString%2Coriginal_commit_id%3AString%2Cuser%3AUser%2Creactions%3AReactions%2Ccreated_at%3ATime%2Cupdated_at%3ATime%2Cauthor_association%3AString%2Curl%3AString%2Chtml_url%3AString%2Cpull_request_url%3AString%29-class-method" class="signature"><strong>.new</strong>(id : Int64, node_id : String, in_reply_to : Int64, body : String, path : String, diff_hunk : String, pull_request_review_id : Int64, position : Int32, original_position : Int32, commit_id : String, original_commit_id : String, user : User, reactions : Reactions, created_at : Time, updated_at : Time, author_association : String, url : String, html_url : String, pull_request_url : String)</a>
+        <a href="#new%28id%3AInt64%2Cnode_id%3AString%2Cin_reply_to%3AUnion%28Int64%2CNil%29%2Cbody%3AString%2Cpath%3AString%2Cdiff_hunk%3AString%2Cpull_request_review_id%3AInt64%2Cposition%3AInt32%2Coriginal_position%3AInt32%2Ccommit_id%3AString%2Coriginal_commit_id%3AString%2Cuser%3AUser%2Creactions%3AReactions%2Ccreated_at%3ATime%2Cupdated_at%3ATime%2Cauthor_association%3AString%2Curl%3AString%2Chtml_url%3AString%2Cpull_request_url%3AString%29-class-method" class="signature"><strong>.new</strong>(id : Int64, node_id : String, in_reply_to : Union(Int64, Nil), body : String, path : String, diff_hunk : String, pull_request_review_id : Int64, position : Int32, original_position : Int32, commit_id : String, original_commit_id : String, user : User, reactions : Reactions, created_at : Time, updated_at : Time, author_association : String, url : String, html_url : String, pull_request_url : String)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28__temp_3065%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_3065 : JSON::PullParser)</a>
+        <a href="#new%28__temp_3211%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_3211 : JSON::PullParser)</a>
         
       </li>
     
@@ -2059,12 +2069,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#in_reply_to%3AInt64-instance-method" class="signature"><strong>#in_reply_to</strong> : Int64</a>
+        <a href="#in_reply_to%3AUnion%28Int64%2CNil%29-instance-method" class="signature"><strong>#in_reply_to</strong> : Union(Int64, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#in_reply_to%3D%28_in_reply_to%3AInt64%29-instance-method" class="signature"><strong>#in_reply_to=</strong>(_in_reply_to : Int64)</a>
+        <a href="#in_reply_to%3D%28_in_reply_to%3AUnion%28Int64%2CNil%29%29-instance-method" class="signature"><strong>#in_reply_to=</strong>(_in_reply_to : Union(Int64, Nil))</a>
         
       </li>
     
@@ -2240,12 +2250,12 @@
     Constructor Detail
   </h2>
   
-    <div class="entry-detail" id="new(id:Int64,node_id:String,in_reply_to:Int64,body:String,path:String,diff_hunk:String,pull_request_review_id:Int64,position:Int32,original_position:Int32,commit_id:String,original_commit_id:String,user:User,reactions:Reactions,created_at:Time,updated_at:Time,author_association:String,url:String,html_url:String,pull_request_url:String)-class-method">
+    <div class="entry-detail" id="new(id:Int64,node_id:String,in_reply_to:Union(Int64,Nil),body:String,path:String,diff_hunk:String,pull_request_review_id:Int64,position:Int32,original_position:Int32,commit_id:String,original_commit_id:String,user:User,reactions:Reactions,created_at:Time,updated_at:Time,author_association:String,url:String,html_url:String,pull_request_url:String)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(id : Int64, node_id : String, in_reply_to : Int64, body : String, path : String, diff_hunk : String, pull_request_review_id : Int64, position : Int32, original_position : Int32, commit_id : String, original_commit_id : String, user : <a href="../../Octokit/Models/User.html">User</a>, reactions : <a href="../../Octokit/Models/Reactions.html">Reactions</a>, created_at : <a href="../../Time.html">Time</a>, updated_at : <a href="../../Time.html">Time</a>, author_association : String, url : String, html_url : String, pull_request_url : String)
+        def self.<strong>new</strong>(id : Int64, node_id : String, in_reply_to : Union(Int64, Nil), body : String, path : String, diff_hunk : String, pull_request_review_id : Int64, position : Int32, original_position : Int32, commit_id : String, original_commit_id : String, user : <a href="../../Octokit/Models/User.html">User</a>, reactions : <a href="../../Octokit/Models/Reactions.html">Reactions</a>, created_at : <a href="../../Time.html">Time</a>, updated_at : <a href="../../Time.html">Time</a>, author_association : String, url : String, html_url : String, pull_request_url : String)
 
-        <a class="method-permalink" href="#new%28id%3AInt64%2Cnode_id%3AString%2Cin_reply_to%3AInt64%2Cbody%3AString%2Cpath%3AString%2Cdiff_hunk%3AString%2Cpull_request_review_id%3AInt64%2Cposition%3AInt32%2Coriginal_position%3AInt32%2Ccommit_id%3AString%2Coriginal_commit_id%3AString%2Cuser%3AUser%2Creactions%3AReactions%2Ccreated_at%3ATime%2Cupdated_at%3ATime%2Cauthor_association%3AString%2Curl%3AString%2Chtml_url%3AString%2Cpull_request_url%3AString%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28id%3AInt64%2Cnode_id%3AString%2Cin_reply_to%3AUnion%28Int64%2CNil%29%2Cbody%3AString%2Cpath%3AString%2Cdiff_hunk%3AString%2Cpull_request_review_id%3AInt64%2Cposition%3AInt32%2Coriginal_position%3AInt32%2Ccommit_id%3AString%2Coriginal_commit_id%3AString%2Cuser%3AUser%2Creactions%3AReactions%2Ccreated_at%3ATime%2Cupdated_at%3ATime%2Cauthor_association%3AString%2Curl%3AString%2Chtml_url%3AString%2Cpull_request_url%3AString%29-class-method">#</a>
       </div>
       
       <br/>
@@ -2254,12 +2264,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="new(__temp_3065:JSON::PullParser)-class-method">
+    <div class="entry-detail" id="new(__temp_3211:JSON::PullParser)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(__temp_3065 : JSON::PullParser)
+        def self.<strong>new</strong>(__temp_3211 : JSON::PullParser)
 
-        <a class="method-permalink" href="#new%28__temp_3065%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28__temp_3211%3AJSON%3A%3APullParser%29-class-method">#</a>
       </div>
       
       <br/>
@@ -2480,12 +2490,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="in_reply_to:Int64-instance-method">
+    <div class="entry-detail" id="in_reply_to:Union(Int64,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>in_reply_to</strong> : Int64
+        def <strong>in_reply_to</strong> : Union(Int64, Nil)
 
-        <a class="method-permalink" href="#in_reply_to%3AInt64-instance-method">#</a>
+        <a class="method-permalink" href="#in_reply_to%3AUnion%28Int64%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2494,12 +2504,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="in_reply_to=(_in_reply_to:Int64)-instance-method">
+    <div class="entry-detail" id="in_reply_to=(_in_reply_to:Union(Int64,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>in_reply_to=</strong>(_in_reply_to : Int64)
+        def <strong>in_reply_to=</strong>(_in_reply_to : Union(Int64, Nil))
 
-        <a class="method-permalink" href="#in_reply_to%3D%28_in_reply_to%3AInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#in_reply_to%3D%28_in_reply_to%3AUnion%28Int64%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>

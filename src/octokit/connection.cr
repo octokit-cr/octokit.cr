@@ -16,6 +16,9 @@ module Octokit
     # Header keys that can be passed in options hash to {#get},{#head}
     CONVENIENCE_HEADERS = Set{"accept", "content_type"}
 
+    # Successful status codes from PUT/POST/PATCH requests
+    SUCCESSFUL_STATUSES = [201, 202, 204]
+
     # Make a HTTP GET request
     def get(url, options = nil)
       request "get", url, make_options(options)
@@ -114,7 +117,7 @@ module Octokit
       @agent = nil
     end
 
-    protected def request(method, path, options = nil)
+    protected def request(method : Symbol | String, path : String, options = nil)
       path = File.join(endpoint, path) unless path.nil? || path.starts_with?("http")
       options = options ? @connection_options.merge(options) : @connection_options
       @last_response = response = agent.request(verb: method.to_s, uri: path, options: options)
@@ -122,7 +125,7 @@ module Octokit
       response.body
     end
 
-    protected def request(method, path, options = nil, &)
+    protected def request(method : Symbol | String, path : String, options = nil, &)
       path = File.join(endpoint, path) unless path.nil? || path.starts_with?("http")
       options = options ? @connection_options.merge(options) : @connection_options
       @last_response = response = agent.request(verb: method, uri: path, options: options)
@@ -132,9 +135,9 @@ module Octokit
     end
 
     # Executes the request, checking if it was successful
-    protected def boolean_from_response(method, path, options = nil)
-      request(method, path, options)
-      @last_response.not_nil!.status_code == 204
+    protected def boolean_from_response(method : Symbol, path : String, options : NamedTuple | Nil = nil) : Bool
+      request(method, path, make_options(options))
+      @last_response.not_nil!.status_code.in?(SUCCESSFUL_STATUSES)
     rescue Error::NotFound
       false
     end
@@ -146,7 +149,7 @@ module Octokit
       end
     end
 
-    protected def make_options(options)
+    protected def make_options(options) : Halite::Options?
       return if options.nil?
       options.is_a?(Halite::Options) ? options : Halite::Options.new(**options)
     end
@@ -331,28 +334,30 @@ module Octokit
       # pages.fetch_all
       # pages.last? # => Bool
       # ```
-      def last?
+      def last? : Bool
         @current_page == @total_pages
       end
 
       # Checks if the paginator is empty.
-      def empty?
+      def empty? : Bool
         @records.empty?
       end
 
       # Utility method to set the `@total_pages` variable.
       private def set_total_pages!
-        return 0 if @client.last_response.nil?
+        return @total_pages = 0 if @client.last_response.nil?
         if links = @client.last_response.try(&.links)
-          return 0 unless links["last"]?
+          unless links["last"]?
+            @total_pages = 1
+            return
+          end
           if target = links["last"].target
             if match = target.match(/page=([0-9]+)/)
               @total_pages = match[1].to_i
             end
-          else
           end
         else
-          0
+          @total_pages = 1
         end
       end
     end

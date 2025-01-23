@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Crystal Docs 1.11.2">
+<meta name="generator" content="Crystal Docs 1.10.1">
 <meta name="crystal_docs.project_version" content="main">
 <meta name="crystal_docs.project_name" content="octokit">
 
@@ -122,8 +122,18 @@
       
     </li>
   
+  <li class=" " data-id="octokit/Octokit/Client/PullRequests" data-name="octokit::client::pullrequests">
+      <a href="../../Octokit/Client/PullRequests.html">PullRequests</a>
+      
+    </li>
+  
   <li class=" " data-id="octokit/Octokit/Client/RateLimit" data-name="octokit::client::ratelimit">
       <a href="../../Octokit/Client/RateLimit.html">RateLimit</a>
+      
+    </li>
+  
+  <li class=" " data-id="octokit/Octokit/Client/Reactions" data-name="octokit::client::reactions">
+      <a href="../../Octokit/Client/Reactions.html">Reactions</a>
       
     </li>
   
@@ -1939,7 +1949,7 @@
   </h2>
   
     
-      <a href="https://github.com/octokit-cr/octokit.cr/blob/28eaf282f7220c24fb7f2c0f4cd7679880eda9c8/src/octokit/models/commits.cr#L28" target="_blank">
+      <a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/models/commits.cr#L28" target="_blank">
         octokit/models/commits.cr
       </a>
     
@@ -1961,7 +1971,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28date%3AString%2Cname%3AString%2Cemail%3AString%2Clogin%3AString%29-class-method" class="signature"><strong>.new</strong>(date : String, name : String, email : String, login : String)</a>
+        <a href="#new%28date%3AUnion%28String%2CNil%29%2Cname%3AUnion%28String%2CNil%29%2Cemail%3AUnion%28String%2CNil%29%2Clogin%3AString%29-class-method" class="signature"><strong>.new</strong>(date : Union(String, Nil), name : Union(String, Nil), email : Union(String, Nil), login : String)</a>
         
       </li>
     
@@ -1989,22 +1999,22 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#date%3AString-instance-method" class="signature"><strong>#date</strong> : String</a>
+        <a href="#date%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#date</strong> : Union(String, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#date%3D%28_date%3AString%29-instance-method" class="signature"><strong>#date=</strong>(_date : String)</a>
+        <a href="#date%3D%28_date%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#date=</strong>(_date : Union(String, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#email%3AString-instance-method" class="signature"><strong>#email</strong> : String</a>
+        <a href="#email%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#email</strong> : Union(String, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#email%3D%28_email%3AString%29-instance-method" class="signature"><strong>#email=</strong>(_email : String)</a>
+        <a href="#email%3D%28_email%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#email=</strong>(_email : Union(String, Nil))</a>
         
       </li>
     
@@ -2019,12 +2029,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#name%3AString-instance-method" class="signature"><strong>#name</strong> : String</a>
+        <a href="#name%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#name</strong> : Union(String, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#name%3D%28_name%3AString%29-instance-method" class="signature"><strong>#name=</strong>(_name : String)</a>
+        <a href="#name%3D%28_name%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#name=</strong>(_name : Union(String, Nil))</a>
         
       </li>
     
@@ -2090,12 +2100,12 @@
     Constructor Detail
   </h2>
   
-    <div class="entry-detail" id="new(date:String,name:String,email:String,login:String)-class-method">
+    <div class="entry-detail" id="new(date:Union(String,Nil),name:Union(String,Nil),email:Union(String,Nil),login:String)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(date : String, name : String, email : String, login : String)
+        def self.<strong>new</strong>(date : Union(String, Nil), name : Union(String, Nil), email : Union(String, Nil), login : String)
 
-        <a class="method-permalink" href="#new%28date%3AString%2Cname%3AString%2Cemail%3AString%2Clogin%3AString%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28date%3AUnion%28String%2CNil%29%2Cname%3AUnion%28String%2CNil%29%2Cemail%3AUnion%28String%2CNil%29%2Clogin%3AString%29-class-method">#</a>
       </div>
       
       <br/>
@@ -2134,12 +2144,12 @@
     Instance Method Detail
   </h2>
   
-    <div class="entry-detail" id="date:String-instance-method">
+    <div class="entry-detail" id="date:Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>date</strong> : String
+        def <strong>date</strong> : Union(String, Nil)
 
-        <a class="method-permalink" href="#date%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#date%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2148,12 +2158,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="date=(_date:String)-instance-method">
+    <div class="entry-detail" id="date=(_date:Union(String,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>date=</strong>(_date : String)
+        def <strong>date=</strong>(_date : Union(String, Nil))
 
-        <a class="method-permalink" href="#date%3D%28_date%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#date%3D%28_date%3AUnion%28String%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2162,12 +2172,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="email:String-instance-method">
+    <div class="entry-detail" id="email:Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>email</strong> : String
+        def <strong>email</strong> : Union(String, Nil)
 
-        <a class="method-permalink" href="#email%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#email%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2176,12 +2186,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="email=(_email:String)-instance-method">
+    <div class="entry-detail" id="email=(_email:Union(String,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>email=</strong>(_email : String)
+        def <strong>email=</strong>(_email : Union(String, Nil))
 
-        <a class="method-permalink" href="#email%3D%28_email%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#email%3D%28_email%3AUnion%28String%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2218,12 +2228,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="name:String-instance-method">
+    <div class="entry-detail" id="name:Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>name</strong> : String
+        def <strong>name</strong> : Union(String, Nil)
 
-        <a class="method-permalink" href="#name%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#name%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2232,12 +2242,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="name=(_name:String)-instance-method">
+    <div class="entry-detail" id="name=(_name:Union(String,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>name=</strong>(_name : String)
+        def <strong>name=</strong>(_name : Union(String, Nil))
 
-        <a class="method-permalink" href="#name%3D%28_name%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#name%3D%28_name%3AUnion%28String%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>

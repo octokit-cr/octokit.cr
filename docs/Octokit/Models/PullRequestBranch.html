@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Crystal Docs 1.11.2">
+<meta name="generator" content="Crystal Docs 1.10.1">
 <meta name="crystal_docs.project_version" content="main">
 <meta name="crystal_docs.project_name" content="octokit">
 
@@ -122,8 +122,18 @@
       
     </li>
   
+  <li class=" " data-id="octokit/Octokit/Client/PullRequests" data-name="octokit::client::pullrequests">
+      <a href="../../Octokit/Client/PullRequests.html">PullRequests</a>
+      
+    </li>
+  
   <li class=" " data-id="octokit/Octokit/Client/RateLimit" data-name="octokit::client::ratelimit">
       <a href="../../Octokit/Client/RateLimit.html">RateLimit</a>
+      
+    </li>
+  
+  <li class=" " data-id="octokit/Octokit/Client/Reactions" data-name="octokit::client::reactions">
+      <a href="../../Octokit/Client/Reactions.html">Reactions</a>
       
     </li>
   
@@ -1939,7 +1949,7 @@
   </h2>
   
     
-      <a href="https://github.com/octokit-cr/octokit.cr/blob/28eaf282f7220c24fb7f2c0f4cd7679880eda9c8/src/octokit/models/pulls.cr#L74" target="_blank">
+      <a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/models/pulls.cr#L77" target="_blank">
         octokit/models/pulls.cr
       </a>
     
@@ -1961,12 +1971,12 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28label%3AString%2Cref%3AString%2Csha%3AString%2Crepo%3ARepository%2Cuser%3AUser%29-class-method" class="signature"><strong>.new</strong>(label : String, ref : String, sha : String, repo : Repository, user : User)</a>
+        <a href="#new%28label%3AString%2Cref%3AString%2Csha%3AString%2Crepo%3AUnion%28Repository%2CNil%29%2Cuser%3AUser%29-class-method" class="signature"><strong>.new</strong>(label : String, ref : String, sha : String, repo : Union(Repository, Nil), user : User)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28__temp_3294%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_3294 : JSON::PullParser)</a>
+        <a href="#new%28__temp_3440%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_3440 : JSON::PullParser)</a>
         
       </li>
     
@@ -2009,12 +2019,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#repo%3ARepository-instance-method" class="signature"><strong>#repo</strong> : Repository</a>
+        <a href="#repo%3AUnion%28Repository%2CNil%29-instance-method" class="signature"><strong>#repo</strong> : Union(Repository, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#repo%3D%28_repo%3ARepository%29-instance-method" class="signature"><strong>#repo=</strong>(_repo : Repository)</a>
+        <a href="#repo%3D%28_repo%3AUnion%28Repository%2CNil%29%29-instance-method" class="signature"><strong>#repo=</strong>(_repo : Union(Repository, Nil))</a>
         
       </li>
     
@@ -2100,12 +2110,12 @@
     Constructor Detail
   </h2>
   
-    <div class="entry-detail" id="new(label:String,ref:String,sha:String,repo:Repository,user:User)-class-method">
+    <div class="entry-detail" id="new(label:String,ref:String,sha:String,repo:Union(Repository,Nil),user:User)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(label : String, ref : String, sha : String, repo : <a href="../../Octokit/Models/Repository.html">Repository</a>, user : <a href="../../Octokit/Models/User.html">User</a>)
+        def self.<strong>new</strong>(label : String, ref : String, sha : String, repo : Union(<a href="../../Octokit/Models/Repository.html">Repository</a>, Nil), user : <a href="../../Octokit/Models/User.html">User</a>)
 
-        <a class="method-permalink" href="#new%28label%3AString%2Cref%3AString%2Csha%3AString%2Crepo%3ARepository%2Cuser%3AUser%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28label%3AString%2Cref%3AString%2Csha%3AString%2Crepo%3AUnion%28Repository%2CNil%29%2Cuser%3AUser%29-class-method">#</a>
       </div>
       
       <br/>
@@ -2114,12 +2124,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="new(__temp_3294:JSON::PullParser)-class-method">
+    <div class="entry-detail" id="new(__temp_3440:JSON::PullParser)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(__temp_3294 : JSON::PullParser)
+        def self.<strong>new</strong>(__temp_3440 : JSON::PullParser)
 
-        <a class="method-permalink" href="#new%28__temp_3294%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28__temp_3440%3AJSON%3A%3APullParser%29-class-method">#</a>
       </div>
       
       <br/>
@@ -2200,12 +2210,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="repo:Repository-instance-method">
+    <div class="entry-detail" id="repo:Union(Repository,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>repo</strong> : <a href="../../Octokit/Models/Repository.html">Repository</a>
+        def <strong>repo</strong> : Union(<a href="../../Octokit/Models/Repository.html">Repository</a>, Nil)
 
-        <a class="method-permalink" href="#repo%3ARepository-instance-method">#</a>
+        <a class="method-permalink" href="#repo%3AUnion%28Repository%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2214,12 +2224,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="repo=(_repo:Repository)-instance-method">
+    <div class="entry-detail" id="repo=(_repo:Union(Repository,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>repo=</strong>(_repo : <a href="../../Octokit/Models/Repository.html">Repository</a>)
+        def <strong>repo=</strong>(_repo : Union(<a href="../../Octokit/Models/Repository.html">Repository</a>, Nil))
 
-        <a class="method-permalink" href="#repo%3D%28_repo%3ARepository%29-instance-method">#</a>
+        <a class="method-permalink" href="#repo%3D%28_repo%3AUnion%28Repository%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>

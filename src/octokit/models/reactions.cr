@@ -1,3 +1,5 @@
+require "./users"
+
 module Octokit
   module Models
     struct Reaction
@@ -5,7 +7,6 @@ module Octokit
         id: Int64,
         user: User,
         node_id: String,
-
         content: String
       )
     end
@@ -19,6 +20,8 @@ module Octokit
         confused: Int32,
         heart: Int32,
         hooray: Int32,
+        rocket: Int32,
+        eyes: Int32,
         url: String
       )
     end

@@ -11,13 +11,17 @@ PURPLE='\033[0;35m'
 
 # set the working directory to the root of the project
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
+VENDOR_DIR="$DIR/vendor"
+SHARDS_CACHE_PATH="$VENDOR_DIR/.cache/shards"
+SHARDS_INSTALL_PATH="$VENDOR_DIR/shards/install"
 
 echo -e "📦 ${BLUE}Running ${PURPLE}shards update${BLUE} to update all dependencies${OFF}"
 
 script/preinstall
 
-SHARDS_CACHE_PATH="$DIR/.cache/shards" shards update --skip-postinstall --skip-executables $@
+SHARDS_CACHE_PATH="$SHARDS_CACHE_PATH" SHARDS_INSTALL_PATH="$SHARDS_INSTALL_PATH" shards update $@
 
+script/zipper
 script/postinstall
 
 echo -e "✅ ${GREEN}All dependencies have been updated!${OFF}"

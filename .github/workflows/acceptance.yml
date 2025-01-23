@@ -5,6 +5,7 @@ on:
     branches:
       - main
   pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -20,7 +21,7 @@ jobs:
 
       - name: fetch crystal version
         id: crystal-version
-        run: echo "crystal=$(cat .crystal-version)"
+        run: echo "crystal=$(cat .crystal-version)" >> $GITHUB_OUTPUT
 
       - name: install crystal
         uses: crystal-lang/install-crystal@v1.8.2
@@ -28,7 +29,7 @@ jobs:
           crystal: ${{ steps.crystal-version.outputs.crystal }}
       
       - name: bootstrap
-        run: script/bootstrap
+        run: script/bootstrap --ci
 
       - name: acceptance
         run: script/acceptance

@@ -12,6 +12,21 @@ YELLOW='\033[0;33m'
 
 # set the working directory to the root of the project
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
+VENDOR_DIR="$DIR/vendor"
+SHARDS_CACHE_PATH="$VENDOR_DIR/.cache/shards"
+SHARDS_INSTALL_PATH="$VENDOR_DIR/shards/install"
+
+if [[ "$@" == *"--ci"* ]]; then
+  source script/ci-env
+fi
+
+crystal_path_var="$(crystal env CRYSTAL_PATH)"
+# if the crystal_path_var does not contain 'vendor/shards/install' then we need to add it to the CRYSTAL_PATH
+if [[ "$crystal_path_var" != *"vendor/shards/install"* ]]; then
+  echo -e "💡 ${YELLOW}WARNING${OFF}: This project uses a custom vendoring strategy. Please update your ${PURPLE}CRYSTAL_PATH${OFF} env var to also check the ${PURPLE}vendor/shards/install${OFF} dir relative to the root of this (and other) crystal projects for builds to work properly. Example:\n"
+  echo -e "${PURPLE}export CRYSTAL_PATH=\"vendor/shards/install:$(crystal env CRYSTAL_PATH)\"${OFF}\n"
+  echo -e "It is suggested to add this to your ${PURPLE}.bashrc${OFF} or ${PURPLE}.zshrc${OFF} file so you only have to update it once and then can forget about it.\n"
+fi
 
 # check to ensure both crystal and shards are installed
 if ! [ -x "$(command -v crystal)" ]; then
@@ -64,7 +79,18 @@ if [[ ! -z "$compatability_warning" && "$SUPPRESS_BOOTSTRAP_WARNINGS" != "true" 
 fi
 
 script/preinstall
+script/unzipper
 
-SHARDS_CACHE_PATH="$DIR/.cache/shards" shards install --frozen $@
+# for now, I think I can get away with `--ci` passing in `--skip-postinstall`. This may change one day when I actually need to run the postinstall command for deps in ci
+ci_flags=""
+if [[ "$@" == *"--ci"* ]]; then
+  ci_flags="--skip-postinstall --skip-executables"
+fi
 
-script/postinstall
+# install the shards
+SHARDS_CACHE_PATH="$SHARDS_CACHE_PATH" SHARDS_INSTALL_PATH="$SHARDS_INSTALL_PATH" shards install --local --frozen $ci_flags $@
+
+# shards install often wipes out our custom shards sha256 file so we need to recompute it if they are gone
+script/compute-dep-shas
+
+script/postinstall $@

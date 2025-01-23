@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Crystal Docs 1.11.2">
+<meta name="generator" content="Crystal Docs 1.10.1">
 <meta name="crystal_docs.project_version" content="main">
 <meta name="crystal_docs.project_name" content="octokit">
 
@@ -122,8 +122,18 @@
       
     </li>
   
+  <li class=" " data-id="octokit/Octokit/Client/PullRequests" data-name="octokit::client::pullrequests">
+      <a href="../../Octokit/Client/PullRequests.html">PullRequests</a>
+      
+    </li>
+  
   <li class=" " data-id="octokit/Octokit/Client/RateLimit" data-name="octokit::client::ratelimit">
       <a href="../../Octokit/Client/RateLimit.html">RateLimit</a>
+      
+    </li>
+  
+  <li class=" " data-id="octokit/Octokit/Client/Reactions" data-name="octokit::client::reactions">
+      <a href="../../Octokit/Client/Reactions.html">Reactions</a>
       
     </li>
   
@@ -1939,7 +1949,7 @@
   </h2>
   
     
-      <a href="https://github.com/octokit-cr/octokit.cr/blob/28eaf282f7220c24fb7f2c0f4cd7679880eda9c8/src/octokit/models/pulls.cr#L3" target="_blank">
+      <a href="https://github.com/octokit-cr/octokit.cr/blob/38cc285c6398a0d77d54e812ce055b8fffb1b321/src/octokit/models/pulls.cr#L6" target="_blank">
         octokit/models/pulls.cr
       </a>
     
@@ -1961,12 +1971,12 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28id%3AInt64%2Cnumber%3AInt32%2Cstate%3AString%2Ctitle%3AString%2Cbody%3AString%2Ccreated_at%3ATime%2Cupdated_at%3ATime%2Cclosed_at%3AString%2Cmerged_at%3AString%2Clabels%3AArray%28Label%29%2Cuser%3AUser%2Cdraft%3ABool%2Cmerged%3ABool%2Cmergeable%3ABool%2Cmergeable_state%3AString%2Cmerged_by%3AString%2Cmerge_commit_sha%3AString%2Ccomments%3AInt32%2Ccommits%3AInt32%2Cadditions%3AInt32%2Cdeletions%3AInt32%2Cchanged_files%3AInt32%2Curl%3AString%2Chtml_url%3AString%2Cissue_url%3AString%2Cstatuses_url%3AString%2Cdiff_url%3AString%2Cpatch_url%3AString%2Ccommits_url%3AString%2Ccomments_url%3AString%2Creview_comment_url%3AString%2Creview_comments%3AInt32%2Cassignee%3AUser%2Cassignees%3AArray%28User%29%2Cmilestone%3AMilestone%2Cmaintainer_can_modify%3ABool%2Cauthor_association%3AString%2Cnode_id%3AString%2Crequested_reviewers%3AArray%28User%29%2Crequested_teams%3AArray%28Team%29%2Clinks%3APRLinks%2Chead%3APullRequestBranch%2Cbase%3APullRequestBranch%2Cactive_lock_reason%3AString%29-class-method" class="signature"><strong>.new</strong>(id : Int64, number : Int32, state : String, title : String, body : String, created_at : Time, updated_at : Time, closed_at : String, merged_at : String, labels : Array(Label), user : User, draft : Bool, merged : Bool, mergeable : Bool, mergeable_state : String, merged_by : String, merge_commit_sha : String, comments : Int32, commits : Int32, additions : Int32, deletions : Int32, changed_files : Int32, url : String, html_url : String, issue_url : String, statuses_url : String, diff_url : String, patch_url : String, commits_url : String, comments_url : String, review_comment_url : String, review_comments : Int32, assignee : User, assignees : Array(User), milestone : Milestone, maintainer_can_modify : Bool, author_association : String, node_id : String, requested_reviewers : Array(User), requested_teams : Array(Team), links : PRLinks, head : PullRequestBranch, base : PullRequestBranch, active_lock_reason : String)</a>
+        <a href="#new%28id%3AInt64%2Cnumber%3AInt32%2Cstate%3AString%2Ctitle%3AString%2Cbody%3AUnion%28String%2CNil%29%2Ccreated_at%3ATime%2Cupdated_at%3ATime%2Cclosed_at%3AUnion%28String%2CNil%29%2Cmerged_at%3AUnion%28String%2CNil%29%2Clabels%3AUnion%28Array%28Label%29%2CNil%29%2Cuser%3AUser%2Cdraft%3ABool%2Cmerged%3AUnion%28Bool%2CNil%29%2Cmergeable%3AUnion%28Bool%2CNil%29%2Cmergeable_state%3AUnion%28String%2CNil%29%2Cmerged_by%3AUnion%28String%2CNil%29%2Cmerge_commit_sha%3AUnion%28String%2CNil%29%2Ccomments%3AUnion%28Int32%2CNil%29%2Ccommits%3AUnion%28Int32%2CNil%29%2Cadditions%3AUnion%28Int32%2CNil%29%2Cdeletions%3AUnion%28Int32%2CNil%29%2Cchanged_files%3AUnion%28Int32%2CNil%29%2Curl%3AString%2Chtml_url%3AString%2Cissue_url%3AString%2Cstatuses_url%3AString%2Cdiff_url%3AString%2Cpatch_url%3AString%2Ccommits_url%3AString%2Ccomments_url%3AString%2Creview_comment_url%3AString%2Creview_comments%3AUnion%28Int32%2CNil%29%2Cassignee%3AUnion%28User%2CNil%29%2Cassignees%3AUnion%28Array%28User%29%2CNil%29%2Cmilestone%3AUnion%28Milestone%2CNil%29%2Cmaintainer_can_modify%3AUnion%28Bool%2CNil%29%2Cauthor_association%3AString%2Cnode_id%3AString%2Crequested_reviewers%3AArray%28User%29%2Crequested_teams%3AArray%28Team%29%2Clinks%3AUnion%28PRLinks%2CNil%29%2Chead%3APullRequestBranch%2Cbase%3APullRequestBranch%2Cactive_lock_reason%3AUnion%28String%2CNil%29%29-class-method" class="signature"><strong>.new</strong>(id : Int64, number : Int32, state : String, title : String, body : Union(String, Nil), created_at : Time, updated_at : Time, closed_at : Union(String, Nil), merged_at : Union(String, Nil), labels : Union(Array(Label), Nil), user : User, draft : Bool, merged : Union(Bool, Nil), mergeable : Union(Bool, Nil), mergeable_state : Union(String, Nil), merged_by : Union(String, Nil), merge_commit_sha : Union(String, Nil), comments : Union(Int32, Nil), commits : Union(Int32, Nil), additions : Union(Int32, Nil), deletions : Union(Int32, Nil), changed_files : Union(Int32, Nil), url : String, html_url : String, issue_url : String, statuses_url : String, diff_url : String, patch_url : String, commits_url : String, comments_url : String, review_comment_url : String, review_comments : Union(Int32, Nil), assignee : Union(User, Nil), assignees : Union(Array(User), Nil), milestone : Union(Milestone, Nil), maintainer_can_modify : Union(Bool, Nil), author_association : String, node_id : String, requested_reviewers : Array(User), requested_teams : Array(Team), links : Union(PRLinks, Nil), head : PullRequestBranch, base : PullRequestBranch, active_lock_reason : Union(String, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28__temp_3179%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_3179 : JSON::PullParser)</a>
+        <a href="#new%28__temp_3325%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_3325 : JSON::PullParser)</a>
         
       </li>
     
@@ -1989,42 +1999,42 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#active_lock_reason%3AString-instance-method" class="signature"><strong>#active_lock_reason</strong> : String</a>
+        <a href="#active_lock_reason%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#active_lock_reason</strong> : Union(String, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#active_lock_reason%3D%28_active_lock_reason%3AString%29-instance-method" class="signature"><strong>#active_lock_reason=</strong>(_active_lock_reason : String)</a>
+        <a href="#active_lock_reason%3D%28_active_lock_reason%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#active_lock_reason=</strong>(_active_lock_reason : Union(String, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#additions%3AInt32-instance-method" class="signature"><strong>#additions</strong> : Int32</a>
+        <a href="#additions%3AUnion%28Int32%2CNil%29-instance-method" class="signature"><strong>#additions</strong> : Union(Int32, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#additions%3D%28_additions%3AInt32%29-instance-method" class="signature"><strong>#additions=</strong>(_additions : Int32)</a>
+        <a href="#additions%3D%28_additions%3AUnion%28Int32%2CNil%29%29-instance-method" class="signature"><strong>#additions=</strong>(_additions : Union(Int32, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#assignee%3AUser-instance-method" class="signature"><strong>#assignee</strong> : User</a>
+        <a href="#assignee%3AUnion%28User%2CNil%29-instance-method" class="signature"><strong>#assignee</strong> : Union(User, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#assignee%3D%28_assignee%3AUser%29-instance-method" class="signature"><strong>#assignee=</strong>(_assignee : User)</a>
+        <a href="#assignee%3D%28_assignee%3AUnion%28User%2CNil%29%29-instance-method" class="signature"><strong>#assignee=</strong>(_assignee : Union(User, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#assignees%3AArray%28User%29-instance-method" class="signature"><strong>#assignees</strong> : Array(User)</a>
+        <a href="#assignees%3AUnion%28Array%28User%29%2CNil%29-instance-method" class="signature"><strong>#assignees</strong> : Union(Array(User), Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#assignees%3D%28_assignees%3AArray%28User%29%29-instance-method" class="signature"><strong>#assignees=</strong>(_assignees : Array(User))</a>
+        <a href="#assignees%3D%28_assignees%3AUnion%28Array%28User%29%2CNil%29%29-instance-method" class="signature"><strong>#assignees=</strong>(_assignees : Union(Array(User), Nil))</a>
         
       </li>
     
@@ -2049,42 +2059,42 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#body%3AString-instance-method" class="signature"><strong>#body</strong> : String</a>
+        <a href="#body%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#body</strong> : Union(String, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#body%3D%28_body%3AString%29-instance-method" class="signature"><strong>#body=</strong>(_body : String)</a>
+        <a href="#body%3D%28_body%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#body=</strong>(_body : Union(String, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#changed_files%3AInt32-instance-method" class="signature"><strong>#changed_files</strong> : Int32</a>
+        <a href="#changed_files%3AUnion%28Int32%2CNil%29-instance-method" class="signature"><strong>#changed_files</strong> : Union(Int32, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#changed_files%3D%28_changed_files%3AInt32%29-instance-method" class="signature"><strong>#changed_files=</strong>(_changed_files : Int32)</a>
+        <a href="#changed_files%3D%28_changed_files%3AUnion%28Int32%2CNil%29%29-instance-method" class="signature"><strong>#changed_files=</strong>(_changed_files : Union(Int32, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#closed_at%3AString-instance-method" class="signature"><strong>#closed_at</strong> : String</a>
+        <a href="#closed_at%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#closed_at</strong> : Union(String, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#closed_at%3D%28_closed_at%3AString%29-instance-method" class="signature"><strong>#closed_at=</strong>(_closed_at : String)</a>
+        <a href="#closed_at%3D%28_closed_at%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#closed_at=</strong>(_closed_at : Union(String, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#comments%3AInt32-instance-method" class="signature"><strong>#comments</strong> : Int32</a>
+        <a href="#comments%3AUnion%28Int32%2CNil%29-instance-method" class="signature"><strong>#comments</strong> : Union(Int32, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#comments%3D%28_comments%3AInt32%29-instance-method" class="signature"><strong>#comments=</strong>(_comments : Int32)</a>
+        <a href="#comments%3D%28_comments%3AUnion%28Int32%2CNil%29%29-instance-method" class="signature"><strong>#comments=</strong>(_comments : Union(Int32, Nil))</a>
         
       </li>
     
@@ -2099,12 +2109,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#commits%3AInt32-instance-method" class="signature"><strong>#commits</strong> : Int32</a>
+        <a href="#commits%3AUnion%28Int32%2CNil%29-instance-method" class="signature"><strong>#commits</strong> : Union(Int32, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#commits%3D%28_commits%3AInt32%29-instance-method" class="signature"><strong>#commits=</strong>(_commits : Int32)</a>
+        <a href="#commits%3D%28_commits%3AUnion%28Int32%2CNil%29%29-instance-method" class="signature"><strong>#commits=</strong>(_commits : Union(Int32, Nil))</a>
         
       </li>
     
@@ -2129,12 +2139,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#deletions%3AInt32-instance-method" class="signature"><strong>#deletions</strong> : Int32</a>
+        <a href="#deletions%3AUnion%28Int32%2CNil%29-instance-method" class="signature"><strong>#deletions</strong> : Union(Int32, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#deletions%3D%28_deletions%3AInt32%29-instance-method" class="signature"><strong>#deletions=</strong>(_deletions : Int32)</a>
+        <a href="#deletions%3D%28_deletions%3AUnion%28Int32%2CNil%29%29-instance-method" class="signature"><strong>#deletions=</strong>(_deletions : Union(Int32, Nil))</a>
         
       </li>
     
@@ -2199,102 +2209,102 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#labels%3AArray%28Label%29-instance-method" class="signature"><strong>#labels</strong> : Array(Label)</a>
+        <a href="#labels%3AUnion%28Array%28Label%29%2CNil%29-instance-method" class="signature"><strong>#labels</strong> : Union(Array(Label), Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#labels%3D%28_labels%3AArray%28Label%29%29-instance-method" class="signature"><strong>#labels=</strong>(_labels : Array(Label))</a>
+        <a href="#labels%3D%28_labels%3AUnion%28Array%28Label%29%2CNil%29%29-instance-method" class="signature"><strong>#labels=</strong>(_labels : Union(Array(Label), Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#links%3APRLinks-instance-method" class="signature"><strong>#links</strong> : PRLinks</a>
+        <a href="#links%3AUnion%28PRLinks%2CNil%29-instance-method" class="signature"><strong>#links</strong> : Union(PRLinks, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#links%3D%28_links%3APRLinks%29-instance-method" class="signature"><strong>#links=</strong>(_links : PRLinks)</a>
+        <a href="#links%3D%28_links%3AUnion%28PRLinks%2CNil%29%29-instance-method" class="signature"><strong>#links=</strong>(_links : Union(PRLinks, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#maintainer_can_modify%3ABool-instance-method" class="signature"><strong>#maintainer_can_modify</strong> : Bool</a>
+        <a href="#maintainer_can_modify%3AUnion%28Bool%2CNil%29-instance-method" class="signature"><strong>#maintainer_can_modify</strong> : Union(Bool, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#maintainer_can_modify%3D%28_maintainer_can_modify%3ABool%29-instance-method" class="signature"><strong>#maintainer_can_modify=</strong>(_maintainer_can_modify : Bool)</a>
+        <a href="#maintainer_can_modify%3D%28_maintainer_can_modify%3AUnion%28Bool%2CNil%29%29-instance-method" class="signature"><strong>#maintainer_can_modify=</strong>(_maintainer_can_modify : Union(Bool, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#merge_commit_sha%3AString-instance-method" class="signature"><strong>#merge_commit_sha</strong> : String</a>
+        <a href="#merge_commit_sha%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#merge_commit_sha</strong> : Union(String, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#merge_commit_sha%3D%28_merge_commit_sha%3AString%29-instance-method" class="signature"><strong>#merge_commit_sha=</strong>(_merge_commit_sha : String)</a>
+        <a href="#merge_commit_sha%3D%28_merge_commit_sha%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#merge_commit_sha=</strong>(_merge_commit_sha : Union(String, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#mergeable%3ABool-instance-method" class="signature"><strong>#mergeable</strong> : Bool</a>
+        <a href="#mergeable%3AUnion%28Bool%2CNil%29-instance-method" class="signature"><strong>#mergeable</strong> : Union(Bool, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#mergeable%3D%28_mergeable%3ABool%29-instance-method" class="signature"><strong>#mergeable=</strong>(_mergeable : Bool)</a>
+        <a href="#mergeable%3D%28_mergeable%3AUnion%28Bool%2CNil%29%29-instance-method" class="signature"><strong>#mergeable=</strong>(_mergeable : Union(Bool, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#mergeable_state%3AString-instance-method" class="signature"><strong>#mergeable_state</strong> : String</a>
+        <a href="#mergeable_state%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#mergeable_state</strong> : Union(String, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#mergeable_state%3D%28_mergeable_state%3AString%29-instance-method" class="signature"><strong>#mergeable_state=</strong>(_mergeable_state : String)</a>
+        <a href="#mergeable_state%3D%28_mergeable_state%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#mergeable_state=</strong>(_mergeable_state : Union(String, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#merged%3ABool-instance-method" class="signature"><strong>#merged</strong> : Bool</a>
+        <a href="#merged%3AUnion%28Bool%2CNil%29-instance-method" class="signature"><strong>#merged</strong> : Union(Bool, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#merged%3D%28_merged%3ABool%29-instance-method" class="signature"><strong>#merged=</strong>(_merged : Bool)</a>
+        <a href="#merged%3D%28_merged%3AUnion%28Bool%2CNil%29%29-instance-method" class="signature"><strong>#merged=</strong>(_merged : Union(Bool, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#merged_at%3AString-instance-method" class="signature"><strong>#merged_at</strong> : String</a>
+        <a href="#merged_at%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#merged_at</strong> : Union(String, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#merged_at%3D%28_merged_at%3AString%29-instance-method" class="signature"><strong>#merged_at=</strong>(_merged_at : String)</a>
+        <a href="#merged_at%3D%28_merged_at%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#merged_at=</strong>(_merged_at : Union(String, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#merged_by%3AString-instance-method" class="signature"><strong>#merged_by</strong> : String</a>
+        <a href="#merged_by%3AUnion%28String%2CNil%29-instance-method" class="signature"><strong>#merged_by</strong> : Union(String, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#merged_by%3D%28_merged_by%3AString%29-instance-method" class="signature"><strong>#merged_by=</strong>(_merged_by : String)</a>
+        <a href="#merged_by%3D%28_merged_by%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#merged_by=</strong>(_merged_by : Union(String, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#milestone%3AMilestone-instance-method" class="signature"><strong>#milestone</strong> : Milestone</a>
+        <a href="#milestone%3AUnion%28Milestone%2CNil%29-instance-method" class="signature"><strong>#milestone</strong> : Union(Milestone, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#milestone%3D%28_milestone%3AMilestone%29-instance-method" class="signature"><strong>#milestone=</strong>(_milestone : Milestone)</a>
+        <a href="#milestone%3D%28_milestone%3AUnion%28Milestone%2CNil%29%29-instance-method" class="signature"><strong>#milestone=</strong>(_milestone : Union(Milestone, Nil))</a>
         
       </li>
     
@@ -2359,12 +2369,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#review_comments%3AInt32-instance-method" class="signature"><strong>#review_comments</strong> : Int32</a>
+        <a href="#review_comments%3AUnion%28Int32%2CNil%29-instance-method" class="signature"><strong>#review_comments</strong> : Union(Int32, Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#review_comments%3D%28_review_comments%3AInt32%29-instance-method" class="signature"><strong>#review_comments=</strong>(_review_comments : Int32)</a>
+        <a href="#review_comments%3D%28_review_comments%3AUnion%28Int32%2CNil%29%29-instance-method" class="signature"><strong>#review_comments=</strong>(_review_comments : Union(Int32, Nil))</a>
         
       </li>
     
@@ -2490,12 +2500,12 @@
     Constructor Detail
   </h2>
   
-    <div class="entry-detail" id="new(id:Int64,number:Int32,state:String,title:String,body:String,created_at:Time,updated_at:Time,closed_at:String,merged_at:String,labels:Array(Label),user:User,draft:Bool,merged:Bool,mergeable:Bool,mergeable_state:String,merged_by:String,merge_commit_sha:String,comments:Int32,commits:Int32,additions:Int32,deletions:Int32,changed_files:Int32,url:String,html_url:String,issue_url:String,statuses_url:String,diff_url:String,patch_url:String,commits_url:String,comments_url:String,review_comment_url:String,review_comments:Int32,assignee:User,assignees:Array(User),milestone:Milestone,maintainer_can_modify:Bool,author_association:String,node_id:String,requested_reviewers:Array(User),requested_teams:Array(Team),links:PRLinks,head:PullRequestBranch,base:PullRequestBranch,active_lock_reason:String)-class-method">
+    <div class="entry-detail" id="new(id:Int64,number:Int32,state:String,title:String,body:Union(String,Nil),created_at:Time,updated_at:Time,closed_at:Union(String,Nil),merged_at:Union(String,Nil),labels:Union(Array(Label),Nil),user:User,draft:Bool,merged:Union(Bool,Nil),mergeable:Union(Bool,Nil),mergeable_state:Union(String,Nil),merged_by:Union(String,Nil),merge_commit_sha:Union(String,Nil),comments:Union(Int32,Nil),commits:Union(Int32,Nil),additions:Union(Int32,Nil),deletions:Union(Int32,Nil),changed_files:Union(Int32,Nil),url:String,html_url:String,issue_url:String,statuses_url:String,diff_url:String,patch_url:String,commits_url:String,comments_url:String,review_comment_url:String,review_comments:Union(Int32,Nil),assignee:Union(User,Nil),assignees:Union(Array(User),Nil),milestone:Union(Milestone,Nil),maintainer_can_modify:Union(Bool,Nil),author_association:String,node_id:String,requested_reviewers:Array(User),requested_teams:Array(Team),links:Union(PRLinks,Nil),head:PullRequestBranch,base:PullRequestBranch,active_lock_reason:Union(String,Nil))-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(id : Int64, number : Int32, state : String, title : String, body : String, created_at : <a href="../../Time.html">Time</a>, updated_at : <a href="../../Time.html">Time</a>, closed_at : String, merged_at : String, labels : Array(<a href="../../Octokit/Models/Label.html">Label</a>), user : <a href="../../Octokit/Models/User.html">User</a>, draft : Bool, merged : Bool, mergeable : Bool, mergeable_state : String, merged_by : String, merge_commit_sha : String, comments : Int32, commits : Int32, additions : Int32, deletions : Int32, changed_files : Int32, url : String, html_url : String, issue_url : String, statuses_url : String, diff_url : String, patch_url : String, commits_url : String, comments_url : String, review_comment_url : String, review_comments : Int32, assignee : <a href="../../Octokit/Models/User.html">User</a>, assignees : Array(<a href="../../Octokit/Models/User.html">User</a>), milestone : <a href="../../Octokit/Models/Milestone.html">Milestone</a>, maintainer_can_modify : Bool, author_association : String, node_id : String, requested_reviewers : Array(<a href="../../Octokit/Models/User.html">User</a>), requested_teams : Array(<a href="../../Octokit/Models/Team.html">Team</a>), links : <a href="../../Octokit/Models/PRLinks.html">PRLinks</a>, head : <a href="../../Octokit/Models/PullRequestBranch.html">PullRequestBranch</a>, base : <a href="../../Octokit/Models/PullRequestBranch.html">PullRequestBranch</a>, active_lock_reason : String)
+        def self.<strong>new</strong>(id : Int64, number : Int32, state : String, title : String, body : Union(String, Nil), created_at : <a href="../../Time.html">Time</a>, updated_at : <a href="../../Time.html">Time</a>, closed_at : Union(String, Nil), merged_at : Union(String, Nil), labels : Union(Array(<a href="../../Octokit/Models/Label.html">Label</a>), Nil), user : <a href="../../Octokit/Models/User.html">User</a>, draft : Bool, merged : Union(Bool, Nil), mergeable : Union(Bool, Nil), mergeable_state : Union(String, Nil), merged_by : Union(String, Nil), merge_commit_sha : Union(String, Nil), comments : Union(Int32, Nil), commits : Union(Int32, Nil), additions : Union(Int32, Nil), deletions : Union(Int32, Nil), changed_files : Union(Int32, Nil), url : String, html_url : String, issue_url : String, statuses_url : String, diff_url : String, patch_url : String, commits_url : String, comments_url : String, review_comment_url : String, review_comments : Union(Int32, Nil), assignee : Union(<a href="../../Octokit/Models/User.html">User</a>, Nil), assignees : Union(Array(<a href="../../Octokit/Models/User.html">User</a>), Nil), milestone : Union(<a href="../../Octokit/Models/Milestone.html">Milestone</a>, Nil), maintainer_can_modify : Union(Bool, Nil), author_association : String, node_id : String, requested_reviewers : Array(<a href="../../Octokit/Models/User.html">User</a>), requested_teams : Array(<a href="../../Octokit/Models/Team.html">Team</a>), links : Union(<a href="../../Octokit/Models/PRLinks.html">PRLinks</a>, Nil), head : <a href="../../Octokit/Models/PullRequestBranch.html">PullRequestBranch</a>, base : <a href="../../Octokit/Models/PullRequestBranch.html">PullRequestBranch</a>, active_lock_reason : Union(String, Nil))
 
-        <a class="method-permalink" href="#new%28id%3AInt64%2Cnumber%3AInt32%2Cstate%3AString%2Ctitle%3AString%2Cbody%3AString%2Ccreated_at%3ATime%2Cupdated_at%3ATime%2Cclosed_at%3AString%2Cmerged_at%3AString%2Clabels%3AArray%28Label%29%2Cuser%3AUser%2Cdraft%3ABool%2Cmerged%3ABool%2Cmergeable%3ABool%2Cmergeable_state%3AString%2Cmerged_by%3AString%2Cmerge_commit_sha%3AString%2Ccomments%3AInt32%2Ccommits%3AInt32%2Cadditions%3AInt32%2Cdeletions%3AInt32%2Cchanged_files%3AInt32%2Curl%3AString%2Chtml_url%3AString%2Cissue_url%3AString%2Cstatuses_url%3AString%2Cdiff_url%3AString%2Cpatch_url%3AString%2Ccommits_url%3AString%2Ccomments_url%3AString%2Creview_comment_url%3AString%2Creview_comments%3AInt32%2Cassignee%3AUser%2Cassignees%3AArray%28User%29%2Cmilestone%3AMilestone%2Cmaintainer_can_modify%3ABool%2Cauthor_association%3AString%2Cnode_id%3AString%2Crequested_reviewers%3AArray%28User%29%2Crequested_teams%3AArray%28Team%29%2Clinks%3APRLinks%2Chead%3APullRequestBranch%2Cbase%3APullRequestBranch%2Cactive_lock_reason%3AString%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28id%3AInt64%2Cnumber%3AInt32%2Cstate%3AString%2Ctitle%3AString%2Cbody%3AUnion%28String%2CNil%29%2Ccreated_at%3ATime%2Cupdated_at%3ATime%2Cclosed_at%3AUnion%28String%2CNil%29%2Cmerged_at%3AUnion%28String%2CNil%29%2Clabels%3AUnion%28Array%28Label%29%2CNil%29%2Cuser%3AUser%2Cdraft%3ABool%2Cmerged%3AUnion%28Bool%2CNil%29%2Cmergeable%3AUnion%28Bool%2CNil%29%2Cmergeable_state%3AUnion%28String%2CNil%29%2Cmerged_by%3AUnion%28String%2CNil%29%2Cmerge_commit_sha%3AUnion%28String%2CNil%29%2Ccomments%3AUnion%28Int32%2CNil%29%2Ccommits%3AUnion%28Int32%2CNil%29%2Cadditions%3AUnion%28Int32%2CNil%29%2Cdeletions%3AUnion%28Int32%2CNil%29%2Cchanged_files%3AUnion%28Int32%2CNil%29%2Curl%3AString%2Chtml_url%3AString%2Cissue_url%3AString%2Cstatuses_url%3AString%2Cdiff_url%3AString%2Cpatch_url%3AString%2Ccommits_url%3AString%2Ccomments_url%3AString%2Creview_comment_url%3AString%2Creview_comments%3AUnion%28Int32%2CNil%29%2Cassignee%3AUnion%28User%2CNil%29%2Cassignees%3AUnion%28Array%28User%29%2CNil%29%2Cmilestone%3AUnion%28Milestone%2CNil%29%2Cmaintainer_can_modify%3AUnion%28Bool%2CNil%29%2Cauthor_association%3AString%2Cnode_id%3AString%2Crequested_reviewers%3AArray%28User%29%2Crequested_teams%3AArray%28Team%29%2Clinks%3AUnion%28PRLinks%2CNil%29%2Chead%3APullRequestBranch%2Cbase%3APullRequestBranch%2Cactive_lock_reason%3AUnion%28String%2CNil%29%29-class-method">#</a>
       </div>
       
       <br/>
@@ -2504,12 +2514,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="new(__temp_3179:JSON::PullParser)-class-method">
+    <div class="entry-detail" id="new(__temp_3325:JSON::PullParser)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(__temp_3179 : JSON::PullParser)
+        def self.<strong>new</strong>(__temp_3325 : JSON::PullParser)
 
-        <a class="method-permalink" href="#new%28__temp_3179%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28__temp_3325%3AJSON%3A%3APullParser%29-class-method">#</a>
       </div>
       
       <br/>
@@ -2534,12 +2544,12 @@
     Instance Method Detail
   </h2>
   
-    <div class="entry-detail" id="active_lock_reason:String-instance-method">
+    <div class="entry-detail" id="active_lock_reason:Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>active_lock_reason</strong> : String
+        def <strong>active_lock_reason</strong> : Union(String, Nil)
 
-        <a class="method-permalink" href="#active_lock_reason%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#active_lock_reason%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2548,12 +2558,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="active_lock_reason=(_active_lock_reason:String)-instance-method">
+    <div class="entry-detail" id="active_lock_reason=(_active_lock_reason:Union(String,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>active_lock_reason=</strong>(_active_lock_reason : String)
+        def <strong>active_lock_reason=</strong>(_active_lock_reason : Union(String, Nil))
 
-        <a class="method-permalink" href="#active_lock_reason%3D%28_active_lock_reason%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#active_lock_reason%3D%28_active_lock_reason%3AUnion%28String%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2562,12 +2572,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="additions:Int32-instance-method">
+    <div class="entry-detail" id="additions:Union(Int32,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>additions</strong> : Int32
+        def <strong>additions</strong> : Union(Int32, Nil)
 
-        <a class="method-permalink" href="#additions%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#additions%3AUnion%28Int32%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2576,12 +2586,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="additions=(_additions:Int32)-instance-method">
+    <div class="entry-detail" id="additions=(_additions:Union(Int32,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>additions=</strong>(_additions : Int32)
+        def <strong>additions=</strong>(_additions : Union(Int32, Nil))
 
-        <a class="method-permalink" href="#additions%3D%28_additions%3AInt32%29-instance-method">#</a>
+        <a class="method-permalink" href="#additions%3D%28_additions%3AUnion%28Int32%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2590,12 +2600,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="assignee:User-instance-method">
+    <div class="entry-detail" id="assignee:Union(User,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>assignee</strong> : <a href="../../Octokit/Models/User.html">User</a>
+        def <strong>assignee</strong> : Union(<a href="../../Octokit/Models/User.html">User</a>, Nil)
 
-        <a class="method-permalink" href="#assignee%3AUser-instance-method">#</a>
+        <a class="method-permalink" href="#assignee%3AUnion%28User%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2604,12 +2614,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="assignee=(_assignee:User)-instance-method">
+    <div class="entry-detail" id="assignee=(_assignee:Union(User,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>assignee=</strong>(_assignee : <a href="../../Octokit/Models/User.html">User</a>)
+        def <strong>assignee=</strong>(_assignee : Union(<a href="../../Octokit/Models/User.html">User</a>, Nil))
 
-        <a class="method-permalink" href="#assignee%3D%28_assignee%3AUser%29-instance-method">#</a>
+        <a class="method-permalink" href="#assignee%3D%28_assignee%3AUnion%28User%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2618,12 +2628,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="assignees:Array(User)-instance-method">
+    <div class="entry-detail" id="assignees:Union(Array(User),Nil)-instance-method">
       <div class="signature">
         
-        def <strong>assignees</strong> : Array(<a href="../../Octokit/Models/User.html">User</a>)
+        def <strong>assignees</strong> : Union(Array(<a href="../../Octokit/Models/User.html">User</a>), Nil)
 
-        <a class="method-permalink" href="#assignees%3AArray%28User%29-instance-method">#</a>
+        <a class="method-permalink" href="#assignees%3AUnion%28Array%28User%29%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2632,12 +2642,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="assignees=(_assignees:Array(User))-instance-method">
+    <div class="entry-detail" id="assignees=(_assignees:Union(Array(User),Nil))-instance-method">
       <div class="signature">
         
-        def <strong>assignees=</strong>(_assignees : Array(<a href="../../Octokit/Models/User.html">User</a>))
+        def <strong>assignees=</strong>(_assignees : Union(Array(<a href="../../Octokit/Models/User.html">User</a>), Nil))
 
-        <a class="method-permalink" href="#assignees%3D%28_assignees%3AArray%28User%29%29-instance-method">#</a>
+        <a class="method-permalink" href="#assignees%3D%28_assignees%3AUnion%28Array%28User%29%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2702,12 +2712,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="body:String-instance-method">
+    <div class="entry-detail" id="body:Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>body</strong> : String
+        def <strong>body</strong> : Union(String, Nil)
 
-        <a class="method-permalink" href="#body%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#body%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2716,12 +2726,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="body=(_body:String)-instance-method">
+    <div class="entry-detail" id="body=(_body:Union(String,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>body=</strong>(_body : String)
+        def <strong>body=</strong>(_body : Union(String, Nil))
 
-        <a class="method-permalink" href="#body%3D%28_body%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#body%3D%28_body%3AUnion%28String%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2730,12 +2740,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="changed_files:Int32-instance-method">
+    <div class="entry-detail" id="changed_files:Union(Int32,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>changed_files</strong> : Int32
+        def <strong>changed_files</strong> : Union(Int32, Nil)
 
-        <a class="method-permalink" href="#changed_files%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#changed_files%3AUnion%28Int32%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2744,12 +2754,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="changed_files=(_changed_files:Int32)-instance-method">
+    <div class="entry-detail" id="changed_files=(_changed_files:Union(Int32,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>changed_files=</strong>(_changed_files : Int32)
+        def <strong>changed_files=</strong>(_changed_files : Union(Int32, Nil))
 
-        <a class="method-permalink" href="#changed_files%3D%28_changed_files%3AInt32%29-instance-method">#</a>
+        <a class="method-permalink" href="#changed_files%3D%28_changed_files%3AUnion%28Int32%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2758,12 +2768,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="closed_at:String-instance-method">
+    <div class="entry-detail" id="closed_at:Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>closed_at</strong> : String
+        def <strong>closed_at</strong> : Union(String, Nil)
 
-        <a class="method-permalink" href="#closed_at%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#closed_at%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2772,12 +2782,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="closed_at=(_closed_at:String)-instance-method">
+    <div class="entry-detail" id="closed_at=(_closed_at:Union(String,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>closed_at=</strong>(_closed_at : String)
+        def <strong>closed_at=</strong>(_closed_at : Union(String, Nil))
 
-        <a class="method-permalink" href="#closed_at%3D%28_closed_at%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#closed_at%3D%28_closed_at%3AUnion%28String%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2786,12 +2796,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="comments:Int32-instance-method">
+    <div class="entry-detail" id="comments:Union(Int32,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>comments</strong> : Int32
+        def <strong>comments</strong> : Union(Int32, Nil)
 
-        <a class="method-permalink" href="#comments%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#comments%3AUnion%28Int32%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2800,12 +2810,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="comments=(_comments:Int32)-instance-method">
+    <div class="entry-detail" id="comments=(_comments:Union(Int32,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>comments=</strong>(_comments : Int32)
+        def <strong>comments=</strong>(_comments : Union(Int32, Nil))
 
-        <a class="method-permalink" href="#comments%3D%28_comments%3AInt32%29-instance-method">#</a>
+        <a class="method-permalink" href="#comments%3D%28_comments%3AUnion%28Int32%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2842,12 +2852,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="commits:Int32-instance-method">
+    <div class="entry-detail" id="commits:Union(Int32,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>commits</strong> : Int32
+        def <strong>commits</strong> : Union(Int32, Nil)
 
-        <a class="method-permalink" href="#commits%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#commits%3AUnion%28Int32%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2856,12 +2866,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="commits=(_commits:Int32)-instance-method">
+    <div class="entry-detail" id="commits=(_commits:Union(Int32,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>commits=</strong>(_commits : Int32)
+        def <strong>commits=</strong>(_commits : Union(Int32, Nil))
 
-        <a class="method-permalink" href="#commits%3D%28_commits%3AInt32%29-instance-method">#</a>
+        <a class="method-permalink" href="#commits%3D%28_commits%3AUnion%28Int32%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2926,12 +2936,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="deletions:Int32-instance-method">
+    <div class="entry-detail" id="deletions:Union(Int32,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>deletions</strong> : Int32
+        def <strong>deletions</strong> : Union(Int32, Nil)
 
-        <a class="method-permalink" href="#deletions%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#deletions%3AUnion%28Int32%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -2940,12 +2950,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="deletions=(_deletions:Int32)-instance-method">
+    <div class="entry-detail" id="deletions=(_deletions:Union(Int32,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>deletions=</strong>(_deletions : Int32)
+        def <strong>deletions=</strong>(_deletions : Union(Int32, Nil))
 
-        <a class="method-permalink" href="#deletions%3D%28_deletions%3AInt32%29-instance-method">#</a>
+        <a class="method-permalink" href="#deletions%3D%28_deletions%3AUnion%28Int32%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3122,12 +3132,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="labels:Array(Label)-instance-method">
+    <div class="entry-detail" id="labels:Union(Array(Label),Nil)-instance-method">
       <div class="signature">
         
-        def <strong>labels</strong> : Array(<a href="../../Octokit/Models/Label.html">Label</a>)
+        def <strong>labels</strong> : Union(Array(<a href="../../Octokit/Models/Label.html">Label</a>), Nil)
 
-        <a class="method-permalink" href="#labels%3AArray%28Label%29-instance-method">#</a>
+        <a class="method-permalink" href="#labels%3AUnion%28Array%28Label%29%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3136,12 +3146,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="labels=(_labels:Array(Label))-instance-method">
+    <div class="entry-detail" id="labels=(_labels:Union(Array(Label),Nil))-instance-method">
       <div class="signature">
         
-        def <strong>labels=</strong>(_labels : Array(<a href="../../Octokit/Models/Label.html">Label</a>))
+        def <strong>labels=</strong>(_labels : Union(Array(<a href="../../Octokit/Models/Label.html">Label</a>), Nil))
 
-        <a class="method-permalink" href="#labels%3D%28_labels%3AArray%28Label%29%29-instance-method">#</a>
+        <a class="method-permalink" href="#labels%3D%28_labels%3AUnion%28Array%28Label%29%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3150,12 +3160,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="links:PRLinks-instance-method">
+    <div class="entry-detail" id="links:Union(PRLinks,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>links</strong> : <a href="../../Octokit/Models/PRLinks.html">PRLinks</a>
+        def <strong>links</strong> : Union(<a href="../../Octokit/Models/PRLinks.html">PRLinks</a>, Nil)
 
-        <a class="method-permalink" href="#links%3APRLinks-instance-method">#</a>
+        <a class="method-permalink" href="#links%3AUnion%28PRLinks%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3164,12 +3174,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="links=(_links:PRLinks)-instance-method">
+    <div class="entry-detail" id="links=(_links:Union(PRLinks,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>links=</strong>(_links : <a href="../../Octokit/Models/PRLinks.html">PRLinks</a>)
+        def <strong>links=</strong>(_links : Union(<a href="../../Octokit/Models/PRLinks.html">PRLinks</a>, Nil))
 
-        <a class="method-permalink" href="#links%3D%28_links%3APRLinks%29-instance-method">#</a>
+        <a class="method-permalink" href="#links%3D%28_links%3AUnion%28PRLinks%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3178,12 +3188,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="maintainer_can_modify:Bool-instance-method">
+    <div class="entry-detail" id="maintainer_can_modify:Union(Bool,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>maintainer_can_modify</strong> : Bool
+        def <strong>maintainer_can_modify</strong> : Union(Bool, Nil)
 
-        <a class="method-permalink" href="#maintainer_can_modify%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#maintainer_can_modify%3AUnion%28Bool%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3192,12 +3202,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="maintainer_can_modify=(_maintainer_can_modify:Bool)-instance-method">
+    <div class="entry-detail" id="maintainer_can_modify=(_maintainer_can_modify:Union(Bool,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>maintainer_can_modify=</strong>(_maintainer_can_modify : Bool)
+        def <strong>maintainer_can_modify=</strong>(_maintainer_can_modify : Union(Bool, Nil))
 
-        <a class="method-permalink" href="#maintainer_can_modify%3D%28_maintainer_can_modify%3ABool%29-instance-method">#</a>
+        <a class="method-permalink" href="#maintainer_can_modify%3D%28_maintainer_can_modify%3AUnion%28Bool%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3206,12 +3216,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="merge_commit_sha:String-instance-method">
+    <div class="entry-detail" id="merge_commit_sha:Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>merge_commit_sha</strong> : String
+        def <strong>merge_commit_sha</strong> : Union(String, Nil)
 
-        <a class="method-permalink" href="#merge_commit_sha%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#merge_commit_sha%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3220,12 +3230,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="merge_commit_sha=(_merge_commit_sha:String)-instance-method">
+    <div class="entry-detail" id="merge_commit_sha=(_merge_commit_sha:Union(String,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>merge_commit_sha=</strong>(_merge_commit_sha : String)
+        def <strong>merge_commit_sha=</strong>(_merge_commit_sha : Union(String, Nil))
 
-        <a class="method-permalink" href="#merge_commit_sha%3D%28_merge_commit_sha%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#merge_commit_sha%3D%28_merge_commit_sha%3AUnion%28String%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3234,12 +3244,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="mergeable:Bool-instance-method">
+    <div class="entry-detail" id="mergeable:Union(Bool,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>mergeable</strong> : Bool
+        def <strong>mergeable</strong> : Union(Bool, Nil)
 
-        <a class="method-permalink" href="#mergeable%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#mergeable%3AUnion%28Bool%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3248,12 +3258,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="mergeable=(_mergeable:Bool)-instance-method">
+    <div class="entry-detail" id="mergeable=(_mergeable:Union(Bool,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>mergeable=</strong>(_mergeable : Bool)
+        def <strong>mergeable=</strong>(_mergeable : Union(Bool, Nil))
 
-        <a class="method-permalink" href="#mergeable%3D%28_mergeable%3ABool%29-instance-method">#</a>
+        <a class="method-permalink" href="#mergeable%3D%28_mergeable%3AUnion%28Bool%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3262,12 +3272,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="mergeable_state:String-instance-method">
+    <div class="entry-detail" id="mergeable_state:Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>mergeable_state</strong> : String
+        def <strong>mergeable_state</strong> : Union(String, Nil)
 
-        <a class="method-permalink" href="#mergeable_state%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#mergeable_state%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3276,12 +3286,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="mergeable_state=(_mergeable_state:String)-instance-method">
+    <div class="entry-detail" id="mergeable_state=(_mergeable_state:Union(String,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>mergeable_state=</strong>(_mergeable_state : String)
+        def <strong>mergeable_state=</strong>(_mergeable_state : Union(String, Nil))
 
-        <a class="method-permalink" href="#mergeable_state%3D%28_mergeable_state%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#mergeable_state%3D%28_mergeable_state%3AUnion%28String%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3290,12 +3300,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="merged:Bool-instance-method">
+    <div class="entry-detail" id="merged:Union(Bool,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>merged</strong> : Bool
+        def <strong>merged</strong> : Union(Bool, Nil)
 
-        <a class="method-permalink" href="#merged%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#merged%3AUnion%28Bool%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3304,12 +3314,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="merged=(_merged:Bool)-instance-method">
+    <div class="entry-detail" id="merged=(_merged:Union(Bool,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>merged=</strong>(_merged : Bool)
+        def <strong>merged=</strong>(_merged : Union(Bool, Nil))
 
-        <a class="method-permalink" href="#merged%3D%28_merged%3ABool%29-instance-method">#</a>
+        <a class="method-permalink" href="#merged%3D%28_merged%3AUnion%28Bool%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3318,12 +3328,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="merged_at:String-instance-method">
+    <div class="entry-detail" id="merged_at:Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>merged_at</strong> : String
+        def <strong>merged_at</strong> : Union(String, Nil)
 
-        <a class="method-permalink" href="#merged_at%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#merged_at%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3332,12 +3342,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="merged_at=(_merged_at:String)-instance-method">
+    <div class="entry-detail" id="merged_at=(_merged_at:Union(String,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>merged_at=</strong>(_merged_at : String)
+        def <strong>merged_at=</strong>(_merged_at : Union(String, Nil))
 
-        <a class="method-permalink" href="#merged_at%3D%28_merged_at%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#merged_at%3D%28_merged_at%3AUnion%28String%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3346,12 +3356,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="merged_by:String-instance-method">
+    <div class="entry-detail" id="merged_by:Union(String,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>merged_by</strong> : String
+        def <strong>merged_by</strong> : Union(String, Nil)
 
-        <a class="method-permalink" href="#merged_by%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#merged_by%3AUnion%28String%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3360,12 +3370,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="merged_by=(_merged_by:String)-instance-method">
+    <div class="entry-detail" id="merged_by=(_merged_by:Union(String,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>merged_by=</strong>(_merged_by : String)
+        def <strong>merged_by=</strong>(_merged_by : Union(String, Nil))
 
-        <a class="method-permalink" href="#merged_by%3D%28_merged_by%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#merged_by%3D%28_merged_by%3AUnion%28String%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3374,12 +3384,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="milestone:Milestone-instance-method">
+    <div class="entry-detail" id="milestone:Union(Milestone,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>milestone</strong> : <a href="../../Octokit/Models/Milestone.html">Milestone</a>
+        def <strong>milestone</strong> : Union(<a href="../../Octokit/Models/Milestone.html">Milestone</a>, Nil)
 
-        <a class="method-permalink" href="#milestone%3AMilestone-instance-method">#</a>
+        <a class="method-permalink" href="#milestone%3AUnion%28Milestone%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3388,12 +3398,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="milestone=(_milestone:Milestone)-instance-method">
+    <div class="entry-detail" id="milestone=(_milestone:Union(Milestone,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>milestone=</strong>(_milestone : <a href="../../Octokit/Models/Milestone.html">Milestone</a>)
+        def <strong>milestone=</strong>(_milestone : Union(<a href="../../Octokit/Models/Milestone.html">Milestone</a>, Nil))
 
-        <a class="method-permalink" href="#milestone%3D%28_milestone%3AMilestone%29-instance-method">#</a>
+        <a class="method-permalink" href="#milestone%3D%28_milestone%3AUnion%28Milestone%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3570,12 +3580,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="review_comments:Int32-instance-method">
+    <div class="entry-detail" id="review_comments:Union(Int32,Nil)-instance-method">
       <div class="signature">
         
-        def <strong>review_comments</strong> : Int32
+        def <strong>review_comments</strong> : Union(Int32, Nil)
 
-        <a class="method-permalink" href="#review_comments%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#review_comments%3AUnion%28Int32%2CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -3584,12 +3594,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="review_comments=(_review_comments:Int32)-instance-method">
+    <div class="entry-detail" id="review_comments=(_review_comments:Union(Int32,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>review_comments=</strong>(_review_comments : Int32)
+        def <strong>review_comments=</strong>(_review_comments : Union(Int32, Nil))
 
-        <a class="method-permalink" href="#review_comments%3D%28_review_comments%3AInt32%29-instance-method">#</a>
+        <a class="method-permalink" href="#review_comments%3D%28_review_comments%3AUnion%28Int32%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
