@@ -1,17 +1,6 @@
 #!/bin/bash
 
-# set the working directory to the root of the project
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
-VENDOR_DIR="$DIR/vendor"
-SHARDS_INSTALL_PATH="$VENDOR_DIR/shards/install"
-
-LINUX_VENDOR_DIR="$VENDOR_DIR/linux_x86_64/bin"
-DARWIN_VENDOR_DIR_X64="$VENDOR_DIR/darwin_x86_64/bin"
-DARWIN_VENDOR_DIR_ARM64="$VENDOR_DIR/darwin_arm64/bin"
-
-if [[ "$CI" == "true" ]]; then
-  source script/ci-env
-fi
+source script/setup-env $@
 
 mkdir -p "$DIR/bin"
 
@@ -55,7 +44,7 @@ if [[ ! "$@" == *"--production"* ]]; then
   # ensure the ameba binary is built and available in the bin directory
   AMEBA_UP_TO_DATE=false
   # first, check the version of the ameba binary in the lock file
-  AMEBA_VERSION=$(SHARDS_INSTALL_PATH="$SHARDS_INSTALL_PATH" shards list | grep ameba | awk '{print $3}' | tr -d '()')
+  AMEBA_VERSION=$(shards list | grep ameba | awk '{print $3}' | tr -d '()')
 
   # if the bin/ameba binary exists, check if it is the correct version
   if [ -f "$DIR/bin/ameba" ]; then

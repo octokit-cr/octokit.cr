@@ -1,13 +1,6 @@
 #!/bin/bash
 
-# set the working directory to the root of the project
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
-VENDOR_DIR="$DIR/vendor"
-SHARDS_CACHE_PATH="$VENDOR_DIR/.cache/shards"
-SHARDS_INSTALL_PATH="$VENDOR_DIR/shards/install"
-SHARDS_CACHED="$VENDOR_DIR/shards/cache"
-
-SHARD_SHA_FILE=".shard.vendor.cache.sha256"
+source script/setup-env $@
 
 TRASHDIR=$(mktemp -d /tmp/bootstrap.XXXXXXXXXXXXXXXXX)
 cleanup() {
@@ -19,7 +12,7 @@ mkdir -p "$SHARDS_INSTALL_PATH"
 mkdir -p "$SHARDS_CACHE_PATH/github.com"
 
 # check if the .shards.info file exists, if it doesn't this is a fresh bootstrapping
-if [ ! -f "$VENDOR_DIR/shards/install/.shards.info" ]; then
+if [ ! -f "$VENDOR_SHARDS_INFO_FILE" ]; then
   # if no .shards.info file found, this must be a fresh bootstrapping
 
   # iterate over all the cached shards in the vendor/shards/cache directory
@@ -35,8 +28,8 @@ if [ ! -f "$VENDOR_DIR/shards/install/.shards.info" ]; then
     rm -rf "$SHARDS_INSTALL_PATH/$shard_name"
 
     # move the shard and cache directories to the correct location
-    mv -f "$TRASHDIR/shard/"* "$SHARDS_INSTALL_PATH/" 2>/dev/null || true
-    mv -f "$TRASHDIR/cache/"* "$SHARDS_CACHE_PATH/github.com/" 2>/dev/null || true
+    cp -r "$TRASHDIR/shard/"* "$SHARDS_INSTALL_PATH/" 2>/dev/null || true
+    cp -r "$TRASHDIR/cache/"* "$SHARDS_CACHE_PATH/github.com/" 2>/dev/null || true
 
     # cleanup the TRASHDIR
     rm -rf "$TRASHDIR/shard"
@@ -51,10 +44,8 @@ if [ ! -f "$VENDOR_DIR/shards/install/.shards.info" ]; then
 else
   # if found .shards.info file, this must be a bootstrap re-run - we will check if the shards have changed by comparing the sha256 of the cached shard and the sha256 of the current shard
 
-  file="vendor/shards/install/.shards.info"
-
   # Use yq to parse the file and extract shard names and versions
-  shards=$(yq eval '.shards | to_entries | .[] | "\(.key)|\(.value.git)|\(.value.version)"' $file)
+  shards=$(yq eval '.shards | to_entries | .[] | "\(.key)|\(.value.git)|\(.value.version)"' $VENDOR_SHARDS_INFO_FILE)
 
   # Loop over each shard
   echo "$shards" | while IFS= read -r shard; do
@@ -78,8 +69,8 @@ else
       rm -rf "$SHARDS_INSTALL_PATH/$name"
 
       # move the shard and cache directories to the correct location
-      mv -f "$TRASHDIR/shard/"* "$SHARDS_INSTALL_PATH/" 2>/dev/null || true
-      mv -f "$TRASHDIR/cache/"* "$SHARDS_CACHE_PATH/github.com/" 2>/dev/null || true
+      cp -r "$TRASHDIR/shard/"* "$SHARDS_INSTALL_PATH/" 2>/dev/null || true
+      cp -r "$TRASHDIR/cache/"* "$SHARDS_CACHE_PATH/github.com/" 2>/dev/null || true
 
       # write the new sha to the $SHARD_SHA_FILE file
       cat > "$SHARDS_INSTALL_PATH/$name/$SHARD_SHA_FILE" <<< "$shard_cache_sha"

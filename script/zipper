@@ -1,17 +1,6 @@
 #!/bin/bash
 
-# COLORS
-OFF='\033[0m'
-GREEN='\033[0;32m'
-
-# set the working directory to the root of the project
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
-VENDOR_DIR="$DIR/vendor"
-SHARDS_CACHE_PATH="$VENDOR_DIR/.cache/shards"
-SHARDS_INSTALL_PATH="$VENDOR_DIR/shards/install"
-SHARDS_CACHED="$VENDOR_DIR/shards/cache"
-
-file="vendor/shards/install/.shards.info"
+source script/setup-env $@
 
 # Function to parse owner and repo from URL
 parse_owner_repo() {
@@ -33,7 +22,7 @@ cleanup() {
 trap cleanup EXIT
 
 # Use yq to parse the file and extract shard names and versions
-shards=$(yq eval '.shards | to_entries | .[] | "\(.key)|\(.value.git)|\(.value.version)"' $file)
+shards=$(yq eval '.shards | to_entries | .[] | "\(.key)|\(.value.git)|\(.value.version)"' $VENDOR_SHARDS_INFO_FILE)
 
 # Loop over each shard
 echo "$shards" | while IFS= read -r shard; do
