@@ -1,20 +1,11 @@
 #!/bin/bash
 
-# set the working directory to the root of the project
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
-VENDOR_DIR="$DIR/vendor"
-SHARDS_CACHE_PATH="$VENDOR_DIR/.cache/shards"
-SHARDS_INSTALL_PATH="$VENDOR_DIR/shards/install"
-SHARDS_CACHED="$VENDOR_DIR/shards/cache"
+source script/setup-env $@
 
-SHARD_SHA_FILE=".shard.vendor.cache.sha256"
-
-file="vendor/shards/install/.shards.info"
-
-if [ -f "$VENDOR_DIR/shards/install/.shards.info" ]; then
+if [ -f "$VENDOR_SHARDS_INFO_FILE" ]; then
 
   # Use yq to parse the file and extract shard names and versions
-  shards=$(yq eval '.shards | to_entries | .[] | "\(.key)|\(.value.git)|\(.value.version)"' $file)
+  shards=$(yq eval '.shards | to_entries | .[] | "\(.key)|\(.value.git)|\(.value.version)"' $VENDOR_SHARDS_INFO_FILE)
 
   # Loop over each shard
   echo "$shards" | while IFS= read -r shard; do

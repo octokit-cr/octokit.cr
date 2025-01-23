@@ -1,0 +1,50 @@
+#!/bin/bash
+
+set -e
+
+export OFF='\033[0m'
+export RED='\033[0;31m'
+export GREEN='\033[0;32m'
+export BLUE='\033[0;34m'
+export PURPLE='\033[0;35m'
+
+# set the working directory to the root of the project
+export DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
+
+export CRYSTAL_VERSION=$(cat "$DIR/.crystal-version")
+
+# set common variables
+export VENDOR_DIR="$DIR/vendor"
+export SHARDS_CACHE_PATH="$VENDOR_DIR/.cache/shards"
+export SHARDS_INSTALL_PATH="$VENDOR_DIR/shards/install"
+export SHARDS_CACHED="$VENDOR_DIR/shards/cache"
+export SHARD_SHA_FILE=".shard.vendor.cache.sha256"
+export VENDOR_SHARDS_INFO_FILE="vendor/shards/install/.shards.info"
+
+# common vendor dirs for binaries
+export LINUX_VENDOR_DIR="$VENDOR_DIR/linux_x86_64/bin"
+export DARWIN_VENDOR_DIR_X64="$VENDOR_DIR/darwin_x86_64/bin"
+export DARWIN_VENDOR_DIR_ARM64="$VENDOR_DIR/darwin_arm64/bin"
+
+# if --production was provided, always ensure CRYSTAL_ENV is set to production
+if [[ "$@" == *"--production"* ]]; then
+  export CRYSTAL_ENV="production"
+fi
+
+if [[ "$@" == *"--production"* ]] || [[ "$CRYSTAL_ENV" == "production" ]] || [[ "$CI" == "true" ]]; then
+  crystal_path_var="$(crystal env CRYSTAL_PATH)"
+
+  # if the crystal_path_var does not contain 'vendor/shards/install' then we need to add it to the CRYSTAL_PATH
+  if [[ "$crystal_path_var" != *"vendor/shards/install"* ]]; then
+    echo "setting CRYSTAL_PATH to include vendored shards - reason: --production flag passed or CRYSTAL_ENV is set to production or CI is true"
+    export CRYSTAL_PATH="vendor/shards/install:$(crystal env CRYSTAL_PATH)"
+  fi
+fi
+
+if [[ "$OSTYPE" == "darwin"* && "$CI" == "true" ]]; then
+  # only set the CRYSTAL_OPTS if it is not set or if it does not contain "-Wl"
+  if [[ -z "$CRYSTAL_OPTS" || "$CRYSTAL_OPTS" != *"-Wl"* ]]; then
+    echo "setting custom macos CRYSTAL_OPTS for CI"
+    export CRYSTAL_OPTS="--link-flags=-Wl"
+  fi
+fi
